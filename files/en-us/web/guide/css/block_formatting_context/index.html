@@ -26,8 +26,8 @@ tags:
  <li>Block elements where {{ cssxref("overflow") }} has a value other than <code>visible</code> and <code>clip</code>.</li>
  <li>{{ cssxref("display") }}<code>: <a href="https://drafts.csswg.org/css-display/#valdef-display-flow-root">flow-root</a></code>.</li>
  <li>Elements with {{ cssxref("contain") }}<code>: layout</code>, <code>content</code>, or <code>paint</code>.</li>
- <li>Flex items (direct children of the element with {{ cssxref("display") }}<code>: flex</code> or <code>inline-flex</code>) if they are neither <a href="/en-US/docs/Glossary/Flex_Container">flex</a> nor <a href="/en-US/docs/Glossary/Grid_Container">grid</a> nor <a href="/en-US/docs/Web/CSS/CSS_Table">table</a> containers themselves.</li>
- <li>Grid items (direct children of the element with {{ cssxref("display") }}<code>: grid</code> or <code>inline-grid</code>) if they are neither <a href="/en-US/docs/Glossary/Flex_Container">flex</a> nor <a href="/en-US/docs/Glossary/Grid_Container">grid</a> nor <a href="/en-US/docs/Web/CSS/CSS_Table">table</a> containers themselves.</li>
+ <li>Flex items (direct children of the element with {{ cssxref("display") }}<code>: flex</code> or <code>inline-flex</code>) if they are neither <a href=/glossary/flex_container>flex</a> nor <a href=/glossary/grid_container>grid</a> nor <a href=/web/css/css_table>table</a> containers themselves.</li>
+ <li>Grid items (direct children of the element with {{ cssxref("display") }}<code>: grid</code> or <code>inline-grid</code>) if they are neither <a href=/glossary/flex_container>flex</a> nor <a href=/glossary/grid_container>grid</a> nor <a href=/web/css/css_table>table</a> containers themselves.</li>
  <li>Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't <code>auto</code>, including elements with <code>column-count: 1</code>).</li>
  <li>{{ cssxref("column-span") }}<code>: all</code> should always create a new formatting context, even when the <code>column-span: all</code> element isn't contained by a multicol container (<a href="https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51">Spec change</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362">Chrome bug</a>).</li>
 </ul>
@@ -37,7 +37,7 @@ tags:
 <ul>
  <li>contain internal floats.</li>
  <li>exclude external floats.</li>
- <li>suppress <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">margin collapsing</a>.</li>
+ <li>suppress <a href=/web/css/css_box_model/mastering_margin_collapsing>margin collapsing</a>.</li>
 </ul>
 
 <div class="notecard note">
@@ -53,7 +53,7 @@ tags:
 
 <p>Let's have a look at a couple of these in order to see the effect creating a new <abbr title="Block Formatting Context">BFC</abbr>.</p>
 
-<p>In the following example, we have a floated element inside a <code>&lt;div&gt;</code> with a <code>border</code> applied. The content of that <code>&lt;div&gt;</code> has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the <code>&lt;div&gt;</code> now runs through the float. As explained in the <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">guide to in-flow and out of flow elements</a>, the float has been taken out of flow so the <code>background</code> and <code>border</code> of the <code>&lt;div&gt;</code> only contain the content and not the float.</p>
+<p>In the following example, we have a floated element inside a <code>&lt;div&gt;</code> with a <code>border</code> applied. The content of that <code>&lt;div&gt;</code> has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the <code>&lt;div&gt;</code> now runs through the float. As explained in the <a href=/web/css/css_flow_layout/in_flow_and_out_of_flow>guide to in-flow and out of flow elements</a>, the float has been taken out of flow so the <code>background</code> and <code>border</code> of the <code>&lt;div&gt;</code> only contain the content and not the float.</p>
 
 <p><strong>using <code>overflow: auto</code></strong></p>
 
@@ -166,7 +166,7 @@ tags:
 
 <h3 id="Margin_collapsing">Margin collapsing</h3>
 
-<p>Creating a new BFC to avoid the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">margin collapsing</a> between two neighbor div:</p>
+<p>Creating a new BFC to avoid the <a href=/web/css/css_box_model/mastering_margin_collapsing>margin collapsing</a> between two neighbor div:</p>
 
 <h4 id="HTML_3">HTML</h4>
 

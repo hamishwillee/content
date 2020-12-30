@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Principle">Principle</h2>
 
-<p>In HTTP, redirection is triggered by a server sending a special <em>redirect</em> response to a request. Redirect responses have <a href="/en-US/docs/Web/HTTP/Status">status codes</a> that start with <code>3</code>, and a {{ httpheader("Location") }} header holding the URL to redirect to.</p>
+<p>In HTTP, redirection is triggered by a server sending a special <em>redirect</em> response to a request. Redirect responses have <a href=/web/http/status>status codes</a> that start with <code>3</code>, and a {{ httpheader("Location") }} header holding the URL to redirect to.</p>
 
 <p>When browsers receive a redirect, they immediately load the new URL provided in the <code>Location</code> header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.</p>
 
@@ -138,7 +138,7 @@ tags:
 
 <ol>
  <li>HTML redirections with the {{HTMLElement("meta")}} element</li>
- <li>JavaScript redirections via the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a></li>
+ <li>JavaScript redirections via the <a href=/web/api/document_object_model>DOM</a></li>
 </ol>
 
 <h3 id="HTML_redirections">HTML redirections</h3>
@@ -187,7 +187,7 @@ tags:
  <dd>A common case is when a site resides at <code>www.example.com</code>, but accessing it from <code>example.com</code> should also work. Redirections for <code>example.com</code> to <code>www.example.com</code> are thus set up. You might also redirect from common synonyms or frequent typos of your domains.</dd>
  <dt>Moving to a new domain</dt>
  <dd>For example, your company was renamed, but you want existing links or bookmarks to still find you under the new name.</dd>
- <dt>Forcing <a href="/en-US/docs/Glossary/https">HTTPS</a></dt>
+ <dt>Forcing <a href=/glossary/https>HTTPS</a></dt>
  <dd>Requests to the <code>http://</code> version of your site will redirect to the <code>https://</code> version of your site.</dd>
 </dl>
 

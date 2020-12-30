@@ -11,9 +11,9 @@ tags:
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>A <strong>function's <code>this</code> keyword</strong> behaves a little differently in JavaScript compared to other languages. It also has some differences between <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> and non-strict mode.</p>
+<p>A <strong>function's <code>this</code> keyword</strong> behaves a little differently in JavaScript compared to other languages. It also has some differences between <a href=/web/javascript/reference/strict_mode>strict mode</a> and non-strict mode.</p>
 
-<p>In most cases, the value of <code>this</code> is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the {{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this', "set the value of a function's <code>this</code> regardless of how it's called", 'The_bind_method', 1)}}, and ES2015 introduced <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> which don't provide their own <code>this</code> binding (it retains the <code>this</code> value of the enclosing lexical context).</p>
+<p>In most cases, the value of <code>this</code> is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the {{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this', "set the value of a function's <code>this</code> regardless of how it's called", 'The_bind_method', 1)}}, and ES2015 introduced <a href=/web/javascript/reference/functions/arrow_functions>arrow functions</a> which don't provide their own <code>this</code> binding (it retains the <code>this</code> value of the enclosing lexical context).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</div>
 
@@ -52,7 +52,7 @@ console.log(b)         // "MDN"
 
 <p>Inside a function, the value of <code>this</code> depends on how the function is called.</p>
 
-<p>Since the following code is not in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>, and because the value of <code>this</code> is not set by the call, <code>this</code> will default to the global object, which is {{domxref("Window", "window")}} in a browser.</p>
+<p>Since the following code is not in <a href=/web/javascript/reference/strict_mode>strict mode</a>, and because the value of <code>this</code> is not set by the call, <code>this</code> will default to the global object, which is {{domxref("Window", "window")}} in a browser.</p>
 
 <pre class="brush:js">function f1() {
   return this;
@@ -74,13 +74,13 @@ f1() === globalThis; // true</pre>
 f2() === undefined; // true
 </pre>
 
-<div class="note">In the second example, <code>this</code> should be {{jsxref("undefined")}}, because <code>f2</code> was called directly and not as a method or property of an object (e.g. <code>window.f2()</code>). This feature wasn't implemented in some browsers when they first started to support <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>. As a result, they incorrectly returned the <code>window</code> object.</div>
+<div class="note">In the second example, <code>this</code> should be {{jsxref("undefined")}}, because <code>f2</code> was called directly and not as a method or property of an object (e.g. <code>window.f2()</code>). This feature wasn't implemented in some browsers when they first started to support <a href=/web/javascript/reference/strict_mode>strict mode</a>. As a result, they incorrectly returned the <code>window</code> object.</div>
 
 <p>To set the value of <code>this</code> to a particular value when calling a function, use {{jsxref("Function.prototype.call()", "call()")}}, or {{jsxref("Function.prototype.apply()", "apply()")}} as in the examples below.</p>
 
 <h3 id="Class_context">Class context</h3>
 
-<p>The behavior of <code>this</code> in <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> and functions is similar, since classes are functions under the hood. But there are some differences and caveats.</p>
+<p>The behavior of <code>this</code> in <a href=/web/javascript/reference/classes>classes</a> and functions is similar, since classes are functions under the hood. But there are some differences and caveats.</p>
 
 <p>Within a class constructor, <code>this</code> is a regular object. All non-static methods within the class are added to the prototype of <code>this</code>:</p>
 
@@ -197,7 +197,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 
 <h3 id="Arrow_functions">Arrow functions</h3>
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, <code>this</code> retains the value of the enclosing lexical context's <code>this</code>. In global code, it will be set to the global object:</p>
+<p>In <a href=/web/javascript/reference/functions/arrow_functions>arrow functions</a>, <code>this</code> retains the value of the enclosing lexical context's <code>this</code>. In global code, it will be set to the global object:</p>
 
 <pre class="brush: js">var globalObject = this;
 var foo = (() =&gt; this);
@@ -393,7 +393,7 @@ for (var i = 0; i &lt; elements.length; i++) {
 
 <h3 id="In_an_inline_event_handler">In an inline event handler</h3>
 
-<p>When the code is called from an inline <a href="/en-US/docs/Web/Guide/Events/Event_handlers">on-event handler</a>, its <code>this</code> is set to the DOM element on which the listener is placed:</p>
+<p>When the code is called from an inline <a href=/web/guide/events/event_handlers>on-event handler</a>, its <code>this</code> is set to the DOM element on which the listener is placed:</p>
 
 <pre class="brush:js">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
   Show this
@@ -475,7 +475,7 @@ bird.sayBye();  // Bye from Ferrari</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
+ <li><a href=/web/javascript/reference/strict_mode>Strict mode</a></li>
  <li><a href="https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/">Gentle explanation of 'this' keyword in JavaScript</a></li>
  <li>Getting the global context: {{jsxref("globalThis")}}</li>
 </ul>

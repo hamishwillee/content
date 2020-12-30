@@ -23,7 +23,7 @@ SyntaxError: unterminated string literal (Firefox)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>There is an unterminated {{jsxref("String")}} somewhere. String literals must be enclosed by single (<code>'</code>) or double (<code>"</code>) quotes. JavaScript makes no distinction between single-quoted strings and double-quoted strings. <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Escape sequences</a> work in strings created with either single or double quotes. To fix this error, check if:</p>
+<p>There is an unterminated {{jsxref("String")}} somewhere. String literals must be enclosed by single (<code>'</code>) or double (<code>"</code>) quotes. JavaScript makes no distinction between single-quoted strings and double-quoted strings. <a href=/web/javascript/reference/global_objects/string#Escape_notation>Escape sequences</a> work in strings created with either single or double quotes. To fix this error, check if:</p>
 
 <ul>
  <li>you have opening and closing quotes (single or double) for your string literal,</li>
@@ -42,7 +42,7 @@ SyntaxError: unterminated string literal (Firefox)
                   otherwise my code is unreadable.';
 // SyntaxError: unterminated string literal</pre>
 
-<p>Instead, use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">+ operator</a>, a backslash, or <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>. The <code>+</code> operator variant looks like this:</p>
+<p>Instead, use the <a href=/web/javascript/reference/operators/arithmetic_operators#Addition>+ operator</a>, a backslash, or <a href=/web/javascript/reference/template_literals>template literals</a>. The <code>+</code> operator variant looks like this:</p>
 
 <pre class="brush: js example-good">var longString = 'This is a very long string which needs ' +
                  'to wrap across multiple lines because ' +
@@ -56,7 +56,7 @@ to wrap across multiple lines because \
 otherwise my code is unreadable.';
 </pre>
 
-<p>Another possibility is to use <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>, which are supported in ECMAScript 2015 environments:</p>
+<p>Another possibility is to use <a href=/web/javascript/reference/template_literals>template literals</a>, which are supported in ECMAScript 2015 environments:</p>
 
 <pre class="brush: js example-good">var longString = `This is a very long string which needs
                   to wrap across multiple lines because
@@ -66,5 +66,5 @@ otherwise my code is unreadable.';
 
 <ul>
  <li>{{jsxref("String")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a></li>
+ <li><a href=/web/javascript/reference/template_literals>Template literals</a></li>
 </ul>

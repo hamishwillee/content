@@ -26,7 +26,7 @@ tags:
 <p>Specifics of how the entry process works may vary from browser to browser; mobile devices, for example, often display the typed character for a moment before obscuring it, to allow the user to be sure they pressed the key they meant to press; this is helpful given the small size of keys and the ease with which the wrong one can be pressed, especially on virtual keyboards.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Many browsers now implement mechanisms to warn against insecure login forms; see <a href="/en-US/docs/Web/Security/Insecure_passwords">Insecure passwords</a>.</p>
+<p><strong>Note:</strong> Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Many browsers now implement mechanisms to warn against insecure login forms; see <a href=/web/security/insecure_passwords>Insecure passwords</a>.</p>
 </div>
 
 <table class="properties">
@@ -107,21 +107,21 @@ tags:
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the password field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the password field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the password entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the password input has no minimum length.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+<p>{{page(/web/html/element/input/text, "pattern-include")}}</p>
 
 <p>Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section {{anch("Validation")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "placeholder", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
 
@@ -131,7 +131,7 @@ tags:
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "size", 0, 1, 2)}}</p>
 
 <h2 id="Using_password_inputs">Using password inputs</h2>
 
@@ -308,5 +308,5 @@ ssn.oninput = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

@@ -12,6 +12,7 @@ import sys
 import codecs
 
 dir_name='./files/en-us/'
+#dir_name='./files/en-us/web/media/autoplay_guide/'
 exclude_list=["node_modules", "_book", "build_scripts", "zh", "ko", "kr", "ja", "ru", "tr"]
 
 print("running")
@@ -46,10 +47,10 @@ for subdir, dirs, files in os.walk(dir_name):
             print("excluded: %s" % file)
             continue
 
-        full_file=subdir+'\\'+file
+        full_file = os.path.join(subdir,file)
         print("files: %s" % full_file)
         contents=''
-        with codecs.open(full_file, "a+", encoding='utf-8') as content_file:
+        with codecs.open(full_file, encoding='utf-8') as content_file:
 
             try:
                 contents=content_file.read()
@@ -57,7 +58,7 @@ for subdir, dirs, files in os.walk(dir_name):
                 contents=fixuplinks(contents)
                 #print(contents)
                 
-                content_file.write(contents)
+                #content_file.write(contents)
                 
             except UnicodeDecodeError:
                 print('Error read: %s' % full_file)
@@ -65,6 +66,17 @@ for subdir, dirs, files in os.walk(dir_name):
                 print("Unexpected error:", sys.exc_info()[0])
                 pass
                 
+        with codecs.open(full_file, "w", encoding='utf-8') as f:
+
+            try:
+                f.write(contents)
+                pass
+                
+            except UnicodeDecodeError:
+                print('Error read: %s' % full_file)
+            except:
+                print("Unexpected error:", sys.exc_info()[0])
+                pass
 
 
 

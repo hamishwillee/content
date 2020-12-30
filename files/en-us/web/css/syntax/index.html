@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{cssref}}</div>
 
-<p>The basic goal of the Cascading Stylesheet (<a href="/en-US/docs/Web/CSS">CSS</a>) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The <em>CSS syntax</em> reflects this goal and its basic building blocks are:</p>
+<p>The basic goal of the Cascading Stylesheet (<a href=/web/css>CSS</a>) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The <em>CSS syntax</em> reflects this goal and its basic building blocks are:</p>
 
 <ul>
  <li>The <strong>property</strong> which is an identifier, that is a human-readable <em>name</em>, that defines which feature is considered.</li>
@@ -24,7 +24,7 @@ tags:
 
 <p><img alt="css syntax - declaration.png" class="default internal" src="/@api/deki/files/6164/=css_syntax_-_declaration.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>There are more than <a href="/en-US/docs/Web/CSS/Reference">100 different properties</a> in CSS and a nearly infinite number of different values. Not all pairs of properties and values are allowed and each property defines what are the valid values. When a value is not valid for a given property, the declaration is deemed <em>invalid</em> and is wholly ignored by the CSS engine.</p>
+<p>There are more than <a href=/web/css/reference>100 different properties</a> in CSS and a nearly infinite number of different values. Not all pairs of properties and values are allowed and each property defines what are the valid values. When a value is not valid for a given property, the declaration is deemed <em>invalid</em> and is wholly ignored by the CSS engine.</p>
 
 <h2 id="CSS_declaration_blocks">CSS declaration blocks</h2>
 
@@ -44,13 +44,13 @@ tags:
 
 <p>If style sheets could only apply a declaration to each element of a Web page, they would be pretty useless. The real goal is to apply different declarations to different parts of the document.</p>
 
-<p>CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated <a href="/en-US/docs/Web/CSS/CSS_Selectors"><strong>selectors</strong></a>, which are conditions selecting some elements of the page. A <a href="/en-US/docs/Web/CSS/Selector_list">selector group</a> and an associated declarations block, together, are called a <strong>ruleset</strong>, or often a <strong>rule</strong>.</p>
+<p>CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated <a href=/web/css/css_selectors><strong>selectors</strong></a>, which are conditions selecting some elements of the page. A <a href=/web/css/selector_list>selector group</a> and an associated declarations block, together, are called a <strong>ruleset</strong>, or often a <strong>rule</strong>.</p>
 
 <p>A CSS ruleset (or rule) is visualized in the diagram below.</p>
 
 <p><img alt="css syntax - ruleset.png" class="default internal" src="https://mdn.mozillademos.org/files/17010/ruleset.png" style="border: 1px solid black; height: 334px; padding: 1em; width: 861px;"></p>
 
-<p>As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">cascade</a> algorithm.</p>
+<p>As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the <a href=/learn/css/introduction_to_css/cascade_and_inheritance>cascade</a> algorithm.</p>
 
 <div class="note">It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.<br>
 <br>
@@ -67,13 +67,13 @@ This leads to an important consequence: if one single basic selector is invalid,
 <p>There are two kinds of statements:</p>
 
 <ul>
- <li><strong>Rulesets</strong> (or <em>rules</em>) that, as seen, associate a collection of CSS declarations to a condition described by a <a href="/en-US/docs/Web/CSS/CSS_Selectors">selector</a>.</li>
- <li><strong>At-rules</strong> that start with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and then continuing up to the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a>, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).</li>
+ <li><strong>Rulesets</strong> (or <em>rules</em>) that, as seen, associate a collection of CSS declarations to a condition described by a <a href=/web/css/css_selectors>selector</a>.</li>
+ <li><strong>At-rules</strong> that start with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and then continuing up to the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of <a href=/web/css/at-rule>at-rules</a>, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).</li>
 </ul>
 
 <p>Any statement which isn't a ruleset or an at-rule is invalid and ignored.</p>
 
-<p id="nested_statements">There is another group of statements – the <strong>nested statements</strong>. These are statements that can be used in a specific subset of at-rules – the <em>conditional group rules</em>. These statements only apply if a specific condition is matched: the <code>@media</code> at-rule content is applied only if the device on which the browser runs matches the expressed condition; the <code>@document</code> at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only <em>rulesets</em> could be used inside conditional group rules. That was very restrictive and this restriction was lifted in <a href="/en-US/docs/Web/CSS/CSS3#Conditionals"><em>CSS Conditionals Level 3</em></a>. Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.</p>
+<p id="nested_statements">There is another group of statements – the <strong>nested statements</strong>. These are statements that can be used in a specific subset of at-rules – the <em>conditional group rules</em>. These statements only apply if a specific condition is matched: the <code>@media</code> at-rule content is applied only if the device on which the browser runs matches the expressed condition; the <code>@document</code> at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only <em>rulesets</em> could be used inside conditional group rules. That was very restrictive and this restriction was lifted in <a href=/web/css/css3#Conditionals><em>CSS Conditionals Level 3</em></a>. Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.</p>
 
 <h2 id="See_also">See also</h2>
 

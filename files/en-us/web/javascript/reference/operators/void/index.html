@@ -24,7 +24,7 @@ tags:
 
 <p>The <code>void</code> operator is often used merely to obtain the <code>undefined</code> primitive value, usually using "<code>void(0)</code>" (which is equivalent to "<code>void 0</code>"). In these cases, the global variable {{jsxref("undefined")}} can be used.</p>
 
-<p>It should be noted that <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">the precedence</a> of the <code>void</code> operator should be taken into account and that parentheses can help clarify the resolution of the expression following the <code>void</code> operator:</p>
+<p>It should be noted that <a href=/web/javascript/reference/operators/operator_precedence>the precedence</a> of the <code>void</code> operator should be taken into account and that parentheses can help clarify the resolution of the expression following the <code>void</code> operator:</p>
 
 <pre class="brush: js notranslate">void 2 == '2';   // (void 2) == '2', returns false
 void (2 == '2'); // void (2 == '2'), returns undefined
@@ -34,7 +34,7 @@ void (2 == '2'); // void (2 == '2'), returns undefined
 
 <h3 id="Immediately_Invoked_Function_Expressions">Immediately Invoked Function Expressions</h3>
 
-<p>When using an <a href="/en-US/docs/Glossary/IIFE">immediately-invoked function expression</a>, <code>void</code> can be used to force the <code>function</code> keyword to be treated as an expression instead of a declaration.</p>
+<p>When using an <a href=/glossary/iife>immediately-invoked function expression</a>, <code>void</code> can be used to force the <code>function</code> keyword to be treated as an expression instead of a declaration.</p>
 
 <pre class="brush: js notranslate">void function iife() {
 

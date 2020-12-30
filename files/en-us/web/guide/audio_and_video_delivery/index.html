@@ -15,7 +15,7 @@ tags:
 
 <h2 id="The_Audio_and_Video_Elements">The Audio and Video Elements</h2>
 
-<p>Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the <a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a>.</p>
+<p>Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the <a href=/web/media/formats>Guide to media types and formats on the web</a>.</p>
 
 <p><span>To deliver video and audio, the general workflow is usually something like this:</span></p>
 
@@ -65,7 +65,7 @@ tags:
 <p>The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The autoplay attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a> to learn how to use autoplay wisely..</p>
+<p><strong>Note</strong>: The autoplay attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the <a href=/web/media/autoplay_guide>Autoplay guide for media and Web Audio APIs</a> to learn how to use autoplay wisely..</p>
 </div>
 
 <p>For further info see <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/video">&lt;video&gt; element</a> and <a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">Creating a cross-browser video player</a>.</p>
@@ -138,7 +138,7 @@ myVideo.height = 320;</pre>
     alert('web audio api not supported');
   }</pre>
 
-<p>In this example we retrieve an MP3 file via XHR, load it into a source and play it (<a href="http://jsbin.com/facutone/1/edit?js">Try it for yourself</a>). Find more about Web Audio API basics in <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>.</p>
+<p>In this example we retrieve an MP3 file via XHR, load it into a source and play it (<a href="http://jsbin.com/facutone/1/edit?js">Try it for yourself</a>). Find more about Web Audio API basics in <a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a>.</p>
 
 <h2 id="getUserMedia_Stream_API">getUserMedia / Stream API</h2>
 
@@ -198,7 +198,7 @@ myVideo.height = 320;</pre>
   });
 </pre>
 
-<p>See <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a> for more details.</p>
+<p>See <a href=/web/api/mediarecorder_api>MediaRecorder API</a> for more details.</p>
 
 <h2 id="Media_Source_Extensions_MSE">Media Source Extensions (MSE)</h2>
 
@@ -431,7 +431,7 @@ lastsource.addEventListener('error', function(ev) {
 
 <h2 id="AudioVideo_JavaScript_Libraries">Audio/Video JavaScript Libraries</h2>
 
-<p>A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the <code><a href="/en-US/docs/Web/HTML/Element/track">&lt;track&gt;</a></code> element for subtitles can also be provided through media libraries.</p>
+<p>A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the <code><a href=/web/html/element/track>&lt;track&gt;</a></code> element for subtitles can also be provided through media libraries.</p>
 
 <h3 id="Audio_only">Audio only</h3>
 
@@ -477,10 +477,10 @@ lastsource.addEventListener('error', function(ev) {
  </div>
  </dd>
  <dt><a href="/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges">Media buffering, seeking, and time ranges</a></dt>
- <dd>Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using <a href="/en-US/docs/Web/API/TimeRanges">TimeRanges</a>, and other features of the media API.</dd>
+ <dd>Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using <a href=/web/api/timeranges>TimeRanges</a>, and other features of the media API.</dd>
  <dt><a href="/en-US/Apps/Build/Manipulating_media/HTML5_playbackRate_explained">HTML5 playbackRate explained</a></dt>
  <dd>The <code>playbackRate</code> property allows us to change the speed or rate at which a piece of web audio or video is playing. This article explains it in detail.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></dt>
+ <dt><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></dt>
  <dd>Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.</dd>
 </dl>
 
@@ -491,7 +491,7 @@ lastsource.addEventListener('error', function(ev) {
  <dd>Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.</dd>
  <dt><a href="/en-US/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources">Setting up adaptive streaming media sources</a></dt>
  <dd>Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML5 media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)</dd>
- <dt><a href="/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a></dt>
+ <dt><a href=/web/html/dash_adaptive_streaming_for_html_5_video>DASH Adaptive Streaming for HTML 5 Video</a></dt>
  <dd>Details how to set up adaptive streaming using DASH and WebM.</dd>
 </dl>
 
@@ -499,8 +499,8 @@ lastsource.addEventListener('error', function(ev) {
 
 <dl>
  <dt><a href="/en-US/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a></dt>
- <dd>This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format" title="WebVTT is a format for displaying timed text tracks (e.g. subtitles) with the &lt;track&gt; element. The primary purpose of WebVTT files is to add subtitles to a &lt;video&gt;.">Web_Video_Text_Tracks_Format</a> and the {{ htmlelement("track") }} element.</dd>
- <dt><a href="/en-US/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser">Writing Web Audio API code that works in every browser</a></dt>
+ <dd>This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using <a href=/web/api/web_video_text_tracks_format title="WebVTT is a format for displaying timed text tracks (e.g. subtitles) with the &lt;track&gt; element. The primary purpose of WebVTT files is to add subtitles to a &lt;video&gt;.">Web_Video_Text_Tracks_Format</a> and the {{ htmlelement("track") }} element.</dd>
+ <dt><a href=/web/apps/developing/manipulating_media/web_audio_api_cross_browser>Writing Web Audio API code that works in every browser</a></dt>
  <dd>A guide to writing cross browser Web Audio API code.</dd>
  <dt><a href="/en-US/Apps/Developing/Manipulating_media/H.264_support_in_Firefox">H.264 support in Firefox</a></dt>
  <dd>This article explains the state of support for the H.264 video format in Firefox/Firefox OS, including code examples, tips and tricks.</dd>
@@ -515,11 +515,11 @@ lastsource.addEventListener('error', function(ev) {
 <h2 id="References">References</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Element/video">The video element</a></li>
- <li><a href="/en-US/docs/Web/Guide/Events/Media_events">Media events API</a></li>
- <li><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement API</a></li>
- <li><a href="/en-US/docs/Web/API/MediaSource">MediaSource API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a></li>
- <li><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia</a></li>
+ <li><a href=/web/html/element/video>The video element</a></li>
+ <li><a href=/web/guide/events/media_events>Media events API</a></li>
+ <li><a href=/web/api/htmlvideoelement>HTMLVideoElement API</a></li>
+ <li><a href=/web/api/mediasource>MediaSource API</a></li>
+ <li><a href=/web/api/web_audio_api>Web Audio API</a></li>
+ <li><a href=/web/api/mediarecorder_api>MediaRecorder API</a></li>
+ <li><a href=/web/api/mediadevices/getusermedia>getUserMedia</a></li>
 </ul>

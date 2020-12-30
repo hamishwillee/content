@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary"><strong>Cross-Origin Resource Policy</strong> is a policy set by the <a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy"><code>Cross-Origin-Resource-Policy</code> HTTP header</a> that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like <code>&lt;script&gt;</code> and <code>&lt;img&gt;</code>), to mitigate speculative side-channel attacks, like <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>, as well as Cross-Site Script Inclusion attacks.</span></p>
+<p class="summary"><span class="seoSummary"><strong>Cross-Origin Resource Policy</strong> is a policy set by the <a href=/web/http/headers/cross-origin-resource-policy><code>Cross-Origin-Resource-Policy</code> HTTP header</a> that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like <code>&lt;script&gt;</code> and <code>&lt;img&gt;</code>), to mitigate speculative side-channel attacks, like <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>, as well as Cross-Site Script Inclusion attacks.</span></p>
 
 <p class="summary">CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements <a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking</a> (CORB), which is a mechanism to prevent some cross-origin reads by default.</p>
 
@@ -16,7 +16,7 @@ tags:
 <p>The policy is only effective for <a href="https://fetch.spec.whatwg.org/#concept-request-mode"><samp>no-cors</samp></a> requests, which are issued by default for CORS-safelisted methods/headers.</p>
 </div>
 
-<p>As this policy is expressed via a <em><a href="/en-US/docs/Glossary/Response_header">response header</a></em>, the actual request is not prevented—rather, the browser prevents the <em>result</em> from being leaked by stripping the response body.</p>
+<p>As this policy is expressed via a <em><a href=/glossary/response_header>response header</a></em>, the actual request is not prevented—rather, the browser prevents the <em>result</em> from being leaked by stripping the response body.</p>
 
 <h2 id="History">History</h2>
 
@@ -24,7 +24,7 @@ tags:
 
 <p>In early 2018, two side-channel hardware vulnerabilities known as <em>Meltdown</em> and <em>Spectre</em> were disclosed. These vulnerabilities allowed sensitive data disclosure due to a race condition which arose as part of speculative execution functionality, designed to improve performance.</p>
 
-<p>In response, Chromium shipped <a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking</a>, which automatically protects certain resources (of <samp>Content-Type</samp> HTML, JSON and XML) against cross-origin reads. If the application does not serve a <a href="/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"><code>no-sniff</code> directive</a>, Chromium will attempt to guess the <samp>Content-Type</samp> and apply the protection anyway.</p>
+<p>In response, Chromium shipped <a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking</a>, which automatically protects certain resources (of <samp>Content-Type</samp> HTML, JSON and XML) against cross-origin reads. If the application does not serve a <a href=/web/http/headers/x-content-type-options><code>no-sniff</code> directive</a>, Chromium will attempt to guess the <samp>Content-Type</samp> and apply the protection anyway.</p>
 
 <p>Cross-Origin Resource Policy is an opt-in response header which can protect <em>any</em> resource; there is no need for browsers to sniff MIME types.</p>
 

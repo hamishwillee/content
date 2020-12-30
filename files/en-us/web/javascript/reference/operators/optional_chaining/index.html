@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p>The <strong>optional chaining</strong> operator (<strong><code>?.</code></strong>) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. <span class="seoSummary">The <code>?.</code> operator functions similarly to the <code>.</code> chaining operator, except that instead of causing an error if a reference is <a href="/en-US/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} or {{JSxRef("undefined")}}), the expression short-circuits with a return value of <code>undefined</code>.</span> When used with function calls, it returns <code>undefined</code> if the given function does not exist.</p>
+<p>The <strong>optional chaining</strong> operator (<strong><code>?.</code></strong>) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. <span class="seoSummary">The <code>?.</code> operator functions similarly to the <code>.</code> chaining operator, except that instead of causing an error if a reference is <a href=/glossary/nullish>nullish</a> ({{JSxRef("null")}} or {{JSxRef("undefined")}}), the expression short-circuits with a return value of <code>undefined</code>.</span> When used with function calls, it returns <code>undefined</code> if the given function does not exist.</p>
 
 <p>This results in shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee as to which properties are required.</p>
 
@@ -69,7 +69,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <h4 id="Dealing_with_optional_callbacks_or_event_handlers">Dealing with optional callbacks or event handlers</h4>
 
-<p>If you use callbacks or fetch methods from an object with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">a destructuring assignment</a>, you may have non-existent values that you cannot call as functions unless you have tested their existence. Using <code>?.</code>, you can avoid this extra test:</p>
+<p>If you use callbacks or fetch methods from an object with <a href=/web/javascript/reference/operators/destructuring_assignment#Object_destructuring>a destructuring assignment</a>, you may have non-existent values that you cannot call as functions unless you have tested their existence. Using <code>?.</code>, you can avoid this extra test:</p>
 
 <pre class="brush: js notranslate">// Written as of ES2019
 function doSomething(onContent, onError) {
@@ -97,7 +97,7 @@ function doSomething(onContent, onError) {
 
 <h3 id="Optional_chaining_with_expressions">Optional chaining with expressions</h3>
 
-<p>You can also use the optional chaining operator when accessing properties with an expression using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">the bracket notation of the property accessor</a>:</p>
+<p>You can also use the optional chaining operator when accessing properties with an expression using <a href=/web/javascript/reference/operators/property_accessors#Bracket_notation>the bracket notation of the property accessor</a>:</p>
 
 <pre class="brush: js notranslate">let nestedProp = obj?.['prop' + 'Name'];
 </pre>

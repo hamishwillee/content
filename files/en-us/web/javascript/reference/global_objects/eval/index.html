@@ -151,7 +151,7 @@ var propName = getPropName();  // returns "a" or "b"
 eval( 'var result = obj.' + propName );
 </pre>
 
-<p>However, <code>eval()</code> is not necessary here. In fact, its use here is discouraged. Instead, use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>, which are much faster and safer:</p>
+<p>However, <code>eval()</code> is not necessary here. In fact, its use here is discouraged. Instead, use the <a href=/web/javascript/reference/operators/property_accessors>property accessors</a>, which are much faster and safer:</p>
 
 <pre class="brush:js">var obj = { a: 20, b: 30 };
 var propName = getPropName();  // returns "a" or "b"
@@ -203,21 +203,21 @@ setTimeout(function() { ... }, 1000);
 // instead of elt.setAttribute("onclick", "...") use:
 elt.addEventListener('click', function() { ... } , false); </pre>
 
-<p><a href="/en-US/docs/Web/JavaScript/Closures">Closures</a> are also helpful as a way to create parameterized functions without concatenating strings.</p>
+<p><a href=/web/javascript/closures>Closures</a> are also helpful as a way to create parameterized functions without concatenating strings.</p>
 
 <h3 id="Parsing_JSON_converting_strings_to_JavaScript_objects">Parsing JSON (converting strings to JavaScript objects)</h3>
 
-<p>If the string you're calling <code>eval()</code> on contains data (for example, an array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to represent data. See also <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
+<p>If the string you're calling <code>eval()</code> on contains data (for example, an array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to represent data. See also <a href=/downloading_json_and_javascript_in_extensions title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
 
 <p>Note that since JSON syntax is limited compared to JavaScript syntax, many valid JavaScript literals will not parse as JSON. For example, trailing commas are not allowed in JSON, and property names (keys) in object literals must be enclosed in quotes. Be sure to use a JSON serializer to generate strings that will be later parsed as JSON.</p>
 
 <h3 id="Pass_data_instead_of_code">Pass data instead of code</h3>
 
-<p>For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in <a href="/en-US/docs/XPath">XPath</a> instead of JavaScript code.</p>
+<p>For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in <a href=/xpath>XPath</a> instead of JavaScript code.</p>
 
 <h3 id="Run_code_with_limited_privileges">Run code with limited privileges</h3>
 
-<p>If you must run the code, consider running it with reduced privileges. This advice applies mainly to extensions and XUL applications, which can use <a href="/en-US/docs/Components.utils.evalInSandbox" title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> for this.</p>
+<p>If you must run the code, consider running it with reduced privileges. This advice applies mainly to extensions and XUL applications, which can use <a href=/components.utils.evalinsandbox title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> for this.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -295,6 +295,6 @@ var fct2 = eval(fctStr2)  // return a function
 
 <ul>
  <li>{{jsxref("Global_Objects/uneval", "uneval()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
+ <li><a href=/web/javascript/reference/operators/property_accessors>Property accessors</a></li>
  <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts">WebExtensions: Using eval in content scripts</a></li>
 </ul>

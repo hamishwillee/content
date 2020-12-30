@@ -23,14 +23,14 @@ tags:
  <dt><code><var>expression</var></code></dt>
  <dd>Adds the given expression to the scope chain used when evaluating the statement. The parentheses around the expression are required.</dd>
  <dt><code><var>statement</var></code></dt>
- <dd>Any statement. To execute multiple statements, use a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/block" title="JavaScript/Reference/Statements/block">block</a> statement ({ ... }) to group those statements.</dd>
+ <dd>Any statement. To execute multiple statements, use a <a href=/web/javascript/reference/statements/block title="JavaScript/Reference/Statements/block">block</a> statement ({ ... }) to group those statements.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
 <p>JavaScript looks up an unqualified name by searching a scope chain associated with the execution context of the script or function containing that unqualified name. The 'with' statement adds the given object to the head of this scope chain during the evaluation of its statement body. If an unqualified name used in the body matches a property in the scope chain, then the name is bound to the property and the object containing the property. Otherwise a {{jsxref("ReferenceError")}} is thrown.</p>
 
-<div class="note">Using <code>with</code> is not recommended, and is forbidden in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. The recommended alternative is to assign the object whose properties you want to access to a temporary variable.</div>
+<div class="note">Using <code>with</code> is not recommended, and is forbidden in ECMAScript 5 <a href=/web/javascript/reference/functions_and_function_scope/strict_mode>strict mode</a>. The recommended alternative is to assign the object whose properties you want to access to a temporary variable.</div>
 
 <h3 id="Performance_pro_contra">Performance pro &amp; contra</h3>
 
@@ -101,7 +101,7 @@ with (Math) {
 
 <ul>
  <li>{{jsxref("Statements/block", "block", "", 1)}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">Strict mode</a></li>
+ <li><a href=/web/javascript/reference/functions_and_function_scope/strict_mode>Strict mode</a></li>
  <li>{{jsxref("Symbol.unscopables")}}</li>
  <li>{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}</li>
 </ul>

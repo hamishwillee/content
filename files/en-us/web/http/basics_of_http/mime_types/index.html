@@ -74,7 +74,7 @@ tags:
 
 <p id="sect1"><strong>Multipart</strong> types indicate a category of document broken into pieces, often with different MIME types; they can also be used — especially in email scenarios — to represent multiple, separate files which are all part of the same transaction. They represent a <strong>composite document</strong>.</p>
 
-<p>With the exception of <code>multipart/form-data</code>, used in the {{HTTPMethod("POST")}} method of <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>, and <code>multipart/byteranges</code>, used with {{HTTPStatus("206")}} <code>Partial Content</code> to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely show a "Save As" window if it doesn't know how to display the document).</p>
+<p>With the exception of <code>multipart/form-data</code>, used in the {{HTTPMethod("POST")}} method of <a href=/web/guide/html/forms>HTML Forms</a>, and <code>multipart/byteranges</code>, used with {{HTTPStatus("206")}} <code>Partial Content</code> to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely show a "Save As" window if it doesn't know how to display the document).</p>
 
 <p>There are two multipart types:</p>
 
@@ -108,7 +108,7 @@ tags:
 <p>All HTML content should be served with this type. Alternative MIME types for XHTML (like <code>application/xhtml+xml</code>) are mostly useless nowadays.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Use <code>application/xml</code> or <code>application/xhtml+xml</code> if you want XML’s strict parsing rules, <code><a href="/en-US/docs/Web/API/CDATASection">&lt;![CDATA[…]]&gt;</a></code> sections, or elements that aren't from HTML/SVG/MathML namespaces.</p>
+<p><strong>Note:</strong> Use <code>application/xml</code> or <code>application/xhtml+xml</code> if you want XML’s strict parsing rules, <code><a href=/web/api/cdatasection>&lt;![CDATA[…]]&gt;</a></code> sections, or elements that aren't from HTML/SVG/MathML namespaces.</p>
 </div>
 
 <h3 id="textjavascript"><span id="JavaScript_types">text/javascript</span></h3>
@@ -152,13 +152,13 @@ tags:
 
 <p>As is the case for images, HTML doesn't mandate that web browsers support any specific file and codec types for the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, so it's important to consider your target audience and the range of browsers (and versions of those browsers) they may be using when choosing the file type and codecs to use for media.</p>
 
-<p>Our <a href="/en-US/docs/Web/Media/Formats/Containers">media container formats guide</a> provides a list of the file types that are commonly supported by web browsers, including information about what their special use cases may be, any drawbacks they have, and compatibility information, along with other details.</p>
+<p>Our <a href=/web/media/formats/containers>media container formats guide</a> provides a list of the file types that are commonly supported by web browsers, including information about what their special use cases may be, any drawbacks they have, and compatibility information, along with other details.</p>
 
-<p>The <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codec</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs">video codec</a> guides list the various codecs that web browsers often support, providing compatibility details along with technical information such as how many audio channels they support, what sort of compression is used, and what bit rates and so forth they're useful at. The <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">codecs used by WebRTC</a> guide expands upon this by specifically covering the codecs supported by the major web browsers, so you can choose the codecs that best cover the range of browsers you wish to support.</p>
+<p>The <a href=/web/media/formats/audio_codecs>audio codec</a> and <a href=/web/media/formats/video_codecs>video codec</a> guides list the various codecs that web browsers often support, providing compatibility details along with technical information such as how many audio channels they support, what sort of compression is used, and what bit rates and so forth they're useful at. The <a href=/web/media/formats/webrtc_codecs>codecs used by WebRTC</a> guide expands upon this by specifically covering the codecs supported by the major web browsers, so you can choose the codecs that best cover the range of browsers you wish to support.</p>
 
-<p>As for MIME types of audio or video files, they typically specify the container format (file type). The optional <a href="/en-US/docs/Web/Media/Formats/codecs_parameter">codecs parameter</a> can be added to the MIME type to further specify which codecs to use and what options were used to encode the media, such as codec profile, level, or other such information.</p>
+<p>As for MIME types of audio or video files, they typically specify the container format (file type). The optional <a href=/web/media/formats/codecs_parameter>codecs parameter</a> can be added to the MIME type to further specify which codecs to use and what options were used to encode the media, such as codec profile, level, or other such information.</p>
 
-<p>The most commonly used MIME types used for web content are listed below. This isn't a complete list of all the types that may be available, however. See the <a href="/en-US/docs/Web/Media/Formats/Containers">media container formats</a> guide for that.</p>
+<p>The most commonly used MIME types used for web content are listed below. This isn't a complete list of all the types that may be available, however. See the <a href=/web/media/formats/containers>media container formats</a> guide for that.</p>
 
 <table class="standard-table">
  <thead>
@@ -200,7 +200,7 @@ tags:
 
 <h3 id="multipartform-data">multipart/form-data</h3>
 
-<p>The <code>multipart/form-data</code> type can be used when sending the values of a completed <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Form</a> from browser to server.</p>
+<p>The <code>multipart/form-data</code> type can be used when sending the values of a completed <a href=/web/guide/html/forms>HTML Form</a> from browser to server.</p>
 
 <p>As a multipart document format, it consists of different parts, delimited by a boundary (a string starting with a double dash <code>--</code>). Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.</p>
 
@@ -299,7 +299,7 @@ Content-Range: bytes 300-400/1270
   <p>RAR-compressed files. In this case, the ideal would be the true type of the original files; this is often impossible as .RAR files can hold several resources of different types. In this case, configure the server to send <code>application/x-rar-compressed</code>.</p>
  </li>
  <li>
-  <p>Audio and video. Only resources with the correct MIME Type will be played in {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements. Be sure to specify the correct <a href="/en-US/docs/Web/Media/Formats">media type for audio and video</a>.</p>
+  <p>Audio and video. Only resources with the correct MIME Type will be played in {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements. Be sure to specify the correct <a href=/web/media/formats>media type for audio and video</a>.</p>
  </li>
  <li>
   <p>Proprietary file types. Avoid using <code>application/octet-stream</code> as most browsers do not allow defining a default behavior (like "Open in Word") for this generic MIME type. A specific type like <code>application/vnd.mspowerpoint</code> lets users open such files automatically in the presentation software of their choice.</p>
@@ -324,7 +324,7 @@ Content-Range: bytes 300-400/1270
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types used on the web</a></li>
- <li><a href="/en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types">Properly configuring server MIME types</a></li>
+ <li><a href=/web/media>Web media technologies</a></li>
+ <li><a href=/web/media/formats>Guide to media types used on the web</a></li>
+ <li><a href=/web/security/securing_your_site/configuring_server_mime_types>Properly configuring server MIME types</a></li>
 </ul>

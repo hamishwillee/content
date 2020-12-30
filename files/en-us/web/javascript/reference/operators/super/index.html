@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong>super</strong> keyword is used to access and call functions on an object's parent.</p>
 
-<p>The <code>super.prop</code> and <code>super[expr]</code> expressions are valid in any <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definition</a> in both <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object literals</a>.</p>
+<p>The <code>super.prop</code> and <code>super[expr]</code> expressions are valid in any <a href=/web/javascript/reference/functions/method_definitions>method definition</a> in both <a href=/web/javascript/reference/classes>classes</a> and <a href=/web/javascript/reference/operators/object_initializer>object literals</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -64,7 +64,7 @@ class Square extends Rectangle {
 
 <h3 id="Super-calling_static_methods">Super-calling static methods</h3>
 
-<p>You are also able to call super on <a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a> methods.</p>
+<p>You are also able to call super on <a href=/web/javascript/reference/classes/static>static</a> methods.</p>
 
 <pre class="brush: js notranslate">class Rectangle {
   static logNbSides() {
@@ -82,7 +82,7 @@ Square.logDescription(); // 'I have 4 sides which are all equal'
 
 <h3 id="Deleting_super_properties_will_throw_an_error">Deleting super properties will throw an error</h3>
 
-<p>You cannot use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> and <code>super.prop</code> or <code>super[expr]</code> to delete a parent class' property, it will throw a {{jsxref("ReferenceError")}}.</p>
+<p>You cannot use the <a href=/web/javascript/reference/operators/delete>delete operator</a> and <code>super.prop</code> or <code>super[expr]</code> to delete a parent class' property, it will throw a {{jsxref("ReferenceError")}}.</p>
 
 <pre class="brush: js notranslate">class Base {
   foo() {}
@@ -125,7 +125,7 @@ console.log(y.prop); // 1
 
 <h3 id="Using_super.prop_in_object_literals">Using <code>super.prop</code> in object literals</h3>
 
-<p>Super can also be used in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> notation. In this example, two objects define a method. In the second object, <code>super</code> calls the first object's method. This works with the help of {{jsxref("Object.setPrototypeOf()")}} with which we are able to set the prototype of <code>obj2</code> to <code>obj1</code>, so that <code>super</code> is able to find <code>method1</code> on <code>obj1</code>.</p>
+<p>Super can also be used in the <a href=/web/javascript/reference/operators/object_initializer>object initializer / literal</a> notation. In this example, two objects define a method. In the second object, <code>super</code> calls the first object's method. This works with the help of {{jsxref("Object.setPrototypeOf()")}} with which we are able to set the prototype of <code>obj2</code> to <code>obj1</code>, so that <code>super</code> is able to find <code>method1</code> on <code>obj1</code>.</p>
 
 <pre class="brush: js notranslate">var obj1 = {
   method1() {
@@ -165,5 +165,5 @@ obj2.method2(); // logs "method 1"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
+ <li><a href=/web/javascript/reference/classes>Classes</a></li>
 </ul>

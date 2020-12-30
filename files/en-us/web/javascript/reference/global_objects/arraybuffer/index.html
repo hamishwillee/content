@@ -12,9 +12,9 @@ tags:
 
 <p>The <strong><code>ArrayBuffer</code></strong> object is used to represent a generic, fixed-length raw binary data buffer.</p>
 
-<p>It is an array of bytes, often referred to in other languages as a "byte array".You cannot directly manipulate the contents of an <code>ArrayBuffer</code>; instead, you create one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.</p>
+<p>It is an array of bytes, often referred to in other languages as a "byte array".You cannot directly manipulate the contents of an <code>ArrayBuffer</code>; instead, you create one of the <a href=/web/javascript/reference/global_objects/typedarray>typed array objects</a> or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.</p>
 
-<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer">ArrayBuffer()</a></code> constructor creates a new <code>ArrayBuffer</code> of the given length in bytes. You can also get an array buffer from existing data, for example <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">from a Base64 string</a> or <a href="/en-US/docs/Web/API/FileReader/readAsArrayBuffer">from a local file</a>.</p>
+<p>The <code><a href=/web/javascript/reference/global_objects/arraybuffer/arraybuffer>ArrayBuffer()</a></code> constructor creates a new <code>ArrayBuffer</code> of the given length in bytes. You can also get an array buffer from existing data, for example <a href=/web/api/windowbase64/base64_encoding_and_decoding#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer>from a Base64 string</a> or <a href=/web/api/filereader/readasarraybuffer>from a local file</a>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -34,7 +34,7 @@ tags:
 
 <dl>
  <dt>{{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(<var>arg</var>)")}}</dt>
- <dd>Returns <code>true</code> if <code><var>arg</var></code> is one of the ArrayBuffer views, such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}}. Returns <code>false</code> otherwise.</dd>
+ <dd>Returns <code>true</code> if <code><var>arg</var></code> is one of the ArrayBuffer views, such as <a href=/web/javascript/reference/global_objects/typedarray>typed array objects</a> or a {{jsxref("DataView")}}. Returns <code>false</code> otherwise.</dd>
 </dl>
 
 <h2 id="Instance_properties">Instance properties</h2>
@@ -82,6 +82,6 @@ const view = new Int32Array(buffer);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
+ <li><a href=/web/javascript/typed_arrays>JavaScript typed arrays</a></li>
  <li>{{jsxref("SharedArrayBuffer")}}</li>
 </ul>

@@ -15,7 +15,7 @@ tags:
 <p>This header is required if the request has an {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
 
 <div class="notecard note">
-<p>{{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and hence usually aren't listed in <code>Access-Control-Allow-Headers</code> (unless there is a need to circumvent the safelist <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">additional restrictions</a>).</p>
+<p>{{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and hence usually aren't listed in <code>Access-Control-Allow-Headers</code> (unless there is a need to circumvent the safelist <a href=/glossary/cors-safelisted_request_header#Additional_restrictions>additional restrictions</a>).</p>
 </div>
 
 <table class="properties">
@@ -43,7 +43,7 @@ Access-Control-Allow-Headers: *
  <dt><code>&lt;header-name&gt;</code></dt>
  <dd>The name of a supported request header. The header may list any number of headers, separated by commas.</dd>
  <dt><code>*</code> (wildcard)</dt>
- <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics. Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
+ <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href=/web/http/cookies>HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics. Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -62,7 +62,7 @@ Access-Control-Allow-Headers: *
 
 <h3 id="Bypassing_additional_restrictions">Bypassing additional restrictions</h3>
 
-<p>Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in <code>Access-Control-Allow-Headers</code>, listing them anyway will circumvent the <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">additional restrictions</a> that apply.</p>
+<p>Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in <code>Access-Control-Allow-Headers</code>, listing them anyway will circumvent the <a href=/glossary/cors-safelisted_request_header#Additional_restrictions>additional restrictions</a> that apply.</p>
 
 <pre class="notranslate">Access-Control-Allow-Headers: Accept</pre>
 

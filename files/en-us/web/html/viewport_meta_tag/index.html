@@ -17,7 +17,7 @@ tags:
 
 <h3 id="Enter_viewport_meta_tag">Enter viewport meta tag</h3>
 
-<p>However, this mechanism is not so good for pages that are optimized for narrow screens using <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques.</p>
+<p>However, this mechanism is not so good for pages that are optimized for narrow screens using <a href=/web/css/media_queries>media queries</a> — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques.</p>
 
 <p><span class="seoSummary">To mitigate this problem of virtual viewport on narrow screen devices, Apple introduced the "viewport meta tag" in Safari iOS to let web developers control the viewport's size and scale.</span> Many other mobile browsers now support this tag, although it is not part of any web standard. Apple's <a class="external" href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">documentation</a> does a good job explaining how web developers can use this tag, but we had to do some detective work to figure out exactly how to implement it in Fennec. For example, Safari's documentation says the content is a "comma-delimited list," but existing browsers and web pages use any mix of commas, semicolons, and spaces as separators.</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <pre class="notranslate">&lt;meta name="viewport" content="width=500, initial-scale=1"&gt;</pre>
 
-<p>Other <a href="/en-US/docs/Web/HTML/Element/meta#Attributes">attributes</a> that are available are <code>minimum-scale</code>, <code>maximum-scale</code>, and <code>user-scalable</code>. These properties affect the initial scale and width, as well as limiting changes in zoom level.</p>
+<p>Other <a href=/web/html/element/meta#Attributes>attributes</a> that are available are <code>minimum-scale</code>, <code>maximum-scale</code>, and <code>user-scalable</code>. These properties affect the initial scale and width, as well as limiting changes in zoom level.</p>
 
 <p>Not all mobile browsers handle orientation changes in the same way. For example, Mobile Safari often just zooms the page when changing from portrait to landscape, instead of laying out the page as it would if originally loaded in landscape. If web developers want their scale settings to remain consistent when switching orientations on the iPhone, they must add a <code>maximum-scale</code> value to prevent this zooming, which has the sometimes-unwanted side effect of preventing users from zooming in:</p>
 
@@ -94,4 +94,4 @@ tags:
 
 <p>There is clearly demand for the viewport meta tag, since it is supported by most popular mobile browsers and used by thousands of web sites. It would be good to have a true standard for web pages to control viewport properties. As the standardization process proceeds, we at Mozilla will work to keep up to date with any changes.</p>
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}</p>
+<p>{{QuickLinksWithSubpages(/web/html)}}</p>

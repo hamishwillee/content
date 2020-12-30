@@ -24,9 +24,9 @@ tags:
 
 <dl>
  <dt><em>source</em></dt>
- <dd>A <a href="/en-US/docs/Web/API/Response" title="The Response interface of the Fetch API represents the response to a request."><code>Response</code></a> object or a promise that will fulfill with one, representing the underlying source of a .wasm module you want to stream, compile, and instantiate.</dd>
+ <dd>A <a href=/web/api/response title="The Response interface of the Fetch API represents the response to a request."><code>Response</code></a> object or a promise that will fulfill with one, representing the underlying source of a .wasm module you want to stream, compile, and instantiate.</dd>
  <dt><em>importObject</em> {{optional_inline}}</dt>
- <dd>An object containing the values to be imported into the newly-created <code>Instance</code>, such as functions or {{jsxref("WebAssembly.Memory")}} objects. There must be one matching property for each declared import of the compiled module or else a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">WebAssembly.LinkError</a></code> is thrown.</dd>
+ <dd>An object containing the values to be imported into the newly-created <code>Instance</code>, such as functions or {{jsxref("WebAssembly.Memory")}} objects. There must be one matching property for each declared import of the compiled module or else a <code><a href=/web/javascript/reference/global_objects/webassembly/linkerror>WebAssembly.LinkError</a></code> is thrown.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,8 +34,8 @@ tags:
 <p>A <code>Promise</code> that resolves to a <code>ResultObject</code> which contains two fields:</p>
 
 <ul>
- <li><code>module</code>: A {{jsxref("WebAssembly.Module")}} object representing the compiled WebAssembly module. This <code>Module</code> can be instantiated again or shared via <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>.</li>
- <li><code>instance</code>: A {{jsxref("WebAssembly.Instance")}} object that contains all the <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a>.</li>
+ <li><code>module</code>: A {{jsxref("WebAssembly.Module")}} object representing the compiled WebAssembly module. This <code>Module</code> can be instantiated again or shared via <a href=/web/api/worker/postmessage>postMessage()</a>.</li>
+ <li><code>instance</code>: A {{jsxref("WebAssembly.Instance")}} object that contains all the <a href=/webassembly/exported_functions>Exported WebAssembly functions</a>.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="Instantiating_streaming">Instantiating streaming</h3>
 
-<p>The following example (see our <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> demo on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a <code>ResultObject</code>. Because the <code>instantiateStreaming()</code>  function accepts a promise for a <a href="/en-US/docs/Web/API/Response" title="The Response interface of the Fetch API represents the response to a request."><code>Response</code></a> object, you can directly pass it a <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch" title="The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available."><code>WindowOrWorkerGlobalScope.fetch()</code></a> call, and it will pass the response into the function when it fulfills.</p>
+<p>The following example (see our <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> demo on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a <code>ResultObject</code>. Because the <code>instantiateStreaming()</code>  function accepts a promise for a <a href=/web/api/response title="The Response interface of the Fetch API represents the response to a request."><code>Response</code></a> object, you can directly pass it a <a href=/web/api/windoworworkerglobalscope/fetch title="The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available."><code>WindowOrWorkerGlobalScope.fetch()</code></a> call, and it will pass the response into the function when it fulfills.</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 
@@ -87,7 +87,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
+ <li><a href=/webassembly>WebAssembly</a> overview page</li>
+ <li><a href=/webassembly/concepts>WebAssembly concepts</a></li>
+ <li><a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a></li>
 </ul>

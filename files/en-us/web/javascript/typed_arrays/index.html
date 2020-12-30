@@ -25,7 +25,7 @@ tags:
 
 <h3 id="Typed_array_views">Typed array views</h3>
 
-<p>Typed array views have self-descriptive names and provide views for all the usual numeric types like <code>Int8</code>, <code>Uint32</code>, <code>Float64</code> and so forth. There is one special typed array view, the <code>Uint8ClampedArray</code>. It clamps the values between 0 and 255. This is useful for <a href="/en-US/docs/Web/API/ImageData">Canvas data processing</a>, for example.</p>
+<p>Typed array views have self-descriptive names and provide views for all the usual numeric types like <code>Int8</code>, <code>Uint32</code>, <code>Float64</code> and so forth. There is one special typed array view, the <code>Uint8ClampedArray</code>. It clamps the values between 0 and 255. This is useful for <a href=/web/api/imagedata>Canvas data processing</a>, for example.</p>
 
 <table class="standard-table">
  <thead>
@@ -132,18 +132,18 @@ tags:
 
 <h3 id="DataView">DataView</h3>
 
-<p>The {{jsxref("DataView")}} is a low-level interface that provides a getter/setter API to read and write arbitrary data to the buffer. This is useful when dealing with different types of data, for example. Typed array views are in the native byte-order (see <a href="/en-US/docs/Glossary/Endianness">Endianness</a>) of your platform. With a <code>DataView</code> you are able to control the byte-order. It is big-endian by default and can be set to little-endian in the getter/setter methods.</p>
+<p>The {{jsxref("DataView")}} is a low-level interface that provides a getter/setter API to read and write arbitrary data to the buffer. This is useful when dealing with different types of data, for example. Typed array views are in the native byte-order (see <a href=/glossary/endianness>Endianness</a>) of your platform. With a <code>DataView</code> you are able to control the byte-order. It is big-endian by default and can be set to little-endian in the getter/setter methods.</p>
 
 <h2 id="Web_APIs_using_typed_arrays">Web APIs using typed arrays</h2>
 
 <p>These are some examples of APIs that make use of typed arrays; there are others, and more are being added all the time.</p>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
- <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href="/en-US/docs/Web/API/Blob"><code>Blob</code></a> or <a href="/en-US/docs/Web/API/File"><code>File</code></a>.</dd>
- <dt><a href="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
+ <dt><a href=/web/api/filereader#readAsArrayBuffer()><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
+ <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href=/web/api/blob><code>Blob</code></a> or <a href=/web/api/file><code>File</code></a>.</dd>
+ <dt><a href=/web/api/xmlhttprequest#send()><code>XMLHttpRequest.prototype.send()</code></a></dt>
  <dd><code>XMLHttpRequest</code> instances' <code>send()</code> method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.</dd>
- <dt><code><a href="/en-US/docs/Web/API/ImageData">ImageData.data</a></code></dt>
+ <dt><code><a href=/web/api/imagedata>ImageData.data</a></code></dt>
  <dd>Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between <code>0</code> and <code>255</code> inclusive.</dd>
 </dl>
 
@@ -200,11 +200,11 @@ console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
 
 <p>The output from this is <code>"Entry 0 in the 32-bit array is now 32"</code>.</p>
 
-<p>In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects" title="JavaScript typed arrays/ArrayBufferView#Typed array subclasses">view types</a>.</p>
+<p>In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any <a href=/web/javascript/reference/global_objects/typedarray#TypedArray_objects title="JavaScript typed arrays/ArrayBufferView#Typed array subclasses">view types</a>.</p>
 
 <h3 id="Working_with_complex_data_structures">Working with complex data structures</h3>
 
-<p>By combining a single buffer with multiple views of different types, starting at different offsets into the buffer, you can interact with data objects containing multiple data types. This lets you, for example, interact with complex data structures from <a href="/en-US/docs/Web/WebGL">WebGL</a>, data files, or C structures you need to use while using <a href="/en-US/docs/Mozilla/js-ctypes" title="js-ctypes">js-ctypes</a>.</p>
+<p>By combining a single buffer with multiple views of different types, starting at different offsets into the buffer, you can interact with data objects containing multiple data types. This lets you, for example, interact with complex data structures from <a href=/web/webgl>WebGL</a>, data files, or C structures you need to use while using <a href=/mozilla/js-ctypes title="js-ctypes">js-ctypes</a>.</p>
 
 <p>Consider this C structure:</p>
 
@@ -260,9 +260,9 @@ normalArray.constructor === Array;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
- <li><a href="/en-US/docs/Code_snippets/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href=/web/javascript/base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer>Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
+ <li><a href=/code_snippets/stringview><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
  <li><a href="https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays">Faster Canvas Pixel Manipulation with Typed Arrays</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
- <li><a href="/en-US/docs/Glossary/Endianness">Endianness</a></li>
+ <li><a href=/glossary/endianness>Endianness</a></li>
 </ul>

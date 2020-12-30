@@ -20,7 +20,7 @@ tags:
 
 <p>In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.</p>
 
-<p>With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying resources on the Web</a> for more details.</p>
+<p>With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See <a href=/web/http/basics_of_http/identifying_resources_on_the_web>Identifying resources on the Web</a> for more details.</p>
 
 <div class="note"><strong>Note:</strong> The client-server model does not allow the server to send data to the client without an explicit request for it. To work around this problem, web developers use several techniques: ping the server periodically via the {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, using the <a href="/en/WebSockets">WebSockets API</a>, or similar protocols.</div>
 
@@ -62,11 +62,11 @@ name=Joe%20User&amp;request=Send%20me%20one%20of%20your%20catalogue
 
 <h3 id="Request_methods">Request methods</h3>
 
-<p>HTTP defines a set of <a href="/en-US/docs/Web/HTTP/Methods">request methods</a> indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are <code>GET</code> and <code>POST</code>:</p>
+<p>HTTP defines a set of <a href=/web/http/methods>request methods</a> indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are <code>GET</code> and <code>POST</code>:</p>
 
 <ul>
  <li>The {{HTTPMethod("GET")}} method requests a data representation of the specified resource. Requests using <code>GET</code> should only retrieve data.</li>
- <li>The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>.</li>
+ <li>The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for <a href=/web/guide/html/forms>HTML Forms</a>.</li>
 </ul>
 
 <h2 id="Structure_of_a_server_response">Structure of a server response</h2>
@@ -151,7 +151,7 @@ X-Cache: Error from cloudfront
 
 <h3 id="Response_status_codes">Response status codes</h3>
 
-<p><a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and servers errors.</p>
+<p><a href=/web/http/status>HTTP response status codes</a> indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and servers errors.</p>
 
 <ul>
  <li>{{HTTPStatus(200)}}: OK. The request has succeeded.</li>
@@ -162,8 +162,8 @@ X-Cache: Error from cloudfront
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying resources on the Web</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes </a></li>
+ <li><a href=/web/http/basics_of_http/identifying_resources_on_the_web>Identifying resources on the Web</a></li>
+ <li><a href=/web/http/headers>HTTP headers</a></li>
+ <li><a href=/web/http/methods>HTTP request methods</a></li>
+ <li><a href=/web/http/status>HTTP response status codes </a></li>
 </ul>

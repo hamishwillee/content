@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The well-known <code><strong>Symbol.iterator</strong></code> symbol specifies the default iterator for an object. Used by <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</p>
+<p>The well-known <code><strong>Symbol.iterator</strong></code> symbol specifies the default iterator for an object. Used by <a href=/web/javascript/reference/statements/for...of><code>for...of</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}</div>
 
@@ -27,7 +27,7 @@ tags:
  <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
 </ul>
 
-<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a> for more information.</p>
+<p>See also <a href=/web/javascript/reference/iteration_protocols>Iteration protocols</a> for more information.</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -46,7 +46,7 @@ myIterable[Symbol.iterator] = function* () {
 [...myIterable] // [1, 2, 3]
 </pre>
 
-<p>Or iterables can be defined directly inside a class or object using a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property</a>:</p>
+<p>Or iterables can be defined directly inside a class or object using a <a href=/web/javascript/reference/operators/object_initializer#Computed_property_names>computed property</a>:</p>
 
 <pre class="brush: js">class Foo {
   *[Symbol.iterator] () {
@@ -98,7 +98,7 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
+ <li><a href=/web/javascript/reference/iteration_protocols>Iteration protocols</a></li>
  <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
  <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
  <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>

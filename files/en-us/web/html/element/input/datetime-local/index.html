@@ -23,7 +23,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
+<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href=/web/html/element/input/text>&lt;input type="text"&gt;</a></code> controls.</p>
 
 <p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
@@ -68,7 +68,7 @@ tags:
 
 <h2 id="Value">Value</h2>
 
-<p>A {{domxref("DOMString")}} representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.</p>
+<p>A {{domxref("DOMString")}} representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage(/web/html/date_and_time_formats, "Local date and time strings")}}.</p>
 
 <p>You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
@@ -80,7 +80,7 @@ tags:
 <p>One thing to note is that the displayed date and time formats differ from the actual <code>value</code>; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time <code>value</code> is always formatted <code>yyyy-MM-ddThh:mm</code>. When the above value submitted to the server, for example, it will look like <code>partydate=2017-06-01T08:30</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Also bear in mind that if such data is submitted via HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code>, the colon character will need to be escaped for inclusion in the URL parameters, e.g. <code>partydate=2017-06-01T08%3A30</code>. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.</p>
+<p><strong>Note:</strong> Also bear in mind that if such data is submitted via HTTP <code><a href=/web/http/methods/get>GET</a></code>, the colon character will need to be escaped for inclusion in the URL parameters, e.g. <code>partydate=2017-06-01T08%3A30</code>. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.</p>
 </div>
 
 <p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
@@ -119,19 +119,19 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>The latest date and time to accept. If the {{htmlattrxref("value", "input")}} entered into the element is later than this timestamp, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string which follows the format <code>yyyy-MM-ddThh:mm</code>, then the element has no maximum value.</p>
+<p>The latest date and time to accept. If the {{htmlattrxref("value", "input")}} entered into the element is later than this timestamp, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string which follows the format <code>yyyy-MM-ddThh:mm</code>, then the element has no maximum value.</p>
 
 <p>This value must specify a date string later than or equal to the one specified by the <code>min</code> attribute.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>The earliest date and time to accept; timestamps earlier than this will cause the element to fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a valid string which follows the format <code>yyyy-MM-ddThh:mm</code>, then the element has no minimum value.</p>
+<p>The earliest date and time to accept; timestamps earlier than this will cause the element to fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>min</code> attribute isn't a valid string which follows the format <code>yyyy-MM-ddThh:mm</code>, then the element has no minimum value.</p>
 
 <p>This value must specify a date string earlier than or equal to the one specified by the <code>max</code> attribute.</p>
 
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>{{page(/web/html/element/input/number, "step-include")}}</p>
 
 <p>For <code>datetime-local</code> inputs, the value of <code>step</code> is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of <code>step</code> is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).</p>
 
@@ -178,13 +178,13 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <h3 id="Controlling_input_size">Controlling input size</h3>
 
-<p><code>&lt;input type="datetime-local"&gt;</code> doesn't support form control sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> for customizing the sizes of these elements.</p>
+<p><code>&lt;input type="datetime-local"&gt;</code> doesn't support form control sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href=/web/css>CSS</a> for customizing the sizes of these elements.</p>
 
 <h3 id="Setting_timezones">Setting timezones</h3>
 
-<p>One thing the <code>datetime-local</code> input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the <code><a href="/en-US/docs/Web/HTML/Element/input/datetime">datetime</a></code> input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.</p>
+<p>One thing the <code>datetime-local</code> input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the <code><a href=/web/html/element/input/datetime>datetime</a></code> input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.</p>
 
-<p>For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a <code><a href="/en-US/docs/Web/HTML/Element/input/hidden">hidden</a></code> input type. For example:</p>
+<p>For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a <code><a href=/web/html/element/input/hidden>hidden</a></code> input type. For example:</p>
 
 <pre class="brush: html notranslate">&lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;</pre>
 
@@ -628,8 +628,8 @@ daySelect.onchange = function() {
 
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code></li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><code><a href=/web/html/element/input/date>&lt;input type="date"&gt;</a></code> and <code><a href=/web/html/element/input/time>&lt;input type="time"&gt;</a></code></li>
+ <li><a href=/web/html/date_and_time_formats>Date and time formats used in HTML</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls#Date_and_time_picker>Date and Time picker tutorial</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

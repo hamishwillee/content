@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>every()</code></strong> method tests whether all elements in the typed array pass the test implemented by the provided function. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}<em>.</em> <em>TypedArray</em> is one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> here.</p>
+<p>The <strong><code>every()</code></strong> method tests whether all elements in the typed array pass the test implemented by the provided function. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}<em>.</em> <em>TypedArray</em> is one of the <a href=/web/javascript/reference/global_objects/typedarray#TypedArray_objects>typed array types</a> here.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-every.html")}}</div>
 
@@ -49,7 +49,7 @@ tags:
 
 <p><code><var>callback</var></code> is invoked with three arguments: the value of the element, the index of the element, and the typed array object being traversed.</p>
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>every</code>, it will be used as callback's <code>this</code> value. Otherwise, the value <code>undefined</code> will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+<p>If a <code><var>thisArg</var></code> parameter is provided to <code>every</code>, it will be used as callback's <code>this</code> value. Otherwise, the value <code>undefined</code> will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href=/web/javascript/reference/operators/this>the usual rules for determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>every</code> does not mutate the typed array on which it is called.</p>
 
@@ -68,7 +68,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 
 <h3 id="Testing_typed_array_elements_using_arrow_functions">Testing typed array elements using arrow functions</h3>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> provide a shorter syntax for the same test.</p>
+<p><a href=/web/javascript/reference/functions/arrow_functions>Arrow functions</a> provide a shorter syntax for the same test.</p>
 
 <pre class="brush: js notranslate">new Uint8Array([12, 5, 8, 130, 44]).every(elem =&gt; elem &gt;= 10); // false
 new Uint8Array([12, 54, 18, 130, 44]).every(elem =&gt; elem &gt;= 10); // true</pre>

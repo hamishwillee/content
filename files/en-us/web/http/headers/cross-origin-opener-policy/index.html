@@ -14,7 +14,7 @@ tags:
 
 <p>COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed <a href="https://github.com/xsleaks/xsleaks">XS-Leaks</a>.</p>
 
-<p>If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the <code><a href="/en-US/docs/Web/API/Window/opener">window.opener</a></code> property of the new window will be <code>null</code>. This allows you to have more control over references to a window than <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel=noopener</a></code>, which only affects outgoing navigations.</p>
+<p>If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the <code><a href=/web/api/window/opener>window.opener</a></code> property of the new window will be <code>null</code>. This allows you to have more control over references to a window than <code><a href=/web/html/link_types/noopener>rel=noopener</a></code>, which only affects outgoing navigations.</p>
 
 <table class="properties">
  <tbody>
@@ -57,7 +57,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <p>See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.</p>
 
-<p>To check if cross-origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
+<p>To check if cross-origin isolation has been successful, you can test against the <code><a href=/web/api/windoworworkerglobalscope/crossoriginisolated>crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
 <pre class="brush: js notranslate">if (crossOriginIsolated) {
   // Post SharedArrayBuffer

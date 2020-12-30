@@ -39,7 +39,7 @@ tags:
 
 <ul>
  <li>The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements</li>
- <li>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+ <li>The <a href=/web/api/web_audio_api>Web Audio API</a></li>
 </ul>
 
 <p>From the user's perspective, a web page or app that spontaneously starts making noise without warning can be jarring, inconvenient, or off-putting. Because of that, browsers generally only allow autoplay to occur successfully under specific circumstances.</p>
@@ -164,13 +164,13 @@ if (startPlayPromise !== undefined) {
 
 <h2 id="Autoplay_using_the_Web_Audio_API">Autoplay using the Web Audio API</h2>
 
-<p>In the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, a web site or app can start playing audio using the <code>start()</code> method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.</p>
+<p>In the <a href=/web/api/web_audio_api>Web Audio API</a>, a web site or app can start playing audio using the <code>start()</code> method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.</p>
 
 <p><em>More content will come soon; autoplay blocking is still being worked on at Mozilla. If others have it already, they are welcome to pitch in with this section...</em></p>
 
 <h2 id="The_autoplay_feature_policy">The autoplay feature policy</h2>
 
-<p>In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} header's <code><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay">autoplay</a></code> directive is used to control which domains, if any, can be used to autoplay media. By default, the <code>autoplay</code> feature policy is set to <code>'self'</code> (<em>including the single quote characters</em>), indicating that autoplay is permitted as they're hosted on the same domain as the document.</p>
+<p>In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} header's <code><a href=/web/http/headers/feature-policy/autoplay>autoplay</a></code> directive is used to control which domains, if any, can be used to autoplay media. By default, the <code>autoplay</code> feature policy is set to <code>'self'</code> (<em>including the single quote characters</em>), indicating that autoplay is permitted as they're hosted on the same domain as the document.</p>
 
 <p>You can also specify <code>'none'</code> to disable autoplay entirely, <code>'*'</code> to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.</p>
 
@@ -195,7 +195,7 @@ if (startPlayPromise !== undefined) {
 
 <h3 id="Example_Allowing_autoplay_and_fullscreen_mode">Example: Allowing autoplay and fullscreen mode</h3>
 
-<p>Adding <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> permission to the previous example results in a <code>Feature-Policy</code> header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.</p>
+<p>Adding <a href=/web/api/fullscreen_api>Fullscreen API</a> permission to the previous example results in a <code>Feature-Policy</code> header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.</p>
 
 <pre class="notranslate">Feature-Policy: autoplay 'self'; fullscreen</pre>
 
@@ -259,7 +259,7 @@ if (startPlayPromise !== undefined) {
  <dt><code>media.autoplay.allow-muted</code></dt>
  <dd>A Boolean preference which if <code>true</code> (the default) allows audio media which is currently muted to be automatically played. If this has been changed to <code>false</code>, media with an audio track will not be permitted to play even if muted.</dd>
  <dt><code>media.autoplay.block-webaudio</code></dt>
- <dd>A Boolean preference which indicates whether or not to apply autoplay blocking to the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. The default is <code>true</code>.</dd>
+ <dd>A Boolean preference which indicates whether or not to apply autoplay blocking to the <a href=/web/api/web_audio_api>Web Audio API</a>. The default is <code>true</code>.</dd>
  <dt><code>media.autoplay.default</code></dt>
  <dd>An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (<code>0</code>), blocked (<code>1</code>), or prompt-on-use (<code>2</code>). The default value is <code>0</code>.</dd>
  <dt><code>media.autoplay.enabled.user-gestures-needed</code> (Nightly builds only)</dt>
@@ -271,8 +271,8 @@ if (startPlayPromise !== undefined) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> (Learning guide)</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics">Cross-browser audio basics</a></li>
+ <li><a href=/web/media>Web media technologies</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a> (Learning guide)</li>
+ <li><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></li>
+ <li><a href=/web/apps/fundamentals/audio_and_video_delivery/cross-browser_audio_basics>Cross-browser audio basics</a></li>
 </ul>

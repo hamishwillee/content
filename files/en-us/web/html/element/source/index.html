@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;source&gt;</code> element</strong> specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element.</span> It is an empty element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for <a href="/en-US/docs/Web/Media/Formats/Image_types">image file formats</a> and <a href="/en-US/docs/Web/Media/Formats">media file formats</a>.</p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;source&gt;</code> element</strong> specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element.</span> It is an empty element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for <a href=/web/media/formats/image_types>image file formats</a> and <a href=/web/media/formats>media file formats</a>.</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}</p>
 
@@ -21,7 +21,7 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href=/web/guide/html/content_categories>Content categories</a></th>
    <td>None.</td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ tags:
   <tr>
    <th scope="row"><dfn>Permitted parents</dfn></th>
    <td>
-    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
+    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href=/web/guide/html/content_categories#Flow_content>flow content</a> or {{HTMLElement("track")}} element.</div>
 
     <div>A {{HTMLElement("picture")}} element, and it must be placed before the {{HTMLElement("img")}} element.</div>
    </td>
@@ -57,11 +57,11 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element includes the <a href=/web/html/global_attributes>global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("media")}}</dt>
- <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_Queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
+ <dd><a class="internal" href=/web/css/media_queries>Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
  <dt>{{htmlattrdef("sizes")}}</dt>
  <dd>
  <p>Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that <code>sizes</code> will have its effect only if width dimension descriptors are provided with <code>srcset</code> instead of pixel ratio values (200w instead of 2x for example).</p>
@@ -85,7 +85,7 @@ tags:
  <p>The <code>srcset</code> attribute has an effect only when the {{HTMLElement("source")}} element is the direct child of a {{HTMLElement("picture")}} element.</p>
  </dd>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>The <a href="/en-US/docs/Web/Media/Formats/Image_types">MIME media type of the resource</a>, optionally with a <a href="/en-US/docs/Web/Media/Formats/codecs_parameter"><code>codecs</code> parameter</a>.</dd>
+ <dd>The <a href=/web/media/formats/image_types>MIME media type of the resource</a>, optionally with a <a href=/web/media/formats/codecs_parameter><code>codecs</code> parameter</a>.</dd>
 </dl>
 
 <p>If the <code>type</code> attribute isn't specified, the media's type is retrieved from the server and checked to see if the user agent can handle it; if it can't be rendered, the next <code>&lt;source&gt;</code> is checked. If the <code>type</code> attribute is specified, it's compared against the types the user agent can present, and if it's not recognized, the server doesn't even get queried; instead, the next <code>&lt;source&gt;</code> element is checked at once.</p>
@@ -96,13 +96,13 @@ tags:
 
 <p>The <code>&lt;source&gt;</code> element is an <strong>empty element (or void element)</strong>, which means that it not only has no content but also has no closing tag. That is, you <em>never</em> use "<code>&lt;/source&gt;</code>" in your HTML.</p>
 
-<p>For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a> on the web. For details on the video and audio media types, you can use, see the <a href="/en-US/docs/Web/Media/Formats">Guide to media types formats used on the web</a>.</p>
+<p>For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our <a href=/web/media/formats/image_types>Image file type and format guide</a> on the web. For details on the video and audio media types, you can use, see the <a href=/web/media/formats>Guide to media types formats used on the web</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Video_example">Video example</h3>
 
-<p>This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the <code>audio</code> or <code>video</code> element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an <code>error</code> event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our <a href="/en-US/docs/Web/Media/Formats">guide to media types and formats on the web</a> for details on what media file formats you can use and how well they're supported by browsers.</p>
+<p>This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the <code>audio</code> or <code>video</code> element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an <code>error</code> event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our <a href=/web/media/formats>guide to media types and formats on the web</a> for details on what media file formats you can use and how well they're supported by browsers.</p>
 
 <pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source src="foo.webm" type="video/webm"&gt;
@@ -112,7 +112,7 @@ tags:
 &lt;/video&gt;
 </pre>
 
-<p>For more examples, the learning area article <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> is a great resource.</p>
+<p>For more examples, the learning area article <a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a> is a great resource.</p>
 
 <h3 id="Picture_example">Picture example</h3>
 
@@ -125,7 +125,7 @@ tags:
 &lt;/picture&gt;
 </pre>
 
-<p>With the <code>&lt;picture&gt;</code> element, you must always include an <code>&lt;<a href="/en-US/docs/Web/HTML/Element/img">img</a>&gt;</code> with a fallback image, with an <code>alt</code> attribute to ensure accessibility (unless the image is an irrelevant background decorative image).</p>
+<p>With the <code>&lt;picture&gt;</code> element, you must always include an <code>&lt;<a href=/web/html/element/img>img</a>&gt;</code> with a fallback image, with an <code>alt</code> attribute to ensure accessibility (unless the image is an irrelevant background decorative image).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -153,10 +153,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a></li>
+ <li><a href=/web/media/formats>Guide to media types and formats on the web</a></li>
+ <li><a href=/web/media/formats/image_types>Image file type and format guide</a></li>
  <li>{{HTMLElement("picture")}} element</li>
  <li>{{HTMLElement("audio")}} element</li>
  <li>{{HTMLElement("video")}} element</li>
- <li><a href="/en-US/docs/Learn/Performance">Web Performance</a></li>
+ <li><a href=/learn/performance>Web Performance</a></li>
 </ul>

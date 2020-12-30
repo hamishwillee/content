@@ -5,9 +5,9 @@ tags:
   - Intermediate
   - NeedsExample
 ---
-<p>This page provides an overview of some of the main techniques needed to design web sites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the <a href="/en/Mozilla/Firefox_OS" title="Boot to Gecko">Firefox OS</a> page. Or you might be interested in details about <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox for Android</a>.</p>
+<p>This page provides an overview of some of the main techniques needed to design web sites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the <a href="/en/Mozilla/Firefox_OS" title="Boot to Gecko">Firefox OS</a> page. Or you might be interested in details about <a href=/mozilla/firefox_for_android>Firefox for Android</a>.</p>
 
-<p>We've organized it into two sections, <a href="#Designing_for_mobile_devices">designing for mobile devices</a> and <a href="#Cross-browser_development">cross-browser compatibility</a>. Also see Jason Grlicky's guide to <a href="/en-US/docs/Web/Guide/Mobile/Mobile-friendliness">mobile-friendliness</a> for web developers.</p>
+<p>We've organized it into two sections, <a href="#Designing_for_mobile_devices">designing for mobile devices</a> and <a href="#Cross-browser_development">cross-browser compatibility</a>. Also see Jason Grlicky's guide to <a href=/web/guide/mobile/mobile-friendliness>mobile-friendliness</a> for web developers.</p>
 
 <h2 id="Designing_for_mobile_devices">Designing for mobile devices</h2>
 
@@ -15,30 +15,30 @@ tags:
 
 <h3 id="Working_with_small_screens">Working with small screens</h3>
 
-<p><a href="/en-US/docs/Web/Guide/Responsive_design">Responsive Web Design</a> is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:</p>
+<p><a href=/web/guide/responsive_design>Responsive Web Design</a> is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:</p>
 
 <ul>
  <li>fluid CSS layouts, to make the page adapt smoothly as the browser window size changes</li>
- <li>the use of <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> to conditionally include CSS rules appropriate for the device screen <a href="/en-US/docs/Web/CSS/@media/width">width</a> and <a href="/en-US/docs/Web/CSS/@media/height">height</a></li>
+ <li>the use of <a href=/web/css/media_queries>media queries</a> to conditionally include CSS rules appropriate for the device screen <a href=/web/css/@media/width>width</a> and <a href=/web/css/@media/height>height</a></li>
 </ul>
 
-<p>The <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> instructs the browser to display your site at the appropriate scale for the user's device.</p>
+<p>The <a href=/mozilla/mobile/viewport_meta_tag>viewport meta tag</a> instructs the browser to display your site at the appropriate scale for the user's device.</p>
 
 <h3 id="Working_with_touch_screens">Working with touch screens</h3>
 
-<p>To use a touch screen you'll need to work with <a href="/en-US/docs/Web/API/Touch_events">DOM Touch events</a>. You won't be able to use the CSS {{cssxref(":hover")}} pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
+<p>To use a touch screen you'll need to work with <a href=/web/api/touch_events>DOM Touch events</a>. You won't be able to use the CSS {{cssxref(":hover")}} pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
 
-<p>You can use the <a href="/en-US/docs/Web/CSS/@media/pointer">pointer</a> or <a href="/en-US/docs/Web/CSS/@media/any-pointer">any-pointer</a> media query to load different CSS on a touch-enabled device.</p>
+<p>You can use the <a href=/web/css/@media/pointer>pointer</a> or <a href=/web/css/@media/any-pointer>any-pointer</a> media query to load different CSS on a touch-enabled device.</p>
 
 <h3 id="Optimizing_images">Optimizing images</h3>
 
-<p>To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen <a href="/en-US/docs/Web/CSS/@media/height">height</a>, <a href="/en-US/docs/Web/CSS/@media/width">width</a>, and <a href="/en-US/docs/Web/CSS/@media/resolution">pixel ratio</a>.</p>
+<p>To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen <a href=/web/css/@media/height>height</a>, <a href=/web/css/@media/width>width</a>, and <a href=/web/css/@media/resolution>pixel ratio</a>.</p>
 
-<p>You can also make use of CSS properties to implement visual effects like <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">gradients</a> and <a href="/en-US/docs/Web/CSS/box-shadow">shadows</a> without images.</p>
+<p>You can also make use of CSS properties to implement visual effects like <a href=/web/css/css_images/using_css_gradients>gradients</a> and <a href=/web/css/box-shadow>shadows</a> without images.</p>
 
 <h3 id="Mobile_APIs">Mobile APIs</h3>
 
-<p>Finally, you can take advantage of the new possibilities offered by mobile devices, such as <a href="/en-US/docs/Web/API/Detecting_device_orientation">orientation</a> and <a href="/en-US/docs/Web/API/Geolocation_API">geolocation</a>.</p>
+<p>Finally, you can take advantage of the new possibilities offered by mobile devices, such as <a href=/web/api/detecting_device_orientation>orientation</a> and <a href=/web/api/geolocation_api>geolocation</a>.</p>
 
 <h2 id="Cross-browser_development">Cross-browser development</h2>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>For example, if you set a gradient as a background for some text using a vendor-prefixed property like <code>-webkit-linear-gradient</code>, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your <code>linear-gradient</code> rule.</p>
 
-<p>See this <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">list of Gecko-specific properties</a>, and this <a href="/en-US/docs/Web/CSS/Webkit_Extensions">list of WebKit-specific properties</a>, and Peter Beverloo's <a class="external" href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">table of vendor-specific properties</a>.</p>
+<p>See this <a href=/web/css/mozilla_extensions>list of Gecko-specific properties</a>, and this <a href=/web/css/webkit_extensions>list of WebKit-specific properties</a>, and Peter Beverloo's <a class="external" href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">table of vendor-specific properties</a>.</p>
 
 <p>Using tools like <a class="external" href="http://csslint.net/">CSS Lint</a> can help find problems like this in code, and preprocessors like <a class="external" href="http://sass-lang.com/">SASS</a> and <a class="external" href="http://lesscss.org/">LESS</a> can help you to produce cross-browser code.</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>It's preferable for web sites to detect specific device features such as screen size and touch screens using the techniques listed above, and adapt themselves accordingly. But sometimes this is impractical, and web sites resort to parsing the browser's user agent string to try to distinguish between desktops, tablets, and phones, to serve different content to each type of device.</p>
 
-<p>If you do this, make sure your algorithm is correct, and you aren't serving the wrong type of content to a device because you don't understand a particular browser's user agent string. See this <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop">guide to using the user agent string to determine device type</a>.</p>
+<p>If you do this, make sure your algorithm is correct, and you aren't serving the wrong type of content to a device because you don't understand a particular browser's user agent string. See this <a href=/web/http/browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop>guide to using the user agent string to determine device type</a>.</p>
 
 <h3 id="Test_on_multiple_browsers">Test on multiple browsers</h3>
 

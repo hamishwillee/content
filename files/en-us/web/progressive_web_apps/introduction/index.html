@@ -40,14 +40,14 @@ tags:
 <p>There are some key principles a web app should try to observe to be identified as a PWA. It should be:</p>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Discoverable">Discoverable</a>, so the contents can be found through search engines.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Installable">Installable</a>, so it can be available on the device's home screen or app launcher.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Linkable">Linkable</a>, so you can share it by sending a URL.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Network_independent">Network independent</a>, so it works offline or with a poor network connection.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Progressive">Progressive</a>, so it's still usable on a basic level on older browsers, but fully-functional on the latest ones.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Re-engageable">Re-engageable</a>, so it's able to send notifications whenever there's new content available.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Responsive">Responsive</a>, so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Safe">Safe</a>, so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Discoverable>Discoverable</a>, so the contents can be found through search engines.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Installable>Installable</a>, so it can be available on the device's home screen or app launcher.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Linkable>Linkable</a>, so you can share it by sending a URL.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Network_independent>Network independent</a>, so it works offline or with a poor network connection.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Progressive>Progressive</a>, so it's still usable on a basic level on older browsers, but fully-functional on the latest ones.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Re-engageable>Re-engageable</a>, so it's able to send notifications whenever there's new content available.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Responsive>Responsive</a>, so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.</li>
+	<li><a href=/web/progressive_web_apps/advantages#Safe>Safe</a>, so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.</li>
 </ul>
 
 <p>Offering these features and making use of all the {{anch("Advantages of web applications", "advantages")}} offered by web applications can create a compelling, highly flexible offering for your users and customers.</p>
@@ -57,7 +57,7 @@ tags:
 <p>Absolutely! With a relatively small amount of effort required to implement the core PWA features, the benefits are huge. For example:</p>
 
 <ul>
-	<li>A decrease in loading times after the app has been installed, thanks to caching with <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>, along with saving precious bandwidth and time. PWAs have near-instantaneous loading (from the second visit).</li>
+	<li>A decrease in loading times after the app has been installed, thanks to caching with <a href=/web/api/service_worker_api>service workers</a>, along with saving precious bandwidth and time. PWAs have near-instantaneous loading (from the second visit).</li>
 	<li>The ability to update only the content that has changed when an app update is available. In contrast, with a native app, even the slightest modification can force the user to download the entire application again.</li>
 	<li>A look and feel that is more integrated with the native platform—app icons on the home screen or app launcher, applications that automatically run in full screen mode, etc.</li>
 	<li>Re-engaging with users through the use of system notifications and push messages, leading to more engaged users and better conversion rates.</li>
@@ -89,7 +89,7 @@ tags:
 
 <p>Some of the capabilities have already been enabled on certain web-based platforms by proprietary technologies like <a href="http://ogp.me/">Open Graph</a>, which provides a format for specifying similar metadata in the {{Glossary("HTML")}} {{HTMLElement("head")}} block using {{HTMLElement("meta")}} tags.</p>
 
-<p>The relevant web standard here is the <a href="/en-US/docs/Web/Manifest">Web app manifest</a>, which defines features of an app such as name, icon, splash screen, and theme colors in a {{Glossary("JSON")}}-formatted manifest file. This is for use in contexts such as app listings and device home screens.</p>
+<p>The relevant web standard here is the <a href=/web/manifest>Web app manifest</a>, which defines features of an app such as name, icon, splash screen, and theme colors in a {{Glossary("JSON")}}-formatted manifest file. This is for use in contexts such as app listings and device home screens.</p>
 
 <h3 id="Installability">Installability</h3>
 
@@ -97,7 +97,7 @@ tags:
 
 <p>A core part of the web app experience is for users to have app icons on their home screen, and be able to tap to open apps into their own native container that feels nicely integrated with the underlying platform.</p>
 
-<p>Modern web apps can have this native app feel via properties set inside the Web app manifest, and via a feature available in modern smartphone browsers called <a href="/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing">web app installation</a>.</p>
+<p>Modern web apps can have this native app feel via properties set inside the Web app manifest, and via a feature available in modern smartphone browsers called <a href=/web/progressive_web_apps/developer_guide/installing>web app installation</a>.</p>
 
 <h3 id="Linkability">Linkability</h3>
 
@@ -117,25 +117,25 @@ tags:
 	<li>Control what is shown to the user in situations where there is no connectivity.</li>
 </ul>
 
-<p>This is achieved using a combination of technologies: <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> to control page requests (for example storing them offline), the <a href="/en-US/docs/Web/API/Cache">Cache API</a> for storing responses to network requests offline (very useful for storing site assets), and client-side data storage technologies such as <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> and <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> to store application data offline.</p>
+<p>This is achieved using a combination of technologies: <a href=/web/api/service_worker_api>Service Workers</a> to control page requests (for example storing them offline), the <a href=/web/api/cache>Cache API</a> for storing responses to network requests offline (very useful for storing site assets), and client-side data storage technologies such as <a href=/web/api/web_storage_api>Web Storage</a> and <a href=/web/api/indexeddb_api>IndexedDB</a> to store application data offline.</p>
 
 <h3 id="Progressive_enhancement_support">Progressive enhancement support</h3>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12662/progressive.svg" style="float: left; height: 60px; margin-right: 1em; width: 60px;"></p>
 
-<p>Modern web apps can be developed to provide an excellent experience to fully capable browsers, and an acceptable (although not quite as shiny) experience to less capable browsers. We've been doing this for years with best practices such as progressive enhancement. By using <a href="/en-US/docs/Glossary/Progressive_Enhancement">progressive enhancement</a>, PWAs are cross-browser. This means developers should take into account the differences in implementation of some PWA features and technologies between different browser implementations.</p>
+<p>Modern web apps can be developed to provide an excellent experience to fully capable browsers, and an acceptable (although not quite as shiny) experience to less capable browsers. We've been doing this for years with best practices such as progressive enhancement. By using <a href=/glossary/progressive_enhancement>progressive enhancement</a>, PWAs are cross-browser. This means developers should take into account the differences in implementation of some PWA features and technologies between different browser implementations.</p>
 
 <h3 id="Re-engageability">Re-engageability</h3>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12666/re-engageable.svg" style="float: left; height: 60px; margin-right: 1em; width: 60px;"></p>
 
-<p>One major advantage of native platforms is the ease with which users can be re-engaged by updates and new content, even when they aren't looking at the app or using their devices. Modern web apps can now do this too, using new technologies such as Service Workers for controlling pages, the <a href="/en-US/docs/Web/API/Push_API">Web Push API</a> for sending updates straight from server to app via a service worker, and the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> for generating system notifications to help engage users when they're not actively using their web browser.</p>
+<p>One major advantage of native platforms is the ease with which users can be re-engaged by updates and new content, even when they aren't looking at the app or using their devices. Modern web apps can now do this too, using new technologies such as Service Workers for controlling pages, the <a href=/web/api/push_api>Web Push API</a> for sending updates straight from server to app via a service worker, and the <a href=/web/api/notifications_api>Notifications API</a> for generating system notifications to help engage users when they're not actively using their web browser.</p>
 
 <h3 id="Responsiveness">Responsiveness</h3>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12650/responsive.svg" style="float: left; height: 61px; margin-right: 1em; width: 60px;"></p>
 
-<p>Responsive web apps use technologies like <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> and <a href="/en-US/docs/Glossary/Viewport">viewport</a> to make sure that their UIs will fit any form factor: desktop, mobile, tablet, or whatever comes next.</p>
+<p>Responsive web apps use technologies like <a href=/web/css/media_queries>media queries</a> and <a href=/glossary/viewport>viewport</a> to make sure that their UIs will fit any form factor: desktop, mobile, tablet, or whatever comes next.</p>
 
 <h3 id="Safety">Safety</h3>
 
@@ -149,9 +149,9 @@ tags:
 
 <p>As mentioned before, PWAs don't depend on a single API, but rather using various technologies to achieve the goal of delivering the best web experience possible.</p>
 
-<p>The key ingredient required for PWAs is <a href="/en-US/docs/Web/API/Service_Worker_API"> service worker</a> support. Thankfully service workers are <a href="https://jakearchibald.github.io/isserviceworkerready/"> now supported on all major browsers</a> on desktop and mobile.</p>
+<p>The key ingredient required for PWAs is <a href=/web/api/service_worker_api> service worker</a> support. Thankfully service workers are <a href="https://jakearchibald.github.io/isserviceworkerready/"> now supported on all major browsers</a> on desktop and mobile.</p>
 
-<p>Other features such as<a href="/en-US/docs/Web/Manifest"> Web App Manifest</a>,<a href="/en-US/docs/Web/API/Push_API"> Push</a> <a href="/en-US/docs/Web/API/Notifications_API">Notifications</a>, and<a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen"> Add to Home Screen</a> functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.</p>
+<p>Other features such as<a href=/web/manifest> Web App Manifest</a>,<a href=/web/api/push_api> Push</a> <a href=/web/api/notifications_api>Notifications</a>, and<a href=/web/progressive_web_apps/add_to_home_screen> Add to Home Screen</a> functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.</p>
 
 <p>Above all you should follow the progressive enhancement rule: use technologies that enhance the appearance and utility of your app when they're available, but still offer the basic functionality of your app when those features are unavailable. Presenting a trusted website with a good performance is a consequence of using these enhancements; this in turn means building web apps which follow better practices. This way everybody will be able to use the app, but those with modern browsers will benefit from PWA features even more.</p>
 
@@ -165,4 +165,4 @@ tags:
 
 <p>{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}</p>
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}</div>
+<div>{{QuickLinksWithSubpages(/web/progressive_web_apps/)}}</div>

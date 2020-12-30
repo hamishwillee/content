@@ -16,7 +16,7 @@ tags:
 
 <h3 id="Allocating_and_sharing_memory">Allocating and sharing memory</h3>
 
-<p>To share memory using {{jsxref("SharedArrayBuffer")}} objects from one agent in the cluster to another (an agent is either the web page’s main program or one of its web workers), <code><a href="/en-US/docs/Web/API/Worker/postMessage">postMessage</a></code> and <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured cloning</a> is used.</p>
+<p>To share memory using {{jsxref("SharedArrayBuffer")}} objects from one agent in the cluster to another (an agent is either the web page’s main program or one of its web workers), <code><a href=/web/api/worker/postmessage>postMessage</a></code> and <a href=/web/api/web_workers_api/structured_clone_algorithm>structured cloning</a> is used.</p>
 
 <p>The structured clone algorithm accepts <code>SharedArrayBuffers</code> and <code>TypedArrays</code> mapped onto <code>SharedArrayBuffers</code>. In both cases, the <code>SharedArrayBuffer</code> object is transmitted to the receiver resulting in a new, private SharedArrayBuffer object in the receiving agent (just as for {{jsxref("ArrayBuffer")}}). However, the shared data block referenced by the two <code>SharedArrayBuffer</code> objects is the same data block, and a side effect to the block in one agent will eventually become visible in the other agent.</p>
 
@@ -31,29 +31,29 @@ worker.postMessage(sab);
 <h3 id="APIs_which_use_SharedArrayBuffer_objects">APIs which use SharedArrayBuffer objects</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebGLRenderingContext/bufferData" title="The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store."><code>WebGLRenderingContext.bufferData()</code></a></li>
- <li><a href="/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData" title="The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store."><code>WebGLRenderingContext.bufferSubData()</code></a></li>
- <li><a href="/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData" title="The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer."><code>WebGL2RenderingContext.getBufferSubData()</code></a></li>
+ <li><a href=/web/api/webglrenderingcontext/bufferdata title="The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store."><code>WebGLRenderingContext.bufferData()</code></a></li>
+ <li><a href=/web/api/webglrenderingcontext/buffersubdata title="The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store."><code>WebGLRenderingContext.bufferSubData()</code></a></li>
+ <li><a href=/web/api/webgl2renderingcontext/getbuffersubdata title="The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer."><code>WebGL2RenderingContext.getBufferSubData()</code></a></li>
 </ul>
 
 <h3 id="Security_requirements">Security requirements</h3>
 
-<p>Shared memory and high-resolution timers were effectively <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">disabled at the start of 2018</a> in light of <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>. In 2020, a new, secure approach has been standardized to re-enable shared memory. With a few security measures, <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code> will no longer throw for <code>SharedArrayBuffer</code> objects and shared memory across threads will be available:</p>
+<p>Shared memory and high-resolution timers were effectively <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">disabled at the start of 2018</a> in light of <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>. In 2020, a new, secure approach has been standardized to re-enable shared memory. With a few security measures, <code><a href=/web/api/window/postmessage>postMessage()</a></code> will no longer throw for <code>SharedArrayBuffer</code> objects and shared memory across threads will be available:</p>
 
-<p>As a baseline requirement, your document needs to be in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>.</p>
+<p>As a baseline requirement, your document needs to be in a <a href=/web/security/secure_contexts>secure context</a>.</p>
 
 <p>For top-level documents, two headers will need to be set to cross-origin isolate your site:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
+ <li><a href=/web/http/headers/cross-origin-opener-policy><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
+ <li><a href=/web/http/headers/cross-origin-embedder-policy><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
 </ul>
 
 <pre class="notranslate">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 
-<p>To check if cross origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
+<p>To check if cross origin isolation has been successful, you can test against the <code><a href=/web/api/windoworworkerglobalscope/crossoriginisolated>crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
 <pre class="brush: js notranslate">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
@@ -61,7 +61,7 @@ Cross-Origin-Embedder-Policy: require-corp
   // Do something else
 }</pre>
 
-<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes">Planned changes to shared memory</a> which is starting to roll out to browsers (Firefox 79, for example.)</p>
+<p>See also <a href=/web/javascript/reference/global_objects/sharedarraybuffer/planned_changes>Planned changes to shared memory</a> which is starting to roll out to browsers (Firefox 79, for example.)</p>
 
 <h3 id="Always_use_the_new_operator_to_create_a_SharedArrayBuffer">Always use the new operator to create a SharedArrayBuffer</h3>
 
@@ -76,7 +76,7 @@ Cross-Origin-Embedder-Policy: require-corp
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer"><code>SharedArrayBuffer()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/sharedarraybuffer/sharedarraybuffer><code>SharedArrayBuffer()</code></a></dt>
  <dd>Creates a new <code>SharedArrayBuffer</code> object.</dd>
 </dl>
 
@@ -137,8 +137,8 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);</pre>
 <ul>
  <li>{{jsxref("Atomics")}}</li>
  <li>{{jsxref("ArrayBuffer")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+ <li><a href=/web/javascript/typed_arrays>JavaScript typed arrays</a></li>
+ <li><a href=/web/api/web_workers_api>Web Workers</a></li>
  <li><a href="https://github.com/lars-t-hansen/parlib-simple">parlib-simple </a>– a simple library providing synchronization and work distribution abstractions.</li>
  <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
  <li>

@@ -51,7 +51,7 @@ console.log(p.a, p.b) // 1, 42
 
 <h2 id="Handlers_and_traps">Handlers and traps</h2>
 
-<p>The following table summarizes the available traps available to <code>Proxy</code> objects. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">reference pages</a> for detailed explanations and examples.</p>
+<p>The following table summarizes the available traps available to <code>Proxy</code> objects. See the <a href=/web/javascript/reference/global_objects/proxy/handler>reference pages</a> for detailed explanations and examples.</p>
 
 <table class="standard-table">
  <thead>
@@ -264,14 +264,14 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 
 <p><code>Reflect</code> helps with forwarding default operations from the handler to the <code><var>target</var></code>.</p>
 
-<p>With {{jsxref("Reflect.has()")}} for example, you get the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a> as a function:</p>
+<p>With {{jsxref("Reflect.has()")}} for example, you get the <a href=/web/javascript/reference/operators/in><code>in</code> operator</a> as a function:</p>
 
 <pre class="brush: js">Reflect.has(Object, 'assign') // true
 </pre>
 
 <h3 id="A_better_apply_function">A better <code>apply</code> function</h3>
 
-<p>In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given <code>this</code> value and <code><var>arguments</var></code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+<p>In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given <code>this</code> value and <code><var>arguments</var></code> provided as an array (or an <a href=/web/javascript/guide/indexed_collections#Working_with_array-like_objects>array-like object</a>).</p>
 
 <pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75])
 </pre>

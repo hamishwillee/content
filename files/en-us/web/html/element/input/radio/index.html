@@ -34,7 +34,7 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Web/HTML/Element/input/checkbox">Checkboxes</a> are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.</p>
+<p><strong>Note</strong>: <a href=/web/html/element/input/checkbox>Checkboxes</a> are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.</p>
 </div>
 
 <table class="properties">
@@ -49,7 +49,7 @@ tags:
   </tr>
   <tr>
    <td><strong>Supported common attributes</strong></td>
-   <td><code>{{anch("checked")}}</code>, <code>{{anch("value")}}</code> and <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code></td>
+   <td><code>{{anch("checked")}}</code>, <code>{{anch("value")}}</code> and <code><a href=/web/html/attributes/required>required</a></code></td>
   </tr>
   <tr>
    <td><strong>IDL attributes</strong></td>
@@ -137,7 +137,7 @@ tags:
 &lt;/pre&gt;
 </pre>
 
-<p>Then we add some <a href="/en-US/docs/Web/JavaScript">JavaScript</a> to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:</p>
+<p>Then we add some <a href=/web/javascript>JavaScript</a> to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:</p>
 
 <pre class="brush: js notranslate">var form = document.querySelector("form");
 var log = document.querySelector("#log");
@@ -322,7 +322,7 @@ button:active {
   outline: 1px solid black;
 }</pre>
 
-<p>Most notable here is the use of the {{cssxref("appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkboxes</a>) are styled with the operating system's native styles for those controls. By specifying <code>appearance: none</code>, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.</p>
+<p>Most notable here is the use of the {{cssxref("appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and <a href=/web/html/element/input/checkbox>checkboxes</a>) are styled with the operating system's native styles for those controls. By specifying <code>appearance: none</code>, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.</p>
 
 <div class="note">
 <p><strong>Compatibility note</strong>: If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword <code>none</code> does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
@@ -365,5 +365,5 @@ button:active {
 <ul>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.</li>
  <li>{{domxref("RadioNodeList")}}: the interface that describes a list of radio buttons</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

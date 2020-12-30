@@ -18,20 +18,20 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>Data URLs are composed of four parts: a prefix (<code>data:</code>), a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> indicating the type of data, an optional <code>base64</code> token if non-textual, and the data itself:</p>
+<p>Data URLs are composed of four parts: a prefix (<code>data:</code>), a <a href=/web/http/basics_of_http/mime_types>MIME type</a> indicating the type of data, an optional <code>base64</code> token if non-textual, and the data itself:</p>
 
 <pre class="syntaxbox notranslate">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
 </pre>
 
-<p>The <code>mediatype</code> is a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> string, such as <code>'image/jpeg'</code> for a JPEG image file. If omitted, defaults to <code>text/plain;charset=US-ASCII</code></p>
+<p>The <code>mediatype</code> is a <a href=/web/http/basics_of_http/mime_types>MIME type</a> string, such as <code>'image/jpeg'</code> for a JPEG image file. If omitted, defaults to <code>text/plain;charset=US-ASCII</code></p>
 
-<p>If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify <code>base64</code> to embed base64-encoded binary data. You can find more info on MIME types <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">here</a> and <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">here</a>.</p>
+<p>If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify <code>base64</code> to embed base64-encoded binary data. You can find more info on MIME types <a href=/web/http/basics_of_http/mime_types>here</a> and <a href=/web/http/basics_of_http/mime_types/complete_list_of_mime_types>here</a>.</p>
 
 <p>A few examples:</p>
 
 <dl>
  <dt><code>data:,Hello%2C%20World!</code></dt>
- <dd>Simple text/plain data. Note the use of <a href="/en-US/docs/Glossary/percent-encoding">percent-encoding</a> (URL-encoding) for the quote and space characters. Also, for CSV data (MIME type "text/csv"), percent-encoding is needed to preserve the line endings that delimit rows of the spreadsheet.</dd>
+ <dd>Simple text/plain data. Note the use of <a href=/glossary/percent-encoding>percent-encoding</a> (URL-encoding) for the quote and space characters. Also, for CSV data (MIME type "text/csv"), percent-encoding is needed to preserve the line endings that delimit rows of the spreadsheet.</dd>
  <dt><code>data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==</code></dt>
  <dd>base64-encoded version of the above</dd>
  <dt><code>data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E</code></dt>
@@ -46,7 +46,7 @@ tags:
 
 <h3 id="Encoding_in_Javascript">Encoding in Javascript</h3>
 
-<p>The Web APIs have native methods to encode or decode to base64: <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a>.</p>
+<p>The Web APIs have native methods to encode or decode to base64: <a href=/web/api/windowbase64/base64_encoding_and_decoding>Base64 encoding and decoding</a>.</p>
 
 <h3 id="Encoding_on_a_Unix_system">Encoding on a Unix system</h3>
 
@@ -128,10 +128,10 @@ base64 a.txt&gt;b.txt
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="/en-US/docs/Glossary/percent-encoding">Percent encoding</a></li>
+ <li><a href=/web/api/windowbase64/base64_encoding_and_decoding>Base64 encoding and decoding</a></li>
+ <li><a href=/glossary/percent-encoding>Percent encoding</a></li>
  <li>{{domxref("WindowBase64.atob","atob()")}}</li>
  <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
- <li><a href="/en-US/docs/Glossary/URI">URI</a></li>
+ <li><a href=/web/css/uri>CSS <code>url()</code></a></li>
+ <li><a href=/glossary/uri>URI</a></li>
 </ul>

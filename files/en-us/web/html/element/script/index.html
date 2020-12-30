@@ -16,13 +16,13 @@ tags:
 ---
 <p>{{HTMLRef}}</p>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;script&gt;</code> element</strong> is used to embed executable code or data; this is typically used to embed or refer to JavaScript code.</span> The <code>&lt;script&gt;</code> element can also be used with other languages, such as <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>'s GLSL shader programming language and <a href="/en-US/docs/Glossary/JSON">JSON</a>.</p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;script&gt;</code> element</strong> is used to embed executable code or data; this is typically used to embed or refer to JavaScript code.</span> The <code>&lt;script&gt;</code> element can also be used with other languages, such as <a href=/web/api/webgl_api>WebGL</a>'s GLSL shader programming language and <a href=/glossary/json>JSON</a>.</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <th scope="row"><a href=/web/guide/html/content_categories>Content categories</a></th>
+   <td><a href=/web/guide/html/content_categories#Metadata_content>Metadata content</a>, <a href=/web/guide/html/content_categories#Flow_content>Flow content</a>, <a href=/web/guide/html/content_categories#Phrasing_content>Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -34,7 +34,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">metadata content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href=/web/guide/html/content_categories#Metadata_content>metadata content</a>, or any element that accepts <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -53,23 +53,23 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element includes the <a href=/web/html/global_attributes>global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("async")}}{{HTMLVersionInline(5)}}</dt>
  <dd>
  <p>For classic scripts, if the <code>async</code> attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.</p>
 
- <p>For <a href="/en-US/docs/Web/JavaScript/Guide/Modules">module scripts</a>, if the <code>async</code> attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available.</p>
+ <p>For <a href=/web/javascript/guide/modules>module scripts</a>, if the <code>async</code> attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available.</p>
 
  <p>This attribute allows the elimination of <strong>parser-blocking JavaScript</strong> where the browser would have to load and evaluate scripts before continuing to parse. <code>defer</code> has a similar effect in this case.</p>
 
  <p>This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
 
- <p>See {{anch("Browser compatibility")}} for notes on browser support. See also <a href="/en-US/docs/Games/Techniques/Async_scripts">Async scripts for asm.js</a>.</p>
+ <p>See {{anch("Browser compatibility")}} for notes on browser support. See also <a href=/games/techniques/async_scripts>Async scripts for asm.js</a>.</p>
  </dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Normal <code>script</code> elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for a more descriptive explanation of its valid arguments.</dd>
+ <dd>Normal <code>script</code> elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See <a href=/web/html/attributes/crossorigin>CORS settings attributes</a> for a more descriptive explanation of its valid arguments.</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
  <dd>
  <p>This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{event("DOMContentLoaded")}}.</p>
@@ -79,7 +79,7 @@ tags:
  <div class="warning">
  <p>This attribute must not be used if the <code>src</code> attribute is absent (i.e. for inline scripts), in this case it would have no effect.</p>
 
- <p>The <code>defer</code> attribute has no effect on <a href="/en-US/docs/Web/JavaScript/Guide/Modules">module scripts </a>— they defer by default.</p>
+ <p>The <code>defer</code> attribute has no effect on <a href=/web/javascript/guide/modules>module scripts </a>— they defer by default.</p>
  </div>
 
  <p>Scripts with the <code>defer</code> attribute will execute in the order in which they appear in the document.</p>
@@ -87,22 +87,22 @@ tags:
  <p>This attribute allows the elimination of <strong>parser-blocking JavaScript</strong> where the browser would have to load and evaluate scripts before continuing to parse. <code>async</code> has a similar effect in this case.</p>
  </dd>
  <dt>{{htmlattrdef("integrity")}}</dt>
- <dd>This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>
+ <dd>This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See <a href=/web/security/subresource_integrity>Subresource Integrity</a>.</dd>
  <dt>{{htmlattrdef("nomodule")}}</dt>
  <dd>This Boolean attribute is set to indicate that the script should not be executed in browsers that support<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"> ES2015 modules</a> — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>A cryptographic nonce (number used once) to whitelist scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
+ <dd>A cryptographic nonce (number used once) to whitelist scripts in a <a href=/web/http/headers/content-security-policy/script-src>script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
- <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the script, or resources fetched by the script:
+ <dd>Indicates which <a href=/web/api/document/referrer>referrer</a> to send when fetching the script, or resources fetched by the script:
  <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
   <li><code>no-referrer-when-downgrade</code> (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
   <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its {{Glossary("protocol", "scheme")}}, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
   <li><code>origin-when-cross-origin</code>: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.</li>
-  <li><code>same-origin</code>: A referrer will be sent for <a href="/en-US/docs/Web/Security/Same-origin_policy">same origin</a>, but cross-origin requests will contain no referrer information.</li>
+  <li><code>same-origin</code>: A referrer will be sent for <a href=/web/security/same-origin_policy>same origin</a>, but cross-origin requests will contain no referrer information.</li>
   <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (e.g. HTTPS→HTTPS), but don't send it to a less secure destination (e.g. HTTPS→HTTP).</li>
   <li><code>strict-origin-when-cross-origin</code>: Send a full URL when performing a same-origin request, but only send the origin when the protocol security level stays the same (e.g.HTTPS→HTTPS), and send no header to a less secure destination (e.g. HTTPS→HTTP).</li>
-  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
+  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href=/web/api/htmlhyperlinkelementutils/hash>fragment</a>, <a href=/web/api/htmlhyperlinkelementutils/password>password</a>, or <a href=/web/api/htmlhyperlinkelementutils/username>username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
  </ul>
 
  <div class="notecard note">
@@ -118,8 +118,8 @@ tags:
  <p>This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:</p>
 
  <ul>
-  <li><strong>Omitted or a JavaScript MIME type:</strong> This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the <code>src</code> attribute) code. JavaScript MIME types are <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">listed in the specification</a>.</li>
-  <li><strong><code>module</code>:</strong> Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the <code>charset</code> and <code>defer</code> attributes. For information on using <code>module</code>, see our <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.</li>
+  <li><strong>Omitted or a JavaScript MIME type:</strong> This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the <code>src</code> attribute) code. JavaScript MIME types are <a href=/web/http/basics_of_http/mime_types#JavaScript_types>listed in the specification</a>.</li>
+  <li><strong><code>module</code>:</strong> Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the <code>charset</code> and <code>defer</code> attributes. For information on using <code>module</code>, see our <a href=/web/javascript/guide/modules>JavaScript modules</a> guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.</li>
   <li><strong>Any other value:</strong> The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The <code>src</code> attribute will be ignored.</li>
  </ul>
  </dd>
@@ -225,5 +225,5 @@ tags:
  <li>{{domxref("document.currentScript")}}</li>
  <li><a href="https://pie.gd/test/script-link-events/">Ryan Grove's <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> node event compatibility chart</a></li>
  <li><a href="https://flaviocopes.com/javascript-async-defer/">Flavio Copes' article on loading JavaScript efficiently and explaining the differences between <code>async</code> and <code>defer</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide</li>
+ <li><a href=/web/javascript/guide/modules>JavaScript modules</a> guide</li>
 </ul>

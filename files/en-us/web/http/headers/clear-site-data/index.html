@@ -45,7 +45,7 @@ Clear-Site-Data: "*"
 
 <dl>
  <dt id="cache"><code>"cache"</code></dt>
- <dd>Indicates that the server wishes to remove locally cached data (i.e. the browser cache, see <a href="/en-US/docs/Web/HTTP/Caching">HTTP caching</a>) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.</dd>
+ <dd>Indicates that the server wishes to remove locally cached data (i.e. the browser cache, see <a href=/web/http/caching>HTTP caching</a>) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.</dd>
  <dt id="cookies"><code>"cookies"</code></dt>
  <dd>Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So https://example.com as well as https://stage.example.com, will have cookies cleared.</dd>
  <dt id="storage"><code>"storage"</code></dt>
@@ -55,9 +55,9 @@ Clear-Site-Data: "*"
   <li>sessionStorage (executes <code>sessionStorage.clear</code>),</li>
   <li>IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),</li>
   <li>Service worker registrations (for each service worker registration, execute {{domxref("ServiceWorkerRegistration.unregister")}}),</li>
-  <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache,</a></li>
+  <li><a href=/web/html/using_the_application_cache>AppCache,</a></li>
   <li>WebSQL databases,</li>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">FileSystem API data</a>,</li>
+  <li><a href=/web/api/file_and_directory_entries_api>FileSystem API data</a>,</li>
   <li>Plugin data (Flash via <code><a href="https://wiki.mozilla.org/NPAPI:ClearSiteData">NPP_ClearSiteData</a></code>).</li>
  </ul>
  </dd>

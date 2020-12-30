@@ -8,7 +8,7 @@ tags:
 ---
 <p><span>{{jsSidebar("Advanced")}}</span></p>
 
-<p>Every JavaScript object has a <code>[[Prototype]]</code>.  Getting a property on an object first searches that object, then its <code>[[Prototype]]</code>, then that object's <code>[[Prototype]]</code>, until the property is found or the chain ends.  The <code>[[Prototype]]</code> chain is especially useful for <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">object inheritance</a>.</p>
+<p>Every JavaScript object has a <code>[[Prototype]]</code>.  Getting a property on an object first searches that object, then its <code>[[Prototype]]</code>, then that object's <code>[[Prototype]]</code>, until the property is found or the chain ends.  The <code>[[Prototype]]</code> chain is especially useful for <a href=/web/javascript/inheritance_and_the_prototype_chain>object inheritance</a>.</p>
 
 <p>ECMAScript 6 introduces ways to <em>mutate</em> <code>[[Prototype]]</code>.  This flexibility has a cost: it substantially degrades performance.  <strong><code>[[Prototype]]</code> mutation harms performance in <em>all</em> modern JavaScript engines.</strong>  This article explains why <code>[[Prototype]]</code> mutation is slow in <em>all</em> browsers and describes alternatives that should be used instead.</p>
 
@@ -66,7 +66,7 @@ p.sum(); // Pair.prototype.sum</pre>
 
 <h2 id="Intelligently_optimizing_inherited_properties">Intelligently optimizing inherited properties</h2>
 
-<p>Predictable property accesses <em>usually</em> find the property a constant number of hops along the <code>[[Prototype]]</code> chain; intervening objects <em>usually</em> don't acquire new properties; the ultimate object <em>usually</em> won't have any properties <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">deleted</a>.  Finally: <strong><code>[[Prototype]]</code> mutation is rare</strong>.  All these common assumptions are necessary to avoid slow prototype-hopping.  Different engines choose different approaches to intelligently optimize inherited properties.</p>
+<p>Predictable property accesses <em>usually</em> find the property a constant number of hops along the <code>[[Prototype]]</code> chain; intervening objects <em>usually</em> don't acquire new properties; the ultimate object <em>usually</em> won't have any properties <a href=/web/javascript/reference/operators/delete>deleted</a>.  Finally: <strong><code>[[Prototype]]</code> mutation is rare</strong>.  All these common assumptions are necessary to avoid slow prototype-hopping.  Different engines choose different approaches to intelligently optimize inherited properties.</p>
 
 <dl>
  <dt>The shape of the <em>ultimate</em> object containing the inherited can be checked.</dt>

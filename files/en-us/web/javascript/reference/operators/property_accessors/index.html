@@ -29,7 +29,7 @@ tags:
 
 <h3 id="Dot_notation">Dot notation</h3>
 
-<p>In the <code><var>object.property</var></code> syntax, the <code>property</code> must be a valid JavaScript <a href="/en-US/docs/Glossary/identifier">identifier</a>. (In the ECMAScript standard, the names of properties are technically "IdentifierNames", not "Identifiers", so reserved words can be used but are not recommended). For example, <code><var>object</var>.$1</code> is valid, while <code><var>object</var>.1</code> is not.</p>
+<p>In the <code><var>object.property</var></code> syntax, the <code>property</code> must be a valid JavaScript <a href=/glossary/identifier>identifier</a>. (In the ECMAScript standard, the names of properties are technically "IdentifierNames", not "Identifiers", so reserved words can be used but are not recommended). For example, <code><var>object</var>.$1</code> is valid, while <code><var>object</var>.1</code> is not.</p>
 
 <pre class="brush: js">const variable = <var>object</var>.<var>property_name;</var>
 
@@ -50,7 +50,7 @@ console.log(object.1);   // SyntaxError
 <pre class="brush: js">document.createElement('pre')
 </pre>
 
-<p>If you use a method for a numeric literal, and the numeric literal has no exponent and no decimal point, you should leave <a href="/en-US/docs/Glossary/Whitespace">white-space(s)</a> before the dot preceding the method call, so that the dot is not interpreted as a decimal point.</p>
+<p>If you use a method for a numeric literal, and the numeric literal has no exponent and no decimal point, you should leave <a href=/glossary/whitespace>white-space(s)</a> before the dot preceding the method call, so that the dot is not interpreted as a decimal point.</p>
 
 <pre class="brush: js">77 .toExponential()
 // or
@@ -66,7 +66,7 @@ console.log(object.1);   // SyntaxError
 
 <h3 id="Bracket_notation">Bracket notation</h3>
 
-<p>In the <code>object[property_name]</code> syntax, the <code><var>property_name</var></code> is just a string or <a href="/en-US/docs/Glossary/Symbol">Symbol</a>. So, it can be any string, including <code>'1foo'</code>, <code>'!bar!'</code>, or even <code>' '</code> (a space).</p>
+<p>In the <code>object[property_name]</code> syntax, the <code><var>property_name</var></code> is just a string or <a href=/glossary/symbol>Symbol</a>. So, it can be any string, including <code>'1foo'</code>, <code>'!bar!'</code>, or even <code>' '</code> (a space).</p>
 
 <pre class="brush: js">const variable = <var>object</var>[<var>property_name</var>]
 <var>object</var>[<var>property_name</var>] = value;</pre>
@@ -82,7 +82,7 @@ console.log(object.1);   // SyntaxError
 
 <h3 id="Property_names">Property names</h3>
 
-<p>Property names are string or <a href="/en-US/docs/Glossary/Symbol">Symbol</a>. Any other value, including a number, is coerced to a string. This outputs <code>'value'</code>, since <code>1</code> is coerced into <code>'1'</code>.</p>
+<p>Property names are string or <a href=/glossary/symbol>Symbol</a>. Any other value, including a number, is coerced to a string. This outputs <code>'value'</code>, since <code>1</code> is coerced into <code>'1'</code>.</p>
 
 <pre class="brush: js">let object = {}
 object['1'] = 'value'
@@ -96,11 +96,11 @@ object[foo] = 'value'
 console.log(object[bar])
 </pre>
 
-<p>In the <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> JavaScript engine, this string would be "<code>[object Object]</code>".</p>
+<p>In the <a href=/mozilla/projects/spidermonkey>SpiderMonkey</a> JavaScript engine, this string would be "<code>[object Object]</code>".</p>
 
 <h3 id="Method_binding">Method binding</h3>
 
-<p>A method is not bound to the object that it is a method of. Specifically, <code>this</code> is not fixed in a method. Put another way, <code>this</code> does not necessarily refer to the object containing a method. Instead, <code>this</code> is "passed" by the function call. See <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#Method_binding">method binding</a>.</p>
+<p>A method is not bound to the object that it is a method of. Specifically, <code>this</code> is not fixed in a method. Put another way, <code>this</code> does not necessarily refer to the object containing a method. Instead, <code>this</code> is "passed" by the function call. See <a href=/web/javascript/reference/operators/this#Method_binding>method binding</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -142,5 +142,5 @@ console.log(object[bar])
 <ul>
  <li>{{jsxref("Object")}}</li>
  <li>{{jsxref("Object.defineProperty()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining</a></li>
+ <li><a href=/web/javascript/reference/operators/optional_chaining>Optional chaining</a></li>
 </ul>

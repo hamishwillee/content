@@ -57,7 +57,7 @@ console.log(tbl.get(1));  // "null"</pre>
   }
 };</pre>
 
-<p>Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>).  So after instantiation, the table still has length 2, but the elements now contain callable <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly Functions</a> which we can call from JS.</p>
+<p>Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>).  So after instantiation, the table still has length 2, but the elements now contain callable <a href=/webassembly/exported_functions>Exported WebAssembly Functions</a> which we can call from JS.</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
@@ -95,7 +95,7 @@ console.log(tbl.get(1));  // "null"</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
+ <li><a href=/webassembly>WebAssembly</a> overview page</li>
+ <li><a href=/webassembly/concepts>WebAssembly concepts</a></li>
+ <li><a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a></li>
 </ul>

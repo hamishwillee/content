@@ -20,35 +20,35 @@ tags:
 
 <p>An example of a cross-origin request: the front-end JavaScript code served from <code>https://domain-a.com</code> uses {{domxref("XMLHttpRequest")}} to make a request for <code>https://domain-b.com/data.json</code>.</p>
 
-<p>For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, <code>XMLHttpRequest</code> and the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> follow the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.</p>
+<p>For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, <code>XMLHttpRequest</code> and the <a href=/web/api/fetch_api>Fetch API</a> follow the <a href=/web/security/same-origin_policy>same-origin policy</a>. This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14295/CORS_principle.png" style="height: 643px; width: 925px;"></p>
 
-<p>The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as <code>XMLHttpRequest</code> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> to mitigate the risks of cross-origin HTTP requests.</p>
+<p>The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as <code>XMLHttpRequest</code> or <a href=/web/api/fetch_api>Fetch</a> to mitigate the risks of cross-origin HTTP requests.</p>
 
 <h2 id="Who_should_read_this_article">Who should read this article?</h2>
 
 <p>Everyone, really.</p>
 
-<p>More specifically, this article is for <strong>web administrators</strong>, <strong>server developers</strong>, and <strong>front-end developers</strong>. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers. Another article for server developers discussing <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">cross-origin sharing from a server perspective (with PHP code snippets)</a> is supplementary reading.</p>
+<p>More specifically, this article is for <strong>web administrators</strong>, <strong>server developers</strong>, and <strong>front-end developers</strong>. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers. Another article for server developers discussing <a href=/web/http/server-side_access_control>cross-origin sharing from a server perspective (with PHP code snippets)</a> is supplementary reading.</p>
 
 <h2 id="What_requests_use_CORS">What requests use CORS?</h2>
 
 <p>This <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">cross-origin sharing standard</a> can enable cross-site HTTP requests for:</p>
 
 <ul>
- <li>Invocations of the {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch APIs</a>, as discussed above.</li>
+ <li>Invocations of the {{domxref("XMLHttpRequest")}} or <a href=/web/api/fetch_api>Fetch APIs</a>, as discussed above.</li>
  <li>Web Fonts (for cross-domain font usage in <code>@font-face</code> within CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL textures</a>.</li>
+ <li><a href=/web/api/webgl_api/tutorial/using_textures_in_webgl>WebGL textures</a>.</li>
  <li>Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">CSS Shapes from images.</a></li>
+ <li><a href=/web/css/css_shapes/shapes_from_images>CSS Shapes from images.</a></li>
 </ul>
 
 <p>This article is a general discussion of Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.</p>
 
 <h2 id="Functional_overview">Functional overview</h2>
 
-<p>The Cross-Origin Resource Sharing standard works by adding new <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> that let servers describe which origins are permitted to read that information from a web browser. Additionally, for HTTP request methods that can cause side-effects on server data (in particular, HTTP methods other than {{HTTPMethod("GET")}}, or {{HTTPMethod("POST")}} with certain <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>), the specification mandates that browsers "preflight" the request, soliciting supported methods from the server with the HTTP {{HTTPMethod("OPTIONS")}} request method, and then, upon "approval" from the server, sending the actual request. Servers can also inform clients whether "credentials" (such as <a href="/en-US/docs/Web/HTTP/Cookies">Cookies</a> and <a href="/en-US/docs/Web/HTTP/Authentication">HTTP Authentication</a>) should be sent with requests.</p>
+<p>The Cross-Origin Resource Sharing standard works by adding new <a href=/web/http/headers>HTTP headers</a> that let servers describe which origins are permitted to read that information from a web browser. Additionally, for HTTP request methods that can cause side-effects on server data (in particular, HTTP methods other than {{HTTPMethod("GET")}}, or {{HTTPMethod("POST")}} with certain <a href=/web/http/basics_of_http/mime_types>MIME types</a>), the specification mandates that browsers "preflight" the request, soliciting supported methods from the server with the HTTP {{HTTPMethod("OPTIONS")}} request method, and then, upon "approval" from the server, sending the actual request. Servers can also inform clients whether "credentials" (such as <a href=/web/http/cookies>Cookies</a> and <a href=/web/http/authentication>HTTP Authentication</a>) should be sent with requests.</p>
 
 <p>CORS failures result in errors, but for security reasons, specifics about the error <em>are not available to JavaScript</em>. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.</p>
 
@@ -58,7 +58,7 @@ tags:
 
 <p>We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("XMLHttpRequest")}}, which can make cross-site requests in any supporting browser.</p>
 
-<p>A discussion of Cross-Origin Resource Sharing from a server perspective (including PHP code snippets) can be found in the <a class="internal" href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">Server-Side Access Control (CORS)</a> article.</p>
+<p>A discussion of Cross-Origin Resource Sharing from a server perspective (including PHP code snippets) can be found in the <a class="internal" href=/web/http/server-side_access_control>Server-Side Access Control (CORS)</a> article.</p>
 
 <h3 id="Simple_requests">Simple requests</h3>
 
@@ -221,7 +221,7 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>The server also sends <code>Access-Control-Allow-Headers</code> with a value of "<code>X-PINGOTHER, Content-Type</code>", confirming that these are permitted headers to be used with the actual request. Like <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> is a comma separated list of acceptable headers.</p>
 
-<p>Finally, {{HTTPHeader("Access-Control-Max-Age")}} gives the value in seconds for how long the response to the preflight request can be cached for without sending another preflight request. In this case, 86400 seconds is 24 hours. Note that each browser has a <a href="/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age">maximum internal value</a> that takes precedence when the <code>Access-Control-Max-Age</code> is greater.</p>
+<p>Finally, {{HTTPHeader("Access-Control-Max-Age")}} gives the value in seconds for how long the response to the preflight request can be cached for without sending another preflight request. In this case, 86400 seconds is 24 hours. Note that each browser has a <a href=/web/http/headers/access-control-max-age>maximum internal value</a> that takes precedence when the <code>Access-Control-Max-Age</code> is greater.</p>
 
 <p>Once the preflight request is complete, the real request is sent:</p>
 
@@ -292,7 +292,7 @@ Content-Type: text/plain
 <p><strong>Note</strong>: When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced independent of any setup on the server and the client, as described in this chapter.</p>
 </div>
 
-<p>The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> and CORS is the ability to make "credentialed" requests that are aware of <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> and HTTP Authentication information. By default, in cross-site <code>XMLHttpRequest</code> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> invocations, browsers will <strong>not</strong> send credentials. A specific flag has to be set on the <code>XMLHttpRequest</code> object or the {{domxref("Request")}} constructor when it is invoked.</p>
+<p>The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or <a href=/web/api/fetch_api>Fetch</a> and CORS is the ability to make "credentialed" requests that are aware of <a href=/web/http/cookies>HTTP cookies</a> and HTTP Authentication information. By default, in cross-site <code>XMLHttpRequest</code> or <a href=/web/api/fetch_api>Fetch</a> invocations, browsers will <strong>not</strong> send credentials. A specific flag has to be set on the <code>XMLHttpRequest</code> object or the {{domxref("Request")}} constructor when it is invoked.</p>
 
 <p>In this example, content originally loaded from <code class="plain">http://foo.example</code> makes a simple GET request to a resource on <code class="plain">http://bar.other</code> which sets Cookies. Content on foo.example might contain JavaScript like this:</p>
 
@@ -359,7 +359,7 @@ Content-Type: text/plain
 
 <p>Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively prevents you from making credentialed requests whatsoever.</p>
 
-<p>Cookie policy around the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> attribute would apply.</p>
+<p>Cookie policy around the <a href=/web/http/headers/set-cookie/samesite>SameSite</a> attribute would apply.</p>
 
 <h2 id="The_HTTP_response_headers">The HTTP response headers</h2>
 
@@ -494,10 +494,10 @@ Vary: Origin</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
+ <li><a href=/web/http/cors/errors>CORS errors</a></li>
  <li><a href="https://enable-cors.org/server.html">Enable CORS: I want to add CORS support to my server</a></li>
  <li>{{domxref("XMLHttpRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
+ <li><a href=/web/api/fetch_api>Fetch API</a></li>
  <li><a href="https://httptoolkit.tech/will-it-cors">Will it CORS?</a> - an interactive CORS explainer &amp; generator</li>
  <li><a href="https://www.telerik.com/blogs/using-cors-with-all-modern-browsers">Using CORS with All (Modern) Browsers</a></li>
  <li><a href="https://alfilatov.com/posts/run-chrome-without-cors/">How to run Chrome browser without CORS</a></li>

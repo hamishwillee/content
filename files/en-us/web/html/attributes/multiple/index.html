@@ -13,7 +13,7 @@ tags:
 
 <p>Depending on the type, the form control may have a different appearance if the <code>multiple</code> attribute is set. For the file input type, the native messaging the browser provides differs. In Firefox, the file input reads "No files selected" when the attribute is present and "No file selected" when not, when no files are selected. Most browsers displaying a scrolling list box for a {{HTMLElement("select")}} control with the <code>multiple</code> attribute set versus a single line dropdown when the attribute is ommitted. The {{HTMLElement("input/email", "email")}} input displays the same, but will match the {{cssxref(':invalid')}} pseudo-class if more than one comma-separated email address is included if the attribute is not present.</p>
 
-<p>When <code>multiple</code> is set on the {{HTMLElement("input/email", "email")}} input type, the user can inlclude zero (if not also <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code>), one or more comma-separated email addresses.</p>
+<p>When <code>multiple</code> is set on the {{HTMLElement("input/email", "email")}} input type, the user can inlclude zero (if not also <code><a href=/web/html/attributes/required>required</a></code>), one or more comma-separated email addresses.</p>
 
 <pre class="brush: html notranslate">&lt;input type="email" <strong>multiple</strong> name="emails" id="emails"&gt;</pre>
 
@@ -43,7 +43,7 @@ tags:
 
 <p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the <code>multiple</code> attribute, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "separate email addresses with a comma."</p>
 
-<p>Setting <code><a href="/en-US/docs/Web/HTML/Attributes/size">size</a>="1"</code> on a multiple select can make it appear as a single select in some browsers, but then it doesn't expand on focus, harming usability. Don't do that. If you do change the appearance of a select, and even if you don't, make sure to inform the user that more than one option can be selected by another method.</p>
+<p>Setting <code><a href=/web/html/attributes/size>size</a>="1"</code> on a multiple select can make it appear as a single select in some browsers, but then it doesn't expand on focus, harming usability. Don't do that. If you do change the appearance of a select, and even if you don't, make sure to inform the user that more than one option can be selected by another method.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -66,9 +66,9 @@ tags:
 <pre class="brush: css notranslate">input:invalid {border: red solid 3px;}</pre>
 </div>
 
-<p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> attribute is present, at least one email address is required.</p>
+<p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the <code><a href=/web/html/attributes/required>required</a></code> attribute is present, at least one email address is required.</p>
 
-<p>Some browsers support the appearance of the <code><a href="/en-US/docs/Web/HTML/Attributes/list">list</a></code> of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when <code>multiple</code> is present. Others do not.</p>
+<p>Some browsers support the appearance of the <code><a href=/web/html/attributes/list>list</a></code> of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when <code>multiple</code> is present. Others do not.</p>
 
 <p>{{EmbedLiveSample("email_input", 600, 80) }}</p>
 
@@ -96,7 +96,7 @@ tags:
 
 <p>Note the difference in appearance between the example with <code>multiple</code> set and the other <code>file</code> input without.</p>
 
-<p>When the form is submitted,had we used <code><a href="/en-US/docs/Web/HTML/Element/form">method="get"</a></code> each selected file's name would have been added to URL parameters as<code>?uploads=img1.jpg&amp;uploads=img2.svg</code>. However, since we are sumbitting <a href="/en-US/docs/Web/API/XMLHttpRequest/multipart">multipart</a> form data, we much use post. See the {{htmlelement('form')}} element  and <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_method_attribute">sending form data</a> for more information.</p>
+<p>When the form is submitted,had we used <code><a href=/web/html/element/form>method="get"</a></code> each selected file's name would have been added to URL parameters as<code>?uploads=img1.jpg&amp;uploads=img2.svg</code>. However, since we are sumbitting <a href=/web/api/xmlhttprequest/multipart>multipart</a> form data, we much use post. See the {{htmlelement('form')}} element  and <a href=/learn/html/forms/sending_and_retrieving_form_data#The_method_attribute>sending form data</a> for more information.</p>
 
 <h3 id="select">select</h3>
 
@@ -180,5 +180,5 @@ select[multiple]:active {
 <ul>
  <li>{{htmlelement('input')}}</li>
  <li>{{htmlelement('select')}}</li>
- <li><a href="/en-US/docs/Web/HTML/Element/input/email#Allowing_multiple_e-mail_addresses">Allowing multiple e-mail addresses</a></li>
+ <li><a href=/web/html/element/input/email#Allowing_multiple_e-mail_addresses>Allowing multiple e-mail addresses</a></li>
 </ul>

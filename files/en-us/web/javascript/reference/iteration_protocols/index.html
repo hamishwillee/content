@@ -20,7 +20,7 @@ tags:
 
 <p><strong>The iterable protocol</strong> allows JavaScript objects to define or customize their iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types are <a href="#Built-in_iterables">built-in iterables</a> with a default iteration behavior, such as {{jsxref("Array")}} or {{jsxref("Map")}}, while other types (such as {{jsxref("Object")}}) are not.</p>
 
-<p>In order to be <strong>iterable</strong>, an object must implement the <strong><code>@@iterator</code></strong> method, meaning that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a <code>@@iterator</code> key which is available via constant {{jsxref("Symbol.iterator")}}:</p>
+<p>In order to be <strong>iterable</strong>, an object must implement the <strong><code>@@iterator</code></strong> method, meaning that the object (or one of the objects up its <a href=/web/javascript/guide/inheritance_and_the_prototype_chain>prototype chain</a>) must have a property with a <code>@@iterator</code> key which is available via constant {{jsxref("Symbol.iterator")}}:</p>
 
 <table class="standard-table">
  <thead>
@@ -93,7 +93,7 @@ const myIterator = {
 };
 </pre>
 
-<p>However, when possible, it's better for <code>iterable[Symbol.iterator]</code> to return different iterators that always start from the beginning, like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator">Set.prototype[@@iterator]()</a></code> does.</p>
+<p>However, when possible, it's better for <code>iterable[Symbol.iterator]</code> to return different iterators that always start from the beginning, like <code><a href=/web/javascript/reference/global_objects/set/@@iterator>Set.prototype[@@iterator]()</a></code> does.</p>
 </div>
 
 <h2 id="Examples_using_the_iteration_protocols">Examples using the iteration protocols</h2>

@@ -22,13 +22,13 @@ tags:
 
 <p>This Boolean attribute prevents the user from interacting with the button. If this attribute isn't set, the button can still be disabled from a containing element, for example <code>{{htmlelement('fieldset')}}</code>; if there is no containing element with the <code>disabled</code> attribute set, then the button is enabled.</p>
 
-<p>Firefox will, unlike other browsers, persist the dynamic disabled state of a <code>{{htmlelement('button')}}</code> across page loads. Use the <code><a href="/en-US/docs/Web/HTML/Attribute/autocomplete">autocomplete</a></code> attribute to control this feature.</p>
+<p>Firefox will, unlike other browsers, persist the dynamic disabled state of a <code>{{htmlelement('button')}}</code> across page loads. Use the <code><a href=/web/html/attribute/autocomplete>autocomplete</a></code> attribute to control this feature.</p>
 
 <h3 id="Attribute_interactions">Attribute interactions</h3>
 
-<p>The difference between <code>disabled</code> and <code><a href="/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></code> is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.</p>
+<p>The difference between <code>disabled</code> and <code><a href=/web/html/attributes/readonly>readonly</a></code> is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.</p>
 
-<p>Because a disabled field cannot have its value changed, <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> does not have any effect on inputs with the <code>disabled</code> attribute also specified. Additionally, since the elements become immutable, most other attributes, such as <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code>, have no effect, until the control is enabled.</p>
+<p>Because a disabled field cannot have its value changed, <code><a href=/web/html/attributes/required>required</a></code> does not have any effect on inputs with the <code>disabled</code> attribute also specified. Additionally, since the elements become immutable, most other attributes, such as <code><a href=/web/html/attributes/pattern>pattern</a></code>, have no effect, until the control is enabled.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> The <code>required</code> attribute is not permitted on inputs with the <code>disabled</code> attribute specified.</p>

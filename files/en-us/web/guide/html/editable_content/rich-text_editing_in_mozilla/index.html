@@ -7,7 +7,7 @@ tags:
   - NeedsMarkupWork
 ---
 <div class="note">
-<p id="Introduction"><strong>Note</strong>: This document is out-of-date; you are advised to consult the more up-to-date document available at <a href="/en-US/docs/Web/Guide/HTML/Editable_content">Making content editable</a>.</p>
+<p id="Introduction"><strong>Note</strong>: This document is out-of-date; you are advised to consult the more up-to-date document available at <a href=/web/guide/html/editable_content>Making content editable</a>.</p>
 </div>
 
 <p>Mozilla 1.3 introduces an implementation of Microsoft<sup>®</sup> Internet Explorer's designMode feature. The rich-text editing support in Mozilla 1.3 supports the designMode feature which turns HTML documents into rich-text editors. Starting in Firefox 3, Mozilla also supports Internet Explorer's <code>contentEditable</code> attribute which allows any element to become editable or non-editable (the latter for when preventing change to fixed elements in an editable environment).</p>
@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Executing_Commands">Executing Commands</h3>
 
-<p>When an HTML document has been switched to designMode, the document object exposes the {{ domxref("document.execCommand") }} method which allows one to run <a href="/en-US/docs/Web/API/document.execCommand#Commands">commands</a> to manipulate the contents of the editable region. Most commands affect the document's selection (bold, italics, etc), while others insert new elements (adding a link) or affect an entire line (indenting). When using <code>contentEditable</code>, calling <code>execCommand</code> will affect the currently active editable element.</p>
+<p>When an HTML document has been switched to designMode, the document object exposes the {{ domxref("document.execCommand") }} method which allows one to run <a href=/web/api/document.execcommand#Commands>commands</a> to manipulate the contents of the editable region. Most commands affect the document's selection (bold, italics, etc), while others insert new elements (adding a link) or affect an entire line (indenting). When using <code>contentEditable</code>, calling <code>execCommand</code> will affect the currently active editable element.</p>
 
 <h3 id="Internet_Explorer_Differences">Internet Explorer Differences</h3>
 
@@ -274,7 +274,7 @@ img.intLink { border: 0; }
  <li><a class="external" href="https://mozilla.org/editor/midas-spec.html">mozilla.org's rich-text editing Specification</a></li>
  <li><a class="external" href="https://mozilla.org/editor/midasdemo/">mozilla.org's rich-text editing Demo</a></li>
  <li><a class="external" href="https://www.mozilla.org/editor/ie2midas.html">Converting an app using document.designMode from IE to Mozilla at mozilla.org</a></li>
- <li><code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code></li>
+ <li><code><a href=/web/api/document/designmode>designMode</a></code></li>
  <li><a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537834(v=vs.85)">MSDN: How to Create an HTML Editor Application</a></li>
  <li><a class="external" href="http://www.kevinroth.com/rte/demo.htm">A closed source, cross-browser rich-text editing demo</a></li>
  <li><a href="/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode; a JavaScript helper class for easier cross-browser development using designMode.</a></li>

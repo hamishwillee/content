@@ -63,13 +63,13 @@ var max = arr.reduce(function(a, b) {
   return Math.max.apply(null, numArray);
 }</pre>
 
-<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> is a shorter way of writing the <code>apply</code> solution to get the maximum of an array:</p>
+<p>The new <a href=/web/javascript/reference/operators/spread_operator>spread operator</a> is a shorter way of writing the <code>apply</code> solution to get the maximum of an array:</p>
 
 <pre class="brush: js notranslate">var arr = [1, 2, 3];
 var max = Math.max(...arr);
 </pre>
 
-<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using apply and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
+<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href=/web/javascript/reference/global_objects/function/apply#Using_apply_and_built-in_functions>Using apply and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

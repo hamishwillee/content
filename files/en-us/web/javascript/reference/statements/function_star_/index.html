@@ -39,7 +39,7 @@ tags:
 
 <p>Generators in JavaScript -- especially when combined with Promises -- are a very powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate -- the problems with callbacks, such as <a href="http://callbackhell.com/">Callback Hell</a> and <a href="https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/">Inversion of Control</a>. However, an even simpler solution to these problems can be achieved with {{jsxref("Statements/async_function", "async functions", "", 1)}}.</p>
 
-<p>Calling a generator function does not execute its body immediately; an <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">iterator</a> object for the function is returned instead. When the iterator's <code>next()</code> method is called, the generator function's body is executed until the first {{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be returned from the iterator or, with {{jsxref("Operators/yield*", "yield*")}}, delegates to another generator function. The <code>next()</code> method returns an object with a <code>value</code> property containing the yielded value and a <code>done</code> property which indicates whether the generator has yielded its last value, as a boolean. Calling the <code>next()</code> method with an argument will resume the generator function execution, replacing the <code>yield</code> expression where an execution was paused with the argument from <code>next()</code>.</p>
+<p>Calling a generator function does not execute its body immediately; an <a href=/web/javascript/reference/iteration_protocols#iterator>iterator</a> object for the function is returned instead. When the iterator's <code>next()</code> method is called, the generator function's body is executed until the first {{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be returned from the iterator or, with {{jsxref("Operators/yield*", "yield*")}}, delegates to another generator function. The <code>next()</code> method returns an object with a <code>value</code> property containing the yielded value and a <code>done</code> property which indicates whether the generator has yielded its last value, as a boolean. Calling the <code>next()</code> method with an argument will resume the generator function execution, replacing the <code>yield</code> expression where an execution was paused with the argument from <code>next()</code>.</p>
 
 <p>A <code>return</code> statement in a generator, when executed, will make the generator finish (i.e. the <code>done</code> property of the object returned by it will be set to <code>true</code>). If a value is returned, it will be set as the <code>value</code> property of the object returned by the generator.<br>
  Much like a <code>return</code> statement, an error is thrown inside the generator will make the generator finished -- unless caught within the generator's body.<br>
@@ -237,7 +237,7 @@ for(let power of powers(2)){
 <ul>
  <li>{{jsxref("Operators/function*", "function*")}} expression</li>
  <li>{{jsxref("GeneratorFunction")}} object</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
+ <li><a href=/web/javascript/reference/iteration_protocols>Iteration protocols</a></li>
  <li>{{jsxref("Operators/yield", "yield")}}</li>
  <li>{{jsxref("Operators/yield*", "yield*")}}</li>
  <li>{{jsxref("Function")}} object</li>

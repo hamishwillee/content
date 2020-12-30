@@ -26,7 +26,7 @@ tags:
 
 <p>Mixing SSR with CSR can lead to the best results — you can render a website on the server, cache its contents, and then update the rendering on the client-side as and when needed. The first page load is quick because of the SSR, and the navigation between pages is smooth because the client can re-render the page with only the parts that have changed.</p>
 
-<p>PWAs can be built using any approach you like, but some will work better than the others. The most popular approach is the "app shell" concept, which mixes SSR and CSR in exactly the way described above, and in addition follows the "offline first" methodology which we will explain in detail in upcoming articles and use in our example application. There is also a new approach involving the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a>, which we'll mention briefly.</p>
+<p>PWAs can be built using any approach you like, but some will work better than the others. The most popular approach is the "app shell" concept, which mixes SSR and CSR in exactly the way described above, and in addition follows the "offline first" methodology which we will explain in detail in upcoming articles and use in our example application. There is also a new approach involving the <a href=/web/api/streams_api>Streams API</a>, which we'll mention briefly.</p>
 
 <h2 id="App_shell">App shell</h2>
 
@@ -34,11 +34,11 @@ tags:
 
 <p>This structure is fast, and also feels fast as the user sees "something" instantly, instead of a loading spinner or a blank page. It also allows the website to be accessible offline if the network connection is not available.</p>
 
-<p>We can control what is requested from the server and what is retrieved from the cache with a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>, which will be explained in detail in the next article — for now let's focus on the structure itself.</p>
+<p>We can control what is requested from the server and what is retrieved from the cache with a <a href=/web/api/service_worker_api>service worker</a>, which will be explained in detail in the next article — for now let's focus on the structure itself.</p>
 
 <h3 id="Why_should_I_use_it">Why should I use it?</h3>
 
-<p>This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as <a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen">add to home screen</a> or <a href="/en-US/docs/Web/API/Push_API">push notifications</a>, safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.</p>
+<p>This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as <a href=/web/progressive_web_apps/add_to_home_screen>add to home screen</a> or <a href=/web/api/push_api>push notifications</a>, safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.</p>
 
 <p>The website feels like a native app with instant interaction and solid performance while keeping all the benefits of the web.</p>
 
@@ -49,12 +49,12 @@ tags:
 <ul>
 	<li>Linkable: Even though it behaves like a native app, it is still a website — you can click on the links within the page and send a URL to someone if you want to share it.</li>
 	<li>Progressive: Start with the "good, old basic website” and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.</li>
-	<li>Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a>, <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">CSS media queries</a>, <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>, and <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a>.</li>
+	<li>Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like <a href=/mozilla/mobile/viewport_meta_tag>viewport meta tag</a>, <a href=/web/css/media_queries/using_media_queries>CSS media queries</a>, <a href=/web/css/css_flexible_box_layout>Flexbox</a>, and <a href=/web/css/css_grid_layout>CSS Grid</a>.</li>
 </ul>
 
 <h2 id="Different_concept_streams">Different concept: streams</h2>
 
-<p>An entirely different approach to server- or client-side rendering can be achieved with the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a>. With a little help from service workers, streams can greatly improve the way we parse content.</p>
+<p>An entirely different approach to server- or client-side rendering can be achieved with the <a href=/web/api/streams_api>Streams API</a>. With a little help from service workers, streams can greatly improve the way we parse content.</p>
 
 <p>The app shell model requires all the resources to be available before the website can start rendering. It's different with HTML, as the browser is actually streaming the data already and you can see when the elements are loaded and rendered on the website. To have the JavaScript "operational", however, it has to be downloaded in its entirety.</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>In theory, streaming is a better model, but it's also more complex, and at the time of writing (March 2018) the Streams API is still a work-in-progress and not yet fully available in any of the major browsers. When it is available, it will be the fastest way of serving the content — the benefits are going to be huge in terms of performance.</p>
 
-<p>For working examples and more information, see the <a href="/en-US/docs/Web/API/Streams_API">Streams API documentation</a>.</p>
+<p>For working examples and more information, see the <a href=/web/api/streams_api>Streams API documentation</a>.</p>
 
 <h2 id="Structure_of_our_example_application">Structure of our example application</h2>
 
@@ -281,4 +281,4 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}</p>
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}</p>
+<p>{{QuickLinksWithSubpages(/web/progressive_web_apps/)}}</p>

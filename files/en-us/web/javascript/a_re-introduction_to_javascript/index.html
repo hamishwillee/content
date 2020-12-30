@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{jsSidebar}}</div>
 
-<p>Why a re-introduction? Because <a href="/en-US/docs/Glossary/JavaScript">JavaScript</a> is notorious for being <a href="http://crockford.com/javascript/javascript.html">the world's most misunderstood programming language</a>. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await. JavaScript is now used by an incredible number of high-profile applications, showing that deeper knowledge of this technology is an important skill for any web or mobile developer.</p>
+<p>Why a re-introduction? Because <a href=/glossary/javascript>JavaScript</a> is notorious for being <a href="http://crockford.com/javascript/javascript.html">the world's most misunderstood programming language</a>. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await. JavaScript is now used by an incredible number of high-profile applications, showing that deeper knowledge of this technology is an important skill for any web or mobile developer.</p>
 
 <p>It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.</p>
 
-<p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a class="external" href="http://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href="/en-US/docs/Glossary/ECMAScript">ECMAScript</a> standard that year. The standard received a significant update as <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
+<p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a class="external" href="http://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href=/glossary/ecmascript>ECMAScript</a> standard that year. The standard received a significant update as <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
 
 <div class="note">
 <p>Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.</p>
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes, instead of classes (see more about <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" title="prototypical inheritance">prototypical inheritance</a> and ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a>). JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.</p>
+<p>JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes, instead of classes (see more about <a href=/web/javascript/inheritance_and_the_prototype_chain title="prototypical inheritance">prototypical inheritance</a> and ES2015 <a href=/web/javascript/reference/classes>classes</a>). JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.</p>
 
 <p>Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:</p>
 
@@ -75,7 +75,7 @@ console.log(Math.floor(3 / 2)); // 1</pre>
 
 <p>In practice, integer values are treated as 32-bit ints, and some implementations even store it that way until they are asked to perform an instruction that's valid on a Number but not on a 32-bit integer. This can be important for bit-wise operations.</p>
 
-<p>The standard <a href="/en-US/docs/Web/JavaScript/Reference/Operators#Arithmetic_operators">arithmetic operators</a> are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. There's also a built-in object that we did not mention earlier called {{jsxref("Math")}} that provides advanced mathematical functions and constants:</p>
+<p>The standard <a href=/web/javascript/reference/operators#Arithmetic_operators>arithmetic operators</a> are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. There's also a built-in object that we did not mention earlier called {{jsxref("Math")}} that provides advanced mathematical functions and constants:</p>
 
 <pre class="brush: js notranslate">Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
@@ -141,11 +141,11 @@ isFinite(NaN); // false
 
 <h2 id="Strings">Strings</h2>
 
-<p>Strings in JavaScript are sequences of <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode characters</a>. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units.</p>
+<p>Strings in JavaScript are sequences of <a href=/web/javascript/guide/values,_variables,_and_literals#Unicode>Unicode characters</a>. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units.</p>
 
 <p>If you want to represent a single character, you just use a string consisting of that single character.</p>
 
-<p>To find the length of a string (in code units), access its <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length">length</a></code> property:</p>
+<p>To find the length of a string (in code units), access its <code><a href=/web/javascript/reference/global_objects/string/length>length</a></code> property:</p>
 
 <pre class="brush: js notranslate">'hello'.length; // 5
 </pre>
@@ -180,7 +180,7 @@ Boolean(234); // true
 
 <h2 id="Variables">Variables</h2>
 
-<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.<br>
+<p>New variables in JavaScript are declared using one of three keywords: <code><a href=/web/javascript/reference/statements/let>let</a></code>, <code><a href=/web/javascript/reference/statements/const>const</a></code>, or <code><a href=/web/javascript/reference/statements/var>var</a></code>.<br>
  <br>
  <strong><code>let</code></strong> allows you to declare block-level variables. The declared variable is available from the <em>block</em> it is enclosed in.</p>
 
@@ -224,11 +224,11 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <p>If you declare a variable without assigning any value to it, its type is <code>undefined</code>.</p>
 
-<p>An important difference between JavaScript and other languages like Java is that in JavaScript, blocks do not have scope; only functions have a scope. So if a variable is defined using <code>var</code> in a compound statement (for example inside an <code>if</code> control structure), it will be visible to the entire function. However, starting with ECMAScript 2015, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> declarations allow you to create block-scoped variables.</p>
+<p>An important difference between JavaScript and other languages like Java is that in JavaScript, blocks do not have scope; only functions have a scope. So if a variable is defined using <code>var</code> in a compound statement (for example inside an <code>if</code> control structure), it will be visible to the entire function. However, starting with ECMAScript 2015, <code><a href=/web/javascript/reference/statements/let>let</a></code> and <code><a href=/web/javascript/reference/statements/const>const</a></code> declarations allow you to create block-scoped variables.</p>
 
 <h2 id="Operators">Operators</h2>
 
-<p>JavaScript's numeric operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and <code>%</code> which is the remainder operator (<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29">which is the same as modulo</a>.) Values are assigned using <code>=</code>, and there are also compound assignment statements such as <code>+=</code> and <code>-=</code>. These extend out to <code>x = x <em>operator</em> y</code>.</p>
+<p>JavaScript's numeric operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and <code>%</code> which is the remainder operator (<a href=/web/javascript/reference/operators/arithmetic_operators#Remainder_%28%29>which is the same as modulo</a>.) Values are assigned using <code>=</code>, and there are also compound assignment statements such as <code>+=</code> and <code>-=</code>. These extend out to <code>x = x <em>operator</em> y</code>.</p>
 
 <pre class="brush: js notranslate">x += 5;
 x = x + 5;
@@ -236,7 +236,7 @@ x = x + 5;
 
 <p>You can use <code>++</code> and <code>--</code> to increment and decrement respectively. These can be used as a prefix or postfix operators.</p>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"><code>+</code> operator</a> also does string concatenation:</p>
+<p>The <a href=/web/javascript/reference/operators/arithmetic_operators#Addition><code>+</code> operator</a> also does string concatenation:</p>
 
 <pre class="brush: js notranslate">'hello' + ' world'; // "hello world"
 </pre>
@@ -249,7 +249,7 @@ x = x + 5;
 
 <p>Adding an empty string to something is a useful way of converting it to a string itself.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparisons</a> in JavaScript can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code>. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:</p>
+<p><a href=/web/javascript/reference/operators/comparison_operators>Comparisons</a> in JavaScript can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code>. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:</p>
 
 <pre class="brush: js notranslate">123 == '123'; // true
 1 == true; // true
@@ -263,7 +263,7 @@ x = x + 5;
 
 <p>There are also <code>!=</code> and <code>!==</code> operators.</p>
 
-<p>JavaScript also has <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">bitwise operations</a>. If you want to use them, they're there.</p>
+<p>JavaScript also has <a href=/web/javascript/reference/operators/bitwise_operators>bitwise operations</a>. If you want to use them, they're there.</p>
 
 <h2 id="Control_structures">Control structures</h2>
 
@@ -292,21 +292,21 @@ do {
 } while (inputIsNotValid(input));
 </pre>
 
-<p>JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for"><code>for</code> loop</a> is the same as that in C and Java: it lets you provide the control information for your loop on a single line.</p>
+<p>JavaScript's <a href=/web/javascript/reference/statements/for><code>for</code> loop</a> is the same as that in C and Java: it lets you provide the control information for your loop on a single line.</p>
 
 <pre class="brush: js notranslate">for (var i = 0; i &lt; 5; i++) {
   // Will execute 5 times
 }
 </pre>
 
-<p>JavaScript also contains two other prominent for loops: <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a></p>
+<p>JavaScript also contains two other prominent for loops: <a href=/web/javascript/reference/statements/for...of><code>for</code>...<code>of</code></a></p>
 
 <pre class="brush: js notranslate">for (let value of array) {
   // do something with value
 }
 </pre>
 
-<p>and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a>:</p>
+<p>and <a href=/web/javascript/reference/statements/for...in><code>for</code>...<code>in</code></a>:</p>
 
 <pre class="brush: js notranslate">for (let property in object) {
   // do something with object property
@@ -441,7 +441,7 @@ var user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
 </pre>
 
-<p>These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">reserved words</a>:</p>
+<p>These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are <a href=/web/javascript/reference/lexical_grammar#Keywords>reserved words</a>:</p>
 
 <pre class="brush: js notranslate">obj.for = 'Simon'; // Syntax error, because 'for' is a reserved word
 obj['for'] = 'Simon'; // works fine
@@ -451,7 +451,7 @@ obj['for'] = 'Simon'; // works fine
 <p>Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 <a href="https://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
-<p>For more on objects and prototypes see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>. For an explanation of object prototypes and the object prototype chains see <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
+<p>For more on objects and prototypes see <a href=/web/javascript/reference/global_objects/object/prototype>Object.prototype</a>. For an explanation of object prototypes and the object prototype chains see <a href=/web/javascript/inheritance_and_the_prototype_chain>Inheritance and the prototype chain</a>.</p>
 
 <div class="note">
 <p>Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. <code>{[phoneType]: 12345}</code> is possible instead of just <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
@@ -497,15 +497,15 @@ a.length; // 101
 }
 </pre>
 
-<p>ES2015 introduced the more concise <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a> loop for iterable objects such as arrays:</p>
+<p>ES2015 introduced the more concise <a href=/web/javascript/reference/statements/for...of><code>for</code>...<code>of</code></a> loop for iterable objects such as arrays:</p>
 
 <pre class="brush:js notranslate">for (const currentValue of a) {
   // Do something with currentValue
 }</pre>
 
-<p>You could also iterate over an array using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to <code>Array.prototype</code>, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.</p>
+<p>You could also iterate over an array using a <a href=/web/javascript/reference/statements/for...in><code>for</code>...<code>in</code></a> loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to <code>Array.prototype</code>, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.</p>
 
-<p>Another way of iterating over an array that was added with ECMAScript 5 is <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>:</p>
+<p>Another way of iterating over an array that was added with ECMAScript 5 is <code><a href=/web/javascript/reference/global_objects/array/foreach>forEach()</a></code>:</p>
 
 <pre class="brush: js notranslate">['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
   // Do something with currentValue or array[index]
@@ -516,7 +516,7 @@ a.length; // 101
 
 <pre class="brush: js notranslate">a.push(item);</pre>
 
-<p>Arrays come with a number of methods. See also the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">full documentation for array methods</a>.</p>
+<p>Arrays come with a number of methods. See also the <a href=/web/javascript/reference/global_objects/array>full documentation for array methods</a>.</p>
 
 <table>
  <thead>
@@ -601,7 +601,7 @@ a.length; // 101
 // added the first two; 4 was ignored
 </pre>
 
-<p>That may seem a little silly, but functions have access to an additional variable inside their body called <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a>, which is an array-like object holding all of the values passed to the function. Let's re-write the add function to take as many values as we want:</p>
+<p>That may seem a little silly, but functions have access to an additional variable inside their body called <a href=/web/javascript/reference/functions/arguments><code>arguments</code></a>, which is an array-like object holding all of the values passed to the function. Let's re-write the add function to take as many values as we want:</p>
 
 <pre class="brush: js notranslate">function add() {
   var sum = 0;
@@ -627,7 +627,7 @@ add(2, 3, 4, 5); // 14
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<p>This is pretty useful, but it does seem a little verbose. To reduce this code a bit more we can look at substituting the use of the arguments array through <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameter syntax</a>. In this way, we can pass in any number of arguments into the function while keeping our code minimal. The <strong>rest parameter operator</strong> is used in function parameter lists with the format: <strong>...variable</strong> and it will include within that variable the entire list of uncaptured arguments that the function was called with. We will also replace the <strong>for</strong> loop with a <strong>for...of</strong> loop to return the values within our variable.</p>
+<p>This is pretty useful, but it does seem a little verbose. To reduce this code a bit more we can look at substituting the use of the arguments array through <a href=/web/javascript/reference/functions/rest_parameters>Rest parameter syntax</a>. In this way, we can pass in any number of arguments into the function while keeping our code minimal. The <strong>rest parameter operator</strong> is used in function parameter lists with the format: <strong>...variable</strong> and it will include within that variable the entire list of uncaptured arguments that the function was called with. We will also replace the <strong>for</strong> loop with a <strong>for...of</strong> loop to return the values within our variable.</p>
 
 <pre class="brush: js notranslate">function avg(...args) {
   var sum = 0;
@@ -663,7 +663,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 <p>The second argument to <code>apply()</code> is the array to use as arguments; the first will be discussed later on. This emphasizes the fact that functions are objects too.</p>
 
 <div class="note">
-<p>You can achieve the same result using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> in the function call.</p>
+<p>You can achieve the same result using the <a href=/web/javascript/reference/operators/spread_operator>spread operator</a> in the function call.</p>
 
 <p>For instance: <code>avg(...numbers)</code></p>
 </div>
@@ -707,7 +707,7 @@ b; // 2
 }
 </pre>
 
-<p>This highlights a potential problem with anonymous functions: how do you call them recursively if they don't have a name? JavaScript lets you name function expressions for this. You can use named <a href="/en-US/docs/Glossary/IIFE">IIFEs (Immediately Invoked Function Expressions)</a> as shown below:</p>
+<p>This highlights a potential problem with anonymous functions: how do you call them recursively if they don't have a name? JavaScript lets you name function expressions for this. You can use named <a href=/glossary/iife>IIFEs (Immediately Invoked Function Expressions)</a> as shown below:</p>
 
 <pre class="brush: js notranslate">var charsInBody = (function counter(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
@@ -727,7 +727,7 @@ b; // 2
 
 <h2 id="Custom_objects">Custom objects</h2>
 
-<div class="note">For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">Introduction to Object-Oriented JavaScript</a>.</div>
+<div class="note">For a more detailed discussion of object-oriented programming in JavaScript, see <a href=/web/javascript/introduction_to_object-oriented_javascript>Introduction to Object-Oriented JavaScript</a>.</div>
 
 <p>In classic Object Oriented Programming, objects are collections of data and methods that operate on that data. JavaScript is a prototype-based language that contains no class statement, as you'd find in C++ or Java (this is sometimes confusing for programmers accustomed to languages with a class statement). Instead, JavaScript uses functions as classes. Let's consider a person object with first and last name fields. There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:</p>
 
@@ -769,7 +769,7 @@ s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 </pre>
 
-<p>Note on the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> keyword. Used inside a function, <code>this</code> refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Accessing_properties">dot notation or bracket notation</a> on an object, that object becomes <code>this</code>. If dot notation wasn't used for the call, <code>this</code> refers to the global object.</p>
+<p>Note on the <code><a href=/web/javascript/reference/operators/this>this</a></code> keyword. Used inside a function, <code>this</code> refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using <a href=/web/javascript/reference/operators/object_initializer#Accessing_properties>dot notation or bracket notation</a> on an object, that object becomes <code>this</code>. If dot notation wasn't used for the call, <code>this</code> refers to the global object.</p>
 
 <p>Note that <code>this</code> is a frequent cause of mistakes. For example:</p>
 
@@ -795,7 +795,7 @@ fullName(); // undefined undefined
 var s = new Person('Simon', 'Willison');
 </pre>
 
-<p>We have introduced another keyword: <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code>. <code>new</code> is strongly related to <code>this</code>. It creates a brand new empty object, and then calls the function specified, with <code>this</code> set to that new object. Notice though that the function specified with <code>this</code> does not return a value but merely modifies the <code>this</code> object. It's <code>new</code> that returns the <code>this</code> object to the calling site. Functions that are designed to be called by <code>new</code> are called constructor functions. Common practice is to capitalize these functions as a reminder to call them with <code>new</code>.</p>
+<p>We have introduced another keyword: <code><a href=/web/javascript/reference/operators/new>new</a></code>. <code>new</code> is strongly related to <code>this</code>. It creates a brand new empty object, and then calls the function specified, with <code>this</code> set to that new object. Notice though that the function specified with <code>this</code> does not return a value but merely modifies the <code>this</code> object. It's <code>new</code> that returns the <code>this</code> object to the calling site. Functions that are designed to be called by <code>new</code> are called constructor functions. Common practice is to capitalize these functions as a reminder to call them with <code>new</code>.</p>
 
 <p>The improved function still has the same pitfall with calling <code>fullName()</code> alone.</p>
 
@@ -884,7 +884,7 @@ s.toString(); // "&lt;Person: Simon Willison&gt;"
 }
 </pre>
 
-<p>This isn't an exact replica of <code>new</code> as it doesn't set up the prototype chain (it would be difficult to illustrate). This is not something you use very often, but it's useful to know about. In this snippet, <code>...args</code> (including the ellipsis) is called the "<a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest arguments</a>" — as the name implies, this contains the rest of the arguments.</p>
+<p>This isn't an exact replica of <code>new</code> as it doesn't set up the prototype chain (it would be difficult to illustrate). This is not something you use very often, but it's useful to know about. In this snippet, <code>...args</code> (including the ellipsis) is called the "<a href=/web/javascript/reference/functions/rest_parameters>rest arguments</a>" — as the name implies, this contains the rest of the arguments.</p>
 
 <p>Calling</p>
 
@@ -894,7 +894,7 @@ s.toString(); // "&lt;Person: Simon Willison&gt;"
 
 <pre class="brush: js notranslate">var bill = new Person('William', 'Orange');</pre>
 
-<p><code>apply()</code> has a sister function named <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, which again lets you set <code>this</code> but takes an expanded argument list as opposed to an array.</p>
+<p><code>apply()</code> has a sister function named <a href=/web/javascript/reference/global_objects/function/call><code>call</code></a>, which again lets you set <code>this</code> but takes an expanded argument list as opposed to an array.</p>
 
 <pre class="brush: js notranslate">function lastNameCaps() {
   return this.last.toUpperCase();

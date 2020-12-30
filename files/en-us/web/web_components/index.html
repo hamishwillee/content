@@ -36,7 +36,7 @@ tags:
 <p>The basic approach for implementing a web component generally looks something like this:</p>
 
 <ol>
- <li>Create a class in which you specify your web component functionality, using the ECMAScript 2015 class syntax (see <a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a> for more information). </li>
+ <li>Create a class in which you specify your web component functionality, using the ECMAScript 2015 class syntax (see <a href=/web/javascript/reference/classes>Classes</a> for more information). </li>
  <li>Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.</li>
  <li>If required, attach a shadow DOM to the custom element using {{domxref("Element.attachShadow()")}} method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.</li>
  <li>If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.</li>
@@ -46,11 +46,11 @@ tags:
 <h2 id="Tutorials">Tutorials</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a></dt>
+ <dt><a href=/web/web_components/using_custom_elements>Using custom elements</a></dt>
  <dd>A guide showing how to use the features of custom elements to create simple web components, as well as looking into lifecycle callbacks and some other more advanced features.</dd>
- <dt><a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Using shadow DOM</a></dt>
+ <dt><a href=/web/web_components/using_shadow_dom>Using shadow DOM</a></dt>
  <dd>A guide that looks at shadow DOM fundamentals, showing how to attach a shadow DOM to an element, add to the shadow DOM tree, style it, and more.</dd>
- <dt><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></dt>
+ <dt><a href=/web/web_components/using_templates_and_slots>Using templates and slots</a></dt>
  <dd>A guide showing how to define a reusable HTML structure using {{htmlelement("template")}} and {{htmlelement("slot")}} elements, and then use that structure inside your web components.</dd>
 </dl>
 
@@ -63,7 +63,7 @@ tags:
  <dd>Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document.</dd>
  <dt>{{domxref("Window.customElements")}}</dt>
  <dd>Returns a reference to the <code>CustomElementRegistry</code> object.</dd>
- <dt><a href="/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">Life cycle callbacks</a></dt>
+ <dt><a href=/web/web_components/using_custom_elements#Using_the_lifecycle_callbacks>Life cycle callbacks</a></dt>
  <dd>Special callback functions defined inside the custom element's class definition, which affect its behavior:
  <ul>
   <li><code>connectedCallback</code>: Invoked when the custom element is first connected to the document's DOM.</li>
@@ -83,15 +83,15 @@ tags:
  <dd>Pseudo-classes relating specifically to custom elements:
  <ul>
   <li>{{cssxref(":defined")}}: Matches any element that is defined, including built in elements and custom elements defined with <code>CustomElementRegistry.define()</code>).</li>
-  <li>{{cssxref(":host")}}: Selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside.</li>
-  <li>{{cssxref(":host()")}}: Selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.</li>
-  <li>{{cssxref(":host-context()")}}: Selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</li>
+  <li>{{cssxref(":host")}}: Selects the shadow host of the <a href=/web/web_components/using_shadow_dom>shadow DOM</a> containing the CSS it is used inside.</li>
+  <li>{{cssxref(":host()")}}: Selects the shadow host of the <a href=/web/web_components/using_shadow_dom>shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.</li>
+  <li>{{cssxref(":host-context()")}}: Selects the shadow host of the <a href=/web/web_components/using_shadow_dom>shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</li>
  </ul>
  </dd>
  <dt>CSS pseudo-elements</dt>
  <dd>Pseudo-elements relating specifically to custom elements:
  <ul>
-  <li>{{cssxref("::part")}}: Represents any element within a <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow tree</a> that has a matching {{HTMLAttrxRef("part")}} attribute.</li>
+  <li>{{cssxref("::part")}}: Represents any element within a <a href=/web/web_components/using_shadow_dom>shadow tree</a> that has a matching {{HTMLAttrxRef("part")}} attribute.</li>
  </ul>
  </dd>
 </dl>
@@ -133,7 +133,7 @@ tags:
  <dd>Contains an HTML fragment that is not rendered when a containing document is initially loaded, but can be displayed at runtime using JavaScript, mainly used as the basis of custom element structures. The associated DOM interface is {{domxref("HTMLTemplateElement")}}.</dd>
  <dt>{{htmlelement("slot")}}</dt>
  <dd>A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.</dd>
- <dt>The <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> global HTML attribute</dt>
+ <dt>The <code><a href=/web/html/global_attributes/slot>slot</a></code> global HTML attribute</dt>
  <dd>Assigns a slot in a shadow DOM shadow tree to an element.</dd>
  <dt>{{domxref("Slotable")}}</dt>
  <dd>A mixin implemented by both {{domxref("Element")}} and {{domxref("Text")}} nodes, defining features that allow them to become the contents of an {{htmlelement("slot")}} element. The mixin defines one attribute, {{domxref("Slotable.assignedSlot")}}, which returns a reference to the slot the node is inserted in.</dd>
@@ -174,22 +174,22 @@ tags:
   <tr>
    <td>{{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>The definition of <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">HTML Custom Elements</a>.</td>
+   <td>The definition of <a href=/web/web_components/using_custom_elements>HTML Custom Elements</a>.</td>
   </tr>
   <tr>
    <td>{{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>The definition of <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>.</td>
+   <td>The definition of <a href=/web/web_components/using_shadow_dom>Shadow DOM</a>.</td>
   </tr>
   <tr>
    <td>{{SpecName("HTML Imports", "", "")}}</td>
    <td>{{Spec2("HTML Imports")}}</td>
-   <td>Initial <a href="/en-US/docs/Web/Web_Components/HTML_Imports">HTML Imports</a> definition.</td>
+   <td>Initial <a href=/web/web_components/html_imports>HTML Imports</a> definition.</td>
   </tr>
   <tr>
    <td>{{SpecName("Shadow DOM", "", "")}}</td>
    <td>{{Spec2("Shadow DOM")}}</td>
-   <td>Initial <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> definition.</td>
+   <td>Initial <a href=/web/web_components/using_shadow_dom>Shadow DOM</a> definition.</td>
   </tr>
  </tbody>
 </table>

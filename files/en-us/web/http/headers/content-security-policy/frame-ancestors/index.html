@@ -55,7 +55,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <dl>
  <dt>&lt;host-source&gt;</dt>
- <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/URIs_and_URLs">URL scheme</a> and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
+ <dd>Internet hosts by name or IP address, as well as an optional <a href=/uris_and_urls>URL scheme</a> and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
  Examples:
  <ul>
   <li><code>http://*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the <code>http:</code> URL scheme.</li>
@@ -70,10 +70,10 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
  <dt>&lt;scheme-source&gt;</dt>
  <dd>A scheme such as <code>http:</code> or <code>https:</code>. The colon is required and scheme should not be quoted. You can also specify data schemes (not recommended).
  <ul>
-  <li><code>data:</code> Allows <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URIs</a> to be used as a content source.<em> This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.</em></li>
-  <li><code>mediastream:</code> Allows <a href="/en-US/docs/Web/API/MediaStream_API"><code>mediastream:</code> URIs</a> to be used as a content source.</li>
-  <li><code>blob:</code> Allows <a href="/en-US/docs/Web/API/Blob"><code>blob:</code> URIs</a> to be used as a content source.</li>
-  <li><code>filesystem:</code> Allows <a href="/en-US/docs/Web/API/FileSystem"><code>filesystem:</code> URIs</a> to be used as a content source.</li>
+  <li><code>data:</code> Allows <a href=/web/http/basics_of_http/data_uris><code>data:</code> URIs</a> to be used as a content source.<em> This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.</em></li>
+  <li><code>mediastream:</code> Allows <a href=/web/api/mediastream_api><code>mediastream:</code> URIs</a> to be used as a content source.</li>
+  <li><code>blob:</code> Allows <a href=/web/api/blob><code>blob:</code> URIs</a> to be used as a content source.</li>
+  <li><code>filesystem:</code> Allows <a href=/web/api/filesystem><code>filesystem:</code> URIs</a> to be used as a content source.</li>
  </ul>
  </dd>
  <dt><code>'self'</code></dt>

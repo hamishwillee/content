@@ -15,7 +15,7 @@ tags:
 <p>The <strong><code>WebAssembly.instantiate()</code></strong> function allows you to compile and instantiate WebAssembly code. This function has two overloads:</p>
 
 <ul>
- <li>The primary overload takes the WebAssembly binary code, in the form of a <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or {{jsxref("ArrayBuffer")}}, and performs both compilation and instantiation in one step. The returned <code>Promise</code> resolves to both a compiled {{jsxref("WebAssembly.Module")}} and its first {{jsxref("WebAssembly.Instance")}}.</li>
+ <li>The primary overload takes the WebAssembly binary code, in the form of a <a href=/web/javascript/typed_arrays>typed array</a> or {{jsxref("ArrayBuffer")}}, and performs both compilation and instantiation in one step. The returned <code>Promise</code> resolves to both a compiled {{jsxref("WebAssembly.Module")}} and its first {{jsxref("WebAssembly.Instance")}}.</li>
  <li>The secondary overload takes an already-compiled {{jsxref("WebAssembly.Module")}} and returns a <code>Promise</code> that resolves to an <code>Instance</code> of that <code>Module</code>. This overload is useful if the <code>Module</code> has already been compiled.</li>
 </ul>
 
@@ -34,7 +34,7 @@ tags:
 
 <dl>
  <dt><em>bufferSource</em></dt>
- <dd>A <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to compile.</dd>
+ <dd>A <a href=/web/javascript/typed_arrays>typed array</a> or {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to compile.</dd>
  <dt><em>importObject</em> {{optional_inline}}</dt>
  <dd>An object containing the values to be imported into the newly-created <code>Instance</code>, such as functions or {{jsxref("WebAssembly.Memory")}} objects. There must be one matching property for each declared import of the compiled module or else a {{jsxref("WebAssembly.LinkError")}} is thrown.</dd>
 </dl>
@@ -44,8 +44,8 @@ tags:
 <p>A <code>Promise</code> that resolves to a <code>ResultObject</code> which contains two fields:</p>
 
 <ul>
- <li><code>module</code>: A {{jsxref("WebAssembly.Module")}} object representing the compiled WebAssembly module. This <code>Module</code> can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}} or <a href="/en-US/docs/WebAssembly/Caching_modules">cached in IndexedDB</a>.</li>
- <li><code>instance</code>: A {{jsxref("WebAssembly.Instance")}} object that contains all the <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a>.</li>
+ <li><code>module</code>: A {{jsxref("WebAssembly.Module")}} object representing the compiled WebAssembly module. This <code>Module</code> can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}} or <a href=/webassembly/caching_modules>cached in IndexedDB</a>.</li>
+ <li><code>instance</code>: A {{jsxref("WebAssembly.Instance")}} object that contains all the <a href=/webassembly/exported_functions>Exported WebAssembly functions</a>.</li>
 </ul>
 
 <h4 id="Exceptions">Exceptions</h4>
@@ -86,7 +86,7 @@ tags:
 
 <h3 id="First_overload_example">First overload example</h3>
 
-<p>After fetching some WebAssembly bytecode using fetch, we compile and instantiate the module using the {{jsxref("WebAssembly.instantiate()")}} function, importing a JavaScript function into the WebAssembly Module in the process. We then call an <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly function</a> that is exported by the <code>Instance</code>.</p>
+<p>After fetching some WebAssembly bytecode using fetch, we compile and instantiate the module using the {{jsxref("WebAssembly.instantiate()")}} function, importing a JavaScript function into the WebAssembly Module in the process. We then call an <a href=/webassembly/exported_functions>Exported WebAssembly function</a> that is exported by the <code>Instance</code>.</p>
 
 <pre class="brush: js notranslate">var importObject = {
   imports: {
@@ -110,7 +110,7 @@ fetch('simple.wasm').then(response =&gt;
 
 <h3 id="Second_overload_example">Second overload example</h3>
 
-<p>The following example (see our <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> demo on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html">view it live</a> also) compiles the loaded simple.wasm byte code using the {{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> using {{domxref("Worker.postMessage", "postMessage()")}}.</p>
+<p>The following example (see our <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> demo on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html">view it live</a> also) compiles the loaded simple.wasm byte code using the {{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a <a href=/web/api/web_workers_api>worker</a> using {{domxref("Worker.postMessage", "postMessage()")}}.</p>
 
 <pre class="brush: js notranslate">var worker = new Worker("wasm_worker.js");
 
@@ -160,7 +160,7 @@ onmessage = function(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
+ <li><a href=/webassembly>WebAssembly</a> overview page</li>
+ <li><a href=/webassembly/concepts>WebAssembly concepts</a></li>
+ <li><a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a></li>
 </ul>

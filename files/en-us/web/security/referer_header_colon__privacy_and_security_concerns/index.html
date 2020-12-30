@@ -8,7 +8,7 @@ tags:
   - referer
   - referrer
 ---
-<p class="summary">There are privacy and security risks associated with the <a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer HTTP header</a>. This article describes them, and offers advice on mitigating those risks.</p>
+<p class="summary">There are privacy and security risks associated with the <a href=/web/http/headers/referer>Referer HTTP header</a>. This article describes them, and offers advice on mitigating those risks.</p>
 
 <h2 id="The_referrer_problem">The referrer problem</h2>
 
@@ -33,7 +33,7 @@ tags:
 <ul>
  <li>The {{httpheader("Referrer-Policy")}} header on your server to control what information is sent through the <code>Referer</code> header. Again, a directive of <code>no-referrer</code> would omit the Referer header entirely.</li>
  <li>The <code>referrerpolicy</code> attribute on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). This can for example be set to <code>no-referrer</code> to stop the <code>Referer</code> header being sent altogether.</li>
- <li>The <code>rel</code> attribute set to <code>noreferrer</code> on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). See <a href="/en-US/docs/Web/HTML/Link_types">Link types</a> and search for <code>noreferrer</code> for more information.</li>
+ <li>The <code>rel</code> attribute set to <code>noreferrer</code> on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). See <a href=/web/html/link_types>Link types</a> and search for <code>noreferrer</code> for more information.</li>
  <li>The <a href="https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect">Exit page</a> technique.</li>
 </ul>
 

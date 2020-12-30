@@ -10,7 +10,7 @@ tags:
 
 <p>Mathematical notations are even more complex with structures like fractions, square roots or matrices that are likely to require their own tags. As a consequence, good MathML authoring tools are more important and we describe some tools below. In particular, the Mozilla MathML team has been developing <a href="https://github.com/fred-wang/TeXZilla/">TeXZilla</a>, a Javascript Unicode LaTeX-to-MathML converter that is intended to be used in many scenarios described here. Of course, the list is by no means exhaustive and you are invited to check out the <a class="external" href="https://www.w3.org/Math/Software/">W3C MathML software list</a> where you can find various other tools.</p>
 
-<p>Note that by design, MathML is well-integrated in HTML5 and in particular you can use usual Web features like CSS, DOM, Javascript or SVG. This is out of the scope of this document but anyone with basic knowledge of Web languages will easily be able to mix these features with MathML. Check out <a href="/en-US/docs/Mozilla/MathML_Project#Sample_MathML_Documents">our demos</a> and <a href="/en-US/docs/Web/MathML">MathML references</a> for more details.</p>
+<p>Note that by design, MathML is well-integrated in HTML5 and in particular you can use usual Web features like CSS, DOM, Javascript or SVG. This is out of the scope of this document but anyone with basic knowledge of Web languages will easily be able to mix these features with MathML. Check out <a href=/mozilla/mathml_project#Sample_MathML_Documents>our demos</a> and <a href=/web/mathml>MathML references</a> for more details.</p>
 
 <h2 id="Using_MathML">Using MathML</h2>
 
@@ -51,7 +51,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
-<p>Note that these two scripts perform feature detection of the <a href="/en-US/docs/Web/MathML/Element/mspace">mspace</a> or <a href="/en-US/docs/Web/MathML/Element/mpadded">mpadded</a> elements (see the browser compatibility table on these pages). There is also a similar script to display a warning at the top of the page for browsers without good MathML support and let the users choose between one of the fallback above:</p>
+<p>Note that these two scripts perform feature detection of the <a href=/web/mathml/element/mspace>mspace</a> or <a href=/web/mathml/element/mpadded>mpadded</a> elements (see the browser compatibility table on these pages). There is also a similar script to display a warning at the top of the page for browsers without good MathML support and let the users choose between one of the fallback above:</p>
 
 <pre class="brush: html notranslate">&lt;script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
@@ -75,9 +75,9 @@ var isWebKit = ua.indexOf('AppleWebKit') &gt; -1 &amp;&amp; ua.indexOf('Chrome')
 
 <h4 id="Mathematical_fonts">Mathematical fonts</h4>
 
-<p>In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">MDN's Font Instructions</a>, so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.</p>
+<p>In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to <a href=/mozilla/mathml_project/fonts>MDN's Font Instructions</a>, so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.</p>
 
-<p>Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the <a href="/en-US/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS">font instructions for Mozilla 2.0</a>. For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:</p>
+<p>Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the <a href=/mozilla/mathml_project/fontsmozilla2.0#MathML_Font_Selection_with_CSS>font instructions for Mozilla 2.0</a>. For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:</p>
 
 <pre class="brush: css notranslate">@namespace url('http://www.w3.org/1999/xhtml');
 @namespace m url('http://www.w3.org/1998/Math/MathML');
@@ -89,7 +89,7 @@ m|math {
     font-family: Latin Modern Math;
 }</pre>
 
-<p>You can then use the <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> rule as usual to provide WOFF fallback for Latin Modern and Latin Modern Math. See this <a href="https://github.com/fred-wang/MathFonts">GitHub repository to get WOFF fonts and sample CSS stylesheets</a> to use on your Web site and check <a href="https://fred-wang.github.io/MathFonts/">its test page</a>.</p>
+<p>You can then use the <a href=/web/css/@font-face>@font-face</a> rule as usual to provide WOFF fallback for Latin Modern and Latin Modern Math. See this <a href="https://github.com/fred-wang/MathFonts">GitHub repository to get WOFF fonts and sample CSS stylesheets</a> to use on your Web site and check <a href="https://fred-wang.github.io/MathFonts/">its test page</a>.</p>
 
 <h4 id="MathML_in_XML_documents_XHTML_EPUB_etc">MathML in XML documents (XHTML, EPUB, etc)</h4>
 

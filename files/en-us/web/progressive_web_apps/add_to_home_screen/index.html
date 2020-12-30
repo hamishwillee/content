@@ -14,12 +14,12 @@ tags:
 
 <h2 id="Why_A2HS">Why A2HS?</h2>
 
-<p>A2HS is thought to be part of the <a href="/en-US/docs/Web/Progressive_web_apps">Progressive Web App</a> philosophy — giving web apps the same user experience advantages as native apps so they can compete in today's ecosystem wars. Part of this is the simple gesture of accessing an app by tapping its icon on your Home screen, and then having it appear neatly in its own window. A2HS makes this possible.</p>
+<p>A2HS is thought to be part of the <a href=/web/progressive_web_apps>Progressive Web App</a> philosophy — giving web apps the same user experience advantages as native apps so they can compete in today's ecosystem wars. Part of this is the simple gesture of accessing an app by tapping its icon on your Home screen, and then having it appear neatly in its own window. A2HS makes this possible.</p>
 
 <h2 id="What_browsers_support_A2HS">What browsers support A2HS?</h2>
 
 <p>A2HS is supported in all mobile browsers, except iOS webview. It's also supported in some Chromium desktop browsers.<br>
- Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#Other">since v58</a> and is working on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1407202">desktop support</a>.</p>
+ Firefox has had mobile support <a href=/mozilla/firefox/releases/58#Other>since v58</a> and is working on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1407202">desktop support</a>.</p>
 
 <p>See <a href="https://caniuse.com/#feat=web-app-manifest">caniuse.com</a> for exact details.</p>
 
@@ -116,9 +116,9 @@ tags:
 
 <h2 id="What_does_A2HS_not_give_you">What does A2HS not give you?</h2>
 
-<p>Bear in mind that when you add an app to your Home screen, it just makes the app easily accessible — it doesn't download the app's assets and data to your device and make the app available offline, or anything like that. To make your app work offline, you have to use the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> to handle storing the assets offline, and if required, <a href="/en-US/docs/Web/API/Web_Storage_API">Web storage</a> or <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> to store its data.</p>
+<p>Bear in mind that when you add an app to your Home screen, it just makes the app easily accessible — it doesn't download the app's assets and data to your device and make the app available offline, or anything like that. To make your app work offline, you have to use the <a href=/web/api/service_worker_api>Service Worker API</a> to handle storing the assets offline, and if required, <a href=/web/api/web_storage_api>Web storage</a> or <a href=/web/api/indexeddb_api>IndexedDB</a> to store its data.</p>
 
-<p>In our example app, we've just used a service worker to store all necessary files. The service worker is registered against the site with the final code block in the <code><a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js">index.js</a></code> file. We then cache all the site's assets using the <a href="/en-US/docs/Web/API/Cache">Cache API</a>, and serve them from the cache instead of the network using the code in the <a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js">sw.js</a> file.</p>
+<p>In our example app, we've just used a service worker to store all necessary files. The service worker is registered against the site with the final code block in the <code><a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js">index.js</a></code> file. We then cache all the site's assets using the <a href=/web/api/cache>Cache API</a>, and serve them from the cache instead of the network using the code in the <a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js">sw.js</a> file.</p>
 
 <h2 id="A2HS_on_desktop">A2HS on desktop</h2>
 
@@ -212,10 +212,10 @@ addBtn.style.display = 'none';</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Progressive_web_apps">Progressive web apps</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
- <li><a href="/en-US/docs/Web/Manifest">Web manifest reference</a></li>
+ <li><a href=/web/progressive_web_apps>Progressive web apps</a></li>
+ <li><a href=/web/api/service_worker_api>Service Worker API</a></li>
+ <li><a href=/web/manifest>Web manifest reference</a></li>
  <li><a href="https://developers.google.com/web/fundamentals/app-install-banners/">App install banners</a></li>
 </ul>
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}</div>
+<div>{{QuickLinksWithSubpages(/web/progressive_web_apps/)}}</div>

@@ -24,7 +24,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+<p>The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to <code><a href=/web/html/element/input/text>&lt;input type="text"&gt;</a></code>.</p>
 
 <p>In Chrome/Opera the <code>week</code> control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <h2 id="Value">Value</h2>
 
-<p>A {{domxref("DOMString")}} representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.</p>
+<p>A {{domxref("DOMString")}} representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage(/web/html/date_and_time_formats, "Format of a valid week string")}}.</p>
 
 <p>You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
@@ -110,21 +110,21 @@ weekControl.value = '2017-W45';</pre>
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>The latest (time-wise) year and week number, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid week string, then the element has no maximum value.</p>
+<p>The latest (time-wise) year and week number, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid week string, then the element has no maximum value.</p>
 
 <p>This value must be greater than or equal to the year and week specified by the <code>min</code> attribute.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid week string, the input has no minimum value.</p>
+<p>The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid week string, the input has no minimum value.</p>
 
 <p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "readonly", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>{{page(/web/html/element/input/number, "step-include")}}</p>
 
 <p>For <code>week</code> inputs, the value of <code>step</code> is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of <code>step</code> is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (<code>"1970-W01"</code>).</p>
 
@@ -149,7 +149,7 @@ weekControl.value = '2017-W45';</pre>
 
 <h3 id="Controlling_input_size">Controlling input size</h3>
 
-<p><code>&lt;input type="week"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> for sizing needs.</p>
+<p><code>&lt;input type="week"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href=/web/css>CSS</a> for sizing needs.</p>
 
 <h3 id="Using_the_step_attribute">Using the step attribute</h3>
 
@@ -389,7 +389,7 @@ function populateWeeks() {
 
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/web/html/date_and_time_formats>Date and time formats used in HTML</a></li>
+ <li><code><a href=/web/html/element/input/datetime-local>&lt;input type="datetime-local"&gt;</a></code>, <code><a href=/web/html/element/input/date>&lt;input type="date"&gt;</a></code>, <code><a href=/web/html/element/input/time>&lt;input type="time"&gt;</a></code>, and <code><a href=/web/html/element/input/month>&lt;input type="month"&gt;</a></code></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

@@ -14,13 +14,13 @@ tags:
 
 <h2 id="Performance_Timings">Performance Timings</h2>
 
-<p>The <a href="/en-US/docs/Web/API/PerformanceTiming">performanceTiming API</a>, a JavaScript API for measuring the loading performance of the requested page, is deprecated but supported in all browsers. It has been replaced with the <a href="/en-US/docs/Web/API/PerformanceNavigationTiming">performanceNavigationTiming</a> API.</p>
+<p>The <a href=/web/api/performancetiming>performanceTiming API</a>, a JavaScript API for measuring the loading performance of the requested page, is deprecated but supported in all browsers. It has been replaced with the <a href=/web/api/performancenavigationtiming>performanceNavigationTiming</a> API.</p>
 
-<p>The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from <code><a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigationStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventStart">unloadEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd">unloadEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectStart">redirectStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectEnd">redirectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/fetchStart">fetchStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupStart">domainLookupStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd">domainLookupEnd</a></code>, <a href="/en-US/docs/Web/API/PerformanceTiming/connectStart">c<code>onnectStart</code></a> , <code><a href="/en-US/docs/Web/API/PerformanceTiming/connectEnd">connectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart">secureConnectionStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/requestStart">requestStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseStart">responseStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseEnd">responseEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domLoading">domLoading</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domInteractive">domInteractive</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart">domContentLoadedEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd">domContentLoadedEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domComplete">domComplete</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventStart">loadEventStart</a></code>, and <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventEnd">loadEventEnd</a></code>.</p>
+<p>The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from <code><a href=/web/api/performancetiming/navigationstart>navigationStart</a></code>, <code><a href=/web/api/performancetiming/unloadeventstart>unloadEventStart</a></code>, <code><a href=/web/api/performancetiming/unloadeventend>unloadEventEnd</a></code>, <code><a href=/web/api/performancetiming/redirectstart>redirectStart</a></code>, <code><a href=/web/api/performancetiming/redirectend>redirectEnd</a></code>, <code><a href=/web/api/performancetiming/fetchstart>fetchStart</a></code>, <code><a href=/web/api/performancetiming/domainlookupstart>domainLookupStart</a></code>, <code><a href=/web/api/performancetiming/domainlookupend>domainLookupEnd</a></code>, <a href=/web/api/performancetiming/connectstart>c<code>onnectStart</code></a> , <code><a href=/web/api/performancetiming/connectend>connectEnd</a></code>, <code><a href=/web/api/performancetiming/secureconnectionstart>secureConnectionStart</a></code>, <code><a href=/web/api/performancetiming/requeststart>requestStart</a></code>, <code><a href=/web/api/performancetiming/responsestart>responseStart</a></code>, <code><a href=/web/api/performancetiming/responseend>responseEnd</a></code>, <code><a href=/web/api/performancetiming/domloading>domLoading</a></code>, <code><a href=/web/api/performancetiming/dominteractive>domInteractive</a></code>, <code><a href=/web/api/performancetiming/domcontentloadedeventstart>domContentLoadedEventStart</a></code>, <code><a href=/web/api/performancetiming/domcontentloadedeventend>domContentLoadedEventEnd</a></code>, <code><a href=/web/api/performancetiming/domcomplete>domComplete</a></code>, <code><a href=/web/api/performancetiming/loadeventstart>loadEventStart</a></code>, and <code><a href=/web/api/performancetiming/loadeventend>loadEventEnd</a></code>.</p>
 
 <p><img alt="Navigation Timing event metrics" src="https://mdn.mozillademos.org/files/16620/Screen_Shot_2019-05-03_at_1.06.27_PM.png"></p>
 
-<p>With the metrics above, and a little bit of math, we can calculate many important metrics like <a href="/en-US/docs/Glossary/time_to_first_byte">time to first byte</a>, page load time, dns lookup, and whether the connection is secure.</p>
+<p>With the metrics above, and a little bit of math, we can calculate many important metrics like <a href=/glossary/time_to_first_byte>time to first byte</a>, page load time, dns lookup, and whether the connection is secure.</p>
 
 <p>To help measure the time it takes to complete all the steps, the Performance Timing API  provides read only measurements of navigation timings. To view and capture our app's timing we enter:</p>
 
@@ -100,15 +100,15 @@ tags:
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.unloadEventEnd","unloadEventEnd")}}</td>
-   <td>When the <code><a href="/en-US/docs/Web/Events/unload">unload</a></code> event handler finishes. If there is no previous document, or if the previous document, or one of the needed redirects, is not of the same origin, the value returned is <code>0</code>.</td>
+   <td>When the <code><a href=/web/events/unload>unload</a></code> event handler finishes. If there is no previous document, or if the previous document, or one of the needed redirects, is not of the same origin, the value returned is <code>0</code>.</td>
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.domInteractive","domInteractive")}}</td>
-   <td>When the parser finished its work on the main document, that is when its <a href="/en-US/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> changes to <code>'interactive'</code> and the corresponding <code><a href="/en-US/docs/Web/Events/readystatechange">readystatechange</a></code> event is thrown.</td>
+   <td>When the parser finished its work on the main document, that is when its <a href=/web/api/document/readystate><code>Document.readyState</code></a> changes to <code>'interactive'</code> and the corresponding <code><a href=/web/events/readystatechange>readystatechange</a></code> event is thrown.</td>
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}</td>
-   <td>Right before the parser sent the <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> event, that is right after all the scripts that need to be executed right after parsing have been executed.</td>
+   <td>Right before the parser sent the <code><a href=/web/events/domcontentloaded>DOMContentLoaded</a></code> event, that is right after all the scripts that need to be executed right after parsing have been executed.</td>
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.domContentLoadedEventEnd","domContentLoadedEventEnd")}}</td>
@@ -116,15 +116,15 @@ tags:
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.domComplete","domComplete")}}</td>
-   <td>When the parser finished its work on the main document, that is when its <a href="/en-US/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> changes to <code>'complete'</code> and the corresponding <code><a href="/en-US/docs/Web/Events/readystatechange">readystatechange</a></code> event is thrown.</td>
+   <td>When the parser finished its work on the main document, that is when its <a href=/web/api/document/readystate><code>Document.readyState</code></a> changes to <code>'complete'</code> and the corresponding <code><a href=/web/events/readystatechange>readystatechange</a></code> event is thrown.</td>
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.loadEventStart","loadEventStart")}}</td>
-   <td>When the <code><a href="/en-US/docs/Web/Events/load">load</a></code> event was sent for the current document. If this event has not yet been sent, it returns <code>0.</code></td>
+   <td>When the <code><a href=/web/events/load>load</a></code> event was sent for the current document. If this event has not yet been sent, it returns <code>0.</code></td>
   </tr>
   <tr>
    <td>{{domxref("PerformanceTiming.loadEventEnd","loadEventEnd")}}</td>
-   <td>When the <code><a href="/en-US/docs/Web/Events/load">load</a></code> event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns <code>0.</code></td>
+   <td>When the <code><a href=/web/events/load>load</a></code> event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns <code>0.</code></td>
   </tr>
  </tbody>
 </table>
@@ -140,32 +140,32 @@ tags:
 
 <h3 id="Time_to_first_byte">Time to first byte</h3>
 
-<p><a href="/en-US/docs/Glossary/time_to_first_byte">Time to First Byte</a> is the time between the <code>navigationStart</code> (start of the navigation) and <code>responseStart</code>, (when the first byte of response data is received) available in the <code>performanceTiming</code> API:</p>
+<p><a href=/glossary/time_to_first_byte>Time to First Byte</a> is the time between the <code>navigationStart</code> (start of the navigation) and <code>responseStart</code>, (when the first byte of response data is received) available in the <code>performanceTiming</code> API:</p>
 
 <pre class="brush: js">let ttfb = time.responseStart - time.navigationStart;
 </pre>
 
 <h3 id="Page_load_time">Page load time</h3>
 
-<p><a href="/en-US/docs/Glossary/Page_load_time">Page load time</a> is the time between <code>navigationStart</code> and the start of when the load event is sent for the current document. They are only available in the performanceTiming API.</p>
+<p><a href=/glossary/page_load_time>Page load time</a> is the time between <code>navigationStart</code> and the start of when the load event is sent for the current document. They are only available in the performanceTiming API.</p>
 
 <pre class="brush: js">let pageloadtime = time.loadEventStart - time.navigationStart;</pre>
 
 <h3 id="DNS_lookup_time">DNS lookup time</h3>
 
-<p>The DNS lookup time is the time between <code><a href="/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart">domainLookupStart</a></code> and <code><a href="/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd">domainLookupEnd</a></code>. These are both available in both the <code>performanceTiming</code> and <code>performanceNavigationTiming</code> APIs.</p>
+<p>The DNS lookup time is the time between <code><a href=/web/api/performanceresourcetiming/domainlookupstart>domainLookupStart</a></code> and <code><a href=/web/api/performanceresourcetiming/domainlookupend>domainLookupEnd</a></code>. These are both available in both the <code>performanceTiming</code> and <code>performanceNavigationTiming</code> APIs.</p>
 
 <pre class="brush: js">let dns  = time.domainLookupEnd - time.domainLookupStart;</pre>
 
 <h3 id="TCP">TCP</h3>
 
-<p>The time it takes for the <a href="/en-US/docs/Glossary/TCP">TCP</a> handshake is the time between the connection start and connection end:</p>
+<p>The time it takes for the <a href=/glossary/tcp>TCP</a> handshake is the time between the connection start and connection end:</p>
 
 <pre class="brush: js">tcp  = time.connectEnd - time.connectStart;</pre>
 
 <h3 id="SSL_negotiation">SSL negotiation</h3>
 
-<p><code><a href="/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart">secureConnectionStart</a></code> will be <code>undefined</code> if not available, <code>0</code> if <a href="/en-US/docs/Glossary/https">https</a> in not used, or a time stamp if available, and used. In other words, if a secure connection was used, <code>secureConnectionStart</code> will be <a href="/en-US/docs/Glossary/Truthy">truthy</a>, and the time between <code>secureConnectionStart</code> and <code>requestStart</code> will greater than 0.</p>
+<p><code><a href=/web/api/performanceresourcetiming/secureconnectionstart>secureConnectionStart</a></code> will be <code>undefined</code> if not available, <code>0</code> if <a href=/glossary/https>https</a> in not used, or a time stamp if available, and used. In other words, if a secure connection was used, <code>secureConnectionStart</code> will be <a href=/glossary/truthy>truthy</a>, and the time between <code>secureConnectionStart</code> and <code>requestStart</code> will greater than 0.</p>
 
 <pre class="brush: js">ssl = time.requestStart - time.<code>secureConnectionStart;</code></pre>
 
@@ -201,11 +201,11 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <h2 id="Navigation_Timing">Navigation Timing</h2>
 
-<p>When a user requests a web site or application,<a href="/en-US/docs/Learn/Performance/Populating_the_page:_how_browsers_work"> to populate the browser</a> the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to <em>interactive</em>. If there are deferred scripts needing to be parsed, it will do so, then fire the <a href="/en-US/docs/">DOMContentLoaded</a>, after which the readiness is set to <em>complete</em>. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.</p>
+<p>When a user requests a web site or application,<a href=/learn/performance/populating_the_page:_how_browsers_work> to populate the browser</a> the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to <em>interactive</em>. If there are deferred scripts needing to be parsed, it will do so, then fire the <a href=/>DOMContentLoaded</a>, after which the readiness is set to <em>complete</em>. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.</p>
 
 <pre>let navigationTimings = performance.getEntriesByType('navigation');</pre>
 
-<p>The <code>performance.getEntriesByType('navigation')</code>a returns an array of <a href="/en-US/docs/Web/API/PerformanceEntry">PerformanceEntry</a> objects for the <em>navigation</em> <em>type</em>.</p>
+<p>The <code>performance.getEntriesByType('navigation')</code>a returns an array of <a href=/web/api/performanceentry>PerformanceEntry</a> objects for the <em>navigation</em> <em>type</em>.</p>
 
 <p><img alt="The results of when performance.getEntriesByType('navigation'); is entered into the console for this document" src="https://mdn.mozillademos.org/files/16825/perfgentrybytypenavigation.png" style="height: 628px; width: 897px;"></p>
 
@@ -247,23 +247,23 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>To measure the response time, subtract the request start time from the response start time. The request start is the moment immediately before the user agent starts requesting the resource from the server, or from relevant application caches or from local resources. The response start is the time immediately after the user agent's HTTP parser receives the first byte of the response from relevant application caches, or from local resources or from the server, which happens after the request is received and processed.</p>
 
-<pre class="brush: js">request = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/responseStart"><code>timing.responseStart</code></a> - <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/requestStart"><code>timing.requestStart</code></a></pre>
+<pre class="brush: js">request = <a href=/web/api/performancenavigationtiming/responsestart><code>timing.responseStart</code></a> - <a href=/web/api/performancenavigationtiming/requeststart><code>timing.requestStart</code></a></pre>
 
 <h3 id="Load_event_duration">Load event duration</h3>
 
 <p>By subtracting the time stamp from immediately before the load event of the current document is fired from the time when the load event of the current document is completed, you can measure the duration of the load event.</p>
 
-<pre class="brush: js">load = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd"><code>timing.loadEventEnd</code> - <code>timing.loadEventEnd</code></a> </pre>
+<pre class="brush: js">load = <a href=/web/api/performancenavigationtiming/loadeventend><code>timing.loadEventEnd</code> - <code>timing.loadEventEnd</code></a> </pre>
 
 <h3 id="DOMContentLoaded_event">DOMContentLoaded event</h3>
 
 <p>The DOMContentLoaded event duration is measured by subtracting the time value immediately before the user agent fires the DOMContentLoaded event from the time value immediately after the event completes. Keeping this at 50ms or faster helps ensure a responsive user interface.</p>
 
-<pre class="brush: js">DOMContentLoaded = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd"><code>timing.domContentLoadedEventEnd</code></a> - <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart"><code>timing.domContentLoadedEventStart</code></a></pre>
+<pre class="brush: js">DOMContentLoaded = <a href=/web/api/performancenavigationtiming/domcontentloadedeventend><code>timing.domContentLoadedEventEnd</code></a> - <a href=/web/api/performancenavigationtiming/domcontentloadedeventstart><code>timing.domContentLoadedEventStart</code></a></pre>
 
 <h3 id="Duration">Duration</h3>
 
-<p>We are provided with the duration. The duration is the difference between the <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd">PerformanceNavigationTiming.loadEventEnd</a> and P<a href="/en-US/docs/Web/API/PerformanceEntry/startTime">erformanceEntry.startTime</a> properties.</p>
+<p>We are provided with the duration. The duration is the difference between the <a href=/web/api/performancenavigationtiming/loadeventend>PerformanceNavigationTiming.loadEventEnd</a> and P<a href=/web/api/performanceentry/starttime>erformanceEntry.startTime</a> properties.</p>
 
 <p>The PerformanceNavigationTiming interface also provides information about what type of navigation you are measuring, returning <code>navigate</code>, <code>reload</code>, <code>back_forward</code> or <code>prerender</code>.</p>
 

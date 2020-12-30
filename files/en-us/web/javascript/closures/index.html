@@ -169,7 +169,7 @@ console.log(counter.value());  // 1.
 
 <p>In previous examples, each closure had its own lexical environment. Here though, there is a single lexical environment that is shared by the three functions: <code>counter.increment</code>, <code>counter.decrement</code>, and <code>counter.value</code>.</p>
 
-<p>The shared lexical environment is created in the body of an anonymous function, <em>which is executed as soon as it has been defined </em>(also known as an <a href="/en-US/docs/Glossary/IIFE">IIFE</a>). The lexical environment contains two private items: a variable called <code>privateCounter</code>, and a function called <code>changeBy</code>. You can't access either of these private members from outside the anonymous function. Instead, you can access them using the three public functions that are returned from the anonymous wrapper.</p>
+<p>The shared lexical environment is created in the body of an anonymous function, <em>which is executed as soon as it has been defined </em>(also known as an <a href=/glossary/iife>IIFE</a>). The lexical environment contains two private items: a variable called <code>privateCounter</code>, and a function called <code>changeBy</code>. You can't access either of these private members from outside the anonymous function. Instead, you can access them using the three public functions that are returned from the anonymous wrapper.</p>
 
 <p>Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the <code>privateCounter</code> variable and the <code>changeBy</code> function.</p>
 
@@ -272,7 +272,7 @@ console.log(s3) //log 20
 
 <h2 id="Creating_closures_in_loops_A_common_mistake">Creating closures in loops: A common mistake</h2>
 
-<p>Prior to the introduction of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let" title="let"><code>let</code> </a>keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.</p>
+<p>Prior to the introduction of the <a href=/web/javascript/reference/statements/let title="let"><code>let</code> </a>keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.</p>
 
 <pre class="brush: html notranslate">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
@@ -367,7 +367,7 @@ function setupHelp() {
 
 setupHelp();</pre>
 
-<p>If you don't want to use more closures, you can use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword introduced in ES2015 :</p>
+<p>If you don't want to use more closures, you can use the <code><a href=/web/javascript/reference/statements/let>let</a></code> keyword introduced in ES2015 :</p>
 
 <pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').textContent = help;
@@ -392,7 +392,7 @@ setupHelp();</pre>
 
 <p>This example uses <code>let</code> instead of <code>var</code>, so every closure binds the block-scoped variable, meaning that no additional closures are required.</p>
 
-<p>Another alternative could be to use <code>forEach()</code> to iterate over the <code>helpText</code> array and attach a listener to each <a href="/en-US/docs/Web/HTML/Element/input" title="The HTML &lt;input&gt; element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."><code>&lt;input&gt;</code></a>, as shown:</p>
+<p>Another alternative could be to use <code>forEach()</code> to iterate over the <code>helpText</code> array and attach a listener to each <a href=/web/html/element/input title="The HTML &lt;input&gt; element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."><code>&lt;input&gt;</code></a>, as shown:</p>
 
 <pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').textContent = help;
@@ -465,4 +465,4 @@ MyObject.prototype.getMessage = function() {
 };
 </pre>
 
-<p>In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation. See <a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">Details of the Object Model</a> for more.</p>
+<p>In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation. See <a href=/web/javascript/guide/details_of_the_object_model>Details of the Object Model</a> for more.</p>

@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Constants are block-scoped, much like variables declared using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.</p>
+<p>Constants are block-scoped, much like variables declared using the <code><a href=/web/javascript/reference/statements/let>let</a></code> keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-const.html")}}</div>
 
@@ -25,10 +25,10 @@ tags:
  <dt><code><var>nameN</var></code></dt>
  <dd>The constant's name, which can be any legal {{Glossary("identifier")}}.</dd>
  <dt><code><var>valueN</var></code></dt>
- <dd>The constant's value. This can be any legal <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">expression</a>, including a function expression.</dd>
+ <dd>The constant's value. This can be any legal <a href=/web/javascript/guide/expressions_and_operators#Expressions>expression</a>, including a function expression.</dd>
 </dl>
 
-<p> The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment </a>syntax can also be used to declare variables.</p>
+<p> The <a href=/web/javascript/reference/operators/destructuring_assignment>Destructuring Assignment </a>syntax can also be used to declare variables.</p>
 
 <pre class="syntaxbox notranslate">const <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
 /* This creates a constant with the name 'bar', which has a value of 10 */</pre>
@@ -41,7 +41,7 @@ tags:
 
 <p>The <strong><code>const</code> declaration</strong> creates a read-only reference to a value. It does <strong>not</strong> mean the value it holds is immutable—just that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered.</p>
 
-<p>All the considerations about the "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_TDZ">temporal dead zone</a>" apply to both {{jsxref("Statements/let", "let")}} and <code>const</code>.</p>
+<p>All the considerations about the "<a href=/web/javascript/reference/statements/let#Temporal_dead_zone_TDZ>temporal dead zone</a>" apply to both {{jsxref("Statements/let", "let")}} and <code>const</code>.</p>
 
 <p>A constant cannot share its name with a function or a variable in the same scope.</p>
 
@@ -146,5 +146,5 @@ MY_ARRAY = ['B'];</pre>
 <ul>
  <li>{{jsxref("Statements/var", "var")}}</li>
  <li>{{jsxref("Statements/let", "let")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants">Constants in the JavaScript Guide</a></li>
+ <li><a href=/web/javascript/guide/grammar_and_types#Constants>Constants in the JavaScript Guide</a></li>
 </ul>

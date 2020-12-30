@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:dir()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements based on the directionality of the text contained in them.</p>
+<p>The <strong><code>:dir()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/pseudo-classes>pseudo-class</a> matches elements based on the directionality of the text contained in them.</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Selects any element with right-to-left text */
 :dir(rtl) {
@@ -21,7 +21,7 @@ tags:
 <p>The <code>:dir()</code> pseudo-class uses only the <em>semantic</em> value of the directionality, i.e., the one defined in the document itself. It doesn't account for <em>styling</em> directionality, i.e., the directionality set by CSS properties such as {{cssxref("direction")}}.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Be aware that the behavior of the <code>:dir()</code> pseudo-class is not equivalent to the <code>[dir=…]</code> <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>. The latter match the HTML {{htmlattrxref("dir")}} attribute, and ignore elements that lack it — even if they inherit a direction from their parent. (Similarly, <code>[dir=rtl]</code> and <code>[dir=ltr]</code> won't match the <code>auto</code> value.) In contrast, <code>:dir()</code> will match the value calculated by the {{glossary("user agent")}}, even if inherited.</p>
+<p><strong>Note:</strong> Be aware that the behavior of the <code>:dir()</code> pseudo-class is not equivalent to the <code>[dir=…]</code> <a href=/web/css/attribute_selectors>attribute selectors</a>. The latter match the HTML {{htmlattrxref("dir")}} attribute, and ignore elements that lack it — even if they inherit a direction from their parent. (Similarly, <code>[dir=rtl]</code> and <code>[dir=ltr]</code> won't match the <code>auto</code> value.) In contrast, <code>:dir()</code> will match the value calculated by the {{glossary("user agent")}}, even if inherited.</p>
 </div>
 
 <div class="note">

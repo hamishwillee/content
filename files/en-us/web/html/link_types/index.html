@@ -27,8 +27,8 @@ tags:
    <td><code>alternate</code></td>
    <td>
     <ul>
-     <li>If the element is {{HTMLElement("link")}} and the {{HTMLAttrxRef("rel", "link")}} attribute also contains the <code>stylesheet</code> type, the link defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</li>
-     <li>If the {{HTMLAttrxRef("type","link")}} is set to <code>application/rss+xml</code> or <code>application/atom+xml</code>, the link defines a <a href="/en-US/docs/RSS/Getting_Started/Syndicating">syndication feed</a>. The first one defined on the page is the default.</li>
+     <li>If the element is {{HTMLElement("link")}} and the {{HTMLAttrxRef("rel", "link")}} attribute also contains the <code>stylesheet</code> type, the link defines an <a href=/alternative_style_sheets>alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</li>
+     <li>If the {{HTMLAttrxRef("type","link")}} is set to <code>application/rss+xml</code> or <code>application/atom+xml</code>, the link defines a <a href=/rss/getting_started/syndicating>syndication feed</a>. The first one defined on the page is the default.</li>
      <li>Otherwise, the link defines an alternative page, of one of these types:
       <ul>
        <li>for another medium, like a handheld device (if the {{HTMLAttrxRef("media","link")}} attribute is set)</li>
@@ -62,7 +62,7 @@ tags:
   </tr>
   <tr>
    <td><code>bookmark</code></td>
-   <td>Indicates that the hyperlink is a <a href="/en-US/docs/Permalink">permalink</a> for the nearest ancestor {{HTMLElement("article")}} element. If none, it is a permalink for the <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document">section</a> that the element is most closely associated to.<br>
+   <td>Indicates that the hyperlink is a <a href=/permalink>permalink</a> for the nearest ancestor {{HTMLElement("article")}} element. If none, it is a permalink for the <a href=/sections_and_outlines_of_an_html5_document>section</a> that the element is most closely associated to.<br>
     <br>
     This allows for bookmarking a single article in a page containing multiple articles, such as on a monthly summary blog page, or a blog aggregator.</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
@@ -76,7 +76,7 @@ tags:
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/dns-prefetch">dns-prefetch</a></code> {{Experimental_Inline}}</td>
+   <td><code><a href=/web/html/link_types/dns-prefetch>dns-prefetch</a></code> {{Experimental_Inline}}</td>
    <td>Hints to the browser that a resource is needed, allowing the browser to do a DNS lookup and protocol handshaking before a user clicks the link.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
@@ -122,7 +122,7 @@ tags:
   </tr>
   <tr>
    <td><code>import</code> {{Experimental_Inline}}</td>
-   <td><a href="/en-US/docs/Web/Web_Components/HTML_Imports">HTML Imports</a></td>
+   <td><a href=/web/web_components/html_imports>HTML Imports</a></td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
@@ -153,13 +153,13 @@ tags:
    <td><em>None.</em></td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/manifest">manifest</a></code></td>
-   <td>Indicates that the linked file is a <a href="/en-US/docs/Web/Manifest">Web App Manifest</a>.</td>
+   <td><code><a href=/web/html/link_types/manifest>manifest</a></code></td>
+   <td>Indicates that the linked file is a <a href=/web/manifest>Web App Manifest</a>.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/modulepreload">modulepreload</a></code></td>
+   <td><code><a href=/web/html/link_types/modulepreload>modulepreload</a></code></td>
    <td>Initiates early (and high-priority) loading of module scripts.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
@@ -179,7 +179,7 @@ tags:
    <td>{{HTMLElement("link")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/noopener">noopener</a></code></td>
+   <td><code><a href=/web/html/link_types/noopener>noopener</a></code></td>
    <td>
     <p>Instructs the browser to open the link without granting the new browsing context access to the document that opened it — by not setting the {{DOMxRef("Window.opener")}} property on the opened window (it returns <code>null</code>).<br>
      <br>
@@ -216,27 +216,27 @@ tags:
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/preconnect">preconnect</a></code> {{Experimental_Inline}}</td>
+   <td><code><a href=/web/html/link_types/preconnect>preconnect</a></code> {{Experimental_Inline}}</td>
    <td>Provides a hint to the browser suggesting that it open a connection to the linked web site in advance, without disclosing any private information or downloading any content, so that when the link is followed the linked content can be fetched more quickly.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/prefetch">prefetch</a></code></td>
+   <td><code><a href=/web/html/link_types/prefetch>prefetch</a></code></td>
    <td>Suggests that the browser fetch the linked resource in advance, as it is likely to be requested by the user. Starting with Firefox 44, the value of the {{HTMLAttrxRef("crossorigin", "link")}} attribute is taken into consideration, making it possible to make anonymous prefetches.<br>
     <br>
-    <strong>Note:</strong> The <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
+    <strong>Note:</strong> The <a href=/link_prefetching_faq>Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/preload">preload</a></code></td>
-   <td>Tells the browser to download a resource because this resource will be needed later during the current navigation. See <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details.</td>
+   <td><code><a href=/web/html/link_types/preload>preload</a></code></td>
+   <td>Tells the browser to download a resource because this resource will be needed later during the current navigation. See <a href=/web/html/preloading_content>Preloading content with rel="preload"</a> for more details.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Link_types/prerender">prerender</a></code> {{Experimental_Inline}}</td>
+   <td><code><a href=/web/html/link_types/prerender>prerender</a></code> {{Experimental_Inline}}</td>
    <td>Suggests that the browser fetch the linked resource in advance, and that it also render the prefetched content offscreen so it can be quickly presented to the user once needed.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
@@ -255,7 +255,7 @@ tags:
    <td><code>search</code></td>
    <td>Indicates that the hyperlink references a document whose interface is specially designed for searching in this document, or site, and its resources.<br>
     <br>
-    If the {{HTMLAttrxRef("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
+    If the {{HTMLAttrxRef("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href=/creating_opensearch_plugins_for_firefox>OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}, {{HTMLElement("form")}}</td>
    <td><em>None.</em></td>
   </tr>
@@ -279,7 +279,7 @@ tags:
    <td><code>stylesheet</code></td>
    <td>Defines an external resource to be used as a stylesheet. If the <code>type</code> is not set, the browser should assume it is a <code>text/css</code> stylesheet until further inspection.<br>
     <br>
-    If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</td>
+    If used in combination with the <code>alternate</code> keyword, it defines an <a href=/alternative_style_sheets>alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>

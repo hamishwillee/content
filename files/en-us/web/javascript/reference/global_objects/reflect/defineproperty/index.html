@@ -59,9 +59,9 @@ obj.x                                         // 7
 
 <h3 id="Checking_if_property_definition_has_been_successful">Checking if property definition has been successful</h3>
 
-<p>With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block to catch any error that occurred while defining a property.</p>
+<p>With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a <code><a href=/web/javascript/reference/statements/try...catch>try...catch</a></code> block to catch any error that occurred while defining a property.</p>
 
-<p>Because <code>Reflect.defineProperty</code> returns a Boolean success status, you can just use an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> block here:</p>
+<p>Because <code>Reflect.defineProperty</code> returns a Boolean success status, you can just use an <code><a href=/web/javascript/reference/statements/if...else>if...else</a></code> block here:</p>
 
 <pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
   // success

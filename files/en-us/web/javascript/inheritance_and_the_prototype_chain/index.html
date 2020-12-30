@@ -74,13 +74,13 @@ console.log(o.d); // undefined
 
 <p><a href="https://repl.it/@khaled_hossain_code/prototype">Code Link</a></p>
 
-<p>Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">getter or a setter</a>.</p>
+<p>Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a <a href=/web/javascript/guide/working_with_objects#Defining_getters_and_setters>getter or a setter</a>.</p>
 
 <h3 id="Inheriting_methods">Inheriting "methods"</h3>
 
 <p>JavaScript does not have "methods" in the form that class-based languages define them. In JavaScript, any function can be added to an object in the form of a property. An inherited function acts just as any other property, including property shadowing as shown above (in this case, a form of <em>method overriding</em>).</p>
 
-<p>When an inherited function is executed, the value of <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> points to the inheriting object, not to the prototype object where the function is an own property.</p>
+<p>When an inherited function is executed, the value of <a href=/web/javascript/reference/operators/this><code>this</code></a> points to the inheriting object, not to the prototype object where the function is an own property.</p>
 
 <pre class="brush: js notranslate">var o = {
   a: 2,
@@ -107,7 +107,7 @@ console.log(p.m()); // 5
 
 <p>Let's look at what happens behind the scenes in a bit more detail.</p>
 
-<p>In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named <code>prototype</code>. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for <a href="/en-US/docs/Tools">Firefox Developer Tools</a>, <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a>, and <a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide">Edge DevTools</a>.)</p>
+<p>In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named <code>prototype</code>. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for <a href=/tools>Firefox Developer Tools</a>, <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a>, and <a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide">Edge DevTools</a>.)</p>
 
 <pre class="brush: js notranslate">function doSomething(){}
 console.log( doSomething.prototype );
@@ -247,7 +247,7 @@ function f() {
 
 <h3 id="With_a_constructor">With a constructor</h3>
 
-<p>A "constructor" in JavaScript is "just" a function that happens to be called with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>.</p>
+<p>A "constructor" in JavaScript is "just" a function that happens to be called with the <a href=/web/javascript/reference/operators/new>new operator</a>.</p>
 
 <pre class="brush: js notranslate">function Graph() {
   this.vertices = [];
@@ -321,7 +321,7 @@ console.log(g.vertices); // print undefined
 
 <h3 id="With_the_class_keyword">With the <code>class</code> keyword</h3>
 
-<p>ECMAScript 2015 introduced a new set of keywords implementing <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a>. The new keywords include {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.</p>
+<p>ECMAScript 2015 introduced a new set of keywords implementing <a href=/web/javascript/reference/classes>classes</a>. The new keywords include {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.</p>
 
 <pre class="brush: js notranslate">'use strict';
 
@@ -352,7 +352,7 @@ var square = new Square(2);
 
 <p>The lookup time for properties that are high up on the prototype chain can have a negative impact on the performance, and this may be significant in the code where performance is critical. Additionally, trying to access nonexistent properties will always traverse the full prototype chain.</p>
 
-<p>Also, when iterating over the properties of an object, <strong>every</strong> enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on <em>itself</em> and not somewhere on its prototype chain, it is necessary to use the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> method which all objects inherit from <code>Object.prototype</code>. To give you a concrete example, let's take the above graph example code to illustrate it:</p>
+<p>Also, when iterating over the properties of an object, <strong>every</strong> enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on <em>itself</em> and not somewhere on its prototype chain, it is necessary to use the <a href=/web/javascript/reference/global_objects/object/hasownproperty><code>hasOwnProperty</code></a> method which all objects inherit from <code>Object.prototype</code>. To give you a concrete example, let's take the above graph example code to illustrate it:</p>
 
 <pre class="brush: js notranslate">console.log(g.hasOwnProperty('vertices'));
 // true
@@ -367,9 +367,9 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 // true
 </pre>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> is the only thing in JavaScript which deals with properties and does <strong>not</strong> traverse the prototype chain.</p>
+<p><a href=/web/javascript/reference/global_objects/object/hasownproperty><code>hasOwnProperty</code></a> is the only thing in JavaScript which deals with properties and does <strong>not</strong> traverse the prototype chain.</p>
 
-<p>Note: It is <strong>not</strong> enough to check whether a property is <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>. The property might very well exist, but its value just happens to be set to <code>undefined</code>.</p>
+<p>Note: It is <strong>not</strong> enough to check whether a property is <a href=/web/javascript/reference/global_objects/undefined><code>undefined</code></a>. The property might very well exist, but its value just happens to be set to <code>undefined</code>.</p>
 
 <h3 id="Bad_practice_Extension_of_native_prototypes">Bad practice: Extension of native prototypes</h3>
 

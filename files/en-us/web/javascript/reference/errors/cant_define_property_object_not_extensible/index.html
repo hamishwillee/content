@@ -30,7 +30,7 @@ TypeError: Cannot define property: "x", object is not extensible. (Chrome)
 
 <h3 id="Adding_new_properties_to_a_non-extensible_objects">Adding new properties to a non-extensible objects</h3>
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>, attempting to add new properties to a non-extensible object throws a <code>TypeError</code>. In sloppy mode, the addition of the "x" property is silently ignored.</p>
+<p>In <a href=/web/javascript/reference/strict_mode>strict mode</a>, attempting to add new properties to a non-extensible object throws a <code>TypeError</code>. In sloppy mode, the addition of the "x" property is silently ignored.</p>
 
 <pre class="brush: js example-bad">'use strict';
 
@@ -41,7 +41,7 @@ obj.x = 'foo';
 // TypeError: can't define property "x": "obj" is not extensible
 </pre>
 
-<p>In both, <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> and sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding a new property to a non-extensible object.</p>
+<p>In both, <a href=/web/javascript/reference/strict_mode>strict mode</a> and sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding a new property to a non-extensible object.</p>
 
 <pre class="brush: js example-bad">var obj = { };
 Object.preventExtensions(obj);

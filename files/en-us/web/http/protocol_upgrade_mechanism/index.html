@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/HTTP">HTTP/1.1 protocol</a> provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.</span></p>
+<p><span class="seoSummary">The <a href=/web/http>HTTP/1.1 protocol</a> provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.</span></p>
 
 <p>This mechanism is optional; it cannot be used to insist on a protocol change. Implementations can choose not to take advantage of an upgrade even if they support the new protocol, and in practice, this mechanism is used mostly to bootstrap a WebSockets connection.</p>
 
@@ -30,7 +30,7 @@ Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
 
-<p>Other headers may be required depending on the requested protocol; for example, <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> upgrades allow additional headers to configure details about the WebSocket connection as well as to offer a degree of security in opening the connection. See {{anch("Upgrading to a WebSocket connection")}} for more details.</p>
+<p>Other headers may be required depending on the requested protocol; for example, <a href=/web/api/websocket>WebSocket</a> upgrades allow additional headers to configure details about the WebSocket connection as well as to offer a degree of security in opening the connection. See {{anch("Upgrading to a WebSocket connection")}} for more details.</p>
 
 <p>If the server decides to upgrade the connection, it sends back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an Upgrade header that specifies the protocol(s) being switched to. If it does not (or cannot) upgrade the connection, it ignores the <code>Upgrade</code> header and sends back a regular response (for example, a {{HTTPStatus(200, "200 OK")}}).</p>
 
@@ -42,7 +42,7 @@ Upgrade: example/1, foo/2</pre>
 
 <h3 id="Upgrading_to_a_WebSocket_connection">Upgrading to a WebSocket connection</h3>
 
-<p>By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a>, or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:</p>
+<p>By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the <a href=/web/api/websocket>WebSocket API</a>, or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:</p>
 
 <pre class="brush: js notranslate">webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");</pre>
 
@@ -138,14 +138,14 @@ Upgrade: websocket</pre>
 
 <dl>
  <dt><code><var>hash</var></code></dt>
- <dd>If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> encoded to obtain the value of this property.</dd>
+ <dd>If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then <a href=/web/api/windowbase64/base64_encoding_and_decoding>base64</a> encoded to obtain the value of this property.</dd>
 </dl>
 
 <h2 id="References">References</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+ <li><a href=/web/api/websocket>WebSocket API</a></li>
+ <li><a href=/web/http>HTTP</a></li>
  <li>Specifications and RFCs:
   <ul>
    <li>{{RFC(7230)}}</li>

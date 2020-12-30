@@ -22,13 +22,13 @@ tags:
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>To improve in memory usage and to prevent memory leaks, Firefox disallows add-ons to keep strong references to DOM objects after their parent document has been destroyed. A dead object, is holding a strong (keep alive) reference to a DOM element that persists even after it was destroyed in the DOM. To avoid these issues, references to DOM nodes in foreign document should instead be stored in an object which is specific to that document, and cleaned up when the document is unloaded, or stored as <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.getWeakReference">weak references</a>.</p>
+<p>To improve in memory usage and to prevent memory leaks, Firefox disallows add-ons to keep strong references to DOM objects after their parent document has been destroyed. A dead object, is holding a strong (keep alive) reference to a DOM element that persists even after it was destroyed in the DOM. To avoid these issues, references to DOM nodes in foreign document should instead be stored in an object which is specific to that document, and cleaned up when the document is unloaded, or stored as <a href=/mozilla/tech/xpcom/language_bindings/components.utils.getweakreference>weak references</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Checking_if_an_object_is_dead">Checking if an object is dead</h3>
 
-<p><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils">Components.utils</a> offers a <code>isDeadWrapper()</code> method, which privileged code might use.</p>
+<p><a href=/mozilla/tech/xpcom/language_bindings/components.utils>Components.utils</a> offers a <code>isDeadWrapper()</code> method, which privileged code might use.</p>
 
 <pre class="brush: js">if (Components.utils.isDeadWrapper(window)) {
   // dead
@@ -47,7 +47,7 @@ catch (e) {
 
 <ul>
  <li><a href="https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/">What does “can’t access dead object” mean?</a></li>
- <li><a href="/en-US/docs/Extensions/Common_causes_of_memory_leaks_in_extensions">Common causes of memory leaks in extensions</a></li>
- <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils">Components.utils</a></li>
- <li><a href="/en-US/docs/Mozilla/Zombie_compartments">Zombie Compartments</a></li>
+ <li><a href=/extensions/common_causes_of_memory_leaks_in_extensions>Common causes of memory leaks in extensions</a></li>
+ <li><a href=/mozilla/tech/xpcom/language_bindings/components.utils>Components.utils</a></li>
+ <li><a href=/mozilla/zombie_compartments>Zombie Compartments</a></li>
 </ul>

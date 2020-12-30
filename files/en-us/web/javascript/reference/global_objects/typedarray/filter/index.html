@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>filter()</code></strong> method creates a new typed array with all elements that pass the test implemented by the provided function. This method has the same algorithm as {{jsxref("Array.prototype.filter()")}}. <em>TypedArray</em> is one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> here.</p>
+<p>The <strong><code>filter()</code></strong> method creates a new typed array with all elements that pass the test implemented by the provided function. This method has the same algorithm as {{jsxref("Array.prototype.filter()")}}. <em>TypedArray</em> is one of the <a href=/web/javascript/reference/global_objects/typedarray#TypedArray_objects>typed array types</a> here.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}</div>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>filter()</code> method calls a provided <code><var>callback</var></code> function once for each element in a typed array, and constructs a new typed array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the typed array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Typed array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new typed array.</p>
+<p>The <code>filter()</code> method calls a provided <code><var>callback</var></code> function once for each element in a typed array, and constructs a new typed array of all the values for which <code><var>callback</var></code> returns <a href=/glossary/truthy>a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the typed array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Typed array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new typed array.</p>
 
 <p><code><var>callback</var></code> is invoked with three arguments:</p>
 
@@ -46,7 +46,7 @@ tags:
  <li>the typed array object being traversed</li>
 </ol>
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>filter()</code>, it will be passed to <code><var>callback</var></code> when invoked, for use as its <code>this</code> value. Otherwise, the value <code>undefined</code> will be passed for use as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+<p>If a <code><var>thisArg</var></code> parameter is provided to <code>filter()</code>, it will be passed to <code><var>callback</var></code> when invoked, for use as its <code>this</code> value. Otherwise, the value <code>undefined</code> will be passed for use as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href=/web/javascript/reference/operators/this>the usual rules for determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>filter()</code> does not mutate the typed array on which it is called.</p>
 
@@ -67,7 +67,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 
 <h3 id="Filtering_typed_array_elements_using_arrow_functions">Filtering typed array elements using arrow functions</h3>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> provide a shorter syntax for the same test.</p>
+<p><a href=/web/javascript/reference/functions/arrow_functions>Arrow functions</a> provide a shorter syntax for the same test.</p>
 
 <pre class="brush: js notranslate">new Uint8Array([12, 5, 8, 130, 44]).filter(elem =&gt; elem &gt;= 10);
 // Uint8Array [ 12, 130, 44 ]</pre>

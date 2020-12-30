@@ -23,23 +23,23 @@ tags:
 <h2 id="Guides">Guides</h2>
 
 <dl>
- <dt><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></dt>
+ <dt><a href=/webassembly/concepts>WebAssembly concepts</a></dt>
  <dd>Get started by reading the high-level concepts behind WebAssembly — what it is, why it is so useful, how it fits into the web platform (and beyond), and how to use it.</dd>
- <dt><a href="/en-US/docs/WebAssembly/C_to_wasm">Compiling a New C/C++ Module to WebAssembly</a></dt>
- <dd>When you’ve written code in C/C++, you can then compile it into .wasm using a tool like <a href="/en-US/docs/Mozilla/Projects/Emscripten/">Emscripten</a>. Let’s look at how it works.</dd>
- <dt><a href="/en-US/docs/WebAssembly/existing_C_to_wasm">Compiling an Existing C Module to WebAssembly</a></dt>
+ <dt><a href=/webassembly/c_to_wasm>Compiling a New C/C++ Module to WebAssembly</a></dt>
+ <dd>When you’ve written code in C/C++, you can then compile it into .wasm using a tool like <a href=/mozilla/projects/emscripten/>Emscripten</a>. Let’s look at how it works.</dd>
+ <dt><a href=/webassembly/existing_c_to_wasm>Compiling an Existing C Module to WebAssembly</a></dt>
  <dd>A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.</dd>
- <dt><a href="/en-US/docs/WebAssembly/rust_to_wasm">Compiling from Rust to WebAssembly</a></dt>
+ <dt><a href=/webassembly/rust_to_wasm>Compiling from Rust to WebAssembly</a></dt>
  <dd>If you've written some Rust code, you can compile it into WebAssembly! This tutorial takes you through all you need to know to compile a Rust project to wasm and use it in an existing web app.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Loading_and_running">Loading and running WebAssembly code</a></dt>
- <dd>After you have a .wasm, this article covers how to fetch, compile and instantiate it, combining the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly JavaScript</a> API with the <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> or <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> APIs.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></dt>
+ <dt><a href=/webassembly/loading_and_running>Loading and running WebAssembly code</a></dt>
+ <dd>After you have a .wasm, this article covers how to fetch, compile and instantiate it, combining the <a href=/web/javascript/reference/global_objects/webassembly>WebAssembly JavaScript</a> API with the <a href=/web/api/fetch_api>Fetch</a> or <a href=/web/api/xmlhttprequest>XHR</a> APIs.</dd>
+ <dt><a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a></dt>
  <dd>Once you've loaded a .wasm module, you'll want to use it. In this article we show you how to use WebAssembly via the WebAssembly JavaScript API.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a></dt>
+ <dt><a href=/webassembly/exported_functions>Exported WebAssembly functions</a></dt>
  <dd>Exported WebAssembly functions are the JavaScript reflections of WebAssembly functions which allow calling WebAssembly code from JavaScript. This article describes what they are.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Understanding_the_text_format">Understanding WebAssembly text format</a></dt>
+ <dt><a href=/webassembly/understanding_the_text_format>Understanding WebAssembly text format</a></dt>
  <dd>This article explains the wasm text format. This is the low-level textual representation of a .wasm module shown in browser developer tools when debugging.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a></dt>
+ <dt><a href=/webassembly/text_format_to_wasm>Converting WebAssembly text format to wasm</a></dt>
  <dd>This article provides a guide on how to convert a WebAssembly module written in the text format into a .wasm binary.</dd>
 </dl>
 </div>
@@ -53,9 +53,9 @@ tags:
  <dt>{{jsxref("Global_objects/WebAssembly/Global", "WebAssembly.Global()")}}</dt>
  <dd>A <code>WebAssembly.Global</code> object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}</dt>
- <dd>A <code>WebAssembly.Module</code> object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently <a href="/en-US/docs/Web/API/Worker/postMessage">shared with Workers</a>, and instantiated multiple times.</dd>
+ <dd>A <code>WebAssembly.Module</code> object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently <a href=/web/api/worker/postmessage>shared with Workers</a>, and instantiated multiple times.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}</dt>
- <dd>A <code>WebAssembly.Instance</code> object is a stateful, executable instance of a <code>Module</code>.  <code>Instance</code> objects contain all the <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a> that allow calling into WebAssembly code from JavaScript.</dd>
+ <dd>A <code>WebAssembly.Instance</code> object is a stateful, executable instance of a <code>Module</code>.  <code>Instance</code> objects contain all the <a href=/webassembly/exported_functions>Exported WebAssembly functions</a> that allow calling into WebAssembly code from JavaScript.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}</dt>
  <dd>The <code>WebAssembly.instantiateStreaming()</code> function is the primary API for compiling and instantiating WebAssembly code, returning both a <code>Module</code> and its first <code>Instance</code>.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}</dt>
@@ -109,6 +109,6 @@ tags:
  <li><a href="https://webassembly.org/">webassembly.org</a></li>
  <li><a href="https://hacks.mozilla.org/category/webassembly/">WebAssembly articles on Mozilla Hacks blog</a></li>
  <li><a href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Large-Allocation">Large-Allocation HTTP header</a></li>
+ <li><a href=/web/http/headers/large-allocation>Large-Allocation HTTP header</a></li>
  <li><a href="https://developers.google.com/web/updates/2018/03/emscripting-a-c-library">Emscripting a C Library to Wasm</a></li>
 </ul>

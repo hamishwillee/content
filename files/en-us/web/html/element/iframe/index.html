@@ -23,7 +23,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
-<p>Each embedded browsing context has its own <a href="/en-US/docs/Web/API/History">session history</a> and <a href="/en-US/docs/Web/API/Document">document</a>. The browsing context that embeds the others is called the <em><dfn>parent</dfn> browsing context</em>. The <em>topmost</em> browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.</p>
+<p>Each embedded browsing context has its own <a href=/web/api/history>session history</a> and <a href=/web/api/document>document</a>. The browsing context that embeds the others is called the <em><dfn>parent</dfn> browsing context</em>. The <em>topmost</em> browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.</p>
 
 <div class="notecard warning">
 <p>Because each browsing context is a complete document environment, every <code>&lt;iframe&gt;</code> in a page requires increased memory and other computing resources. While theoretically you can use as many <code>&lt;iframe&gt;</code>s as you like, check for performance problems.</p>
@@ -32,8 +32,8 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
+   <th scope="row"><a href=/web/guide/html/content_categories>Content categories</a></th>
+   <td><a href=/web/guide/html/content_categories#Flow_content>Flow content</a>, <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>, embedded content, interactive content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -64,25 +64,25 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element includes the <a href=/web/html/global_attributes>global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("allow")}}</dt>
- <dd>Specifies a <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a> for the <code>&lt;iframe&gt;</code>. The policy defines what features are available to the <code>&lt;iframe&gt;</code> based on the origin of the request (e.g. access to the microphone, camera, battery, web-share API, etc.).<br>
+ <dd>Specifies a <a href=/web/http/feature_policy>feature policy</a> for the <code>&lt;iframe&gt;</code>. The policy defines what features are available to the <code>&lt;iframe&gt;</code> based on the origin of the request (e.g. access to the microphone, camera, battery, web-share API, etc.).<br>
  <br>
- For more information and examples see: <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> &gt; <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#The_iframe_allow_attribute">The iframe allow attribute</a>.</dd>
+ For more information and examples see: <a href=/web/http/feature_policy/using_feature_policy>Using Feature Policy</a> &gt; <a href=/web/http/feature_policy/using_feature_policy#The_iframe_allow_attribute>The iframe allow attribute</a>.</dd>
  <dt>{{htmlattrdef("allowfullscreen")}}</dt>
  <dd>Set to <code>true</code> if the <code>&lt;iframe&gt;</code> can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.</dd>
  <dd>
  <div class="note">This attribute is considered a legacy attribute and redefined as <code>allow="fullscreen"</code>.</div>
  </dd>
  <dt>{{htmlattrdef("allowpaymentrequest")}}</dt>
- <dd>Set to <code>true</code> if a cross-origin <code>&lt;iframe&gt;</code> should be allowed to invoke the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>.</dd>
+ <dd>Set to <code>true</code> if a cross-origin <code>&lt;iframe&gt;</code> should be allowed to invoke the <a href=/web/api/payment_request_api>Payment Request API</a>.</dd>
  <dd>
  <div class="note">This attribute is considered a legacy attribute and redefined as <code>allow="payment"</code>.</div>
  </dd>
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
- <dd>A <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.</dd>
+ <dd>A <a href=/web/http/csp>Content Security Policy</a> enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>The height of the frame in CSS pixels. Default is <code>150</code>.</dd>
  <dt>{{htmlattrdef("loading")}} {{experimental_inline}}</dt>
@@ -95,16 +95,16 @@ tags:
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>A targetable name for the embedded browsing context. This can be used in the <code>target</code> attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the <code>formtarget</code> attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the <code>windowName</code> parameter in the {{domxref("Window.open()","window.open()")}} method.</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
- <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the frame's resource:
+ <dd>Indicates which <a href=/web/api/document/referrer>referrer</a> to send when fetching the frame's resource:
  <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
   <li><code>no-referrer-when-downgrade</code> (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
-  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its <a href="/en-US/docs/Archive/Mozilla/URIScheme">scheme</a>, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
+  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its <a href=/archive/mozilla/urischeme>scheme</a>, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
   <li><code>origin-when-cross-origin</code>: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.</li>
   <li><code>same-origin</code>: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.</li>
   <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).</li>
   <li><code>strict-origin-when-cross-origin</code>: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).</li>
-  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
+  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href=/web/api/htmlhyperlinkelementutils/hash>fragment</a>, <a href=/web/api/htmlhyperlinkelementutils/password>password</a>, or <a href=/web/api/htmlhyperlinkelementutils/username>username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("sandbox")}}</dt>
@@ -114,14 +114,14 @@ tags:
   <li><code>allow-downloads</code>: Allows for downloads to occur with a gesture from the user.</li>
   <li><code>allow-forms</code>: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.</li>
   <li><code>allow-modals</code>: Lets the resource <a href="https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag">open modal windows</a>.</li>
-  <li><code>allow-orientation-lock</code>: Lets the resource <a href="/en-US/docs/Web/API/Screen/lockOrientation">lock the screen orientation</a>.</li>
-  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a>.</li>
+  <li><code>allow-orientation-lock</code>: Lets the resource <a href=/web/api/screen/lockorientation>lock the screen orientation</a>.</li>
+  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href=/web/api/pointer_lock_api>Pointer Lock API</a>.</li>
   <li><code>allow-popups</code>: Allows popups (such as <code>window.open()</code>, <code>target="_blank"</code>, or <code>showModalDialog()</code>). If this keyword is not used, the popup will silently fail to open.</li>
   <li><code>allow-popups-to-escape-sandbox</code>: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.</li>
-  <li><code>allow-presentation</code>: Lets the resource start a <a href="/en-US/docs/Web/API/PresentationRequest">presentation session</a>.</li>
+  <li><code>allow-presentation</code>: Lets the resource start a <a href=/web/api/presentationrequest>presentation session</a>.</li>
   <li><code>allow-same-origin</code>: If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}}.</li>
   <li><code>allow-scripts</code>: Lets the resource run scripts (but not create popup windows).</li>
-  <li><code>allow-storage-access-by-user-activation</code> {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the <a href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>.</li>
+  <li><code>allow-storage-access-by-user-activation</code> {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the <a href=/web/api/storage_access_api>Storage Access API</a>.</li>
   <li><code>allow-top-navigation</code>: Lets the resource navigate the top-level browsing context (the one named <code>_top</code>).</li>
   <li><code>allow-top-navigation-by-user-activation</code>: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.</li>
  </ul>
@@ -136,7 +136,7 @@ tags:
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>The URL of the page to embed. Use a value of <code>about:blank</code> to embed an empty page that conforms to the <a href="/en-US/docs/Web/Security/Same-origin_policy#Inherited_origins">same-origin policy</a>. Also note that programmatically removing an <code>&lt;iframe&gt;</code>'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes <code>about:blank</code> to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.</dd>
+ <dd>The URL of the page to embed. Use a value of <code>about:blank</code> to embed an empty page that conforms to the <a href=/web/security/same-origin_policy#Inherited_origins>same-origin policy</a>. Also note that programmatically removing an <code>&lt;iframe&gt;</code>'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes <code>about:blank</code> to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.</dd>
  <dt>{{htmlattrdef("srcdoc")}}</dt>
  <dd>Inline HTML to embed, overriding the <code>src</code> attribute. If a browser does not support the <code>srcdoc</code> attribute, it will fall back to the URL in the <code>src</code> attribute.</dd>
  <dt>{{htmlattrdef("width")}}</dt>
@@ -174,8 +174,8 @@ tags:
  <dt>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}}</dt>
  <dd>
  <div class="note">See {{bug(1318532)}} for exposing this to WebExtensions in Firefox.</div>
- Makes the <code>&lt;iframe&gt;</code> act like a top-level browser window. See <a href="/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> for details.<br>
- <strong>Available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
+ Makes the <code>&lt;iframe&gt;</code> act like a top-level browser window. See <a href=/mozilla/gecko/chrome/api/browser_api>Browser API</a> for details.<br>
+ <strong>Available only to <a href=/mozilla/add-ons/webextensions>WebExtensions</a>.</strong></dd>
 </dl>
 
 <h2 id="Scripting">Scripting</h2>
@@ -186,11 +186,11 @@ tags:
 
 <p>From the inside of a frame, a script can get a reference to its parent window with {{domxref("window.parent")}}.</p>
 
-<p>Script access to a frame's content is subject to the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. Scripts cannot access most properties in other <code>window</code> objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.</p>
+<p>Script access to a frame's content is subject to the <a href=/web/security/same-origin_policy>same-origin policy</a>. Scripts cannot access most properties in other <code>window</code> objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.</p>
 
 <h2 id="Positioning_and_scaling">Positioning and scaling</h2>
 
-<p>As a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>, the position, alignment, and scaling of the embedded document within the <code>&lt;iframe&gt;</code> element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.</p>
+<p>As a <a href=/web/css/replaced_element>replaced element</a>, the position, alignment, and scaling of the embedded document within the <code>&lt;iframe&gt;</code> element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -212,7 +212,7 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>People navigating with assistive technology such as a screen reader can use the <a href="/en-US/docs/Web/HTML/Global_attributes/title"><code>title</code> attribute</a> on an <code>&lt;iframe&gt;</code> to label its content. The title's value should concisely describe the embedded content:</p>
+<p>People navigating with assistive technology such as a screen reader can use the <a href=/web/html/global_attributes/title><code>title</code> attribute</a> on an <code>&lt;iframe&gt;</code> to label its content. The title's value should concisely describe the embedded content:</p>
 
 <div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"&gt;&lt;/iframe&gt;</pre>
@@ -266,5 +266,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a></li>
+ <li><a href=/web/privacy>Privacy, permissions, and information security</a></li>
 </ul>

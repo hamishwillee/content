@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>@@iterator</strong></code> method is part of <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">The iterable protocol</a>, that defines how to synchronously iterate over a sequence of values.</p>
+<p>The <code><strong>@@iterator</strong></code> method is part of <a href=/web/javascript/reference/iteration_protocols#The_iterable_protocol>The iterable protocol</a>, that defines how to synchronously iterate over a sequence of values.</p>
 
 <p>The initial value of the <code><strong>@@iterator</strong></code> property is the same function object as the initial value of the {{jsxref("Array.prototype.values()", "values()")}} property.</p>
 
@@ -66,7 +66,7 @@ console.log(eArr.next().value); // e
 
 <h3 id="Use_Case_for_brace_notation">Use Case for brace notation</h3>
 
-<p>The use case for this syntax over using the dot notation (<code>Array.prototype.values()</code>) is in a case where you don't know what object is going to be ahead of time. If you have a function that takes an iterator and then iterate over the value, but don't know if that Object is going to have a [Iterable].prototype.values method. This could be a built-in object like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> object or a custom object.</p>
+<p>The use case for this syntax over using the dot notation (<code>Array.prototype.values()</code>) is in a case where you don't know what object is going to be ahead of time. If you have a function that takes an iterator and then iterate over the value, but don't know if that Object is going to have a [Iterable].prototype.values method. This could be a built-in object like <a href=/web/javascript/reference/global_objects/string/@@iterator>String</a> object or a custom object.</p>
 
 <pre class="brush: js notranslate">function logIterable(it) {
  if (!(Symbol.iterator in Object.getPrototypeOf(it)

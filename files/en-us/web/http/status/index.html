@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary">HTTP response status codes indicate whether a specific <a href="/en-US/docs/Web/HTTP">HTTP</a> request has been successfully completed. Responses are grouped in five classes: </span></p>
+<p class="summary"><span class="seoSummary">HTTP response status codes indicate whether a specific <a href=/web/http>HTTP</a> request has been successfully completed. Responses are grouped in five classes: </span></p>
 
 <ol>
  <li><span class="seoSummary">Informational responses (<code>100</code>–<code>199</code>)</span></li>
@@ -37,7 +37,7 @@ tags:
  <dt>{{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})</dt>
  <dd>This code indicates that the server has received and is processing the request, but no response is available yet.</dd>
  <dt>{{HTTPStatus(103, "103 Early Hints")}}</dt>
- <dd>This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start <a href="/en-US/docs/Web/HTML/Preloading_content">preloading</a> resources while the server prepares a response.</dd>
+ <dd>This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start <a href=/web/html/preloading_content>preloading</a> resources while the server prepares a response.</dd>
 </dl>
 
 <h2 id="Successful_responses">Successful responses</h2>
@@ -111,7 +111,7 @@ tags:
  <dt>{{HTTPStatus(405, "405 Method Not Allowed")}}</dt>
  <dd>The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, <code>GET</code> and <code>HEAD</code>, must never be disabled and should not return this error code.</dd>
  <dt>{{HTTPStatus(406, "406 Not Acceptable")}}</dt>
- <dd>This response is sent when the web server, after performing <a href="/en-US/docs/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, doesn't find any content that conforms to the criteria given by the user agent.</dd>
+ <dd>This response is sent when the web server, after performing <a href=/http/content_negotiation#Server-driven_negotiation>server-driven content negotiation</a>, doesn't find any content that conforms to the criteria given by the user agent.</dd>
  <dt>{{HTTPStatus(407, "407 Proxy Authentication Required")}}</dt>
  <dd>This is similar to 401 but authentication is needed to be done by a proxy.</dd>
  <dt>{{HTTPStatus(408, "408 Request Timeout")}}</dt>

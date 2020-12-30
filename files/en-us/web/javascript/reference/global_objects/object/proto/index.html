@@ -24,7 +24,7 @@ tags:
 
 <p>The use of <code>__proto__</code> is controversial and discouraged. It was never originally included in the ECMAScript language spec, but modern browsers implemented it anyway. Only recently was the <code>__proto__</code> property standardized by the ECMAScript 2015 specification for compatibility with web browsers, so it will be supported into the future. It is deprecated in favor of {{JSxRef("Object.getPrototypeOf")}}/{{JSxRef("Reflect.getPrototypeOf")}} and {{JSxRef("Object.setPrototypeOf")}}/{{JSxRef("Reflect.setPrototypeOf")}} (though still, setting the <code>[[Prototype]]</code> of an object is a slow operation that should be avoided if performance is a concern).</p>
 
-<p>The <code>__proto__</code> property can also be used in an object literal definition to set the object <code>[[Prototype]]</code> on creation, as an alternative to {{JSxRef("Object.create()")}}. See: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
+<p>The <code>__proto__</code> property can also be used in an object literal definition to set the object <code>[[Prototype]]</code> on creation, as an alternative to {{JSxRef("Object.create()")}}. See: <a href=/web/javascript/reference/operators/object_initializer>object initializer / literal syntax</a>.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -32,7 +32,7 @@ tags:
 
 <p>The <code>__proto__</code> setter allows the <code>[[Prototype]]</code> of an object to be mutated. The object must be extensible according to {{JSxRef("Object.isExtensible()")}}: if it is not, a {{JSxRef("Global_Objects/TypeError", "TypeError")}} is thrown. The value provided must be an object or {{JSxRef("Global_Objects/null", "null")}}. Providing any other value will do nothing.</p>
 
-<p>To understand how prototypes are used for inheritance, see guide article <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
+<p>To understand how prototypes are used for inheritance, see guide article <a href=/web/javascript/guide/inheritance_and_the_prototype_chain>Inheritance and the prototype chain</a>.</p>
 
 <p>The <code>__proto__</code> property is a simple accessor property on {{JSxRef("Object.prototype")}} consisting of a getter and setter function. A property access for <code>__proto__</code> that eventually consults {{JSxRef("Object.prototype")}} will find this property, but an access that does not consult {{JSxRef("Object.prototype")}} will not. If some other <code>__proto__</code> property is found before {{JSxRef("Object.prototype")}} is consulted, that property will hide the one found on {{JSxRef("Object.prototype")}}.</p>
 

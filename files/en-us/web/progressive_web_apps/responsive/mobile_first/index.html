@@ -13,7 +13,7 @@ tags:
   - Mobile first
 ---
 <div class="summary">
-<p><span class="seoSummary">In our <a href="/en-US/docs/Web/Apps/Planning_your_app">Planning your App</a> article, we provided a high level look into the kinds of planning and functionality decisions you should make before you start coding an app, including some ideas for desktop and mobile design. This article offers some related ideas, looking at the concept of mobile first — the practice of designing a website so that the default layout/configuration is for mobile devices, and layouts and features for desktop browsers are then layered on top of that default. This guide looks at a few useful techniques inside the mobile first umbrella.</span></p>
+<p><span class="seoSummary">In our <a href=/web/apps/planning_your_app>Planning your App</a> article, we provided a high level look into the kinds of planning and functionality decisions you should make before you start coding an app, including some ideas for desktop and mobile design. This article offers some related ideas, looking at the concept of mobile first — the practice of designing a website so that the default layout/configuration is for mobile devices, and layouts and features for desktop browsers are then layered on top of that default. This guide looks at a few useful techniques inside the mobile first umbrella.</span></p>
 </div>
 
 <h2 id="First_things_first_—_mobile_as_a_default">First things first — mobile as a default</h2>
@@ -24,7 +24,7 @@ tags:
 
 <ul>
  <li>If you are serving different styling and layout information for different viewport sizes, etc., it makes more sense to include the narrow screen/mobile styling as the default styling before any media queries are encountered, rather than having desktop/wider screen styling first. This way, mobile devices don't have to load assets and other information twice.</li>
- <li>If you are using mechanisms like feature detection and <a href="/en-US/docs/Web/API/window.matchMedia">matchMedia</a> to conditionally load scripting functionality depending on viewport size, feature support, etc., you should just load the very basics that pretty much all browsers will need first, then progressively enhance browsers higher up the food chain.</li>
+ <li>If you are using mechanisms like feature detection and <a href=/web/api/window.matchmedia>matchMedia</a> to conditionally load scripting functionality depending on viewport size, feature support, etc., you should just load the very basics that pretty much all browsers will need first, then progressively enhance browsers higher up the food chain.</li>
 </ul>
 
 <div class="note">
@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Built-in_features_of_the_Mortar_template">Built-in features of the Mortar template</h3>
 
-<p>Mortar templates contain a number of built-in features: Read <a href="/en-US/docs/Web/Apps/App_templates">Using app templates</a> for more details. In this sample app, I have used a couple of the built-in features to:</p>
+<p>Mortar templates contain a number of built-in features: Read <a href=/web/apps/app_templates>Using app templates</a> for more details. In this sample app, I have used a couple of the built-in features to:</p>
 
 <ul>
  <li>Include an install button that works for Firefox OS, Firefox Aurora, Chrome and iOS app installs (as explained on the <a href="https://github.com/wavysandbox/install/blob/master/README.md">Install GitHub page</a>). To make the install button work, all you have to do is put a <code>&lt;button&gt;</code> on the page with an ID of <code>install-btn</code>. Magic!</li>

@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "can't redefine non-configurable property" occurs when it was attempted to redefine a property, but that property is <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.</p>
+<p>The JavaScript exception "can't redefine non-configurable property" occurs when it was attempted to redefine a property, but that property is <a href=/web/javascript/data_structures#Properties>non-configurable</a>.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -24,7 +24,7 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>It was attempted to redefine a property, but that property is <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>. The <code>configurable</code> attribute controls whether the property can be deleted from the object and whether its attributes (other than <code>writable</code>) can be changed. Usually, properties in an object created by an <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer</a> are configurable. However, for example, when using {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.</p>
+<p>It was attempted to redefine a property, but that property is <a href=/web/javascript/data_structures#Properties>non-configurable</a>. The <code>configurable</code> attribute controls whether the property can be deleted from the object and whether its attributes (other than <code>writable</code>) can be changed. Usually, properties in an object created by an <a href=/web/javascript/reference/operators/object_initializer>object initializer</a> are configurable. However, for example, when using {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -48,6 +48,6 @@ Object.defineProperty(obj, "foo", {value: "baz", configurable: true});</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">[[Configurable]]</a></li>
+ <li><a href=/web/javascript/data_structures#Properties>[[Configurable]]</a></li>
  <li>{{jsxref("Object.defineProperty()")}}</li>
 </ul>

@@ -64,7 +64,7 @@ tags:
 
 <h2 id="Response">Response</h2>
 
-<p>Once we have an established connection to a web server, the browser sends an initial <a href="/en-US/docs/Web/HTTP/Methods">HTTP <code>GET</code> request</a> on behalf of the user, which for websites is most often an HTML file. Once the server receives the request, it will reply with relevant response headers and the contents of the HTML.</p>
+<p>Once we have an established connection to a web server, the browser sends an initial <a href=/web/http/methods>HTTP <code>GET</code> request</a> on behalf of the user, which for websites is most often an HTML file. Once the server receives the request, it will reply with relevant response headers and the contents of the HTML.</p>
 
 <pre class="brush: html">&lt;!doctype HTML&gt;
 &lt;html&gt;
@@ -112,15 +112,15 @@ tags:
 
 <h3 id="Building_the_DOM_tree">Building the DOM tree</h3>
 
-<p>We describe five steps in the <a href="/en-US/docs/Web/Performance/Critical_rendering_path">critical rendering path</a>.</p>
+<p>We describe five steps in the <a href=/web/performance/critical_rendering_path>critical rendering path</a>.</p>
 
-<p>The first step is processing the HTML markup and building the DOM tree. HTML parsing involves <a href="/en-US/docs/Web/API/DOMTokenList">tokenization</a> and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.</p>
+<p>The first step is processing the HTML markup and building the DOM tree. HTML parsing involves <a href=/web/api/domtokenlist>tokenization</a> and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.</p>
 
-<p>The DOM tree describes the content of the document. The <code><a href="/en-US/docs/Web/HTML/Element/html">&lt;html&gt;</a></code> element is the first tag and root node of the document tree. The tree reflects the relationships and hierarchies between different tags. Tags nested within other tags are child nodes. The greater the number of DOM nodes, the longer it takes to construct the DOM tree.</p>
+<p>The DOM tree describes the content of the document. The <code><a href=/web/html/element/html>&lt;html&gt;</a></code> element is the first tag and root node of the document tree. The tree reflects the relationships and hierarchies between different tags. Tags nested within other tags are child nodes. The greater the number of DOM nodes, the longer it takes to construct the DOM tree.</p>
 
 <p><img alt="The DOM tree for our sample code, showing all the nodes, including text nodes." src="https://mdn.mozillademos.org/files/16759/DOM.gif" style="height: 689px; width: 754px;"></p>
 
-<p>When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but <code>&lt;script&gt;</code> tags—particularly those without an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> or <code>defer</code> attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.</p>
+<p>When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but <code>&lt;script&gt;</code> tags—particularly those without an <code><a href=/web/javascript/reference/statements/async_function>async</a></code> or <code>defer</code> attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.</p>
 
 <h3 id="Preload_scanner">Preload scanner</h3>
 
@@ -154,9 +154,9 @@ tags:
 
 <h4 id="Building_the_Accessibility_Tree">Building the Accessibility Tree</h4>
 
-<p>The browser also builds an <a href="/en-US/docs/Learn/Accessibility">accessibility</a> tree that assistive devices use to parse and interpret content. The accessibility object model (AOM) is like a semantic version of the DOM. The browser updates the accessibility tree when the DOM is updated. The accessibility tree is not modifiable by assistive technologies themselves.</p>
+<p>The browser also builds an <a href=/learn/accessibility>accessibility</a> tree that assistive devices use to parse and interpret content. The accessibility object model (AOM) is like a semantic version of the DOM. The browser updates the accessibility tree when the DOM is updated. The accessibility tree is not modifiable by assistive technologies themselves.</p>
 
-<p>Until the AOM is built, the content is not accessible to <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">screen readers</a>.</p>
+<p>Until the AOM is built, the content is not accessible to <a href=/web/accessibility/aria/aria_screen_reader_implementors_guide>screen readers</a>.</p>
 
 <h2 id="Render">Render</h2>
 
@@ -166,9 +166,9 @@ tags:
 
 <p>The third step in the critical rendering path is combining the DOM and CSSOM into a render tree.The computed style tree, or render tree, construction starts with the root of the DOM tree, traversing each visible node.</p>
 
-<p>Tags that aren't going to be displayed, like the <code><a href="/en-US/docs/Web/HTML/Element/head">&lt;head&gt;</a></code> and its children and any nodes with <code>display: none</code>, such as the <code>script { display: none; }</code> you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with <code>visibility: hidden</code> applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the <code>script</code> node in our code example above will not be included in the render tree.</p>
+<p>Tags that aren't going to be displayed, like the <code><a href=/web/html/element/head>&lt;head&gt;</a></code> and its children and any nodes with <code>display: none</code>, such as the <code>script { display: none; }</code> you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with <code>visibility: hidden</code> applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the <code>script</code> node in our code example above will not be included in the render tree.</p>
 
-<p>Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles -- matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the <a href="/en-US/docs/Web/CSS/Cascade">CSS cascade</a>, what the computed styles are for each node.</p>
+<p>Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles -- matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the <a href=/web/css/cascade>CSS cascade</a>, what the computed styles are for each node.</p>
 
 <h3 id="Layout">Layout</h3>
 
@@ -182,11 +182,11 @@ tags:
 
 <h3 id="Paint">Paint</h3>
 
-<p>The last step in the critical rendering path is painting the individual nodes to the screen, the first occurence of which is called the <a href="/en-US/docs/Glossary/first_meaningful_paint">first meaningful paint</a>. In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.</p>
+<p>The last step in the critical rendering path is painting the individual nodes to the screen, the first occurence of which is called the <a href=/glossary/first_meaningful_paint>first meaningful paint</a>. In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.</p>
 
 <p>To ensure smooth scrolling and animation, everything occupying the main thread, including calculating styles, along with reflow and paint, must take the browser less than 16.67ms to accomplish. At 2048 X 1536, the iPad has over 3,145,000 pixels to be painted to the screen. That is a lot of pixels that have to be painted very quickly. To ensure repainting can be done even faster than the initial paint, the drawing to the screen is generally broken down into several layers. If this occurs, then compositing is necessary.</p>
 
-<p>Painting can break the elements in the layout tree into layers. Promoting content into layers on the GPU (instead of the main thread on the CPU) improves paint and repaint performance. There are specific properties and elements that instantiate a layer, including <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>, and any element which has the CSS properties of <a href="/en-US/docs/Web/CSS/opacity"><code>opacity</code></a>, a 3D <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code>, <code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code>, and a few others. These nodes will be painted onto their own layer, along with their descendants, unless a descendant necessitates its own layer for one (or more) of the above reasons.</p>
+<p>Painting can break the elements in the layout tree into layers. Promoting content into layers on the GPU (instead of the main thread on the CPU) improves paint and repaint performance. There are specific properties and elements that instantiate a layer, including <code><a href=/web/html/element/video>&lt;video&gt;</a></code> and <code><a href=/web/html/element/canvas>&lt;canvas&gt;</a></code>, and any element which has the CSS properties of <a href=/web/css/opacity><code>opacity</code></a>, a 3D <code><a href=/web/css/transform>transform</a></code>, <code><a href=/web/css/will-change>will-change</a></code>, and a few others. These nodes will be painted onto their own layer, along with their descendants, unless a descendant necessitates its own layer for one (or more) of the above reasons.</p>
 
 <p>Layers do improve performance, but are expensive when it comes to memory management, so should not be overused as part of web performance optimization strategies.</p>
 
@@ -198,7 +198,7 @@ tags:
 
 <h2 id="Interactivity">Interactivity</h2>
 
-<p>Once the main thread is done painting the page, you would think we would be "all set." That isn't necessarily the case. If the load includes JavaScript, that was correctly deferred, and only executed after the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onload">onload</a></code> event fires, the main thread might be busy, and not available for scrolling, touch, and other interactions.</p>
+<p>Once the main thread is done painting the page, you would think we would be "all set." That isn't necessarily the case. If the load includes JavaScript, that was correctly deferred, and only executed after the <code><a href=/web/api/globaleventhandlers/onload>onload</a></code> event fires, the main thread might be busy, and not available for scrolling, touch, and other interactions.</p>
 
 <p>{{glossary('Time to Interactive')}} (TTI) is the measurement of how long it took from that first request which led to the DNS lookup and SSL connection to when the page is interactive -- interactive being the point in time after the {{glossary('First Contentful Paint')}} when the page responds to user interactions within 50ms. If the main thread is occupied parsing, compiling, and executing JavaScript, it is not available and therefore not able to responsd to user interactions in a timely (less than 50ms) fashion.</p>
 
@@ -211,5 +211,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Performance">Web Performance</a></li>
+ <li><a href=/web/performance>Web Performance</a></li>
 </ul>

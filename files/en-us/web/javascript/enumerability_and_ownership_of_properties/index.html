@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<p>Enumerable properties are those properties whose internal enumerable flag is set to true, which is the default for properties created via simple assignment or via a property initializer (properties defined via <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> and such default enumerable to false). Enumerable properties show up in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops unless the property's key is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>. Ownership of properties is determined by whether the property belongs to the object directly and not to its prototype chain. Properties of an object can also be retrieved in total. There are a number of built-in means of detecting, iterating/enumerating, and retrieving object properties, with the chart showing below which are available. Some sample code follows which demonstrates how to obtain the missing categories.</p>
+<p>Enumerable properties are those properties whose internal enumerable flag is set to true, which is the default for properties created via simple assignment or via a property initializer (properties defined via <a href=/web/javascript/reference/global_objects/object/defineproperty>Object.defineProperty</a> and such default enumerable to false). Enumerable properties show up in <a href=/web/javascript/reference/statements/for...in>for...in</a> loops unless the property's key is a <a href=/web/javascript/reference/global_objects/symbol>Symbol</a>. Ownership of properties is determined by whether the property belongs to the object directly and not to its prototype chain. Properties of an object can also be retrieved in total. There are a number of built-in means of detecting, iterating/enumerating, and retrieving object properties, with the chart showing below which are available. Some sample code follows which demonstrates how to obtain the missing categories.</p>
 
 <div style="overflow: auto; width: 100%;">
 <table>
@@ -33,14 +33,14 @@ tags:
      <tbody>
       <tr>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/propertyisenumerable>propertyIsEnumerable</a></code></p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/hasownproperty>hasOwnProperty</a></code></p>
        </td>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> – filtered to exclude enumerables using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/hasownproperty>hasOwnProperty</a></code> – filtered to exclude enumerables using <code><a href=/web/javascript/reference/global_objects/object/propertyisenumerable>propertyIsEnumerable</a></code></p>
        </td>
-       <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code></td>
+       <td><code><a href=/web/javascript/reference/global_objects/object/hasownproperty>hasOwnProperty</a></code></td>
       </tr>
      </tbody>
     </table>
@@ -58,7 +58,7 @@ tags:
       <tr>
        <td>Not available without extra code</td>
        <td>Not available without extra code</td>
-       <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in">in</a></code></td>
+       <td><code><a href=/web/javascript/reference/operators/in>in</a></code></td>
       </tr>
      </tbody>
     </table>
@@ -79,17 +79,17 @@ tags:
      <tbody>
       <tr>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/keys>Object.keys</a></code></p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code> </p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertynames>getOwnPropertyNames</a></code> </p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">getOwnPropertySymbols</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertysymbols>getOwnPropertySymbols</a></code></p>
        </td>
-       <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">getOwnPropertySymbols</a> </code>– filtered to exclude enumerables using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
+       <td><code><a href=/web/javascript/reference/global_objects/object/getownpropertynames>getOwnPropertyNames</a></code>, <code><a href=/web/javascript/reference/global_objects/object/getownpropertysymbols>getOwnPropertySymbols</a> </code>– filtered to exclude enumerables using <code><a href=/web/javascript/reference/global_objects/object/propertyisenumerable>propertyIsEnumerable</a></code></td>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertynames>getOwnPropertyNames</a></code></p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">getOwnPropertySymbols</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertysymbols>getOwnPropertySymbols</a></code></p>
        </td>
       </tr>
      </tbody>
@@ -112,17 +112,17 @@ tags:
      <tbody>
       <tr>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/keys>Object.keys</a></code></p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code> </p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertynames>getOwnPropertyNames</a></code> </p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">getOwnPropertySymbols</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertysymbols>getOwnPropertySymbols</a></code></p>
        </td>
-       <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">getOwnPropertySymbols</a></code> – filtered to exclude enumerables using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
+       <td><code><a href=/web/javascript/reference/global_objects/object/getownpropertynames>getOwnPropertyNames</a></code>, <code><a href=/web/javascript/reference/global_objects/object/getownpropertysymbols>getOwnPropertySymbols</a></code> – filtered to exclude enumerables using <code><a href=/web/javascript/reference/global_objects/object/propertyisenumerable>propertyIsEnumerable</a></code></td>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertynames>getOwnPropertyNames</a></code></p>
 
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">getOwnPropertySymbols</a></code></p>
+        <p><code><a href=/web/javascript/reference/global_objects/object/getownpropertysymbols>getOwnPropertySymbols</a></code></p>
        </td>
       </tr>
      </tbody>
@@ -140,7 +140,7 @@ tags:
      <tbody>
       <tr>
        <td>
-        <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for..in</a></code></p>
+        <p><code><a href=/web/javascript/reference/statements/for...in>for..in</a></code></p>
 
         <p>(excluding symbols)</p>
        </td>
@@ -319,8 +319,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in">in</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for..in</a></code></li>
+ <li><code><a href=/web/javascript/reference/operators/in>in</a></code></li>
+ <li><code><a href=/web/javascript/reference/statements/for...in>for..in</a></code></li>
  <li>{{jsxref("Object.hasOwnProperty()")}}</li>
  <li>{{jsxref("Object.propertyIsEnumerable()")}}</li>
  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>

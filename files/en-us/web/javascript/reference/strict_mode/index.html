@@ -21,11 +21,11 @@ tags:
  <li>Prohibits some syntax likely to be defined in future versions of ECMAScript.</li>
 </ol>
 
-<p>See <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">transitioning to strict mode</a>, if you want to change your code to work in the restricted variant of JavaScript.</p>
+<p>See <a href=/web/javascript/reference/strict_mode/transitioning_to_strict_mode>transitioning to strict mode</a>, if you want to change your code to work in the restricted variant of JavaScript.</p>
 
 <h2 id="Invoking_strict_mode">Invoking strict mode</h2>
 
-<p>Strict mode applies to <em>entire scripts</em> or to <em>individual functions</em>. It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowTimers.setTimeout()</code></a>, and related functions are entire scripts, and invoking strict mode in them works as expected.</p>
+<p>Strict mode applies to <em>entire scripts</em> or to <em>individual functions</em>. It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <a href=/web/api/windowtimers/settimeout title="The documentation about this has not yet been written; please consider contributing!"><code>WindowTimers.setTimeout()</code></a>, and related functions are entire scripts, and invoking strict mode in them works as expected.</p>
 
 <h3 id="Strict_mode_for_scripts">Strict mode for scripts</h3>
 
@@ -55,7 +55,7 @@ function notStrict() { return "I'm not strict."; }
 
 <h3 id="Strict_mode_for_modules">Strict mode for modules</h3>
 
-<p>ECMAScript 2015 introduced <a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">JavaScript modules</a> and therefore a 3rd way to enter strict mode.  The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.</p>
+<p>ECMAScript 2015 introduced <a href=/web/javascript/reference/statements/export>JavaScript modules</a> and therefore a 3rd way to enter strict mode.  The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.</p>
 
 <pre class="brush: js notranslate">function strict() {
     // because this is a module, I'm strict by default
@@ -141,7 +141,7 @@ var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 </pre>
 
-<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
+<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href=/glossary/primitive>primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
 <pre class="brush: js notranslate">(function() {
 'use strict';
@@ -363,5 +363,5 @@ function baz() { // kosher
  <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
  <li><a class="external" href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>
  <li><a class="external" href="https://kangax.github.io/compat-table/es5/#Strict_mode">Strict mode compatibility table</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">Transitioning to strict mode</a></li>
+ <li><a href=/web/javascript/reference/strict_mode/transitioning_to_strict_mode>Transitioning to strict mode</a></li>
 </ul>

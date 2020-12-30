@@ -43,7 +43,7 @@ Access-Control-Allow-Origin: null
 
 <dl>
  <dt><code>*</code></dt>
- <dd>For requests <em>without credentials</em>, the literal value "<code>*</code>" can be specified, as a wildcard; the value tells browsers to allow requesting code from any origin to access the resource. Attempting to use the wildcard with credentials <a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">will result in an error</a>.</dd>
+ <dd>For requests <em>without credentials</em>, the literal value "<code>*</code>" can be specified, as a wildcard; the value tells browsers to allow requesting code from any origin to access the resource. Attempting to use the wildcard with credentials <a href=/web/http/cors/errors/corsnotsupportingcredentials>will result in an error</a>.</dd>
  <dt><code>&lt;origin&gt;</code></dt>
  <dd>Specifies an origin. Only a single origin can be specified. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.</dd>
  <dt><code>null</code></dt>
@@ -99,6 +99,6 @@ Vary: Origin</pre>
 <ul>
  <li>{{HTTPHeader("Origin")}}</li>
  <li>{{HTTPHeader("Vary")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
+ <li><a href=/web/http/cors>Cross-Origin Resource Sharing (CORS)</a></li>
  <li>{{httpheader("Cross-Origin-Resource-Policy")}}</li>
 </ul>

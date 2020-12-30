@@ -71,7 +71,7 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
 
 <p>This may not make sense at first, but for scripts dealing with multiple frames or windows, and passing objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is, in fact, an Array using <code>Array.isArray(<var>myObj</var>)</code></p>
 
-<p>For example, checking if a <a href="/en-US/docs/Web/API/Node">Nodes</a> is a <a href="/en-US/docs/Web/API/SVGElement">SVGElement</a> in a different context, you can use <code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code>.</p>
+<p>For example, checking if a <a href=/web/api/node>Nodes</a> is a <a href=/web/api/svgelement>SVGElement</a> in a different context, you can use <code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code>.</p>
 
 <div class="note">
 <p><strong>Note for Mozilla developers:</strong></p>
@@ -162,7 +162,7 @@ let b = mycar instanceof Object  // returns true
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code></li>
+ <li><code><a href=/web/javascript/reference/operators/typeof>typeof</a></code></li>
  <li>{{jsxref("Symbol.hasInstance")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
 </ul>

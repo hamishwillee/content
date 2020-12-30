@@ -119,7 +119,7 @@ tags:
 
 <p>A string indicating the URL to which to submit the data. This takes precedence over the {{htmlattrxref("action", "form")}} attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.</p>
 
-<p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
+<p>This attribute is also available on <code><a href=/web/html/element/input/submit>&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
 <h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
 
@@ -129,14 +129,14 @@ tags:
  <dt><code>application/x-www-form-urlencoded</code></dt>
  <dd>This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.</dd>
  <dt><code>multipart/form-data</code></dt>
- <dd>Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You <em>must</em> use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type", "input")}} <code>file</code> (<code><a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code>).</dd>
+ <dd>Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You <em>must</em> use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type", "input")}} <code>file</code> (<code><a href=/web/html/element/input/file>&lt;input type="file"&gt;</a></code>).</dd>
  <dt><code>text/plain</code></dt>
  <dd>Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.</dd>
 </dl>
 
 <p>If specified, the value of the <code>formenctype</code> attribute overrides the owning form's {{htmlattrxref("action", "form")}} attribute.</p>
 
-<p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
+<p>This attribute is also available on <code><a href=/web/html/element/input/submit>&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
 <h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
 
@@ -151,13 +151,13 @@ tags:
  <dd>This method is used to indicate that the button closes the dialog with which the input is associated, and does not transmit the form data at all.</dd>
 </dl>
 
-<p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
+<p>This attribute is also available on <code><a href=/web/html/element/input/submit>&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
 <h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
 
 <p>A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.</p>
 
-<p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
+<p>This attribute is also available on <code><a href=/web/html/element/input/submit>&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
 <h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
 
@@ -176,7 +176,7 @@ tags:
  <dd>Loads the response into the top-level browsing context; this is the browsing context that is the topmost ancestor of the current context. If the current context is the topmost context, this behaves the same as <code>_self</code>.</dd>
 </dl>
 
-<p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
+<p>This attribute is also available on <code><a href=/web/html/element/input/submit>&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
 <h3 id="htmlattrdefheight">{{htmlattrdef("height")}}</h3>
 
@@ -215,7 +215,7 @@ tags:
 
 <h2 id="Using_image_inputs">Using image inputs</h2>
 
-<p>The <code>&lt;input type="image"&gt;</code> element is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a> (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a <a href="/en-US/docs/Web/HTML/Element/input/submit">submit button</a>.</p>
+<p>The <code>&lt;input type="image"&gt;</code> element is a <a href=/web/css/replaced_element>replaced element</a> (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a <a href=/web/html/element/input/submit>submit button</a>.</p>
 
 <h3 id="Essential_image_input_features">Essential image input features</h3>
 
@@ -234,7 +234,7 @@ tags:
 
 <h3 id="Overriding_default_form_behaviors">Overriding default form behaviors</h3>
 
-<p><code>&lt;input type="image"&gt;</code> elements — like regular <a href="/en-US/docs/Web/HTML/Element/input/submit">submit buttons</a> — can accept a number of attributes that override the default form behavior:</p>
+<p><code>&lt;input type="image"&gt;</code> elements — like regular <a href=/web/html/element/input/submit>submit buttons</a> — can accept a number of attributes that override the default form behavior:</p>
 
 <dl>
  <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}</dt>
@@ -406,5 +406,5 @@ label {
 <ul>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
  <li>Positioning and sizing the image within the <code>&lt;input&gt;</code> element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

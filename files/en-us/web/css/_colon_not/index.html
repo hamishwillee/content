@@ -13,18 +13,18 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:not()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the <em>negation pseudo-class</em>.</p>
+<p>The <strong><code>:not()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/pseudo-classes>pseudo-class</a> represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the <em>negation pseudo-class</em>.</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Selects any element that is NOT a paragraph */
 :not(p) {
   color: blue;
 }</pre>
 
-<p>The <code>:not()</code> pseudo-class has a number of <a href="/en-US/docs/Web/CSS/:not#Description">quirks, tricks, and unexpected results</a> that you should be aware of before using it.</p>
+<p>The <code>:not()</code> pseudo-class has a number of <a href=/web/css/:not#Description>quirks, tricks, and unexpected results</a> that you should be aware of before using it.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The <code>:not()</code> pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a>.</p>
+<p>The <code>:not()</code> pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a <a href=/web/css/pseudo-elements>pseudo-element</a>.</p>
 
 <div class="warning">
 <p>The ability to list more than one selector is experimental and not yet widely supported.</p>
@@ -39,7 +39,7 @@ tags:
 <ul>
  <li>The <code>:not</code> pseudo-class may not be nested, which means that <code>:not(:not(...))</code> is invalid.</li>
  <li>Useless selectors can be written using this pseudo-class. For example, <code>:not(*)</code> matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.</li>
- <li>This pseudo-class can increase the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
+ <li>This pseudo-class can increase the <a href=/web/css/specificity>specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
  <li><code>:not(.foo)</code> will match anything that isn't <code>.foo</code>, <em>including {{HTMLElement("html")}} and {{HTMLElement("body")}}.</em></li>
  <li>This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, <code>body :not(table) a</code> will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the <code>:not()</code> part of the selector.</li>
  <li>Using two selectors at the same time will not work. For example, <code>:not(.foo,bar)</code> is invalid. Instead, <code>:not(.foo):not(.bar)</code> should be used.</li>
@@ -131,8 +131,8 @@ h2 :not(span.foo) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
+ <li><a href=/web/css/pseudo-classes>Pseudo-classes</a></li>
+ <li><a href=/learn/css/building_blocks/selectors/pseudo-classes_and_pseudo-elements>Pseudo-classes and pseudo-elements</a></li>
  <li>Related CSS pseudo-classes:
   <ul>
    <li>{{cssxref(":has", ":has()")}}</li>

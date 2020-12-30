@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Accept-Encoding</code></strong> request HTTP header advertises which content encoding, usually a compression algorithm, the client is able to understand. Using <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a>, the server selects one of the proposals, uses it and informs the client of its choice with the {{HTTPHeader("Content-Encoding")}} response header.</p>
+<p>The <strong><code>Accept-Encoding</code></strong> request HTTP header advertises which content encoding, usually a compression algorithm, the client is able to understand. Using <a href=/web/http/content_negotiation>content negotiation</a>, the server selects one of the proposals, uses it and informs the client of its choice with the {{HTTPHeader("Content-Encoding")}} response header.</p>
 
 <p>Even if both the client and the server supports the same compression algorithms, the server may choose not to compress the body of a response, if the <code>identity</code> value is also acceptable. Two common cases lead to this:</p>
 
@@ -72,7 +72,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5</pre>
  <dt><code>*</code></dt>
  <dd>Matches any content encoding not already listed in the header. This is the default value if the header is not present. It doesn't mean that any algorithm is supported; merely that no preference is expressed.</dd>
  <dt><code>;q=</code> (qvalues weighting)</dt>
- <dd>Any value is placed in an order of preference expressed using a relative <a href="/en-US/docs/Glossary/Quality_values">quality value</a> called <em>weight</em>.</dd>
+ <dd>Any value is placed in an order of preference expressed using a relative <a href=/glossary/quality_values>quality value</a> called <em>weight</em>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -110,7 +110,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
+ <li>HTTP <a href=/web/http/content_negotiation>content negotiation</a></li>
  <li>Header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}</li>
  <li>Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
 </ul>

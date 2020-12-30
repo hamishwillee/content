@@ -10,12 +10,12 @@ tags:
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p>The <strong><code>pattern</code></strong> attribute specifies a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> the form control's value should match. If a non-<code>null</code> value doesn't conform to the constraints set by the <code>pattern</code> value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.</p>
+<p>The <strong><code>pattern</code></strong> attribute specifies a <a href=/web/javascript/guide/regular_expressions>regular expression</a> the form control's value should match. If a non-<code>null</code> value doesn't conform to the constraints set by the <code>pattern</code> value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.</p>
 
 <p>The <code>pattern</code> attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, and {{HTMLElement("input/search", "search")}} input types.</p>
 
 <div id="pattern-include">
-<p>The <code>pattern</code> attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+<p>The <code>pattern</code> attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href=/web/javascript/guide/regular_expressions>guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
 <p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.</p>
 
@@ -28,7 +28,7 @@ tags:
 
 <h3 id="Usability">Usability</h3>
 
-<p>When including a <code>pattern</code>, provide a description of the pattern in visible text near the control. Additionally, include a <code><a href="/en-US/docs/Web/HTML/Global_attributes/title">title</a></code> attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.</p>
+<p>When including a <code>pattern</code>, provide a description of the pattern in visible text near the control. Additionally, include a <code><a href=/web/html/global_attributes/title>title</a></code> attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.</p>
 
 <h3 id="Constraint_validation">Constraint validation</h3>
 
@@ -48,7 +48,7 @@ tags:
  &lt;/label&gt;
 &lt;/p&gt;</pre>
 
-<p>Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute set on each.</p>
+<p>Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the <code><a href=/web/html/attributes/pattern>pattern</a></code> attribute set on each.</p>
 
 <p>If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.</p>
 
@@ -59,11 +59,11 @@ tags:
 <p>{{EmbedLiveSample("example1", 300, 40)}}</p>
 </div>
 
-<p>Had we used <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
+<p>Had we used <code><a href=/web/html/attributes/minlength>minlength</a></code> and <code><a href=/web/html/attributes/maxlength>maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
+<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href=/learn/html/forms/form_validation#Validating_against_a_regular_expression>Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
 
 <p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
 
@@ -154,7 +154,7 @@ input:valid+span:after {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation">Forms: Data form validation</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a></li>
+ <li><a href=/web/guide/html/html5/constraint_validation>Constraint validation</a></li>
+ <li><a href=/web/guide/html/forms/data_form_validation>Forms: Data form validation</a></li>
+ <li><a href=/web/javascript/guide/regular_expressions>Regular Expressions</a></li>
 </ul>

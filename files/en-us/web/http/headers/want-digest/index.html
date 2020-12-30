@@ -7,18 +7,18 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <code><strong>Want-Digest</strong></code> HTTP header is primarily used in a HTTP request, to ask the responder to provide a {{Glossary("digest")}} of the requested resource using the <code><a href="/en-US/docs/Web/HTTP/Headers/Digest">Digest</a></code> response header.</p>
+<p>The <code><strong>Want-Digest</strong></code> HTTP header is primarily used in a HTTP request, to ask the responder to provide a {{Glossary("digest")}} of the requested resource using the <code><a href=/web/http/headers/digest>Digest</a></code> response header.</p>
 
-<p>The header contains identifiers for one or more digest algorithms that the sender wishes the responder to use to create the digest. The sender may use <a href="/en-US/docs/Glossary/Quality_values">quality values</a> to indicate its preference ordering among the choices it offers.</p>
+<p>The header contains identifiers for one or more digest algorithms that the sender wishes the responder to use to create the digest. The sender may use <a href=/glossary/quality_values>quality values</a> to indicate its preference ordering among the choices it offers.</p>
 
 <p>If <code>Want-Digest</code> does not include any digest algorithms that the server supports, the server may respond with:</p>
 
 <ul>
  <li>a digest calculated using a different digest algorithm, or</li>
- <li>a <code><a href="/en-US/docs/Web/HTTP/Status/400">400 Bad Request</a></code> error, and include another <code>Want-Digest</code> header with that response, listing the algorithms that it does support.</li>
+ <li>a <code><a href=/web/http/status/400>400 Bad Request</a></code> error, and include another <code>Want-Digest</code> header with that response, listing the algorithms that it does support.</li>
 </ul>
 
-<p>See the page for the <code><a href="/en-US/docs/Web/HTTP/Headers/Digest">Digest</a></code> header for more information.</p>
+<p>See the page for the <code><a href=/web/http/headers/digest>Digest</a></code> header for more information.</p>
 
 <table class="properties">
  <tbody>
@@ -46,7 +46,7 @@ Want-Digest: &lt;digest-algorithm&gt;&lt;q-value&gt;,&lt;digest-algorithm&gt;&lt
  <dt><code>&lt;digest-algorithm&gt;</code></dt>
  <dd>Supported digest algorithms are defined in <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> and <a href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>, and include <code>SHA-256</code> and <code>SHA-512</code>. Some of the supported algorithms, including <code>unixsum</code> and <code>MD5</code> are subject to collisions and are thus not suitable for applications in which collision-resistance is important.</dd>
  <dt><code>&lt;q-value&gt;</code></dt>
- <dd>The <a href="/en-US/docs/Glossary/Quality_values">quality value</a> to apply to that option.</dd>
+ <dd>The <a href=/glossary/quality_values>quality value</a> to apply to that option.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

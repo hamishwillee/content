@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p>The <strong><code>new.target</code></strong> pseudo-property lets you detect whether a function or constructor was called using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> operator. In constructors and functions invoked using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> operator, <code>new.target</code> returns a reference to the constructor or function. In normal function calls, <code>new.target</code> is {{jsxref("undefined")}}.</p>
+<p>The <strong><code>new.target</code></strong> pseudo-property lets you detect whether a function or constructor was called using the <a href=/web/javascript/reference/operators/new>new</a> operator. In constructors and functions invoked using the <a href=/web/javascript/reference/operators/new>new</a> operator, <code>new.target</code> returns a reference to the constructor or function. In normal function calls, <code>new.target</code> is {{jsxref("undefined")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}</div>
 
@@ -26,15 +26,15 @@ tags:
 
 <p>In class constructors, it refers to the constructed class.</p>
 
-<p>In ordinary functions, it refers to the function itself, assuming it was invoked via the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> operator; otherwise <code>new.target</code> is {{jsxref("undefined")}}.</p>
+<p>In ordinary functions, it refers to the function itself, assuming it was invoked via the <a href=/web/javascript/reference/operators/new>new</a> operator; otherwise <code>new.target</code> is {{jsxref("undefined")}}.</p>
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, <code>new.target</code> is inherited from the surrounding scope.</p>
+<p>In <a href=/web/javascript/reference/functions/arrow_functions>arrow functions</a>, <code>new.target</code> is inherited from the surrounding scope.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="new.target_in_function_calls">new.target in function calls</h3>
 
-<p>In normal function calls (as opposed to constructor function calls), <code>new.target</code> is {{jsxref("undefined")}}. This lets you detect whether a function was called with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> as a constructor.</p>
+<p>In normal function calls (as opposed to constructor function calls), <code>new.target</code> is {{jsxref("undefined")}}. This lets you detect whether a function was called with <a href=/web/javascript/reference/operators/new>new</a> as a constructor.</p>
 
 <pre class="brush: js">function Foo() {
   if (!new.target) { throw 'Foo() must be called with new' }
@@ -88,8 +88,8 @@ let d = new D()  // logs class D extends C{constructor(){super();}}</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></li>
+ <li><a href=/web/javascript/reference/functions>Functions</a></li>
+ <li><a href=/web/javascript/reference/classes>Classes</a></li>
+ <li><code><a href=/web/javascript/reference/operators/new>new</a></code></li>
+ <li><code><a href=/web/javascript/reference/operators/this>this</a></code></li>
 </ul>

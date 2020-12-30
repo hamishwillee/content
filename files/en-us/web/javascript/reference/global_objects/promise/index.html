@@ -15,7 +15,7 @@ tags:
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>To learn about the way promises work and how you can use them, we advise you to read <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> first.</p>
+<p>To learn about the way promises work and how you can use them, we advise you to read <a href=/web/javascript/guide/using_promises>Using promises</a> first.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -36,7 +36,7 @@ tags:
 <p><img alt="" src="https://mdn.mozillademos.org/files/15911/promises.png" style="height: 297px; width: 801px;"></p>
 
 <div class="notecard note">
-<p><strong>Not to be confused with:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
+<p><strong>Not to be confused with:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href=/web/javascript/reference/functions/arrow_functions>arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
 </div>
 
 <div class="notecard note">
@@ -111,9 +111,9 @@ console.log("immediate logging");
 
 <p>A settings object is an <a href="https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object">environment</a> that provides additional information when JavaScript code is running. This includes the realm and module map, as well as HTML specific information such as the origin. The incumbent settings object is tracked in order to ensure that the browser knows which one to use for a given piece of user code.</p>
 
-<p>To better picture this, we can take a closer look at how the realm might be an issue. A <strong>realm</strong> can be roughly thought of as the global object. What is unique about realms is that they hold all of the necessary information to run JavaScript code. This includes objects like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></code>. Each settings object has its own "copy" of these and they are not shared. That can cause some unexpected behavior in relation to promises. In order to get around this, we track something called the <strong>incumbent settings object</strong>. This represents information specific to the context of the user code responsible for a certain function call.</p>
+<p>To better picture this, we can take a closer look at how the realm might be an issue. A <strong>realm</strong> can be roughly thought of as the global object. What is unique about realms is that they hold all of the necessary information to run JavaScript code. This includes objects like <code><a href=/web/javascript/reference/global_objects/array>Array</a></code> and <code><a href=/web/javascript/reference/global_objects/error>Error</a></code>. Each settings object has its own "copy" of these and they are not shared. That can cause some unexpected behavior in relation to promises. In order to get around this, we track something called the <strong>incumbent settings object</strong>. This represents information specific to the context of the user code responsible for a certain function call.</p>
 
-<p>To illustrate this a bit further we can take a look at how an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:</p>
+<p>To illustrate this a bit further we can take a look at how an <code><a href=/web/html/element/iframe>&lt;iframe&gt;</a></code> embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
@@ -413,7 +413,7 @@ function testPromise() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
+ <li><a href=/web/javascript/guide/using_promises>Using promises</a></li>
  <li><a href="http://promisesaplus.com/">Promises/A+ specification</a></li>
  <li><a href="https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53">Venkatraman.R - JS Promise (Part 1, Basics)</a></li>
  <li><a href="https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski">Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)</a></li>

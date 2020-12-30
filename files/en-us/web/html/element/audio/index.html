@@ -30,24 +30,24 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element's attributes include the <a href=/web/html/global_attributes>global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
  <dd>A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
- <div class="note"><strong>Note</strong>: Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</div>
+ <div class="note"><strong>Note</strong>: Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href=/web/media/autoplay_guide>autoplay guide</a> for additional information about how to properly use autoplay.</div>
  </dd>
  <dt>{{htmlattrdef("controls")}}</dt>
  <dd>If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.</dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>This enumerated attribute indicates whether to use CORS to fetch the related audio file. <a href="/en-US/docs/Web/HTML/CORS_enabled_image">CORS-enabled resources</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
+ <dd>This enumerated attribute indicates whether to use CORS to fetch the related audio file. <a href=/web/html/cors_enabled_image>CORS-enabled resources</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
  <dl>
   <dt><code>anonymous</code></dt>
   <dd>Sends a cross-origin request without a credential. In other words, it sends the <code>Origin:</code> HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the <code>Access-Control-Allow-Origin:</code> HTTP header), the image will be <em>tainted</em>, and its usage restricted.</dd>
   <dt><code>use-credentials</code></dt>
   <dd>Sends a cross-origin request with a credential. In other words, it sends the <code>Origin:</code> HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code>Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
  </dl>
- When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for additional information.</dd>
+ When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href=/web/html/attributes/crossorigin>CORS settings attributes</a> for additional information.</dd>
  <dt>{{htmlattrdef("currentTime")}}</dt>
  <dd>
  <p>Reading <code>currentTime</code> returns a double-precision floating-point value indicating the current playback position, in seconds, of the audio. If the audio's metadata isn't available yet—thereby preventing you from knowing the media's start time or duration—<code>currentTime</code> instead indicates, and can be used to change, the time at which playback will begin. Otherwise, setting <code>currentTime</code> sets the current playback position to the given time and seeks the media to that position if the media is currently loaded.</p>
@@ -59,7 +59,7 @@ tags:
  <p class="note">In Safari, you can use <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> as a fallback.</p>
  </dd>
  <dt>{{htmlattrdef("duration")}} {{ReadOnlyInline}}</dt>
- <dd>A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
+ <dd>A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href=/web/api/webrtc_api>WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.</dd>
  <dt>{{htmlattrdef("muted")}}</dt>
@@ -84,7 +84,7 @@ tags:
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>The URL of the audio to embed. This is subject to <a href="/en-US/docs/Web/HTTP/CORS">HTTP access controls</a>. This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.</dd>
+ <dd>The URL of the audio to embed. This is subject to <a href=/web/http/cors>HTTP access controls</a>. This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -119,7 +119,7 @@ tags:
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.emptied_event", 'emptied')}}</td>
-   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
+   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href=/xpcom_interface_reference/nsidomhtmlmediaelement rel="internal"><code>load()</code></a> method is called to reload it.</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.ended_event", 'ended')}}</td>
@@ -182,7 +182,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Browsers don't all support the same <a href="/en-US/docs/Web/Media/Formats/Containers">file types</a> and <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codecs</a>; you can provide multiple sources inside nested {{htmlelement("source")}} elements, and the browser will then use the first one it understands:</p>
+<p>Browsers don't all support the same <a href=/web/media/formats/containers>file types</a> and <a href=/web/media/formats/audio_codecs>audio codecs</a>; you can provide multiple sources inside nested {{htmlelement("source")}} elements, and the browser will then use the first one it understands:</p>
 
 <pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="myAudio.mp3" type="audio/mpeg"&gt;
@@ -191,18 +191,18 @@ tags:
      a &lt;a href="myAudio.mp4"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/audio&gt;</pre>
 
-<p>We offer a substantive and thorough <a href="/en-US/docs/Web/Media/Formats">guide to media file types</a> and the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codecs that can be used within them</a>. Also available is <a href="/en-US/docs/Web/Media/Formats/Video_codecs">a guide to the codecs supported for video</a>.</p>
+<p>We offer a substantive and thorough <a href=/web/media/formats>guide to media file types</a> and the <a href=/web/media/formats/audio_codecs>audio codecs that can be used within them</a>. Also available is <a href=/web/media/formats/video_codecs>a guide to the codecs supported for video</a>.</p>
 
 <p>Other usage notes:</p>
 
 <ul>
  <li>If you don't specify the <code>controls</code> attribute, the audio player won't include the browser's default controls. You can, however, create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API.</li>
- <li>To allow precise control over your audio content, <code>HTMLMediaElement</code>s fire many different <a href="/en-US/docs/Web/Guide/Events/Media_events">events</a>. This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.</li>
- <li>You can also use the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.</li>
+ <li>To allow precise control over your audio content, <code>HTMLMediaElement</code>s fire many different <a href=/web/guide/events/media_events>events</a>. This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.</li>
+ <li>You can also use the <a href=/web/api/web_audio_api>Web Audio API</a> to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.</li>
  <li><code>&lt;audio&gt;</code> elements can't have subtitles or captions associated with them in the same way that <code>&lt;video&gt;</code> elements can. See <a href="https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio">WebVTT and Audio</a> by Ian Devlin for some useful information and workarounds.</li>
 </ul>
 
-<p>A good general source of information on using HTML <code>&lt;audio&gt;</code> is the <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> beginner's tutorial.</p>
+<p>A good general source of information on using HTML <code>&lt;audio&gt;</code> is the <a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a> beginner's tutorial.</p>
 
 <h3 id="Styling_with_CSS">Styling with CSS</h3>
 
@@ -214,7 +214,7 @@ tags:
 
 <p>To get a consistent look and feel across browsers, you'll need to create custom controls; these can be marked up and styled in whatever way you want, and then JavaScript can be used along with the {{domxref("HTMLMediaElement")}} API to wire up their functionality.</p>
 
-<p><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">Video player styling basics</a> provides some useful styling techniques — it is written in the context of <code>&lt;video&gt;</code>, but much of it is equally applicable to <code>&lt;audio&gt;</code>.</p>
+<p><a href=/web/guide/audio_and_video_delivery/video_player_styling_basics>Video player styling basics</a> provides some useful styling techniques — it is written in the context of <code>&lt;video&gt;</code>, but much of it is equally applicable to <code>&lt;audio&gt;</code>.</p>
 
 <h3 id="Detecting_addition_and_removal_of_tracks">Detecting addition and removal of tracks</h3>
 
@@ -264,7 +264,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 &lt;/audio&gt;
 </pre>
 
-<p>For details on when autoplay works, how to get permission to use autoplay, and how and when it's appropriate to use autoplay, see our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a>.</p>
+<p>For details on when autoplay works, how to get permission to use autoplay, and how and when it's appropriate to use autoplay, see our <a href=/web/media/autoplay_guide>autoplay guide</a>.</p>
 
 <h3 id="&lt;audio&gt;_element_with_&lt;source&gt;_element">&lt;audio&gt; element with &lt;source&gt; element</h3>
 
@@ -288,7 +288,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a>, allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.</p>
+<p>Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using <a href=/web/api/webvtt_api>WebVTT</a>, allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.</p>
 
 <p>If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.</p>
 
@@ -323,10 +323,10 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 </pre>
 
 <ul>
- <li><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions">MDN Subtitles and closed caption — Plugins</a></li>
- <li><a href="/en-US/docs/Web/API/WebVTT_API">Web Video Text Tracks Format (WebVTT)</a></li>
+ <li><a href=/plugins/flash_to_html5/video/subtitles_captions>MDN Subtitles and closed caption — Plugins</a></li>
+ <li><a href=/web/api/webvtt_api>Web Video Text Tracks Format (WebVTT)</a></li>
  <li><a href="https://webaim.org/techniques/captions/">WebAIM: Captions, Transcripts, and Audio Descriptions</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.2_—_Providing_text_alternatives_for_time-based_media">MDN Understanding WCAG, Guideline 1.2 explanations</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/perceivable#Guideline_1.2_—_Providing_text_alternatives_for_time-based_media>MDN Understanding WCAG, Guideline 1.2 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html">Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html">Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
@@ -336,8 +336,8 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, phrasing content, embedded content. If it has a {{htmlattrxref("controls", "audio")}} attribute: interactive content and palpable content.</td>
+   <th scope="row"><a href=/web/guide/html/content_categories>Content categories</a></th>
+   <td><a href=/web/guide/html/content_categories#Flow_content>Flow content</a>, phrasing content, embedded content. If it has a {{htmlattrxref("controls", "audio")}} attribute: interactive content and palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -398,17 +398,17 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a>
+ <li><a href=/web/media>Web media technologies</a>
 
   <ul>
-   <li><a href="/en-US/docs/Web/Media/Formats/Containers">Media container formats (file types)</a></li>
-   <li><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Guide to audio codecs used on the web</a></li>
+   <li><a href=/web/media/formats/containers>Media container formats (file types)</a></li>
+   <li><a href=/web/media/formats/audio_codecs>Guide to audio codecs used on the web</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api>Web Audio API</a></li>
  <li>{{domxref("HTMLAudioElement")}}</li>
  <li>{{htmlelement("source")}}</li>
  <li>{{htmlelement("video")}}</li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Learning area: Video and audio content</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics">Cross-browser audio basics</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Learning area: Video and audio content</a></li>
+ <li><a href=/web/apps/fundamentals/audio_and_video_delivery/cross-browser_audio_basics>Cross-browser audio basics</a></li>
 </ul>

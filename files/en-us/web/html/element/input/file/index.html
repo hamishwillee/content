@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements with <strong><code>type="file"</code></strong> let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using<a href="/en-US/docs/Learn/Forms"> form submission</a>, or manipulated using JavaScript code and <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">the File API</a>.</span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} elements with <strong><code>type="file"</code></strong> let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using<a href=/learn/forms> form submission</a>, or manipulated using JavaScript code and <a href=/web/api/file/using_files_from_web_applications>the File API</a>.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}</div>
 
@@ -52,7 +52,7 @@ tags:
   <tr>
    <td><strong>Properties</strong></td>
    <td>
-    <p><a href="/en-US/docs/Web/API/HTMLInputElement#Properties_file">Properties that apply only to elements of type <code>file</code></a></p>
+    <p><a href=/web/api/htmlinputelement#Properties_file>Properties that apply only to elements of type <code>file</code></a></p>
    </td>
   </tr>
   <tr>
@@ -69,7 +69,7 @@ tags:
 <div class="note"><strong>Note:</strong>
 
 <ol>
- <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Getting_information_about_selected_files">through the input's <code>files</code> property</a>.</li>
+ <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href=/web/api/file/using_files_from_web_applications#Getting_information_about_selected_files>through the input's <code>files</code> property</a>.</li>
  <li>If no file is yet selected, the string is <code>""</code> (empty).</li>
  <li>The string <a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly">is prefixed with <code>C:\fakepath\</code></a>, to prevent malicious software from guessing the user's file structure.</li>
 </ol>
@@ -108,7 +108,7 @@ tags:
 
 <h3 id="htmlattrdefaccept">{{htmlattrdef("accept")}}</h3>
 
-<p>The <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of <strong>{{anch("Unique file type specifiers", "unique file type specifiers")}}</strong>. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.</p>
+<p>The <a href=/web/html/attributes/accept><code>accept</code></a> attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of <strong>{{anch("Unique file type specifiers", "unique file type specifiers")}}</strong>. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.</p>
 
 <p>For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an <code>&lt;input&gt;</code> like this:</p>
 
@@ -117,7 +117,7 @@ tags:
 
 <h3 id="htmlattrdefcapture">{{htmlattrdef("capture")}}</h3>
 
-<p>The <a href="/en-US/docs/Web/HTML/Attributes/capture"><code>capture</code></a> attribute value is a string that specifies which camera to use for capture of image or video data, if the <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute indicates that the input should be of one of those types. A value of <code>user</code> indicates that the user-facing camera and/or microphone should be used. A value of <code>environment</code> specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.</p>
+<p>The <a href=/web/html/attributes/capture><code>capture</code></a> attribute value is a string that specifies which camera to use for capture of image or video data, if the <a href=/web/html/attributes/accept><code>accept</code></a> attribute indicates that the input should be of one of those types. A value of <code>user</code> indicates that the user-facing camera and/or microphone should be used. A value of <code>environment</code> specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.</p>
 
 <div class="note"><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</div>
 
@@ -127,7 +127,7 @@ tags:
 
 <h3 id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</h3>
 
-<p>When the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> Boolean attribute is specified, the file input allows the user to select more than one file.</p>
+<p>When the <a href=/web/html/attributes/multiple><code>multiple</code></a> Boolean attribute is specified, the file input allows the user to select more than one file.</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -222,7 +222,7 @@ tags:
  <dt><code>size</code></dt>
  <dd>The size of the file in bytes.</dd>
  <dt><code>type</code></dt>
- <dd>The file's <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
+ <dd>The file's <a href=/web/http/basics_of_http/mime_types>MIME type</a>.</dd>
  <dt><code>webkitRelativePath</code> {{non-standard_inline}}</dt>
  <dd>A string specifying the file's path relative to the base directory selected in a directory picker (that is, a <code>file</code> picker in which the {{htmlattrxref("webkitdirectory", "input/file")}} attribute is set). <em>This is non-standard and should be used with caution.</em></dd>
 </dl>
@@ -388,7 +388,7 @@ input.style.opacity = 0;</pre>
 <p><strong>Note:</strong> {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.</p>
 </div>
 
-<p>Next, we add an <a href="/en-US/docs/Web/API/EventTarget/addEventListener">event listener</a> to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom <code>updateImageDisplay()</code> function.</p>
+<p>Next, we add an <a href=/web/api/eventtarget/addeventlistener>event listener</a> to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom <code>updateImageDisplay()</code> function.</p>
 
 <pre class="brush: js notranslate">input.addEventListener('change', updateImageDisplay);</pre>
 
@@ -517,6 +517,6 @@ function validFileType(file) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> — contains a number of other useful examples related to <code>&lt;input type="file"&gt;</code> and the <a href="/en-US/docs/Web/API/File">File API</a>.</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/web/api/file/using_files_from_web_applications>Using files from web applications</a> — contains a number of other useful examples related to <code>&lt;input type="file"&gt;</code> and the <a href=/web/api/file>File API</a>.</li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

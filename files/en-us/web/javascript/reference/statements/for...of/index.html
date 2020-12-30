@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong><code>for...of</code> statement</strong> creates a loop iterating over <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable objects</a>, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, array-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.</p>
+<p>The <strong><code>for...of</code> statement</strong> creates a loop iterating over <a href=/web/javascript/reference/iteration_protocols#The_iterable_protocol>iterable objects</a>, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, array-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-forof.html")}}</div>
 
@@ -126,7 +126,7 @@ for (const value of iterable) {
 
 <h3 id="Iterating_over_a_DOM_collection">Iterating over a DOM collection</h3>
 
-<p>Iterating over DOM collections like <a href="/en-US/docs/Web/API/NodeList" title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a>: the following example adds a <code>read</code> class to paragraphs that are direct descendants of an article:</p>
+<p>Iterating over DOM collections like <a href=/web/api/nodelist title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a>: the following example adds a <code>read</code> class to paragraphs that are direct descendants of an article:</p>
 
 <pre class="brush:js">// Note: This will only work in platforms that have
 // implemented NodeList.prototype[Symbol.iterator]
@@ -156,7 +156,7 @@ console.log('done');
 
 <h3 id="Iterating_over_generators">Iterating over generators</h3>
 
-<p>You can also iterate over <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a>, i.e. functions generating an iterable object:</p>
+<p>You can also iterate over <a href=/web/javascript/reference/statements/function*>generators</a>, i.e. functions generating an iterable object:</p>
 
 <pre class="brush:js">function* fibonacci() { // a generator function
   let [prev, curr] = [0, 1];
@@ -197,7 +197,7 @@ for (const o of gen) {
 
 <h3 id="Iterating_over_other_iterable_objects">Iterating over other iterable objects</h3>
 
-<p>You can also iterate over an object that explicitly implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterable</a> protocol:</p>
+<p>You can also iterate over an object that explicitly implements the <a href=/web/javascript/reference/iteration_protocols#iterable>iterable</a> protocol:</p>
 
 <pre class="brush:js">const iterable = {
   [Symbol.iterator]() {
@@ -225,9 +225,9 @@ for (const value of iterable) {
 
 <p>Both <code>for...in</code> and <code>for...of</code> statements iterate over something. The main difference between them is in what they iterate over.</p>
 
-<p>The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the <a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">enumerable properties</a> of an object, in an arbitrary order.</p>
+<p>The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the <a href=/web/javascript/enumerability_and_ownership_of_properties>enumerable properties</a> of an object, in an arbitrary order.</p>
 
-<p>The <code>for...of</code> statement iterates over values that the <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">iterable object</a> defines to be iterated over.</p>
+<p>The <code>for...of</code> statement iterates over values that the <a href=/web/javascript/guide/iterators_and_generators#Iterables>iterable object</a> defines to be iterated over.</p>
 
 <p>The following example shows the difference between a <code>for...of</code> loop and a <code>for...in</code> loop when used with an {{jsxref("Array")}}.</p>
 
@@ -260,13 +260,13 @@ Array.prototype.arrCustom = function() {};
 const iterable = [3, 5, 7];
 iterable.foo = 'hello';</pre>
 
-<p>Every object will inherit the <code>objCustom</code> property and every object that is an {{jsxref("Array")}} will inherit the <code>arrCustom</code> property since these properties have been added to {{jsxref("Object.prototype")}} and {{jsxref("Array.prototype")}}, respectively. The object <code>iterable</code> inherits the properties <code>objCustom</code> and <code>arrCustom</code> because of <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">inheritance and the prototype chain</a>.</p>
+<p>Every object will inherit the <code>objCustom</code> property and every object that is an {{jsxref("Array")}} will inherit the <code>arrCustom</code> property since these properties have been added to {{jsxref("Object.prototype")}} and {{jsxref("Array.prototype")}}, respectively. The object <code>iterable</code> inherits the properties <code>objCustom</code> and <code>arrCustom</code> because of <a href=/web/javascript/inheritance_and_the_prototype_chain>inheritance and the prototype chain</a>.</p>
 
 <pre class="brush: js">for (const i in iterable) {
   console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
 }</pre>
 
-<p>This loop logs only <a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">enumerable properties</a> of the <code>iterable</code> object, in arbitrary order. It doesn't log array <strong>elements</strong> <code>3</code>, <code>5</code>, <code>7</code> or <code>hello</code> because those are <strong>not</strong> enumerable properties, in fact they are not properties at all, they are <strong>values</strong>. It logs array <strong>indexes</strong> as well as <code>arrCustom</code> and <code>objCustom</code>, which are. If you're not sure why these properties are iterated over, there's a more thorough explanation of how {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} work.</p>
+<p>This loop logs only <a href=/web/javascript/enumerability_and_ownership_of_properties>enumerable properties</a> of the <code>iterable</code> object, in arbitrary order. It doesn't log array <strong>elements</strong> <code>3</code>, <code>5</code>, <code>7</code> or <code>hello</code> because those are <strong>not</strong> enumerable properties, in fact they are not properties at all, they are <strong>values</strong>. It logs array <strong>indexes</strong> as well as <code>arrCustom</code> and <code>objCustom</code>, which are. If you're not sure why these properties are iterated over, there's a more thorough explanation of how {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} work.</p>
 
 <pre class="brush: js">for (const i in iterable) {
   if (iterable.hasOwnProperty(i)) {
@@ -280,7 +280,7 @@ iterable.foo = 'hello';</pre>
   console.log(i); // logs 3, 5, 7
 }</pre>
 
-<p>This loop iterates and logs <strong>values</strong> that <code>iterable</code>, as an <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">iterable object</a>, defines to be iterated over. The object's <strong>elements</strong> <code>3</code>, <code>5</code>, <code>7</code> are shown, but none of the object's <strong>properties</strong>.</p>
+<p>This loop iterates and logs <strong>values</strong> that <code>iterable</code>, as an <a href=/web/javascript/guide/iterators_and_generators#Iterables>iterable object</a>, defines to be iterated over. The object's <strong>elements</strong> <code>3</code>, <code>5</code>, <code>7</code> are shown, but none of the object's <strong>properties</strong>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

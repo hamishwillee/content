@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>repeating-radial-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("radial-gradient")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("repeating-linear-gradient")}} . The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
+<p>The <strong><code>repeating-radial-gradient()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_functions>function</a> creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("radial-gradient")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("repeating-linear-gradient")}} . The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}</div>
 
@@ -22,7 +22,7 @@ tags:
 
 <p>With each repetition, the positions of the color stops are shifted by a multiple of the dimensions of the basic radial gradient (the distance between the last color stop and the first). Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition, which can be mitigated by repeating the first color as the last color.</p>
 
-<p>As with any gradient, a repeating radial gradient has <a href="/en-US/docs/CSS/image#no_intrinsic">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
+<p>As with any gradient, a repeating radial gradient has <a href=/css/image#no_intrinsic>no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
 
 <p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>repeating-radial-gradient()</code> won't work on {{cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.</p>
 
@@ -86,10 +86,10 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 <h3 id="Formal_syntax">Formal syntax</h3>
 
 <pre class="syntaxbox notranslate">repeating-radial-gradient(
-       [[ circle  || <a href="/en-US/docs/CSS/length">&lt;length&gt;</a> ]                     [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-        [ ellipse || [<a href="/en-US/docs/CSS/length">&lt;length&gt;</a> | <a href="/en-US/docs/CSS/percentage">&lt;percentage&gt;</a> ]{2}] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-        [[ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-                                                     at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>   ,    &lt;color-stop-list&gt; )
+       [[ circle  || <a href=/css/length>&lt;length&gt;</a> ]                     [at <a href=/web/css/position_value>&lt;position&gt;</a>]? , |
+        [ ellipse || [<a href=/css/length>&lt;length&gt;</a> | <a href=/css/percentage>&lt;percentage&gt;</a> ]{2}] [at <a href=/web/css/position_value>&lt;position&gt;</a>]? , |
+        [[ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href=/web/css/position_value>&lt;position&gt;</a>]? , |
+                                                     at <a href=/web/css/position_value>&lt;position&gt;</a>   ,    &lt;color-stop-list&gt; )
         \---------------------------------------------------------------/\-----------------/
                   Contour, size and position of the ending shape          List of color stops
 
@@ -145,7 +145,7 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
 <p>The elliptical gradient will be centered 20% from the top left, and will repeat 10 times between the center and the farthest corner (the bottom right corner). Browsers supporting multi position color stops will display a red and green striped ellipse. Browsers not supporting the syntax yet will see a gradient that goes from red to black and then from blue to green.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Please see <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a> for more examples.</p>
+<p><strong>Note:</strong> Please see <a href=/web/css/css_images/using_css_gradients>Using CSS gradients</a> for more examples.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -174,7 +174,7 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
+ <li><a href=/web/css/css_images/using_css_gradients>Using CSS gradients</a></li>
  <li>Other gradient functions: {{cssxref("radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-conic-gradient")}}</li>
  <li>{{cssxref("&lt;image&gt;")}}</li>
  <li>{{cssxref("_image","image()")}}</li>

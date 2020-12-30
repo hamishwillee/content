@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>scale()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+<p>The <strong><code>scale()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_functions>function</a> defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
 
 <p><img src="https://mdn.mozillademos.org/files/12115/scale.png" style="height: 325px; width: 392px;"></p>
 
@@ -18,7 +18,7 @@ tags:
 
 <p>When a coordinate value is outside the [-1, 1] range, the element grows along that dimension; when inside, it shrinks. If it is negative, the result a <a href="https://en.wikipedia.org/wiki/Point_reflection">point reflection</a> in that dimension. A value of 1 has no effect.</p>
 
-<div class="note"><strong>Note:</strong> The <code>scale()</code> function only scales in 2D. To scale in 3D, use <code><a href="/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</a></code> instead.</div>
+<div class="note"><strong>Note:</strong> The <code>scale()</code> function only scales in 2D. To scale in 3D, use <code><a href=/web/css/transform-function/scale3d>scale3d()</a></code> instead.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -64,12 +64,12 @@ scale(<var>sx</var>, <var>sy</var>)
 
 <p>Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferrably site-wide.</p>
 
-<p>Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> that will turn off animations if the user has reduced animation specified in their system preferences.</p>
+<p>Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a <a href=/web/css/media_queries>media query</a> that will turn off animations if the user has reduced animation specified in their system preferences.</p>
 
 <p>Find out more:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">MDN Understanding WCAG, Guideline 2.3 explanations</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions>MDN Understanding WCAG, Guideline 2.3 explanations</a></li>
  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1</a></li>
 </ul>
 

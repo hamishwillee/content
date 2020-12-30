@@ -9,13 +9,13 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>DataView</code></strong> view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's <a href="/en-US/docs/Glossary/Endianness">endianness</a>.</span></p>
+<p><span class="seoSummary">The <strong><code>DataView</code></strong> view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's <a href=/glossary/endianness>endianness</a>.</span></p>
 
 <h2 id="Description">Description</h2>
 
 <h3 id="Endianness">Endianness</h3>
 
-<p>Multi-byte number formats are represented in memory differently depending on machine architecture — see <a href="/en-US/docs/Glossary/Endianness">Endianness</a> for an explanation. <code>DataView</code> accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness.</p>
+<p>Multi-byte number formats are represented in memory differently depending on machine architecture — see <a href=/glossary/endianness>Endianness</a> for an explanation. <code>DataView</code> accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness.</p>
 
 <pre class="brush: js">var littleEndian = (function() {
   var buffer = new ArrayBuffer(2);
@@ -60,7 +60,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView"><code>DataView()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/dataview/dataview><code>DataView()</code></a></dt>
  <dd>Creates a new <code>DataView</code> object.</dd>
 </dl>
 

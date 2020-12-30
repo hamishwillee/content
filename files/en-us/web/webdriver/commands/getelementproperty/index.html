@@ -7,7 +7,7 @@ tags:
   - Reference
   - WebDriver
 ---
-<p>The <em>Get Element Property</em> <a href="/en-US/Web/WebDriver/Commands">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API returns the property of the referenced <a href="/en-US/Web/WebDriver/WebElement">web element</a>. Given <code>&lt;input value=foo&gt;</code> where the user changes the value to <code>bar</code>, the returned property is <code>bar</code> rather than the initial value <code>foo</code>. This is equivalent to calling {{domxref("Element.getProperty")}} on the element.</p>
+<p>The <em>Get Element Property</em> <a href="/en-US/Web/WebDriver/Commands">command</a> of the <a href=/web/webdriver>WebDriver</a> API returns the property of the referenced <a href="/en-US/Web/WebDriver/WebElement">web element</a>. Given <code>&lt;input value=foo&gt;</code> where the user changes the value to <code>bar</code>, the returned property is <code>bar</code> rather than the initial value <code>foo</code>. This is equivalent to calling {{domxref("Element.getProperty")}} on the element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -32,20 +32,20 @@ tags:
  <dt><code>session id</code></dt>
  <dd>Identifier of the session.</dd>
  <dt><code>element id</code></dt>
- <dd>Identifier of the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to get the tag name of.</dd>
+ <dd>Identifier of the <a href=/web/webdriver/webelement>web element</a> to get the tag name of.</dd>
  <dt><code>name</code></dt>
- <dd>Identifier of the property of <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to get.</dd>
+ <dd>Identifier of the property of <a href=/web/webdriver/webelement>web element</a> to get.</dd>
 </dl>
 
 <h3 id="Errors">Errors</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/SessionNotCreated">Session not created</a></dt>
+ <dt><a href=/web/webdriver/errors/sessionnotcreated>Session not created</a></dt>
  <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/NoSuchWindow">No such window</a></dt>
- <dd>The <code><a href="/en-US/docs/Web/API/Window">window</a></code> object has been discarded, indicating that the tab or window has been closed.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
+ <dt><a href=/web/webdriver/errors/nosuchwindow>No such window</a></dt>
+ <dd>The <code><a href=/web/api/window>window</a></code> object has been discarded, indicating that the tab or window has been closed.</dd>
+ <dt><a href=/web/webdriver/errors/unexpectedalertopen>Unexpected alert open</a></dt>
+ <dd>A user prompt, such as <code><a href=/web/api/window/alert>window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -98,6 +98,6 @@ bar
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/GetElementAttribute">Get Element Attribute</a> command</li>
+ <li><a href=/web/webdriver/commands/getelementattribute>Get Element Attribute</a> command</li>
  <li><em><a href="https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html">What is the difference between properties and attributes?</a></em> on Stack Overflow</li>
 </ul>

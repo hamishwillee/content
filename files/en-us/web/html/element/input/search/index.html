@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>search</strong></code> are text fields designed for the user to enter search queries into. These are functionally identical to <code><a href="/en-US/docs/Web/HTML/Element/input/text">text</a></code> inputs, but may be styled differently by the {{Glossary("user agent")}}. </span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>search</strong></code> are text fields designed for the user to enter search queries into. These are functionally identical to <code><a href=/web/html/element/input/text>text</a></code> inputs, but may be styled differently by the {{Glossary("user agent")}}. </span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}</div>
 
@@ -99,33 +99,33 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="htmlattrdeflist">{{page(/web/html/element/input/text, "list", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the search field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the search input has no minimum length.</p>
 
-<p>The search field will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+<p>The search field will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+<p>{{page(/web/html/element/input/text, "pattern-include")}}</p>
 
 <p>See the section {{anch("Specifying a pattern")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "placeholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "readonly", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "size", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "spellcheck", 0, 1, 2)}}</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -160,7 +160,7 @@ tags:
 
 <h3 id="htmlattrdefautocorrect_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</p>
+<p>{{page(/web/html/element/input/text, "autocorrect-include")}}</p>
 
 <h3 id="htmlattrdefincremental_non-standard_inline">{{htmlattrdef("incremental")}} {{non-standard_inline}}</h3>
 
@@ -174,7 +174,7 @@ tags:
 
 <h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</p>
+<p>{{page(/web/html/element/input/text, "mozactionhint-include")}}</p>
 
 <h3 id="htmlattrdefresults_non-standard_inline">{{htmlattrdef("results")}} {{non-standard_inline}}</h3>
 
@@ -237,7 +237,7 @@ tags:
 
 <p>One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">this example shows a typical pattern</a>).</p>
 
-<p>This could, however, cause confusion for screenreader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> features:</p>
+<p>This could, however, cause confusion for screenreader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use <a href=/learn/accessibility/wai-aria_basics>WAI-ARIA</a> features:</p>
 
 <ul>
  <li>A <code>role</code> attribute of value <code>search</code> on the <code>&lt;form&gt;</code> element will cause screenreaders to announce that the form is a search form.</li>
@@ -262,7 +262,7 @@ tags:
 <p>There is no visual difference from the previous example, but screenreader users have way more information available to them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">Signposts/Landmarks</a> for more information about such accessibility features.</p>
+<p><strong>Note</strong>: See <a href=/learn/accessibility/wai-aria_basics#SignpostsLandmarks>Signposts/Landmarks</a> for more information about such accessibility features.</p>
 </div>
 
 <h3 id="Physical_input_element_size">Physical input element size</h3>
@@ -391,7 +391,7 @@ input:valid ~ span:after {
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course).</p>
+<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href=/learn/forms/form_validation#Validating_against_a_regular_expression>Validating against a regular expression</a> for a simple crash course).</p>
 
 <p>Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:</p>
 
@@ -463,8 +463,8 @@ input:valid ~ span:after {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms">HTML Forms</a></li>
+ <li><a href=/learn/forms>HTML Forms</a></li>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><code><a href=/web/html/element/input/text>&lt;input type="text"&gt;</a></code></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

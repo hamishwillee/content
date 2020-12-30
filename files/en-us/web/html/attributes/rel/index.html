@@ -56,7 +56,7 @@ tags:
 			<td class="not-allowed">Not allowed</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/dns-prefetch">dns-prefetch</a></code></td>
+			<td><code><a href=/web/html/link_types/dns-prefetch>dns-prefetch</a></code></td>
 			<td>Tells the browser to preemptively perform DNS resolution for the target resource's origin</td>
 			<td>External Resource</td>
 			<td class="not-allowed">Not allowed</td>
@@ -91,14 +91,14 @@ tags:
 			<td>Link</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/manifest">manifest</a></code></td>
+			<td><code><a href=/web/html/link_types/manifest>manifest</a></code></td>
 			<td>Web app manifest</td>
 			<td class="not-allowed">Link</td>
 			<td>Not allowed</td>
 			<td class="not-allowed">Not allowed</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/modulepreload">modulepreload</a></code></td>
+			<td><code><a href=/web/html/link_types/modulepreload>modulepreload</a></code></td>
 			<td>Tells to browser to preemptively fetch the script and store it in the document's module map for later evaluation. Optionally, the module's dependencies can be fetched as well.</td>
 			<td>External Resource</td>
 			<td class="not-allowed">Not allowed</td>
@@ -119,7 +119,7 @@ tags:
 			<td>Annotation</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/noopener">noopener</a></code></td>
+			<td><code><a href=/web/html/link_types/noopener>noopener</a></code></td>
 			<td>Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those, to begin with (i.e., has an appropriate<code> target </code>attribute value).</td>
 			<td class="not-allowed">Not allowed</td>
 			<td>Annotation</td>
@@ -147,28 +147,28 @@ tags:
 			<td class="not-allowed">Not allowed</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/preconnect">preconnect</a></code></td>
+			<td><code><a href=/web/html/link_types/preconnect>preconnect</a></code></td>
 			<td>Specifies that the user agent should preemptively connect to the target resource's origin.</td>
 			<td>External Resource</td>
 			<td class="not-allowed">Not allowed</td>
 			<td class="not-allowed">Not allowed</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/prefetch">prefetch</a></code></td>
+			<td><code><a href=/web/html/link_types/prefetch>prefetch</a></code></td>
 			<td>Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.</td>
 			<td>External Resource</td>
 			<td class="not-allowed">Not allowed</td>
 			<td class="not-allowed">Not allowed</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/preload">preload</a></code></td>
+			<td><code><a href=/web/html/link_types/preload>preload</a></code></td>
 			<td>Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the <code><a href="as">as</a></code> attribute (and the priority associated with the corresponding destination).</td>
 			<td>External Resource</td>
 			<td class="not-allowed">Not allowed</td>
 			<td class="not-allowed">Not allowed</td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Web/HTML/Link_types/prerender">prerender</a></code></td>
+			<td><code><a href=/web/html/link_types/prerender>prerender</a></code></td>
 			<td>Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.</td>
 			<td>External Resource</td>
 			<td class="not-allowed">Not allowed</td>
@@ -248,7 +248,7 @@ tags:
 	<dt>{{htmlattrdef("canonical")}}</dt>
 	<dd>Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which is useful for search engines.</dd>
 	<dt>{{htmlattrdef("dns-prefetch")}}</dt>
-	<dd>Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See <a href="/en-US/docs/Learn/Performance/dns-prefetch">dns-prefetch</a> described in <a href="">resource hints</a>.</dd>
+	<dd>Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See <a href=/learn/performance/dns-prefetch>dns-prefetch</a> described in <a href="">resource hints</a>.</dd>
 	<dt>{{htmlattrdef("external")}}</dt>
 	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.</dd>
 	<dt>{{htmlattrdef("help")}}</dt>
@@ -264,7 +264,7 @@ tags:
 	<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a>, and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
 
 	<div class="notecard note">
-	<p>Prior to Firefox 83 the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
+	<p>Prior to Firefox 83 the <a href=/web/html/attributes/crossorigin>crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
 	</div>
 
 	<p><strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
@@ -280,15 +280,15 @@ tags:
 	<p><strong>Note:</strong> Although recognized, the synonym <code>copyright</code> is incorrect and must be avoided.</p>
 	</dd>
 	<dt>{{htmlattrdef("manifest")}}</dt>
-	<dd><a href="/en-US/docs/Web/Manifest">Web app manifest</a>. Requires the use of the CORS protocol for cross-origin fetching.</dd>
+	<dd><a href=/web/manifest>Web app manifest</a>. Requires the use of the CORS protocol for cross-origin fetching.</dd>
 	<dt>{{htmlattrdef("modulepreload")}}</dt>
-	<dd>Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting <code>rel="modulepreload"</code> tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. <code>modulepreload</code> links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also <a href="/en-US/docs/Web/HTML/Link_types/modulepreload">link types: <code>modulepreload</code></a>.</dd>
+	<dd>Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting <code>rel="modulepreload"</code> tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. <code>modulepreload</code> links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also <a href=/web/html/link_types/modulepreload>link types: <code>modulepreload</code></a>.</dd>
 	<dt>{{htmlattrdef("next")}}</dt>
 	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the <code>next</code> values indicates that the current document is a part of a series, and that the next document in the series is the referenced document. When included in a <code>&lt;link&gt;</code>, browsers may assume that document will be fetched next, and treat it as a resource hint.</dd>
 	<dt>{{htmlattrdef("nofollow")}}</dt>
 	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the <code>nofollow</code> keyword tells search engine spiders to ignore the link relationship. The nofollow relationship may indicate the current document's owner does not endorse the referenced document. It is often included by Search Engine Optimizers pretending their link farms are not spam pages.</dd>
 	<dt>{{htmlattrdef("noopener")}}</dt>
-	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate<code> target </code>attribute value). In other words, it makes the link behave as if <code><a href="/en-US/docs/Web/API/Window/opener">window.opener</a></code> were null and <code><a href="target">target</a>="_parent"</code> were set.<br>
+	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate<code> target </code>attribute value). In other words, it makes the link behave as if <code><a href=/web/api/window/opener>window.opener</a></code> were null and <code><a href="target">target</a>="_parent"</code> were set.<br>
 	<br>
 	This is the opposite of {{anch("opener")}}.</dd>
 	<dt>{{htmlattrdef("noreferrer")}}</dt>
@@ -315,7 +315,7 @@ tags:
 	<dd>
 	<p>Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>search</code> keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.</p>
 
-	<p>If the <code><a href="type">type</a></code> attribute is set to <code>application/opensearchdescription+xml</code> the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch</a> plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</p>
+	<p>If the <code><a href="type">type</a></code> attribute is set to <code>application/opensearchdescription+xml</code> the resource is an <a href=/creating_opensearch_plugins_for_firefox>OpenSearch</a> plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</p>
 	</dd>
 	<dt>{{htmlattrdef("stylesheet")}}</dt>
 	<dd>

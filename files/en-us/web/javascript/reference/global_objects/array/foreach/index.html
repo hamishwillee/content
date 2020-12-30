@@ -56,9 +56,9 @@ tags:
  <li>the Array object being traversed</li>
 </ol>
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>forEach()</code>, it will be used as callback's <code>this</code> value. The <code><var>thisArg</var></code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+<p>If a <code><var>thisArg</var></code> parameter is provided to <code>forEach()</code>, it will be used as callback's <code>this</code> value. The <code><var>thisArg</var></code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href=/web/javascript/reference/operators/this>the usual rules for determining the <code>this</code> seen by a function</a>.</p>
 
-<p>The range of elements processed by <code>forEach()</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array after the call to <code>forEach()</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are changed or deleted, their value as passed to <code><var>callback</var></code> will be the value at the time <code>forEach()</code> visits them; elements that are deleted before being visited are not visited. If elements that are already visited are removed (e.g. using {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements will be skipped. (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Modifying_the_array_during_iteration">See this example, below</a>.)</p>
+<p>The range of elements processed by <code>forEach()</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array after the call to <code>forEach()</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are changed or deleted, their value as passed to <code><var>callback</var></code> will be the value at the time <code>forEach()</code> visits them; elements that are deleted before being visited are not visited. If elements that are already visited are removed (e.g. using {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements will be skipped. (<a href=/web/javascript/reference/global_objects/array/foreach#Modifying_the_array_during_iteration>See this example, below</a>.)</p>
 
 <p><code>forEach()</code> executes the <code><var>callback</var></code> function once for each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or {{jsxref("Array.prototype.reduce()", "reduce()")}} it always returns the value {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.</p>
 
@@ -70,8 +70,8 @@ tags:
 <p>Early termination may be accomplished with:</p>
 
 <ul>
- <li>A simple <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop</li>
- <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> / <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops</li>
+ <li>A simple <a href=/web/javascript/reference/statements/for>for</a> loop</li>
+ <li>A <a href=/web/javascript/reference/statements/for...of>for...of</a> / <a href=/web/javascript/reference/statements/for...in>for...in</a> loops</li>
  <li>{{jsxref("Array.prototype.every()")}}</li>
  <li>{{jsxref("Array.prototype.some()")}}</li>
  <li>{{jsxref("Array.prototype.find()")}}</li>
@@ -254,7 +254,7 @@ obj.sum
 <p>Since the <code><var>thisArg</var></code> parameter (<code>this</code>) is provided to <code>forEach()</code>, it is passed to <code><var>callback</var></code> each time it's invoked. The callback uses it as its <code>this</code> value.</p>
 
 <div class="note">
-<p><strong>Note:</strong> If passing the callback function used an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a>, the <code><var>thisArg</var></code> parameter could be omitted, since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.</p>
+<p><strong>Note:</strong> If passing the callback function used an <a href=/web/javascript/reference/functions/arrow_functions>arrow function expression</a>, the <code><var>thisArg</var></code> parameter could be omitted, since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.</p>
 </div>
 
 <h3 id="An_object_copy_function">An object copy function</h3>

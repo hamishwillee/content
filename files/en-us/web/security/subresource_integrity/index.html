@@ -8,10 +8,10 @@ tags:
   - Networking
   - Security
 ---
-<p><span class="seoSummary"><strong>Subresource Integrity</strong> (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a <a href="/en-US/docs/Glossary/CDN">CDN</a>) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.</span></p>
+<p><span class="seoSummary"><strong>Subresource Integrity</strong> (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a <a href=/glossary/cdn>CDN</a>) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.</span></p>
 
 <div class="note">
-<p><strong>Note</strong>: For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin.</p>
+<p><strong>Note</strong>: For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using <a href=/web/http/cors>Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin.</p>
 </div>
 
 <h2 id="How_Subresource_Integrity_helps">How Subresource Integrity helps</h2>
@@ -65,7 +65,7 @@ tags:
 
 <h3 id="Cross-Origin_Resource_Sharing_and_Subresource_Integrity">Cross-Origin Resource Sharing and Subresource Integrity</h3>
 
-<p>For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an <code><a href="/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">Access-Control-Allow-Origin</a></code> header that allows the resource to be shared with the requesting origin; for example:</p>
+<p>For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using <a href=/web/http/cors>Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an <code><a href=/web/http/headers/access-control-allow-origin>Access-Control-Allow-Origin</a></code> header that allows the resource to be shared with the requesting origin; for example:</p>
 
 <pre>Access-Control-Allow-Origin: *</pre>
 
@@ -82,7 +82,7 @@ tags:
         crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more details on the purpose of the <code>crossorigin</code> attribute, see <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a>.</p>
+<p><strong>Note</strong>: For more details on the purpose of the <code>crossorigin</code> attribute, see <a href=/web/html/cors_settings_attributes>CORS settings attributes</a>.</p>
 </div>
 
 <h2 id="How_browsers_handle_Subresource_Integrity">How browsers handle Subresource Integrity</h2>
@@ -93,7 +93,7 @@ tags:
 	<li>
 	<p>When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an <code>integrity</code> attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the <code>integrity</code> value.</p>
 
-	<p class="note"><strong>Note</strong>: For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin.</p>
+	<p class="note"><strong>Note</strong>: For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using <a href=/web/http/cors>Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin.</p>
 	</li>
 	<li>If the script or stylesheet doesn’t match its associated <code>integrity</code> value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.</li>
 </ol>
@@ -146,4 +146,4 @@ tags:
 	<li><a href="https://www.srihash.org/">SRI Hash Generator</a></li>
 </ul>
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>
+<p>{{QuickLinksWithSubpages(/web/security)}}</p>

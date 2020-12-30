@@ -23,13 +23,13 @@ tags:
   - mp4
   - sound
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</div>
+<div>{{QuickLinksWithSubpages(/web/media)}}</div>
 
 <p>Even modest quality, high-fidelity stereo sound can use a substantial amount of disk space. For web developers, an even bigger concern is the network bandwidth needed in order to transfer audio, whether for streaming or to download it for use during gameplay. The processing of audio data to encode and decode it is handled by an audio <strong>{{Glossary("codec")}}</strong> (<strong>CO</strong>der/<strong>DEC</strong>oder). <span class="seoSummary">In this article, we look at audio codecs used on the web to compress and decompress audio, what their capabilities and use cases are, and offer guidance when choosing audio codecs to use for your content.</span></p>
 
-<p>Additionally, WebRTC implementations generally use a subset of these codecs for their encoding and decoding of media, and may support additional codecs as well, for optimal cross-platform support of video and audio conferencing, and to integrate better with legacy telecommunication solutions. See <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a> for details.</p>
+<p>Additionally, WebRTC implementations generally use a subset of these codecs for their encoding and decoding of media, and may support additional codecs as well, for optimal cross-platform support of video and audio conferencing, and to integrate better with legacy telecommunication solutions. See <a href=/web/media/formats/webrtc_codecs>Codecs used by WebRTC</a> for details.</p>
 
-<p>For information about the fundamental concepts behind how digital audio works, see the article <a href="/en-US/docs/Web/Media/Formats/Audio_concepts">Digital audio concepts</a>.</p>
+<p>For information about the fundamental concepts behind how digital audio works, see the article <a href=/web/media/formats/audio_concepts>Digital audio concepts</a>.</p>
 
 <h2 id="Common_codecs">Common codecs</h2>
 
@@ -47,47 +47,47 @@ tags:
   <tr>
    <th scope="row">{{anch("AAC")}}</th>
    <td>Advanced Audio Coding</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#ADTS">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a></td>
+   <td><a href=/web/media/formats/containers#MP4>MP4</a>, <a href=/web/media/formats/containers#ADTS>ADTS</a>, <a href=/web/media/formats/containers#3GP>3GP</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("ALAC")}}</th>
    <td>Apple Lossless Audio Codec</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime">QuickTime</a> (MOV)</td>
+   <td><a href=/web/media/formats/containers#MP4>MP4</a>, <a href=/web/media/formats/containers#QuickTime>QuickTime</a> (MOV)</td>
   </tr>
   <tr>
    <th scope="row">{{anch("AMR")}}</th>
    <td>Adaptive Multi-Rate</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a></td>
+   <td><a href=/web/media/formats/containers#3GP>3GP</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("FLAC")}}</th>
    <td>Free Lossless Audio Codec</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#FLAC">FLAC</a></td>
+   <td><a href=/web/media/formats/containers#MP4>MP4</a>, <a href=/web/media/formats/containers#Ogg>Ogg</a>, <a href=/web/media/formats/containers#FLAC>FLAC</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("G.711")}}</th>
    <td>Pulse Code Modulation (PCM) of Voice Frequencies</td>
-   <td>{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></td>
+   <td>{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("G.722")}}</th>
    <td>7 kHz Audio Coding Within 64 kbps (for telephony/{{Glossary("VoIP")}})</td>
-   <td>{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></td>
+   <td>{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("MP3")}}</th>
    <td>MPEG-1 Audio Layer III</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#ADTS">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#MPEG">MPEG</a><sup><a href="#in-brief-footnote1">1</a></sup>, <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a></td>
+   <td><a href=/web/media/formats/containers#MP4>MP4</a>, <a href=/web/media/formats/containers#ADTS>ADTS</a>, <a href=/web/media/formats/containers#MPEG>MPEG</a><sup><a href="#in-brief-footnote1">1</a></sup>, <a href=/web/media/formats/containers#3GP>3GP</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("Opus")}}</th>
    <td>Opus</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
+   <td><a href=/web/media/formats/containers#WebM>WebM</a>, <a href=/web/media/formats/containers#MP4>MP4</a>, <a href=/web/media/formats/containers#Ogg>Ogg</a></td>
   </tr>
   <tr>
    <th scope="row">{{anch("Vorbis")}}</th>
    <td>Vorbis</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
+   <td><a href=/web/media/formats/containers#WebM>WebM</a>, <a href=/web/media/formats/containers#Ogg>Ogg</a></td>
   </tr>
  </tbody>
 </table>
@@ -115,7 +115,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Channel_count">Channel count</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Channel_count>Channel count</a></th>
    <td>The number of channels affects only the perception of directionality, not the quality.</td>
    <td>Each channel may substantially increase the encoded audio size, depending on contents and encoder settings.</td>
   </tr>
@@ -125,12 +125,12 @@ tags:
    <td>Hiss, static, or background noise increases the audio complexity, which generally reduces the amount of compression which is possible.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Sample_rate">Sample rate</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Sample_rate>Sample rate</a></th>
    <td>The more samples available per second, the higher the resulting encoded audio fidelity is likely to be.</td>
    <td>Increasing the sample rate increases the encoded audio file's size.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Sample_size">Sample size</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Sample_size>Sample size</a></th>
    <td>The larger the samples, the more detail each sample can contain, resulting in more accurate representation of each sample.</td>
    <td>Depends on the codec; codecs typically have an internal sample format that may or may not be the same as the original sample size. But more source detail may make the encoded file larger; it will never make it smaller.</td>
   </tr>
@@ -139,7 +139,7 @@ tags:
 
 <p>Of course, these effects can be altered by decisions made while encoding the audio. For example, if the encoder is configured to reduce the sample rate, the sample rate's effect on the output file will be reduced in kind.</p>
 
-<p>For more information about these and other features of audio data, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_concepts", "Audio data format and structure")}}.</p>
+<p>For more information about these and other features of audio data, see {{SectionOnPage(/web/media/formats/audio_concepts, "Audio data format and structure")}}.</p>
 
 <h3 id="The_effect_of_codec_configuration_on_encoded_audio_output">The effect of codec configuration on encoded audio output</h3>
 
@@ -156,33 +156,33 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Lossy_vs_lossless_compression">Lossless compression</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Lossy_vs_lossless_compression>Lossless compression</a></th>
    <td>No loss of fidelity</td>
    <td>Unlikely to get more than 40-50% compression</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Lossy_vs_lossless_compression">Lossy compression</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Lossy_vs_lossless_compression>Lossy compression</a></th>
    <td>Always some loss of fidelity; the higher the compression, the more the loss</td>
    <td>Compression of up to 80-95% possible</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Quality">Quality setting</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Quality>Quality setting</a></th>
    <td>The higher the quality, the better the fidelity of the encoded audio</td>
    <td>The higher the fidelity, the larger the resulting file becomes, though the amount of change varies from codec to codec</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Bit_rate">Bit rate</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Bit_rate>Bit rate</a></th>
    <td>The higher the bit rate, the higher the quality can be</td>
    <td>The higher the bit rate, the larger the encoded file is likely to be</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_frequency_bandwidth">Audio frequency bandwidth</a></th>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Audio_frequency_bandwidth>Audio frequency bandwidth</a></th>
    <td>If there is any audio in the removed frequency band(s), there may be a noticeable loss of fidelity</td>
    <td>Removing frequency bands means less data to encode, thus smaller encoded files</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Stereo_coding_method">Stereo coding</a></th>
-   <td>Simple stereo and <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Mid-side_stereo_coding">mid-side stereo coding</a> don't affect quality; <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Intensity_stereo_coding">intensity stereo coding</a> introduces loss of detail, however.</td>
+   <th scope="row"><a href=/web/media/formats/audio_concepts#Stereo_coding_method>Stereo coding</a></th>
+   <td>Simple stereo and <a href=/web/media/formats/audio_concepts#Mid-side_stereo_coding>mid-side stereo coding</a> don't affect quality; <a href=/web/media/formats/audio_concepts#Intensity_stereo_coding>intensity stereo coding</a> introduces loss of detail, however.</td>
    <td>Joint stereo can reduce the size of the encoded audio to some extent</td>
   </tr>
  </tbody>
@@ -303,7 +303,7 @@ tags:
    <td>MP4, ADTS, 3GP</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>Yes</td>
   </tr>
   <tr>
@@ -424,7 +424,7 @@ tags:
    <td>MP4</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>No</td>
   </tr>
   <tr>
@@ -515,7 +515,7 @@ tags:
    <td>AMR, 3GPP</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>No</td>
   </tr>
   <tr>
@@ -606,7 +606,7 @@ tags:
    <td>MP4, Ogg, FLAC</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>No</td>
   </tr>
   <tr>
@@ -696,7 +696,7 @@ tags:
    <td>3GP</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>Yes</td>
   </tr>
   <tr>
@@ -789,7 +789,7 @@ tags:
    <td>3GP, AMR-WB</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>Yes</td>
   </tr>
   <tr>
@@ -890,7 +890,7 @@ tags:
    <td>MPEG-1, MPEG-2, MP4, ADTS, 3GP</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>No</td>
   </tr>
   <tr>
@@ -1071,7 +1071,7 @@ tags:
    <td>Ogg, WebM, MPEG-TS, MP4</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>Yes</td>
   </tr>
   <tr>
@@ -1165,7 +1165,7 @@ tags:
    <td>Ogg, WebM</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
+   <th scope="row">{{Glossary("RTP")}} / <a href=/web/api/webrtc_api>WebRTC</a> compatible</th>
    <td>Yes</td>
   </tr>
   <tr>
@@ -1237,7 +1237,7 @@ tags:
 <p>Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, {{anch("G.722")}}, for example, has 4 ms latency (compared with over 100 ms for MP3), and {{anch("AMR")}}'s latency is around 25 ms.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> For more about WebRTC and the codecs it can use, see <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a>.</p>
+<p><strong>Note:</strong> For more about WebRTC and the codecs it can use, see <a href=/web/media/formats/webrtc_codecs>Codecs used by WebRTC</a>.</p>
 </div>
 
 <p>The codecs generally used on the web that are used for voice-only encoding are G.722 and AMR. AMR is a narrowband codec, encoding only the frequencies between 200 Hz and 3,400 Hz at bit rates typically around 7.4 kbps, while G.722 is a wideband codec that expands the audio bandwidth to 50 Hz to 7,000 Hz at much higher bit rates—usually 64 kbps.</p>
@@ -1280,9 +1280,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Media/Formats/Containers">Media container formats</a></li>
+ <li><a href=/web/media/formats/containers>Media container formats</a></li>
  <li>The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats/Video_codecs">Web video codec guide</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a></li>
+ <li><a href=/web/api/webrtc_api>WebRTC API</a></li>
+ <li><a href=/web/media/formats/video_codecs>Web video codec guide</a></li>
+ <li><a href=/web/media/formats/webrtc_codecs>Codecs used by WebRTC</a></li>
 </ul>

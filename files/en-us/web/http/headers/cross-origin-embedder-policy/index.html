@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP <strong><code>Cross-Origin-Embedder-Policy</code></strong> (COEP) response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using <a href="/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">CORP</a> or <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>).</p>
+<p>The HTTP <strong><code>Cross-Origin-Embedder-Policy</code></strong> (COEP) response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using <a href=/web/http/cross-origin_resource_policy_(corp)>CORP</a> or <a href=/web/http/cors>CORS</a>).</p>
 
 <table class="properties">
  <tbody>
@@ -37,7 +37,7 @@ tags:
  <dd>This is the default value. Allows the document to fetch cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.</dd>
  <dt><code>require-corp</code></dt>
  <dd>A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.<br>
- If a cross origin resource supports CORS, the <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.</dd>
+ If a cross origin resource supports CORS, the <code><a href=/web/html/attributes/crossorigin>crossorigin</a></code> attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -52,7 +52,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 <p>See also the {{HTTPHeader("Cross-Origin-Opener-Policy")}} header which you'll need to set as well.</p>
 
-<p>To check if cross origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
+<p>To check if cross origin isolation has been successful, you can test against the <code><a href=/web/api/windoworworkerglobalscope/crossoriginisolated>crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
 <pre class="brush: js notranslate">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
@@ -62,7 +62,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 <h3 id="Avoiding_COEP_blockage_with_CORS">Avoiding COEP blockage with CORS</h3>
 
-<p>If you enable COEP using <code>require-corp</code> and have a cross origin resource that needs to be loaded, it needs to support <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> attribute for this image from a third-party site:</p>
+<p>If you enable COEP using <code>require-corp</code> and have a cross origin resource that needs to be loaded, it needs to support <a href=/web/http/cors>CORS</a> and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the <code><a href=/web/html/attributes/crossorigin>crossorigin</a></code> attribute for this image from a third-party site:</p>
 
 <pre class="brush: html notranslate">&lt;img src="https://thirdparty.com/img.png" crossorigin&gt;</pre>
 

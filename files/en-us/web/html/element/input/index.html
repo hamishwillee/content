@@ -257,10 +257,10 @@ tags:
 
 <p>The <code>&lt;input&gt;</code> element is so powerful because of its attributes; the {{htmlattrxref("type", "input")}} attribute, described with examples above, being the most important. Since every <code>&lt;input&gt;</code> element, regardless of type, is based on the {{domxref("HTMLInputElement")}} interface, they technically share the exact same set of attributes. However, in reality, most attributes have an effect on only a specific subset of input types. In addition, the way some attributes impact an input depends on the input type, impacting different input types in different ways.</p>
 
-<p>This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with.Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages. This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>. Those with extra importance as it relates to <code>&lt;input&gt;</code> are highlighted.</p>
+<p>This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with.Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages. This element includes the <a href=/web/html/global_attributes>global attributes</a>. Those with extra importance as it relates to <code>&lt;input&gt;</code> are highlighted.</p>
 
 <table class="standard-table">
- <caption>Attributes for the {{htmlelement('input')}} element include <a href="/en-US/docs/Web/HTML/Global_attributes">global HTML attributes</a> and:</caption>
+ <caption>Attributes for the {{htmlelement('input')}} element include <a href=/web/html/global_attributes>global HTML attributes</a> and:</caption>
  <thead>
   <tr>
    <th scope="col">Attribute</th>
@@ -390,12 +390,12 @@ tags:
    <td>Text that appears in the form control when it has no value set</td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></td>
+   <td><a href=/web/html/attributes/readonly>readonly</a></td>
    <td>almost all</td>
    <td>Boolean. The value is not editable</td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></td>
+   <td><a href=/web/html/attributes/required>required</a></td>
    <td>almost all</td>
    <td>Boolean. A value is required or must be check for the form to be submittable</td>
   </tr>
@@ -447,11 +447,11 @@ tags:
  </dd>
  <dt id="htmlattrdefautocomplete">{{htmlattrdef("autocomplete")}}</dt>
  <dd>
- <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.</p>
+ <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href=/web/html/attributes/autocomplete>autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage(/web/html/attributes/autocomplete, "Values")}} for permitted values.</p>
 
  <p>The <code>autocomplete</code> attribute is valid on <code>hidden</code>, <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code>, <code>color</code>, and <code>password</code>. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
 
- <p>See <a href="/en-US/docs/Web/HTML/Attributes/autocomplete">The HTML autocomplete attribute</a> for additional information, including information on password security and how <code>autocomplete</code> is slightly different for <code>hidden</code> than for other input types.</p>
+ <p>See <a href=/web/html/attributes/autocomplete>The HTML autocomplete attribute</a> for additional information, including information on password security and how <code>autocomplete</code> is slightly different for <code>hidden</code> than for other input types.</p>
  </dd>
  <dt id="htmlattrdefautofocus">{{htmlattrdef("autofocus")}}</dt>
  <dd>
@@ -477,7 +477,7 @@ tags:
  </dd>
  <dt id="htmlattrdefchecked">{{htmlattrdef("checked")}}</dt>
  <dd>
- <p>Valid for both <code>radio</code> and <code>checkbox</code> types, <code>checked</code> is a Boolean attribute. If present on a <code>radio</code> type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
+ <p>Valid for both <code>radio</code> and <code>checkbox</code> types, <code>checked</code> is a Boolean attribute. If present on a <code>radio</code> type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href=/web/api/htmlinputelement><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
  <div class="note">
  <p><strong>Note:</strong> Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently <code>checked</code>. If they are, the name and the value(s) of the checked controls are submitted.</p>
@@ -597,13 +597,13 @@ tags:
 
  <p>Per the specifications, the <code>list</code> attribute is not supported by the <code>hidden</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
 
- <p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a {{HTMLElement("select")}} but allows for non-listed values. Check out the <a href="/en-US/docs/Web/HTML/Element/datalist#Browser_compatibility">browser compatibility table</a> for the other input types.</p>
+ <p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a {{HTMLElement("select")}} but allows for non-listed values. Check out the <a href=/web/html/element/datalist#Browser_compatibility>browser compatibility table</a> for the other input types.</p>
 
  <p>See the {{htmlelement('datalist')}} element.</p>
  </dd>
- <dt id="htmlattrdefmax"><a href="/en-US/docs/Web/HTML/Attributes/max">{{htmlattrdef("max")}}</a></dt>
+ <dt id="htmlattrdefmax"><a href=/web/html/attributes/max>{{htmlattrdef("max")}}</a></dt>
  <dd>
- <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
+ <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
 
  <p>There is a special case: if the data type is periodic (such as for dates or times), the value of <code>max</code> may be lower than the value of <code>min</code>, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.</p>
  </dd>
@@ -611,11 +611,11 @@ tags:
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value <code>0</code> or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
- <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the <code>maxlength</code> attribute. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the <code>maxlength</code> attribute. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
  <dt id="htmlattrdefmin">{{htmlattrdef("min")}}</dt>
  <dd>
- <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a number, then the element has no minimum value.</p>
+ <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>min</code> attribute isn't a number, then the element has no minimum value.</p>
 
  <p>This value must be less than or equal to the value of the <code>max</code> attribute. If the <code>min</code> attribute is present but is not specified or is invalid, no <code>min</code> value is applied. If the <code>min</code> attribute is valid and a non-empty value is less than the minimum allowed by the <code>min</code> attribute, constraint validation will prevent form submission. See {{anch("Client-side validation")}} for more information.</p>
 
@@ -625,7 +625,7 @@ tags:
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
- <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
  <dt id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</dt>
  <dd>
@@ -675,7 +675,7 @@ let hatSize = form.elements["hat-size"];
  <dt id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</dt>
  <dd>
  <div id="pattern-include">
- <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+ <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href=/web/javascript/guide/regular_expressions>guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
  <p>If the <code>pattern</code> attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.</p>
 
@@ -691,20 +691,20 @@ let hatSize = form.elements["hat-size"];
  <p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text <em>must not</em> include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".</p>
 
  <div class="note">
- <p><strong>Note:</strong> The <code>placeholder</code> attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels")}} for more information.</p>
+ <p><strong>Note:</strong> The <code>placeholder</code> attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage(/web/html/element/input, "Labels")}} for more information.</p>
  </div>
  </dd>
  <dt id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</dt>
  <dd>
  <p>A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The <code>readonly</code> attribute is supported <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>password</code> input types.</p>
 
- <p>See the <a href="/en-US/docs/Web/HTML/Attributes/readonly">HTML attribute: <code>readonly</code></a> for more information.</p>
+ <p>See the <a href=/web/html/attributes/readonly>HTML attribute: <code>readonly</code></a> for more information.</p>
  </dd>
  <dt id="htmlattrdefrequired">{{htmlattrdef("required")}}</dt>
  <dd>
  <p><code>required</code> is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The <code>required</code> attribute is supported <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, and <code>file</code>.</p>
 
- <p>See {{anch("Client-side validation")}} and the <a href="/en-US/docs/Web/HTML/Attributes/required">HTML attribute: <code>required</code></a> for more information.</p>
+ <p>See {{anch("Client-side validation")}} and the <a href=/web/html/attributes/required>HTML attribute: <code>required</code></a> for more information.</p>
  </dd>
  <dt id="htmlattrdefsize">{{htmlattrdef("size")}}</dt>
  <dd>Valid for <code>email</code>, <code>password</code>, <code>tel</code>, and <code>text</code> <code>input</code> types only. Specifies how much of the input is shown. Basically creates same result as setting CSS <code>width</code> property with a few specialities. The actual unit of the value depends on the input type. For <code>password</code> and <code>text</code>, it is a number of characters (or <code>em</code> units) with a default value of <code>20</code>, and for others, it is <code>pixel</code>s. CSS width takes precedence over size attribute.</dd>
@@ -715,7 +715,7 @@ let hatSize = form.elements["hat-size"];
  <dt id="htmlattrdefstep">{{htmlattrdef("step")}}</dt>
  <dd>
  <div id="step-include">
- <p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
+ <p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href=/web/html/attributes/step>step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
 
  <p>If not explicitly included:</p>
 
@@ -802,17 +802,17 @@ let hatSize = form.elements["hat-size"];
 
 <dl>
  <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</dd>
+ <dd>{{page(/web/html/element/input/text, "autocorrect-include")}}</dd>
  <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "incremental-include")}}</dd>
+ <dd>{{page(/web/html/element/input/search, "incremental-include")}}</dd>
  <dt>{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</dd>
+ <dd>{{page(/web/html/element/input/text, "mozactionhint-include")}}</dd>
  <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/range", "orient-include")}}</dd>
+ <dd>{{page(/web/html/element/input/range, "orient-include")}}</dd>
  <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "results-include")}}</dd>
+ <dd>{{page(/web/html/element/input/search, "results-include")}}</dd>
  <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/file", "webkitdirectory-include")}}</dd>
+ <dd>{{page(/web/html/element/input/file, "webkitdirectory-include")}}</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -871,7 +871,7 @@ let hatSize = form.elements["hat-size"];
   </tr>
   <tr>
    <td>{{Cssxref(":placeholder-shown")}}</td>
-   <td>Element that is currently displaying <a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
+   <td>Element that is currently displaying <a href=/web/html/element/input#attr-placeholder>placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
   </tr>
   <tr>
    <td>{{Cssxref(":default")}}</td>
@@ -940,7 +940,7 @@ let hatSize = form.elements["hat-size"];
 
 <h3 id="Attribute_selectors">Attribute selectors</h3>
 
-<p>It is possible to target different types of form controls based on their {{anch('htmlattrdeftype', 'type')}} using <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">attribute selectors</a>. CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.</p>
+<p>It is possible to target different types of form controls based on their {{anch('htmlattrdeftype', 'type')}} using <a href=/learn/css/building_blocks/selectors/attribute_selectors>attribute selectors</a>. CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.</p>
 
 <pre class="brush: css notranslate">/* matches a password input */
 input[type="password"] {}
@@ -953,7 +953,7 @@ input[min][max] {}
 
 <h3 id="placeholder">::placeholder</h3>
 
-<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Learn/Forms#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
+<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href=/learn/forms#The_placeholder_attribute>placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
 
 <pre class="brush: css no-line-numbers notranslate">::placeholder {
   color: blue;
@@ -993,21 +993,21 @@ input[min][max] {}
 
 <h3 id="object-position_and_object-fit">object-position and object-fit</h3>
 
-<p>In certain cases (typically involving non-textual inputs and specialized interfaces), the <code>&lt;input&gt;</code> element is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>. When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties</p>
+<p>In certain cases (typically involving non-textual inputs and specialized interfaces), the <code>&lt;input&gt;</code> element is a <a href=/web/css/replaced_element>replaced element</a>. When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties</p>
 
 <h3 id="Styling">Styling</h3>
 
 <p>For more information about adding color to elements in HTML, see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a>.</li>
+ <li><a href=/web/html/applying_color>Applying color to HTML elements using CSS</a>.</li>
 </ul>
 
 <p>Also see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">advanced styling for HTML forms</a>, and</li>
- <li>the<a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls"> compatibility table of CSS properties</a>.</li>
+ <li><a href=/learn/forms/styling_web_forms>Styling HTML forms,</a> <a href=/learn/forms/advanced_form_styling>advanced styling for HTML forms</a>, and</li>
+ <li>the<a href=/learn/forms/property_compatibility_table_for_form_controls> compatibility table of CSS properties</a>.</li>
 </ul>
 
 <h2 id="Additional_features">Additional features</h2>
@@ -1050,7 +1050,7 @@ input[min][max] {}
 <h3 id="Client-side_validation">Client-side validation</h3>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
+<p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href=/web/http/status/400><code>400</code> HTTP response</a> if the format is invalid.</p>
 </div>
 
 <p>In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the {{anch('UI pseudo-classes')}} section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.</p>
@@ -1157,7 +1157,7 @@ input[min][max] {}
 
 <h4 id="Example">Example</h4>
 
-<p>If you want to present a custom error message when a field fails to validate, you need to use the <a href="/en-US/docs/Web/API/Constraint_validation#Constraint_validation_interfaces">Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
+<p>If you want to present a custom error message when a field fails to validate, you need to use the <a href=/web/api/constraint_validation#Constraint_validation_interfaces>Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;label for="name"&gt;Enter username (upper and lowercase letters): &lt;/label&gt;
@@ -1223,8 +1223,8 @@ nameInput.addEventListener('invalid', () =&gt; {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
+   <th scope="row"><a href=/web/guide/html/content_categories>Content categories</a></th>
+   <td><a href=/web/guide/html/content_categories#Flow_content>Flow content</a>, listed, submittable, resettable, form-associated element, <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -1236,47 +1236,47 @@ nameInput.addEventListener('invalid', () =&gt; {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
    <td>
     <ul>
-     <li><code>type=button</code>: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
-     <li><code>type=checkbox</code>: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
+     <li><code>type=button</code>: <code><a href=/web/accessibility/aria/roles/button_role>button</a></code></li>
+     <li><code>type=checkbox</code>: <code><a href=/web/accessibility/aria/roles/checkbox_role>checkbox</a></code></li>
      <li><code>type=email</code>
       <ul>
-       <li>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+       <li>with no <code>list</code> attribute: <code><a href=/web/accessibility/aria/roles/textbox_role>textbox</a></code></li>
        <li>with <code>list</code> attribute: {{ARIARole("combobox")}}</li>
       </ul>
      </li>
-     <li><code>type=image</code>: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+     <li><code>type=image</code>: <code><a href=/web/accessibility/aria/roles/button_role>button</a></code></li>
      <li><code>type=number</code>: {{ARIARole("spinbutton")}}</li>
      <li><code>type=radio</code>: {{ARIARole("radio")}}</li>
      <li><code>type=range</code>: {{ARIARole("slider")}}</li>
-     <li><code>type=reset</code>: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+     <li><code>type=reset</code>: <code><a href=/web/accessibility/aria/roles/button_role>button</a></code></li>
      <li><code>type=search</code>
       <ul>
        <li>with no <code>list</code> attribute: {{ARIARole("searchbox")}}</li>
        <li>with <code>list</code> attribute: {{ARIARole("combobox")}}</li>
       </ul>
      </li>
-     <li><code>type=submit</code>: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+     <li><code>type=submit</code>: <code><a href=/web/accessibility/aria/roles/button_role>button</a></code></li>
      <li><code>type=tel</code>
       <ul>
-       <li>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+       <li>with no <code>list</code> attribute: <code><a href=/web/accessibility/aria/roles/textbox_role>textbox</a></code></li>
        <li>with <code>list</code> attribute: {{ARIARole("combobox")}}</li>
       </ul>
      </li>
      <li><code>type=text</code>
       <ul>
-       <li>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+       <li>with no <code>list</code> attribute: <code><a href=/web/accessibility/aria/roles/textbox_role>textbox</a></code></li>
        <li>with <code>list</code> attribute: {{ARIARole("combobox")}}</li>
       </ul>
      </li>
      <li><code>type=url</code>
       <ul>
-       <li>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+       <li>with no <code>list</code> attribute: <code><a href=/web/accessibility/aria/roles/textbox_role>textbox</a></code></li>
        <li>with <code>list</code> attribute: {{ARIARole("combobox")}}</li>
       </ul>
      </li>
@@ -1367,15 +1367,15 @@ nameInput.addEventListener('invalid', () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS property compatibility table</a></li>
+ <li><a href=/web/guide/html/html5/constraint_validation>Form constraint validation</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first HTML form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure an HTML form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>The native form widgets</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
+ <li><a href=/learn/forms/form_validation>Form data validation</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form widgets</a></li>
+ <li><a href=/learn/forms/html_forms_in_legacy_browsers>HTML forms in legacy browsers</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling HTML forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced styling for HTML forms</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>CSS property compatibility table</a></li>
 </ul>

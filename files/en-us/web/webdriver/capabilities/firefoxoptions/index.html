@@ -69,7 +69,7 @@ tags:
  <h5 id="args_array_of_strings"><a id="args"><code>args</code></a> (array of strings)</h5>
  </dt>
  <dd>
- <p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where required, e.g. <code>["<a href="/en-US/docs/Mozilla/Firefox/Headless_mode">-headless</a>"]</code>.</p>
+ <p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where required, e.g. <code>["<a href=/mozilla/firefox/headless_mode>-headless</a>"]</code>.</p>
 
  <p>To have geckodriver pick up an existing <a href="#profile">profile</a> on the local filesystem, you may pass <code>["-profile", "/path/to/profile"]</code>. But if a profile has to be transferred to a target machine it is recommended to use the <code>profile</code> entry.</p>
  </dd>
@@ -79,7 +79,7 @@ tags:
  <dd>Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install extensions or custom certificates, but for setting custom preferences we recommend using the <code>prefs</code> (<a href="#Prefs">Preferences Object</a>) entry instead.</dd>
  <dd>Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when <code>profile</code> is provided. By default geckodriver will create a new profile in this location.</dd>
  <dd>
- <p>The effective profile in use by the WebDriver session is returned to the user in the <code>moz:profile</code> capability in the <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">new session response</a>.</p>
+ <p>The effective profile in use by the WebDriver session is returned to the user in the <code>moz:profile</code> capability in the <a href=/web/webdriver/commands/newsession>new session response</a>.</p>
 
  <p>To have geckodriver pick up an existing profile on the filesystem, please set the <code>args</code> field to <code>{"args": ["-profile", "/path/to/your/profile"]}</code>. Note that if you use a remote client targeting a server on a different system, the profile must already exist on the target system.</p>
  </dd>
@@ -157,7 +157,7 @@ tags:
 
 <h3 id="Preferences_object"><a id="Prefs">Preferences object</a></h3>
 
-<p>A JSON Object with one entry per preference to set. The preference will be written to the <a href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting "<a>about:config</a>" in your Firefox browser. Some of these are documented on the <a href="/en-US/docs/Mozilla/Preferences/Preference_reference">preference reference</a> page.</p>
+<p>A JSON Object with one entry per preference to set. The preference will be written to the <a href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting "<a>about:config</a>" in your Firefox browser. Some of these are documented on the <a href=/mozilla/preferences/preference_reference>preference reference</a> page.</p>
 
 <p>An example of a preference object:</p>
 
@@ -181,7 +181,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following is an example of a full <a href="/en-US/docs/Web/WebDriver/Capabilities">capabilities object</a> that selects a specific Firefox binary to run with a prepared <a href="#profile">profile</a> from the filesystem in <a href="/en-US/docs/Mozilla/Firefox/Headless_mode">headless mode</a>. It also increases the number of IPC processes through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:</p>
+<p>The following is an example of a full <a href=/web/webdriver/capabilities>capabilities object</a> that selects a specific Firefox binary to run with a prepared <a href="#profile">profile</a> from the filesystem in <a href=/mozilla/firefox/headless_mode>headless mode</a>. It also increases the number of IPC processes through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:</p>
 
 <pre class="brush: json notranslate"><span class="p">{</span>
   <span class="s2">"capabilities"</span><span class="p">:</span> <span class="p">{</span>
@@ -203,7 +203,7 @@ tags:
   <span class="p">}</span>
 <span class="p">}</span></pre>
 
-<p><span class="p">The <code><a href="#firefoxOptions">moz:firefoxOptions</a></code> must be placed—as above—inside <code><a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysMatch">alwaysMatch</a></code>, or in one of the </span><code><a href="/en-US/docs/Web/WebDriver/Capabilities#firstMatch">firstMatch</a></code> <a href="/en-US/docs/Web/WebDriver/Capabilities">capabilities objects</a> as seen here:</p>
+<p><span class="p">The <code><a href="#firefoxOptions">moz:firefoxOptions</a></code> must be placed—as above—inside <code><a href=/web/webdriver/capabilities#alwaysMatch>alwaysMatch</a></code>, or in one of the </span><code><a href=/web/webdriver/capabilities#firstMatch>firstMatch</a></code> <a href=/web/webdriver/capabilities>capabilities objects</a> as seen here:</p>
 
 <pre class="brush: json notranslate">{
   "capabilities": {
@@ -242,9 +242,9 @@ tags:
 
 <ul>
  <li><a href="https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example">geckodriver’s documentation on supported Firefox capabilities</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Capabiliites/goog/chromeOptions">Chrome-specific WebDriver capabilities</a> (<code>goog:chromeOptions)</code></li>
- <li><a href="/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>
+ <li><a href=/web/webdriver/capabiliites/goog/chromeoptions>Chrome-specific WebDriver capabilities</a> (<code>goog:chromeOptions)</code></li>
+ <li><a href=/web/webdriver/capabilities>List of WebDriver capabilities</a></li>
+ <li><a href=/web/webdriver/commands/newsession>New Session</a> command</li>
 </ul>
 
 <p>{{QuickLinksWithSubpages}}</p>

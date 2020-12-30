@@ -149,12 +149,12 @@ console.log(newstr);  // Twas the night before Christmas...
 <p>This logs <code>'Twas the night before Christmas...'</code>.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> See <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">this guide</a> for more explanations about regular expressions.</p>
+<p><strong>Note:</strong> See <a href=/web/javascript/guide/regular_expressions>this guide</a> for more explanations about regular expressions.</p>
 </div>
 
 <h3 id="Using_global_and_ignore_with_replace">Using global and ignore with replace()</h3>
 
-<p>Global replace can only be done with a regular expression. In the following example, the regular expression includes the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">global and ignore case flags</a> which permits <code>replace()</code> to replace each occurrence of <code>'apples'</code> in the string with <code>'oranges'</code>.</p>
+<p>Global replace can only be done with a regular expression. In the following example, the regular expression includes the <a href=/web/javascript/guide/regular_expressions#Advanced_searching_with_flags_2>global and ignore case flags</a> which permits <code>replace()</code> to replace each occurrence of <code>'apples'</code> in the string with <code>'oranges'</code>.</p>
 
 <pre class="brush: js notranslate">let re = /apples/gi;
 let str = 'Apples are round, and apples are juicy.';
@@ -166,7 +166,7 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 
 <h3 id="Switching_words_in_a_string">Switching words in a string</h3>
 
-<p>The following script switches the words in the string. For the replacement text, the script uses <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">capturing groups</a> and the <code>$1</code> and <code>$2</code> replacement patterns.</p>
+<p>The following script switches the words in the string. For the replacement text, the script uses <a href=/web/javascript/guide/regular_expressions/groups_and_ranges>capturing groups</a> and the <code>$1</code> and <code>$2</code> replacement patterns.</p>
 
 <pre class="brush: js notranslate">let re = /(\w+)\s(\w+)/;
 let str = 'John Smith';

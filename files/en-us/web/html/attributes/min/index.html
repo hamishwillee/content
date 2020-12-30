@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p><span class="seoSummary">The <strong><code>min</code></strong> attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. This value must be less than or equal to the value of the <code>max</code> attribute. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</span></p>
+<p><span class="seoSummary">The <strong><code>min</code></strong> attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the <code><a href=/web/html/element/input#attr-value>value</a></code> of the element is less than this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. This value must be less than or equal to the value of the <code>max</code> attribute. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</span></p>
 
 <p>Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the <code>min</code> attribute is a number that specifies the most negative value a form control to be considered valid.</p>
 
@@ -53,12 +53,12 @@ tags:
   </tr>
   <tr>
    <td>{{HTMLElement("input/number", "number")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
+   <td><a href=/web/css/number>&lt;number&gt;</a></td>
    <td><code class="brush: html">&lt;input type="number" min="0" step="5" max="100"&gt;</code></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/range", "range")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
+   <td><a href=/web/css/number>&lt;number&gt;</a></td>
    <td><code class="brush: html">&lt;input type="range" min="60" step="5" max="100"&gt;</code></td>
   </tr>
  </tbody>
@@ -68,9 +68,9 @@ tags:
 <p><strong>Note:</strong> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} pseudoclass</p>
 </div>
 
-<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Client-side validation</a> and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.</p>
+<p>See <a href=/web/guide/html/html5/constraint_validation>Client-side validation</a> and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.</p>
 
-<p>For the {{htmlelement('meter')}} element, the <code>min</code> attribute defines the lower numeric bound of the measured range. This must be less than the minimum value (<code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute), if specified. In both cases, if omitted, the value defaults to 1.</p>
+<p>For the {{htmlelement('meter')}} element, the <code>min</code> attribute defines the lower numeric bound of the measured range. This must be less than the minimum value (<code><a href=/web/html/attributes/max>max</a></code> attribute), if specified. In both cases, if omitted, the value defaults to 1.</p>
 
 <table class="standard-table">
  <caption>Syntax for <code>min</code> values for other elements</caption>
@@ -84,7 +84,7 @@ tags:
  <tbody>
   <tr>
    <td>{{HTMLElement("meter")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
+   <td><a href=/web/css/number>&lt;number&gt;</a></td>
    <td><code>&lt;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"&gt; at 40/100&lt;/meter&gt;</code></td>
   </tr>
  </tbody>
@@ -112,7 +112,7 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the min attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
+<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the min attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href=/web/accessibility/aria/aria_techniques/using_the_aria-labelledby_attribute>aria-labelledby</a></code> or <code><a href=/web/accessibility/aria/aria_techniques/using_the_aria-describedby_attribute>aria-describedby</a></code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -145,9 +145,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a></li>
+ <li><a href=/web/html/attributes/step>step</a></li>
+ <li><a href=/web/html/attributes/max>max</a></li>
+ <li><a href=/web/guide/html/html5/constraint_validation>constraint validation</a></li>
  <li>{{domxref('Constraint_validation')}}</li>
  <li>{{domxref('validityState.rangeUnderflow')}}</li>
  <li>{{cssxref(':out-of-range')}}</li>

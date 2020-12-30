@@ -37,7 +37,7 @@ tags:
  <li><code>undefined</code>.</li>
 </ul>
 
-<p>Even though the <code>||</code> operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a <a href="/en-US/docs/Web/JavaScript/Data_structures#Boolean_type">boolean primitive</a>. To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">NOT operator</a> or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.</p>
+<p>Even though the <code>||</code> operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a <a href=/web/javascript/data_structures#Boolean_type>boolean primitive</a>. To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double <a href=/web/javascript/reference/operators/logical_operators#Logical_NOT>NOT operator</a> or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.</p>
 
 <h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
 
@@ -57,7 +57,7 @@ console.log( B() || A() );
 
 <h3 id="Operator_precedence">Operator precedence</h3>
 
-<p>The following expressions might seem equivalent, but they are not, because the <code>&amp;&amp;</code> operator is executed before the <code>||</code> operator (see <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence</a>).</p>
+<p>The following expressions might seem equivalent, but they are not, because the <code>&amp;&amp;</code> operator is executed before the <code>||</code> operator (see <a href=/web/javascript/reference/operators/operator_precedence>operator precedence</a>).</p>
 
 <pre class="brush: js notranslate">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
 (true || false) &amp;&amp; false    // returns false, because operator precedence cannot apply</pre>
@@ -81,7 +81,7 @@ o10 = false || varObject // f || object returns varObject
 </pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If you use this operator to provide a default value to some variable, be aware that any <em>falsy</em> value will not be used. If you only need to filter out {{jsxref("null")}} or {{jsxref("undefined")}}, consider using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">the nullish coalescing operator</a>.</p>
+<p><strong>Note:</strong> If you use this operator to provide a default value to some variable, be aware that any <em>falsy</em> value will not be used. If you only need to filter out {{jsxref("null")}} or {{jsxref("undefined")}}, consider using <a href=/web/javascript/reference/operators/nullish_coalescing_operator>the nullish coalescing operator</a>.</p>
 </div>
 
 <h3 id="Conversion_rules_for_booleans">Conversion rules for booleans</h3>
@@ -140,7 +140,7 @@ o10 = false || varObject // f || object returns varObject
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">The nullish coalescing operator (<code>??</code>)</a></li>
+ <li><a href=/web/javascript/reference/operators/nullish_coalescing_operator>The nullish coalescing operator (<code>??</code>)</a></li>
  <li>{{jsxref("Boolean")}}</li>
  <li>{{Glossary("Truthy")}}</li>
  <li>{{Glossary("Falsy")}}</li>

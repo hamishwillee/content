@@ -39,10 +39,10 @@ tags:
 
 <h2 id="Writing_a_regular_expression_pattern">Writing a regular expression pattern</h2>
 
-<p>A regular expression pattern is composed of simple characters, such as <code>/abc/</code>, or a combination of simple and special characters, such as <code>/ab*c/</code> or <code>/Chapter (\d+)\.\d*/</code>. The last example includes parentheses, which are used as a memory device. The match made with this part of the pattern is remembered for later use, as described in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#Using_groups">Using groups</a>.</p>
+<p>A regular expression pattern is composed of simple characters, such as <code>/abc/</code>, or a combination of simple and special characters, such as <code>/ab*c/</code> or <code>/Chapter (\d+)\.\d*/</code>. The last example includes parentheses, which are used as a memory device. The match made with this part of the pattern is remembered for later use, as described in <a href=/web/javascript/guide/regular_expressions/groups_and_ranges#Using_groups>Using groups</a>.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If you are already familiar with the forms of a regular expression, you may also read <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">the cheatsheet</a> for a quick lookup for a specific pattern/construct.</p>
+<p><strong>Note:</strong> If you are already familiar with the forms of a regular expression, you may also read <a href=/web/javascript/guide/regular_expressions/cheatsheet>the cheatsheet</a> for a quick lookup for a specific pattern/construct.</p>
 </div>
 
 <h3 id="Using_simple_patterns">Using simple patterns</h3>
@@ -56,15 +56,15 @@ tags:
 <p>The following pages provide lists of the different special characters that fit into each category, along with descriptions and examples.</p>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a></dt>
+ <dt><a href=/web/javascript/guide/regular_expressions/assertions>Assertions</a></dt>
  <dd>Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character classes</a></dt>
+ <dt><a href=/web/javascript/guide/regular_expressions/character_classes>Character classes</a></dt>
  <dd>Distinguish different types of characters. For example, distinguishing between letters and digits.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Groups and ranges</a></dt>
+ <dt><a href=/web/javascript/guide/regular_expressions/groups_and_ranges>Groups and ranges</a></dt>
  <dd>Indicate groups and ranges of expression characters.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">Quantifiers</a></dt>
+ <dt><a href=/web/javascript/guide/regular_expressions/quantifiers>Quantifiers</a></dt>
  <dd>Indicate numbers of characters or expressions to match.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a></dt>
+ <dt><a href=/web/javascript/guide/regular_expressions/unicode_property_escapes>Unicode property escapes</a></dt>
  <dd>Distinguish based on unicode character properties, for example, upper- and lower-case letters, math symbols, and punctuation.</dd>
 </dl>
 
@@ -82,36 +82,36 @@ tags:
   <tr>
    <td><code>\</code>, <code>.</code>, <code>\cX</code>, <code>\d</code>, <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>, <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>, <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>, <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code></td>
    <td>
-    <p><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character classes</a></p>
+    <p><a href=/web/javascript/guide/regular_expressions/character_classes>Character classes</a></p>
    </td>
   </tr>
   <tr>
    <td><code>^</code>, <code>$</code>, <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&lt;=y)x</code>, <code>(?&lt;!y)x</code>, <code>\b</code>, <code>\B</code></td>
    <td>
-    <p><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a></p>
+    <p><a href=/web/javascript/guide/regular_expressions/assertions>Assertions</a></p>
    </td>
   </tr>
   <tr>
    <td><code>(x)</code>, <code>(?:x)</code>, <code>(?&lt;Name&gt;x)</code>, <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>, <code>\<em>Number</em></code></td>
    <td>
-    <p><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Groups and ranges</a></p>
+    <p><a href=/web/javascript/guide/regular_expressions/groups_and_ranges>Groups and ranges</a></p>
    </td>
   </tr>
   <tr>
    <td><code>*</code>, <code>+</code>, <code>?</code>, <code>x{<em>n</em>}</code>, <code>x{<em>n</em>,}</code>, <code>x{<em>n</em>,<em>m</em>}</code></td>
    <td>
-    <p><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">Quantifiers</a></p>
+    <p><a href=/web/javascript/guide/regular_expressions/quantifiers>Quantifiers</a></p>
    </td>
   </tr>
   <tr>
    <td><code>\p{<em>UnicodeProperty</em>}</code>, <code>\P{<em>UnicodeProperty</em>}</code></td>
-   <td><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a></td>
+   <td><a href=/web/javascript/guide/regular_expressions/unicode_property_escapes>Unicode property escapes</a></td>
   </tr>
  </tbody>
 </table>
 
 <div class="notecard note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">A larger cheatsheet is also available</a> (only aggregating parts of those individual articles).</p>
+<p><strong>Note:</strong> <a href=/web/javascript/guide/regular_expressions/cheatsheet>A larger cheatsheet is also available</a> (only aggregating parts of those individual articles).</p>
 </div>
 
 <h3 id="Escaping">Escaping</h3>
@@ -131,17 +131,17 @@ tags:
 }
 </pre>
 
-<p>The "g" after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches. It is explained in detail below in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">Advanced Searching With Flags</a>.</p>
+<p>The "g" after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches. It is explained in detail below in <a href=/web/javascript/guide/regular_expressions#Advanced_searching_with_flags>Advanced Searching With Flags</a>.</p>
 
 <p><em>Why isn't this built into JavaScript?</em> There is a proposal to add such a function to RegExp, but it was <a href="https://github.com/benjamingr/RegExp.escape/issues/37">rejected by TC39.</a></p>
 
 <h3 id="Using_parentheses">Using parentheses</h3>
 
-<p>Parentheses around any part of the regular expression pattern causes that part of the matched substring to be remembered. Once remembered, the substring can be recalled for other use. See <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#Using_groups">Groups and ranges</a> for more details.</p>
+<p>Parentheses around any part of the regular expression pattern causes that part of the matched substring to be remembered. Once remembered, the substring can be recalled for other use. See <a href=/web/javascript/guide/regular_expressions/groups_and_ranges#Using_groups>Groups and ranges</a> for more details.</p>
 
 <h2 id="Using_regular_expressions_in_JavaScript">Using regular expressions in JavaScript</h2>
 
-<p>Regular expressions are used with the <code>RegExp</code> methods <code>test()</code> and <code>exec()</code> and with the <code>String</code> methods <code>match()</code>, <code>replace()</code>, <code>search()</code>, and <code>split()</code>. These methods are explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">JavaScript reference</a>.</p>
+<p>Regular expressions are used with the <code>RegExp</code> methods <code>test()</code> and <code>exec()</code> and with the <code>String</code> methods <code>match()</code>, <code>replace()</code>, <code>search()</code>, and <code>split()</code>. These methods are explained in detail in the <a href=/web/javascript/reference title="en-US/docs/JavaScript/Reference">JavaScript reference</a>.</p>
 
 <table class="standard-table">
  <caption>Methods that use regular expressions</caption>
@@ -295,32 +295,32 @@ console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
   <tr>
    <td><code>g</code></td>
    <td>Global search.</td>
-   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global">RegExp.prototype.global</a></code></td>
+   <td><code><a href=/web/javascript/reference/global_objects/regexp/global>RegExp.prototype.global</a></code></td>
   </tr>
   <tr>
    <td><code>i</code></td>
    <td>Case-insensitive search.</td>
-   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase">RegExp.prototype.ignoreCase</a></code></td>
+   <td><code><a href=/web/javascript/reference/global_objects/regexp/ignorecase>RegExp.prototype.ignoreCase</a></code></td>
   </tr>
   <tr>
    <td><code>m</code></td>
    <td>Multi-line search.</td>
-   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline">RegExp.prototype.multiline</a></code></td>
+   <td><code><a href=/web/javascript/reference/global_objects/regexp/multiline>RegExp.prototype.multiline</a></code></td>
   </tr>
   <tr>
    <td><code>s</code></td>
    <td>Allows <code>.</code> to match newline characters.</td>
-   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll">RegExp.prototype.dotAll</a></code></td>
+   <td><code><a href=/web/javascript/reference/global_objects/regexp/dotall>RegExp.prototype.dotAll</a></code></td>
   </tr>
   <tr>
    <td><code>u</code></td>
    <td>"unicode"; treat a pattern as a sequence of unicode code points.</td>
-   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">RegExp.prototype.unicode</a></code></td>
+   <td><code><a href=/web/javascript/reference/global_objects/regexp/unicode>RegExp.prototype.unicode</a></code></td>
   </tr>
   <tr>
    <td><code>y</code></td>
    <td>Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}.</td>
-   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky">RegExp.prototype.sticky</a></code></td>
+   <td><code><a href=/web/javascript/reference/global_objects/regexp/sticky>RegExp.prototype.sticky</a></code></td>
   </tr>
  </tbody>
 </table>
@@ -376,7 +376,7 @@ console.log(myArray);
 
 <ul>
  <li>The reference pages for {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}</li>
- <li>This guide articles': <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character classes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">assertions</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups and ranges</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">quantifiers</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a></li>
+ <li>This guide articles': <a href=/web/javascript/guide/regular_expressions/character_classes>character classes</a>, <a href=/web/javascript/guide/regular_expressions/assertions>assertions</a>, <a href=/web/javascript/guide/regular_expressions/groups_and_ranges>groups and ranges</a>, <a href=/web/javascript/guide/regular_expressions/quantifiers>quantifiers</a>, <a href=/web/javascript/guide/regular_expressions/unicode_property_escapes>Unicode property escapes</a></li>
 </ul>
 </div>
 

@@ -17,7 +17,7 @@ tags:
 <p>Browsers block frontend JavaScript code from accessing the <code>Set Cookie</code> header, as required by the Fetch spec, which defines <code>Set-Cookie</code> as a <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</a> that <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</a> from any response exposed to frontend code.</p>
 </div>
 
-<p>For more information, see the guide on <a href="/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a>.</p>
+<p>For more information, see the guide on <a href=/web/http/cookies>Using HTTP cookies</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -92,7 +92,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>A path that must exist in the requested URL, or the browser won't send the <code>Cookie</code> header.</dd>
  <dd>The forward slash (<code>/</code>) character is interpreted as a directory separator, and subdirectories will be matched as well: for <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, and <code>/docs/Web/HTTP</code> will all match.</dd>
  <dt id="Secure"><code>Secure</code> {{optional_inline}}</dt>
- <dd>Cookie is only sent to the server when a request is made with the <code>https:</code> scheme (except on localhost), and therefore is more resistent to <a href="/en-US/docs/Glossary/MitM">man-in-the-middle</a> attacks.
+ <dd>Cookie is only sent to the server when a request is made with the <code>https:</code> scheme (except on localhost), and therefore is more resistent to <a href=/glossary/mitm>man-in-the-middle</a> attacks.
  <p class="note"><strong>Note:</strong> Do not assume that <code>Secure</code> prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified with access to the client's hard disk, or from JavaScript if the <code>HttpOnly</code> cookie attribute is not set.</p>
 
  <p class="note"><strong>Note:</strong> Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
@@ -103,7 +103,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>Controls whether a cookie is sent with cross-origin requests, providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</dd>
  <dd>
  <div class="note">
- <p>Standards related to the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed such that:</p>
+ <p>Standards related to the <a href=/web/http/headers/set-cookie/samesite>SameSite Cookies</a> recently changed such that:</p>
 
  <ol>
   <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
@@ -111,7 +111,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
    also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
  </ol>
 
- <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
+ <p>The options below covers the new behavior. See the <a href=/web/http/headers/set-cookie/samesite#Browser_compatibility>Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
  </div>
  Inline options are:
 
@@ -215,8 +215,8 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a></li>
+ <li><a href=/web/http/cookies>HTTP cookies</a></li>
  <li>{{HTTPHeader("Cookie")}}</li>
  <li>{{domxref("Document.cookie")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite cookies</a></li>
+ <li><a href=/web/http/headers/set-cookie/samesite>SameSite cookies</a></li>
 </ul>

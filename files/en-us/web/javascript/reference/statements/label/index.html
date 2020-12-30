@@ -37,7 +37,7 @@ tags:
 
 <p>Note that JavaScript has <em>no</em> <code>goto</code> statement, you can only use labels with <code>break</code> or <code>continue</code>.</p>
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> code, you can't use "<code>let</code>" as a label name. It will throw a {{jsxref("SyntaxError")}} (let is a reserved identifier).</p>
+<p>In <a href=/web/javascript/reference/strict_mode>strict mode</a> code, you can't use "<code>let</code>" as a label name. It will throw a {{jsxref("SyntaxError")}} (let is a reserved identifier).</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -146,13 +146,13 @@ console.log('swap');
 
 <pre class="brush: js notranslate">L: function F() {}</pre>
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> code, however, this will throw a {{jsxref("SyntaxError")}}:</p>
+<p>In <a href=/web/javascript/reference/strict_mode>strict mode</a> code, however, this will throw a {{jsxref("SyntaxError")}}:</p>
 
 <pre class="brush: js notranslate">'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled</pre>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generator functions</a> can neither be labeled in strict code, nor in non-strict code:</p>
+<p><a href=/web/javascript/reference/statements/function*>Generator functions</a> can neither be labeled in strict code, nor in non-strict code:</p>
 
 <pre class="brush: js notranslate">L: function* F() {}
 // SyntaxError: generator functions cannot be labelled

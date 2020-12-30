@@ -26,12 +26,12 @@ typeof(<var>operand</var>)
 
 <dl>
  <dt><code><var>operand</var></code></dt>
- <dd>An expression representing the object or <a href="/en-US/docs/Glossary/Primitive">primitive</a> whose type is to be returned.</dd>
+ <dd>An expression representing the object or <a href=/glossary/primitive>primitive</a> whose type is to be returned.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>The following table summarizes the possible return values of <code>typeof</code>. For more information about types and primitives, see also the <a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data structure</a> page.</p>
+<p>The following table summarizes the possible return values of <code>typeof</code>. For more information about types and primitives, see also the <a href=/web/javascript/data_structures>JavaScript data structure</a> page.</p>
 
 <table class="standard-table">
  <thead>
@@ -42,35 +42,35 @@ typeof(<var>operand</var>)
  </thead>
  <tbody>
   <tr>
-   <td><a href="/en-US/docs/Glossary/Undefined">Undefined</a></td>
+   <td><a href=/glossary/undefined>Undefined</a></td>
    <td><code>"undefined"</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/Null">Null</a></td>
+   <td><a href=/glossary/null>Null</a></td>
    <td><code>"object"</code> (see <a href="#typeof_null">below</a>)</td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/Boolean">Boolean</a></td>
+   <td><a href=/glossary/boolean>Boolean</a></td>
    <td><code>"boolean"</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/Number">Number</a></td>
+   <td><a href=/glossary/number>Number</a></td>
    <td><code>"number"</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/BigInt">BigInt</a> (new in ECMAScript 2020)</td>
+   <td><a href=/glossary/bigint>BigInt</a> (new in ECMAScript 2020)</td>
    <td><code>"bigint"</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/String">String</a></td>
+   <td><a href=/glossary/string>String</a></td>
    <td><code>"string"</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/Symbol">Symbol</a> (new in ECMAScript 2015)</td>
+   <td><a href=/glossary/symbol>Symbol</a> (new in ECMAScript 2015)</td>
    <td><code>"symbol"</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Glossary/Function">Function</a> object (implements [[Call]] in ECMA-262 terms)</td>
+   <td><a href=/glossary/function>Function</a> object (implements [[Call]] in ECMA-262 terms)</td>
    <td><code>"function"</code></td>
   </tr>
   <tr>
@@ -129,7 +129,7 @@ typeof undeclaredVariable === 'undefined';
 // Objects
 typeof {a: 1} === 'object';
 
-// use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">Array.isArray</a> or Object.prototype.toString.call
+// use <a href=/web/javascript/reference/global_objects/array/isarray>Array.isArray</a> or Object.prototype.toString.call
 // to differentiate regular objects from arrays
 typeof [1, 2, 4] === 'object';
 
@@ -189,7 +189,7 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1</pre>
 
 <p>Before ECMAScript 2015, <code>typeof</code> was always guaranteed to return a string for any operand it was supplied with. Even with undeclared identifiers, <code>typeof</code> will return <code>'undefined'</code>. Using <code>typeof</code> could never generate an error.</p>
 
-<p>But with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and {{JSxRef("Statements/const")}} using <code>typeof</code> on <code>let</code> and <code>const</code> variables (or using <code>typeof</code> on a <code>class</code>) in a block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#The_temporal_dead_zone_and_typeof">temporal dead zone</a>" from the start of the block until the initialization is processed, during which, it will throw an error if accessed.</p>
+<p>But with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and {{JSxRef("Statements/const")}} using <code>typeof</code> on <code>let</code> and <code>const</code> variables (or using <code>typeof</code> on a <code>class</code>) in a block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a "<a href=/web/javascript/reference/statements/let#The_temporal_dead_zone_and_typeof>temporal dead zone</a>" from the start of the block until the initialization is processed, during which, it will throw an error if accessed.</p>
 
 <pre class="brush: js; no-line-numbers notranslate">typeof undeclaredVariable === 'undefined';
 
@@ -203,7 +203,7 @@ class newClass{};</pre>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p>All current browsers expose a non-standard host object <a href="/en-US/docs/Web/API/Document/all" title="The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page."><code>document.all</code></a> with type <code>undefined</code>.</p>
+<p>All current browsers expose a non-standard host object <a href=/web/api/document/all title="The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page."><code>document.all</code></a> with type <code>undefined</code>.</p>
 
 <pre class="brush: js; no-line-numbers notranslate">typeof document.all === 'undefined';</pre>
 

@@ -26,7 +26,7 @@ tags:
 
 <dl>
  <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> code point value.
+ <dd>Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's <a href=/web/javascript/guide/values,_variables,_and_literals#Unicode>Unicode</a> code point value.
  <dl>
   <dt><code>firstEl</code></dt>
   <dd>The first element for comparison.</dd>
@@ -191,7 +191,7 @@ items.sort(function (a, b) {
 
 <h3 id="Sorting_with_map">Sorting with map</h3>
 
-<p>The <code>compareFunction</code> can be invoked multiple times per element within the array. Depending on the <code>compareFunction</code>'s nature, this may yield a high overhead. The more work a <code>compareFunction</code> does and the more elements there are to sort, it may be more efficient to use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> for sorting. The idea is to traverse the array once to extract the actual values used for sorting into a temporary array, sort the temporary array, and then traverse the temporary array to achieve the right order.</p>
+<p>The <code>compareFunction</code> can be invoked multiple times per element within the array. Depending on the <code>compareFunction</code>'s nature, this may yield a high overhead. The more work a <code>compareFunction</code> does and the more elements there are to sort, it may be more efficient to use <a href=/web/javascript/reference/global_objects/array/map>map</a> for sorting. The idea is to traverse the array once to extract the actual values used for sorting into a temporary array, sort the temporary array, and then traverse the temporary array to achieve the right order.</p>
 
 <pre class="brush: js notranslate">// the array to be sorted
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];

@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary">The static <code><strong>import</strong></code> statement is used to import read only live bindings which are <a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">exported</a> by another module. </span>Imported modules are in {{JSxRef("Strict_mode","strict mode")}} whether you declare them as such or not. The <code>import</code> statement cannot be used in embedded scripts unless such script has a <code>type="module"</code>. Bindings imported are called live bindings because they are updated by the module that exported the binding.</p>
+<p><span class="seoSummary">The static <code><strong>import</strong></code> statement is used to import read only live bindings which are <a href=/web/javascript/reference/statements/export>exported</a> by another module. </span>Imported modules are in {{JSxRef("Strict_mode","strict mode")}} whether you declare them as such or not. The <code>import</code> statement cannot be used in embedded scripts unless such script has a <code>type="module"</code>. Bindings imported are called live bindings because they are updated by the module that exported the binding.</p>
 
 <p>There is also a function-like dynamic <code><strong>import()</strong></code>, which does not require scripts of <code>type="module"</code>.</p>
 
@@ -147,7 +147,7 @@ var promise = import("<em>module-name</em>");
  <li>When the module being imported has side effects, and you do not want those side effects unless some condition is true. (It is recommended not to have any side effects in a module, but you sometimes cannot control this in your module dependencies.)</li>
 </ul>
 
-<p>Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and <a href="/en-US/docs/Glossary/Tree_shaking">tree shaking</a>.</p>
+<p>Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and <a href=/glossary/tree_shaking>tree shaking</a>.</p>
 
 <p>To dynamically import a module, the <code>import</code> keyword may be called as a function. When used this way, it returns a promise.</p>
 
@@ -241,7 +241,7 @@ for (const link of document.querySelectorAll("nav &gt; a")) {
 
 <ul>
  <li>{{JSxRef("Statements/export", "export")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta"><code>import.meta</code></a></li>
+ <li><a href=/web/javascript/reference/statements/import.meta><code>import.meta</code></a></li>
  <li>Limin Zhu, Brian Terlson and Microsoft Edge Team: <a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
  <li>Hacks blog post by Jason Orendorff: <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></li>
  <li>Hacks blog post by Lin Clark: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a></li>

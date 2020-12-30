@@ -22,7 +22,7 @@ tags:
 
 <dl>
  <dt><em>bufferSource</em></dt>
- <dd>A <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> containing the binary code of the .wasm module you want to compile.</dd>
+ <dd>A <a href=/web/javascript/typed_arrays>typed array</a> or <a href=/web/javascript/reference/global_objects/arraybuffer>ArrayBuffer</a> containing the binary code of the .wasm module you want to compile.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -32,7 +32,7 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li>If <code>bufferSource</code> is not a <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, a {{jsxref("TypeError")}} is thrown.</li>
+ <li>If <code>bufferSource</code> is not a <a href=/web/javascript/typed_arrays>typed array</a>, a {{jsxref("TypeError")}} is thrown.</li>
  <li>If compilation fails, the promise rejects with a {{jsxref("WebAssembly.CompileError")}}.</li>
 </ul>
 
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="Using_compile">Using compile</h3>
 
-<p>The following example compiles the loaded simple.wasm byte code using the <code>compile()</code> function and then sends it to a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> using <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>.</p>
+<p>The following example compiles the loaded simple.wasm byte code using the <code>compile()</code> function and then sends it to a <a href=/web/api/web_workers_api>worker</a> using <a href=/web/api/worker/postmessage>postMessage()</a>.</p>
 
 <pre class="brush: js">var worker = new Worker("wasm_worker.js");
 
@@ -81,7 +81,7 @@ fetch('simple.wasm').then(response =&gt;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
+ <li><a href=/webassembly>WebAssembly</a> overview page</li>
+ <li><a href=/webassembly/concepts>WebAssembly concepts</a></li>
+ <li><a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a></li>
 </ul>

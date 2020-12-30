@@ -9,28 +9,28 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>WebAssembly.Memory</strong></code> object is a resizable {{jsxref("ArrayBuffer")}} or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code> that holds the raw bytes of memory accessed by a WebAssembly <code>Instance</code>.</p>
+<p>The <code><strong>WebAssembly.Memory</strong></code> object is a resizable {{jsxref("ArrayBuffer")}} or <code><a href=/web/javascript/reference/global_objects/sharedarraybuffer>SharedArrayBuffer</a></code> that holds the raw bytes of memory accessed by a WebAssembly <code>Instance</code>.</p>
 
 <p>A memory created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory"><code>WebAssembly.Memory()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/webassembly/memory/memory><code>WebAssembly.Memory()</code></a></dt>
  <dd>Creates a new <code>Memory</code> object.</dd>
 </dl>
 
 <h2 id="Instance_properties">Instance properties</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer"><code>Memory.prototype.buffer</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/webassembly/memory/buffer><code>Memory.prototype.buffer</code></a></dt>
  <dd>An accessor property that returns the buffer contained in the memory.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow"><code>Memory.prototype.grow()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/webassembly/memory/grow><code>Memory.prototype.grow()</code></a></dt>
  <dd>Increases the size of the memory instance by a specified number of WebAssembly pages (each one is 64KB in size).</dd>
 </dl>
 
@@ -38,7 +38,7 @@ tags:
 
 <h3 id="Creating_a_new_Memory_object">Creating a new Memory object</h3>
 
-<p>There are two ways to get a <code>WebAssembly.Memory</code> object. The first way is to construct it from JavaScript. The following snippet creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). Its <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">buffer</a></code> property will return an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.</p>
+<p>There are two ways to get a <code>WebAssembly.Memory</code> object. The first way is to construct it from JavaScript. The following snippet creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). Its <code><a href=/web/javascript/reference/global_objects/webassembly/memory/buffer>buffer</a></code> property will return an <code><a href=/web/javascript/reference/global_objects/arraybuffer>ArrayBuffer</a></code>.</p>
 
 <pre class="brush: js notranslate">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
@@ -64,11 +64,11 @@ tags:
 
 <h3 id="Creating_a_shared_memory">Creating a shared memory</h3>
 
-<p>By default, WebAssembly memories are unshared. You can create a <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared memory</a> by passing <code>shared: true</code> in the constructor's initialization object:</p>
+<p>By default, WebAssembly memories are unshared. You can create a <a href=/webassembly/understanding_the_text_format#Shared_memories>shared memory</a> by passing <code>shared: true</code> in the constructor's initialization object:</p>
 
 <pre class="notranslate">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared: true});</pre>
 
-<p>This memory's <code>buffer</code> property will return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>.</p>
+<p>This memory's <code>buffer</code> property will return a <code><a href=/web/javascript/reference/global_objects/sharedarraybuffer>SharedArrayBuffer</a></code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -95,7 +95,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
+ <li><a href=/webassembly>WebAssembly</a> overview page</li>
+ <li><a href=/webassembly/concepts>WebAssembly concepts</a></li>
+ <li><a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a></li>
 </ul>

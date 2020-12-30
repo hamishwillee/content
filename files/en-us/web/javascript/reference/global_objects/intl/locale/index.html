@@ -30,36 +30,36 @@ tags:
 <h2 id="Instance_properties">Instance properties</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName"><code>Intl.Locale.prototype.baseName</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/basename><code>Intl.Locale.prototype.baseName</code></a></dt>
  <dd>Returns basic, core information about the <code>Locale</code> in the form of a substring of the complete data string.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar"><code>Intl.Locale.prototype.calendar</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/calendar><code>Intl.Locale.prototype.calendar</code></a></dt>
  <dd>Returns the part of the <code>Locale</code> that indicates the Locale's calendar era.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst"><code>Intl.Locale.prototype.caseFirst</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/casefirst><code>Intl.Locale.prototype.caseFirst</code></a></dt>
  <dd>Returns whether case is taken into account for the locale's collation rules.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation"><code>Intl.Locale.prototype.collation</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/collation><code>Intl.Locale.prototype.collation</code></a></dt>
  <dd>Returns the collation type for the <code>Locale</code>, which is used to order strings according to the locale's rules.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle"><code>Intl.Locale.prototype.hourCycle</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/hourcycle><code>Intl.Locale.prototype.hourCycle</code></a></dt>
  <dd>Returns the time keeping format convention used by the locale.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language"><code>Intl.Locale.prototype.language</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/language><code>Intl.Locale.prototype.language</code></a></dt>
  <dd>Returns the language associated with the locale.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem"><code>Intl.Locale.prototype.numberingSystem</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/numberingsystem><code>Intl.Locale.prototype.numberingSystem</code></a></dt>
  <dd>Returns the numeral system used by the locale.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric"><code>Intl.Locale.prototype.numeric</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/numeric><code>Intl.Locale.prototype.numeric</code></a></dt>
  <dd>Returns whether the locale has special collation handling for numeric characters.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region"><code>Intl.Locale.prototype.region</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/region><code>Intl.Locale.prototype.region</code></a></dt>
  <dd>Returns the region of the world (usually a country) associated with the locale.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script"><code>Intl.Locale.prototype.script</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/script><code>Intl.Locale.prototype.script</code></a></dt>
  <dd>Returns the script used for writing the particular language used in the locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize"><code>Intl.Locale.prototype.maximize()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/maximize><code>Intl.Locale.prototype.maximize()</code></a></dt>
  <dd>Gets the most likely values for the language, script, and region of the locale based on existing values.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize"><code>Intl.Locale.prototype.minimize()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/minimize><code>Intl.Locale.prototype.minimize()</code></a></dt>
  <dd>Gets the most likely values for the language, script, and region of the locale based on existing values.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString"><code>Intl.Locale.prototype.toString()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/intl/locale/tostring><code>Intl.Locale.prototype.toString()</code></a></dt>
  <dd>Returns the Locale's full locale identifier string.</dd>
 </dl>
 
@@ -73,7 +73,7 @@ tags:
 
 <h3 id="Using_the_Locale_constructor_with_an_options_object">Using the Locale constructor with an options object</h3>
 
-<p>The constructor also takes an optional configuration object argument, which can contain any of several extension types. For example, set the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle">hourCycle</a></code> property of the configuration object to your desired hour cycle type, and then pass it into the constructor:</p>
+<p>The constructor also takes an optional configuration object argument, which can contain any of several extension types. For example, set the <code><a href=/web/javascript/reference/global_objects/intl/locale/hourcycle>hourCycle</a></code> property of the configuration object to your desired hour cycle type, and then pass it into the constructor:</p>
 
 <pre class="brush: js">let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
 console.log(us12hour.hourCycle); // Prints "h12"</pre>

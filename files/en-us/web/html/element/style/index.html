@@ -22,21 +22,21 @@ tags:
 
 <p>If you include multiple <code>&lt;style&gt;</code> and <code>&lt;link&gt;</code> elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.</p>
 
-<p>In the same manner as <code>&lt;link&gt;</code> elements, <code>&lt;style&gt;</code> elements can include <code>media</code> attributes that contain <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.</p>
+<p>In the same manner as <code>&lt;link&gt;</code> elements, <code>&lt;style&gt;</code> elements can include <code>media</code> attributes that contain <a href=/web/css/media_queries>media queries</a>, allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.</p>
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element includes the <a href=/web/html/global_attributes>global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("type")}}</dt>
  <dd>This attribute defines the styling language as a MIME type (charset should not be specified). This attribute is optional and defaults to <code>text/css</code> if it is not specified; values other than the empty string or <code>text/css</code> are not used. <strong>Note:</strong> There is very little reason to include this attribute in modern web documents.</dd>
  <dt>{{htmlattrdef("media")}}</dt>
- <dd>This attribute defines which media the style should be applied to. Its value is a <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a>, which defaults to <code>all</code> if the attribute is missing.</dd>
+ <dd>This attribute defines which media the style should be applied to. Its value is a <a href=/web/css/media_queries/using_media_queries>media query</a>, which defaults to <code>all</code> if the attribute is missing.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>A cryptographic nonce (number used once) used to whitelist inline styles in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src">style-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource’s policy is otherwise trivial.</dd>
+ <dd>A cryptographic nonce (number used once) used to whitelist inline styles in a <a href=/web/http/headers/content-security-policy/style-src>style-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource’s policy is otherwise trivial.</dd>
  <dt>{{htmlattrdef("title")}}</dt>
- <dd>This attribute specifies <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">alternative style sheet</a> sets.</dd>
+ <dd>This attribute specifies <a href=/web/css/alternative_style_sheets>alternative style sheet</a> sets.</dd>
 </dl>
 
 <h3 id="Deprecated_attributes">Deprecated attributes</h3>
@@ -76,7 +76,7 @@ tags:
 
 <h3 id="Multiple_style_elements">Multiple style elements</h3>
 
-<p>In this example we've included two <code>&lt;style&gt;</code> elements — notice how the conflicting declarations in the later <code>&lt;style&gt;</code> element override those in the earlier one, if they have equal <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>.</p>
+<p>In this example we've included two <code>&lt;style&gt;</code> elements — notice how the conflicting declarations in the later <code>&lt;style&gt;</code> element override those in the earlier one, if they have equal <a href=/web/css/specificity>specificity</a>.</p>
 
 <pre class="brush:html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -137,8 +137,8 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">Metadata content</a>, and if the <code>scoped</code> attribute is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <th><a href=/web/guide/html/content_categories>Content categories</a></th>
+   <td><a href=/web/guide/html/content_categories#Metadata_content>Metadata content</a>, and if the <code>scoped</code> attribute is present: <a href=/web/guide/html/content_categories#Flow_content>flow content</a>.</td>
   </tr>
   <tr>
    <th>Permitted content</th>
@@ -150,7 +150,7 @@ tags:
   </tr>
   <tr>
    <th>Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">metadata content</a>.</td>
+   <td>Any element that accepts <a href=/web/guide/html/content_categories#Metadata_content>metadata content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -202,5 +202,5 @@ tags:
 
 <ul>
  <li>The {{HTMLElement("link")}} element, which allows us to apply external stylesheets to a document.</li>
- <li><a href="/en-US/docs/Web/CSS/Alternative_style_sheets">Alternative Style Sheets</a></li>
+ <li><a href=/web/css/alternative_style_sheets>Alternative Style Sheets</a></li>
 </ul>

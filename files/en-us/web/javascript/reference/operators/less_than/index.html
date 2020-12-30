@@ -22,7 +22,7 @@ tags:
 <p>The operands are compared using the <a href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">Abstract Relational Comparison</a> algorithm, which is roughly summarised below:</p>
 
 <ul>
- <li>First, objects are converted to primitives using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
+ <li>First, objects are converted to primitives using <code><a href=/web/javascript/reference/global_objects/symbol/toprimitive>Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
  <li>If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.</li>
  <li>Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   <ul>
@@ -32,7 +32,7 @@ tags:
    <li>Strings are converted based on the values they contain, and are converted as <code>NaN</code> if they do not contain numeric values.</li>
   </ul>
  </li>
- <li>If either value is <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>, the operator returns <code>false</code>.</li>
+ <li>If either value is <code><a href=/web/javascript/reference/global_objects/nan>NaN</a></code>, the operator returns <code>false</code>.</li>
  <li>Otherwise the values are compared as numeric values.</li>
 </ul>
 
@@ -104,7 +104,7 @@ console.log(NaN &lt; 3);          // false</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal operator</a></li>
+ <li><a href=/web/javascript/reference/operators/greater_than>Greater than operator</a></li>
+ <li><a href=/web/javascript/reference/operators/greater_than_or_equal>Greater than or equal operator</a></li>
+ <li><a href=/web/javascript/reference/operators/less_than_or_equal>Less than or equal operator</a></li>
 </ul>

@@ -48,9 +48,9 @@ Access-Control-Expose-Headers: *
 
 <dl>
  <dt>&lt;header-name&gt;</dt>
- <dd>A list of exposed headers consisting of zero or more <a href="/en-US/docs/Web/HTTP/Headers">header names</a> other than the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} that the resource might use and can be exposed.</dd>
+ <dd>A list of exposed headers consisting of zero or more <a href=/web/http/headers>header names</a> other than the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} that the resource might use and can be exposed.</dd>
  <dt><code>*</code> (wildcard)</dt>
- <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics.<br>
+ <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href=/web/http/cookies>HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics.<br>
  Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
 </dl>
 

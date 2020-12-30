@@ -37,13 +37,13 @@ tags:
 
 <h2 id="Executing_commands">Executing commands</h2>
 
-<p>When an HTML element has <code>contenteditable</code> set to <code>true</code>, the {{ domxref("document.execCommand()") }} method is made available. This lets you run <a href="/en-US/docs/Web/API/document.execCommand#Commands">commands</a> to manipulate the contents of the editable region. Most commands affect the document's selection by, for example, applying a style to the text (bold, italics, etc), while others insert new elements (like adding a link) or affect an entire line (indenting). When using <code>contentEditable</code>, calling <code>execCommand()</code> will affect the currently active editable element.</p>
+<p>When an HTML element has <code>contenteditable</code> set to <code>true</code>, the {{ domxref("document.execCommand()") }} method is made available. This lets you run <a href=/web/api/document.execcommand#Commands>commands</a> to manipulate the contents of the editable region. Most commands affect the document's selection by, for example, applying a style to the text (bold, italics, etc), while others insert new elements (like adding a link) or affect an entire line (indenting). When using <code>contentEditable</code>, calling <code>execCommand()</code> will affect the currently active editable element.</p>
 
 <h2 id="Differences_in_markup_generation">Differences in markup generation</h2>
 
 <p>Use of <code>contenteditable</code> across different browsers has been painful for a long time because of the differences in generated markup between browsers. For example, even something as simple as what happens when you press Enter/Return to create a new line of text inside an editable element was handled differently across the major browsers (Firefox inserted {{htmlelement("br")}} elements, IE/Opera used {{htmlelement("p")}}, Chrome/Safari used {{htmlelement("div")}}).</p>
 
-<p>Fortunately, in modern browsers things are somewhat more consistent. As of <a href="/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>, Firefox will be updated to wrap the separate lines in {{htmlelement("div")}} elements, matching the behavior of Chrome, modern Opera, Edge, and Safari.</p>
+<p>Fortunately, in modern browsers things are somewhat more consistent. As of <a href=/mozilla/firefox/releases/60>Firefox 60</a>, Firefox will be updated to wrap the separate lines in {{htmlelement("div")}} elements, matching the behavior of Chrome, modern Opera, Edge, and Safari.</p>
 
 <p>Try it out in the above example.</p>
 
@@ -228,6 +228,6 @@ img.intLink { border: 0; }
 <ul>
  <li>{{domxref("HTMLElement.contentEditable")}}</li>
  <li>The {{htmlattrxref("contenteditable")}} global attribute</li>
- <li><a href="/en-US/docs/Mozilla/Projects/Midas">Midas</a> (the scriptable text editor component)</li>
+ <li><a href=/mozilla/projects/midas>Midas</a> (the scriptable text editor component)</li>
  <li>{{cssxref("caret-color")}}, which lets you set the color of the text insertion caret</li>
 </ul>

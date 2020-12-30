@@ -51,7 +51,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>find</code> method executes the <code><var>callback</var></code> function once for each index of the array until the <code><var>callback</var></code> returns a <a href="/en-US/docs/Glossary/truthy">truthy</a> value. If so, <code>find</code> immediately returns the value of that element. Otherwise, <code>find</code> returns {{jsxref("undefined")}}.</p>
+<p>The <code>find</code> method executes the <code><var>callback</var></code> function once for each index of the array until the <code><var>callback</var></code> returns a <a href=/glossary/truthy>truthy</a> value. If so, <code>find</code> immediately returns the value of that element. Otherwise, <code>find</code> returns {{jsxref("undefined")}}.</p>
 
 <p><code><var>callback</var></code> is invoked for <em>every</em> index of the array, not just those with assigned values. This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.</p>
 
@@ -117,7 +117,7 @@ if (!Array.prototype.find) {
 }
 </pre>
 
-<p>If you need to support truly obsolete JavaScript engines that don't support <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, it is best not to polyfill <code>Array.prototype</code> at all, as you cannot make it non-enumerable.</p>
+<p>If you need to support truly obsolete JavaScript engines that don't support <code><a href=/web/javascript/reference/global_objects/object/defineproperty>Object.defineProperty</a></code>, it is best not to polyfill <code>Array.prototype</code> at all, as you cannot make it non-enumerable.</p>
 
 <h2 id="Examples">Examples</h2>
 

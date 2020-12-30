@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>join()</strong></code> method creates and returns a new string by concatenating all of the elements in an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.</span></p>
+<p><span class="seoSummary">The <code><strong>join()</strong></code> method creates and returns a new string by concatenating all of the elements in an array (or an <a href=/web/javascript/guide/indexed_collections#Working_with_array-like_objects>array-like object</a>), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-join.html")}}</div>
 
@@ -51,7 +51,7 @@ a.join('');    // 'WindWaterFire'</pre>
 
 <h3 id="Joining_an_array-like_object">Joining an array-like object</h3>
 
-<p>The following example joins array-like object (<code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code>), by calling {{jsxref("Function.prototype.call")}} on <code>Array.prototype.join</code>.</p>
+<p>The following example joins array-like object (<code><a href=/web/javascript/reference/functions/arguments>arguments</a></code>), by calling {{jsxref("Function.prototype.call")}} on <code>Array.prototype.join</code>.</p>
 
 <pre class="brush: js">function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);

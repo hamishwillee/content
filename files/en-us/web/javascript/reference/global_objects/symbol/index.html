@@ -9,9 +9,9 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The data type <strong>symbol</strong> is a <a href="/en-US/docs/Glossary/Primitive">primitive data type</a>. The <code>Symbol()</code> function returns a value of type <strong>symbol</strong>, has static properties that expose several members of built-in objects, has static methods that expose the global symbol registry, and resembles a built-in object class, but is incomplete as a constructor because it does not support the syntax "<code>new Symbol()</code>".  </p>
+<p>The data type <strong>symbol</strong> is a <a href=/glossary/primitive>primitive data type</a>. The <code>Symbol()</code> function returns a value of type <strong>symbol</strong>, has static properties that expose several members of built-in objects, has static methods that expose the global symbol registry, and resembles a built-in object class, but is incomplete as a constructor because it does not support the syntax "<code>new Symbol()</code>".  </p>
 
-<p>Every symbol value returned from <code>Symbol()</code> is unique.  A symbol value may be used as an identifier for object properties; this is the data type's primary purpose, although other use-cases exist, such as enabling opaque data types, or serving as an implementation-supported unique identifier in general.  Some further explanation about purpose and usage can be found in the <a href="/en-US/docs/Glossary/Symbol">glossary entry for Symbol</a>.</p>
+<p>Every symbol value returned from <code>Symbol()</code> is unique.  A symbol value may be used as an identifier for object properties; this is the data type's primary purpose, although other use-cases exist, such as enabling opaque data types, or serving as an implementation-supported unique identifier in general.  Some further explanation about purpose and usage can be found in the <a href=/glossary/symbol>glossary entry for Symbol</a>.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -53,7 +53,7 @@ typeof symObj   // "object"
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol"><code>Symbol()</code></a></dt>
+ <dt><a href=/web/javascript/reference/global_objects/symbol/symbol><code>Symbol()</code></a></dt>
  <dd>Creates a new <code>Symbol</code> object. It is incomplete as a constructor because it does not support the syntax "<code>new Symbol()</code>".</dd>
 </dl>
 
@@ -61,13 +61,13 @@ typeof symObj   // "object"
 
 <dl>
  <dt>{{jsxref("Symbol.asyncIterator")}}</dt>
- <dd>A method that returns the default AsyncIterator for an object. Used by <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of"><code>for await...of</code></a>.</dd>
+ <dd>A method that returns the default AsyncIterator for an object. Used by <a href=/web/javascript/reference/statements/for-await...of><code>for await...of</code></a>.</dd>
  <dt>{{jsxref("Symbol.hasInstance")}}</dt>
  <dd>A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("Operators/instanceof", "instanceof")}}.</dd>
  <dt>{{jsxref("Symbol.isConcatSpreadable")}}</dt>
  <dd>A Boolean value indicating if an object should be flattened to its array elements. Used by {{jsxref("Array.prototype.concat()")}}.</dd>
  <dt>{{jsxref("Symbol.iterator")}}</dt>
- <dd>A method returning the default iterator for an object. Used by <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</dd>
+ <dd>A method returning the default iterator for an object. Used by <a href=/web/javascript/reference/statements/for...of><code>for...of</code></a>.</dd>
  <dt>{{jsxref("Symbol.match")}}</dt>
  <dd>A method that matches against a string, also used to determine if an object may be used as a regular expression. Used by {{jsxref("String.prototype.match()")}}.</dd>
  <dt>{{jsxref("Symbol.matchAll")}}</dt>
@@ -85,7 +85,7 @@ typeof symObj   // "object"
  <dt>{{jsxref("Symbol.toStringTag")}}</dt>
  <dd>A string value used for the default description of an object. Used by {{jsxref("Object.prototype.toString()")}}.</dd>
  <dt>{{jsxref("Symbol.unscopables")}}</dt>
- <dd>An object value of whose own and inherited property names are excluded from the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> environment bindings of the associated object.</dd>
+ <dd>An object value of whose own and inherited property names are excluded from the <code><a href=/web/javascript/reference/statements/with>with</a></code> environment bindings of the associated object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
@@ -137,12 +137,12 @@ typeof Symbol.iterator === 'symbol'
   (e.g. <code>+<var>sym</var></code> or <code><var>sym</var> | 0</code>).</li>
  <li>When using loose equality, <code>Object(<var>sym</var>) == <var>sym</var></code> returns <code>true</code>.</li>
  <li><code>Symbol("foo") + "bar" </code>throws a {{jsxref("TypeError")}} (can't convert symbol to string). This prevents you from silently creating a new string property name from a symbol, for example.</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(<var>sym</var>)</code> conversion</a> works like a call to {{jsxref("Symbol.prototype.toString()")}} with symbols, but note that <code>new String(<var>sym</var>)</code> will throw.</li>
+ <li>The <a href=/web/javascript/reference/global_objects/string#String_conversion>"safer" <code>String(<var>sym</var>)</code> conversion</a> works like a call to {{jsxref("Symbol.prototype.toString()")}} with symbols, but note that <code>new String(<var>sym</var>)</code> will throw.</li>
 </ul>
 
 <h3 id="Symbols_and_for...in_iteration">Symbols and for...in iteration</h3>
 
-<p>Symbols are not enumerable in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> iterations. In addition, {{jsxref("Object.getOwnPropertyNames()")}} will not return symbol object properties, however, you can use {{jsxref("Object.getOwnPropertySymbols()")}} to get these.</p>
+<p>Symbols are not enumerable in <a href=/web/javascript/reference/statements/for...in><code>for...in</code></a> iterations. In addition, {{jsxref("Object.getOwnPropertyNames()")}} will not return symbol object properties, however, you can use {{jsxref("Object.getOwnPropertySymbols()")}} to get these.</p>
 
 <pre class="brush: js">let obj = {}
 
@@ -195,8 +195,8 @@ obj[Object(sym)]     // still 1
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Glossary/Symbol">Glossary: Symbol data type</a></li>
+ <li><a href=/glossary/symbol>Glossary: Symbol data type</a></li>
  <li>{{jsxref("Operators/typeof", "typeof")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
+ <li><a href=/web/javascript/data_structures>Data types and data structures</a></li>
  <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols" on hacks.mozilla.org</a></li>
 </ul>

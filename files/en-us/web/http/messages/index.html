@@ -38,7 +38,7 @@ tags:
 <p>HTTP requests are messages sent by the client to initiate an action on the server. Their <em>start-line</em> contain three elements:</p>
 
 <ol>
- <li>An <em><a href="/en-US/docs/Web/HTTP/Methods">HTTP method</a></em>, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, <code>GET</code> indicates that a resource should be fetched or <code>POST</code> means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).</li>
+ <li>An <em><a href=/web/http/methods>HTTP method</a></em>, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, <code>GET</code> indicates that a resource should be fetched or <code>POST</code> means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).</li>
  <li>The <em>request target</em>, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
   <ul>
    <li>An absolute path, ultimately followed by a <code>'?'</code> and query string. This is the most common form, known as the <em>origin form</em>, and is used with <code>GET</code>, <code>POST</code>, <code>HEAD</code>, and <code>OPTIONS</code> methods.<br>
@@ -59,7 +59,7 @@ tags:
 
 <h3 id="Headers">Headers</h3>
 
-<p><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (<code>':'</code>) and a value whose structure depends upon the header. The whole header, including the value, consist of one single line, which can be quite long.</p>
+<p><a href=/web/http/headers>HTTP headers</a> from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (<code>':'</code>) and a value whose structure depends upon the header. The whole header, including the value, consist of one single line, which can be quite long.</p>
 
 <p>Many different headers can appear in requests. They can be divided in several groups:</p>
 
@@ -79,7 +79,7 @@ tags:
 
 <ul>
  <li>Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Multiple-resource bodies</a>, consisting of a multipart body, each containing a different bit of information. This is typically associated with <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>.</li>
+ <li><a href=/web/http/basics_of_http/mime_types#multipartform-data>Multiple-resource bodies</a>, consisting of a multipart body, each containing a different bit of information. This is typically associated with <a href=/web/guide/html/forms>HTML Forms</a>.</li>
 </ul>
 
 <h2 id="HTTP_Responses">HTTP Responses</h2>
@@ -98,7 +98,7 @@ tags:
 
 <h3 id="Headers_2">Headers</h3>
 
-<p><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> for responses follow the same structure as any other header: a case-insensitive string followed by a colon (<code>':'</code>) and a value whose structure depends upon the type of the header. The whole header, including its value, presents as a single line.</p>
+<p><a href=/web/http/headers>HTTP headers</a> for responses follow the same structure as any other header: a case-insensitive string followed by a colon (<code>':'</code>) and a value whose structure depends upon the type of the header. The whole header, including its value, presents as a single line.</p>
 
 <p>Many different headers can appear in responses. These can be divided into several groups:</p>
 
@@ -119,7 +119,7 @@ tags:
 <ul>
  <li>Single-resource bodies, consisting of a single file of known length, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.</li>
  <li>Single-resource bodies, consisting of a single file of unknown length, encoded by chunks with {{HTTPHeader("Transfer-Encoding")}} set to <code>chunked</code>.</li>
- <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Multiple-resource bodies</a>, consisting of a multipart body, each containing a different section of information. These are relatively rare.</li>
+ <li><a href=/web/http/basics_of_http/mime_types#multipartform-data>Multiple-resource bodies</a>, consisting of a multipart body, each containing a different section of information. These are relatively rare.</li>
 </ul>
 
 <h2 id="HTTP2_Frames">HTTP/2 Frames</h2>

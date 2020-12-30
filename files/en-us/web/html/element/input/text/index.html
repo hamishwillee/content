@@ -108,18 +108,18 @@ tags:
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>text</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>text</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>text</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>text</code> input has no minimum length.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>The input will fail <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
 <div id="pattern-include">
-<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href=/web/javascript/guide/regular_expressions>guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
 <p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
 
@@ -134,10 +134,10 @@ tags:
 
 <p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
 
-<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
+<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage(/web/localization/unicode_bidirectional_text_algorithm, "Overriding BiDi using Unicode control characters")}} for those characters.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
+<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage(/web/html/element/input, "Labels and placeholders")}} for more information.</p>
 </div>
 
 <h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
@@ -221,7 +221,7 @@ tags:
 
 <h2 id="Using_text_inputs">Using text inputs</h2>
 
-<p><code>&lt;input&gt;</code> elements of type <code>text</code> create basic, single-line inputs. You should use them anywhere you want the user to enter a single-line value and there isn't a more specific input type available for collecting that value (for example, if it's a <a href="/en-US/docs/Web/HTML/Element/input/datetime-local">date</a>, <a href="/en-US/docs/Web/HTML/Element/input/url">URL</a>, <a href="/en-US/docs/Web/HTML/Element/input/email">email</a>, or <a href="/en-US/docs/Web/HTML/Element/input/search">search term</a>, you've got better options available).</p>
+<p><code>&lt;input&gt;</code> elements of type <code>text</code> create basic, single-line inputs. You should use them anywhere you want the user to enter a single-line value and there isn't a more specific input type available for collecting that value (for example, if it's a <a href=/web/html/element/input/datetime-local>date</a>, <a href=/web/html/element/input/url>URL</a>, <a href=/web/html/element/input/email>email</a>, or <a href=/web/html/element/input/search>search term</a>, you've got better options available).</p>
 
 <h3 id="Basic_example">Basic example</h3>
 
@@ -374,7 +374,7 @@ input:valid+span:after {
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
+<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href=/learn/forms/form_validation#Validating_against_a_regular_expression>Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
 
 <p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
 
@@ -425,7 +425,7 @@ input:valid+span:after {
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can see good examples of text inputs used in context in our <a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a> and <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a> articles.</p>
+<p>You can see good examples of text inputs used in context in our <a href=/learn/forms/your_first_form>Your first HTML form</a> and <a href=/learn/forms/how_to_structure_a_web_form>How to structure an HTML form</a> articles.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -458,9 +458,9 @@ input:valid+span:after {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms">HTML Forms</a></li>
+ <li><a href=/learn/forms>HTML Forms</a></li>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
+ <li><code><a href=/web/html/element/input/search>&lt;input type="search"&gt;</a></code></li>
  <li>{{HTMLElement("textarea")}}: Multi-line text input</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

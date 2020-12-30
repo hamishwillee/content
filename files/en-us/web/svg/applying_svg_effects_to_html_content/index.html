@@ -7,11 +7,11 @@ tags:
   - HTML
   - SVG
 ---
-<p>Modern browsers support using <a href="/en-US/docs/SVG">SVG</a> within <a href="/en-US/docs/Web/CSS" title="Cascading Style Sheets">CSS</a> styles to apply graphical effects to HTML content.</p>
+<p>Modern browsers support using <a href=/svg>SVG</a> within <a href=/web/css title="Cascading Style Sheets">CSS</a> styles to apply graphical effects to HTML content.</p>
 
-<p>You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: <a href="/en-US/docs/Web/CSS/mask"><code>mask</code></a>, <a href="/en-US/docs/Web/CSS/clip-path"><code>clip-path</code></a>, and <a href="/en-US/docs/Web/CSS/filter"><code>filter</code></a>.</p>
+<p>You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: <a href=/web/css/mask><code>mask</code></a>, <a href=/web/css/clip-path><code>clip-path</code></a>, and <a href=/web/css/filter><code>filter</code></a>.</p>
 
-<div class="note"><strong>Note:</strong> References to SVG in external files must be to the <a href="/en-US/docs/Web/Security/Same-origin_policy">same origin</a> as the referencing document.</div>
+<div class="note"><strong>Note:</strong> References to SVG in external files must be to the <a href=/web/security/same-origin_policy>same origin</a> as the referencing document.</div>
 
 <h2 id="Using_embedded_SVG">Using embedded SVG</h2>
 
@@ -20,7 +20,7 @@ tags:
 <pre class="brush: html">&lt;style&gt;p { mask: url(#my-mask); }&lt;/style&gt;
 </pre>
 
-<p>In the above example, all paragraphs are masked by an <a href="/en-US/docs/Web/SVG/Element/mask">SVG <code>&lt;mask&gt;</code></a> with the <a href="/en-US/docs/Web/HTML/Global_attributes/id">ID</a> <code>my-mask</code>.</p>
+<p>In the above example, all paragraphs are masked by an <a href=/web/svg/element/mask>SVG <code>&lt;mask&gt;</code></a> with the <a href=/web/html/global_attributes/id>ID</a> <code>my-mask</code>.</p>
 
 <h3 id="Example_Masking">Example: Masking</h3>
 
@@ -115,7 +115,7 @@ p {
 
 <h3 id="Example_Filtering">Example: Filtering</h3>
 
-<p>This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse <a href="/en-US/docs/Web/CSS/:hover">hover</a> states.</p>
+<p>This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse <a href=/web/css/:hover>hover</a> states.</p>
 
 <pre class="brush: html">&lt;p class="target" style="background: lime;"&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -187,7 +187,7 @@ pre.target:hover { filter:url(#f3); }
 
 <h3 id="Example_Blurred_Text">Example: Blurred Text</h3>
 
-<p>In order to blur text, Webkit based browsers have a (prefixed) CSS filter called blur (see also <a href="/en-US/docs/Web/CSS/filter#blur%28%29_2">CSS filter</a>). You can achieve the same effect using SVG filters.</p>
+<p>In order to blur text, Webkit based browsers have a (prefixed) CSS filter called blur (see also <a href=/web/css/filter#blur%28%29_2>CSS filter</a>). You can achieve the same effect using SVG filters.</p>
 
 <pre class="brush: html">&lt;p class="blur"&gt;Time to clean my glasses&lt;/p&gt;
 &lt;svg height="0"&gt;
@@ -233,7 +233,7 @@ pre.target:hover { filter:url(#f3); }
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/SVG">SVG</a></li>
+ <li><a href=/svg>SVG</a></li>
  <li><a class="external" href="http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html">SVG Effects for HTML Content</a> (blog post)</li>
  <li><del><a class="external" href="/web-tech/2008/10/10/svg-external-document-references">SVG External Document References</a></del> (blog post) (<a href="http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/" title="Web Tech Blog » Blog Archive » SVG External Document References">[archive.org] Web Tech Blog » Blog Archive » SVG External Document References</a>)</li>
 </ul>

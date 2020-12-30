@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>filter()</code> calls a provided <code><var>callback</var></code> function once for each element in an array, and constructs a new array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new array.</p>
+<p><code>filter()</code> calls a provided <code><var>callback</var></code> function once for each element in an array, and constructs a new array of all the values for which <code><var>callback</var></code> returns <a href=/glossary/truthy>a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new array.</p>
 
 <p><code><var>callback</var></code> is invoked with three arguments:</p>
 
@@ -63,7 +63,7 @@ tags:
  <li>the Array object being traversed</li>
 </ol>
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>filter</code>, it will be used as the callback's <code>this</code> value. Otherwise, the value <code>undefined</code> will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+<p>If a <code><var>thisArg</var></code> parameter is provided to <code>filter</code>, it will be used as the callback's <code>this</code> value. Otherwise, the value <code>undefined</code> will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href=/web/javascript/reference/operators/this>the usual rules for determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>filter()</code> does not mutate the array on which it is called.</p>
 

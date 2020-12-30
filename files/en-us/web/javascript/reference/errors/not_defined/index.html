@@ -21,7 +21,7 @@ tags:
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>There is a non-existent variable referenced somewhere. This variable needs to be declared, or you need to make sure it is available in your current script or <a href="/en-US/docs/Glossary/scope">scope</a>.</p>
+<p>There is a non-existent variable referenced somewhere. This variable needs to be declared, or you need to make sure it is available in your current script or <a href=/glossary/scope>scope</a>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> When loading a library (such as jQuery), make sure it is loaded before you access library variables, such as "$". Put the {{HTMLElement("script")}} element that loads the library before your code that uses it.</p>
@@ -41,7 +41,7 @@ foo.substring(1); // "ar"</pre>
 
 <h3 id="Wrong_scope">Wrong scope</h3>
 
-<p>A variable needs to be available in the current context of execution. Variables defined inside a <a href="/en-US/docs/Web/JavaScript/Reference/Functions">function</a> cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function</p>
+<p>A variable needs to be available in the current context of execution. Variables defined inside a <a href=/web/javascript/reference/functions>function</a> cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function</p>
 
 <pre class="brush: js example-bad notranslate">function numbers() {
   var num1 = 2,
@@ -65,7 +65,7 @@ console.log(numbers()); // 5</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Glossary/Scope">Scope</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables">Declaring variables in the JavaScript Guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/">Function scope in the JavaScript Guide</a></li>
+ <li><a href=/glossary/scope>Scope</a></li>
+ <li><a href=/web/javascript/guide/grammar_and_types#Declaring_variables>Declaring variables in the JavaScript Guide</a></li>
+ <li><a href=/web/javascript/guide/functions#Function_scope/en-US/docs/>Function scope in the JavaScript Guide</a></li>
 </ul>

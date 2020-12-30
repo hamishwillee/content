@@ -39,13 +39,13 @@ visibility: unset;
  <dt><code>visible</code></dt>
  <dd>The element box is visible.</dd>
  <dt><code>hidden</code></dt>
- <dd>The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have <code>visibility</code> set to <code>visible</code>. The element cannot receive focus (such as when navigating through <a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tab indexes</a>).</dd>
+ <dd>The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have <code>visibility</code> set to <code>visible</code>. The element cannot receive focus (such as when navigating through <a href=/web/html/global_attributes/tabindex>tab indexes</a>).</dd>
  <dt><code>collapse</code></dt>
  <dd>
  <ul>
   <li>For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if <code>{{Cssxref("display")}}: none</code> were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.</li>
   <li>Collapsed flex items are hidden, and the space they would have occupied is removed.</li>
-  <li>For <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a> elements, the computed size of the element is always zero, regardless of other styles that would normally affect the size, although margins still take effect.</li>
+  <li>For <a href=/mozilla/tech/xul>XUL</a> elements, the computed size of the element is always zero, regardless of other styles that would normally affect the size, although margins still take effect.</li>
   <li>For other elements, <code>collapse</code> is treated the same as <code>hidden</code>.</li>
  </ul>
  </dd>
@@ -53,7 +53,7 @@ visibility: unset;
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Using a <code>visibility</code> value of <code>hidden</code> on an element will remove it from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a>. This will cause the element and all its descendant elements to no longer be announced by screen reading technology.</p>
+<p>Using a <code>visibility</code> value of <code>hidden</code> on an element will remove it from the <a href=/learn/accessibility/what_is_accessibility#Accessibility_APIs>accessibility tree</a>. This will cause the element and all its descendant elements to no longer be announced by screen reading technology.</p>
 
 <h2 id="Interpolation">Interpolation</h2>
 

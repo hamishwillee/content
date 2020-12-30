@@ -8,9 +8,9 @@ tags:
   - NeedsContent
   - Selectors
 ---
-<p>The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache.<a href="/en-US/docs/Web/Guide/HTML/HTML5"> HTML5</a> introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and <em>constraint validation</em> to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint validation API</a>.</p>
+<p>The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache.<a href=/web/guide/html/html5> HTML5</a> introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and <em>constraint validation</em> to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the <a href=/web/api/constraint_validation>Constraint validation API</a>.</p>
 
-<p>For a basic introduction to these concepts, with examples, see the <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form validation tutorial</a>.</p>
+<p>For a basic introduction to these concepts, with examples, see the <a href=/learn/html/forms/form_validation>Form validation tutorial</a>.</p>
 
 <div class="note"><strong>Note:</strong> HTML5 Constraint validation doesn't remove the need for validation on the <em>server side</em>. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.</div>
 
@@ -37,14 +37,14 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="URL"&gt;</a></code></td>
-   <td>The value must be an absolute <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL</a>, as defined in the <a href="https://url.spec.whatwg.org/">URL Living Standard</a>.</td>
-   <td><strong><a href="/en-US/docs/Web/API/ValidityState/typeMismatch">TypeMismatch</a></strong> constraint violation</td>
+   <td><code><a href=/web/html/element/input/url>&lt;input type="URL"&gt;</a></code></td>
+   <td>The value must be an absolute <a href=/learn/common_questions/what_is_a_url>URL</a>, as defined in the <a href="https://url.spec.whatwg.org/">URL Living Standard</a>.</td>
+   <td><strong><a href=/web/api/validitystate/typemismatch>TypeMismatch</a></strong> constraint violation</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code></td>
+   <td><code><a href=/web/html/element/input/email>&lt;input type="email"&gt;</a></code></td>
    <td>The value must be a syntactically valid email address, which generally has the format <code><em>username</em>@<em>hostname</em>.<em>tld</em></code>.</td>
-   <td><strong><a href="/en-US/docs/Web/API/ValidityState/typeMismatch">TypeMismatch</a></strong> constraint violation</td>
+   <td><strong><a href=/web/api/validitystate/typemismatch>TypeMismatch</a></strong> constraint violation</td>
   </tr>
  </tbody>
 </table>
@@ -69,18 +69,18 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code></td>
+   <td><code><a href=/web/html/attributes/pattern>pattern</a></code></td>
    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
-   <td>A <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript regular expression</a> (compiled with the <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> <code>global</code>, <code>ignoreCase</code>, and <code>multiline</code> flags <em>disabled)</em></td>
+   <td>A <a href=/web/javascript/guide/regular_expressions>JavaScript regular expression</a> (compiled with the <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> <code>global</code>, <code>ignoreCase</code>, and <code>multiline</code> flags <em>disabled)</em></td>
    <td>The value must match the pattern.</td>
-   <td><code><strong><a href="/en-US/docs/Web/API/ValidityState/patternMismatch">patternMismatch</a></strong></code> constraint violation</td>
+   <td><code><strong><a href=/web/api/validitystate/patternmismatch>patternMismatch</a></strong></code> constraint violation</td>
   </tr>
   <tr>
-   <td rowspan="3"><code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code></td>
+   <td rowspan="3"><code><a href=/web/html/attributes/min>min</a></code></td>
    <td><code>range</code>, <code>number</code></td>
    <td>A valid number</td>
    <td rowspan="3">The value must be greater than or equal to the value.</td>
-   <td rowspan="3"><strong><code><a href="/en-US/docs/Web/API/ValidityState/rangeUnderflow">rangeUnderflow</a></code></strong> constraint violation</td>
+   <td rowspan="3"><strong><code><a href=/web/api/validitystate/rangeunderflow>rangeUnderflow</a></code></strong> constraint violation</td>
   </tr>
   <tr>
    <td><code>date</code>, <code>month</code>, <code>week</code></td>
@@ -91,11 +91,11 @@ tags:
    <td>A valid date and time</td>
   </tr>
   <tr>
-   <td rowspan="3"><code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code></td>
+   <td rowspan="3"><code><a href=/web/html/attributes/max>max</a></code></td>
    <td><code>range</code>, <code>number</code></td>
    <td>A valid number</td>
    <td rowspan="3">The value must be less than or equal to the value</td>
-   <td rowspan="3"><strong><code><a href="/en-US/docs/Web/API/ValidityState/rangeOverflow">rangeOverflow</a></code></strong> constraint violation</td>
+   <td rowspan="3"><strong><code><a href=/web/api/validitystate/rangeoverflow>rangeOverflow</a></code></strong> constraint violation</td>
   </tr>
   <tr>
    <td><code>date</code>, <code>month</code>, <code>week</code></td>
@@ -106,18 +106,18 @@ tags:
    <td>A valid date and time</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code></td>
+   <td><code><a href=/web/html/attributes/required>required</a></code></td>
    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>number</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>; also on the {{ HTMLElement("select") }} and {{ HTMLElement("textarea") }} elements</td>
    <td><em>none</em> as it is a Boolean attribute: its presence means <em>true</em>, its absence means <em>false</em></td>
    <td>There must be a value (if set).</td>
-   <td><strong><code><a href="/en-US/docs/Web/API/ValidityState/valueMissing">valueMissing</a></code></strong> constraint violation</td>
+   <td><strong><code><a href=/web/api/validitystate/valuemissing>valueMissing</a></code></strong> constraint violation</td>
   </tr>
   <tr>
-   <td rowspan="5"><code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code></td>
+   <td rowspan="5"><code><a href=/web/html/attributes/step>step</a></code></td>
    <td><code>date</code></td>
    <td>An integer number of days</td>
    <td rowspan="5">Unless the step is set to the <code>any</code> literal, the value must be <strong>min</strong> + an integral multiple of the step.</td>
-   <td rowspan="5"><strong><code><a href="/en-US/docs/Web/API/ValidityState/stepMismatch">stepMismatch</a></code></strong> constraint violation</td>
+   <td rowspan="5"><strong><code><a href=/web/api/validitystate/stepmismatch>stepMismatch</a></code></strong> constraint violation</td>
   </tr>
   <tr>
    <td><code>month</code></td>
@@ -136,18 +136,18 @@ tags:
    <td>An integer</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code></td>
+   <td><code><a href=/web/html/attributes/minlength>minlength</a></code></td>
    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>; also on the {{ HTMLElement("textarea") }} element</td>
    <td>An integer length</td>
    <td>The number of characters (code points) must not be less than the value of the attribute, if non-empty. All newlines are normalized to a single character (as opposed to CRLF pairs) for {{ HTMLElement("textarea") }}.</td>
-   <td><strong><code><a href="/en-US/docs/Web/API/ValidityState/tooShort">tooShort</a></code></strong> constraint violation</td>
+   <td><strong><code><a href=/web/api/validitystate/tooshort>tooShort</a></code></strong> constraint violation</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code></td>
+   <td><code><a href=/web/html/attributes/maxlength>maxlength</a></code></td>
    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>; also on the {{ HTMLElement("textarea") }} element</td>
    <td>An integer length</td>
    <td>The number of characters (code points) must not exceed the value of the attribute.</td>
-   <td><strong><code><a href="/en-US/docs/Web/API/ValidityState/tooLong">tooLong</a></code></strong> constraint violation</td>
+   <td><strong><code><a href=/web/api/validitystate/toolong>tooLong</a></code></strong> constraint violation</td>
   </tr>
  </tbody>
 </table>
@@ -157,8 +157,8 @@ tags:
 <p>Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:</p>
 
 <ul>
- <li>By a call to the <code>checkValidity()</code> or <code>reportValidity()</code> method of a form-associated DOM interface, (<code><a href="/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement</a></code>, <code><a href="/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code>, <code><a href="/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code>, <code><a href="/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></code> or <code><a href="/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code>), which evaluates the constraints only on this element, allowing a script to get this information. The <code>checkValidity()</code> method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the <code>reportValidity()</code> method reports any constraint failures to the user.</li>
- <li>By a call to the <code>checkValidity()</code> or <code>reportValidity()</code> method on the <code><a href="/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement</a></code> interface.</li>
+ <li>By a call to the <code>checkValidity()</code> or <code>reportValidity()</code> method of a form-associated DOM interface, (<code><a href=/web/api/htmlinputelement>HTMLInputElement</a></code>, <code><a href=/web/api/htmlselectelement>HTMLSelectElement</a></code>, <code><a href=/web/api/htmlbuttonelement>HTMLButtonElement</a></code>, <code><a href=/web/api/htmloutputelement>HTMLOutputElement</a></code> or <code><a href=/web/api/htmltextareaelement>HTMLTextAreaElement</a></code>), which evaluates the constraints only on this element, allowing a script to get this information. The <code>checkValidity()</code> method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the <code>reportValidity()</code> method reports any constraint failures to the user.</li>
+ <li>By a call to the <code>checkValidity()</code> or <code>reportValidity()</code> method on the <code><a href=/web/api/htmlformelement>HTMLFormElement</a></code> interface.</li>
  <li>By submitting the form itself.</li>
 </ul>
 
@@ -297,7 +297,7 @@ tags:
 
 <h4 id="required_and_optional_CSS_pseudo-classes">:required and :optional CSS pseudo-classes</h4>
 
-<p>The {{cssxref(':required')}} and {{cssxref(':optional')}} <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> allow writing selectors that match form elements that have the {{ htmlattrxref("required") }} attribute, or that don't have it.</p>
+<p>The {{cssxref(':required')}} and {{cssxref(':optional')}} <a href=/web/css/pseudo-classes>pseudo-classes</a> allow writing selectors that match form elements that have the {{ htmlattrxref("required") }} attribute, or that don't have it.</p>
 
 <h4 id="placeholder-shown_CSS_pseudo-class">:placeholder-shown CSS pseudo-class</h4>
 
@@ -305,14 +305,14 @@ tags:
 
 <h4 id="valid_invalid_CSS_pseudo-classes">:valid :invalid CSS pseudo-classes</h4>
 
-<p>The {{cssxref(':valid')}} and {{cssxref(':invalid')}} <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> are used to represent &lt;input&gt; elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.</p>
+<p>The {{cssxref(':valid')}} and {{cssxref(':invalid')}} <a href=/web/css/pseudo-classes>pseudo-classes</a> are used to represent &lt;input&gt; elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.</p>
 
 <h3 id="Controlling_the_text_of_constraint_violation">Controlling the text of constraint violation</h3>
 
 <p>The following items can help with controlling the text of a constraint violation:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Constraint_validation#element.setCustomValidity(message)">element.setCustomValidity(message)</a> method on the following elements:
+ <li><a href=/web/api/constraint_validation#element.setCustomValidity(message)>element.setCustomValidity(message)</a> method on the following elements:
 
   <ul>
    <li>{{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.</li>
@@ -323,5 +323,5 @@ tags:
    <li>{{HTMLElement("textarea")}}</li>
   </ul>
  </li>
- <li>The <a href="/en-US/docs/Web/API/ValidityState"><code>ValidityState</code></a> interface describes the object returned by the <a href="/en-US/docs/Web/API/Constraint_validation#validity">validity</a> property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.</li>
+ <li>The <a href=/web/api/validitystate><code>ValidityState</code></a> interface describes the object returned by the <a href=/web/api/constraint_validation#validity>validity</a> property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.</li>
 </ul>

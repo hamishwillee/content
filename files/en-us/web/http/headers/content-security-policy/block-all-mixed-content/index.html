@@ -15,7 +15,7 @@ tags:
 
 <p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>block-all-mixed-content</strong></code> directive prevents loading any assets over HTTP when the page uses HTTPS.</p>
 
-<p>All <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a> resource requests are blocked, including both active and passive mixed content. This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.</p>
+<p>All <a href=/web/security/mixed_content>mixed content</a> resource requests are blocked, including both active and passive mixed content. This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.</p>
 
 <p class="note">The {{CSP("upgrade-insecure-requests")}} directive is evaluated before <code>block-all-mixed-content</code>. If the former is set, the latter does nothing, so set one directive or the other – not both, unless you want to force HTTPS on older browsers that do not force it after a redirect to HTTP.</p>
 
@@ -58,5 +58,5 @@ tags:
 <ul>
  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
  <li>{{CSP("upgrade-insecure-requests")}}</li>
- <li><a href="/en-US/docs/Web/Security/Mixed_content">Mixed content</a></li>
+ <li><a href=/web/security/mixed_content>Mixed content</a></li>
 </ul>

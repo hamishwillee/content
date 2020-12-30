@@ -13,7 +13,7 @@ tags:
 
 <p>The non-standard <strong><code>Large-Allocation</code></strong> response header tells the browser that the page being loaded is going to want to perform a large allocation. It is currently only implemented in Firefox, but is harmless to send to every browser.</p>
 
-<p><a href="/en-US/docs/WebAssembly">WebAssembly</a> or asm.js applications can use large contiguous blocks of allocated memory. For complex games, for example, these allocations can be quite large, sometimes as large as 1GB. The <code>Large-Allocation</code> tells the browser that the web content in the to-be-loaded page is going to want to perform a large contiguous memory allocation and the browser can react to this header by starting a dedicated process for the to-be-loaded document, for example.</p>
+<p><a href=/webassembly>WebAssembly</a> or asm.js applications can use large contiguous blocks of allocated memory. For complex games, for example, these allocations can be quite large, sometimes as large as 1GB. The <code>Large-Allocation</code> tells the browser that the web content in the to-be-loaded page is going to want to perform a large contiguous memory allocation and the browser can react to this header by starting a dedicated process for the to-be-loaded document, for example.</p>
 
 <table class="properties">
  <tbody>
@@ -51,7 +51,7 @@ Large-Allocation: 500
 
 <h2 id="Troubleshooting_errors">Troubleshooting errors</h2>
 
-<p>The <code>Large-Allocation</code> header throws warnings or error messages when used incorrectly. You'll encounter them in the <a href="/en-US/docs/Tools/Web_Console">web console</a>.</p>
+<p>The <code>Large-Allocation</code> header throws warnings or error messages when used incorrectly. You'll encounter them in the <a href=/tools/web_console>web console</a>.</p>
 
 <dl>
  <dt>This page was loaded in a new process due to a <code>Large-Allocation</code> header.</dt>
@@ -69,7 +69,7 @@ Large-Allocation: 500
  </ul>
  </dd>
  <dt>A <code>Large-Allocation</code> header was ignored due to the document not being loaded out of process.</dt>
- <dd>Firefox has moved to a <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess architecture</a>, and this architecture is required in order to support the <code>Large-Allocation</code> header. Some <a href="/en-US/docs/Mozilla/Add-ons/SDK">legacy Addons</a> can prevent Firefox from using this new, faster, multiprocess architecture. If you have one of these Addons installed, then we will continue to use the old single process architecuture for compatibility, and cannot handle the <code>Large-Allocation</code> header.</dd>
+ <dd>Firefox has moved to a <a href=/mozilla/firefox/multiprocess_firefox>multiprocess architecture</a>, and this architecture is required in order to support the <code>Large-Allocation</code> header. Some <a href=/mozilla/add-ons/sdk>legacy Addons</a> can prevent Firefox from using this new, faster, multiprocess architecture. If you have one of these Addons installed, then we will continue to use the old single process architecuture for compatibility, and cannot handle the <code>Large-Allocation</code> header.</dd>
  <dt>This page would be loaded in a new process due to a <code>Large-Allocation</code> header, however <code>Large-Allocation</code> process creation is disabled on non-Win32 platforms.</dt>
  <dd>Firefox currently only supports the <code>Large-Allocation</code> header in our 32-bit Windows builds, as memory fragmentation is not an issue in 64-bit builds. If you are running a non-win32 version of Firefox, this error will appear. This check can be disabled with the "dom.largeAllocation.
  <p>forceEnable" boolean preferece in about:config.</p>
@@ -89,5 +89,5 @@ Large-Allocation: 500
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a></li>
+ <li><a href=/webassembly>WebAssembly</a></li>
 </ul>

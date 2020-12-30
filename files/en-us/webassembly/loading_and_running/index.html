@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Using_Fetch">Using Fetch</h2>
 
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> is a convenient, modern API for fetching network resources.</p>
+<p><a href=/web/api/fetch_api>Fetch</a> is a convenient, modern API for fetching network resources.</p>
 
 <p>The quickest, most efficient way to fetch a wasm module is using the newer {{jsxref("WebAssembly.instantiateStreaming()")}} method, which can take a <code>fetch()</code> call as its first argument, and will handle fetching, compiling, and instantiating the module in one step, accessing the raw byte code as it streams from the server:</p>
 
@@ -53,11 +53,11 @@ tags:
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>, or create more instances.</p>
+<p><strong>Note</strong>: Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via <code><a href=/web/api/messageport/postmessage>postMessage()</a></code>, or create more instances.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">Second overload example</a>.</p>
+<p><strong>Note</strong>: The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href=/web/javascript/reference/global_objects/webassembly/instantiate#Second_overload_example>Second overload example</a>.</p>
 </div>
 
 <h3 id="Running_your_WebAssembly_code">Running your WebAssembly code</h3>
@@ -78,12 +78,12 @@ tags:
 })</pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more information on how exporting from a WebAssembly module works, have a read of <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>, and <a href="/en-US/docs/WebAssembly/Understanding_the_text_format">Understanding WebAssembly text format</a>.</p>
+<p><strong>Note</strong>: For more information on how exporting from a WebAssembly module works, have a read of <a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a>, and <a href=/webassembly/understanding_the_text_format>Understanding WebAssembly text format</a>.</p>
 </div>
 
 <h2 id="Using_XMLHttpRequest">Using XMLHttpRequest</h2>
 
-<p><code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> is somewhat older than Fetch, but can still be happily used to get a typed array. Again, assuming our module is called <code>simple.wasm</code>:</p>
+<p><code><a href=/web/api/xmlhttprequest>XMLHttpRequest</a></code> is somewhat older than Fetch, but can still be happily used to get a typed array. Again, assuming our module is called <code>simple.wasm</code>:</p>
 
 <ol>
 	<li>Create a new {{domxref("XMLHttpRequest()")}} instance, and use its {{domxref("XMLHttpRequest.open","open()")}} method to open a request, setting the request method to <code>GET</code>, and declaring the path to the file we want to fetch.</li>

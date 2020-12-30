@@ -78,7 +78,7 @@ slug: Web/Security/Types_of_attacks
 <pre>Set-Cookie: CSRF=e8b667; Secure; Domain=example.com</pre>
 
 <p>If a vulnerable application is available on a sub-domain, this mechanism can be abused in a session fixation attack. When the user visits a page on the parent domain (or another subdomain), the application may trust the existing value sent in the user's cookie. This could allow an attacker to bypass CSRF protection or hijack a session after the user logs in.<br>
- Alternatively, if the parent domain does not use <a href="/en-US/docs/Glossary/HSTS">HTTP Strict-Transport-Security</a> with <code>includeSubdomains</code> set, a user subject to an active MitM (perhaps connected to an open WiFi network) could be served a response with a Set-Cookie header from a non-existent sub-domain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.</p>
+ Alternatively, if the parent domain does not use <a href=/glossary/hsts>HTTP Strict-Transport-Security</a> with <code>includeSubdomains</code> set, a user subject to an active MitM (perhaps connected to an open WiFi network) could be served a response with a Set-Cookie header from a non-existent sub-domain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.</p>
 
 <p>Session fixation should primarily be mitigated by regenerating session cookie values when the user authenticates (even if a cookie already exists) and by tieing any CSRF token to the user.</p>
 

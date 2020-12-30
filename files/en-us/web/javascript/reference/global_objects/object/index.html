@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Object</strong></code> class represents one of <a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript's data types</a>. It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
+<p>The <code><strong>Object</strong></code> class represents one of <a href=/web/javascript/data_structures>JavaScript's data types</a>. It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the <a href=/web/javascript/reference/operators/object_initializer>object initializer / literal syntax</a>.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -26,11 +26,11 @@ tags:
 
 <p>When called in a non-constructor context, <code>Object</code> behaves identically to <code>new Object()</code>.</p>
 
-<p>See also the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
+<p>See also the <a href=/web/javascript/reference/operators/object_initializer>object initializer / literal syntax</a>.</p>
 
 <h3 id="Deleting_a_property_from_an_object">Deleting a property from an object</h3>
 
-<p>There isn't any method in an Object itself to delete its own properties (such as {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). To do so, one must use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a>.</p>
+<p>There isn't any method in an Object itself to delete its own properties (such as {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). To do so, one must use the <a href=/web/javascript/reference/operators/delete>delete operator</a>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -113,7 +113,7 @@ tags:
  <dt>{{jsxref("Object.prototype.isPrototypeOf()")}}</dt>
  <dd>Returns a boolean indicating whether the object this method is called upon is in the prototype chain of the specified object.</dd>
  <dt>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</dt>
- <dd>Returns a boolean indicating if the internal <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">ECMAScript [[Enumerable]] attribute</a> is set.</dd>
+ <dd>Returns a boolean indicating if the internal <a href=/web/javascript/data_structures#Properties>ECMAScript [[Enumerable]] attribute</a> is set.</dd>
  <dt>{{jsxref("Object.prototype.toLocaleString()")}}</dt>
  <dd>Calls {{jsxref("Object.toString", "toString()")}}.</dd>
  <dt>{{jsxref("Object.prototype.toString()")}}</dt>
@@ -157,7 +157,7 @@ let o = new Object(Boolean())
 
 <p>When altering the behavior of existing <code>Object.prototype</code> methods, consider injecting code by wrapping your extension before or after the existing logic. For example, this (untested) code will pre-conditionally execute custom logic before the built-in logic or someone else's extension is executed.</p>
 
-<p>When a function is called, the arguments to the call are held in the array-like "variable" <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>. For example, in the call <code>myFn(a, b, c)</code>, the arguments within <code>myFn</code>'s body will contain 3 array-like elements corresponding to <code>(a, b, c)</code>.</p>
+<p>When a function is called, the arguments to the call are held in the array-like "variable" <a href=/web/javascript/reference/functions/arguments>arguments</a>. For example, in the call <code>myFn(a, b, c)</code>, the arguments within <code>myFn</code>'s body will contain 3 array-like elements corresponding to <code>(a, b, c)</code>.</p>
 
 <p>When modifying prototypes with hooks, pass <code>this</code> and the arguments (the call state) to the current behavior by calling <code>apply()</code> on the function. This pattern can be used for any prototype, such as <code>Node.prototype</code>, <code>Function.prototype</code>, etc.</p>
 
@@ -272,5 +272,5 @@ mime.greet();</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a></li>
+ <li><a href=/web/javascript/reference/operators/object_initializer>Object initializer</a></li>
 </ul>

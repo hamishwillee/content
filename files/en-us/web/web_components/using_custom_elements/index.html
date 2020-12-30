@@ -26,7 +26,7 @@ tags:
 
 <ul>
  <li>A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names <a href="https://html.spec.whatwg.org/#valid-custom-element-name">require a dash to be used in them</a> (kebab-case); they can't be single words.</li>
- <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class</a> object that defines the behavior of the element.</li>
+ <li>A <a href=/web/javascript/reference/classes>class</a> object that defines the behavior of the element.</li>
  <li>Optionally, an options object containing an <code>extends</code> property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).</li>
 </ul>
 
@@ -81,7 +81,7 @@ tags:
   }
 }</pre>
 
-<p>The preceding code snippet contains the <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> definition for the class, which always starts by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> so that the correct prototype chain is established.</p>
+<p>The preceding code snippet contains the <code><a href=/web/javascript/reference/classes/constructor>constructor()</a></code> definition for the class, which always starts by calling <code><a href=/web/javascript/reference/operators/super>super()</a></code> so that the correct prototype chain is established.</p>
 
 <p>Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.</p>
 

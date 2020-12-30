@@ -16,7 +16,7 @@ tags:
 <p>In 1989, while he was working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the Internet. Initially calling it the <em>Mesh</em>, it was later renamed to <em>World Wide Web</em> during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:</p>
 
 <ul>
- <li>A textual format to represent hypertext documents, the <em><a href="/en-US/docs/Web/HTML">HyperText Markup Language</a></em> (HTML).</li>
+ <li>A textual format to represent hypertext documents, the <em><a href=/web/html>HyperText Markup Language</a></em> (HTML).</li>
  <li>A simple protocol to exchange these documents, the <em>HypertText Transfer Protocol </em>(HTTP).</li>
  <li>A client to display (and accidentally edit) these documents, the first Web browser called <em>WorldWideWeb</em>.</li>
  <li>A server to give access to the document, an early version of <em>httpd</em>.</li>
@@ -158,13 +158,13 @@ Server: Apache
 <p>Since 2005, the set of APIs available to Web pages greatly increased and several of these APIs created extensions, mostly new specific HTTP headers, to the HTTP protocol for specific purposes:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, where the server can push occasional messages to the browser.</li>
- <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
+ <li><a href=/web/api/server-sent_events>Server-sent events</a>, where the server can push occasional messages to the browser.</li>
+ <li><a href=/web/api/websocket_api>WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
 </ul>
 
 <h3 id="Relaxing_the_security-model_of_the_Web">Relaxing the security-model of the Web</h3>
 
-<p>HTTP is independent of the security model of the Web, the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. In fact, the current Web security model has been developed after the creation of HTTP! Over the years, it has proved useful to be able to be more lenient, by allowing under certain constraints to lift some of the restriction of this policy. How much and when such restrictions are lifted is transmitted by the server to the client using a new bunch of HTTP headers. These are defined in specifications like <a href="/en-US/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> (CSP).</p>
+<p>HTTP is independent of the security model of the Web, the <a href=/web/security/same-origin_policy>same-origin policy</a>. In fact, the current Web security model has been developed after the creation of HTTP! Over the years, it has proved useful to be able to be more lenient, by allowing under certain constraints to lift some of the restriction of this policy. How much and when such restrictions are lifted is transmitted by the server to the client using a new bunch of HTTP headers. These are defined in specifications like <a href=/glossary/cors>Cross-Origin Resource Sharing</a> (CORS) or the <a href=/web/security/csp>Content Security Policy</a> (CSP).</p>
 
 <p>In addition to these large extensions, numerous other headers have been added, sometimes experimentally only. Notable headers are Do Not Track ({{HTTPHeader("DNT")}}) header to control privacy, {{HTTPHeader("X-Frame-Options")}}, or {{HTTPHeader('Upgrade-Insecure-Requests')}} but many more exist.</p>
 

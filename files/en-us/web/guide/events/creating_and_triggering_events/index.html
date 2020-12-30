@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Creating_custom_events">Creating custom events</h2>
 
-<p>Events can be created with the <a href="/en-US/docs/Web/API/Event"><code>Event</code></a> constructor as follows:</p>
+<p>Events can be created with the <a href=/web/api/event><code>Event</code></a> constructor as follows:</p>
 
 <pre class="brush: js notranslate">const event = new Event('build');
 
@@ -23,13 +23,13 @@ elem.addEventListener('build', function (e) { /* ... */ }, false);
 // Dispatch the event.
 elem.dispatchEvent(event);</pre>
 
-<p>The above code example uses the <a href="/en-US/docs/Web/API/EventTarget/dispatchEvent">EventTarget.dispatchEvent()</a> method.</p>
+<p>The above code example uses the <a href=/web/api/eventtarget/dispatchevent>EventTarget.dispatchEvent()</a> method.</p>
 
 <p>This constructor is supported in most modern browsers (with Internet Explorer being the exception). For a more verbose approach (which works with Internet Explorer), see <a href="#The_old-fashioned_way">the old-fashioned way</a> below.</p>
 
 <h3 id="Adding_custom_data_–_CustomEvent">Adding custom data – CustomEvent()</h3>
 
-<p>To add more data to the event object, the <a href="/en-US/docs/Web/API/CustomEvent">CustomEvent</a> interface exists and the <u><strong>detail</strong></u> property can be used to pass custom data.<br>
+<p>To add more data to the event object, the <a href=/web/api/customevent>CustomEvent</a> interface exists and the <u><strong>detail</strong></u> property can be used to pass custom data.<br>
  <span style="line-height: 1.5;">For example, the event could be created as follows:</span></p>
 
 <pre class="brush: js notranslate">const event = new CustomEvent('build', { detail: elem.dataset.time });</pre>
@@ -132,7 +132,7 @@ textarea.addEventListener('input', function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent()</a></li>
+ <li><a href=/web/api/customevent/customevent>CustomEvent()</a></li>
  <li>{{domxref("document.createEvent()")}}</li>
  <li>{{domxref("Event.initEvent()")}}</li>
  <li>{{domxref("EventTarget.dispatchEvent()")}}</li>

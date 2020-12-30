@@ -94,23 +94,23 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="htmlattrdeflist">{{page(/web/html/element/input/text, "list", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
+<p>The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
 
 <p>This value must be greater than or equal to the value of the <code>min</code> attribute.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
+<p>The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
 
 <p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "placeholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+<p>{{page(/web/html/element/input/text, "readonly", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
@@ -154,7 +154,7 @@ tags:
 <p>A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the {{htmlattrxref("required", "input")}} attribute is used, the input is no longer considered valid when empty.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Any number is an acceptable value, as long as it is a <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number">valid floating point number</a> (that is, not <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a>).</p>
+<p><strong>Note</strong>: Any number is an acceptable value, as long as it is a <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number">valid floating point number</a> (that is, not <a href=/web/javascript/reference/global_objects/nan>NaN</a> or <a href=/web/javascript/reference/global_objects/infinity>Infinity</a>).</p>
 </div>
 
 <h3 id="Placeholders">Placeholders</h3>
@@ -199,7 +199,7 @@ tags:
 
 <h3 id="Controlling_input_size">Controlling input size</h3>
 
-<p>{{HTMLElement("input")}} elements of type <code>number</code> don't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> to change the size of these controls.</p>
+<p>{{HTMLElement("input")}} elements of type <code>number</code> don't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href=/web/css>CSS</a> to change the size of these controls.</p>
 
 <p>For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an {{htmlattrxref("id")}} and to shorten our placeholder since the field will be too narrow for the text we have been using so far:</p>
 
@@ -278,7 +278,7 @@ input:valid+span:after {
 
 <p>Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, as a visual indicator of validity.</p>
 
-<p>We put it on a separate <code>&lt;span&gt;</code> element for added flexibility. Some browsers don't display generated content very effectively on some types of form inputs. (Read, for example, the section on <a href="/en-US/docs/Web/HTML/Element/input/date#Validation"><code>&lt;input type="date"&gt;</code> validation</a>.)</p>
+<p>We put it on a separate <code>&lt;span&gt;</code> element for added flexibility. Some browsers don't display generated content very effectively on some types of form inputs. (Read, for example, the section on <a href=/web/html/element/input/date#Validation><code>&lt;input type="date"&gt;</code> validation</a>.)</p>
 
 <div class="warning">
 <p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format!</p>
@@ -437,8 +437,8 @@ switchBtn.addEventListener('click', function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
+ <li><a href=/learn/forms>HTML forms guide</a></li>
  <li>{{HTMLElement("input")}}</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/tel">&lt;input type="tel"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><code><a href=/web/html/element/input/tel>&lt;input type="tel"&gt;</a></code></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

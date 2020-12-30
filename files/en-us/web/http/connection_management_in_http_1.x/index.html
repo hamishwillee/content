@@ -25,9 +25,9 @@ tags:
 <p>HTTP/2 adds additional models for connection management.</p>
 </div>
 
-<p>It's important point to note that connection management in HTTP applies to the connection between two consecutive nodes, which is <a href="/en-US/docs/Web/HTTP/Headers#hbh">hop-by-hop</a> and not <a href="/en-US/docs/Web/HTTP/Headers#e2e">end-to-end</a>. The model used in connections between a client and its first proxy may differ from the model between a proxy and the destination server (or any intermediate proxies). The HTTP headers involved in defining the connection model, like {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}}, are <a href="/en-US/docs/Web/HTTP/Headers#hbh">hop-by-hop</a> headers with their values able to be changed by intermediary nodes.</p>
+<p>It's important point to note that connection management in HTTP applies to the connection between two consecutive nodes, which is <a href=/web/http/headers#hbh>hop-by-hop</a> and not <a href=/web/http/headers#e2e>end-to-end</a>. The model used in connections between a client and its first proxy may differ from the model between a proxy and the destination server (or any intermediate proxies). The HTTP headers involved in defining the connection model, like {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}}, are <a href=/web/http/headers#hbh>hop-by-hop</a> headers with their values able to be changed by intermediary nodes.</p>
 
-<p>A related topic is the concept of HTTP connection upgrades, wherein an HTTP/1.1 connection is upgraded to a different protocol, such as TLS/1.0, WebSocket, or even HTTP/2 in cleartext. This <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">protocol upgrade mechanism</a> is documented in more detail elsewhere.</p>
+<p>A related topic is the concept of HTTP connection upgrades, wherein an HTTP/1.1 connection is upgraded to a different protocol, such as TLS/1.0, WebSocket, or even HTTP/2 in cleartext. This <a href=/web/http/protocol_upgrade_mechanism>protocol upgrade mechanism</a> is documented in more detail elsewhere.</p>
 
 <h2 id="Short-lived_connections">Short-lived connections</h2>
 
@@ -67,7 +67,7 @@ tags:
 <p>For these reasons, pipelining has been superseded by a better algorithm, <em>multiplexing</em>, that is used by HTTP/2.</p>
 </div>
 
-<p>By default, <a href="/en-US/docs/Web/HTTP">HTTP</a> requests are issued sequentially. The next request is only issued once the response to the current request has been received. As they are affected by network latencies and bandwidth limitations, this can result in significant delay before the next request is <em>seen</em> by the server.</p>
+<p>By default, <a href=/web/http>HTTP</a> requests are issued sequentially. The next request is only issued once the response to the current request has been received. As they are affected by network latencies and bandwidth limitations, this can result in significant delay before the next request is <em>seen</em> by the server.</p>
 
 <p>Pipelining is the process to send successive requests, over the same persistent connection, without waiting for the answer. This avoids latency of the connection. Theoretically, performance could also be improved if two HTTP requests were to be packed into the same TCP message. The typical <a href="https://en.wikipedia.org/wiki/Maximum_segment_size">MSS</a> (Maximum Segment Size), is big enough to contain several simple requests, although the demand in size of HTTP requests continues to grow.</p>
 
@@ -81,7 +81,7 @@ tags:
 <p>Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called <a href="https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/">connection coalescing</a> to revert eventual domain sharding.</p>
 </div>
 
-<p>As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering <a href="/en-US/docs/Glossary/DOS_attack">DoS</a> protection on the server side if attempting more than this number.</p>
+<p>As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering <a href=/glossary/dos_attack>DoS</a> protection on the server side if attempting more than this number.</p>
 
 <p>If the server wishes a faster Web site or application response, it is possible for the server to force the opening of more connections. For example, Instead of having all resources on the same domain, say <code>www.example.com</code>, it could split over several domains, <code>www1.example.com</code>, <code>www2.example.com</code>, <code>www3.example.com</code>. Each of these domains resolve to the <em>same</em> server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called <em>domain sharding</em>.</p>
 

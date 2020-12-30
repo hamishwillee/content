@@ -49,9 +49,9 @@ promise.then(successCallback, failureCallback);</pre>
 <p>Unlike old-fashioned <em>passed-in</em> callbacks, a promise comes with some guarantees:</p>
 
 <ul>
- <li>Callbacks will never be called before the <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
- <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>, as above, will be called even <em>after</em> the success or failure of the asynchronous operation.</li>
- <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. Each callback is executed one after another, in the order in which they were inserted.</li>
+ <li>Callbacks will never be called before the <a href=/web/javascript/eventloop#Run-to-completion>completion of the current run</a> of the JavaScript event loop.</li>
+ <li>Callbacks added with <code><a href=/web/javascript/reference/global_objects/promise/then>then()</a></code>, as above, will be called even <em>after</em> the success or failure of the asynchronous operation.</li>
+ <li>Multiple callbacks may be added by calling <code><a href=/web/javascript/reference/global_objects/promise/then>then()</a></code> several times. Each callback is executed one after another, in the order in which they were inserted.</li>
 </ul>
 
 <p>One of the great things about using promises is <strong>chaining</strong>.</p>
@@ -101,7 +101,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 .catch(failureCallback);
 </pre>
 
-<p>The arguments to <code>then</code> are optional, and <code>catch(failureCallback)</code> is short for <code>then(null, failureCallback)</code>. You might see this expressed with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> instead:</p>
+<p>The arguments to <code>then</code> are optional, and <code>catch(failureCallback)</code> is short for <code>then(null, failureCallback)</code>. You might see this expressed with <a href=/web/javascript/reference/functions/arrow_functions>arrow functions</a> instead:</p>
 
 <pre class="brush: js notranslate">doSomething()
 .then(result =&gt; doSomethingElse(result))
@@ -168,7 +168,7 @@ Do this, no matter what happened before
 }
 </pre>
 
-<p>This symmetry with asynchronous code culminates in the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> syntactic sugar in ECMAScript 2017:</p>
+<p>This symmetry with asynchronous code culminates in the <a href=/web/javascript/reference/statements/async_function><code>async</code>/<code>await</code></a> syntactic sugar in ECMAScript 2017:</p>
 
 <pre class="brush: js notranslate">async function foo() {
   try {
@@ -188,20 +188,20 @@ Do this, no matter what happened before
 
 <h2 id="Promise_rejection_events">Promise rejection events</h2>
 
-<p>Whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the <a href="/en-US/docs/Web/API/Window" title="The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>window</code></a> or, if being used in a web worker, it's the <a href="/en-US/docs/Web/API/Worker" title="The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator."><code>Worker</code></a> or other worker-based interface). The two events are:</p>
+<p>Whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the <a href=/web/api/window title="The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>window</code></a> or, if being used in a web worker, it's the <a href=/web/api/worker title="The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator."><code>Worker</code></a> or other worker-based interface). The two events are:</p>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/Window/rejectionhandled_event" title="The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled."><code>rejectionhandled</code></a></dt>
+ <dt><a href=/web/api/window/rejectionhandled_event title="The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled."><code>rejectionhandled</code></a></dt>
  <dd>Sent when a promise is rejected, after that rejection has been handled by the executor's <code>reject</code> function.</dd>
- <dt><a href="/en-US/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a></dt>
+ <dt><a href=/web/api/window/unhandledrejection_event title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a></dt>
  <dd>Sent when a promise is rejected but there is no rejection handler available.</dd>
 </dl>
 
-<p>In both cases, the event (of type <a href="/en-US/docs/Web/API/PromiseRejectionEvent" title="The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected."><code>PromiseRejectionEvent</code></a>) has as members a <a href="/en-US/docs/Web/API/PromiseRejectionEvent/promise" title="The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected."><code>promise</code></a> property indicating the promise that was rejected, and a <a href="/en-US/docs/Web/API/PromiseRejectionEvent/reason" title="The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected."><code>reason</code></a> property that provides the reason given for the promise to be rejected.</p>
+<p>In both cases, the event (of type <a href=/web/api/promiserejectionevent title="The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected."><code>PromiseRejectionEvent</code></a>) has as members a <a href=/web/api/promiserejectionevent/promise title="The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected."><code>promise</code></a> property indicating the promise that was rejected, and a <a href=/web/api/promiserejectionevent/reason title="The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected."><code>reason</code></a> property that provides the reason given for the promise to be rejected.</p>
 
 <p>These make it possible to offer fallback error handling for promises, as well as to help debug issues with your promise management. These handlers are global per context, so all errors will go to the same event handlers, regardless of source.</p>
 
-<p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises. These get logged to the console by the Node runtime. You can capture these for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the <a href="/en-US/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a> event, like this:</p>
+<p>One case of special usefulness: when writing code for <a href=/glossary/node.js>Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises. These get logged to the console by the Node runtime. You can capture these for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the <a href=/web/api/window/unhandledrejection_event title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a> event, like this:</p>
 
 <pre class="brush: js notranslate">window.addEventListener("unhandledrejection", event =&gt; {
   /* You might start here by adding code to examine the
@@ -212,7 +212,7 @@ Do this, no matter what happened before
 }, false);
 </pre>
 
-<p>By calling the event's <a href="/en-US/docs/Web/API/Event/preventDefault" title="The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be."><code>preventDefault()</code></a> method, you tell the JavaScript runtime not to do its default action when rejected promises go unhandled. That default action usually involves logging the error to console, and this is indeed the case for Node.</p>
+<p>By calling the event's <a href=/web/api/event/preventdefault title="The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be."><code>preventDefault()</code></a> method, you tell the JavaScript runtime not to do its default action when rejected promises go unhandled. That default action usually involves logging the error to console, and this is indeed the case for Node.</p>
 
 <p>Ideally, of course, you should examine the rejected promises to make sure none of them are actual code bugs before just discarding these events.</p>
 
@@ -220,7 +220,7 @@ Do this, no matter what happened before
 
 <p>A {{jsxref("Promise")}} can be created from scratch using its constructor. This should be needed only to wrap old APIs.</p>
 
-<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout()</code></a> function:</p>
+<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href=/web/api/windowtimers/settimeout title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout()</code></a> function:</p>
 
 <pre class="brush: js notranslate">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
 </pre>
@@ -278,7 +278,7 @@ for (const f of [func1, func2, func3]) {
 
 <h2 id="Timing">Timing</h2>
 
-<p>To avoid surprises, functions passed to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be called synchronously, even with an already-resolved promise:</p>
+<p>To avoid surprises, functions passed to <code><a href=/web/javascript/reference/global_objects/promise/then>then()</a></code> will never be called synchronously, even with an already-resolved promise:</p>
 
 <pre class="brush: js notranslate">Promise.resolve().then(() =&gt; console.log(2));
 console.log(1); // 1, 2
@@ -295,7 +295,7 @@ console.log(1); // 1, 2, 3, 4
 
 <h4 id="Task_queues_vs_microtasks">Task queues vs microtasks</h4>
 
-<p>Promise callbacks are handled as a <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Microtask</a> whereas <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> callbacks are handled as Task queues.</p>
+<p>Promise callbacks are handled as a <a href=/web/api/html_dom_api/microtask_guide>Microtask</a> whereas <code><a href=/web/api/windoworworkerglobalscope/settimeout>setTimeout()</a></code> callbacks are handled as Task queues.</p>
 
 <pre class="brush: js notranslate">const promise = new Promise(function(resolve, reject) {
   console.log("Promise callback");
@@ -318,7 +318,7 @@ Promise (pending) Promise {&lt;pending&gt;}
 Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
-<p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#Tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
+<p>For more details, refer to <a href=/web/api/html_dom_api/microtask_guide/in_depth#Tasks_vs_microtasks>Tasks vs microtasks</a>.</p>
 
 <h2 id="Nesting">Nesting</h2>
 
@@ -372,19 +372,19 @@ doSomething().then(function(result) {
 
 <p>Now we have a single deterministic chain with proper error handling.</p>
 
-<p>Using <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> addresses most, if not all of these problems—the tradeoff being that the most common mistake with that syntax is forgetting the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>await</code></a> keyword.</p>
+<p>Using <a href=/web/javascript/reference/statements/async_function><code>async</code>/<code>await</code></a> addresses most, if not all of these problems—the tradeoff being that the most common mistake with that syntax is forgetting the <a href=/web/javascript/reference/statements/async_function><code>await</code></a> keyword.</p>
 
 <h2 id="When_promises_and_tasks_collide">When promises and tasks collide</h2>
 
 <p>If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.</p>
 
-<p>If you think microtasks may help solve this problem, see the <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a> to learn more about how to use <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask" title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop."><code>queueMicrotask()</code></a> to enqueue a function as a microtask.</p>
+<p>If you think microtasks may help solve this problem, see the <a href=/web/api/html_dom_api/microtask_guide>microtask guide</a> to learn more about how to use <a href=/web/api/windoworworkerglobalscope/queuemicrotask title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop."><code>queueMicrotask()</code></a> to enqueue a function as a microtask.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{jsxref("Promise.then()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> </li>
+ <li><a href=/web/javascript/reference/statements/async_function><code>async</code>/<code>await</code></a> </li>
  <li><a href="http://promisesaplus.com/">Promises/A+ specification</a></li>
  <li><a href="https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53">Venkatraman.R - JS Promise (Part 1, Basics)</a></li>
  <li><a href="https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski">Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)</a></li>

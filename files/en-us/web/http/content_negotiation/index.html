@@ -9,10 +9,10 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">In <a href="/en-US/docs/Glossary/HTTP">HTTP</a>, <em><strong>content negotiation</strong></em> is the mechanism that is used for serving different representations of a resource at the same URI, so that the user agent can specify which is best suited for the user (for example, which language of a document, which image format, or which content encoding).</p>
+<p class="summary">In <a href=/glossary/http>HTTP</a>, <em><strong>content negotiation</strong></em> is the mechanism that is used for serving different representations of a resource at the same URI, so that the user agent can specify which is best suited for the user (for example, which language of a document, which image format, or which content encoding).</p>
 
 <div class="notecard note">
-<p class="summary">Note: Some disadvantages of HTTP content negotiation are explained in <a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>. HTML5 provides alternatives to content negotiation via, for example, the <a href="/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>.</p>
+<p class="summary">Note: Some disadvantages of HTTP content negotiation are explained in <a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>. HTML5 provides alternatives to content negotiation via, for example, the <a href=/web/html/element/source><code>&lt;source&gt;</code> element</a>.</p>
 </div>
 
 <h2 id="Principles_of_content_negotiation">Principles of content negotiation</h2>
@@ -24,8 +24,8 @@ tags:
 <p>The determination of the best suited representation is made through one of two mechanisms:</p>
 
 <ul>
- <li>Specific <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> by the client (<em>server-driven negotiation</em> or <em>proactive negotiation</em>), which is the standard way of negotiating a specific kind of resource.</li>
- <li>The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) <a href="/en-US/docs/Web/HTTP/Status">HTTP response codes</a> by the server (<em>agent-driven negotiation</em> or <em>reactive negotiation</em>), that are used as fallback mechanisms.</li>
+ <li>Specific <a href=/web/http/headers>HTTP headers</a> by the client (<em>server-driven negotiation</em> or <em>proactive negotiation</em>), which is the standard way of negotiating a specific kind of resource.</li>
+ <li>The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) <a href=/web/http/status>HTTP response codes</a> by the server (<em>agent-driven negotiation</em> or <em>reactive negotiation</em>), that are used as fallback mechanisms.</li>
 </ul>
 
 <p>Over the years, other content negotiation proposals, like <a href="https://tools.ietf.org/html/rfc2295">transparent content negotiation</a> and the <code>Alternates</code> header, have been proposed. They failed to get traction and got abandoned.</p>
@@ -36,7 +36,7 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png" style="height: 380px; width: 767px;"></p>
 
-<p>The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Though strictly speaking {{HTTPHeader("User-Agent")}} is not in this list, it is sometimes also used to send a specific representation of the requested resource, though this is not considered as a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely the associated response headers), so that <a href="/en-US/docs/Web/HTTP/Caching">caches</a> can work optimally.</p>
+<p>The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Though strictly speaking {{HTTPHeader("User-Agent")}} is not in this list, it is sometimes also used to send a specific representation of the requested resource, though this is not considered as a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely the associated response headers), so that <a href=/web/http/caching>caches</a> can work optimally.</p>
 
 <p>In addition to these, there is an experimental proposal to add more headers to the list of available headers, called <em>client hints</em>. Client hints advertise what kind of device the user agent runs on (for example, if it is a desktop computer or a mobile device).</p>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. It is comma-separated lists of MIME types, each combined with a quality factor, a parameter indicating the relative degree of preference between the different MIME types.</p>
 
-<p>The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of <a href="/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values">default values for common browsers</a> is available.</p>
+<p>The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of <a href=/web/http/content_negotiation/list_of_default_accept_values>default values for common browsers</a> is available.</p>
 
 <h3 id="The_Accept-CH_header_experimental_inline">The Accept-CH header {{experimental_inline}}</h3>
 
@@ -119,7 +119,7 @@ tags:
 <h3 id="The_User-Agent_header">The User-Agent header</h3>
 
 <div class="note">
-<p>Though there are legitimate uses of this header for selecting content, <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">it is considered bad practice</a> to rely on it to define what features are supported by the user agent.</p>
+<p>Though there are legitimate uses of this header for selecting content, <a href=/web/http/browser_detection_using_the_user_agent>it is considered bad practice</a> to rely on it to define what features are supported by the user agent.</p>
 </div>
 
 <p>The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of <em>product tokens</em> and <em>comments</em>.</p>
@@ -132,7 +132,7 @@ tags:
 
 <p>The special value of '<code>*</code>' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.</p>
 
-<p>The <code>Vary</code> header was added in the version 1.1 of HTTP and is necessary in order to allow caches to work appropriately. A cache, in order to work with server-driven content negotiation, needs to know which criteria was used by the server to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more request to the server. Obviously, the wildcard '<code>*</code>' prevents caching from occurring, as the cache cannot know what element is behind it. For more information <a href="/en-US/docs/Web/HTTP/Caching#Varying_responses">HTTP caching &gt; Varying responses</a>.</p>
+<p>The <code>Vary</code> header was added in the version 1.1 of HTTP and is necessary in order to allow caches to work appropriately. A cache, in order to work with server-driven content negotiation, needs to know which criteria was used by the server to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more request to the server. Obviously, the wildcard '<code>*</code>' prevents caching from occurring, as the cache cannot know what element is behind it. For more information <a href=/web/http/caching#Varying_responses>HTTP caching &gt; Varying responses</a>.</p>
 
 <h2 id="Agent-driven_negotiation">Agent-driven negotiation</h2>
 

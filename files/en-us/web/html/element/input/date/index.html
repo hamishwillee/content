@@ -23,7 +23,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The input UI generally varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+<p>The input UI generally varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href=/web/html/element/input/text>&lt;input type="text"&gt;</a></code>.</p>
 
 <p>Among browsers with custom interfaces for selecting dates are Chrome, Edge, and Opera, whose date control looks like so:</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <h2 id="Value">Value</h2>
 
-<p>A {{domxref("DOMString")}} representing the date entered in the input. The date is formatted according to ISO8601, described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}.</p>
+<p>A {{domxref("DOMString")}} representing the date entered in the input. The date is formatted according to ISO8601, described in {{SectionOnPage(/web/html/date_and_time_formats, "Format of a valid date string")}}.</p>
 
 <p>You can set a default value for the input with a date inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
@@ -110,19 +110,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
+<p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>later than or equal to</strong> the one in the <code>min</code> attribute.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
+<p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href=/web/guide/html/html5/constraint_validation>constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>earlier than or equal to</strong> the one in the <code>max</code> attribute.</p>
 
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>{{page(/web/html/element/input/number, "step-include")}}</p>
 
 <p>For <code>date</code> inputs, the value of <code>step</code> is given in days; and is treated as a number of milliseconds equal to 86,400,000 times the <code>step</code> value (the underlying numeric value is in milliseconds). The default value of <code>step</code> is 1, indicating 1 day.</p>
 
@@ -177,7 +177,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <h3 id="Controlling_input_size">Controlling input size</h3>
 
-<p><code>&lt;input type="date"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. Prefer <a href="/en-US/docs/Web/CSS">CSS</a> for sizing it.</p>
+<p><code>&lt;input type="date"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. Prefer <a href=/web/css>CSS</a> for sizing it.</p>
 
 <h2 id="Validation">Validation</h2>
 
@@ -209,7 +209,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p><img alt="The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”" src="date-picker-chrome-error-message.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> to add an icon next to the input, based on whether or not the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.</p>
+<p>Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} <a href=/web/css/pseudo-elements>pseudo-elements</a> to add an icon next to the input, based on whether or not the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
 <pre class="brush: css notranslate">label {
   display: flex;
@@ -516,7 +516,7 @@ daySelect.onchange = function() {
 
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls#Date_and_time_picker>Date and Time picker tutorial</a></li>
+ <li><a href=/web/html/date_and_time_formats>Date and time formats used in HTML</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_controls>Compatibility of CSS properties</a></li>
 </ul>

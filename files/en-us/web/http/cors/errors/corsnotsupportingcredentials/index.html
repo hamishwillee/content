@@ -30,8 +30,8 @@ tags:
 
 <ul>
  <li>If the request is being issued using {{domxref("XMLHttpRequest")}}, make sure you're not setting {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} to <code>true</code>.</li>
- <li>If using <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, make sure {{domxref("EventSource.withCredentials")}} is <code>false</code> (it's the default value).</li>
- <li>If using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, make sure {{domxref("Request.credentials")}} is <code>"omit"</code>.</li>
+ <li>If using <a href=/web/api/server-sent_events>Server-sent events</a>, make sure {{domxref("EventSource.withCredentials")}} is <code>false</code> (it's the default value).</li>
+ <li>If using the <a href=/web/api/fetch_api>Fetch API</a>, make sure {{domxref("Request.credentials")}} is <code>"omit"</code>.</li>
 </ul>
 
 <p>If, instead, you need to adjust the server's behavior, you'll need to change the value of <code>Access-Control-Allow-Origin</code> to grant access to the origin from which the client is loaded.</p>
@@ -39,7 +39,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
+ <li><a href=/web/http/cors/errors>CORS errors</a></li>
  <li>Glossary: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
+ <li><a href=/web/http/cors>CORS introduction</a></li>
 </ul>

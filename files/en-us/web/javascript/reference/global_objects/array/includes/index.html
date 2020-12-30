@@ -48,7 +48,7 @@ tags:
 <p>Values of zero are all considered to be equal, regardless of sign. (That is, <code>-0</code> is considered to be equal to both <code>0</code> and <code>+0</code>), but <code>false</code> is <em>not</em> considered to be the same as <code>0</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Technically speaking, <code>includes()</code> uses the <code><a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">sameValueZero</a></code> algorithm to determine whether the given element is found.</p>
+<p><strong>Note:</strong> Technically speaking, <code>includes()</code> uses the <code><a href=/web/javascript/equality_comparisons_and_sameness#Same-value-zero_equality>sameValueZero</a></code> algorithm to determine whether the given element is found.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -90,7 +90,7 @@ arr.includes('a', -2)   // false
 
 <p><code>includes()</code> method is intentionally generic. It does not require <code>this</code> value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects).</p>
 
-<p>The example below illustrates <code>includes()</code> method called on the function's <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> object.</p>
+<p>The example below illustrates <code>includes()</code> method called on the function's <a href=/web/javascript/reference/functions/arguments>arguments</a> object.</p>
 
 <pre class="brush: js notranslate">(function() {
   console.log(Array.prototype.includes.call(arguments, 'a'))  // true

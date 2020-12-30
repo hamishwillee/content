@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Content-Location</code></strong> header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a>.</p>
+<p>The <strong><code>Content-Location</code></strong> header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of <a href=/web/http/content_negotiation>content negotiation</a>.</p>
 
 <p>{{HTTPHeader("Location")}} and <code>Content-Location</code> are different. <code>Location</code> indicates the URL of a redirect, while <code>Content-Location</code> indicates the direct URL to use to access the resource, without further content negotiation in the future. <code>Location</code> is a header associated with the response, while <code>Content-Location</code> is associated with the data returned. This distinction may seem abstract without <a href="#Examples">examples</a>.</p>
 
@@ -34,7 +34,7 @@ tags:
 
 <dl>
  <dt>&lt;url&gt;</dt>
- <dd>A <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs">relative</a> (to the request URL) or <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs">absolute</a> URL.</dd>
+ <dd>A <a href=/learn/common_questions/what_is_a_url#Examples_of_relative_URLs>relative</a> (to the request URL) or <a href=/learn/common_questions/what_is_a_url#Examples_of_absolute_URLs>absolute</a> URL.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -66,11 +66,11 @@ tags:
  </tbody>
 </table>
 
-<p>These URLs are examples — the site could serve the different filetypes with any URL patterns it wishes, such as a <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">query string parameter</a>: <code>/documents/foo?format=json</code>, <code>/documents/foo?format=xml</code>, and so on.</p>
+<p>These URLs are examples — the site could serve the different filetypes with any URL patterns it wishes, such as a <a href=/web/api/htmlhyperlinkelementutils/search>query string parameter</a>: <code>/documents/foo?format=json</code>, <code>/documents/foo?format=xml</code>, and so on.</p>
 
 <p>Then the client could remember that the JSON version is available at that particular URL, skipping content negotation the next time it requests that document.</p>
 
-<p>The server could also consider other <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> headers, such as {{HTTPHeader("Accept-Language")}}.</p>
+<p>The server could also consider other <a href=/web/http/content_negotiation>content negotiation</a> headers, such as {{HTTPHeader("Accept-Language")}}.</p>
 
 <h3 id="Pointing_to_a_new_document_HTTP_201_Created">Pointing to a new document (HTTP 201 Created)</h3>
 
@@ -96,7 +96,7 @@ Content-Location: /my-first-blog-post
 
 <h3 id="Indicating_the_URL_of_a_transactions_result">Indicating the URL of a transaction's result</h3>
 
-<p>Say you have a <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> for sending money to another user of a site.</p>
+<p>Say you have a <code><a href=/web/html/element/form>&lt;form&gt;</a></code> for sending money to another user of a site.</p>
 
 <pre class="brush: html">&lt;form action="/send-payment" method="post"&gt;
   &lt;p&gt;

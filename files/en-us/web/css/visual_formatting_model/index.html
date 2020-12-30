@@ -67,7 +67,7 @@ tags:
 
 <p><strong>Inline anonymous boxes</strong> are created when a string is split by an inline element, for example, a sentence that includes a section wrapped with <code>&lt;em&gt;&lt;/em&gt;</code>. This splits the sentence into three inline boxes — an anonymous inline box before the emphasized section, the section wrapped in the <code>&lt;em&gt;</code> element, then a final anonymous inline box. As with the anonymous block boxes, these anonymous inline boxes cannot be styled independently in the way the <code>&lt;em&gt;</code> can; they just inherit the styles of their container.</p>
 
-<p>Other formatting contexts also create anonymous boxes. <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid Layout</a> behaves in the same way as the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> example above, turning strings of text into a grid item with an anonymous box. <a href="/en-US/docs/Web/CSS/CSS_Columns">Multiple-column</a> layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. <a href="/en-US/docs/Web/CSS/CSS_Table">Table layout</a> will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with <code>display: table-row</code>.</p>
+<p>Other formatting contexts also create anonymous boxes. <a href=/web/css/css_grid_layout>Grid Layout</a> behaves in the same way as the <a href=/web/css/css_flexible_box_layout>flexbox</a> example above, turning strings of text into a grid item with an anonymous box. <a href=/web/css/css_columns>Multiple-column</a> layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. <a href=/web/css/css_table>Table layout</a> will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with <code>display: table-row</code>.</p>
 
 <h3 id="Line_boxes">Line boxes</h3>
 
@@ -85,13 +85,13 @@ tags:
 
 <p>In CSS, the normal flow includes block-level formatting of block boxes, inline-level formatting of inline boxes, and also includes relative and sticky positioning of block-level and inline-level boxes.</p>
 
-<p>Read more about <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a> in CSS.</p>
+<p>Read more about <a href=/web/css/css_flow_layout>flow layout</a> in CSS.</p>
 
 <h3 id="Floats">Floats</h3>
 
 <p>In the float model, a box is first laid out according to the normal flow, then taken out of the flow and positioned, typically to the left or right. Content may flow along the side of a float.</p>
 
-<p>Find out more about <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>.</p>
+<p>Find out more about <a href=/learn/css/css_layout/floats>floats</a>.</p>
 
 <h3 id="Absolute_positioning">Absolute positioning</h3>
 
@@ -99,7 +99,7 @@ tags:
 
 <p>An element is called <strong>out of flow</strong> if it is floated, absolutely positioned, or is the root element. An element is called <strong>in-flow</strong> if it is not out of the flow.</p>
 
-<p>Read about <a href="/en-US/docs/Web/CSS/CSS_Positioning">CSS Positioned Layout</a>.</p>
+<p>Read about <a href=/web/css/css_positioning>CSS Positioned Layout</a>.</p>
 
 <h2 id="Formatting_contexts_and_the_display_property">Formatting contexts and the display property</h2>
 
@@ -107,24 +107,24 @@ tags:
 
 <p>Boxes also have an inner display type, dictating how their children behave. For normal block and inline layout, or normal flow, this display type is <code>flow</code>. This means that the child elements will also be either <code>block</code> or <code>inline</code>.</p>
 
-<p>However, the inner display type might be something like <code>grid</code> or <code>flex</code>, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts">formatting context</a>. In many ways this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.</p>
+<p>However, the inner display type might be something like <code>grid</code> or <code>flex</code>, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex <a href=/web/css/css_flow_layout/intro_to_formatting_contexts>formatting context</a>. In many ways this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.</p>
 
 <p>The interactions between block-level and inline-level boxes are described in the MDN documentation for {{cssxref("display")}}.</p>
 
 <p>In addition, the references for specific values of display explain how these formatting contexts work in terms of box layout.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexible Box Layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Table">CSS Table Layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters">Lists</a></li>
+ <li><a href=/web/css/css_grid_layout>CSS Grid Layout</a></li>
+ <li><a href=/web/css/css_flexible_box_layout>CSS Flexible Box Layout</a></li>
+ <li><a href=/web/css/css_table>CSS Table Layout</a></li>
+ <li><a href=/web/css/css_lists_and_counters>Lists</a></li>
 </ul>
 
 <h3 id="Independent_formatting_contexts">Independent formatting contexts</h3>
 
 <p>Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new <strong>Grid Formatting Context</strong> for its children.</p>
 
-<p><strong>Independent formatting contexts</strong> contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats remain inside a box. Developers sometimes clear floats by changing the value of the {{cssxref("overflow")}} property, as this creates a new block formatting context. The newer value of <code>display: flow-root</code> creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> in order to gain the useful effects of this, without any unwanted issues caused by changing the value of overflow.</p>
+<p><strong>Independent formatting contexts</strong> contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats remain inside a box. Developers sometimes clear floats by changing the value of the {{cssxref("overflow")}} property, as this creates a new block formatting context. The newer value of <code>display: flow-root</code> creates a new <a href=/web/guide/css/block_formatting_context>block formatting context</a> in order to gain the useful effects of this, without any unwanted issues caused by changing the value of overflow.</p>
 
 <h3 id="Block_boxes">Block boxes</h3>
 

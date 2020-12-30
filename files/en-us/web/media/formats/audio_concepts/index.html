@@ -17,7 +17,7 @@ tags:
   - mp4
   - sound
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</div>
+<div>{{QuickLinksWithSubpages(/web/media)}}</div>
 
 <p>Representing audio in digital form involves a number of steps and processes, with multiple formats available both for the raw audio and the encoded or compressed audio which is actually used on the web. <span class="seoSummary">This guide is an overview examining how audio is represented digitally, and how codecs are used to encode and decode audio for use on the web.</span></p>
 
@@ -57,7 +57,7 @@ tags:
 
 <p>Stereo audio is probably the most commonly used channel arrangement in web audio, and 16-bit samples are used for the majority of day-to-day audio in use today. For 16-bit stereo audio, each sample taken from the analog signal is recorded as two 16-bit integers, one for the left channel and one for the right. That means each sample requires 32 bits of memory. At the common sample rate of 48 kHz (48,000 samples per second), this means each second of audio occupies 192 kB of memory. Therefore, a typical three-minute song requires about 34.5 MB of memory. That's a lot of storage, but worse, it's an insane amount of network bandwidth to use for a relatively short piece of audio. That's why most digital audio is compressed.</p>
 
-<p>The process of compressing and decompressing audio is performed by encoding and decoding it using an audio <strong>{{Glossary("codec")}}</strong> (<strong>CO</strong>der/<strong>DE</strong>coder). Over the years, a large variety of codecs have been developed, several of which are commonly used on the web. For details about the most important and useful ones for web developers to be familiar with, see the article <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Guide to audio codecs used on the web</a>.</p>
+<p>The process of compressing and decompressing audio is performed by encoding and decoding it using an audio <strong>{{Glossary("codec")}}</strong> (<strong>CO</strong>der/<strong>DE</strong>coder). Over the years, a large variety of codecs have been developed, several of which are commonly used on the web. For details about the most important and useful ones for web developers to be familiar with, see the article <a href=/web/media/formats/audio_codecs>Guide to audio codecs used on the web</a>.</p>
 
 <h3 id="Audio_channels_and_frames">Audio channels and frames</h3>
 
@@ -185,7 +185,7 @@ tags:
 <p>Importantly, codecs do all the hard work for you. It's why so much engineering and scientific study goes into the creation of new algorithms and codecs. All you need to do is consider the options and your use case, then choose the appropriate codec for your needs.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> For a more detailed guide to choosing audio codecs, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing a codec")}}.</p>
+<p><strong>Note:</strong> For a more detailed guide to choosing audio codecs, see {{SectionOnPage(/web/media/formats/audio_codecs, "Choosing a codec")}}.</p>
 </div>
 
 <h2 id="Lossless_encoder_parameters">Lossless encoder parameters</h2>
@@ -271,5 +271,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Guide to audio codecs used on the web</a></li>
+	<li><a href=/web/media/formats/audio_codecs>Guide to audio codecs used on the web</a></li>
 </ul>

@@ -19,7 +19,7 @@ tags:
 <p class="summary">To enable WebAssembly to be read and edited by humans, there is a textual representation of the wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing wasm in JavaScript.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This is potentially overkill if you are a web developer who just wants to load a wasm module into a page and use it in your code (see <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>), but it is more useful if for example, you want to write wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.</p>
+<p><strong>Note</strong>: This is potentially overkill if you are a web developer who just wants to load a wasm module into a page and use it in your code (see <a href=/webassembly/using_the_javascript_api>Using the WebAssembly JavaScript API</a>), but it is more useful if for example, you want to write wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.</p>
 </div>
 
 <h2 id="S-expressions">S-expressions</h2>
@@ -40,7 +40,7 @@ tags:
 
 <p>This module is totally empty, but is still a valid module.</p>
 
-<p>If we convert our module to binary now (see <a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a>), we’ll see just the 8 byte module header described in the <a href="https://webassembly.org/docs/binary-encoding/#high-level-structure">binary format</a>:</p>
+<p>If we convert our module to binary now (see <a href=/webassembly/text_format_to_wasm>Converting WebAssembly text format to wasm</a>), we’ll see just the 8 byte module header described in the <a href="https://webassembly.org/docs/binary-encoding/#high-level-structure">binary format</a>:</p>
 
 <pre class="brush: wasm; no-line-numbers notranslate">0000000: 0061 736d              ; WASM_BINARY_MAGIC
 0000004: 0100 0000              ; WASM_BINARY_VERSION</pre>
@@ -164,9 +164,9 @@ tags:
   (export "add" (func $add))
 )</pre>
 
-<p>If you want to follow along with the example, save the above our module into a file called <code>add.wat</code>, then convert it into a binary file called <code>add.wasm</code> using wabt (see <a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a> for details).</p>
+<p>If you want to follow along with the example, save the above our module into a file called <code>add.wat</code>, then convert it into a binary file called <code>add.wasm</code> using wabt (see <a href=/webassembly/text_format_to_wasm>Converting WebAssembly text format to wasm</a> for details).</p>
 
-<p>Next, we’ll load our binary into a typed array called <code>addCode</code> (as described in <a href="/en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode">Fetching WebAssembly Bytecode</a>), compile and instantiate it, and execute our <code>add</code> function in JavaScript (we can now find <code>add()</code> in the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">exports</a></code> property of the instance):</p>
+<p>Next, we’ll load our binary into a typed array called <code>addCode</code> (as described in <a href=/webassembly/fetching_webassembly_bytecode>Fetching WebAssembly Bytecode</a>), compile and instantiate it, and execute our <code>add</code> function in JavaScript (we can now find <code>add()</code> in the <code><a href=/web/javascript/reference/global_objects/webassembly/instance/exports>exports</a></code> property of the instance):</p>
 
 <pre class="brush: js; notranslate">WebAssembly.instantiateStreaming(fetch('add.wasm'))
   .then(obj =&gt; {
@@ -276,15 +276,15 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
 
 <p>So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we’ve written a suitable string of bytes to memory; how do we pass that string out to JavaScript?</p>
 
-<p>The key is that JavaScript can create WebAssembly linear memory instances via the {{JSxRef("WebAssembly.Memory()")}} interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">buffer</a></code> getter, which returns an <code>ArrayBuffer</code> that points at the whole linear memory.</p>
+<p>The key is that JavaScript can create WebAssembly linear memory instances via the {{JSxRef("WebAssembly.Memory()")}} interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a <code><a href=/web/javascript/reference/global_objects/webassembly/memory/buffer>buffer</a></code> getter, which returns an <code>ArrayBuffer</code> that points at the whole linear memory.</p>
 
-<p>Memory instances can also grow, for example via the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow">Memory.grow()</a></code> method in JavaScript. When growth occurs, since <code>ArrayBuffer</code>s can’t change size, the current <code>ArrayBuffer</code> is detached and a new <code>ArrayBuffer</code> is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.</p>
+<p>Memory instances can also grow, for example via the <code><a href=/web/javascript/reference/global_objects/webassembly/memory/grow>Memory.grow()</a></code> method in JavaScript. When growth occurs, since <code>ArrayBuffer</code>s can’t change size, the current <code>ArrayBuffer</code> is detached and a new <code>ArrayBuffer</code> is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.</p>
 
 <p>While there are many different ways to encode a string’s length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:</p>
 
 <pre class="brush: wasm; no-line-numbers notranslate">(import "console" "log" (func $log (param i32) (param i32)))</pre>
 
-<p>On the JavaScript side, we can use the <a href="/en-US/docs/Web/API/TextDecoder">TextDecoder API</a> to easily decode our bytes into a JavaScript string.  (We specify <code>utf8</code> here, but many other encodings are supported.)</p>
+<p>On the JavaScript side, we can use the <a href=/web/api/textdecoder>TextDecoder API</a> to easily decode our bytes into a JavaScript string.  (We specify <code>utf8</code> here, but many other encodings are supported.)</p>
 
 <pre class="brush: js; notranslate">function consoleLogString(offset, length) {
   var bytes = new Uint8Array(memory.buffer, offset, length);
@@ -292,7 +292,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
   console.log(string);
 }</pre>
 
-<p>The last missing piece of the puzzle is where <code>consoleLogString</code> gets access to the WebAssembly <code>memory</code>. WebAssembly gives us a lot of flexibility here: we can either create a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">Memory</a></code> object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.</p>
+<p>The last missing piece of the puzzle is where <code>consoleLogString</code> gets access to the WebAssembly <code>memory</code>. WebAssembly gives us a lot of flexibility here: we can either create a <code><a href=/web/javascript/reference/global_objects/webassembly/memory>Memory</a></code> object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.</p>
 
 <p>For simplicity, let's create it in JavaScript then import it into WebAssembly.  Our <code>import</code> statement is written as follows:</p>
 
@@ -447,16 +447,16 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 </div>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Just like Memory, Tables can also be created from JavaScript (see <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table">WebAssembly.Table()</a></code>) as well as imported to/from another wasm module.</p>
+<p><strong>Note:</strong> Just like Memory, Tables can also be created from JavaScript (see <code><a href=/web/javascript/reference/global_objects/webassembly/table>WebAssembly.Table()</a></code>) as well as imported to/from another wasm module.</p>
 </div>
 
 <h3 id="Mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking</h3>
 
-<p>Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">grow()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">get()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">set()</a></code> methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of {{anch("Reference types")}}, such as <code>table.get</code> and <code>table.set</code>.</p>
+<p>Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the <code><a href=/web/javascript/reference/global_objects/webassembly/table/grow>grow()</a></code>, <code><a href=/web/javascript/reference/global_objects/webassembly/table/get>get()</a></code> and <code><a href=/web/javascript/reference/global_objects/webassembly/table/set>set()</a></code> methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of {{anch("Reference types")}}, such as <code>table.get</code> and <code>table.set</code>.</p>
 
 <p>Because tables are mutable, they can be used to implement sophisticated load-time and run-time <a href="https://webassembly.org/docs/dynamic-linking">dynamic linking schemes</a>. When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled <code>.dll</code>s share a single process’s address space.</p>
 
-<p>To see this in action, we’ll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">instantiate()</a></code> calls.</p>
+<p>To see this in action, we’ll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple <code><a href=/web/javascript/reference/global_objects/webassembly/instantiate>instantiate()</a></code> calls.</p>
 
 <p>Our <code>.wat</code> examples look like so:</p>
 
@@ -528,7 +528,7 @@ Promise.all([
 
 <h2 id="Bulk_memory_operations">Bulk memory operations</h2>
 
-<p>Bulk memory operations are a newer addition to the language (for example, in <a href="/en-US/docs/Mozilla/Firefox/Releases/79">Firefox 79</a>) — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as <code>memcpy</code> and <code>memmove</code> in a more efficient, performant way.</p>
+<p>Bulk memory operations are a newer addition to the language (for example, in <a href=/mozilla/firefox/releases/79>Firefox 79</a>) — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as <code>memcpy</code> and <code>memmove</code> in a more efficient, performant way.</p>
 
 <p>The new operations are:</p>
 
@@ -548,7 +548,7 @@ Promise.all([
 
 <h2 id="Reference_types">Reference types</h2>
 
-<p>The <a href="https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md">reference types proposal</a> (supported in <a href="/en-US/docs/Mozilla/Firefox/Releases/79">Firefox 79</a>) provides two main features:</p>
+<p>The <a href="https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md">reference types proposal</a> (supported in <a href=/mozilla/firefox/releases/79>Firefox 79</a>) provides two main features:</p>
 
 <ul>
  <li>A new type, <code>externref</code>, which can hold <em>any</em> JavaScript value, for example strings, DOM references, objects, etc. <code>externref</code> is opaque from the point of view of WebAssembly — a wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. <code>externref</code> can be used for value types and table elements.</li>
@@ -561,7 +561,7 @@ Promise.all([
 
 <h2 id="Multi-value_WebAssembly">Multi-value WebAssembly</h2>
 
-<p>Another more recent addition to the language (for example, in <a href="/en-US/docs/Mozilla/Firefox/Releases/78">Firefox 78</a>) is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.</p>
+<p>Another more recent addition to the language (for example, in <a href=/mozilla/firefox/releases/78>Firefox 78</a>) is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.</p>
 
 <p>At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:</p>
 
@@ -580,20 +580,20 @@ Promise.all([
 
 <h2 id="WebAssembly_threads">WebAssembly threads</h2>
 
-<p>WebAssembly Threads (supported in <a href="/en-US/docs/Mozilla/Firefox/Releases/79">Firefox 79</a> onwards) allow WebAssembly Memory objects to be shared across multiple WebAssembly instances running in separate Web Workers, in the same fashion as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>s in JavaScript. This allows very fast communication between Workers, and significant performance gains in web applications.</p>
+<p>WebAssembly Threads (supported in <a href=/mozilla/firefox/releases/79>Firefox 79</a> onwards) allow WebAssembly Memory objects to be shared across multiple WebAssembly instances running in separate Web Workers, in the same fashion as <code><a href=/web/javascript/reference/global_objects/sharedarraybuffer>SharedArrayBuffer</a></code>s in JavaScript. This allows very fast communication between Workers, and significant performance gains in web applications.</p>
 
 <p>The threads proposal has two parts, shared memories and atomic memory accesses.</p>
 
 <h3 id="Shared_memories">Shared memories</h3>
 
-<p>As described above, you can create shared WebAssembly <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">Memory</a></code> objects, which can be transferred between Window and Worker contexts using <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code>, in the same fashion as a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>.</p>
+<p>As described above, you can create shared WebAssembly <code><a href=/web/javascript/reference/global_objects/webassembly/memory>Memory</a></code> objects, which can be transferred between Window and Worker contexts using <code><a href=/web/api/window/postmessage>postMessage()</a></code>, in the same fashion as a <code><a href=/web/javascript/reference/global_objects/sharedarraybuffer>SharedArrayBuffer</a></code>.</p>
 
-<p>Over on the JavaScript API side, the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory">WebAssembly.Memory()</a></code> constructor's initialization object now has a <code>shared</code> property, which when set to <code>true</code> will create a shared memory:</p>
+<p>Over on the JavaScript API side, the <code><a href=/web/javascript/reference/global_objects/webassembly/memory/memory>WebAssembly.Memory()</a></code> constructor's initialization object now has a <code>shared</code> property, which when set to <code>true</code> will create a shared memory:</p>
 
 <pre class="brush: js notranslate">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
 </pre>
 
-<p>the memory's <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">buffer</a></code> property will now return a <code>SharedArrayBuffer</code>, instead of the usual <code>ArrayBuffer</code>:</p>
+<p>the memory's <code><a href=/web/javascript/reference/global_objects/webassembly/memory/buffer>buffer</a></code> property will now return a <code>SharedArrayBuffer</code>, instead of the usual <code>ArrayBuffer</code>:</p>
 
 <pre class="brush: js notranslate">memory.buffer // returns SharedArrayBuffer
 </pre>

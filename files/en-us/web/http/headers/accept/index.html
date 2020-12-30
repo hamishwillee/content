@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Accept</code></strong> request HTTP header advertises which content types, expressed as <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>, the client is able to understand. Using <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a>, the server then selects one of the proposals, uses it and informs the client of its choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set adequate values for this header depending on the context where the request is done: when fetching a CSS stylesheet a different value is set for the request than when fetching an image, video or a script.</p>
+<p>The <strong><code>Accept</code></strong> request HTTP header advertises which content types, expressed as <a href=/web/http/basics_of_http/mime_types>MIME types</a>, the client is able to understand. Using <a href=/web/http/content_negotiation>content negotiation</a>, the server then selects one of the proposals, uses it and informs the client of its choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set adequate values for this header depending on the context where the request is done: when fetching a CSS stylesheet a different value is set for the request than when fetching an image, video or a script.</p>
 
 <table class="properties">
  <tbody>
@@ -42,13 +42,13 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 
 <dl>
  <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>A single, precise <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, like <code>text/html</code>.</dd>
+ <dd>A single, precise <a href=/web/http/basics_of_http/mime_types>MIME type</a>, like <code>text/html</code>.</dd>
  <dt><code>&lt;MIME_type&gt;/*</code></dt>
  <dd>A MIME type, but without any subtype. <code>image/*</code> will match <code>image/png</code>, <code>image/svg</code>, <code>image/gif</code> and any other image types.</dd>
  <dt><code>*/*</code></dt>
  <dd>Any MIME type</dd>
  <dt><code>;q=</code> (q-factor weighting)</dt>
- <dd>Any value used is placed in an order of preference expressed using relative <a href="/en-US/docs/Glossary/Quality_values">quality value</a> called the <em>weight</em>.</dd>
+ <dd>Any value used is placed in an order of preference expressed using relative <a href=/glossary/quality_values>quality value</a> called the <em>weight</em>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -88,7 +88,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
+ <li>HTTP <a href=/web/http/content_negotiation>content negotiation</a></li>
  <li>Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}</li>
  <li>Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
 </ul>

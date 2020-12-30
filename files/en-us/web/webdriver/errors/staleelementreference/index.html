@@ -7,9 +7,9 @@ tags:
   - Stale element reference
   - WebDriver
 ---
-<p>The <strong>stale element reference</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs because the referenced <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> is no longer attached to the <a href="/en-US/docs/Glossary/DOM">DOM</a>.</p>
+<p>The <strong>stale element reference</strong> error is a <a href=/web/webdriver/errors>WebDriver error</a> that occurs because the referenced <a href=/web/webdriver/webelement>web element</a> is no longer attached to the <a href=/glossary/dom>DOM</a>.</p>
 
-<p>Every DOM element is represented in WebDriver by a unique identifying reference, known as a <em><a href="/en-US/docs/Web/WebDriver/WebElement">web element</a></em>. The web element reference is a UUID used to execute commands targeting specific elements, such as <a href="/en-US/docs/Web/WebDriver/Commands/GetElementTagName">getting an element’s tag name</a> and <a href="/en-US/docs/Web/WebDriver/Commands/GetElementProperty">retreiving a property</a> off an element.</p>
+<p>Every DOM element is represented in WebDriver by a unique identifying reference, known as a <em><a href=/web/webdriver/webelement>web element</a></em>. The web element reference is a UUID used to execute commands targeting specific elements, such as <a href=/web/webdriver/commands/getelementtagname>getting an element’s tag name</a> and <a href=/web/webdriver/commands/getelementproperty>retreiving a property</a> off an element.</p>
 
 <p>When an element is no longer attached to the DOM, i.e. it has been removed from the document or the document has changed, it is said to be <em>stale</em>. Staleness occurs for example when you have a web element reference and the document it was retrieved from navigates.</p>
 
@@ -17,7 +17,7 @@ tags:
 
 <h3 id="Document_navigation">Document navigation</h3>
 
-<p>Upon navigation, all web element references to the previous document will be discarded along with the document. This will cause any subsequent interaction with the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to fail with the stale element reference error:</p>
+<p>Upon navigation, all web element references to the previous document will be discarded along with the document. This will cause any subsequent interaction with the <a href=/web/webdriver/webelement>web element</a> to fail with the stale element reference error:</p>
 
 <pre class="brush: python">import urllib
 
@@ -44,7 +44,7 @@ except exceptions.StaleElementReferenceException as e:
 
 <h3 id="Node_removal">Node removal</h3>
 
-<p>When a document node is removed from the DOM, its web element reference will be invalidated. This will also cause any subsequent interaction with the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to fail with the stale element reference error:</p>
+<p>When a document node is removed from the DOM, its web element reference will be invalidated. This will also cause any subsequent interaction with the <a href=/web/webdriver/webelement>web element</a> to fail with the stale element reference error:</p>
 
 <pre class="brush: python">import urllib
 
@@ -75,13 +75,13 @@ except exceptions.StaleElementReferenceException as e:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a></li>
+ <li><a href=/web/webdriver/webelement>WebElement</a></li>
  <li>Associated commands:
   <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElement">Find Element</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElements">Find Elements</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElementFromElement">Find Element From Element</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElementsFromElement">Find Elements From Element</a></li>
+   <li><a href=/web/webdriver/commands/findelement>Find Element</a></li>
+   <li><a href=/web/webdriver/commands/findelements>Find Elements</a></li>
+   <li><a href=/web/webdriver/commands/findelementfromelement>Find Element From Element</a></li>
+   <li><a href=/web/webdriver/commands/findelementsfromelement>Find Elements From Element</a></li>
   </ul>
  </li>
 </ul>

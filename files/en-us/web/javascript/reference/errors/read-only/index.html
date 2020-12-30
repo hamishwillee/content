@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>-only exception "is read-only" occurs when a global variable or object property that was assigned to is a read-only property.</p>
+<p>The JavaScript <a href=/web/javascript/reference/strict_mode>strict mode</a>-only exception "is read-only" occurs when a global variable or object property that was assigned to is a read-only property.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -26,9 +26,9 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>The global variable or object property that was assigned to is a read-only property. (Technically, it is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute">non-writable data property</a>.)</p>
+<p>The global variable or object property that was assigned to is a read-only property. (Technically, it is a <a href=/web/javascript/reference/global_objects/object/defineproperty#Writable_attribute>non-writable data property</a>.)</p>
 
-<p>This error happens only in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode code</a>. In non-strict code, the assignment is silently ignored.</p>
+<p>This error happens only in <a href=/web/javascript/reference/strict_mode>strict mode code</a>. In non-strict code, the assignment is silently ignored.</p>
 
 <h2 id="Examples">Examples</h2>
 

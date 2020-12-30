@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}</div>
 
-<p class="summary">In previous articles we covered APIs that help us make our <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> example a Progressive Web App: <a href="en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Service Workers</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Installable_PWAs">Web Manifests</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push">Notifications and Push</a>. In this article we will go even further and improve the performance of the app by progressively loading its resources.</p>
+<p class="summary">In previous articles we covered APIs that help us make our <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> example a Progressive Web App: <a href="en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Service Workers</a>, <a href=/web/progressive_web_apps/installable_pwas>Web Manifests</a>, <a href=/web/progressive_web_apps/re-engageable_notifications_push>Notifications and Push</a>. In this article we will go even further and improve the performance of the app by progressively loading its resources.</p>
 
 <h2 id="First_meaningful_paint">First meaningful paint</h2>
 
@@ -99,11 +99,11 @@ article img {
 
 <p>The image loading mechanism discussed in the above section works OK — it loads the images after rendering the HTML structure, and applies a nice transition effect in the process. The problem is that it still loads <em>all</em> the images at once, even though the user will only see the first two or three upon page load.</p>
 
-<p>This problem can be solved with the new <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> — using this we can ensure that images will be loaded only when they appear in the viewport.</p>
+<p>This problem can be solved with the new <a href=/web/api/intersection_observer_api>Intersection Observer API</a> — using this we can ensure that images will be loaded only when they appear in the viewport.</p>
 
 <h3 id="Intersection_Observer">Intersection Observer</h3>
 
-<p>This is a progressive enhancement to the previously working example — <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> will load target images only when the user scrolls down, causing them to display in the viewport.</p>
+<p>This is a progressive enhancement to the previously working example — <a href=/web/api/intersection_observer_api>Intersection Observer</a> will load target images only when the user scrolls down, causing them to display in the viewport.</p>
 
 <p>Here's what the relevant code looks like:</p>
 
@@ -145,10 +145,10 @@ article img {
 
 <h2 id="Final_thoughts">Final thoughts</h2>
 
-<p>That's all for this tutorial series — we went through the <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">source code of the js13kPWA example app</a> and learned about the use of progressive web apps features including an <a href="/en-US/docs/Web/Progressive_web_apps/Introduction">Introduction</a>, <a href="/en-US/docs/Web/Progressive_web_apps/App_structure">PWA structure</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">offline availability with Service Workers</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Installable_PWAs">installable PWAs</a>, and finally notifications. We also explained push with help from the <a href="https://serviceworke.rs/">Service Worker Cookbook</a>. And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>.</p>
+<p>That's all for this tutorial series — we went through the <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">source code of the js13kPWA example app</a> and learned about the use of progressive web apps features including an <a href=/web/progressive_web_apps/introduction>Introduction</a>, <a href=/web/progressive_web_apps/app_structure>PWA structure</a>, <a href=/web/progressive_web_apps/offline_service_workers>offline availability with Service Workers</a>, <a href=/web/progressive_web_apps/installable_pwas>installable PWAs</a>, and finally notifications. We also explained push with help from the <a href="https://serviceworke.rs/">Service Worker Cookbook</a>. And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the <a href=/web/api/intersection_observer_api>Intersection Observer API</a>.</p>
 
 <p>Feel free to experiment with the code, enhance your existing app with PWA features, or build something entirely new on your own. PWAs give a huge advantage over regular web apps.</p>
 
 <p>{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}</p>
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}</p>
+<p>{{QuickLinksWithSubpages(/web/progressive_web_apps/)}}</p>

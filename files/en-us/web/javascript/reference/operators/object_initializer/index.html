@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{JsSidebar("Operators")}}</div>
 
-<p>Objects can be initialized using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object"><code>new Object()</code></a>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>, or using the <em>literal</em> notation (<em>initializer</em> notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
+<p>Objects can be initialized using <a href=/web/javascript/reference/global_objects/object/object><code>new Object()</code></a>, <code><a href=/web/javascript/reference/global_objects/object/create>Object.create()</a></code>, or using the <em>literal</em> notation (<em>initializer</em> notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}</div>
 
@@ -57,11 +57,11 @@ let o = {
 
 <h2 id="Description">Description</h2>
 
-<p>An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of <em>properties</em>, which are used to describe an object. The values of object properties can either contain <a href="/en-US/docs/Glossary/primitive">primitive</a> data types or other objects.</p>
+<p>An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of <em>properties</em>, which are used to describe an object. The values of object properties can either contain <a href=/glossary/primitive>primitive</a> data types or other objects.</p>
 
 <h3 id="Object_literal_notation_vs_JSON">Object literal notation vs JSON</h3>
 
-<p>The object literal notation is not the same as the <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href="/en-US/docs/Glossary/JSON">JSON</a>). Although they look similar, there are differences between them:</p>
+<p>The object literal notation is not the same as the <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href=/glossary/json>JSON</a>). Although they look similar, there are differences between them:</p>
 
 <ul>
  <li>JSON permits <em>only</em> property definition using <code>"property": value</code> syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.</li>
@@ -91,7 +91,7 @@ let o = {
 
 <h3 id="Accessing_properties">Accessing properties</h3>
 
-<p>Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> for detailed information.)</p>
+<p>Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See <a href=/web/javascript/reference/operators/property_accessors>property accessors</a> for detailed information.)</p>
 
 <pre class="brush: js notranslate">object.foo // "bar"
 object['age'] // 42
@@ -151,7 +151,7 @@ console.log(a) // {x: 2}
 
 <h3 id="Method_definitions">Method definitions</h3>
 
-<p>A property of an object can also refer to a <a href="/en-US/docs/Web/JavaScript/Reference/Functions">function</a> or a <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> method.</p>
+<p>A property of an object can also refer to a <a href=/web/javascript/reference/functions>function</a> or a <a href=/web/javascript/reference/functions/get>getter</a> or <a href=/web/javascript/reference/functions/set>setter</a> method.</p>
 
 <pre class="brush: js notranslate">let o = {
   <var>property: function </var>(<var>parameters</var>) {},
@@ -182,11 +182,11 @@ let o = {
   }
 };</pre>
 
-<p>For more information and examples about methods, see <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>.</p>
+<p>For more information and examples about methods, see <a href=/web/javascript/reference/functions/method_definitions>method definitions</a>.</p>
 
 <h3 id="Computed_property_names">Computed property names</h3>
 
-<p>Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets <code>[]</code>, that will be computed and used as the property name. This is reminiscent of the bracket notation of the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a> syntax, which you may have used to read and set properties already.</p>
+<p>Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets <code>[]</code>, that will be computed and used as the property name. This is reminiscent of the bracket notation of the <a href=/web/javascript/reference/operators/property_accessors>property accessor</a> syntax, which you may have used to read and set properties already.</p>
 
 <p>Now you can use a similar syntax in object literals, too:</p>
 
@@ -219,7 +219,7 @@ console.log(config) // {size: 12, mobileSize: 4}</pre>
 
 <h3 id="Spread_properties">Spread properties</h3>
 
-<p>The <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> proposal (stage 4) adds <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a> properties to object literals. It copies own enumerable properties from a provided object onto a new object.</p>
+<p>The <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> proposal (stage 4) adds <a href=/web/javascript/reference/operators/spread_operator>spread</a> properties to object literals. It copies own enumerable properties from a provided object onto a new object.</p>
 
 <p>Shallow-cloning (excluding <code>prototype</code>) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.</p>
 
@@ -233,12 +233,12 @@ let mergedObj = { ...obj1, ...obj2 }
 // Object { foo: "baz", x: 42, y: 13 }</pre>
 
 <div class="notecard warning">
-<p>Note that {{jsxref("Object.assign()")}} triggers <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>, whereas the spread operator doesn't!</p>
+<p>Note that {{jsxref("Object.assign()")}} triggers <a href=/web/javascript/reference/functions/set>setters</a>, whereas the spread operator doesn't!</p>
 </div>
 
 <h3 id="Prototype_mutation">Prototype mutation</h3>
 
-<p>A property definition of the form <code>__proto__: value</code> or <code>"__proto__": value</code> does not create a property with the name <code>__proto__</code>.  Instead, if the provided value is an object or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, it changes the <code>[[Prototype]]</code> of the created object to that value.  (If the value is not an object or <code>null</code>, the object is not changed.)</p>
+<p>A property definition of the form <code>__proto__: value</code> or <code>"__proto__": value</code> does not create a property with the name <code>__proto__</code>.  Instead, if the provided value is an object or <a href=/web/javascript/reference/global_objects/null><code>null</code></a>, it changes the <code>[[Prototype]]</code> of the created object to that value.  (If the value is not an object or <code>null</code>, the object is not changed.)</p>
 
 <pre class="brush: js notranslate">let obj1 = {}
 assert(Object.getPrototypeOf(obj1) === Object.prototype)
@@ -296,8 +296,8 @@ assert(obj3.__proto__ === 17)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> / <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">Method definitions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
+ <li><a href=/web/javascript/reference/operators/property_accessors>Property accessors</a></li>
+ <li><code><a href=/web/javascript/reference/functions/get>get</a></code> / <code><a href=/web/javascript/reference/functions/set>set</a></code></li>
+ <li><a href=/web/javascript/reference/functions/method_definitions>Method definitions</a></li>
+ <li><a href=/web/javascript/reference/lexical_grammar>Lexical grammar</a></li>
 </ul>

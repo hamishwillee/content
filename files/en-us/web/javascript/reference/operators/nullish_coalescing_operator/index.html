@@ -12,9 +12,9 @@ tags:
 
 <p>The <strong>nullish coalescing operator (<code>??</code>)</strong> is a logical operator that returns its right-hand side operand when its left-hand side operand is {{jsxref("null")}} or {{jsxref("undefined")}}, and otherwise returns its left-hand side operand.</p>
 
-<p>This can be contrasted with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">logical OR (<code>||</code>) operator</a>, which returns the right-hand side operand if the left operand is <em>any</em> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a><em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description"> </a></em>value, not only <code>null</code> or <code>undefined</code>. In other words, if you use <code>||</code> to provide some default value to another variable <code>foo</code>, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., <code>''</code> or <code>0</code>). See below for more examples.</p>
+<p>This can be contrasted with the <a href=/web/javascript/reference/operators/logical_or>logical OR (<code>||</code>) operator</a>, which returns the right-hand side operand if the left operand is <em>any</em> <a href=/web/javascript/reference/operators/logical_operators#Description>falsy</a><em><a href=/web/javascript/reference/operators/logical_operators#Description> </a></em>value, not only <code>null</code> or <code>undefined</code>. In other words, if you use <code>||</code> to provide some default value to another variable <code>foo</code>, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., <code>''</code> or <code>0</code>). See below for more examples.</p>
 
-<p>The nullish coalescing operator has the fifth-lowest <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence</a>, directly lower than <code>||</code> and directly higher than the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">conditional (ternary) operator</a>.</p>
+<p>The nullish coalescing operator has the fifth-lowest <a href=/web/javascript/reference/operators/operator_precedence>operator precedence</a>, directly lower than <code>||</code> and directly higher than the <a href=/web/javascript/reference/operators/conditional_operator>conditional (ternary) operator</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}</div>
 
@@ -46,7 +46,7 @@ console.log(valC); // 42</pre>
 
 <h3 id="Assigning_a_default_value_to_a_variable">Assigning a default value to a variable</h3>
 
-<p>Earlier, when one wanted to assign a default value to a variable, a common pattern was to use the logical OR operator (<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">||</a></code>):</p>
+<p>Earlier, when one wanted to assign a default value to a variable, a common pattern was to use the logical OR operator (<code><a href=/web/javascript/reference/operators/logical_operators#Logical_OR_2>||</a></code>):</p>
 
 <pre class="brush: js notranslate">let foo;
 
@@ -95,7 +95,7 @@ console.log( B() ?? C() );
 
 <h3 id="No_chaining_with_AND_or_OR_operators">No chaining with AND or OR operators</h3>
 
-<p>It is not possible to combine both the AND (<code>&amp;&amp;</code>) and OR operators (<code>||</code>) directly with <code>??</code>. A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code> will be thrown in such cases.</p>
+<p>It is not possible to combine both the AND (<code>&amp;&amp;</code>) and OR operators (<code>||</code>) directly with <code>??</code>. A <code><a href=/web/javascript/reference/global_objects/syntaxerror>SyntaxError</a></code> will be thrown in such cases.</p>
 
 <pre class="brush: js example-bad notranslate">null || undefined ?? "foo"; // raises a SyntaxError
 true || undefined ?? "foo"; // raises a SyntaxError</pre>
@@ -107,7 +107,7 @@ true || undefined ?? "foo"; // raises a SyntaxError</pre>
 
 <h3 id="Relationship_with_the_optional_chaining_operator_.">Relationship with the optional chaining operator (<code>?.</code>)</h3>
 
-<p>The nullish coalescing operator treats <code>undefined</code> and <code>null</code> as specific values and so does the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">optional chaining operator (<code>?.</code>)</a> which is useful to access a property of an object which may be <code>null</code> or <code>undefined</code>.</p>
+<p>The nullish coalescing operator treats <code>undefined</code> and <code>null</code> as specific values and so does the <a href=/web/javascript/reference/operators/optional_chaining>optional chaining operator (<code>?.</code>)</a> which is useful to access a property of an object which may be <code>null</code> or <code>undefined</code>.</p>
 
 <pre class="brush: js notranslate">let foo = { someFooProp: "hi" };
 
@@ -143,7 +143,7 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">The optional chaining operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">The logical OR (<code>||</code>) operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default parameters in functions</a></li>
+ <li><a href=/web/javascript/reference/operators/optional_chaining>The optional chaining operator</a></li>
+ <li><a href=/web/javascript/reference/operators/logical_operators#Logical_OR_2>The logical OR (<code>||</code>) operator</a></li>
+ <li><a href=/web/javascript/reference/functions/default_parameters>Default parameters in functions</a></li>
 </ul>

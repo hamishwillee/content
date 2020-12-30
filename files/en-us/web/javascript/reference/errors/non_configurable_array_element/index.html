@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "can't delete non-configurable array element" occurs when it was attempted to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array">shorten the length</a> of an array, but one of the array's elements is <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.</p>
+<p>The JavaScript exception "can't delete non-configurable array element" occurs when it was attempted to <a href=/web/javascript/reference/global_objects/array/length#Shortening_an_array>shorten the length</a> of an array, but one of the array's elements is <a href=/web/javascript/data_structures#Properties>non-configurable</a>.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -23,11 +23,11 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>It was attempted to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array">shorten the length</a> of an array, but one of the array's elements is <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>. When shortening an array, the elements beyond the new array length will be deleted, which failed in this situation.</p>
+<p>It was attempted to <a href=/web/javascript/reference/global_objects/array/length#Shortening_an_array>shorten the length</a> of an array, but one of the array's elements is <a href=/web/javascript/data_structures#Properties>non-configurable</a>. When shortening an array, the elements beyond the new array length will be deleted, which failed in this situation.</p>
 
 <p>The <code>configurable</code> attribute controls whether the property can be deleted from the object and whether its attributes (other than <code>writable</code>) can be changed.</p>
 
-<p>Usually, properties in an object created by an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Syntax">array initializer</a> are configurable. However, for example, when using {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.</p>
+<p>Usually, properties in an object created by an <a href=/web/javascript/reference/global_objects/array#Syntax>array initializer</a> are configurable. However, for example, when using {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -77,7 +77,7 @@ copy.length = 1;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">[[Configurable]]</a></li>
+ <li><a href=/web/javascript/data_structures#Properties>[[Configurable]]</a></li>
  <li>{{jsxref("Array.length")}}</li>
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.seal()")}}</li>

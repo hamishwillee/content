@@ -64,7 +64,7 @@ tags:
 
 <h3 id="HTTP_is_extensible">HTTP is extensible</h3>
 
-<p>Introduced in HTTP/1.0, <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> make this protocol easy to extend and experiment with. New functionality can even be introduced by a simple agreement between a client and a server about a new header's semantics.</p>
+<p>Introduced in HTTP/1.0, <a href=/web/http/headers>HTTP headers</a> make this protocol easy to extend and experiment with. New functionality can even be introduced by a simple agreement between a client and a server about a new header's semantics.</p>
 
 <h3 id="HTTP_is_stateless_but_not_sessionless">HTTP is stateless, but not sessionless</h3>
 
@@ -87,13 +87,13 @@ tags:
 <p>Here is a list of common features controllable with HTTP.</p>
 
 <ul>
- <li><em><a href="/en-US/docs/Web/HTTP/Caching">Caching</a></em><br>
+ <li><em><a href=/web/http/caching>Caching</a></em><br>
   How documents are cached can be controlled by HTTP. The server can instruct proxies and clients, about what to cache and for how long. The client can instruct intermediate cache proxies to ignore the stored document.</li>
  <li><em>Relaxing the origin constraint</em><br>
   To prevent snooping and other privacy invasions, Web browsers enforce strict separation between Web sites. Only pages from the <strong>same origin</strong> can access all the information of a Web page. Though such constraint is a burden to the server, HTTP headers can relax this strict separation on the server side, allowing a document to become a patchwork of information sourced from different domains; there could even be security-related reasons to do so.</li>
  <li><em>Authentication</em><br>
-  Some pages may be protected so that only specific users can access them. Basic authentication may be provided by HTTP, either using the {{HTTPHeader("WWW-Authenticate")}} and similar headers, or by setting a specific session using <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a>.</li>
- <li><em><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling">Proxy and tunneling</a></em><br>
+  Some pages may be protected so that only specific users can access them. Basic authentication may be provided by HTTP, either using the {{HTTPHeader("WWW-Authenticate")}} and similar headers, or by setting a specific session using <a href=/web/http/cookies>HTTP cookies</a>.</li>
+ <li><em><a href=/web/http/proxy_servers_and_tunneling>Proxy and tunneling</a></em><br>
   Servers or clients are often located on intranets and hide their true IP address from other computers. HTTP requests then go through proxies to cross this network barrier. Not all proxies are HTTP proxies. The SOCKS protocol, for example, operates at a lower level. Other protocols, like ftp, can be handled by these proxies.</li>
  <li><em>Sessions</em><br>
   Using HTTP cookies allows you to link requests with the state of the server. This creates sessions, despite basic HTTP being a state-less protocol. This is useful not only for e-commerce shopping baskets, but also for any site allowing user configuration of the output.</li>
@@ -142,10 +142,10 @@ Content-Type: text/html
 <p>Requests consists of the following elements:</p>
 
 <ul>
- <li>An HTTP <a href="/en-US/docs/Web/HTTP/Methods">method</a>, usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform. Typically, a client wants to fetch a resource (using <code>GET</code>) or post the value of an <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> (using <code>POST</code>), though more operations may be needed in other cases.</li>
+ <li>An HTTP <a href=/web/http/methods>method</a>, usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform. Typically, a client wants to fetch a resource (using <code>GET</code>) or post the value of an <a href=/web/guide/html/forms>HTML form</a> (using <code>POST</code>), though more operations may be needed in other cases.</li>
  <li>The path of the resource to fetch; the URL of the resource stripped from elements that are obvious from the context, for example without the {{Glossary("protocol")}} (<code>http://</code>), the {{Glossary("domain")}} (here, <code>developer.mozilla.org</code>), or the TCP {{Glossary("port")}} (here, <code>80</code>).</li>
  <li>The version of the HTTP protocol.</li>
- <li>Optional <a href="/en-US/docs/Web/HTTP/Headers">headers</a> that convey additional information for the servers.</li>
+ <li>Optional <a href=/web/http/headers>headers</a> that convey additional information for the servers.</li>
  <li>Or a body, for some methods like <code>POST</code>, similar to those in responses, which contain the resource sent.</li>
 </ul>
 
@@ -159,9 +159,9 @@ Content-Type: text/html
 
 <ul>
  <li>The version of the HTTP protocol they follow.</li>
- <li>A <a href="/en-US/docs/Web/HTTP/Status">status code</a>, indicating if the request was successful, or not, and why.</li>
+ <li>A <a href=/web/http/status>status code</a>, indicating if the request was successful, or not, and why.</li>
  <li>A status message, a non-authoritative short description of the status code.</li>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Headers">headers</a>, like those for requests.</li>
+ <li>HTTP <a href=/web/http/headers>headers</a>, like those for requests.</li>
  <li>Optionally, a body containing the fetched resource.</li>
 </ul>
 
@@ -169,10 +169,10 @@ Content-Type: text/html
 
 <p>The most commonly used API based on HTTP is the {{domxref("XMLHttpRequest")}} API, which can be used to exchange data between a {{Glossary("user agent")}} and a server. The modern {{domxref("Fetch API")}} provides the same features with a more powerful and flexible feature set.</p>
 
-<p>Another API, <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>, is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism. Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers. The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects, delivering them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.onmessage", "onmessage")}} event handler if no type-specific event handler was established.</p>
+<p>Another API, <a href=/web/api/server-sent_events>server-sent events</a>, is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism. Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers. The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects, delivering them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.onmessage", "onmessage")}} event handler if no type-specific event handler was established.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
 <p>HTTP is an extensible protocol that is easy to use. The client-server structure, combined with the ability to add headers, allows HTTP to advance along with the extended capabilities of the Web.</p>
 
-<p>Though HTTP/2 adds some complexity, by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0. Session flow remains simple, allowing it to be investigated, and debugged with a simple <a href="/en-US/docs/Tools/Network_Monitor">HTTP message monitor</a>.</p>
+<p>Though HTTP/2 adds some complexity, by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0. Session flow remains simple, allowing it to be investigated, and debugged with a simple <a href=/tools/network_monitor>HTTP message monitor</a>.</p>

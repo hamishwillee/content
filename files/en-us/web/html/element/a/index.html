@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element's attributes include the <a href=/web/html/global_attributes>global attributes</a>.</p>
 
 <dl>
  <dt id="download">{{HTMLAttrDef("download")}}{{HTMLVersionInline(5)}}</dt>
@@ -34,8 +34,8 @@ tags:
   <li>Without a value, the browser will suggest a filename/extension, generated from various sources:
    <ul>
     <li>The {{HTTPHeader("Content-Disposition")}} HTTP header</li>
-    <li>The final segment in the URL <a href="/en-US/docs/Web/API/URL/pathname">path</a></li>
-    <li>The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URL</a>, or {{domxref("Blob.type")}} for a <a href="/en-US/docs/Web/API/URL/createObjectURL"><code>blob:</code> URL</a>)</li>
+    <li>The final segment in the URL <a href=/web/api/url/pathname>path</a></li>
+    <li>The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a <a href=/web/http/basics_of_http/data_uris><code>data:</code> URL</a>, or {{domxref("Blob.type")}} for a <a href=/web/api/url/createobjecturl><code>blob:</code> URL</a>)</li>
    </ul>
   </li>
   <li>Defining a value suggests it as the filename. <code>/</code> and <code>\</code> characters are converted to underscores (<code>_</code>). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.</li>
@@ -44,7 +44,7 @@ tags:
  <div class="note"><strong>Notes:</strong>
 
  <ul>
-  <li><code>download</code> only works for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>, or the <code>blob:</code> and <code>data:</code> schemes.</li>
+  <li><code>download</code> only works for <a href=/web/security/same-origin_policy>same-origin URLs</a>, or the <code>blob:</code> and <code>data:</code> schemes.</li>
   <li>
    <p>Note: if the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behavior may differ:</p>
 
@@ -69,17 +69,17 @@ tags:
   <li>Pieces of media files with media fragments</li>
   <li>Telephone numbers with <code>tel:</code> URLs</li>
   <li>Email addresses with <code>mailto:</code> URLs</li>
-  <li>While web browsers may not support other URL schemes, web sites can with <code><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler">registerProtocolHandler()</a></code></li>
+  <li>While web browsers may not support other URL schemes, web sites can with <code><a href=/web/api/navigator/registerprotocolhandler>registerProtocolHandler()</a></code></li>
  </ul>
  </dd>
  <dt id="hreflang">{{HTMLAttrDef("hreflang")}}</dt>
- <dd>Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as <a href="/en-US/docs/Web/HTML/Global_attributes/lang">the global <code>lang</code> attribute</a>.</dd>
+ <dd>Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as <a href=/web/html/global_attributes/lang>the global <code>lang</code> attribute</a>.</dd>
  <dt id="ping">{{HTMLAttrDef("ping")}}</dt>
  <dd>A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body <code>PING</code> to the URLs. Typically for tracking.</dd>
  <dt id="referrerpolicy">{{HTMLAttrDef("referrerpolicy")}}{{Experimental_Inline}}</dt>
- <dd>How much of the <a href="/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> to send when following the link. See <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy"><code>Referrer-Policy</code></a> for possible values and their effects.</dd>
+ <dd>How much of the <a href=/web/http/headers/referer>referrer</a> to send when following the link. See <a href=/web/http/headers/referrer-policy><code>Referrer-Policy</code></a> for possible values and their effects.</dd>
  <dt id="rel">{{HTMLAttrDef("rel")}}</dt>
- <dd>The relationship of the linked URL as space-separated <a href="/en-US/docs/Web/HTML/Link_types">link types</a>.</dd>
+ <dd>The relationship of the linked URL as space-separated <a href=/web/html/link_types>link types</a>.</dd>
  <dt id="target">{{HTMLAttrDef("target")}}</dt>
  <dd>Where to display the linked URL, as the name for a <em>browsing context</em> (a tab, window, or <code>&lt;iframe&gt;</code>). The following keywords have special meanings for where to load the URL:
  <ul>
@@ -131,12 +131,12 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>, palpable content.</td>
+   <th scope="row"><a href=/web/guide/html/content_categories>Content categories</a></th>
+   <td><a href=/web/guide/html/content_categories#Flow_content>Flow content</a>, <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>, <a href=/web/guide/html/content_categories#Interactive_content>interactive content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Transparent_content_model">Transparent</a>, containing either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> (excluding <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>) or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td><a href=/web/guide/html/content_categories#Transparent_content_model>Transparent</a>, containing either <a href=/web/guide/html/content_categories#Flow_content>flow content</a> (excluding <a href=/web/guide/html/content_categories#Interactive_content>interactive content</a>) or <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -144,7 +144,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>, but not other <code>&lt;a&gt;</code> elements.</td>
+   <td>Any element that accepts <a href=/web/guide/html/content_categories#Phrasing_content>phrasing content</a>, or any element that accepts <a href=/web/guide/html/content_categories#Flow_content>flow content</a>, but not other <code>&lt;a&gt;</code> elements.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -201,7 +201,7 @@ tags:
 <h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;a href="//example.com"&gt;Scheme-relative URL&lt;/a&gt;
-&lt;a href="/en-US/docs/Web/HTML"&gt;Origin-relative URL&lt;/a&gt;
+&lt;a href=/web/html&gt;Origin-relative URL&lt;/a&gt;
 &lt;a href="./p"&gt;Directory-relative URL&lt;/a&gt;
 </pre>
 
@@ -236,7 +236,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
 
-<p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links">Email links</a> or {{RFC(6068)}}.</p>
+<p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href=/learn/html/introduction_to_html/creating_hyperlinks#E-mail_links>Email links</a> or {{RFC(6068)}}.</p>
 
 <h3 id="Linking_to_telephone_numbers">Linking to telephone numbers</h3>
 
@@ -317,7 +317,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <h2 id="Security_and_privacy">Security and privacy</h2>
 
-<p><code>&lt;a&gt;</code> elements can have consequences for users’ security and privacy. See <a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns"><code>Referer</code> header: privacy and security concerns</a> for information.</p>
+<p><code>&lt;a&gt;</code> elements can have consequences for users’ security and privacy. See <a href=/web/security/referer_header:_privacy_and_security_concerns><code>Referer</code> header: privacy and security concerns</a> for information.</p>
 
 <p>Using <code>target="_blank"</code> without <code>rel="noreferrer"</code> and <code>rel="noopener"</code> makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks (<a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">vulnerability description</a>), although note that, in newer browser versions (e.g. Firefox 79+) setting <code>target="_blank"</code> implicitly provides the same protection as setting <code>rel="noopener"</code>.</p>
 
@@ -388,7 +388,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <ul>
  <li><a href="https://webaim.org/techniques/hypertext/hypertext_links">WebAIM: Links and Hypertext - Hypertext Links</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways">MDN / Understanding WCAG, Guideline 3.2</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways>MDN / Understanding WCAG, Guideline 3.2</a></li>
  <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">G200: Opening new windows and tabs from a link only when necessary</a></li>
  <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G201.html">G201: Giving users advanced warning when opening a new window</a></li>
 </ul>
@@ -423,7 +423,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 <ul>
  <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
  <li><a href="https://a11yproject.com/posts/2013-05-11-skip-nav-links/">How-to: Use Skip Navigation links</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN / Understanding WCAG, Guideline 2.4 explanations</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are>MDN / Understanding WCAG, Guideline 2.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1</a></li>
 </ul>
 

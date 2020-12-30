@@ -17,7 +17,7 @@ tags:
 
 <p>Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user’s device is offline.</p>
 
-<p>They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>-based approach.</p>
+<p>They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a <a href=/web/javascript/reference/global_objects/promise>Promise</a>-based approach.</p>
 
 <p>They can do a lot more than "just" offering offline capabilities, including handling notifications, performing heavy calculations on a separate thread, etc. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.</p>
 
@@ -111,7 +111,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>The service worker does not install until the code inside <code>waitUntil</code> is executed. It returns a promise — this approach is needed because installing may take some time, so we have to wait for it to finish.</p>
 
-<p><code>caches</code> is a special {{domxref("CacheStorage")}} object available in the scope of the given Service Worker to enable saving data — saving to <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> won't work, because web storage is synchronous. With Service Workers, we use the Cache API instead.</p>
+<p><code>caches</code> is a special {{domxref("CacheStorage")}} object available in the scope of the given Service Worker to enable saving data — saving to <a href=/web/api/web_storage_api>web storage</a> won't work, because web storage is synchronous. With Service Workers, we use the Cache API instead.</p>
 
 <p>Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads (identified by request URL).</p>
 
@@ -192,7 +192,7 @@ self.addEventListener('install', (e) =&gt; {
   );
 });</pre>
 
-<p>This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">available cache space in the browser is limited</a>, so it is a good idea to clean up after ourselves.</p>
+<p>This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the <a href=/web/api/indexeddb_api/browser_storage_limits_and_eviction_criteria>available cache space in the browser is limited</a>, so it is a good idea to clean up after ourselves.</p>
 
 <h2 id="Other_use_cases">Other use cases</h2>
 
@@ -200,10 +200,10 @@ self.addEventListener('install', (e) =&gt; {
 
 <h2 id="Summary">Summary</h2>
 
-<p>In this article we took a simple look at how you can make your PWA work offline with service workers. Be sure to check out our further documentation if you want to learn more about the concepts behind the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> and how to use it in more detail.</p>
+<p>In this article we took a simple look at how you can make your PWA work offline with service workers. Be sure to check out our further documentation if you want to learn more about the concepts behind the <a href=/web/api/service_worker_api>Service Worker API</a> and how to use it in more detail.</p>
 
-<p>Service Workers are also used when dealing with <a href="/en-US/docs/Web/API/Push_API">push notifications</a> — this will be explained in a subsequent article.</p>
+<p>Service Workers are also used when dealing with <a href=/web/api/push_api>push notifications</a> — this will be explained in a subsequent article.</p>
 
 <p>{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}</p>
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}</div>
+<div>{{QuickLinksWithSubpages(/web/progressive_web_apps/)}}</div>

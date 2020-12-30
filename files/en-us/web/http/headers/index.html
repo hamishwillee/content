@@ -21,7 +21,7 @@ tags:
  <li>{{Glossary("General header", "General headers")}} apply to both requests and responses, but with no relation to the data transmitted in the body.</li>
  <li>{{Glossary("Request header", "Request headers")}} contain more information about the resource to be fetched, or about the client requesting the resource.</li>
  <li>{{Glossary("Response header", "Response headers")}} hold additional information about the response, like its location or about the server providing it.</li>
- <li>{{Glossary("Entity header", "Entity headers")}} contain information about the body of the resource, like its <a href="/en-US/docs/Web/HTTP/Headers/Content-Length">content length</a> or <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</li>
+ <li>{{Glossary("Entity header", "Entity headers")}} contain information about the body of the resource, like its <a href=/web/http/headers/content-length>content length</a> or <a href=/web/http/basics_of_http/mime_types>MIME type</a>.</li>
 </ul>
 
 <p>Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies")}} handle them:</p>
@@ -34,7 +34,7 @@ tags:
  <li>{{ httpheader("TE") }}</li>
  <li>{{ httpheader("Trailer") }}</li>
  <li>{{ httpheader("Transfer-Encoding") }}</li>
- <li>{{ httpheader("Upgrade") }} (see also <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a>).</li>
+ <li>{{ httpheader("Upgrade") }} (see also <a href=/web/http/protocol_upgrade_mechanism>Protocol upgrade mechanism</a>).</li>
 </ul>
 
 <dl>
@@ -139,7 +139,7 @@ tags:
  <dd>Controls how long a persistent connection should stay open.</dd>
 </dl>
 
-<h2 id="Content_negotiation"><a href="/en-US/docs/Web/HTTP/Content_negotiation">Content negotiation</a></h2>
+<h2 id="Content_negotiation"><a href=/web/http/content_negotiation>Content negotiation</a></h2>
 
 <dl>
  <dt>{{HTTPHeader("Accept")}}</dt>
@@ -147,7 +147,7 @@ tags:
  <dt>{{HTTPHeader("Accept-Charset")}}</dt>
  <dd>Which {{Glossary("character encodings")}} the client understands.</dd>
  <dt>{{HTTPHeader("Accept-Encoding")}}</dt>
- <dd>The encoding algorithm, usually a <a href="/en-US/docs/Web/HTTP/Compression">compression algorithm</a>, that can be used on the resource sent back.</dd>
+ <dd>The encoding algorithm, usually a <a href=/web/http/compression>compression algorithm</a>, that can be used on the resource sent back.</dd>
  <dt>{{HTTPHeader("Accept-Language")}}</dt>
  <dd>Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).</dd>
 </dl>
@@ -165,7 +165,7 @@ tags:
 
 <dl>
  <dt>{{HTTPHeader("Cookie")}}</dt>
- <dd>Contains stored <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.</dd>
+ <dd>Contains stored <a href=/web/http/cookies>HTTP cookies</a> previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.</dd>
  <dt>{{HTTPHeader("Set-Cookie")}}</dt>
  <dd>Send cookies from the server to the user-agent.</dd>
  <dt>{{HTTPHeader("Cookie2")}} {{obsolete_inline}}</dt>
@@ -194,11 +194,11 @@ tags:
  <dt>{{HTTPHeader("Access-Control-Request-Headers")}}</dt>
  <dd>Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.</dd>
  <dt>{{HTTPHeader("Access-Control-Request-Method")}}</dt>
- <dd>Used when issuing a preflight request to let the server know which <a href="/en-US/docs/Web/HTTP/Methods">HTTP method</a> will be used when the actual request is made.</dd>
+ <dd>Used when issuing a preflight request to let the server know which <a href=/web/http/methods>HTTP method</a> will be used when the actual request is made.</dd>
  <dt>{{HTTPHeader("Origin")}}</dt>
  <dd>Indicates where a fetch originates from.</dd>
  <dt>{{HTTPHeader("Timing-Allow-Origin")}}</dt>
- <dd>Specifies origins that are allowed to see values of attributes retrieved via features of the <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>, which would otherwise be reported as zero due to cross-origin restrictions.</dd>
+ <dd>Specifies origins that are allowed to see values of attributes retrieved via features of the <a href=/web/api/resource_timing_api>Resource Timing API</a>, which would otherwise be reported as zero due to cross-origin restrictions.</dd>
 </dl>
 
 <h2 id="Do_Not_Track">Do Not Track</h2>
@@ -266,7 +266,7 @@ tags:
  <dt>{{HTTPHeader("Referrer-Policy")}}</dt>
  <dd>Governs which referrer information sent in the {{HTTPHeader("Referer")}} header should be included with requests made.</dd>
  <dt>{{HTTPHeader("User-Agent")}}</dt>
- <dd>Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. See also the <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox user agent string reference</a>.</dd>
+ <dd>Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. See also the <a href=/web/http/headers/user-agent/firefox>Firefox user agent string reference</a>.</dd>
 </dl>
 
 <h2 id="Response_context">Response context</h2>
@@ -321,7 +321,7 @@ tags:
  <dt>{{HTTPHeader("X-Frame-Options")}} (XFO)</dt>
  <dd>Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.</dd>
  <dt>{{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}</dt>
- <dd>Specifies if a cross-domain policy file (<code>crossdomain.xml</code>) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the <a href="/en-US/docs/Web/Security/Same-origin_policy">Same-Origin Policy</a>. See the <a href="https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain Policy File Specification</a> for more information.</dd>
+ <dd>Specifies if a cross-domain policy file (<code>crossdomain.xml</code>) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the <a href=/web/security/same-origin_policy>Same-Origin Policy</a>. See the <a href="https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain Policy File Specification</a> for more information.</dd>
  <dt>{{HTTPHeader("X-Powered-By")}}</dt>
  <dd>May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.</dd>
  <dt>{{HTTPHeader("X-XSS-Protection")}}</dt>
@@ -421,7 +421,7 @@ tags:
  <dt>{{HTTPHeader("Service-Worker-Allowed")}}</dt>
  <dd>Used to remove the <a href="https://w3c.github.io/ServiceWorker/#path-restriction">path restriction</a> by including this header <a href="https://w3c.github.io/ServiceWorker/#service-worker-script-response">in the response of the Service Worker script</a>.</dd>
  <dt>{{HTTPHeader("SourceMap")}}</dt>
- <dd>Links generated code to a <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">source map</a>.</dd>
+ <dd>Links generated code to a <a href=/tools/debugger/how_to/use_a_source_map>source map</a>.</dd>
  <dt>{{HTTPHeader("Upgrade")}}</dt>
  <dd>The relevant RFC document for the <a href="https://tools.ietf.org/html/rfc7230#section-6.7">Upgrade header field is RFC 7230, section 6.7</a>. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field <a href="https://tools.ietf.org/html/rfc7230#section-6.1">please see section 6.1 of the aforementioned RFC</a>.</dd>
  <dt>{{HTTPHeader("X-DNS-Prefetch-Control")}}</dt>
@@ -440,7 +440,7 @@ tags:
 
 <h2 id="Contributing">Contributing</h2>
 
-<p>You can help by <a href="/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header">writing new entries</a> or improving the existing ones.</p>
+<p>You can help by <a href=/mdn/contribute/howto/document_an_http_header>writing new entries</a> or improving the existing ones.</p>
 
 <h2 id="See_also">See also</h2>
 

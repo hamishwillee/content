@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "property is non-configurable and can't be deleted" occurs when it was attempted to delete a property, but that property is <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.</p>
+<p>The JavaScript exception "property is non-configurable and can't be deleted" occurs when it was attempted to delete a property, but that property is <a href=/web/javascript/data_structures#Properties>non-configurable</a>.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -25,9 +25,9 @@ TypeError: Cannot delete property 'x' of #&lt;Object&gt; (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>It was attempted to delete a property, but that property is <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>. The <code>configurable</code> attribute controls whether the property can be deleted from the object and whether its attributes (other than <code>writable</code>) can be changed.</p>
+<p>It was attempted to delete a property, but that property is <a href=/web/javascript/data_structures#Properties>non-configurable</a>. The <code>configurable</code> attribute controls whether the property can be deleted from the object and whether its attributes (other than <code>writable</code>) can be changed.</p>
 
-<p>This error happens only in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode code</a>. In non-strict code, the operation returns <code>false</code>.</p>
+<p>This error happens only in <a href=/web/javascript/reference/strict_mode>strict mode code</a>. In non-strict code, the operation returns <code>false</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -57,7 +57,7 @@ delete Math.PI;  // TypeError</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a></li>
+ <li><a href=/web/javascript/reference/operators/delete>delete operator</a></li>
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.freeze()")}}</li>
 </ul>
