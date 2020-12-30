@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks">building blocks</a>, <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>), the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">basics of Client-side APIs</a></td>
+   <td>JavaScript basics (see <a href=/learn/javascript/first_steps>first steps</a>, <a href=/learn/javascript/building_blocks>building blocks</a>, <a href=/learn/javascript/objects>JavaScript objects</a>), the <a href=/learn/javascript/client-side_web_apis/introduction>basics of Client-side APIs</a></td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -36,12 +36,12 @@ tags:
 <p>Let's look at a <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/">Simple Mapquest API example</a>, and use it to illustrate how third-party APIs differ from browser APIs.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You might want to just <a href="/en-US/docs/Learn#Getting_our_code_examples">get all our code examples</a> at once, in which case you can then just search the repo for the example files you need in each section.</p>
+<p><strong>Note</strong>: You might want to just <a href=/learn#Getting_our_code_examples>get all our code examples</a> at once, in which case you can then just search the repo for the example files you need in each section.</p>
 </div>
 
 <h3 id="They_are_found_on_third-party_servers">They are found on third-party servers</h3>
 
-<p>Browser APIs are built into the browser — you can access them from JavaScript immediately. For example, the Web Audio API we <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#How_do_APIs_work">saw in the Introductory article</a> is accessed using the native {{domxref("AudioContext")}} object. For example:</p>
+<p>Browser APIs are built into the browser — you can access them from JavaScript immediately. For example, the Web Audio API we <a href=/learn/javascript/client-side_web_apis/introduction#How_do_APIs_work>saw in the Introductory article</a> is accessed using the native {{domxref("AudioContext")}} object. For example:</p>
 
 <pre class="brush: js">const audioCtx = new AudioContext();
   ...
@@ -68,12 +68,12 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 <p>This is all the information the Mapquest API needs to plot a simple map. The server you are connecting to handles all the complicated stuff, like displaying the correct map tiles for the area being shown, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_%E2%80%94_NYTimes">RESTful APIs — we'll show an example later on</a>.</p>
+<p><strong>Note</strong>: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called <a href=/learn/javascript/client-side_web_apis/third_party_apis#A_RESTful_API_%E2%80%94_NYTimes>RESTful APIs — we'll show an example later on</a>.</p>
 </div>
 
 <h3 id="They_usually_require_API_keys">They usually require API keys</h3>
 
-<p>Security for browser APIs tends to be handled by permission prompts, as <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#They_have_additional_security_mechanisms_where_appropriate">discussed in our first article</a>. The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.</p>
+<p>Security for browser APIs tends to be handled by permission prompts, as <a href=/learn/javascript/client-side_web_apis/introduction#They_have_additional_security_mechanisms_where_appropriate>discussed in our first article</a>. The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.</p>
 
 <p>Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.</p>
 
@@ -97,7 +97,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 
 <ol>
  <li>
-  <p>To start this section, make yourself a copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html">mapquest starter file</a>, in a new directory. If you've already <a href="/en-US/docs/Learn#Getting_our_code_examples">cloned the examples repository</a>, you'll already have a copy of this file, which you can find in the <em>javascript/apis/third-party-apis/mapquest</em> directory.</p>
+  <p>To start this section, make yourself a copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html">mapquest starter file</a>, in a new directory. If you've already <a href=/learn#Getting_our_code_examples>cloned the examples repository</a>, you'll already have a copy of this file, which you can find in the <em>javascript/apis/third-party-apis/mapquest</em> directory.</p>
  </li>
  <li>
   <p>Next, you need to go to the <a href="https://developer.mapquest.com/">Mapquest developer site</a>, create an account, and then create a developer key to use with your example. (At the time of writing, it was called a "consumer key" on the site, and the key creation process also asked for an optional "callback URL". You don't need to fill in a URL here: just leave it blank.)</p>
@@ -188,7 +188,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
   <p>Get the API key from the resulting page.</p>
  </li>
  <li>
-  <p>Now, to start the example off, make copies of <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html">nytimes_start.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css">nytimes.css</a> in a new directory on your computer. If you've already <a href="/en-US/docs/Learn#Getting_our_code_examples">cloned the examples repository</a>, you'll already have a copy of these files, which you can find in the <em>javascript/apis/third-party-apis/nytimes</em> directory. Initially the <code>&lt;script&gt;</code> element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.</p>
+  <p>Now, to start the example off, make copies of <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html">nytimes_start.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css">nytimes.css</a> in a new directory on your computer. If you've already <a href=/learn#Getting_our_code_examples>cloned the examples repository</a>, you'll already have a copy of these files, which you can find in the <em>javascript/apis/third-party-apis/nytimes</em> directory. Initially the <code>&lt;script&gt;</code> element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.</p>
  </li>
 </ol>
 
@@ -198,7 +198,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 
 <h3 id="Connect_the_API_to_your_app">Connect the API to your app</h3>
 
-<p>First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a <a href="/en-US/docs/Web/HTTP/Methods/GET">get</a> parameter every time you request data from the service at the correct URL.</p>
+<p>First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a <a href=/web/http/methods/get>get</a> parameter every time you request data from the service at the correct URL.</p>
 
 <ol>
  <li>
@@ -240,7 +240,7 @@ function fetchResults(e) {
  </li>
 </ol>
 
-<p><code>submitSearch()</code> sets the page number back to 0 to begin with, then calls <code>fetchResults()</code>. This first calls <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:</p>
+<p><code>submitSearch()</code> sets the page number back to 0 to begin with, then calls <code>fetchResults()</code>. This first calls <code><a href=/web/api/event/preventdefault>preventDefault()</a></code> on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:</p>
 
 <ul>
  <li>The base URL (taken from the <code>baseURL</code> variable).</li>
@@ -250,7 +250,7 @@ function fetchResults(e) {
  <li>The document type to return results for, as specified in an expression passed in via the <code>fq</code> URL parameter. In this case, we want to return articles.</li>
 </ul>
 
-<p>Next, we use a couple of <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if()</a></code> statements to check whether the <code>startDate</code> and <code>endDate</code> <code>&lt;input&gt;</code>s have had values filled in on them. If they do, we append their values to the URL, specified in <code>begin_date</code> and <code>end_date</code> URL parameters respectively.</p>
+<p>Next, we use a couple of <code><a href=/web/javascript/reference/statements/if...else>if()</a></code> statements to check whether the <code>startDate</code> and <code>endDate</code> <code>&lt;input&gt;</code>s have had values filled in on them. If they do, we append their values to the URL, specified in <code>begin_date</code> and <code>end_date</code> URL parameters respectively.</p>
 
 <p>So, a complete URL would end up looking something like this:</p>
 
@@ -262,12 +262,12 @@ function fetchResults(e) {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the <code>required</code> attribute), and the date fields have <code>pattern</code> attributes specified, which means they won't submit unless their values consist of 8 numbers (<code>pattern="[0-9]{8}"</code>). See <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> for more details on how these work.</p>
+<p><strong>Note</strong>: The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the <code>required</code> attribute), and the date fields have <code>pattern</code> attributes specified, which means they won't submit unless their values consist of 8 numbers (<code>pattern="[0-9]{8}"</code>). See <a href=/learn/html/forms/form_validation>Form data validation</a> for more details on how these work.</p>
 </div>
 
 <h3 id="Requesting_data_from_the_API">Requesting data from the API</h3>
 
-<p>Now we've constructed our URL, let's make a request to it. We'll do this using the <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a>.</p>
+<p>Now we've constructed our URL, let's make a request to it. We'll do this using the <a href=/web/api/fetch_api/using_fetch>Fetch API</a>.</p>
 
 <p>Add the following code block inside the <code>fetchResults()</code> function, just above the closing curly brace:</p>
 
@@ -278,7 +278,7 @@ fetch(url).then(function(result) {
   displayResults(json);
 });</pre>
 
-<p>Here we run the request by passing our <code>url</code> variable to <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, convert the response body to JSON using the <code><a href="/en-US/docs/Web/API/Body/json">json()</a></code> function, then pass the resulting JSON to the <code>displayResults()</code> function so the data can be displayed in our UI.</p>
+<p>Here we run the request by passing our <code>url</code> variable to <code><a href=/web/api/windoworworkerglobalscope/fetch>fetch()</a></code>, convert the response body to JSON using the <code><a href=/web/api/body/json>json()</a></code> function, then pass the resulting JSON to the <code>displayResults()</code> function so the data can be displayed in our UI.</p>
 
 <h3 id="Displaying_the_data">Displaying the data</h3>
 
@@ -345,13 +345,13 @@ fetch(url).then(function(result) {
 <p>There's a lot of code here; let's explain it step by step:</p>
 
 <ul>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the <code>&lt;section&gt;</code> has a first child, and if it does, we remove the first child. The loop ends when <code>&lt;section&gt;</code> no longer has any children.</li>
+ <li>The <code><a href=/web/javascript/reference/statements/while>while</a></code> loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the <code>&lt;section&gt;</code> has a first child, and if it does, we remove the first child. The loop ends when <code>&lt;section&gt;</code> no longer has any children.</li>
  <li>Next, we set the <code>articles</code> variable to equal <code>json.response.docs</code> — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.</li>
- <li>The first <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if()</a></code> block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the <em>Previous 10</em>/<em>Next 10</em> pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.</li>
+ <li>The first <code><a href=/web/javascript/reference/statements/if...else>if()</a></code> block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the <em>Previous 10</em>/<em>Next 10</em> pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.</li>
  <li>The next <code>if()</code> block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the.<code>&lt;section&gt;</code></li>
  <li>If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see <a href="https://developer.nytimes.com/apis">NYTimes APIs</a>). Most of these operations are fairly obvious, but a few are worth calling out:
   <ul>
-   <li>We used a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a> (<code>for(var j = 0; j &lt; current.keywords.length; j++) { ... }</code> ) to loop through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a <code>&lt;p&gt;</code>. This was done to make it easy to style each one.</li>
+   <li>We used a <a href=/web/javascript/reference/statements/for>for loop</a> (<code>for(var j = 0; j &lt; current.keywords.length; j++) { ... }</code> ) to loop through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a <code>&lt;p&gt;</code>. This was done to make it easy to style each one.</li>
    <li>We used an <code>if()</code> block (<code>if(current.multimedia.length &gt; 0) { ... }</code>) to check whether each article has any images associated with it (some stories don't.) We display the first image only if it exists (otherwise an error would be thrown).</li>
    <li>We gave our <code>&lt;div&gt;</code> element a class of "clearfix", so we can easily apply clearing to it.</li>
   </ul>
@@ -366,7 +366,7 @@ fetch(url).then(function(result) {
 
 <ol>
  <li>
-  <p>Below the existing <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> call, add these two new ones, which cause the <code>nextPage()</code> and <code>previousPage()</code> functions to be invoked when the relevant buttons are clicked:</p>
+  <p>Below the existing <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> call, add these two new ones, which cause the <code>nextPage()</code> and <code>previousPage()</code> functions to be invoked when the relevant buttons are clicked:</p>
 
   <pre class="brush: js">nextBtn.addEventListener('click', nextPage);
 previousBtn.addEventListener('click', previousPage);</pre>
@@ -390,7 +390,7 @@ function previousPage(e) {
 
   <p>The first function is simple — we increment the <code>pageNumber</code> variable, then run the <code>fetchResults()</code> function again to display the next page's results.</p>
 
-  <p>The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that <code>pageNumber</code> is not already zero before decrementing it — if the fetch request runs with a minus <code>page</code> URL parameter, it could cause errors. If the <code>pageNumber</code> is already 0, we <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).</p>
+  <p>The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that <code>pageNumber</code> is not already zero before decrementing it — if the fetch request runs with a minus <code>page</code> URL parameter, it could cause errors. If the <code>pageNumber</code> is already 0, we <code><a href=/web/javascript/reference/statements/return>return</a></code> out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).</p>
  </li>
 </ol>
 
@@ -430,11 +430,11 @@ function previousPage(e) {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/introduction>Introduction to web APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/manipulating_documents>Manipulating documents</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/fetching_data>Fetching data from the server</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/third_party_apis>Third party APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/video_and_audio_apis>Video and audio APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/client-side_storage>Client-side storage</a></li>
 </ul>

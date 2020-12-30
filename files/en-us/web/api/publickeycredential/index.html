@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
 
-<p>The <code><strong>PublicKeyCredential</strong></code> interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> extension to the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a>. Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.</p>
+<p>The <code><strong>PublicKeyCredential</strong></code> interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the <a href=/web/api/web_authentication_api>Web Authentication API</a> extension to the <a href=/web/api/credential_management_api>Credential Management API</a>. Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.</p>
@@ -24,7 +24,7 @@ tags:
  <dt><code>PublicKeyCredential.type</code> {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>Inherited from {{domxref("Credential")}}. Always set to <code>public-key</code> for <code>PublicKeyCredential</code> instances.</dd>
  <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>Inherited from {{domxref("Credential")}} and overridden to be the <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url encoding</a> of {{domxref("PublicKeyCredential.rawId")}}.</dd>
+ <dd>Inherited from {{domxref("Credential")}} and overridden to be the <a href=/web/api/windowbase64/base64_encoding_and_decoding>base64url encoding</a> of {{domxref("PublicKeyCredential.rawId")}}.</dd>
  <dt>{{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>An {{domxref("ArrayBuffer")}} that holds the globally unique identifier for this <code>PublicKeyCredential</code>. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.</dd>
  <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>

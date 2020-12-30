@@ -21,15 +21,15 @@ tags:
 
 <p>There are a whole raft of use cases for responsive design techniques (and others besides) that respond to changes in an element's size, but previously their implementations have often been hacky and/or brittle.</p>
 
-<p>For example, <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> / {{domxref("window.matchMedia")}} are great for updating layouts at specific points when the viewport changes sizes, but what if you want to change layout in response to a specific element's size changing, which isn't the outer container?</p>
+<p>For example, <a href=/web/css/media_queries>media queries</a> / {{domxref("window.matchMedia")}} are great for updating layouts at specific points when the viewport changes sizes, but what if you want to change layout in response to a specific element's size changing, which isn't the outer container?</p>
 
-<p>To achieve this, a limited solution would be to listen to changes to a suitable event that hints at the element you are interested in changing size (e.g. the window <a href="/en-US/docs/Web/API/Window/resize_event">resize event</a>), then figure out what the new dimensions or other features of the element after a resize using {{domxref("Element.getBoundingClientRect")}} or {{domxref("Window.getComputedStyle")}}, for example.</p>
+<p>To achieve this, a limited solution would be to listen to changes to a suitable event that hints at the element you are interested in changing size (e.g. the window <a href=/web/api/window/resize_event>resize event</a>), then figure out what the new dimensions or other features of the element after a resize using {{domxref("Element.getBoundingClientRect")}} or {{domxref("Window.getComputedStyle")}}, for example.</p>
 
 <p>Such a solution tends to only work for limited use cases, be bad for performance (continually calling the above methods would result in a big performance hit), and often won't work when the browser window size is not changed.</p>
 
 <p>The Resize Observer API provides a solution to exactly these kinds of problems, and more besides, allowing you to easily observe and respond to changes in the size of an element’s content or border box in a performant way. It provides a JavaScript solution to the often-discussed lack of <a href="https://www.xanthir.com/b4PR0">element queries</a> in the web platform.</p>
 
-<p>Usage is simple, and pretty much the same as other observers, such as <a href="/en-US/docs/Web/API/PerformanceObserver">Performance Observer</a> or <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> — you create a new {{domxref("ResizeObserver")}} object using the <code><a href="/en-US/docs/Web/API/ResizeObserver/ResizeObserver">ResizeObserver()</a></code> constructor, then use {{domxref("ResizeObserver.observe()")}} to make it look for changes to a specific element's size. A callback function set up inside the constructor then runs every time the size changes, providing access to the new dimensions and allowing you to do anything you like in response to those changes.</p>
+<p>Usage is simple, and pretty much the same as other observers, such as <a href=/web/api/performanceobserver>Performance Observer</a> or <a href=/web/api/intersection_observer_api>Intersection Observer</a> — you create a new {{domxref("ResizeObserver")}} object using the <code><a href=/web/api/resizeobserver/resizeobserver>ResizeObserver()</a></code> constructor, then use {{domxref("ResizeObserver.observe()")}} to make it look for changes to a specific element's size. A callback function set up inside the constructor then runs every time the size changes, providing access to the new dimensions and allowing you to do anything you like in response to those changes.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 

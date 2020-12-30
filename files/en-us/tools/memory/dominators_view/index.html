@@ -8,7 +8,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>Starting in Firefox 46, the Memory tool includes a new view called the Dominators view. This is useful for understanding the "retained size" of objects allocated by your site: that is, the size of the objects themselves plus the size of the objects that they keep alive through references.</p>
 
-<p>If you already know what shallow size, retained size, and dominators are, skip to the Dominators UI section. Otherwise, you might want to review the article on <a href="/en-US/docs/Tools/Memory/Dominators">Dominators concepts</a>.</p>
+<p>If you already know what shallow size, retained size, and dominators are, skip to the Dominators UI section. Otherwise, you might want to review the article on <a href=/tools/memory/dominators>Dominators concepts</a>.</p>
 
 <h2 id="Dominators_UI">Dominators UI</h2>
 
@@ -19,8 +19,8 @@ slug: Tools/Memory/Dominators_view
 <p>The Dominators view consists of two panels:</p>
 
 <ul>
- <li>the <a href="/en-US/docs/Tools/Memory/Dominators_view#Dominators_Tree_panel">Dominators Tree panel</a> shows you which nodes in the snapshot are retaining the most memory</li>
- <li>the <a href="/en-US/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel">Retaining Paths panel</a> (new in Firefox 47) shows the 5 shortest retaining paths for a single node.</li>
+ <li>the <a href=/tools/memory/dominators_view#Dominators_Tree_panel>Dominators Tree panel</a> shows you which nodes in the snapshot are retaining the most memory</li>
+ <li>the <a href=/tools/memory/dominators_view#Retaining_Paths_panel>Retaining Paths panel</a> (new in Firefox 47) shows the 5 shortest retaining paths for a single node.</li>
 </ul>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13629/dominators-2.png" style="display: block; margin: 0px auto;"></p>
@@ -50,7 +50,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>In this screenshot we can see five entries under "GC Roots". The first two are Call and Window objects, and retain about 21% and 8% of the total size of the memory snapshot, respectively. You can also see that these objects have a relatively tiny "Shallow Size", so almost all of the retained size is in the objects that they dominate.</p>
 
-<p>Immediately under each GC root, you'll see all the nodes for which this root is the <a href="/en-US/docs/Tools/Memory/Dominators#immediate_dominator">immediate dominator</a>. These nodes are also ordered by their retained size.</p>
+<p>Immediately under each GC root, you'll see all the nodes for which this root is the <a href=/tools/memory/dominators#immediate_dominator>immediate dominator</a>. These nodes are also ordered by their retained size.</p>
 
 <p>For example, if we click on the first Window object:</p>
 
@@ -110,7 +110,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>Let's see how some simple code is reflected in the Dominators view.</p>
 
-<p>We'll use the <a href="/en-US/docs/Tools/Memory/Monster_example">monster allocation example</a>, which creates three arrays, each containing 5000 monsters, each monster having a randomly-generated name.</p>
+<p>We'll use the <a href=/tools/memory/monster_example>monster allocation example</a>, which creates three arrays, each containing 5000 monsters, each monster having a randomly-generated name.</p>
 
 <h3 id="Taking_a_snapshot">Taking a snapshot</h3>
 
@@ -118,7 +118,7 @@ slug: Tools/Memory/Dominators_view
 
 <ul>
  <li>load the page</li>
- <li>enable the Memory tool in the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Settings</a>, if you haven't already</li>
+ <li>enable the Memory tool in the <a href=/tools/tools_toolbox#Settings>Settings</a>, if you haven't already</li>
  <li>open the Memory tool</li>
  <li>check "Record call stacks"</li>
  <li>press the button labeled "Make monsters!"</li>
@@ -138,13 +138,13 @@ slug: Tools/Memory/Dominators_view
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13643/dominators-9.png" style="display: block; height: 327px; margin: 0px auto; width: 700px;"></p>
 
-<p>All this maps closely to the <a href="/en-US/docs/Tools/Memory/Monster_example#allocation-graph">memory graph we were expecting to see</a>. One thing you might be wondering, though, is: where's the top-level object that retains all three arrays? If we look at the Retaining Paths panel for one of the arrays, we'll see it:</p>
+<p>All this maps closely to the <a href=/tools/memory/monster_example#allocation-graph>memory graph we were expecting to see</a>. One thing you might be wondering, though, is: where's the top-level object that retains all three arrays? If we look at the Retaining Paths panel for one of the arrays, we'll see it:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13645/dominators-10.png" style="display: block; height: 467px; margin: 0px auto; width: 700px;"></p>
 
 <p>Here we can see the retaining object, and even that this particular array is the array of <code>fierce</code> monsters. But the array is also rooted directly, so if the object were to stop referencing the array, it would still not be eligible for garbage collection.</p>
 
-<p>This means that the object does not dominate the array, and is therefore not shown in the Dominators Tree view. <a href="/en-US/docs/Tools/Memory/Dominators#multiple-paths">See the relevant section of the Dominators concepts article</a>.</p>
+<p>This means that the object does not dominate the array, and is therefore not shown in the Dominators Tree view. <a href=/tools/memory/dominators#multiple-paths>See the relevant section of the Dominators concepts article</a>.</p>
 
 <h3 id="Using_the_Call_Stack_view">Using the Call Stack view</h3>
 

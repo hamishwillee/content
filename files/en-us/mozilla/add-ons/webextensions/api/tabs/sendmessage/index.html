@@ -14,14 +14,14 @@ tags:
 ---
 <p>{{AddonSidebar()}}</p>
 
-<p>Sends a single message from the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) to any <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or extension pages/iframes that belong to the extension and are running in the specified tab.</p>
+<p>Sends a single message from the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) to any <a href=/mozilla/add-ons/webextensions/content_scripts>content scripts</a> or extension pages/iframes that belong to the extension and are running in the specified tab.</p>
 
 <p>The message will be received in the extension context by any listeners to the {{WebExtAPIRef("runtime.onMessage")}} event. Listeners may then optionally return something as a response back to the sender.</p>
 
 <p>This is an asynchronous function that returns a {{jsxref("Promise")}}.</p>
 
 <div class="note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>You can also use a <a href=/mozilla/add-ons/webextensions/content_scripts#Connection-based_messaging>connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>

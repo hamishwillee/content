@@ -19,9 +19,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Screen Capture API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaDevices")}} interface's <code><strong>getDisplayMedia()</strong></code> method prompts the user to select and grant permission to capture the contents of a display or portion thereof (such as a window) as a {{domxref("MediaStream")}}.</span> The resulting stream can then be recorded using the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> or transmitted as part of a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> session.</p>
+<p><span class="seoSummary">The {{domxref("MediaDevices")}} interface's <code><strong>getDisplayMedia()</strong></code> method prompts the user to select and grant permission to capture the contents of a display or portion thereof (such as a window) as a {{domxref("MediaStream")}}.</span> The resulting stream can then be recorded using the <a href=/web/api/mediastream_recording_api>MediaStream Recording API</a> or transmitted as part of a <a href=/web/api/webrtc_api>WebRTC</a> session.</p>
 
-<p>See <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a> for more details and an example.</p>
+<p>See <a href=/web/api/screen_capture_api/using_screen_capture>Using the Screen Capture API</a> for more details and an example.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -79,7 +79,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In the example below, a <code>startCapture()</code> method is created which initiates screen capture given a set of options specified by the <code>displayMediaOptions</code> parameter. The options are specified in the form of a {{domxref("MediaStreamConstraints")}} object which specifies the preferred stream configuration and the <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#Visible_vs_logical_display_surfaces">display surface</a> from which video is to be captured.</p>
+<p>In the example below, a <code>startCapture()</code> method is created which initiates screen capture given a set of options specified by the <code>displayMediaOptions</code> parameter. The options are specified in the form of a {{domxref("MediaStreamConstraints")}} object which specifies the preferred stream configuration and the <a href=/web/api/screen_capture_api/using_screen_capture#Visible_vs_logical_display_surfaces>display surface</a> from which video is to be captured.</p>
 
 <pre class="brush: js">async function startCapture(displayMediaOptions) {
   let captureStream = null;
@@ -121,9 +121,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+ <li><a href=/web/api/screen_capture_api>Screen Capture API</a></li>
+ <li><a href=/web/api/screen_capture_api/using_screen_capture>Using the Screen Capture API</a></li>
+ <li><a href=/web/api/media_streams_api>Media Capture and Streams API</a></li>
+ <li><a href=/web/api/webrtc_api>WebRTC API</a></li>
  <li>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a camera and/or microphone</li>
 </ul>

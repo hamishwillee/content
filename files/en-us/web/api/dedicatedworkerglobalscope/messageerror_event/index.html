@@ -24,14 +24,14 @@ tags:
   </tr>
   <tr>
    <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror">onmessageerror</a></code></td>
+   <td><code><a href=/web/api/dedicatedworkerglobalscope/onmessageerror>onmessageerror</a></code></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Listen for <code>messageerror</code> using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>:</p>
+<p>Listen for <code>messageerror</code> using <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code>:</p>
 
 <pre class="brush: js">// inside worker.js
 
@@ -40,7 +40,7 @@ self.addEventListener('messageerror', (event) =&gt; {
     console.error(event);
 });</pre>
 
-<p>The same, but using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">onmessageerror</a></code> event handler property:</p>
+<p>The same, but using the <code><a href=/web/api/windoweventhandlers/onmessageerror>onmessageerror</a></code> event handler property:</p>
 
 <pre class="brush: js">// inside worker.js
 
@@ -71,6 +71,6 @@ self.onmessageerror = (event) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code></li>
+ <li><code><a href=/web/api/worker/postmessage>Worker.postMessage()</a></code></li>
  <li>Related events: <code><a href="/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message</a></code>.</li>
 </ul>

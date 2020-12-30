@@ -39,7 +39,7 @@ tags:
 <p>The Web Audio API also allows us to control how audio is <em>spatialized</em>. Using a system based on a <em>source-listener model</em>, it allows control of the <em>panning model</em> and deals with <em>distance-induced attenuation</em> induced by a moving source (or moving listener).</p>
 
 <div class="note">
-<p>You can read about the theory of the Web Audio API in a lot more detail in our article <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts behind Web Audio API</a>.</p>
+<p>You can read about the theory of the Web Audio API in a lot more detail in our article <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api>Basic concepts behind Web Audio API</a>.</p>
 </div>
 
 <h2 id="Web_Audio_API_target_audience">Web Audio API target audience</h2>
@@ -48,17 +48,17 @@ tags:
 
 <p>It can be used to incorporate audio into your website or application, by <a href="https://www.futurelibrary.no/">providing atmosphere like futurelibrary.no</a>, or <a href="https://css-tricks.com/form-validation-web-audio/">auditory feedback on forms</a>. However, it can also be used to create <em>advanced</em> interactive instruments. With that in mind, it is suitable for both developers and musicians alike.</p>
 
-<p>We have a <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">simple introductory tutorial</a> for those that are familiar with programming but need a good introduction to some of the terms and structure of the API.</p>
+<p>We have a <a href=/web/api/web_audio_api/using_web_audio_api>simple introductory tutorial</a> for those that are familiar with programming but need a good introduction to some of the terms and structure of the API.</p>
 
-<p>There's also a <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic Concepts Behind Web Audio API</a> article, to help you understand the way digital audio works, specifically in the realm of the API. This also includes a good introduction to some of the concepts the API is built upon.</p>
+<p>There's also a <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api>Basic Concepts Behind Web Audio API</a> article, to help you understand the way digital audio works, specifically in the realm of the API. This also includes a good introduction to some of the concepts the API is built upon.</p>
 
-<p>Learning coding is like playing cards — you learn the rules, then you play, then you go back and learn the rules again, then you play again. So if some of the theory doesn't quite fit after the first tutorial and article, there's an <a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">advanced tutorial</a> which extends the first one to help you practice what you've learnt, and apply some more advanced techniques to build up a step sequencer.</p>
+<p>Learning coding is like playing cards — you learn the rules, then you play, then you go back and learn the rules again, then you play again. So if some of the theory doesn't quite fit after the first tutorial and article, there's an <a href=/web/api/web_audio_api/advanced_techniques>advanced tutorial</a> which extends the first one to help you practice what you've learnt, and apply some more advanced techniques to build up a step sequencer.</p>
 
 <p>We also have other tutorials and comprehensive reference material available that covers all features of the API. See the sidebar on this page for more.</p>
 
 <p>If you are more familiar with the musical side of things, are familiar with music theory concepts, want to start building instruments, then you can go ahead and start building things with the advance tutorial and others as a guide (the above linked tutorial covers scheduling notes, creating bespoke oscillators and envelopes, as well as an LFO among other things.)</p>
 
-<p>If you aren't familiar with the programming basics, you might want to consult some beginner's JavaScript tutorials first and then come back here — see our <a href="/en-US/docs/Learn/JavaScript">Beginner's JavaScript learning module</a> for a great place to begin.</p>
+<p>If you aren't familiar with the programming basics, you might want to consult some beginner's JavaScript tutorials first and then come back here — see our <a href=/learn/javascript>Beginner's JavaScript learning module</a> for a great place to begin.</p>
 
 <h2 id="Web_Audio_API_interfaces">Web Audio API interfaces</h2>
 
@@ -137,7 +137,7 @@ tags:
 	<dt>{{domxref("AudioDestinationNode")}}</dt>
 	<dd>The <strong><code>AudioDestinationNode</code></strong> interface represents the end destination of an audio source in a given context — usually the speakers of your device.</dd>
 	<dt>{{domxref("MediaStreamAudioDestinationNode")}}</dt>
-	<dd>The <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> interface represents an audio destination consisting of a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a {{domxref("MediaStream")}} obtained from {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.</dd>
+	<dd>The <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> interface represents an audio destination consisting of a <a href=/webrtc>WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a {{domxref("MediaStream")}} obtained from {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.</dd>
 </dl>
 
 <h3 id="Data_analysis_and_visualization">Data analysis and visualization</h3>
@@ -175,7 +175,7 @@ tags:
 
 <h3 id="Audio_processing_in_JavaScript">Audio processing in JavaScript</h3>
 
-<p>Using audio worklets, you can define custom audio nodes written in JavaScript or <a href="/en-US/docs/WebAssembly">WebAssembly</a>. Audio worklets implement the {{domxref("Worklet")}} interface, a lightweight version of the {{domxref("Worker")}} interface.</p>
+<p>Using audio worklets, you can define custom audio nodes written in JavaScript or <a href=/webassembly>WebAssembly</a>. Audio worklets implement the {{domxref("Worklet")}} interface, a lightweight version of the {{domxref("Worker")}} interface.</p>
 
 <dl>
 	<dt>{{domxref("AudioWorklet")}}</dt>
@@ -198,7 +198,7 @@ tags:
 	<dt>{{event("audioprocess")}} (event) {{deprecated_inline}}</dt>
 	<dd>The <code>audioprocess</code> event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.</dd>
 	<dt>{{domxref("AudioProcessingEvent")}} {{deprecated_inline}}</dt>
-	<dd>The <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</dd>
+	<dd>The <a href=/web_audio_api>Web Audio API</a> <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</dd>
 </dl>
 
 <h3 id="Offlinebackground_audio_processing">Offline/background audio processing</h3>
@@ -266,17 +266,17 @@ tags:
 <h3 id="Tutorialsguides">Tutorials/guides</h3>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts behind Web Audio API</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">Advanced techniques: creating sound, sequencing, timing, scheduling</a></li>
-	<li><a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a></li>
+	<li><a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api>Basic concepts behind Web Audio API</a></li>
+	<li><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></li>
+	<li><a href=/web/api/web_audio_api/advanced_techniques>Advanced techniques: creating sound, sequencing, timing, scheduling</a></li>
+	<li><a href=/web/media/autoplay_guide>Autoplay guide for media and Web Audio APIs</a></li>
+	<li><a href=/web/api/web_audio_api/using_iir_filters>Using IIR filters</a></li>
+	<li><a href=/web/api/web_audio_api/visualizations_with_web_audio_api>Visualizations with Web Audio API</a></li>
+	<li><a href=/web/api/web_audio_api/web_audio_spatialisation_basics>Web audio spatialisation basics</a></li>
+	<li><a href=/web/api/web_audio_api/controlling_multiple_parameters_with_constantsourcenode>Controlling multiple parameters with ConstantSourceNode</a></li>
 	<li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
 	<li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
+	<li><a href=/web/api/web_audio_api/porting_webkitaudiocontext_code_to_standards_based_audiocontext>Porting webkitAudioContext code to standards based AudioContext</a></li>
 </ul>
 
 <h3 id="Libraries">Libraries</h3>
@@ -294,6 +294,6 @@ tags:
 <h3 id="Related_topics">Related topics</h3>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
-	<li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
+	<li><a href=/web/media>Web media technologies</a></li>
+	<li><a href=/web/media/formats>Guide to media types and formats on the web</a></li>
 </ul>

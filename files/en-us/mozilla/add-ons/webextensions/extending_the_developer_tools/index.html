@@ -15,7 +15,7 @@ tags:
 <p>This page describes devtools APIs as they exist in Firefox 55. Although the APIs are based on the <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>, there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see <a href="/en-US/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">Limitations of the devtools APIs</a>.</p>
 </div>
 
-<p><span class="seoSummary">You can use WebExtensions APIs to extend the browser's built-in developer tools.</span> To create a devtools extension, include the "<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a>" key in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>:</p>
+<p><span class="seoSummary">You can use WebExtensions APIs to extend the browser's built-in developer tools.</span> To create a devtools extension, include the "<a href=/mozilla/add-ons/webextensions/manifest.json/devtools_page>devtools_page</a>" key in <a href=/mozilla/add-ons/webextensions/manifest.json>manifest.json</a>:</p>
 
 <pre class="brush: json">"devtools_page": "devtools/devtools-page.html"</pre>
 
@@ -27,16 +27,16 @@ tags:
 
 <p>The devtools page is loaded when the browser devtools are opened, and unloaded when it is closed. Note that because the devtools window is associated with a single tab, it's quite possible for more than one devtools window - hence more than one devtools page - to exist at the same time.</p>
 
-<p>The devtools page doesn't have any visible DOM, but can include JavaScript sources using <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> tags. The sources must be bundled with the extension itself. The sources get access to:</p>
+<p>The devtools page doesn't have any visible DOM, but can include JavaScript sources using <code><a href=/web/html/element/script>&lt;script&gt;</a></code> tags. The sources must be bundled with the extension itself. The sources get access to:</p>
 
 <ul>
- <li>The normal DOM APIs accessible through the global <code><a href="/en-US/docs/Web/API/Window">window</a></code> object</li>
+ <li>The normal DOM APIs accessible through the global <code><a href=/web/api/window>window</a></code> object</li>
  <li>The same <a href="/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">WebExtension APIs as in Content Scripts</a></li>
  <li>The devtools APIs:
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network">devtools.network</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/devtools.inspectedwindow>devtools.inspectedWindow</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/devtools.network>devtools.network</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/devtools.panels>devtools.panels</a></code></li>
   </ul>
  </li>
 </ul>
@@ -70,15 +70,15 @@ tags:
   newPanel.onHidden.addListener(unInitialisePanel);
 });</pre>
 
-<p>This takes three mandatory arguments: the panel's title, icon, and content. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which resolves to a <code>devtools.panels.ExtensionPanel</code> object representing the new panel.</p>
+<p>This takes three mandatory arguments: the panel's title, icon, and content. It returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> which resolves to a <code>devtools.panels.ExtensionPanel</code> object representing the new panel.</p>
 
 <h2 id="Interacting_with_the_target_window">Interacting with the target window</h2>
 
-<p>The developer tools are always attached to a particular browser tab. This is referred to as the "target" for the developer tools, or the "inspected window". You can interact with the inspected window using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></code> API.</p>
+<p>The developer tools are always attached to a particular browser tab. This is referred to as the "target" for the developer tools, or the "inspected window". You can interact with the inspected window using the <code><a href=/mozilla/add-ons/webextensions/api/devtools.inspectedwindow>devtools.inspectedWindow</a></code> API.</p>
 
 <h3 id="Running_code_in_the_target_window">Running code in the target window</h3>
 
-<p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code> provides one way to run code in the inspected window.</p>
+<p>The <code><a href=/mozilla/add-ons/webextensions/api/devtools.inspectedwindow/eval>devtools.inspectedWindow.eval()</a></code> provides one way to run code in the inspected window.</p>
 
 <p>This is somewhat like using {{WebExtAPIRef("tabs.executeScript()")}} to inject a content script, but with one important difference:</p>
 
@@ -94,7 +94,7 @@ tags:
 
 <h3 id="Working_with_content_scripts">Working with content scripts</h3>
 
-<p>A devtools document doesn't have direct access to {{WebExtAPIRef("tabs.executeScript()")}}, so if you need to inject a content script, the devtools document must send a message to the background script asking it to inject the script. The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId">devtools.inspectedWindow.tabId</a></code> provides the ID of the target tab: the devtools document can pass this to the background script, and the background script can in turn pass it into {{WebExtAPIRef("tabs.executeScript()")}}:</p>
+<p>A devtools document doesn't have direct access to {{WebExtAPIRef("tabs.executeScript()")}}, so if you need to inject a content script, the devtools document must send a message to the background script asking it to inject the script. The <code><a href=/mozilla/add-ons/webextensions/api/devtools.inspectedwindow/tabid>devtools.inspectedWindow.tabId</a></code> provides the ID of the target tab: the devtools document can pass this to the background script, and the background script can in turn pass it into {{WebExtAPIRef("tabs.executeScript()")}}:</p>
 
 <pre class="brush: js">// devtools-panel.js
 

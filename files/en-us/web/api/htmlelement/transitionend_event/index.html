@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <strong><code>transitionend</code></strong> event is fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed. In the case where a transition is removed before completion, such as if the {{cssxref("transition-property")}} is removed or {{cssxref("display")}} is set to <code>none</code>, then the event will not be generated.</p>
+<p>The <strong><code>transitionend</code></strong> event is fired when a <a href=/css/using_css_transitions>CSS transition</a> has completed. In the case where a transition is removed before completion, such as if the {{cssxref("transition-property")}} is removed or {{cssxref("display")}} is set to <code>none</code>, then the event will not be generated.</p>
 
 <table class="properties">
  <tbody>
@@ -76,7 +76,7 @@ transition.ontransitionend = () =&gt; {
   background: rgba(255,0,0,0);
 }</pre>
 
-<p>To this, we'll add some JavaScript to indicate that the <code><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event">transitionstart</a></code>, <code><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">transitionrun</a></code>, <code><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel</a></code> and <code>transitionend</code> events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.</p>
+<p>To this, we'll add some JavaScript to indicate that the <code><a href=/web/api/htmlelement/transitionstart_event>transitionstart</a></code>, <code><a href=/web/api/htmlelement/transitionrun_event>transitionrun</a></code>, <code><a href=/web/api/window/transitioncancel_event>transitioncancel</a></code> and <code>transitionend</code> events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.</p>
 
 <pre class="brush: js notranslate">const message = document.querySelector('.message');
 const el = document.querySelector('.transition');

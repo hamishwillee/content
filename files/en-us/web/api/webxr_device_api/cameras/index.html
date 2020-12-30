@@ -28,17 +28,17 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}</p>
 
-<p>The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: <em>WebXR does not have cameras</em>. There's no magic object provided by either the <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> API that represents the viewer that you can rotate and move around to automatically change what's seen on the screen. <span class="seoSummary">In this guide we show how use <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.</span></p>
+<p>The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: <em>WebXR does not have cameras</em>. There's no magic object provided by either the <a href=/web/api/webgl_api>WebGL</a> or the <a href=/web/api/webxr_device_api>WebXR</a> API that represents the viewer that you can rotate and move around to automatically change what's seen on the screen. <span class="seoSummary">In this guide we show how use <a href=/web/api/webgl_api>WebGL</a> to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.</span></p>
 
 <p>Animating 3D graphics is an area of software development that brings together multiple disciplines in computer science, mathematics, art, graphic design, kinematics, anatomy, physiology, physics, and cinematography. Since we don't have a real camera, we imagine one, reproducing the <em>effect</em> of having a camera, without actually having the ability to move the user around the scene.</p>
 
 <p>There are a few articles about the fundamental math, geometry, and other concepts behind WebGL and WebXR which may be useful to read before or while reading this one, including:</p>
 
 <ul>
- <li><a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">Explaining basic 3D theory</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></li>
+ <li><a href=/games/techniques/3d_on_the_web/basic_theory>Explaining basic 3D theory</a></li>
+ <li><a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web</a></li>
+ <li><a href=/web/api/webgl_api/webgl_model_view_projection>WebGL model view projection</a></li>
+ <li><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR</a></li>
 </ul>
 
 <p><em>Ed. note: Most diagrams used in this article to show how the camera moves while performing standard movements were taken from <a href="https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/">an article on the FilmmakerIQ web site</a>; namely, from <a href="https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png">this image</a> which is found all over the web. We assume due to their frequent reuse that they're available under a permissive license, ownership is not certain. We hope that it's freely usable; if not, and you're the owner, please let us know and we'll find or produce new diagrams. Or, if you're happy to let us continue to use the images, please let us know so we can credit you properly!</em></p>
@@ -64,7 +64,7 @@ tags:
 <p>In general, virtual cameras may or may not be incorporated into physical objects within the scene. Indeed, outside the scope of 3D gaming, the odds are far more likely that the camera will not correspond with an object that appears in the scene at all. Some examples of ways 3D cameras are used:</p>
 
 <ul>
- <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Simulating_classic_cinematography">standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
+ <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href=/web/api/webxr_device_api/cameras#Simulating_classic_cinematography>standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
  <li>In business applications, the 3D camera is used to set the apparent size and perspective when rendering things such as graphs and charts.</li>
  <li>In mapping applications, the camera may either be placed directly over the scene, or might use various angles to show perspective. For 3D GPS solutions, the camera is positioned to show the area around the user, with the majority of the display showing the area ahead of the user's path of motion.</li>
  <li>When using WebGL to accelerate 2D graphics drawing, the camera is typically placed directly above the center of the scene with the distance and field of view set to allow the entire scene to be presented.</li>
@@ -89,7 +89,7 @@ tags:
 
 <p>Since there are no standard camera objects in WebGL or WebXR, we need to simulate the camera ourselves. Before we can do so, and before we can then simulate the movement of the camera, let's actually take a look at the virtual camera and how it <em>can</em> move, at the most fundamental level. As in all things, the <strong>position</strong> of an object in space—even if that space if virtual—can be represented using three numbers that indicate its position relative to the origin, whose position is defined to be (0, 0, 0).</p>
 
-<p>There's another aspect of the spatial relationship of an object to the origin in space left to be considered: <strong>perspective</strong>. Perspective, properly applied to the objects in a scene, can take a scene that would otherwise look as flat as a typical 2D screen and make it pop as if it were truly 3D. There are several kinds of perspective; those are defined and their mathematics explained in the article <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a>. Importantly, the effect of perspective on a vector can be represented by adding a fourth component to the vector: the perspective component, called <code>w</code>.</p>
+<p>There's another aspect of the spatial relationship of an object to the origin in space left to be considered: <strong>perspective</strong>. Perspective, properly applied to the objects in a scene, can take a scene that would otherwise look as flat as a typical 2D screen and make it pop as if it were truly 3D. There are several kinds of perspective; those are defined and their mathematics explained in the article <a href=/web/api/webgl_api/webgl_model_view_projection>WebGL model view projection</a>. Importantly, the effect of perspective on a vector can be represented by adding a fourth component to the vector: the perspective component, called <code>w</code>.</p>
 
 <p>The value of <code>w</code> is applied by dividing each of the other three components by it to get the final position or vector; that is, for a coordinate given as (<code>x</code>, <code>y</code>, <code>z</code>, <code>w</code>), the point in the 3D space is actually (<code>x</code>/<code>w</code>, <code>y</code>/<code>w</code>, <code>z</code>/<code>w</code>, 1) or (<code>x</code>/<code>w</code>, <code>y</code>/<code>w</code>, <code>z</code>/<code>w</code>). If you're not using perspective, <code>w</code> is always 1. In that situation, the complete coordinates for an object located at (1, 0, 3) are (1, 0, 3, 1).</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Composing_multiple_transforms">Composing multiple transforms</h3>
 
-<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="http://glmatrix.net/">glMatrix</a> to do the work.</p>
+<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href=/web/api/webgl_api/matrix_math_for_the_web#Multiplying_two_matrices>Multiplying two matrices</a> in the article <a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="http://glmatrix.net/">glMatrix</a> to do the work.</p>
 
 <p>It's crucial to remember that unlike typical arithmetic, where multiplication is commutative (that is, you get the same answer whether you multiply left to right or right to left), matrix multiplication <em>is not commutative!</em> This is because each transform affects the position of the object and possibly the very coordinate system itself, which can dramatically change the results of the next operation performed. So you need to be careful about the order in which you apply your transforms when building your composite transform (or directly applying transforms in sequence).</p>
 
@@ -126,7 +126,7 @@ tags:
 
 <p>To apply the transform, you multiply the point or vector by the transform or composition of transforms.</p>
 
-<p>This has been a very quick overview of the concepts of position in terms of physical location, orientation or facing direction, and perspective. For more detail on the subject, see the articles <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces</a>, <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a>, and <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a>.</p>
+<p>This has been a very quick overview of the concepts of position in terms of physical location, orientation or facing direction, and perspective. For more detail on the subject, see the articles <a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces</a>, <a href=/web/api/webgl_api/webgl_model_view_projection>WebGL model view projection</a>, and <a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web</a>.</p>
 
 <h2 id="Simulating_classic_cinematography">Simulating classic cinematography</h2>
 
@@ -196,7 +196,7 @@ const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistanc
 mat4.translate(transform, transform, translateVec);
 </pre>
 
-<p>This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Track">track</a>, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Crane">crane</a>, and <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Push">push</a> movements.</p>
+<p>This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes <a href=/web/api/webxr_device_api/cameras#Track>track</a>, <a href=/web/api/webxr_device_api/cameras#Crane>crane</a>, and <a href=/web/api/webxr_device_api/cameras#Push>push</a> movements.</p>
 
 <h4 id="Scaling_transforms">Scaling transforms</h4>
 
@@ -432,8 +432,8 @@ mat4.multiply(viewMatrix, viewMatrix, rotateMatrix);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
+ <li><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces</a></li>
+ <li><a href=/web/api/webgl_api/webgl_model_view_projection>WebGL model view projection</a></li>
+ <li><a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web</a></li>
+ <li><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion: A WebXR example</a></li>
 </ul>

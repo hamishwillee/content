@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Code_example">Code example</h3>
 
-<p>An example that loads a resource via the <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>):</p>
+<p>An example that loads a resource via the <a href=/web/api/xmlhttprequest><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>):</p>
 
 <pre class="brush: js  notranslate">function loadAsset(url, type, callback) {
   let xhr = new XMLHttpRequest();
@@ -102,12 +102,12 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 <h3 id="Further_information">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Async_callbacks">Async callbacks</a></li>
+ <li><a href=/learn/javascript/asynchronous/introducing>Introducing asynchronous JavaScript</a>, in particular <a href=/learn/javascript/asynchronous/introducing#Async_callbacks>Async callbacks</a></li>
 </ul>
 
 <h2 id="setTimeout">setTimeout()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> is a method that allows you to run a function after an arbitrary amount of time has passed.</p>
+<p><code><a href=/web/api/windoworworkerglobalscope/settimeout>setTimeout()</a></code> is a method that allows you to run a function after an arbitrary amount of time has passed.</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -163,13 +163,13 @@ setTimeout(function run() {
 <h3 id="Further_information_2">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#setTimeout()">setTimeout()</a></li>
- <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout() reference</a></li>
+ <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href=/learn/javascript/asynchronous/timeouts_and_intervals#setTimeout()>setTimeout()</a></li>
+ <li><a href=/web/api/windoworworkerglobalscope/settimeout>setTimeout() reference</a></li>
 </ul>
 
 <h2 id="setInterval">setInterval()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> is a method that allows you to run a function repeatedly with a set interval of time between each execution. Not as efficient as <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, but allows you to choose a running rate/frame rate.</p>
+<p><code><a href=/web/api/windoworworkerglobalscope/setinterval>setInterval()</a></code> is a method that allows you to run a function repeatedly with a set interval of time between each execution. Not as efficient as <code><a href=/web/api/window/requestanimationframe>requestAnimationFrame()</a></code>, but allows you to choose a running rate/frame rate.</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -191,7 +191,7 @@ setTimeout(function run() {
 
 <h3 id="Code_example_3">Code example</h3>
 
-<p>The following function creates a new <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a></code> object, extracts a time string out of it using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString">toLocaleTimeString()</a></code>, and then displays it in the UI. We then run it once per second using <code>setInterval()</code>, creating the effect of a digital clock that updates once per second (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
+<p>The following function creates a new <code><a href=/web/javascript/reference/global_objects/date>Date()</a></code> object, extracts a time string out of it using <code><a href=/web/javascript/reference/global_objects/date/tolocaletimestring>toLocaleTimeString()</a></code>, and then displays it in the UI. We then run it once per second using <code>setInterval()</code>, creating the effect of a digital clock that updates once per second (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
 
 <pre class="brush: js  notranslate">function displayTime() {
    let date = new Date();
@@ -214,13 +214,13 @@ const createClock = setInterval(displayTime, 1000);</pre>
 <h3 id="Further_information_3">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></li>
- <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval() reference</a></li>
+ <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href=/web/api/windoworworkerglobalscope/setinterval>setInterval()</a></li>
+ <li><a href=/web/api/windoworworkerglobalscope/setinterval>setInterval() reference</a></li>
 </ul>
 
 <h2 id="requestAnimationFrame">requestAnimationFrame()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> is a method that allows you to run a function repeatedly, and efficiently, at the best framerate available given the current browser/system. You should, if at all possible, use this instead of <code>setInterval()</code>/recursive <code>setTimeout()</code>, unless you need a specific framerate.</p>
+<p><code><a href=/web/api/window/requestanimationframe>requestAnimationFrame()</a></code> is a method that allows you to run a function repeatedly, and efficiently, at the best framerate available given the current browser/system. You should, if at all possible, use this instead of <code>setInterval()</code>/recursive <code>setTimeout()</code>, unless you need a specific framerate.</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -280,13 +280,13 @@ draw();</pre>
 <h3 id="Further_information_4">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#requestAnimationFrame()">requestAnimationFrame()</a></li>
- <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame() reference</a></li>
+ <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href=/learn/javascript/asynchronous/timeouts_and_intervals#requestAnimationFrame()>requestAnimationFrame()</a></li>
+ <li><a href=/web/api/window/requestanimationframe>requestAnimationFrame() reference</a></li>
 </ul>
 
 <h2 id="Promises">Promises</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a JavaScript feature that allows you to run asynchronous operations and wait until it is definitely complete before running another operation based on its result. Promises are the backbone of modern asynchronous JavaScript.</p>
+<p><a href=/web/javascript/reference/global_objects/promise>Promises</a> are a JavaScript feature that allows you to run asynchronous operations and wait until it is definitely complete before running another operation based on its result. Promises are the backbone of modern asynchronous JavaScript.</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -375,9 +375,9 @@ draw();</pre>
 <h3 id="Further_information_5">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise reference</a></li>
+ <li><a href=/learn/javascript/asynchronous/promises>Graceful asynchronous programming with Promises</a></li>
+ <li><a href=/web/javascript/guide/using_promises>Using promises</a></li>
+ <li><a href=/web/javascript/reference/global_objects/promise>Promise reference</a></li>
 </ul>
 
 <h2 id="Promise.all">Promise.all()</h2>
@@ -461,8 +461,8 @@ Promise.all([coffee, tea, description]).then(values =&gt; {
 <h3 id="Further_information_6">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#Running_code_in_response_to_multiple_promises_fulfilling">Running code in response to multiple promises fulfilling</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all() reference</a></li>
+ <li><a href=/learn/javascript/asynchronous/promises#Running_code_in_response_to_multiple_promises_fulfilling>Running code in response to multiple promises fulfilling</a></li>
+ <li><a href=/web/javascript/reference/global_objects/promise/all>Promise.all() reference</a></li>
 </ul>
 
 <h2 id="Asyncawait">Async/await</h2>
@@ -517,9 +517,9 @@ myFetch();</pre>
 <h3 id="Further_information_7">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">Async function reference</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">Await operator reference</a></li>
+ <li><a href=/learn/javascript/asynchronous/async_await>Making asynchronous programming easier with async and await</a></li>
+ <li><a href=/web/javascript/reference/statements/async_function>Async function reference</a></li>
+ <li><a href=/web/javascript/reference/operators/await>Await operator reference</a></li>
 </ul>
 
 <p>{{PreviousMenu("Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</p>
@@ -527,10 +527,10 @@ myFetch();</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+ <li><a href=/learn/javascript/asynchronous/concepts>General asynchronous programming concepts</a></li>
+ <li><a href=/learn/javascript/asynchronous/introducing>Introducing asynchronous JavaScript</a></li>
+ <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+ <li><a href=/learn/javascript/asynchronous/promises>Graceful asynchronous programming with Promises</a></li>
+ <li><a href=/learn/javascript/asynchronous/async_await>Making asynchronous programming easier with async and await</a></li>
+ <li><a href=/learn/javascript/asynchronous/choosing_the_right_approach>Choosing the right approach</a></li>
 </ul>

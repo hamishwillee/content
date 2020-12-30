@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy. A general understanding of <a href="/en-US/docs/Learn/Server-side/First_steps">server-side website programming</a>, and in particular the mechanics of <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">client-server interactions in websites</a>.</td>
+   <td>Basic computer literacy. A general understanding of <a href=/learn/server-side/first_steps>server-side website programming</a>, and in particular the mechanics of <a href=/learn/server-side/first_steps/client-server_overview>client-server interactions in websites</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Introducing_Node">Introducing Node</h2>
 
-<p><a href="https://nodejs.org/">Node</a> (or more formally <em>Node.js</em>) is an open-source, cross-platform runtime environment that allows developers to create all kinds of server-side tools and applications in <a href="/en-US/docs/Glossary/JavaScript">JavaScript</a>. The runtime is intended for use outside of a browser context (i.e. running directly on a computer or server OS). As such, the environment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.</p>
+<p><a href="https://nodejs.org/">Node</a> (or more formally <em>Node.js</em>) is an open-source, cross-platform runtime environment that allows developers to create all kinds of server-side tools and applications in <a href=/glossary/javascript>JavaScript</a>. The runtime is intended for use outside of a browser context (i.e. running directly on a computer or server OS). As such, the environment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.</p>
 
 <p>From a web server development perspective Node has a number of benefits:</p>
 
@@ -145,7 +145,7 @@ server.listen(port, hostname, () =&gt; {
 <p>First lets consider the standard Express <a href="https://expressjs.com/en/starter/hello-world.html">Hello World</a> example (we discuss each part of this below, and in the following sections).</p>
 
 <div class="note">
-<p><strong>Tip:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
+<p><strong>Tip:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href=/learn/server-side/express_nodejs/development_environment>next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
 
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
@@ -240,7 +240,7 @@ console.log('Second');
 <p>There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
+<p><strong>Tip:</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href=/web/javascript/reference/global_objects/promise>Promises</a>.</p>
 </div>
 
 <div class="note">
@@ -305,7 +305,7 @@ module.exports = router;
 // ...
 app.use('/wiki', wiki);</pre>
 
-<p>We'll show you a lot more about working with routes, and in particular about using the <code>Router</code>, later on in the linked section<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes"> Routes and controllers .</a></p>
+<p>We'll show you a lot more about working with routes, and in particular about using the <code>Router</code>, later on in the linked section<a href=/learn/server-side/express_nodejs/routes> Routes and controllers .</a></p>
 
 <h3 id="Using_middleware">Using middleware</h3>
 
@@ -496,7 +496,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <h3 id="File_structure">File structure</h3>
 
-<p>Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole <em>Express</em> application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an <a href="/en-US/docs/Glossary/MVC">MVC architecture</a>).</p>
+<p>Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole <em>Express</em> application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an <a href=/glossary/mvc>MVC architecture</a>).</p>
 
 <p>In a later topic we'll use the <em>Express Application Generator</em>, which creates a modular app skeleton that we can easily extend for creating web applications.</p>
 
@@ -527,13 +527,13 @@ app.set('view engine', 'some_template_engine_name');
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href=/learn/server-side/express_nodejs/introduction>Express/Node introduction</a></li>
+ <li><a href=/learn/server-side/express_nodejs/development_environment>Setting up a Node (Express) development environment</a></li>
+ <li><a href=/learn/server-side/express_nodejs/tutorial_local_library_website>Express Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/skeleton_website>Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/mongoose>Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><a href=/learn/server-side/express_nodejs/routes>Express Tutorial Part 4: Routes and controllers</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a></li>
+ <li><a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a></li>
+ <li><a href=/learn/server-side/express_nodejs/deployment>Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

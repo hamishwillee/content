@@ -35,11 +35,11 @@ tags:
 
 <p>The event's default action is to copy the selection (if any) to the clipboard.</p>
 
-<p>A handler for this event can <em>modify</em> the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's  {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using <code><a href="/en-US/docs/Web/API/Event/preventDefault">event.preventDefault()</a></code>.</p>
+<p>A handler for this event can <em>modify</em> the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's  {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using <code><a href=/web/api/event/preventdefault>event.preventDefault()</a></code>.</p>
 
 <p>However, the handler cannot <em>read</em> the clipboard data.</p>
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>copy</code> event, but this will not affect the system clipboard.</p>
+<p>It's possible to construct and dispatch a <a href=/web/guide/events/creating_and_triggering_events>synthetic</a> <code>copy</code> event, but this will not affect the system clipboard.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -104,8 +104,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/SVGGraphicsElement/cut_event">cut</a></code>, <code><a href="/en-US/docs/Web/API/SVGGraphicsElement/paste_event">paste</a></code></li>
- <li>This event on HTML {{domxref("Element")}} targets: <code><a href="/en-US/docs/Web/API/Element/copy_event">copy</a></code></li>
+ <li>Related events: <code><a href=/web/api/svggraphicselement/cut_event>cut</a></code>, <code><a href=/web/api/svggraphicselement/paste_event>paste</a></code></li>
+ <li>This event on HTML {{domxref("Element")}} targets: <code><a href=/web/api/element/copy_event>copy</a></code></li>
  <li>This event on {{domxref("Document")}} targets: <code><a href="Web/API/Document/v_event">copy</a></code></li>
  <li>This event on {{domxref("Window")}} targets: <code><a href="Web/API/Window/copy_event">copy</a></code></li>
 </ul>

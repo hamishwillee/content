@@ -28,23 +28,23 @@ tags:
 <p>You can let the user download to a location of their choice by specifying the <code><var>saveAs</var></code> parameter.</p>
 
 <div class="note">
-<p>Using <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.</p>
+<p>Using <a href=/web/api/url/createobjecturl>URL.createObjectURL()</a> you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.</p>
 </div>
 
 <p>The downloads API also provides features to cancel, pause, resume, erase, and remove downloads; search for downloaded files in the download manager; show downloaded files in the computer’s file manager; and open a file in an associated application.</p>
 
-<p>To use this API, you need to have the <code>"downloads"</code><a href="/en-US/docs/Web/API/Permissions#API_permissions"> API permission</a> specified in your<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> <code>manifest.json</code></a> file.</p>
+<p>To use this API, you need to have the <code>"downloads"</code><a href=/web/api/permissions#API_permissions> API permission</a> specified in your<a href=/mozilla/add-ons/webextensions/manifest.json> <code>manifest.json</code></a> file.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/latest-download">Latest download</a><br>
- API reference: <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads API</a></p>
+ API reference: <a href=/mozilla/add-ons/webextensions/api/downloads>downloads API</a></p>
 
 <h2 id="Open_files_in_an_extension_using_a_file_picker">Open files in an extension using a file picker</h2>
 
-<p>If you want to work with a file from the user’s computer one option is to let the user select a file using the computer’s file browser. Either create a new page or inject code into an existing page to use the <code>file</code> type of the HTML <code>input</code> element to offer the user a file picker. Once the user has picked a file or files, the script associated with the page can access the content of the file using the <a href="/en-US/docs/Web/API/File">DOM File API</a>, in the same way a web application does.</p>
+<p>If you want to work with a file from the user’s computer one option is to let the user select a file using the computer’s file browser. Either create a new page or inject code into an existing page to use the <code>file</code> type of the HTML <code>input</code> element to offer the user a file picker. Once the user has picked a file or files, the script associated with the page can access the content of the file using the <a href=/web/api/file>DOM File API</a>, in the same way a web application does.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/imagify">Imagify</a><br>
- Guide: <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a><br>
- API references: <a href="/en-US/docs/Web/HTML/Element/input/file">HTML input element</a> | <a href="/en-US/docs/Web/API/File">DOM File API</a></p>
+ Guide: <a href=/using_files_from_web_applications>Using files from web applications</a><br>
+ API references: <a href=/web/html/element/input/file>HTML input element</a> | <a href=/web/api/file>DOM File API</a></p>
 
 <div class="note">
 <p>If you want to access or process all the files in a selected folder, you can do so using <code>&lt;input type="file" </code><code>webkitdirectory="true"/&gt;</code> to select the folder and return all the files it contains.</p>
@@ -52,15 +52,15 @@ tags:
 
 <h2 id="Open_files_in_an_extension_using_drag_and_drop">Open files in an extension using drag and drop</h2>
 
-<p>The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a ‘drop zone’ that fits with your UI, then add listeners for the<a href="/en-US/docs/Web/Events/dragenter"> <code>dragenter</code></a>,<a href="/en-US/docs/Web/Events/dragover"> <code>dragover</code></a>, and<a href="/en-US/docs/Web/Events/drop"> <code>drop</code></a> events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the <code>dataTransfer</code> property using <code><a href="/en-US/docs/Web/API/DataTransfer/files">DataTransfer.files</a></code>. Your code can then access and manipulate the files using the <a href="/en-US/docs/Web/API/File">DOM File API</a>.</p>
+<p>The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a ‘drop zone’ that fits with your UI, then add listeners for the<a href=/web/events/dragenter> <code>dragenter</code></a>,<a href=/web/events/dragover> <code>dragover</code></a>, and<a href=/web/events/drop> <code>drop</code></a> events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the <code>dataTransfer</code> property using <code><a href=/web/api/datatransfer/files>DataTransfer.files</a></code>. Your code can then access and manipulate the files using the <a href=/web/api/file>DOM File API</a>.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/imagify">Imagify</a><br>
- Guides: <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a> | <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop">File drag and drop</a><br>
- API references: <a href="/en-US/docs/Web/API/File">DOM File API</a></p>
+ Guides: <a href=/using_files_from_web_applications>Using files from web applications</a> | <a href=/web/api/html_drag_and_drop_api/file_drag_and_drop>File drag and drop</a><br>
+ API references: <a href=/web/api/file>DOM File API</a></p>
 
 <h2 id="Store_files_data_locally_using_the_IndexedDB_file_storage_library">Store files data locally using the IndexedDB file storage library</h2>
 
-<p>If your extension needs to save files locally, the <a href="https://www.npmjs.com/package/idb-file-storage">idb-file-storage library</a> provides a simple Promise-based wrapper to the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> to aid the storage and retrieval of files and blobs.</p>
+<p>If your extension needs to save files locally, the <a href="https://www.npmjs.com/package/idb-file-storage">idb-file-storage library</a> provides a simple Promise-based wrapper to the <a href=/web/api/indexeddb_api>IndexedDB API</a> to aid the storage and retrieval of files and blobs.</p>
 
 <p>On Firefox, this library also provides a Promise-based API wrapper for the non-standard <code>IDBMutableFile</code> API. (The <code>IDBMutableFile</code> API enables extensions to create and persist an IndexedDB database file object that provides an API to read and change the file’s content without loading all the file into memory.)</p>
 
@@ -119,7 +119,7 @@ tags:
 
 <p><code>loadStoredImages()</code> is called when the user clicks view or reload in the navigate collection page. <code>getFileStorage()</code> opens the <code>"stored-images"</code> database, then <code>imagesStore.list()</code> gets a filtered list of the stored images. This list is then used to retrieve images with <code>imagesStore.get()</code> and build a list to return to the UI.</p>
 
-<p>Note the use of <code><a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL(blob)</a></code> to create a URL that references the image blob. This URL is then used in the UI (<a href="https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js">navigate-collection.js</a><a href="https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js">collection.js</a>) to display the image.</p>
+<p>Note the use of <code><a href=/web/api/url/createobjecturl>URL.createObjectURL(blob)</a></code> to create a URL that references the image blob. This URL is then used in the UI (<a href="https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js">navigate-collection.js</a><a href="https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js">collection.js</a>) to display the image.</p>
 
 <h3 id="Delete_collected_images">Delete collected images</h3>
 
@@ -134,7 +134,7 @@ tags:
 
 <p><code>removeStoredImages()</code> is called when the user clicks delete in the navigate collection page. Again, <code>getFileStorage()</code> opens the <code>"stored-images"</code> database then <code>imagesStore.remove()</code> removes each image from the filtered list of images.</p>
 
-<p>Note the use of <code><a href="/en-US/docs/Web/API/URL/revokeObjectURL">URL.revokeObjectURL()</a></code> to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension’s background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension’s page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.</p>
+<p>Note the use of <code><a href=/web/api/url/revokeobjecturl>URL.revokeObjectURL()</a></code> to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension’s background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension’s page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.</p>
 
 <p>Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob url was used as the <code>SRC</code> attribute of an <code>IMG</code> tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.</p>
 
@@ -142,7 +142,7 @@ tags:
  API References:  <a href="https://rpl.github.io/idb-file-storage/">idb-file-storage library</a></p>
 
 <div class="note">
-<p><strong>Note:</strong> You can also use the full Web <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/Storage">Storage API</a>.</p>
+<p><strong>Note:</strong> You can also use the full Web <a href=/web/api/indexeddb_api>IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/Storage">Storage API</a>.</p>
 </div>
 
 <h2 id="Process_files_in_a_local_app">Process files in a local app</h2>
@@ -153,14 +153,14 @@ tags:
 
 <dl>
  <dt>Connection-based messaging</dt>
- <dd>Here you trigger the process with <code>runtime.connectNative()</code>, which returns a <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object. You can then pass a JSON message to the native application using the <code>postMessage()</code> function of <code>Port</code>. Using the <code>onMessage.addListener()</code> function of <code>Port</code> you can listen for messages from the native application. The native application is opened if it is not running when <code>runtime.connectNative()</code> is called and the application remains running until the extension calls <code>Port.disconnect()</code> or the page that connected to it is closed.</dd>
+ <dd>Here you trigger the process with <code>runtime.connectNative()</code>, which returns a <code><a href=/mozilla/add-ons/webextensions/api/runtime/port>runtime.Port</a></code> object. You can then pass a JSON message to the native application using the <code>postMessage()</code> function of <code>Port</code>. Using the <code>onMessage.addListener()</code> function of <code>Port</code> you can listen for messages from the native application. The native application is opened if it is not running when <code>runtime.connectNative()</code> is called and the application remains running until the extension calls <code>Port.disconnect()</code> or the page that connected to it is closed.</dd>
  <dt>Connectionless messaging</dt>
  <dd>Here you use <code>runtime.sendNativeMessage()</code> to send a JSON message to a new, temporary instance of the native application. The browser closes the native application after receiving any message back from the native application.</dd>
 </dl>
 
-<p>To add the file or blob you want the native application to process use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify()</a></code>.</p>
+<p>To add the file or blob you want the native application to process use <code><a href=/web/javascript/reference/global_objects/json/stringify>JSON.stringify()</a></code>.</p>
 
-<p>To use this method the extension must request the <code>"nativeMessaging"</code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in its <code>manifest.json</code> file. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
+<p>To use this method the extension must request the <code>"nativeMessaging"</code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions> permission</a> in its <code>manifest.json</code> file. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/native-messaging">Native Messaging</a> (illustrates simple messaging only)<br>
  Guides: <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging">Native messaging</a><br>

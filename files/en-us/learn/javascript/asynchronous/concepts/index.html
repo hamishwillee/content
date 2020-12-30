@@ -114,7 +114,7 @@ Thread 2: Task C --&gt; Task D</pre>
 
 <pre>Main thread: Render circles to canvas --&gt; Display alert()</pre>
 
-<p>After some time, JavaScript gained some tools to help with such problems. <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> allow you to send some of the JavaScript processing off to a separate thread, called a worker so that you can run multiple JavaScript chunks simultaneously. You'd generally use a worker to run expensive processes off the main thread so that user interaction is not blocked.</p>
+<p>After some time, JavaScript gained some tools to help with such problems. <a href=/web/api/web_workers_api>Web workers</a> allow you to send some of the JavaScript processing off to a separate thread, called a worker so that you can run multiple JavaScript chunks simultaneously. You'd generally use a worker to run expensive processes off the main thread so that user interaction is not blocked.</p>
 
 <pre>  Main thread: Task A --&gt; Task C
 Worker thread: Expensive task B</pre>
@@ -136,7 +136,7 @@ Worker thread: Task C -----------&gt; |      |</pre>
 
 <p>In this case, let's say Task D makes use of the results of both Task B and Task C. If we can guarantee that these results will both be available at the same time, then we might be OK, but this is unlikely. If Task D tries to run when one of its inputs is not yet available, it will throw an error.</p>
 
-<p>To fix such problems, browsers allow us to run certain operations asynchronously. Features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> allow you to set an operation running (e.g. the fetching of an image from the server), and then wait until the result has returned before running another operation:</p>
+<p>To fix such problems, browsers allow us to run certain operations asynchronously. Features like <a href=/web/javascript/reference/global_objects/promise>Promises</a> allow you to set an operation running (e.g. the fetching of an image from the server), and then wait until the result has returned before running another operation:</p>
 
 <pre>Main thread: Task A                   Task B
     Promise:      |__async operation__|</pre>
@@ -152,10 +152,10 @@ Worker thread: Task C -----------&gt; |      |</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+ <li><a href=/learn/javascript/asynchronous/concepts>General asynchronous programming concepts</a></li>
+ <li><a href=/learn/javascript/asynchronous/introducing>Introducing asynchronous JavaScript</a></li>
+ <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+ <li><a href=/learn/javascript/asynchronous/promises>Graceful asynchronous programming with Promises</a></li>
+ <li><a href=/learn/javascript/asynchronous/async_await>Making asynchronous programming easier with async and await</a></li>
+ <li><a href=/learn/javascript/asynchronous/choosing_the_right_approach>Choosing the right approach</a></li>
 </ul>

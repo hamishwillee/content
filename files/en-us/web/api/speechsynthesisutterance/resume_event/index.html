@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
 
-<p>The <code><strong>resume</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> {{domxref("SpeechSynthesisUtterance")}} object is fired when a paused utterance is resumed.</p>
+<p>The <code><strong>resume</strong></code> event of the <a href=/web/api/web_speech_api>Web Speech API</a> {{domxref("SpeechSynthesisUtterance")}} object is fired when a paused utterance is resumed.</p>
 
 <table class="properties">
  <tbody>
@@ -26,20 +26,20 @@ tags:
   </tr>
   <tr>
    <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume">onresume</a></code></td>
+   <td><code><a href=/web/api/speechsynthesisutterance/onresume>onresume</a></code></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can use the <code>resume</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+<p>You can use the <code>resume</code> event in an <code><a href=/web/api/eventtarget/addeventlistener>addEventListener</a></code> method:</p>
 
 <pre class="brush: js">utterThis.addEventListener('resume', function(event) {
   console.log('Speech resumed after ' + event.elapsedTime + ' milliseconds.');
 });</pre>
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onend">onresume</a></code> event handler property:</p>
+<p>Or use the <code><a href=/web/api/speechsynthesisutterance/onend>onresume</a></code> event handler property:</p>
 
 <pre class="brush: js">utterThis.onresume = function(event) {
   console.log('Speech resumed after ' + event.elapsedTime + ' milliseconds.');
@@ -72,5 +72,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+ <li><a href=/web/api/web_speech_api>Web Speech API</a></li>
 </ul>

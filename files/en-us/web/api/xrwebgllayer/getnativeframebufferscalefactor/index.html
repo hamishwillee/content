@@ -67,7 +67,7 @@ tags:
 
 <p>Since each eye gets half of the frame buffer, the result is that the left eye gets a 640x720 portion of the buffer with the viewport's <code>x</code> and <code>y</code> at 0, the width at 640, and the height set to 720. The right eye gets the other half of the frame buffer, with its viewport's <code>x</code> set at 639.</p>
 
-<p>While <a href="/en-US/docs/Web/API/XRWebGLLayer#Rendering_every_view_in_a_frame">rendering a frame for this scene</a>, we get the viewport for the view and apply it to WebGL, then render the scene. This ensures that the scene we render will not only match the viewpoint we need to express (which is defined by the position and orientation data in the pose), but that the rendered output will be constrained within the correct portion of the frame buffer for the eye we're drawing, regardless of any scaling that is being performed.</p>
+<p>While <a href=/web/api/xrwebgllayer#Rendering_every_view_in_a_frame>rendering a frame for this scene</a>, we get the viewport for the view and apply it to WebGL, then render the scene. This ensures that the scene we render will not only match the viewpoint we need to express (which is defined by the position and orientation data in the pose), but that the rendered output will be constrained within the correct portion of the frame buffer for the eye we're drawing, regardless of any scaling that is being performed.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -84,7 +84,7 @@ tags:
 };
 </pre>
 
-<p>This starts by calling the <a href="/en-US/docs/Web/API/WebGLRenderingContext">WebGL rendering context</a> function {{domxref("WebGLRenderingContext.makeXRCompatible", "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by calling <code>XRWebGLLayer</code>'s <code>getNativeFramebufferScaleFactor()</code> static function to get the scale factor needed to reach the native resolution, and we then pass that into the {{domxref("XRWebGLLayer.XRWebGLLayer", "WebGLLayer()")}} constructor as the value of the {{domxref("XRWebGLLayerInit.framebufferScaleFactor", "framebufferScaleFactor")}} property in its <code>layerInit</code> dictionary, which is an {{domxref("XRWebGLLayerInit")}} object.</p>
+<p>This starts by calling the <a href=/web/api/webglrenderingcontext>WebGL rendering context</a> function {{domxref("WebGLRenderingContext.makeXRCompatible", "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by calling <code>XRWebGLLayer</code>'s <code>getNativeFramebufferScaleFactor()</code> static function to get the scale factor needed to reach the native resolution, and we then pass that into the {{domxref("XRWebGLLayer.XRWebGLLayer", "WebGLLayer()")}} constructor as the value of the {{domxref("XRWebGLLayerInit.framebufferScaleFactor", "framebufferScaleFactor")}} property in its <code>layerInit</code> dictionary, which is an {{domxref("XRWebGLLayerInit")}} object.</p>
 
 <p>That gets us a new {{domxref("XRWebGLLayer")}} object representing a rendering surface we can use for the {{domxref("XRSession")}}; we set it as the rendering surface for <code>xrSession</code> by calling its {{domxref("XRSession.updateRenderState", "updateRenderState()")}} method, passing the new <code>glLayer</code> in using the {{domxref("XRRenderState")}} dictionary's {{domxref("XRRenderState.baseLayer")}} property. The result is a rendering context that looks like the diagram below:</p>
 
@@ -116,6 +116,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a></li>
+ <li><a href=/web/api/webxr_device_api>WebXR Device API</a></li>
+ <li><a href=/web/api/webxr_device_api/performance>WebXR performance guide</a></li>
 </ul>

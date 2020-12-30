@@ -61,7 +61,7 @@ tags:
 
 <h2 id="Fixing_syntax_errors">Fixing syntax errors</h2>
 
-<p>Earlier on in the course we got you to type some simple JavaScript commands into the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a> (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.</p>
+<p>Earlier on in the course we got you to type some simple JavaScript commands into the <a href=/learn/common_questions/what_are_browser_developer_tools>developer tools JavaScript console</a> (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.</p>
 
 <ol>
  <li>Go to the tab that you've got <code>number-game-errors.html</code> open in, and open your JavaScript console. You should see an error message along the following lines: <img alt="" src="https://mdn.mozillademos.org/files/13496/not-a-function.png" style="display: block; margin: 0 auto;"></li>
@@ -77,12 +77,12 @@ tags:
  <li>If we look at line 86 in our code editor, we'll find this line:
   <pre class="brush: js notranslate">guessSubmit.addeventListener('click', checkGuess);</pre>
  </li>
- <li>The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn <em>name-of-feature</em>" with your favorite search engine. Here's a shortcut to save you some time in this instance: <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
+ <li>The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn <em>name-of-feature</em>" with your favorite search engine. Here's a shortcut to save you some time in this instance: <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code>.</li>
  <li>So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case sensitive, so any slight difference in spelling or casing will cause an error. Changing <code>addeventListener</code> to <code>addEventListener</code> should fix this. Do this now.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a> reference page for more details about this error.</p>
+<p><strong>Note</strong>: See our <a href=/web/javascript/reference/errors/not_a_function>TypeError: "x" is not a function</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="Syntax_errors_round_two">Syntax errors round two</h3>
@@ -91,9 +91,9 @@ tags:
  <li>Save your page and refresh, and you should see the error has gone.</li>
  <li>Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! <img alt="" src="https://mdn.mozillademos.org/files/13498/variable-is-null.png" style="display: block; margin: 0 auto;"></li>
  <li>This time the error being reported is "TypeError: lowOrHi is null", on line 78.
-  <div class="note"><strong>Note</strong>: <code><a href="/en-US/docs/Glossary/Null">Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</div>
+  <div class="note"><strong>Note</strong>: <code><a href=/glossary/null>Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</div>
 
-  <div class="note"><strong>Note</strong>: This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</div>
+  <div class="note"><strong>Note</strong>: This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href=/learn/javascript/building_blocks/functions>functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</div>
  </li>
  <li>Have a look at line 78, and you'll see the following code:
   <pre class="brush: js notranslate">lowOrHi.textContent = 'Last guess was too high!';</pre>
@@ -105,11 +105,11 @@ tags:
   <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
 
   <div class="note">
-  <p><strong>Note</strong>: <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> is a really useful debugging function that prints a value to the console. So it will print the value of <code>lowOrHi</code> to the console as soon as we have tried to set it in line 48.</p>
+  <p><strong>Note</strong>: <code><a href=/web/api/console/log>console.log()</a></code> is a really useful debugging function that prints a value to the console. So it will print the value of <code>lowOrHi</code> to the console as soon as we have tried to set it in line 48.</p>
   </div>
  </li>
  <li>Save and refresh, and you should now see the <code>console.log()</code> result in your console. <img alt="" src="https://mdn.mozillademos.org/files/13494/console-log-output.png" style="display: block; margin: 0 auto;"> Sure enough, <code>lowOrHi</code>'s value is <code>null</code> at this point, so there is definitely a problem with line 48.</li>
- <li>Let's think about what the problem could be. Line 48 is using a <code><a href="/en-US/docs/Web/API/Document/querySelector">document.querySelector()</a></code> method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
+ <li>Let's think about what the problem could be. Line 48 is using a <code><a href=/web/api/document/queryselector>document.querySelector()</a></code> method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
   <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
  <li>So we need a class selector here, which begins with a dot (<code>.</code>), but the selector being passed into the <code>querySelector()</code> method in line 48 has no dot. This could be the problem! Try changing <code>lowOrHi</code> to <code>.lowOrHi</code> in line 48.</li>
@@ -117,7 +117,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> reference page for more details about this error.</p>
+<p><strong>Note</strong>: See our <a href=/web/javascript/reference/errors/unexpected_type>TypeError: "x" is (not) "y"</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="Syntax_errors_round_three">Syntax errors round three</h3>
@@ -150,11 +150,11 @@ tags:
 
 <h3 id="Working_through_the_logic">Working through the logic</h3>
 
-<p>To fix this, let's consider how this line is working. First, we invoke <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code>, which generates a random decimal number between 0 and 1, e.g. 0.5675493843.</p>
+<p>To fix this, let's consider how this line is working. First, we invoke <code><a href=/web/javascript/reference/global_objects/math/random>Math.random()</a></code>, which generates a random decimal number between 0 and 1, e.g. 0.5675493843.</p>
 
 <pre class="brush: js notranslate">Math.random()</pre>
 
-<p>Next, we pass the result of invoking <code>Math.random()</code> through <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, which rounds the number passed to it down to the nearest whole number. We then add 1 to that result:</p>
+<p>Next, we pass the result of invoking <code>Math.random()</code> through <code><a href=/web/javascript/reference/global_objects/math/floor>Math.floor()</a></code>, which rounds the number passed to it down to the nearest whole number. We then add 1 to that result:</p>
 
 <pre class="notranslate">Math.floor(Math.random()) + 1</pre>
 
@@ -185,7 +185,7 @@ tags:
 <p>It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (<code>=</code>) — which sets a variable to be equal to a value — with the strict equality operator (<code>===</code>), which tests whether one value is equal to another, and returns a <code>true</code>/<code>false</code> result.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> reference page for more details about this error.</p>
+<p><strong>Note</strong>: See our <a href=/web/javascript/reference/errors/missing_semicolon_before_statement>SyntaxError: missing ; before statement</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="The_program_always_says_youve_won_regardless_of_the_guess_you_enter">The program always says you've won, regardless of the guess you enter</h3>
@@ -205,7 +205,7 @@ tags:
 <p>This one is pretty simple — it generally means that you've missed the closing parenthesis at the end of a function/method call.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a> reference page for more details about this error.</p>
+<p><strong>Note</strong>: See our <a href=/web/javascript/reference/errors/missing_parenthesis_after_argument_list>SyntaxError: missing ) after argument list</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="SyntaxError_missing_after_property_id">SyntaxError: missing : after property id</h3>
@@ -231,7 +231,7 @@ tags:
 <p>For all of these errors, think about how we tackled the examples we looked at in the walkthrough. When an error arises, look at the line number you are given, go to that line and see if you can spot what's wrong. Bear in mind that the error is not necessarily going to be on that line, and also that the error might not be caused by the exact same problem we cited above!</p>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> reference pages for more details about these errors.</p>
+<p><strong>Note</strong>: See our <a href=/web/javascript/reference/errors/unexpected_token>SyntaxError: Unexpected token</a> and <a href=/web/javascript/reference/errors/unterminated_string_literal>SyntaxError: unterminated string literal</a> reference pages for more details about these errors.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>
@@ -242,7 +242,7 @@ tags:
 
 <div>
 <ul>
- <li>There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the <a href="/en-US/docs/Web/JavaScript/Reference/Errors">JavaScript error reference</a>.</li>
+ <li>There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the <a href=/web/javascript/reference/errors>JavaScript error reference</a>.</li>
  <li>If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>, or in the <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN Web Docs room</a> on <a class="external external-icon" href="https://wiki.mozilla.org/Matrix">Matrix</a>. Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.</li>
 </ul>
 </div>
@@ -252,13 +252,13 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
+ <li><a href=/learn/javascript/first_steps/what_is_javascript>What is JavaScript?</a></li>
+ <li><a href=/learn/javascript/first_steps/a_first_splash>A first splash into JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/what_went_wrong>What went wrong? Troubleshooting JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/variables>Storing the information you need — Variables</a></li>
+ <li><a href=/learn/javascript/first_steps/math>Basic math in JavaScript — numbers and operators</a></li>
+ <li><a href=/learn/javascript/first_steps/strings>Handling text — strings in JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/useful_string_methods>Useful string methods</a></li>
+ <li><a href=/learn/javascript/first_steps/arrays>Arrays</a></li>
+ <li><a href=/learn/javascript/first_steps/silly_story_generator>Assessment: Silly story generator</a></li>
 </ul>

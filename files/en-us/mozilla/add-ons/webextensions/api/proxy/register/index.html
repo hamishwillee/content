@@ -18,7 +18,7 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16799/proxy_register_warning.png" style="border: 1px solid black; display: block; height: 65px; margin: 0px auto; width: 800px;"></p>
 
-<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
+<p>Registers a <a href=/web/http/proxy_servers_and_tunneling/proxy_auto-configuration_%28pac%29_file>Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
 
 <p>If PAC files are registered by more than one extension, then requests will be passed initially to the one that was registered first.</p>
 
@@ -29,11 +29,11 @@ tags:
 
 <p>Each extension can only register a single PAC file: if you call <code>register()</code> twice, the second PAC file will replace the first.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code>.</p>
 
 <h2 id="Communicating_with_PAC_files">Communicating with PAC files</h2>
 
-<p>You can exchange messages between the PAC file and your extension's background page (or any other privileged pages, like popup pages) using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>.</p>
+<p>You can exchange messages between the PAC file and your extension's background page (or any other privileged pages, like popup pages) using <code><a href=/mozilla/add-ons/webextensions/api/runtime/sendmessage>runtime.sendMessage()</a></code> and <code><a href=/mozilla/add-ons/webextensions/api/runtime/onmessage>runtime.onMessage</a></code>.</p>
 
 <p>To send a message to the PAC file, you must set the <code>toProxyScript</code> option:</p>
 
@@ -64,11 +64,11 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <h2 id="PAC_file_specification">PAC file specification</h2>
 
-<p>The basic PAC file syntax is described in the <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">PAC documentation</a>, but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.</p>
+<p>The basic PAC file syntax is described in the <a href=/web/http/proxy_servers_and_tunneling/proxy_auto-configuration_(pac)_file>PAC documentation</a>, but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.</p>
 
 <h3 id="FindProxyForURL_return_value">FindProxyForURL() return value</h3>
 
-<p>The standard <code>FindProxyForURL()</code> <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
+<p>The standard <code>FindProxyForURL()</code> <a href=/web/http/proxy_servers_and_tunneling/proxy_auto-configuration_%28pac%29_file#Return_value_format>returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
 
 <p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.</p>
 
@@ -95,14 +95,14 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <h3 id="PAC_file_environment">PAC file environment</h3>
 
-<p>The global helper functions usually available for PAC files (<code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2">isPlainHostName()</a></code>, <code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()">dnsDomainIs()</a></code>, and so on) are not available.</p>
+<p>The global helper functions usually available for PAC files (<code><a href=/web/http/proxy_servers_and_tunneling/proxy_auto-configuration_(pac)_file#isPlainHostName()_2>isPlainHostName()</a></code>, <code><a href=/web/http/proxy_servers_and_tunneling/proxy_auto-configuration_(pac)_file#dnsDomainIs()>dnsDomainIs()</a></code>, and so on) are not available.</p>
 
 <p>Code running in the PAC file does not get access to:</p>
 
 <ul>
- <li>any DOM functions (for example, <a href="/en-US/docs/Web/API/Window">window</a> or any of its properties)</li>
- <li>any WebExtension APIs except <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code></li>
- <li>the <a href="/en-US/docs/Web/API/Console">console API</a> - to log messages from a PAC, send a message to the background script:</li>
+ <li>any DOM functions (for example, <a href=/web/api/window>window</a> or any of its properties)</li>
+ <li>any WebExtension APIs except <code><a href=/mozilla/add-ons/webextensions/api/runtime/sendmessage>runtime.sendMessage()</a></code> and <code><a href=/mozilla/add-ons/webextensions/api/runtime/onmessage>runtime.onMessage</a></code></li>
+ <li>the <a href=/web/api/console>console API</a> - to log messages from a PAC, send a message to the background script:</li>
 </ul>
 
 <pre class="brush: js">//  pac.js
@@ -133,12 +133,12 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <dl>
  <dt><code>url</code></dt>
- <dd><code>String</code>. URL pointing to the PAC file to load. PAC files must be bundled with the extension, and <code>url</code> must be relative to the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file.</dd>
+ <dd><code>String</code>. URL pointing to the PAC file to load. PAC files must be bundled with the extension, and <code>url</code> must be relative to the extension's <a href=/mozilla/add-ons/webextensions/manifest.json>manifest.json</a> file.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the PAC file has been registered, or rejected if there was an error.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> that will be fulfilled with no arguments when the PAC file has been registered, or rejected if there was an error.</p>
 
 <h2 id="Examples">Examples</h2>
 

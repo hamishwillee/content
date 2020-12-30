@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p class="summary" id="webaudioapibasics"><span class="seoSummary">Let's take a look at getting started with the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.</span></p>
+<p class="summary" id="webaudioapibasics"><span class="seoSummary">Let's take a look at getting started with the <a href=/web/api/web_audio_api>Web Audio API</a>. We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.</span></p>
 
 <p>The Web Audio API does not replace the {{HTMLElement("audio")}} media element, but rather complements it, just like {{HTMLElement("canvas")}} coexists alongside the {{HTMLElement("img")}} element. Your use case will determine what tools you use to implement audio. If you want to control playback of an audio track, the <code>&lt;audio&gt;</code> media element provides a better, quicker solution than the Web Audio API. If you want to carry out more complex audio processing, as well as playback, the Web Audio API provides much more power and control.</p>
 
@@ -67,7 +67,7 @@ const audioContext = new AudioContext();
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: If the sound file you're loading is held on a different domain you will need to use the <code>crossorigin</code> attribute; see <a href="/en-US/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a> for more information.</p>
+<p><strong>Note</strong>: If the sound file you're loading is held on a different domain you will need to use the <code>crossorigin</code> attribute; see <a href=/web/http/cors>Cross Origin Resource Sharing (CORS)</a> for more information.</p>
 </div>
 
 <p>To use all the nice things we get with the Web Audio API, we need to grab the source from this element and <em>pipe</em> it into the context we have created. Lucky for us there's a method that allows us to do just that — {{domxref("AudioContext.createMediaElementSource")}}:</p>
@@ -89,7 +89,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or a whitelist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.</p>
 
-<p>These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>.</p>
+<p>These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article <a href=/web/media/autoplay_guide>Autoplay guide for media and Web Audio APIs</a>.</p>
 
 <p>Since our scripts are playing audio in response to a user input event (a click on a play button, for instance), we're in good shape and should have no problems from autoplay blocking. So, let's start by taking a look at our play and pause functionality. We have a play button that changes to a pause button when the track is playing:</p>
 
@@ -160,7 +160,7 @@ playButton.addEventListener('click', function() {
 
 <p>The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4 and a max of about 3.4. Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).</p>
 
-<p>Let's give the user control to do this — we'll use a <a href="/en-US/docs/Web/HTML/Element/input/range">range input</a>:</p>
+<p>Let's give the user control to do this — we'll use a <a href=/web/html/element/input/range>range input</a>:</p>
 
 <pre class="brush: html notranslate">&lt;input type="range" id="volume" min="0" max="2" value="1" step="0.01"&gt;
 </pre>

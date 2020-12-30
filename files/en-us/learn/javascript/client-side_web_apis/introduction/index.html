@@ -23,7 +23,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of <a href="/en-US/docs/Learn/HTML">HTML</a> and <a href="/en-US/docs/Learn/CSS">CSS</a>, JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks">building blocks</a>, <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>).</td>
+   <td>Basic computer literacy, a basic understanding of <a href=/learn/html>HTML</a> and <a href=/learn/css>CSS</a>, JavaScript basics (see <a href=/learn/javascript/first_steps>first steps</a>, <a href=/learn/javascript/building_blocks>building blocks</a>, <a href=/learn/javascript/objects>JavaScript objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -45,7 +45,7 @@ tags:
 <p>In the same way, if you want to say, program some 3D graphics, it is a lot easier to do it using an API written in a higher-level language such as JavaScript or Python, rather than try to directly write low level code (say C or C++) that directly controls the computer's GPU or other graphics functions.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See also the <a href="/en-US/docs/Glossary/API">API glossary entry</a> for further description.</p>
+<p><strong>Note</strong>: See also the <a href=/glossary/api>API glossary entry</a> for further description.</p>
 </div>
 
 <h3 id="APIs_in_client-side_JavaScript">APIs in client-side JavaScript</h3>
@@ -53,7 +53,7 @@ tags:
 <p>Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. They generally fall into two categories:</p>
 
 <ul>
- <li><strong>Browser APIs</strong> are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.</li>
+ <li><strong>Browser APIs</strong> are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the <a href=/web/api/web_audio_api>Web Audio API</a> provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.</li>
  <li><strong>Third-party APIs</strong> are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the <a href="https://dev.twitter.com/overview/documentation">Twitter API</a> allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.</li>
 </ul>
 
@@ -64,28 +64,28 @@ tags:
 <p>So above, we talked about what client-side JavaScript APIs are, and how they relate to the JavaScript language. Let's recap this to make it clearer, and also mention where other JavaScript tools fit in:</p>
 
 <ul>
- <li>JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Node</a>.</li>
+ <li>JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as <a href=/learn/server-side/express_nodejs/introduction>Node</a>.</li>
  <li>Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.</li>
  <li>Third-party APIs — constructs built into third-party platforms (e.g. Twitter, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your latest Tweets on your web page).</li>
- <li>JavaScript libraries — Usually one or more JavaScript files containing <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions">custom functions</a> that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li>
+ <li>JavaScript libraries — Usually one or more JavaScript files containing <a href=/learn/javascript/building_blocks/functions#Custom_functions>custom functions</a> that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li>
  <li>JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is “Inversion of Control”. When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.</li>
 </ul>
 
 <h2 id="What_can_APIs_do">What can APIs do?</h2>
 
-<p>There are a huge number of APIs available in modern browsers that allow you to do a wide variety of things in your code. You can see this by taking a look at the <a href="/en-US/docs/Web/API">MDN APIs index page</a>.</p>
+<p>There are a huge number of APIs available in modern browsers that allow you to do a wide variety of things in your code. You can see this by taking a look at the <a href=/web/api>MDN APIs index page</a>.</p>
 
 <h3 id="Common_browser_APIs">Common browser APIs</h3>
 
 <p>In particular, the most common categories of browser APIs you'll use (and which we'll cover in this module in greater detail) are:</p>
 
 <ul>
- <li><strong>APIs for manipulating documents</strong> loaded into the browser. The most obvious example is the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM (Document Object Model) API</a>, which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a>.</li>
- <li><strong>APIs that fetch data from the server</strong> to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". APIs that make this possible include <a href="/en-US/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> and the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>. You may also come across the term <strong>Ajax</strong>, which describes this technique. Find out more about such APIs in <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a>.</li>
- <li><strong>APIs for drawing and manipulating graphics</strong> are now widely supported in browsers — the most popular ones are <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> and <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.</li>
- <li><strong><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video APIs</a></strong> like {{domxref("HTMLMediaElement")}}, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, and <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc).</li>
- <li><strong>Device APIs</strong> are basically APIs for manipulating and retrieving data from modern device hardware in a way that is useful for web apps. Examples include telling the user that a useful update is available on a web app via system notifications (see the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a>) or vibration hardware (see the <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>).</li>
- <li><strong>Client-side storage APIs</strong> are becoming a lot more widespread in web browsers — the ability to store data on the client-side is very useful if you want to create an app that will save its state between page loads, and perhaps even work when the device is offline. There are a number of options available, e.g. simple name/value storage with the <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, and more complex tabular data storage with the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>.</li>
+ <li><strong>APIs for manipulating documents</strong> loaded into the browser. The most obvious example is the <a href=/web/api/document_object_model>DOM (Document Object Model) API</a>, which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in <a href=/learn/javascript/client-side_web_apis/manipulating_documents>Manipulating documents</a>.</li>
+ <li><strong>APIs that fetch data from the server</strong> to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". APIs that make this possible include <a href=/web/api/xmlhttprequest title="XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> and the <a href=/web/api/fetch_api>Fetch API</a>. You may also come across the term <strong>Ajax</strong>, which describes this technique. Find out more about such APIs in <a href=/learn/javascript/client-side_web_apis/fetching_data>Fetching data from the server</a>.</li>
+ <li><strong>APIs for drawing and manipulating graphics</strong> are now widely supported in browsers — the most popular ones are <a href=/web/api/canvas_api>Canvas</a> and <a href=/web/api/webgl_api>WebGL</a>, which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.</li>
+ <li><strong><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video APIs</a></strong> like {{domxref("HTMLMediaElement")}}, the <a href=/web/api/web_audio_api>Web Audio API</a>, and <a href=/web/api/webrtc_api>WebRTC</a> allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc).</li>
+ <li><strong>Device APIs</strong> are basically APIs for manipulating and retrieving data from modern device hardware in a way that is useful for web apps. Examples include telling the user that a useful update is available on a web app via system notifications (see the <a href=/web/api/notifications_api>Notifications API</a>) or vibration hardware (see the <a href=/web/api/vibration_api>Vibration API</a>).</li>
+ <li><strong>Client-side storage APIs</strong> are becoming a lot more widespread in web browsers — the ability to store data on the client-side is very useful if you want to create an app that will save its state between page loads, and perhaps even work when the device is offline. There are a number of options available, e.g. simple name/value storage with the <a href=/web/api/web_storage_api>Web Storage API</a>, and more complex tabular data storage with the <a href=/web/api/indexeddb_api>IndexedDB API</a>.</li>
 </ul>
 
 <h3 id="Common_third-party_APIs">Common third-party APIs</h3>
@@ -113,16 +113,16 @@ tags:
 
 <h3 id="They_are_based_on_objects">They are based on objects</h3>
 
-<p>Your code interacts with APIs using one or more <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).</p>
+<p>Your code interacts with APIs using one or more <a href=/learn/javascript/objects>JavaScript objects</a>, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you are not already familiar with how objects work, you should go back and work through our <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> module before continuing.</p>
+<p><strong>Note</strong>: If you are not already familiar with how objects work, you should go back and work through our <a href=/learn/javascript/objects>JavaScript objects</a> module before continuing.</p>
 </div>
 
 <p>Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:</p>
 
 <ul>
- <li>{{domxref("AudioContext")}}, which represents an <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_graphs">audio graph</a> that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.</li>
+ <li>{{domxref("AudioContext")}}, which represents an <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api#Audio_graphs>audio graph</a> that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.</li>
  <li>{{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.</li>
  <li>{{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.</li>
 </ul>
@@ -209,7 +209,7 @@ const para = document.querySelector('p'); // reference an existing p element
 em.textContent = 'Hello there!'; // give em some text content
 para.appendChild(em); // embed em inside para</pre>
 
-<p>The <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:</p>
+<p>The <a href=/web/api/canvas_api>Canvas API</a> also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:</p>
 
 <pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');</pre>
@@ -229,13 +229,13 @@ const ctx = canvas.getContext('2d');</pre>
 
 <h3 id="They_use_events_to_handle_changes_in_state">They use events to handle changes in state</h3>
 
-<p>We already discussed events earlier on in the course in our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a> article, which looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.</p>
+<p>We already discussed events earlier on in the course in our <a href=/learn/javascript/building_blocks/events>Introduction to events</a> article, which looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.</p>
 
 <p>Some web APIs contain no events, but most contain at least a few. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections.</p>
 
 <p>We already saw a number of event handlers in use in our Web Audio API example above.</p>
 
-<p>To provide another example, instances of the <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> object (each one represents an HTTP request to the server to retrieve a new resource of some kind) has a number of events available on them, for example, the <code>load</code> event is fired when a response has been successfully returned containing the requested resource, and it is now available.</p>
+<p>To provide another example, instances of the <code><a href=/web/api/xmlhttprequest>XMLHttpRequest</a></code> object (each one represents an HTTP request to the server to retrieve a new resource of some kind) has a number of events available on them, for example, the <code>load</code> event is fired when a response has been successfully returned containing the requested resource, and it is now available.</p>
 
 <p>The following code provides a simple example of how this would be used:</p>
 
@@ -261,13 +261,13 @@ request.onload = function() {
 
 <h3 id="They_have_additional_security_mechanisms_where_appropriate">They have additional security mechanisms where appropriate</h3>
 
-<p>WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push</a>).</p>
+<p>WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example <a href=/web/security/same-origin_policy>same-origin policy</a>), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include <a href=/web/api/service_worker_api>Service Workers</a> and <a href=/web/api/push_api>Push</a>).</p>
 
-<p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> asks for permission using a pop-up dialogue box:</p>
+<p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the <a href=/web/api/notifications_api>Notifications API</a> asks for permission using a pop-up dialogue box:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14315/notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
+<p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href=/web/api/web_audio_api/best_practices#Autoplay_policy>autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.</p>
@@ -282,11 +282,11 @@ request.onload = function() {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third-party APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/introduction>Introduction to web APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/manipulating_documents>Manipulating documents</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/fetching_data>Fetching data from the server</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/third_party_apis>Third-party APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/video_and_audio_apis>Video and audio APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/client-side_storage>Client-side storage</a></li>
 </ul>

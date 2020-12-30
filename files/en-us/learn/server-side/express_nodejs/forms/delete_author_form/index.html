@@ -9,7 +9,7 @@ tags:
 ---
 <p>This subarticle shows how to define a page to delete <code>Author</code> objects.</p>
 
-<p>As discussed in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a> section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an <code>Author</code> to be deleted if it is referenced by a <code>Book</code>). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the <code>Author</code> object can be deleted.</p>
+<p>As discussed in the <a href=/learn/server-side/express_nodejs/forms#form_design>form design</a> section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an <code>Author</code> to be deleted if it is referenced by a <code>Book</code>). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the <code>Author</code> object can be deleted.</p>
 
 <h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
 
@@ -164,6 +164,6 @@ p
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
- <li>Proceed to the final subarticle of part 6: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Update Book form</a>.</li>
+ <li>Return to <a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a>.</li>
+ <li>Proceed to the final subarticle of part 6: <a href=/learn/server-side/express_nodejs/forms/update_book_form>Update Book form</a>.</li>
 </ul>

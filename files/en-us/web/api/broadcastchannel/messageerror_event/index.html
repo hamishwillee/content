@@ -24,14 +24,14 @@ tags:
   </tr>
   <tr>
    <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror">onmessageerror</a></code></td>
+   <td><code><a href=/web/api/broadcastchannel/onmessageerror>onmessageerror</a></code></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code uses <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> to listen for messages and errors:</p>
+<p>This code uses <code><a href=/web/api/eventtarget/addeventlistener>addEventListener</a></code> to listen for messages and errors:</p>
 
 <pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 
@@ -43,7 +43,7 @@ channel.addEventListener('messageerror', (event) =&gt; {
   console.error(event);
 });</pre>
 
-<p>The same, but using the <code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessage">onmessage</a></code> and <code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror">onmessageerror</a></code> event handler properties:</p>
+<p>The same, but using the <code><a href=/web/api/broadcastchannel/onmessage>onmessage</a></code> and <code><a href=/web/api/broadcastchannel/onmessageerror>onmessageerror</a></code> event handler properties:</p>
 
 <pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 

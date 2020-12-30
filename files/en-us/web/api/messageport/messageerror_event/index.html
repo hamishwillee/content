@@ -24,14 +24,14 @@ tags:
   </tr>
   <tr>
    <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/MessagePort/onmessageerror">onmessageerror</a></code></td>
+   <td><code><a href=/web/api/messageport/onmessageerror>onmessageerror</a></code></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Suppose a script creates a <code><a href="/en-US/docs/Web/API/MessageChannel">MessageChannel</a></code> and sends one of the ports to a different browsing context, such as another <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, using code like this:</p>
+<p>Suppose a script creates a <code><a href=/web/api/messagechannel>MessageChannel</a></code> and sends one of the ports to a different browsing context, such as another <code><a href=/web/html/element/iframe>&lt;iframe&gt;</a></code>, using code like this:</p>
 
 <pre class="brush: js">const channel = new MessageChannel();
 const myPort = channel.port1;
@@ -63,7 +63,7 @@ targetFrame.postMessage('init', targetOrigin, [channel.port2]);</pre>
     myPort.start();
 });</pre>
 
-<p>Note that the listener must call <code><a href="/en-US/docs/Web/API/MessagePort/start">MessagePort.start()</a></code> before any messages will be delivered to this port. This is only needed when using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method: if the receiver uses <code><a href="/en-US/docs/Web/API/MessagePort/onmessage">onmessage</a></code> instead, <code>start()</code> is called implicitly:</p>
+<p>Note that the listener must call <code><a href=/web/api/messageport/start>MessagePort.start()</a></code> before any messages will be delivered to this port. This is only needed when using the <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> method: if the receiver uses <code><a href=/web/api/messageport/onmessage>onmessage</a></code> instead, <code>start()</code> is called implicitly:</p>
 
 <pre class="brush: js">window.addEventListener('message', (event) =&gt; {
     const myPort = event.ports[0];
@@ -101,5 +101,5 @@ targetFrame.postMessage('init', targetOrigin, [channel.port2]);</pre>
 
 <ul>
  <li>Related events: <code><a href="/docs/Web/API/MessagePort/message_event">message</a></code>.</li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+ <li><a href=/web/api/channel_messaging_api/using_channel_messaging>Using channel messaging</a></li>
 </ul>

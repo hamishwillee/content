@@ -24,11 +24,11 @@ tags:
  <dt><code>bookmarkId</code> {{optional_inline}}</dt>
  <dd><code>string</code>. The ID of the bookmark where the context menu was clicked.</dd>
  <dt><code>button</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. Which mouse button was pressed. The values are the same as for <a href="/en-US/docs/Web/API/MouseEvent/button"><code>MouseEvent.button</code></a>.</dd>
+ <dd><code>integer</code>. Which mouse button was pressed. The values are the same as for <a href=/web/api/mouseevent/button><code>MouseEvent.button</code></a>.</dd>
  <dt><code>checked</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. A flag indicating whether a checkbox or radio item was checked after it was clicked.</dd>
  <dt><code>editable</code></dt>
- <dd><code>boolean</code>. A flag indicating whether the element is editable: for example, if it is a <a href="/en-US/docs/Web/HTML/Element/textarea">textarea</a>.</dd>
+ <dd><code>boolean</code>. A flag indicating whether the element is editable: for example, if it is a <a href=/web/html/element/textarea>textarea</a>.</dd>
  <dt><code>frameId</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The ID of the frame in which the item was clicked. The frame ID can be used in other APIs that accept frame IDs, such as {{WebExtAPIRef("tabs.sendMessage()")}}. If the item was clicked in the top level document, <code>frameId</code> is zero. If the item was clicked outside the page entirely (for example, in the <code>tools_menu</code> or <code>tab</code> context), then <code>frameId</code> is <code>undefined</code>.</dd>
  <dt><code>frameUrl</code> {{optional_inline}}</dt>
@@ -52,7 +52,7 @@ tags:
  <dt><code>srcUrl</code> {{optional_inline}}</dt>
  <dd><code>string</code>. Will be present for elements with a "src" URL.</dd>
  <dt><code>targetElementId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the <a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a> attribute of the page element.</dd>
+ <dd><code>integer</code>. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the <a href=/web/html/global_attributes/id>id</a> attribute of the page element.</dd>
  <dt><code>viewType</code> {{optional_inline}}</dt>
  <dd>{{WebExtAPIRef("extension.ViewType", "ViewType")}}. The type of extension view.</dd>
  <dt><code>wasChecked</code> {{optional_inline}}</dt>

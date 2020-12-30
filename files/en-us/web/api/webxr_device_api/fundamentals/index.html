@@ -19,7 +19,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}{{Draft}}</p>
 
-<p>WebXR, with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as <strong>mixed reality</strong>, which is abbreviated <strong>MR</strong> or <strong>cross reality</strong> which is abbreviated <strong>XR</strong> and is the new trend. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together in order to create an engaging experience for users.</p>
+<p>WebXR, with the <a href=/web/api/webxr_device_api>WebXR Device API</a> at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as <strong>mixed reality</strong>, which is abbreviated <strong>MR</strong> or <strong>cross reality</strong> which is abbreviated <strong>XR</strong> and is the new trend. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together in order to create an engaging experience for users.</p>
 
 <p><span class="seoSummary">In this guide, we provide a fundamental overview of what WebXR is and how it works, as well as providing a foundation for what you'll need to know before you even begin to learn to develop augmented reality and virtual reality experiences for the web.</span></p>
 
@@ -37,7 +37,7 @@ tags:
 
 <p>Thus, WebXR was created. The most obvious difference, at the highest level, is that WebXR supports not just virtual reality applications, but also augmented reality, which blends virtual objects with the user's true physical environment.</p>
 
-<p>Another key difference is that WebXR has integrated support for the advanced <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">input controllers</a> that are used with most mixed reality headsets, while WebVR relied on the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> to support the controllers. In WebXR, the primary select and squeeze actions are directly supported using events, while other controls are available through a special WebXR-specific implementation of the {{domxref("Gamepad")}} object.</p>
+<p>Another key difference is that WebXR has integrated support for the advanced <a href=/web/api/webxr_device_api/inputs>input controllers</a> that are used with most mixed reality headsets, while WebVR relied on the <a href=/web/api/gamepad_api>Gamepad API</a> to support the controllers. In WebXR, the primary select and squeeze actions are directly supported using events, while other controls are available through a special WebXR-specific implementation of the {{domxref("Gamepad")}} object.</p>
 
 <h2 id="Basic_concepts">Basic concepts</h2>
 
@@ -55,7 +55,7 @@ tags:
 
 <p>The drawing shown here demonstrates the concept of FOV.  The blue wedge represents the field of view of the leflt eye; the red wedge is the FOV of the right eye. The overlapping area, which is sort of a shade of purple, is the area in which the viewer has binocular vision and, as a result, depth perception. If you look carefully, you'll see that each eye sees the die slightly differently, and the combined view blends the two into a 3D shape.</p>
 
-<p>Generally, only the horizontal FOV is specifically defined and managed by applications. For more details about this, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.</p>
+<p>Generally, only the horizontal FOV is specifically defined and managed by applications. For more details about this, see {{SectionOnPage(/web/api/webxr_device_api/rendering, "The optics of 3D")}}.</p>
 
 <h4 id="Field_of_view_and_mixed_reality_devices">Field of view and mixed reality devices</h4>
 
@@ -126,7 +126,7 @@ tags:
 
 <p>Both types of device should be capable of also presenting VR sessions. WebXR doesn't generally care which type of device you're using, and the rendering process is almost exactly the same as for VR, except you don't erase the background or skybox before rendering each frame.</p>
 
-<p>For more information about using WebXR to create augmented reality experiences, see <a href="/en-US/docs/Web/API/WebXR_Device_API/Augmented_reality">Augmented reality with WebXR</a>.</p>
+<p>For more information about using WebXR to create augmented reality experiences, see <a href=/web/api/webxr_device_api/augmented_reality>Augmented reality with WebXR</a>.</p>
 
 <h2 id="Types_of_WebXR_hardware">Types of WebXR hardware</h2>
 
@@ -186,7 +186,7 @@ tags:
 
 <p>A particular benefit to using a framework rather than directly using the WebGL API is that libraries tend to implement virtual camera functionality. OpenGL (and thus WebGL by extension) does not directly offer a camera view, using a library that simulates one on your behalf can make your job much, much easier, especially when building code that allows free movement through your virtual world.</p>
 
-<p>Since <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> is used for rendering the 3D world into the WebXR session, you should first be familiar with WebGL's general usage, and with the basics of 3D graphics in general.</p>
+<p>Since <a href=/web/api/webgl_api>WebGL</a> is used for rendering the 3D world into the WebXR session, you should first be familiar with WebGL's general usage, and with the basics of 3D graphics in general.</p>
 
 <h3 id="General-purpose_3D_frameworks">General-purpose 3D frameworks</h3>
 
@@ -211,7 +211,7 @@ tags:
 <p>With these basic facts in hand, you're ready to take those next steps into the world of mixed reality. The following articles can help.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Lifecycle">WebXR application life cycle </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">Starting up and shutting down a WebXR session</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
+ <li><a href=/web/api/webxr_device_api/lifecycle>WebXR application life cycle </a></li>
+ <li><a href=/web/api/webxr_device_api/startup_and_shutdown>Starting up and shutting down a WebXR session</a></li>
+ <li><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion: A WebXR example</a></li>
 </ul>

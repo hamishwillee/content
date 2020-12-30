@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-<p>The read-only <strong><code>Animation.replaceState</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns the <a href="https://drafts.csswg.org/web-animations-1/#animation-replace-state">replace state</a> of the animation. This will be <code>active</code> if the animation has been removed, or <code>persisted</code> if {{domxref("Animation.persist()")}} has been invoked on it.</p>
+<p>The read-only <strong><code>Animation.replaceState</code></strong> property of the <a href=/web/api/web_animations_api>Web Animations API</a> returns the <a href="https://drafts.csswg.org/web-animations-1/#animation-replace-state">replace state</a> of the animation. This will be <code>active</code> if the animation has been removed, or <code>persisted</code> if {{domxref("Animation.persist()")}} has been invoked on it.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,7 +24,7 @@ tags:
 <p>A string that represents the replace state of the anmation. The value can be one of:</p>
 
 <ul>
- <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href="/en-US/docs/Web/API/Animation#Automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</li>
+ <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href=/web/api/animation#Automatically_removing_filling_animations>Automatically removing filling animations</a> behavior.</li>
  <li><code>persisted</code>: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.</li>
  <li><code>removed</code>: The animation has been explicitly removed.</li>
 </ul>
@@ -83,6 +83,6 @@ document.body.addEventListener('mousemove', evt =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li><a href=/web/api/web_animations_api>Web Animations API</a></li>
  <li>{{domxref("Animation")}}</li>
 </ul>

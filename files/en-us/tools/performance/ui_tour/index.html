@@ -7,14 +7,14 @@ slug: Tools/Performance/UI_Tour
 <p><img alt="" src="https://mdn.mozillademos.org/files/13220/perf-tool-pieces.png" style="display: block; height: 351px; margin-left: auto; margin-right: auto; width: 808px;"></p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Performance/UI_Tour#Toolbar">Toolbar</a></li>
- <li><a href="/en-US/docs/Tools/Performance/UI_Tour#Recordings_pane">Recordings pane</a></li>
- <li><a href="/en-US/docs/Tools/Performance/UI_Tour#Recording_overview">Recording overview</a></li>
- <li><a href="/en-US/docs/Tools/Performance/UI_Tour#Details_pane">Details pane</a>, which may contain any one of:
+ <li><a href=/tools/performance/ui_tour#Toolbar>Toolbar</a></li>
+ <li><a href=/tools/performance/ui_tour#Recordings_pane>Recordings pane</a></li>
+ <li><a href=/tools/performance/ui_tour#Recording_overview>Recording overview</a></li>
+ <li><a href=/tools/performance/ui_tour#Details_pane>Details pane</a>, which may contain any one of:
   <ul>
-   <li><a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a></li>
-   <li><a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree</a></li>
-   <li><a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Chart</a></li>
+   <li><a href=/tools/performance/waterfall>Waterfall</a></li>
+   <li><a href=/tools/performance/call_tree>Call Tree</a></li>
+   <li><a href=/tools/performance/flame_chart>Flame Chart</a></li>
   </ul>
  </li>
 </ul>
@@ -27,8 +27,8 @@ slug: Tools/Performance/UI_Tour
  <li>start and stop a recording</li>
  <li>import a recording you previously saved</li>
  <li>clear the Recordings pane. <em>Note that if you do this, you lose any recordings you have not saved.</em></li>
- <li>filter the <a href="/en-US/docs/Tools/Performance/Waterfall#Markers">markers</a> that are displayed in the Waterfall view</li>
- <li>switch the active tool in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Details_pane">Details pane</a>.</li>
+ <li>filter the <a href=/tools/performance/waterfall#Markers>markers</a> that are displayed in the Waterfall view</li>
+ <li>switch the active tool in the <a href=/tools/performance/ui_tour#Details_pane>Details pane</a>.</li>
  <li>access the Settings popup</li>
 </ul>
 
@@ -52,11 +52,11 @@ slug: Tools/Performance/UI_Tour
 
 <h3 id="Waterfall_overview">Waterfall overview</h3>
 
-<p>This presents a compressed view of the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>:</p>
+<p>This presents a compressed view of the <a href=/tools/performance/waterfall>Waterfall</a>:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10923/perf-waterfall-overview.png" style="display: block; height: 76px; margin-left: auto; margin-right: auto; width: 972px;"></p>
 
-<p>Recorded operations are color-coded using <a href="/en-US/docs/Tools/Performance/Waterfall#Markers">the same scheme as in the main Waterfall view</a>.</p>
+<p>Recorded operations are color-coded using <a href=/tools/performance/waterfall#Markers>the same scheme as in the main Waterfall view</a>.</p>
 
 <h3 id="Frame_rate_graph">Frame rate graph</h3>
 
@@ -64,13 +64,13 @@ slug: Tools/Performance/UI_Tour
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10921/perf-frame-rate.png" style="display: block; height: 88px; margin-left: auto; margin-right: auto; width: 972px;"></p>
 
-<p>See the separate article on <a href="/en-US/docs/Tools/Performance/Frame_rate">frame rate</a>.</p>
+<p>See the separate article on <a href=/tools/performance/frame_rate>frame rate</a>.</p>
 
 <h3 id="Correlating_events">Correlating events</h3>
 
 <p>Because these elements are synchronized, you can correlate events in one element with events in another.</p>
 
-<p>For example, in the screenshot below a long-running paint operation (<a href="/en-US/docs/Tools/Performance/Waterfall#Markers">shown as a green bar</a> in the waterfall overview) corresponds to a drop in the frame rate:</p>
+<p>For example, in the screenshot below a long-running paint operation (<a href=/tools/performance/waterfall#Markers>shown as a green bar</a> in the waterfall overview) corresponds to a drop in the frame rate:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10925/perf-overview-correlation.png" style="display: block; height: 494px; margin-left: auto; margin-right: auto; width: 972px;"></p>
 
@@ -82,7 +82,7 @@ slug: Tools/Performance/UI_Tour
 
 <h2 id="Details_pane">Details pane</h2>
 
-<p>The Details pane shows whichever tool is currently selected. To switch to a different tool, use the buttons in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Toolbar">Toolbar</a>.</p>
+<p>The Details pane shows whichever tool is currently selected. To switch to a different tool, use the buttons in the <a href=/tools/performance/ui_tour#Toolbar>Toolbar</a>.</p>
 
 <h3 id="Waterfall">Waterfall</h3>
 
@@ -90,14 +90,14 @@ slug: Tools/Performance/UI_Tour
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10929/perf-waterfall.png" style="display: block; height: 568px; margin-left: auto; margin-right: auto; width: 972px;"></p>
 
-<p>To learn much more about the Waterfall, see the separate <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> page.</p>
+<p>To learn much more about the Waterfall, see the separate <a href=/tools/performance/waterfall>Waterfall</a> page.</p>
 
 <h3 id="Call_Tree">Call Tree</h3>
 
 <p>The Call Tree is a sampling profiler for JavaScript running in the page. It periodically samples the state of the JavaScript engine, and records the stack for the code executing at the time the sample was taken. Statistically, the number of samples taken in which we were executing a particular function corresponds to the amount of time the browser is spending executing it, so you can identify bottlenecks in your code.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10949/perf-call-tree.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 972px;"><br>
- To learn much more about the Call Tree, see the separate <a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree</a> page.</p>
+ To learn much more about the Call Tree, see the separate <a href=/tools/performance/call_tree>Call Tree</a> page.</p>
 
 <h3 id="Flame_Chart">Flame Chart</h3>
 
@@ -105,7 +105,7 @@ slug: Tools/Performance/UI_Tour
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10933/perf-flame-chart.png" style="display: block; height: 504px; margin-left: auto; margin-right: auto; width: 972px;"></p>
 
-<p>To learn much more about the Flame Chart, see the separate <a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Chart</a> page.</p>
+<p>To learn much more about the Flame Chart, see the separate <a href=/tools/performance/flame_chart>Flame Chart</a> page.</p>
 
 <h3 id="Allocations">Allocations</h3>
 
@@ -121,5 +121,5 @@ slug: Tools/Performance/UI_Tour
 
 <p>{{EmbedYouTube("Le9tTo7bqts")}}</p>
 
-<p>To learn much more about the Allocations view, see the separate <a href="/en-US/docs/Tools/Performance/Allocations">Allocations</a> page.</p>
+<p>To learn much more about the Allocations view, see the separate <a href=/tools/performance/allocations>Allocations</a> page.</p>
 

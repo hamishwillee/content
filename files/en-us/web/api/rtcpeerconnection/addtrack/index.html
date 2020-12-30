@@ -18,7 +18,7 @@ tags:
 <p><span class="seoSummary">The {{domxref("RTCPeerConnection")}} method <strong><code>addTrack()</code></strong> adds a new media track to the set of tracks which will be transmitted to the other peer.</span></p>
 
 <div class="note">
-<p><strong>Note:</strong> Adding a track to a connection triggers renegotiation by firing a {{event("negotiationneeded")}} event. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}} for details.</p>
+<p><strong>Note:</strong> Adding a track to a connection triggers renegotiation by firing a {{event("negotiationneeded")}} event. See {{SectionOnPage(/web/api/webrtc_api/signaling_and_video_calling, "Starting negotiation")}} for details.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -155,7 +155,7 @@ pc.ontrack = ev =&gt; {
 
 <h2 id="Example">Example</h2>
 
-<p>This example is drawn from the code presented in the article <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a> and its corresponding sample code. It comes from the <code>handleVideoOfferMsg()</code> method there, which is called when an offer message is received from the remote peer.</p>
+<p>This example is drawn from the code presented in the article <a href=/web/api/webrtc_api/signaling_and_video_calling>Signaling and video calling</a> and its corresponding sample code. It comes from the <code>handleVideoOfferMsg()</code> method there, which is called when an offer message is received from the remote peer.</p>
 
 <pre class="brush: js">var mediaConstraints = {
   audio: true,            // We want an audio track
@@ -205,8 +205,8 @@ pc.setRemoteDescription(desc).then(function () {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</a></li>
+ <li><a href=/web/guide/api/webrtc>WebRTC</a></li>
+ <li><a href=/web/api/webrtc_api/intro_to_rtp>Introduction to the Real-time Transport Protocol (RTP)</a></li>
  <li>{{domxref("RTCPeerConnection.ontrack")}}</li>
  <li>{{event("track")}}</li>
 </ul>

@@ -10,9 +10,9 @@ tags:
 <div>{{APIRef("WebGL")}}</div>
 
 <p>The <code><strong>WEBGL_multi_draw.multiDrawArraysWEBGL()</strong></code> method of the 
-<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> renders multiple primitives from array data. It is
+<a href=/web/api/webgl_api>WebGL API</a> renders multiple primitives from array data. It is
 identical to multiple calls to the 
-<a href="/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><code>gl.drawArrays()</code></a> method.</p>
+<a href=/web/api/webglrenderingcontext/drawarrays><code>gl.drawArrays()</code></a> method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +26,7 @@ identical to multiple calls to the
 
 <dl>
  <dt><code>mode</code></dt>
- <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLenum</code></a> 
+ <dd>A <a href=/web/api/webgl_api/types><code>GLenum</code></a> 
     specifying the type primitive to render. Possible values are:
  <ul>
   <li><code>gl.POINTS</code>: Draws a single dot.</li>
@@ -40,23 +40,23 @@ identical to multiple calls to the
  </ul>
  </dd>
  <dt><code>firstsList</code></dt>
- <dd>An <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a> 
-    or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
-    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLint</code></a>)
+ <dd>An <a href=/web/javascript/reference/global_objects/int32array><code>Int32Array</code></a> 
+    or <a href=/web/javascript/reference/global_objects/array><code>Array</code></a>
+    (of <a href=/web/api/webgl_api/types><code>GLint</code></a>)
     specifying a list of starting indices for the arrays of vector points.</dd>
  <dt><code>firstsOffset</code></dt>
- <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLuint</code></a> 
+ <dd>A <a href=/web/api/webgl_api/types><code>GLuint</code></a> 
     defining the starting point into the <code>firstsLists</code> array.</dd>
  <dt><code>countsList</code></dt>
- <dd>An <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a> 
-    or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
-    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a>)
+ <dd>An <a href=/web/javascript/reference/global_objects/int32array><code>Int32Array</code></a> 
+    or <a href=/web/javascript/reference/global_objects/array><code>Array</code></a>
+    (of <a href=/web/api/webgl_api/types><code>GLsizei</code></a>)
     specifying a list of numbers of indices to be rendered.</dd>
  <dt><code>countsOffset</code></dt>
- <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLuint</code></a> 
+ <dd>A <a href=/web/api/webgl_api/types><code>GLuint</code></a> 
     defining the starting point into the <code>countsList</code> array.</dd>
  <dt><code>drawCount</code></dt>
- <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a> 
+ <dd>A <a href=/web/api/webgl_api/types><code>GLsizei</code></a> 
     specifying the number of instances of the range of elements to execute.</dd>
 </dl>
 
@@ -71,7 +71,7 @@ identical to multiple calls to the
   <li>If <code>drawCount</code> or items in <code>firstsList</code> and <code>countsList</code> are negative, 
     a <code>gl.INVALID_VALUE</code> error is thrown.</li>
   <li>if <code>gl.CURRENT_PROGRAM</code> is 
-    <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, 
+    <a href=/web/javascript/reference/global_objects/null><code>null</code></a>, 
     a <code>gl.INVALID_OPERATION</code> error is thrown.</li>
 </ul>
 
@@ -108,6 +108,6 @@ and send us a pull request.</p>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><code>WebGLRenderingContext.drawArrays()</code></a></li>
-  <li><a href="/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"><code>WebGL2RenderingContext.drawArraysInstanced()</code></a></li>
+  <li><a href=/web/api/webglrenderingcontext/drawarrays><code>WebGLRenderingContext.drawArrays()</code></a></li>
+  <li><a href=/web/api/webgl2renderingcontext/drawarraysinstanced><code>WebGL2RenderingContext.drawArraysInstanced()</code></a></li>
 </ul>  

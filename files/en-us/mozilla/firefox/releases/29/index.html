@@ -16,11 +16,11 @@ tags:
 <ul>
  <li>Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.</li>
  <li>Added the <a href="https://developer.mozilla.org/docs/Web/API/console">console API</a> to Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Now you can log messages to the Web Console from Web Workers.</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tool now shows performance statistics using pie charts ({{bug(846601)}}).</li>
- <li>On the <a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>, preview tooltips of CSS transforms are now available ({{bug(726427)}}).</li>
+ <li>The <a href=/tools/network_monitor>Network Monitor</a> tool now shows performance statistics using pie charts ({{bug(846601)}}).</li>
+ <li>On the <a href=/tools/page_inspector>Inspector</a>, preview tooltips of CSS transforms are now available ({{bug(726427)}}).</li>
  <li>DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.</li>
- <li>A CSS source map is now supported by the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a> ({{bug(926014)}}).</li>
- <li>Autocompletion of CSS properties and values has been added to the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a> ({{bug(717369)}}).</li>
+ <li>A CSS source map is now supported by the <a href=/tools/style_editor>Style Editor</a> ({{bug(926014)}}).</li>
+ <li>Autocompletion of CSS properties and values has been added to the <a href=/tools/style_editor>Style Editor</a> ({{bug(717369)}}).</li>
 </ul>
 
 <p><em>See the <a href="https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/" title="CSS source map support, network performance analysis &amp; more – Firefox Developer Tools Episode 29 ✩ Mozilla Hacks – the Web developer blog">Mozilla Hacks blog post</a> for details and other smaller changes.</em></p>
@@ -28,7 +28,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variables</a> have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found <a href="https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/">here</a>. They are enabled by default only for non-release builds (on release builds flip the pref <code>layout.css.variables.enabled</code> to <code>true</code> if you want to play with them).</li>
+ <li><a href=/web/css/using_css_variables>CSS variables</a> have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found <a href="https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/">here</a>. They are enabled by default only for non-release builds (on release builds flip the pref <code>layout.css.variables.enabled</code> to <code>true</code> if you want to play with them).</li>
  <li>Flexboxes now support {{cssxref("visibility")}}<code>: collapse</code> ({{bug(783470)}}).</li>
  <li>The {{cssxref("box-sizing")}} property has been unprefixed ({{bug(243412)}}).</li>
  <li>The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference <code>layout.css.will-change.enabled</code> must be switched to <code>true</code> to enable it. ({{bug(940842)}})</li>
@@ -73,7 +73,7 @@ tags:
  </li>
  <li>To match the updated ECMAScript 2015 draft specification, the {{jsxref("Map")}} and {{jsxref("Set")}} objects now treat <code>-0</code> and <code>+0</code> as the same when checking for key and value equality.</li>
  <li><code>Promise</code> has been enabled by default ({{bug(918806)}}).</li>
- <li>Completed <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a> now return an <code>IteratorResult</code> object instead of throwing ({{bug(958951)}}).</li>
+ <li>Completed <a href=/web/javascript/reference/statements/function*>generators</a> now return an <code>IteratorResult</code> object instead of throwing ({{bug(958951)}}).</li>
  <li>A malformed JSON string parsed by {{jsxref("JSON.parse()")}} now yields a more detailed error message containing the line and column number that caused the parsing error. This is useful when debugging large JSON data.</li>
  <li>The {{jsxref("ArrayBuffer.isView()")}} method has been added ({{bug(896105)}}).</li>
 </ul>
@@ -95,7 +95,7 @@ tags:
  <li>{{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).</li>
  <li>{{domxref("URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>
  <li>{{domxref("Document.referrer")}} is now based on the incumbent script ({{bug(887928)}}).</li>
- <li>The <a href="/en-US/docs/Web/Guide/API/Gamepad">Gamepad API</a> is enabled by default ({{bug(878828)}}).</li>
+ <li>The <a href=/web/guide/api/gamepad>Gamepad API</a> is enabled by default ({{bug(878828)}}).</li>
  <li>The {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ({{bug(959820)}}).</li>
 </ul>
 

@@ -27,14 +27,14 @@ tags:
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
 <div>
-<p class="summary">In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of <a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">responsive design</a>, a future CSS topic for you to learn.</p>
+<p class="summary">In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of <a href=/learn/css/css_layout/responsive_design>responsive design</a>, a future CSS topic for you to learn.</p>
 </div>
 
 <table class="learn-box nostripe standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You should already know the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">add static images to a web page</a>.</td>
+   <td>You should already know the <a href=/learn/html/introduction_to_html>basics of HTML</a> and how to <a href=/learn/html/multimedia_and_embedding/images_in_html>add static images to a web page</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -63,7 +63,7 @@ tags:
 
 <p>An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium width screen device, like a tablet. This is commonly known as the <strong>art direction problem</strong>.</p>
 
-<p>In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small <a href="/en-US/docs/Glossary/Raster_image">raster image</a> starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a>). This is called the <strong>resolution switching problem</strong>.</p>
+<p>In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small <a href=/glossary/raster_image>raster image</a> starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at <a href=/learn/html/multimedia_and_embedding/adding_vector_graphics_to_the_web>vector graphics</a>). This is called the <strong>resolution switching problem</strong>.</p>
 
 <p>Conversely, it is unnecessary to display a large image on a screen significantly smaller than the size it was meant for. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop, when a small image would do for their device. Ideally, you would have multiple resolutions available and serve the appropriate size depending upon the device accessing the data on the website.</p>
 
@@ -109,7 +109,7 @@ tags:
 <p><strong><code>sizes</code></strong> defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose, when certain media conditions are true — these are the hints we talked about earlier. In this case, before each comma we write:</p>
 
 <ol>
- <li>A <strong>media condition</strong> (<code>(max-width:600px)</code>) — you'll learn more about these in the <a href="/en-US/docs/Learn/CSS">CSS topic</a>, but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".</li>
+ <li>A <strong>media condition</strong> (<code>(max-width:600px)</code>) — you'll learn more about these in the <a href=/learn/css>CSS topic</a>, but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".</li>
  <li>A space</li>
  <li>The <strong>width of the slot</strong> the image will fill when the media condition is true (<code>480px</code>)</li>
 </ol>
@@ -132,7 +132,7 @@ tags:
 <div class="notecard note">
 <p><strong>Note</strong>: When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'html'</span>).<span class="cm-property">clientWidth</span></span></span></span></code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
  <br>
- To see which images were loaded, you can use Firefox DevTools's <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tab.</p>
+ To see which images were loaded, you can use Firefox DevTools's <a href=/tools/network_monitor>Network Monitor</a> tab.</p>
 </div>
 
 <p>Older browsers that don't support these features will just ignore them. Instead, those browsers will go ahead and load the image referenced in the {{htmlattrxref("src", "img")}} attribute as normal.</p>
@@ -168,7 +168,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;</pre>
 
-<p>Let's fix this, with {{htmlelement("picture")}}! Like <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code></a>, the <code>&lt;picture&gt;</code> element is a wrapper containing several {{htmlelement("source")}} elements that provide different sources for the browser to choose from, followed by the all-important {{htmlelement("img")}} element. The code in <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> looks like so:</p>
+<p>Let's fix this, with {{htmlelement("picture")}}! Like <a href=/learn/html/multimedia_and_embedding/video_and_audio_content><code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code></a>, the <code>&lt;picture&gt;</code> element is a wrapper containing several {{htmlelement("source")}} elements that provide different sources for the browser to choose from, followed by the all-important {{htmlelement("img")}} element. The code in <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> looks like so:</p>
 
 <pre class="brush: html notranslate">&lt;picture&gt;
   &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"&gt;
@@ -197,7 +197,7 @@ tags:
 
 <h3 id="Use_modern_image_formats_boldly">Use modern image formats boldly</h3>
 
-<p>There are several exciting new image formats (such as <a href="/en-US/docs/Glossary/webp">WebP</a>, <a href="/en-US/docs/Web/Media/Formats/Image_types#AVIF">AVIF</a>, and JPEG-2000) that can maintain a low file size and high quality at the same time. However, browser support is spotty.</p>
+<p>There are several exciting new image formats (such as <a href=/glossary/webp>WebP</a>, <a href=/web/media/formats/image_types#AVIF>AVIF</a>, and JPEG-2000) that can maintain a low file size and high quality at the same time. However, browser support is spotty.</p>
 
 <p><code>&lt;picture&gt;</code> lets us continue catering to older browsers. You can supply MIME types inside <code>type</code> attributes so the browser can immediately reject unsupported file types:</p>
 
@@ -228,7 +228,7 @@ tags:
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see <a href=/learn/html/multimedia_and_embedding/mozilla_splash_page>Mozilla splash page</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -236,10 +236,10 @@ tags:
 
 <ul>
  <li><strong>Art direction</strong>: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.</li>
- <li><strong>Resolution switching</strong>: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. You can solve this problem by using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a> (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.</li>
+ <li><strong>Resolution switching</strong>: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. You can solve this problem by using <a href=/learn/html/multimedia_and_embedding/adding_vector_graphics_to_the_web>vector graphics</a> (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.</li>
 </ul>
 
-<p>This also draws to a close the entire <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a> module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun!</p>
+<p>This also draws to a close the entire <a href=/learn/html/multimedia_and_embedding>Multimedia and embedding</a> module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun!</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -257,11 +257,11 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/images_in_html>Images in HTML</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/other_embedding_technologies>From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/adding_vector_graphics_to_the_web>Adding vector graphics to the Web</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/responsive_images>Responsive images</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/mozilla_splash_page>Mozilla splash page</a></li>
 </ul>
 </div>

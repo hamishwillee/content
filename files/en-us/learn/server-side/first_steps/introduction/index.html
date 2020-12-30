@@ -39,9 +39,9 @@ tags:
 
 <h2 id="What_is_server-side_website_programming">What is server-side website programming?</h2>
 
-<p>Web browsers communicate with <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">web servers</a> using the <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an <strong>HTTP request</strong> is sent from your browser to the target server.</p>
+<p>Web browsers communicate with <a href=/learn/common_questions/what_is_a_web_server>web servers</a> using the <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an <strong>HTTP request</strong> is sent from your browser to the target server.</p>
 
-<p>The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a <a href="https://en.wikipedia.org/wiki/Query_string">query string</a>), as POST data (data sent by the <a href="/en-US/docs/Web/HTTP/Methods/POST">HTTP POST method</a>), or in associated {{glossary("Cookie", "cookies")}}.</p>
+<p>The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a <a href="https://en.wikipedia.org/wiki/Query_string">query string</a>), as POST data (data sent by the <a href=/web/http/methods/post>HTTP POST method</a>), or in associated {{glossary("Cookie", "cookies")}}.</p>
 
 <p>Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an <strong>HTTP response</strong> message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success). </p>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>The diagram below shows a basic web server architecture for a <em>static site</em> (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.</p>
 
-<p>The server retrieves the requested document from its file system and returns an HTTP response containing the document and a <a href="/en-US/docs/Web/HTTP/Status#Successful_responses">success status</a> (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see <a href="/en-US/docs/Web/HTTP/Status#Client_error_responses">client error responses</a> and <a href="/en-US/docs/Web/HTTP/Status#Server_error_responses">server error responses</a>).</p>
+<p>The server retrieves the requested document from its file system and returns an HTTP response containing the document and a <a href=/web/http/status#Successful_responses>success status</a> (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see <a href=/web/http/status#Client_error_responses>client error responses</a> and <a href=/web/http/status#Server_error_responses>server error responses</a>).</p>
 
 <p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png" style="height: 223px; width: 800px;"></p>
 
@@ -85,7 +85,7 @@ tags:
 
 <p>Code running in the browser is known as <strong>client-side code</strong> and is primarily concerned with improving the appearance and behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc. By contrast, server-side website programming mostly involves choosing <em>which content</em> is returned to the browser in response to requests. The server-side code handles tasks like validating submitted data and requests, using databases to store and retrieve data and sending the correct data to the client as required.</p>
 
-<p>Client-side code is written using <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> — it is run inside a web browser and has little or no access to the underlying operating system (including limited access to the file system).</p>
+<p>Client-side code is written using <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> — it is run inside a web browser and has little or no access to the underlying operating system (including limited access to the file system).</p>
 
 <p>Web developers can't control what browser every user might be using to view a website  — browsers provide inconsistent levels of compatibility with client-side code features, and part of the challenge of client-side programming is handling differences in browser support gracefully.</p>
 
@@ -227,8 +227,8 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href=/learn/server-side/first_steps/introduction>Introduction to the server side</a></li>
+ <li><a href=/learn/server-side/first_steps/client-server_overview>Client-Server overview</a></li>
+ <li><a href=/learn/server-side/first_steps/web_frameworks>Server-side web frameworks</a></li>
+ <li><a href=/learn/server-side/first_steps/website_security>Website security</a></li>
 </ul>

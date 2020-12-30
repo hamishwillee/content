@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Describes various criteria for filtering URLs. If all of the criteria specified in the filter's properties match the URL, then the filter matches. Filters are often provided to API methods in an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> of UrlFilters. For example, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a> listeners can be added with a filter which is an object with a single <code>url</code> property that is an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> of UrlFilters, e.g. <code>{url:[UrlFilter,UrlFilter,...]}</code>. If any filter within the Array of UrlFilters matches, then it is considered a match for the Array. Effectively, the criteria specified within a single filter are AND'ed together, while all of the individual filters within an Array are OR'ed.</p>
+<p>Describes various criteria for filtering URLs. If all of the criteria specified in the filter's properties match the URL, then the filter matches. Filters are often provided to API methods in an <a href=/web/javascript/reference/global_objects/array>Array</a> of UrlFilters. For example, <a href=/mozilla/add-ons/webextensions/api/webnavigation>webNavigation</a> listeners can be added with a filter which is an object with a single <code>url</code> property that is an <a href=/web/javascript/reference/global_objects/array>Array</a> of UrlFilters, e.g. <code>{url:[UrlFilter,UrlFilter,...]}</code>. If any filter within the Array of UrlFilters matches, then it is considered a match for the Array. Effectively, the criteria specified within a single filter are AND'ed together, while all of the individual filters within an Array are OR'ed.</p>
 
 <p>All criteria are case sensitive.</p>
 
@@ -26,7 +26,7 @@ tags:
 
 <dl class="reference-values">
 	<dt><code>hostContains</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname">hostname</a> of the URL (without protocol or port – see <code>schemes</code> and <code>ports</code>) contains the given string.
+	<dd><code>string</code>. Matches if the <a href=/web/api/htmlhyperlinkelementutils/hostname>hostname</a> of the URL (without protocol or port – see <code>schemes</code> and <code>ports</code>) contains the given string.
 	<ul>
 		<li>To test whether a hostname component starts with "foo", use <code>".foo"</code>. This matches "www.foobar.com" and "foo.com", because an implicit dot is added at the beginning of the hostname.</li>
 		<li>To test whether a hostname component ends with "foo", use <code>"foo."</code>.</li>
@@ -69,13 +69,13 @@ tags:
 	<dt><code>urlEquals</code>{{optional_inline}}</dt>
 	<dd><code>string</code>. Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped from the URL if they match the default port number.</dd>
 	<dt><code>urlMatches</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the URL (without fragment identifier) matches a specified <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>. Port numbers are stripped from the URL if they match the default port number.
+	<dd><code>string</code>. Matches if the URL (without fragment identifier) matches a specified <a href=/web/javascript/guide/regular_expressions>regular expression</a>. Port numbers are stripped from the URL if they match the default port number.
 	<ul>
 		<li>For example: <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> matches "https://mozilla.org/", "https://developer.mozilla.org/", "ftp://foo.mozilla.org/", but not "https://developer.fakemozilla.org/".</li>
 	</ul>
 	</dd>
 	<dt><code>originAndPathMatches</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the URL without query segment and fragment identifier matches a specified <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>. Port numbers are stripped from the URL if they match the default port number.</dd>
+	<dd><code>string</code>. Matches if the URL without query segment and fragment identifier matches a specified <a href=/web/javascript/guide/regular_expressions>regular expression</a>. Port numbers are stripped from the URL if they match the default port number.</dd>
 	<dt><code>urlPrefix</code>{{optional_inline}}</dt>
 	<dd><code>string</code>. Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.
 	<ul>

@@ -159,7 +159,7 @@ if (request.status === 200) {
 
 <h3 id="Example_Synchronous_HTTP_request_from_a_Worker">Example: Synchronous HTTP request from a Worker</h3>
 
-<p>One of the few cases in which a synchronous request does not usually block execution is the use of {{domxref('XMLHttpRequest')}} within a <code><a href="/en-US/docs/Web/API/Worker">Worker</a></code>.</p>
+<p>One of the few cases in which a synchronous request does not usually block execution is the use of {{domxref('XMLHttpRequest')}} within a <code><a href=/web/api/worker>Worker</a></code>.</p>
 
 <p><code><strong>example.html</strong></code> (the main page):</p>
 
@@ -186,7 +186,7 @@ if (request.status === 200) {
 <pre>Hello World!!
 </pre>
 
-<p><code><strong>myTask.js</strong></code> (the <code><a href="/en-US/docs/Web/API/Worker">Worker</a></code>):</p>
+<p><code><strong>myTask.js</strong></code> (the <code><a href=/web/api/worker>Worker</a></code>):</p>
 
 <pre class="brush: js">self.onmessage = function (event) {
   if (event.data === "Hello") {
@@ -200,7 +200,7 @@ if (request.status === 200) {
 
 <div class="note"><strong>Note:</strong> The effect is asynchronous, because of the use of the <code>Worker</code>.</div>
 
-<p>This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See <a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a> for examples and details.</p>
+<p>This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See <a class="internal" href=/web/api/web_workers_api/using_web_workers>Using web workers</a> for examples and details.</p>
 
 <h3 id="Adapting_Sync_XHR_use_cases_to_the_Beacon_API">Adapting Sync XHR use cases to the Beacon API</h3>
 
@@ -232,7 +232,7 @@ function logData() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using <code>XMLHttpRequest</code></a></li>
- <li><a href="/en-US/docs/Web/Guide/AJAX">AJAX</a></li>
- <li><code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a></code></li>
+ <li><a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using <code>XMLHttpRequest</code></a></li>
+ <li><a href=/web/guide/ajax>AJAX</a></li>
+ <li><code><a href=/web/api/navigator/sendbeacon>navigator.sendBeacon</a></code></li>
 </ul>

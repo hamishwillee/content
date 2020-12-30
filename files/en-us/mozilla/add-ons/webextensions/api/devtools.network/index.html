@@ -13,21 +13,21 @@ tags:
 
 <p>The <code>devtools.network</code> API lets a devtools extension get information about network requests associated with the window that the devtools are attached to (the inspected window).</p>
 
-<p>Like all the <code>devtools</code> APIs, this API is only available to code running in the document defined in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> for more.</p>
+<p>Like all the <code>devtools</code> APIs, this API is only available to code running in the document defined in the <a href=/mozilla/add-ons/webextensions/manifest.json/devtools_page>devtools_page</a> manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See <a href=/mozilla/add-ons/webextensions/extending_the_developer_tools>Extending the developer tools</a> for more.</p>
 
 <h2 id="Functions">Functions</h2>
 
 <dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR">devtools.network.getHAR()</a></code></dt>
+ <dt><code><a href=/mozilla/add-ons/webextensions/api/devtools.network/gethar>devtools.network.getHAR()</a></code></dt>
  <dd>Get a <a class="external external-icon" href="http://www.softwareishard.com/blog/har-12-spec/#log" rel="noopener">HAR log</a> for the page loaded in the current tab.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
 
 <dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated">devtools.network.onNavigated</a></code></dt>
+ <dt><code><a href=/mozilla/add-ons/webextensions/api/devtools.network/onnavigated>devtools.network.onNavigated</a></code></dt>
  <dd>Fired when the user navigates the inspected window to a new page.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished">devtools.network.onRequestFinished</a></code></dt>
+ <dt><code><a href=/mozilla/add-ons/webextensions/api/devtools.network/onrequestfinished>devtools.network.onRequestFinished</a></code></dt>
  <dd>Fired when the a network request has finished and its details are available to the extension.</dd>
 </dl>
 

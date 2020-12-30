@@ -213,7 +213,7 @@ main(); // Start the cycle</pre>
    <li>This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)</li>
   </ul>
  </li>
- <li>Draw on <code>requestAnimationFrame</code> and update on a <code>setInterval</code> or <code>setTimeout</code> in a <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Worker</a>.
+ <li>Draw on <code>requestAnimationFrame</code> and update on a <code>setInterval</code> or <code>setTimeout</code> in a <a href=/web/guide/performance/using_web_workers>Web Worker</a>.
   <ul>
    <li>This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.</li>
   </ul>

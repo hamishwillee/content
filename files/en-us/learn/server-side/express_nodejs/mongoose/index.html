@@ -18,13 +18,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">This article briefly introduces databases, and how to use them with Node/Express apps. It then goes on to show how we can use <a href="http://mongoosejs.com/">Mongoose</a> to provide database access for the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways in which you can access model data.</p>
+<p class="summary">This article briefly introduces databases, and how to use them with Node/Express apps. It then goes on to show how we can use <a href="http://mongoosejs.com/">Mongoose</a> to provide database access for the <a href=/learn/server-side/express_nodejs/tutorial_local_library_website>LocalLibrary</a> website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways in which you can access model data.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></td>
+   <td><a href=/learn/server-side/express_nodejs/skeleton_website>Express Tutorial Part 2: Creating a skeleton website</a></td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -92,7 +92,7 @@ tags:
 <p><strong>Tip:</strong> You don't need to know MongoDB in order to use Mongoose, although parts of the <a href="http://mongoosejs.com/docs/guide.html">Mongoose documentation</a> <em>are</em> easier to use and understand if you are already familiar with MongoDB.</p>
 </div>
 
-<p>The rest of this tutorial shows how to define and access the Mongoose schema and models for the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary website</a> example.</p>
+<p>The rest of this tutorial shows how to define and access the Mongoose schema and models for the <a href=/learn/server-side/express_nodejs/tutorial_local_library_website>LocalLibrary website</a> example.</p>
 
 <h2 id="Designing_the_LocalLibrary_models">Designing the LocalLibrary models</h2>
 
@@ -518,7 +518,7 @@ SomeModel.find(callback_function);</pre>
 <p>For this tutorial, we're going to use the <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> free cloud-hosted <a href="https://www.mongodb.com/cloud/atlas/pricing">sandbox</a> database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular <em>database as a service</em> vendor that you might reasonably choose for your production database (other popular choices at the time of writing include <a href="https://www.compose.com/">Compose</a>, <a href="https://scalegrid.io/pricing.html">ScaleGrid</a> and <a href="https://www.objectrocket.com/">ObjectRocket</a>).</p>
 
 <div class="note">
-<p><strong>Note:</strong> If you prefer you can set up a MongoDb database locally by downloading and installing the <a href="https://www.mongodb.com/download-center/community">appropriate binaries for your system</a>. The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to Production</a> tutorial requires some form of remote database, since the free tier of the <a href="https://www.heroku.com/">Heroku</a> service does not provide persistent storage. It is therefore highly recommended to use <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>.</p>
+<p><strong>Note:</strong> If you prefer you can set up a MongoDb database locally by downloading and installing the <a href="https://www.mongodb.com/download-center/community">appropriate binaries for your system</a>. The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the <a href=/learn/server-side/express_nodejs/deployment>Express Tutorial Part 7: Deploying to Production</a> tutorial requires some form of remote database, since the free tier of the <a href="https://www.heroku.com/">Heroku</a> service does not provide persistent storage. It is therefore highly recommended to use <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>.</p>
 </div>
 
 <p>You will first need to <a href="https://www.mongodb.com/cloud/atlas/register">create an account</a> with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service). </p>
@@ -607,7 +607,7 @@ SomeModel.find(callback_function);</pre>
 
 <h2 id="Install_Mongoose">Install Mongoose</h2>
 
-<p>Open a command prompt and navigate to the directory where you created your <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton Local Library website</a>. Enter the following command to install Mongoose (and its dependencies) and add it to your <strong>package.json</strong> file, unless you have already done so when reading the <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a> above.</p>
+<p>Open a command prompt and navigate to the directory where you created your <a href=/learn/server-side/express_nodejs/skeleton_website>skeleton Local Library website</a>. Enter the following command to install Mongoose (and its dependencies) and add it to your <strong>package.json</strong> file, unless you have already done so when reading the <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a> above.</p>
 
 <pre class="brush: bash notranslate">npm install mongoose
 </pre>
@@ -824,13 +824,13 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href=/learn/server-side/express_nodejs/introduction>Express/Node introduction</a></li>
+ <li><a href=/learn/server-side/express_nodejs/development_environment>Setting up a Node (Express) development environment</a></li>
+ <li><a href=/learn/server-side/express_nodejs/tutorial_local_library_website>Express Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/skeleton_website>Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/mongoose>Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><a href=/learn/server-side/express_nodejs/routes>Express Tutorial Part 4: Routes and controllers</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a></li>
+ <li><a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a></li>
+ <li><a href=/learn/server-side/express_nodejs/deployment>Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

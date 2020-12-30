@@ -17,10 +17,10 @@ tags:
 <h3 id="Developer_Tools">Developer Tools</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shape Path Editor</a> has been enabled by default for shapes generated via {{cssxref("clip-path")}} ({{bug(1405339)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> now has a button to <a href="/en-US/docs/Tools/Network_Monitor#Pausing_and_resume_network_traffic_recording">pause/play recording of network traffic</a> ({{bug(1005755)}}).</li>
- <li>In the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ({{bug(1413540)}}).</li>
- <li>The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ({{bug(1305777)}}). See <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> for information on the new tools.</li>
+ <li>The <a href=/tools/page_inspector/how_to/edit_css_shapes>Shape Path Editor</a> has been enabled by default for shapes generated via {{cssxref("clip-path")}} ({{bug(1405339)}}).</li>
+ <li>The <a href=/tools/network_monitor>Network Monitor</a> now has a button to <a href=/tools/network_monitor#Pausing_and_resume_network_traffic_recording>pause/play recording of network traffic</a> ({{bug(1005755)}}).</li>
+ <li>In the <a href=/tools/network_monitor>Network Monitor</a> the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ({{bug(1413540)}}).</li>
+ <li>The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ({{bug(1305777)}}). See <a href=/tools/responsive_design_mode>Responsive Design Mode</a> for information on the new tools.</li>
  <li>The option to view MDN docs from the CSS pane of the page inspector has been removed ({{bug(1382171)}}) (was disabled since 55, {{bug(1352801)}}).</li>
 </ul>
 
@@ -65,7 +65,7 @@ tags:
 <ul>
  <li>Errors reported via error objects in certain APIs — for example in the <code>error</code> property of {{domxref("FileReader")}}, {{domxref("IDBRequest")}}, and {{domxref("IDBTransaction")}}, and when requests made via certain methods of {{domxref("RTCPeerConnection")}} are unsuccessful — are now represented by {{domxref("DOMException")}} instances. {{domxref("DOMError")}} is now deprecated, having been removed from the DOM4 spec ({{bug(1120178)}}).</li>
  <li>The {{domxref("PerformanceResourceTiming.workerStart")}} property is now supported ({{bug(1191943)}}).</li>
- <li>Budget-based background timeout throttling has been implemented — see <a href="/en-US/docs/Web/API/Page_Visibility_API#Policies_in_place_to_aid_background_page_performance">Policies in place to aid background page performance</a> for more details ({{bug(1377766)}}).</li>
+ <li>Budget-based background timeout throttling has been implemented — see <a href=/web/api/page_visibility_api#Policies_in_place_to_aid_background_page_performance>Policies in place to aid background page performance</a> for more details ({{bug(1377766)}}).</li>
 </ul>
 
 <h4 id="DOM_events">DOM events</h4>
@@ -77,7 +77,7 @@ tags:
 <ul>
  <li>The prefixed version of {{domxref("HTMLMediaElement.srcObject")}} has been removed; make sure code is updated to use the standard <code>srcObject</code> instead of <code>mozSrcObject</code> ({{bug(1183495)}}).</li>
  <li>Using {{domxref("MediaStream.addTrack()")}} to add tracks to a stream obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, then attempting to record the resulting stream now works as expected. Previously, only the tracks originally included in the stream returned by <code>getUserMedia()</code> were being included in the recorded media ({{bug(1296531)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> {{domxref("VTTRegion")}} interface has always been created when interpreting WebVTT files, but the resulting regions were not previously utilized. Starting in Firefox 58, they are, if you enable the preference <code>media.webvtt.regions.enabled</code> by setting its value to <code>true</code>.</li>
+ <li>The <a href=/web/api/webvtt_api>WebVTT</a> {{domxref("VTTRegion")}} interface has always been created when interpreting WebVTT files, but the resulting regions were not previously utilized. Starting in Firefox 58, they are, if you enable the preference <code>media.webvtt.regions.enabled</code> by setting its value to <code>true</code>.</li>
 </ul>
 
 <h4 id="Canvas_and_WebGL">Canvas and WebGL</h4>
@@ -97,10 +97,10 @@ tags:
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors">frame-ancestors</a></code> is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ({{bug(1380755)}}).</li>
+ <li><code><a href=/web/http/headers/content-security-policy/frame-ancestors>frame-ancestors</a></code> is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ({{bug(1380755)}}).</li>
  <li>Firefox now implements a TLS handshake timeout with a default value of 30 seconds. The timeout value can be varied by editing the <code>network.http.tls-handshake-timeout</code> pref in about:config ({{bug(1393691)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src">worker-src</a></code> CSP directive has been implemented ({{bug(1302667)}}).</li>
- <li>The <a href="/en-US/docs/Web/HTTP/Status/425">425: Too Early</a> status code and related {{httpheader("Early-Data")}} request header are now supported ({{bug(1406908)}}).</li>
+ <li>The <code><a href=/web/http/headers/content-security-policy/worker-src>worker-src</a></code> CSP directive has been implemented ({{bug(1302667)}}).</li>
+ <li>The <a href=/web/http/status/425>425: Too Early</a> status code and related {{httpheader("Early-Data")}} request header are now supported ({{bug(1406908)}}).</li>
 </ul>
 
 <h3 id="Security">Security</h3>
@@ -115,7 +115,7 @@ tags:
 
 <ul>
  <li>"Add to home screen" is now supported in Firefox for Android, part of the <a href="/en-US/Apps/Progressive">Progressive Web Apps</a> effort ({{bug(1212648)}}).</li>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.installStreaming()")}} {{bug(1347644)}}.</li>
+ <li><a href=/webassembly>WebAssembly</a> now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.installStreaming()")}} {{bug(1347644)}}.</li>
 </ul>
 
 <h2 id="Removals_from_the_web_platform">Removals from the web platform</h2>
@@ -146,23 +146,23 @@ tags:
   <ul>
    <li><code>-moz-color-picker-available</code></li>
    <li><code>-moz-is-glyph</code></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-mac-graphite-theme"><code>-moz-mac-graphite-theme</code></a></li>
+   <li><a href=/web/css/@media/-moz-mac-graphite-theme><code>-moz-mac-graphite-theme</code></a></li>
    <li><code>-moz-mac-yosemite-theme</code></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-os-version"><code>-moz-os-version</code></a></li>
+   <li><a href=/web/css/@media/-moz-os-version><code>-moz-os-version</code></a></li>
    <li><code>-moz-overlay-scrollbars</code></li>
    <li><code>-moz-physical-home-button</code></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-scrollbar-end-backward"><code>-moz-scrollbar-end-backward</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-scrollbar-end-forward"><code>-moz-scrollbar-end-forward</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-scrollbar-start-backward"><code>-moz-scrollbar-start-backward</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-scrollbar-start-forward"><code>-moz-scrollbar-start-forward</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-scrollbar-thumb-proportional"><code>-moz-scrollbar-thumb-proportional</code></a></li>
+   <li><a href=/web/css/@media/-moz-scrollbar-end-backward><code>-moz-scrollbar-end-backward</code></a></li>
+   <li><a href=/web/css/@media/-moz-scrollbar-end-forward><code>-moz-scrollbar-end-forward</code></a></li>
+   <li><a href=/web/css/@media/-moz-scrollbar-start-backward><code>-moz-scrollbar-start-backward</code></a></li>
+   <li><a href=/web/css/@media/-moz-scrollbar-start-forward><code>-moz-scrollbar-start-forward</code></a></li>
+   <li><a href=/web/css/@media/-moz-scrollbar-thumb-proportional><code>-moz-scrollbar-thumb-proportional</code></a></li>
    <li><code>-moz-swipe-animation-enabled</code></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-windows-accent-color-in-titlebar"><code>-moz-windows-accent-color-in-titlebar</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-windows-classic"><code>-moz-windows-classic</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-windows-compositor"><code>-moz-windows-compositor</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-windows-default-theme"><code>-moz-windows-default-theme</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-windows-glass"><code>-moz-windows-glass</code></a></li>
-   <li><a href="/en-US/docs/Web/CSS/@media/-moz-windows-theme"><code>-moz-windows-theme</code></a></li>
+   <li><a href=/web/css/@media/-moz-windows-accent-color-in-titlebar><code>-moz-windows-accent-color-in-titlebar</code></a></li>
+   <li><a href=/web/css/@media/-moz-windows-classic><code>-moz-windows-classic</code></a></li>
+   <li><a href=/web/css/@media/-moz-windows-compositor><code>-moz-windows-compositor</code></a></li>
+   <li><a href=/web/css/@media/-moz-windows-default-theme><code>-moz-windows-default-theme</code></a></li>
+   <li><a href=/web/css/@media/-moz-windows-glass><code>-moz-windows-glass</code></a></li>
+   <li><a href=/web/css/@media/-moz-windows-theme><code>-moz-windows-theme</code></a></li>
   </ul>
  </li>
  <li>The proprietary Mozilla <code>:-moz-styleeditor-transitioning</code> pseudo-class is no longer available to web content ({{bug(1396099)}}).</li>
@@ -171,17 +171,17 @@ tags:
 <h3 id="JavaScript_2">JavaScript</h3>
 
 <ul>
- <li>The non-standard {{jsxref("Date.prototype.toLocaleFormat()")}} method has been removed ({{bug(818634)}}). See <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat">Warning: Date.prototype.toLocaleFormat is deprecated</a> for more information and migration help.</li>
- <li>The non-standard and deprecated {{jsxref("Object.prototype.watch()")}} and {{jsxref("Object.prototype.unwatch", "unwatch()")}} methods have been removed and will no longer work ({{bug(638054)}}). Consider using <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">setters and getters</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxies</a> instead.</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol">legacy Iterator protocol</a>, the <code><a href="/en-US/docs/Archive/Web/StopIteration">StopIteration</a></code> object, the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">legacy generator functions</a> and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iteration protocols</a> and standards-compliant <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterators and generators</a> instead ({{bug(1083482)}}, {{bug(1413867)}}, {{bug(1119777)}}).</li>
- <li>The non-standard <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">Array comprehensions</a> and<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions"> Generator comprehensions</a> have been removed ({{bug(1414340)}}).</li>
+ <li>The non-standard {{jsxref("Date.prototype.toLocaleFormat()")}} method has been removed ({{bug(818634)}}). See <a href=/web/javascript/reference/errors/deprecated_tolocaleformat>Warning: Date.prototype.toLocaleFormat is deprecated</a> for more information and migration help.</li>
+ <li>The non-standard and deprecated {{jsxref("Object.prototype.watch()")}} and {{jsxref("Object.prototype.unwatch", "unwatch()")}} methods have been removed and will no longer work ({{bug(638054)}}). Consider using <a href=/web/javascript/guide/working_with_objects#Defining_getters_and_setters>setters and getters</a> or <a href=/web/javascript/reference/global_objects/proxy>proxies</a> instead.</li>
+ <li>The <a href=/web/javascript/reference/deprecated_and_obsolete_features/the_legacy_iterator_protocol>legacy Iterator protocol</a>, the <code><a href=/archive/web/stopiteration>StopIteration</a></code> object, the <a href=/web/javascript/reference/statements/legacy_generator_function>legacy generator functions</a> and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 <a href=/web/javascript/reference/iteration_protocols>iteration protocols</a> and standards-compliant <a href=/web/javascript/guide/iterators_and_generators>iterators and generators</a> instead ({{bug(1083482)}}, {{bug(1413867)}}, {{bug(1119777)}}).</li>
+ <li>The non-standard <a href=/web/javascript/reference/operators/array_comprehensions>Array comprehensions</a> and<a href=/web/javascript/reference/operators/generator_comprehensions> Generator comprehensions</a> have been removed ({{bug(1414340)}}).</li>
 </ul>
 
 <h3 id="APIs_2">APIs</h3>
 
 <ul>
  <li>The proprietary <code>moz-blob</code> and <code>moz-chunked-text</code> values of the {{domxref("XMLHttpRequest.responseType")}} property were removed completely in Firefox 58 ({{bug(1397145)}}, {{bug(1397151)}}, {{bug(1120171)}}).</li>
- <li>The <code>dom.abortController.enabled</code> and <code>dom.abortController.fetch.enabled</code> prefs that controlled exposure of the <a href="/en-US/docs/Web/API/Fetch_API#Aborting_a_fetch">Abort API functionality</a> have now been removed, since those features are now enabled by default ({{bug(1402317)}}).</li>
+ <li>The <code>dom.abortController.enabled</code> and <code>dom.abortController.fetch.enabled</code> prefs that controlled exposure of the <a href=/web/api/fetch_api#Aborting_a_fetch>Abort API functionality</a> have now been removed, since those features are now enabled by default ({{bug(1402317)}}).</li>
  <li>The proprietary <code>mozSrcObject</code> property was removed in Firefox 58 ({{bug(1183495)}}). Use the standard {{domxref("HTMLMediaElement.srcObject")}} property instead.</li>
 </ul>
 
@@ -194,18 +194,18 @@ tags:
 <h3 id="WebExtensions">WebExtensions</h3>
 
 <ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a>
+ <li><a href=/mozilla/add-ons/webextensions/api/browsersettings>browserSettings</a>
 
   <ul>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled">browserSettings.webNotificationsDisabled</a> has been implemented (bug 1364942)</li>
+   <li><a href=/mozilla/add-ons/webextensions/api/browsersettings/webnotificationsdisabled>browserSettings.webNotificationsDisabled</a> has been implemented (bug 1364942)</li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData">browsingData</a>
+ <li><a href=/mozilla/add-ons/webextensions/api/browsingdata>browsingData</a>
   <ul>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage">browsingData.localStorage</a> now supports deleting localStorage by host (bug 1388428)</li>
+   <li><a href=/mozilla/add-ons/webextensions/api/browsingdata/removelocalstorage>browsingData.localStorage</a> now supports deleting localStorage by host (bug 1388428)</li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a> API to manage security devices (Bug 1357391)</li>
+ <li><a href=/mozilla/add-ons/webextensions/api/pkcs11>pkcs11</a> API to manage security devices (Bug 1357391)</li>
  <li>privacy
   <ul>
    <li>first party isolation can now be toggled though firstPartyIsolate (bug 1409045)</li>
@@ -214,16 +214,16 @@ tags:
  </li>
  <li>tabs
   <ul>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard">tabs.discard</a> has been implemented (Bug 1322485)</li>
+   <li><a href=/mozilla/add-ons/webextensions/api/tabs/discard>tabs.discard</a> has been implemented (Bug 1322485)</li>
    <li>isArticle, isInReaderMode properties of Tab implemented (Bug 1381992)</li>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">toggleReaderMode</a>() method implemented (Bug 1381992)</li>
+   <li><a href=/mozilla/add-ons/webextensions/api/tabs/togglereadermode>toggleReaderMode</a>() method implemented (Bug 1381992)</li>
    <li>openInReaderMode option of tabs.created implemented (Bug 1408993)</li>
    <li>tabs.onUpdated now notifies when entering/exiting reader mode (Bug 1402921)</li>
   </ul>
  </li>
  <li>theme
   <ul>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent">getCurrent</a>() method to obtain current theme properties (Bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1349944">1349944</a>)</li>
+   <li><a href=/mozilla/add-ons/webextensions/api/theme/getcurrent>getCurrent</a>() method to obtain current theme properties (Bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1349944">1349944</a>)</li>
    <li>onUpdated method to receive WebExtension theme updates (Bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1349944">1349944</a>)</li>
    <li>colors.bookmark_text now supported as alias of colors.toolbar_text (Bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1412595">1412595</a>)</li>
    <li>colors.toolbar_top_separator, colors.toolbar_bottom_separator and colors.toolbar_vertical_separator implemented (Bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1347190">1347190)</a></li>
@@ -231,7 +231,7 @@ tags:
  </li>
  <li>webRequest
   <ul>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest">webRequest.onBeforeRequest</a> now includes a "frameAncestors" parameter</li>
+   <li><a href=/mozilla/add-ons/webextensions/api/webrequest/onbeforerequest>webRequest.onBeforeRequest</a> now includes a "frameAncestors" parameter</li>
   </ul>
  </li>
 </ul>

@@ -11,19 +11,19 @@ tags:
 
 <p>NSS is set of libraries, APIs, utilities, and documentation designed to support cross-platform development of security-enabled client and server applications. It provides a complete open-source implementation of the crypto libraries used by Mozilla and other companies in the Firefox browser, AOL Instant Messenger (AIM), server products from Red Hat, and other products.</p>
 
-<p>For an overview of NSS, see <a href="/en-US/docs/Mozilla/Projects/NSS/Overview">Overview of NSS</a>. For detailed information on the open-source NSS project, see <a class="external" href="https://wiki.mozilla.org/NSS">NSS Project Page</a>.</p>
+<p>For an overview of NSS, see <a href=/mozilla/projects/nss/overview>Overview of NSS</a>. For detailed information on the open-source NSS project, see <a class="external" href="https://wiki.mozilla.org/NSS">NSS Project Page</a>.</p>
 
 <h3 id="What_can_I_do_with_NSS.3F_Is_NSS_appropriate_for_my_application.3F">What can I do with NSS? Is NSS appropriate for my application?</h3>
 
 <p>If you want add support for SSL, S/MIME, or other Internet security standards to your application, you can use Network Security Services (NSS) to do so. Because NSS provides complete support for all versions of SSL and TLS, it is particularly well-suited for applications that need to communicate with the many clients and servers that already support the SSL protocol.</p>
 
-<p>The PKCS #11 interface included in NSS means that your application can use <a href="#What_hardware_accelerators_are_supported.3F"> hardware accelerators</a> on the server and <a href="/en-US/docs/NSS_FAQ#How_do_I_integrate_smart_cards_into_my_application_using_NSS.3F"> smart cards</a> for two-factor authentication.</p>
+<p>The PKCS #11 interface included in NSS means that your application can use <a href="#What_hardware_accelerators_are_supported.3F"> hardware accelerators</a> on the server and <a href=/nss_faq#How_do_I_integrate_smart_cards_into_my_application_using_NSS.3F> smart cards</a> for two-factor authentication.</p>
 
 <h3 id="How_does_NSS_compare_to_OpenSSL.3F">How does NSS compare to OpenSSL?</h3>
 
 <p><a class="external" href="https://www.openssl.org/">OpenSSL</a> is an open source project that implements server-side SSL, TLS, and a general-purpose cryptography library. It does not support PKCS #11. It is based on the SSLeay library developed by Eric A. Young and Tim J. Hudson. OpenSSL is widely used in Apache servers and is licensed under an Apache-style licence.</p>
 
-<p>NSS supports both server and client applications as well as <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/FAQ"> PKCS #11</a> and S/MIME. To permit its use in as many contexts as possible, NSS is licensed under the <a class="external" href="https://www.mozilla.org/MPL/">Mozilla Public License</a>, version 2.</p>
+<p>NSS supports both server and client applications as well as <a href=/mozilla/projects/nss/pkcs11/faq> PKCS #11</a> and S/MIME. To permit its use in as many contexts as possible, NSS is licensed under the <a class="external" href="https://www.mozilla.org/MPL/">Mozilla Public License</a>, version 2.</p>
 
 <h3 id="How_does_NSS_compare_to_SSLRef.3F">How does NSS compare to SSLRef?</h3>
 
@@ -43,7 +43,7 @@ tags:
 
 <h3 id="What_cryptography_standards_are_supported.3F">What cryptography standards are supported?</h3>
 
-<p>NSS supports <a href="/en-US/docs/Glossary/SSL">SSL v2 and v3</a>, <a href="/en-US/docs/Glossary/TLS">TLS</a>, <a href="/en-US/Glossary#PKCS_.235">PKCS #5</a>, <a href="/en-US/Glossary#PKCS_.237">PKCS #7</a>, <a href="/en-US/Glossary#PKCS_.2311">PKCS #11</a>, <a href="/en-US/Glossary#PKCS_.2312">PKCS #12</a>, <a href="/en-US/Glossary#S.2FMIME">S/MIME</a>, and <a href="/en-US/docs/Mozilla/Security/x509_Certificates">X.509 v3</a> certificates. For complete details, see <a class="external" href="http://www-archive.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Encryption Technologies Available in NSS 3.11</a></p>
+<p>NSS supports <a href=/glossary/ssl>SSL v2 and v3</a>, <a href=/glossary/tls>TLS</a>, <a href="/en-US/Glossary#PKCS_.235">PKCS #5</a>, <a href="/en-US/Glossary#PKCS_.237">PKCS #7</a>, <a href="/en-US/Glossary#PKCS_.2311">PKCS #11</a>, <a href="/en-US/Glossary#PKCS_.2312">PKCS #12</a>, <a href="/en-US/Glossary#S.2FMIME">S/MIME</a>, and <a href=/mozilla/security/x509_certificates>X.509 v3</a> certificates. For complete details, see <a class="external" href="http://www-archive.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Encryption Technologies Available in NSS 3.11</a></p>
 
 <h3 id="What_is_the_relationship_between_NSS_and_PSM.3F">What is the relationship between NSS and PSM?</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <h3 id="Where_can_I_get_the_source.3F">Where can I get the source?</h3>
 
-<p>For instructions on how to check out and build the NSS source code, see <a class="external" href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">Build Instructions for NSS</a>.</p>
+<p>For instructions on how to check out and build the NSS source code, see <a class="external" href=/mozilla/projects/nss/nss_sources_building_testing>Build Instructions for NSS</a>.</p>
 
 <h3 id="How_much_does_it_cost.3F">How much does it cost?</h3>
 
@@ -69,7 +69,7 @@ tags:
 
 <h3 id="Does_NSS_require_Netscape_Portable_Runtime_.28NSPR.29.3F">Does NSS require Netscape Portable Runtime (NSPR)?</h3>
 
-<h5 id="To_provide_cross-platform_support_NSS_utilizes_Netscape_Portable_Runtime_NSPR_libraries_as_a_portability_interface_and_implementation_that_provides_consistent_cross-platform_semantics_for_network_IO_and_threading_models._You_can_use_NSPR_throughout_your_application_or_only_in_the_portion_that_calls_into_NSS._Mozilla_strongly_recommends_that_multithreaded_applications_use_the_NSPR_or_native_OS_threading_model._In_recent_NSPR_releases_the_NSPR_threading_model_is_compatible_with_the_native_threading_model_if_the_OS_has_native_threads._Alternatively_you_can_adapt_the_open-source_NSPR_implementation_to_be_compatible_with_your_existing_applications_threading_models._More_information_about_NSPR_may_be_found_at_Netscape_Portable_Runtime.">To provide cross-platform support, NSS utilizes Netscape Portable Runtime (NSPR) libraries as a portability interface and implementation that provides consistent cross-platform semantics for network I/O and threading models. You can use NSPR throughout your application or only in the portion that calls into NSS. Mozilla strongly recommends that multithreaded applications use the NSPR or native OS threading model. (In recent NSPR releases, the NSPR threading model is compatible with the native threading model if the OS has native threads.) Alternatively, you can adapt the open-source NSPR implementation to be compatible with your existing application's threading models. More information about NSPR may be found at <a href="/en-US/docs/Mozilla/Projects/NSPR">Netscape Portable Runtime</a>.</h5>
+<h5 id="To_provide_cross-platform_support_NSS_utilizes_Netscape_Portable_Runtime_NSPR_libraries_as_a_portability_interface_and_implementation_that_provides_consistent_cross-platform_semantics_for_network_IO_and_threading_models._You_can_use_NSPR_throughout_your_application_or_only_in_the_portion_that_calls_into_NSS._Mozilla_strongly_recommends_that_multithreaded_applications_use_the_NSPR_or_native_OS_threading_model._In_recent_NSPR_releases_the_NSPR_threading_model_is_compatible_with_the_native_threading_model_if_the_OS_has_native_threads._Alternatively_you_can_adapt_the_open-source_NSPR_implementation_to_be_compatible_with_your_existing_applications_threading_models._More_information_about_NSPR_may_be_found_at_Netscape_Portable_Runtime.">To provide cross-platform support, NSS utilizes Netscape Portable Runtime (NSPR) libraries as a portability interface and implementation that provides consistent cross-platform semantics for network I/O and threading models. You can use NSPR throughout your application or only in the portion that calls into NSS. Mozilla strongly recommends that multithreaded applications use the NSPR or native OS threading model. (In recent NSPR releases, the NSPR threading model is compatible with the native threading model if the OS has native threads.) Alternatively, you can adapt the open-source NSPR implementation to be compatible with your existing application's threading models. More information about NSPR may be found at <a href=/mozilla/projects/nspr>Netscape Portable Runtime</a>.</h5>
 
 <h3 id="Can_I_use_NSS_even_if_my_application_protocol_isn.27t_HTTP.3F">Can I use NSS even if my application protocol isn't HTTP?</h3>
 
@@ -85,7 +85,7 @@ tags:
 
 <h3 id="How_can_I_learn_more_about_SSL.3F">How can I learn more about TLS?</h3>
 
-<p>See <a href="/en-US/docs/Glossary/TLS">https://developer.mozilla.org/en-US/docs/Glossary/TLS</a>.</p>
+<p>See <a href=/glossary/tls>https://developer.mozilla.org/en-US/docs/Glossary/TLS</a>.</p>
 
 <h2 id="Licensing_Questions">Licensing Questions</h2>
 

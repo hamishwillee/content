@@ -30,7 +30,7 @@ tags:
 
 <p><em>This interface inherits properties from its parent, </em>{{domxref("Event")}}:</p>
 
-<p>{{Page("/en-US/docs/Web/API/Event", "Properties")}}</p>
+<p>{{Page(/web/api/event, "Properties")}}</p>
 
 <h2 id="Methods">Methods</h2>
 
@@ -43,7 +43,7 @@ tags:
 
 <p><em>This interface inherits methods from its parent, </em>{{domxref("Event")}}:</p>
 
-<p>{{Page("/en-US/docs/Web/API/Event", "Methods")}}</p>
+<p>{{Page(/web/api/event, "Methods")}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -72,7 +72,7 @@ tags:
 
 <p>When firing a <code>CustomEvent</code> from privileged code (i.e. an extension) to non-privileged code (i.e. a webpage), security issues should be considered. Firefox and other Gecko applications restrict an object created in one context from being directly used for another, which will automatically prevent security holes, but these restrictions may also prevent your code from running as expected.</p>
 
-<p>While creating a <code>CustomEvent</code> object, you must create the object from the same <a href="/en-US/docs/XUL/window">window</a>. The <code>detail</code> attribute of your <code>CustomEvent</code> will be subjected to the same restrictions. <code>String</code> and <code>Array</code> values will be readable by the content without restrictions, but custom <code>Object</code> will not. While using a custom object, you will need to define the attributes of that object that are readable from the content script using <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto()</a>.</p>
+<p>While creating a <code>CustomEvent</code> object, you must create the object from the same <a href=/xul/window>window</a>. The <code>detail</code> attribute of your <code>CustomEvent</code> will be subjected to the same restrictions. <code>String</code> and <code>Array</code> values will be readable by the content without restrictions, but custom <code>Object</code> will not. While using a custom object, you will need to define the attributes of that object that are readable from the content script using <a href=/mozilla/tech/xpcom/language_bindings/components.utils.cloneinto>Components.utils.cloneInto()</a>.</p>
 
 <pre class="brush: js">// doc is a reference to the content document
 function dispatchCustomEvent(doc) {
@@ -87,6 +87,6 @@ function dispatchCustomEvent(doc) {
 
 <ul>
  <li>{{domxref("Window.postMessage()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction between privileged and non-privileged pages</a></li>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+ <li><a href=/code_snippets/interaction_between_privileged_and_non-privileged_pages>Interaction between privileged and non-privileged pages</a></li>
+ <li><a href=/web/guide/events/creating_and_triggering_events>Creating and triggering events</a></li>
 </ul>

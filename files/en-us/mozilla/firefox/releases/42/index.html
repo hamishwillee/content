@@ -20,9 +20,9 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <p>Highlights:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Debugging Firefox for Android over Wifi</a></li>
- <li><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators">Firefox OS Simulator configuration in WebIDE</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets">CSS filter presets</a></li>
+ <li><a href=/tools/remote_debugging/debugging_firefox_for_android_over_wifi>Debugging Firefox for Android over Wifi</a></li>
+ <li><a href=/tools/webide/setting_up_runtimes#Configuring_Simulators>Firefox OS Simulator configuration in WebIDE</a></li>
+ <li><a href=/tools/page_inspector/how_to/edit_css_filters#Saving_filter_presets>CSS filter presets</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-08-10&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-06-29&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12478437">All devtools bugs fixed between Firefox 41 and Firefox 42</a>.</p>
@@ -74,14 +74,14 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <ul>
  <li>{{domxref('Request.context')}} has been removed ({{bug(1188062)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.push.enabled</code> pref in <a>about:config</a>.</span></span></li>
+ <li>The <a href=/web/api/push_api>Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.push.enabled</code> pref in <a>about:config</a>.</span></span></li>
  <li>The {{domxref("PushManager.hasPermission()")}} method has been deprecated in the spec, and replaced with the {{domxref("PushManager.permissionState()")}} method. Firefox has updated its implementation to reflect this ({{bug("1183853")}}.)</li>
- <li>Service-worker-related additions to the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> have been implemented ({{bug(1114554)}}), but are disabled in this release.</li>
+ <li>Service-worker-related additions to the <a href=/web/api/notifications_api>Notifications API</a> have been implemented ({{bug(1114554)}}), but are disabled in this release.</li>
 </ul>
 
 <h4 id="Web_Animations_API">Web Animations API</h4>
 
-<p>Our experimental implementation of <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> have been extended to support:</p>
+<p>Our experimental implementation of <a href=/web/api/web_animations_api>Web Animations API</a> have been extended to support:</p>
 
 <ul>
  <li>The {{domxref('AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).</li>
@@ -92,7 +92,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <h4 id="Web_Components">Web Components</h4>
 
-<p>Our experimental implementation of the <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> has been modified:</p>
+<p>Our experimental implementation of the <a href=/web/web_components/shadow_dom>Shadow DOM</a> has been modified:</p>
 
 <ul>
  <li>When trying to invoke {{domxref('Node.cloneNode()')}} on a {{domxref('ShadowRoot')}}, throws a <code>DataCloneError</code> exception ({{bug(1176757)}}).</li>
@@ -124,11 +124,11 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h4 id="Miscellaneous">Miscellaneous</h4>
 
 <ul>
- <li>The {{domxref('IDBCursorWithValue')}} interface is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1188115)}}).</li>
- <li>Error events sent in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> doesn't bubble anymore ({{bug(1188141)}}).</li>
- <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a> (MSE) has been activated for all Web sites, and no more for a white list of sites ({{bug(1185611)}}).</li>
+ <li>The {{domxref('IDBCursorWithValue')}} interface is now available in <a href=/web/api/web_workers_api>Web workers</a> ({{bug(1188115)}}).</li>
+ <li>Error events sent in <a href=/web/api/web_workers_api>Web workers</a> doesn't bubble anymore ({{bug(1188141)}}).</li>
+ <li><a href=/web/api/media_source_extensions_api>Media Source Extensions</a> (MSE) has been activated for all Web sites, and no more for a white list of sites ({{bug(1185611)}}).</li>
  <li>The non-standard and deprecated {{domxref('Window.mozRequestAnimationFrame()')}} has been removed ({{bug(909154)}}). Use the standard {{domxref('Window.requestAnimationFrame()')}} instead.</li>
- <li>Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Windows, hidden behind the <code>media.webspeech.synth.enabled</code> flag in <code>about:config</code> ({{bug("1003457")}}.) See <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> for more information.</li>
+ <li>Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Windows, hidden behind the <code>media.webspeech.synth.enabled</code> flag in <code>about:config</code> ({{bug("1003457")}}.) See <a href=/web/api/web_speech_api>Web Speech API</a> for more information.</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
@@ -168,7 +168,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h4 id="nsIContentPolicy">nsIContentPolicy</h4>
 
 <ul>
- <li>The <code><strong>TYPE_EMBED</strong></code> constant has been added to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">nsIContentPolicy</a></code> to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, <code><strong>TYPE_OBJECT</strong></code> was used for these cases ({{bug(1148030)}}).</li>
+ <li>The <code><strong>TYPE_EMBED</strong></code> constant has been added to <code><a href=/mozilla/tech/xpcom/reference/interface/nsicontentpolicy>nsIContentPolicy</a></code> to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, <code><strong>TYPE_OBJECT</strong></code> was used for these cases ({{bug(1148030)}}).</li>
  <li>Similarly, the <strong><code>TYPE_SUBDOCUMENT</code></strong> constants has been split into <code><strong>TYPE_FRAME</strong></code> and <strong><code>TYPE_IFRAME</code></strong> ({{bug(1148044)}}).</li>
 </ul>
 

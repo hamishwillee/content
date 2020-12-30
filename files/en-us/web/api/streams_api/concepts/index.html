@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{apiref("Streams")}}</div>
 
-<p class="summary">The <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.</p>
+<p class="summary">The <a href=/web/api/streams_api>Streams API</a> adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.</p>
 
 <h2 id="Readable_streams">Readable streams</h2>
 
@@ -17,11 +17,11 @@ tags:
 <p>There are two types of underlying source:</p>
 
 <ul>
- <li><strong>Push sources</strong> constantly push data at you when you’ve accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/<a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a>.</li>
- <li><strong>Pull sources</strong> require you to explicitly request data from them once connected to. Examples include a file access operation via a <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> or <a href="/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest">XHR</a> call.</li>
+ <li><strong>Push sources</strong> constantly push data at you when you’ve accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/<a href=/web/api/websockets_api>Web sockets</a>.</li>
+ <li><strong>Pull sources</strong> require you to explicitly request data from them once connected to. Examples include a file access operation via a <a href=/web/api/fetch_api>Fetch</a> or <a href=/web/api/xmlhttprequest/xmlhttprequest>XHR</a> call.</li>
 </ul>
 
-<p>The data is read sequentially in small pieces called <strong>chunks</strong>. A chunk can be a single byte, or it can be something larger such as a <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> of a certain size. A single stream can contain chunks of different sizes and types.</p>
+<p>The data is read sequentially in small pieces called <strong>chunks</strong>. A chunk can be a single byte, or it can be something larger such as a <a href=/web/javascript/typed_arrays>typed array</a> of a certain size. A single stream can contain chunks of different sizes and types.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15819/Readable%20streams.png" style="height: 452px; width: 1000px;"></p>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>In JavaScript, this is achieved via the {{domxref("ReadableStream.tee()")}} method — it outputs an array containing two identical copies of the original readable stream, which can then be read independently by two separate readers.</p>
 
-<p>You might do this for example in a <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a> if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you’d need two copies to do this.</p>
+<p>You might do this for example in a <a href=/web/api/service_worker_api>ServiceWorker</a> if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you’d need two copies to do this.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15820/tee.png" style="height: 527px; width: 1000px;"></p>
 

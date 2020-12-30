@@ -39,7 +39,7 @@ tags:
 	<dt>{{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}</dt>
 	<dd>Returns a {{domxref("CanvasCaptureMediaStream")}} that is a real-time video capture of the surface of the canvas.</dd>
 	<dt>{{domxref("HTMLCanvasElement.getContext()")}}</dt>
-	<dd>Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with <code>"2d"</code> returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with <code>"webgl"</code> (or <code>"experimental-webgl"</code>) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement <a href="/en-US/docs/Web/WebGL">WebGL</a>.</dd>
+	<dd>Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with <code>"2d"</code> returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with <code>"webgl"</code> (or <code>"experimental-webgl"</code>) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement <a href=/web/webgl>WebGL</a>.</dd>
 	<dt>{{domxref("HTMLCanvasElement.toDataURL()")}}</dt>
 	<dd>Returns a data-URL containing a representation of the image in the format specified by the <code>type</code> parameter (defaults to <code>png</code>). The returned image is in a resolution of 96dpi.</dd>
 	<dt>{{domxref("HTMLCanvasElement.toBlob()")}}</dt>
@@ -57,14 +57,14 @@ tags:
 
 <h2 id="Events">Events</h2>
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</p>
+<p>Listen to these events using <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code>.</p>
 
 <dl>
-	<dt><code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code></dt>
+	<dt><code><a href=/web/api/htmlcanvaselement/webglcontextcreationerror_event>webglcontextcreationerror</a></code></dt>
 	<dd>Fired if the user agent is unable to create a <code>WebGLRenderingContext</code> or <code>WebGL2RenderingContext</code> context.</dd>
-	<dt><code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code></dt>
+	<dt><code><a href=/web/api/htmlcanvaselement/webglcontextlost_event>webglcontextlost</a></code></dt>
 	<dd>Fired if the user agent detects that the drawing buffer associated with a <code>WebGLRenderingContext</code> or <code>WebGL2RenderingContext</code> object has been lost.</dd>
-	<dt><code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code></dt>
+	<dt><code><a href=/web/api/htmlcanvaselement/webglcontextrestored_event>webglcontextrestored</a></code></dt>
 	<dd>Fired if the user agent restores the drawing buffer for a <code>WebGLRenderingContext</code> or <code>WebGL2RenderingContext</code> object.</dd>
 </dl>
 

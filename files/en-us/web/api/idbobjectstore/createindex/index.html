@@ -16,7 +16,7 @@ tags:
 <div>
 <p>The <strong><code>createIndex()</code></strong> method of the {{domxref("IDBObjectStore")}} interface creates and returns a new {{domxref("IDBIndex")}} object in the connected database. It creates a new field/column defining a new data point for each database record to contain.</p>
 
-<p>Bear in mind that IndexedDB indexes can contain <em>any</em> JavaScript data type; IndexedDB uses the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a> to serialize stored objects, which allows for storage of simple and complex objects.</p>
+<p>Bear in mind that IndexedDB indexes can contain <em>any</em> JavaScript data type; IndexedDB uses the <a href=/web/api/web_workers_api/structured_clone_algorithm>structured clone algorithm</a> to serialize stored objects, which allows for storage of simple and complex objects.</p>
 </div>
 
 <p>Note that this method must be called only from a <code>VersionChange</code> transaction mode callback.</p>
@@ -59,7 +59,7 @@ var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <
    <tr>
     <td><code>locale</code></td>
     <td>
-     <p>Currently Firefox-only (43+), this allows you to specify a locale for the index. Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale (see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting">locale-aware sorting</a>.) You can specify its value in one of three ways:</p>
+     <p>Currently Firefox-only (43+), this allows you to specify a locale for the index. Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale (see <a href=/web/api/indexeddb_api/using_indexeddb#Locale-aware_sorting>locale-aware sorting</a>.) You can specify its value in one of three ways:</p>
 
      <ul>
       <li><code>string</code>: A string containing a specific locale code, e.g. <code>en-US</code>, or <code>pl</code>.</li>
@@ -201,7 +201,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li><a href=/web/api/indexeddb_api/using_indexeddb>Using IndexedDB</a></li>
  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

@@ -12,7 +12,7 @@ tags:
 
 <p><span class="seoSummary">The <code><strong>Element.getElementsByTagName()</strong></code> method returns a live {{domxref("HTMLCollection")}} of elements with the given <a href="/en/DOM/element.tagName">tag name</a>.</span> All descendants of the specified element are searched, but not the element itself. The returned list is <em>live</em>, which means it updates itself with the DOM tree automatically. Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with the same element and arguments repeatedly if the DOM changes in between calls.</p>
 
-<p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code> lower-cases the argument before searching for it. This is undesirable when trying to match camel-cased SVG elements (such as <code><a href="/en-US/docs/Web/SVG/Element/linearGradient">&lt;linearGradient&gt;</a></code>) in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }}, which preserves the capitalization of the tag name.</p>
+<p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code> lower-cases the argument before searching for it. This is undesirable when trying to match camel-cased SVG elements (such as <code><a href=/web/svg/element/lineargradient>&lt;linearGradient&gt;</a></code>) in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }}, which preserves the capitalization of the tag name.</p>
 
 <p><code>Element.getElementsByTagName</code> is similar to {{domxref("Document.getElementsByTagName()")}}, except that it only searches for elements that are descendants of the specified element.</p>
 

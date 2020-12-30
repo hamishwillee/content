@@ -56,7 +56,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>, <code>DOMPointReadOnly</code> values are used to represent positions and orientations. In the following snippet, the pose of the XR device (such as a VR headset or phone with AR capabilities) can be retrieved by calling using {{domxref("XRFrame.getViewerPose()")}} during an {{domxref("XRSession")}} animation frame, then accessing the resulting {{domxref("XRPose")}}'s {{domxref("XRPose.transform","transform")}} property, which contains two <code>DOMPointReadOnly</code> attributes: {{domxref("XRRigidTransform.position","position")}} as a vector and {{domxref("XRViewerPose.orientation","orientation")}} as a quaternion.</p>
+<p>In the <a href=/web/api/webxr_device_api>WebXR Device API</a>, <code>DOMPointReadOnly</code> values are used to represent positions and orientations. In the following snippet, the pose of the XR device (such as a VR headset or phone with AR capabilities) can be retrieved by calling using {{domxref("XRFrame.getViewerPose()")}} during an {{domxref("XRSession")}} animation frame, then accessing the resulting {{domxref("XRPose")}}'s {{domxref("XRPose.transform","transform")}} property, which contains two <code>DOMPointReadOnly</code> attributes: {{domxref("XRRigidTransform.position","position")}} as a vector and {{domxref("XRViewerPose.orientation","orientation")}} as a quaternion.</p>
 
 <pre class="brush: js">function onXRFrame(time, xrFrame) {
   let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);

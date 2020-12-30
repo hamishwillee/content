@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong>Feature queries</strong> are created using the CSS at-rule <a href="/en-US/docs/Web/CSS/@supports">@supports</a>, and are useful as they give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide you will learn how to implement progressive enhancement using feature queries.</p>
+<p><strong>Feature queries</strong> are created using the CSS at-rule <a href=/web/css/@supports>@supports</a>, and are useful as they give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide you will learn how to implement progressive enhancement using feature queries.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>CSS feature queries are part of the <a href="https://drafts.csswg.org/css-conditional-3/">CSS Conditional Rules module</a>, which also contains the media query <a href="/en-US/docs/Web/CSS/@media">@media</a> rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.</p>
+<p>CSS feature queries are part of the <a href="https://drafts.csswg.org/css-conditional-3/">CSS Conditional Rules module</a>, which also contains the media query <a href=/web/css/@media>@media</a> rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.</p>
 
 <p>A feature query consists of the <code>@supports</code> rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as <code>display</code>; the rule requires a property name and a value:</p>
 
@@ -76,11 +76,11 @@ tags:
 
 <p>Let's walk through a very simple example where feature queries come in handy, which uses them in the way described above.</p>
 
-<p>Let's say we want to create a layout of three boxes in a row, and ideally we would like to use <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. However, we would like to have a layout for older browsers using floats. We can start by creating that floated layout with the following code, which gives us three columns.</p>
+<p>Let's say we want to create a layout of three boxes in a row, and ideally we would like to use <a href=/web/css/css_grid_layout>CSS Grid Layout</a>. However, we would like to have a layout for older browsers using floats. We can start by creating that floated layout with the following code, which gives us three columns.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}</p>
 
-<p>When browsers don't understand a CSS property or value, they ignore it. So we could start enhancing our layout by using CSS Grid. Browsers that do not support grid will ignore the <code>grid</code> value of the <code>display</code> property. Once a floated item becomes a grid item, the float is removed — something you can read more about in <a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting Older Browsers</a>. Therefore the grid version should just overwrite the floated one.</p>
+<p>When browsers don't understand a CSS property or value, they ignore it. So we could start enhancing our layout by using CSS Grid. Browsers that do not support grid will ignore the <code>grid</code> value of the <code>display</code> property. Once a floated item becomes a grid item, the float is removed — something you can read more about in <a href=/learn/css/css_layout/supporting_older_browsers>Supporting Older Browsers</a>. Therefore the grid version should just overwrite the floated one.</p>
 
 <p>We have a problem however, caused by the <code>width</code> property we used on our floated items to make them display as three columns. This is now interpreted by grid as being the width of the column track, not the width of the container as it is for the float.</p>
 
@@ -105,8 +105,8 @@ tags:
 <h3 id="See_also">See also</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/CSS/@supports">@supports</a> rule</li>
- <li>Learn Layout: <a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting Older Browsers</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
+ <li>The <a href=/web/css/@supports>@supports</a> rule</li>
+ <li>Learn Layout: <a href=/learn/css/css_layout/supporting_older_browsers>Supporting Older Browsers</a></li>
+ <li><a href=/web/css/css_grid_layout/css_grid_and_progressive_enhancement>CSS Grid Layout and Progressive Enhancement</a></li>
  <li><a href="https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/">Using Feature Queries in CSS</a></li>
 </ul>

@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks">building blocks</a>, <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>), the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">basics of Client-side APIs</a></td>
+   <td>JavaScript basics (see <a href=/learn/javascript/first_steps>first steps</a>, <a href=/learn/javascript/building_blocks>building blocks</a>, <a href=/learn/javascript/objects>JavaScript objects</a>), the <a href=/learn/javascript/client-side_web_apis/introduction>basics of Client-side APIs</a></td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Client-side_storage">Client-side storage?</h2>
 
-<p>Elsewhere in the MDN learning area we talked about the difference between <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites">static sites</a> and <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites">dynamic sites</a>. Most major modern web sites are dynamic — they store data on the server using some kind of database (server-side storage), then run <a href="/en-US/docs/Learn/Server-side">server-side</a> code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.</p>
+<p>Elsewhere in the MDN learning area we talked about the difference between <a href=/learn/server-side/first_steps/client-server_overview#Static_sites>static sites</a> and <a href=/learn/server-side/first_steps/client-server_overview#Dynamic_sites>dynamic sites</a>. Most major modern web sites are dynamic — they store data on the server using some kind of database (server-side storage), then run <a href=/learn/server-side>server-side</a> code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.</p>
 
 <p>Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:</p>
 
@@ -47,35 +47,35 @@ tags:
 <p>Often client-side and server-side storage are used together. For example, you could download a batch of music files (perhaps used by a web game or music player application), store them inside a client-side database, and play them as needed. The user would only have to download the music files once — on subsequent visits they would be retrieved from the database instead.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a> for more information.</p>
+<p><strong>Note</strong>: There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See <a href=/web/api/indexeddb_api/browser_storage_limits_and_eviction_criteria>Browser storage limits and eviction criteria</a> for more information.</p>
 </div>
 
 <h3 id="Old_school_Cookies">Old school: Cookies</h3>
 
-<p>The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used <a href="/en-US/docs/Web/HTTP/Cookies">cookies</a> to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.</p>
+<p>The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used <a href=/web/http/cookies>cookies</a> to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.</p>
 
-<p>These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our <a href="/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a> article.</p>
+<p>These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our <a href=/web/http/cookies>Using HTTP cookies</a> article.</p>
 
 <h3 id="New_school_Web_Storage_and_IndexedDB">New school: Web Storage and IndexedDB</h3>
 
 <p>The "easier" features we mentioned above are as follows:</p>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a> provides a very simple syntax for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.</li>
- <li>The <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides the browser with a complete database system for storing complex data. This can be used for things from complete sets of customer records to even complex data types like audio or video files.</li>
+ <li>The <a href=/web/api/web_storage_api>Web Storage API</a> provides a very simple syntax for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.</li>
+ <li>The <a href=/web/api/indexeddb_api>IndexedDB API</a> provides the browser with a complete database system for storing complex data. This can be used for things from complete sets of customer records to even complex data types like audio or video files.</li>
 </ul>
 
 <p>You'll learn more about these APIs below.</p>
 
 <h3 id="The_future_Cache_API">The future: Cache API</h3>
 
-<p>Some modern browsers support the new {{domxref("Cache")}} API. This API is designed for storing HTTP responses to specific requests, and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection. Cache is usually used in combination with the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>, although it doesn't have to be.</p>
+<p>Some modern browsers support the new {{domxref("Cache")}} API. This API is designed for storing HTTP responses to specific requests, and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection. Cache is usually used in combination with the <a href=/web/api/service_worker_api>Service Worker API</a>, although it doesn't have to be.</p>
 
 <p>Use of Cache and Service Workers is an advanced topic, and we won't be covering it in great detail in this article, although we will show a simple example in the {{anch("Offline asset storage")}} section below.</p>
 
 <h2 id="Storing_simple_data_—_web_storage">Storing simple data — web storage</h2>
 
-<p>The <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a> is very easy to use — you store simple name/value pairs of data (limited to strings, numbers, etc.) and retrieve these values when needed.</p>
+<p>The <a href=/web/api/web_storage_api>Web Storage API</a> is very easy to use — you store simple name/value pairs of data (limited to strings, numbers, etc.) and retrieve these values when needed.</p>
 
 <h3 id="Basic_syntax">Basic syntax</h3>
 
@@ -247,7 +247,7 @@ function nameDisplayCheck() {
 <p>Your example is finished — well done! All that remains now is to save your code and test your HTML page in a browser. You can see our <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html">finished version running live here</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is another, slightly more complex example to explore at <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a>.</p>
+<p><strong>Note</strong>: There is another, slightly more complex example to explore at <a href=/web/api/web_storage_api/using_the_web_storage_api>Using the Web Storage API</a>.</p>
 </div>
 
 <div class="note">
@@ -256,7 +256,7 @@ function nameDisplayCheck() {
 
 <h2 id="Storing_complex_data_—_IndexedDB">Storing complex data — IndexedDB</h2>
 
-<p>The <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> (sometimes abbreviated IDB) is a complete database system available in the browser in which you can store complex related data, the types of which aren't limited to simple values like strings or numbers. You can store videos, images, and pretty much anything else in an IndexedDB instance.</p>
+<p>The <a href=/web/api/indexeddb_api>IndexedDB API</a> (sometimes abbreviated IDB) is a complete database system available in the browser in which you can store complex related data, the types of which aren't limited to simple values like strings or numbers. You can store videos, images, and pretty much anything else in an IndexedDB instance.</p>
 
 <p>However, this does come at a cost: IndexedDB is much more complex to use than the Web Storage API. In this section, we'll really only scratch the surface of what it is capable of, but we will give you enough to get started.</p>
 
@@ -538,7 +538,7 @@ function deleteItem(e) {
 }</pre>
 
 <ul>
- <li>The first part of this could use some explaining — we retrieve the ID of the record to be deleted using <code>Number(e.target.parentNode.getAttribute('data-note-id'))</code> — recall that the ID of the record was saved in a <code>data-note-id</code> attribute on the <code>&lt;li&gt;</code> when it was first displayed. We do however need to pass the attribute through the global built-in <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number()</a></code> object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.</li>
+ <li>The first part of this could use some explaining — we retrieve the ID of the record to be deleted using <code>Number(e.target.parentNode.getAttribute('data-note-id'))</code> — recall that the ID of the record was saved in a <code>data-note-id</code> attribute on the <code>&lt;li&gt;</code> when it was first displayed. We do however need to pass the attribute through the global built-in <code><a href=/web/javascript/reference/global_objects/number>Number()</a></code> object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.</li>
  <li>We then get a reference to the object store using the same pattern we've seen previously, and use the {{domxref("IDBObjectStore.delete()")}} method to delete the record from the database, passing it the ID.</li>
  <li>When the database transaction is complete, we delete the note's <code>&lt;li&gt;</code> from the DOM, and again do the check to see if the <code>&lt;ul&gt;</code> is now empty, inserting a note as appropriate.</li>
 </ul>
@@ -665,11 +665,11 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15759/ff-offline.png" style="border-style: solid; border-width: 1px; display: block; height: 307px; margin: 0px auto; width: 765px;"></p>
 
-<p>This is where <a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> and the closely-related <a href="/en-US/docs/Web/API/Cache">Cache API</a> come in.</p>
+<p>This is where <a href=/web/api/service_worker_api>Service workers</a> and the closely-related <a href=/web/api/cache>Cache API</a> come in.</p>
 
 <p>A service worker is a JavaScript file that, put, is registered against a particular origin (web site, or part of a web site at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.</p>
 
-<p>When it intercepts a request, it can do anything you wish to it (see <a href="/en-US/docs/Web/API/Service_Worker_API#Other_use_case_ideas">use case ideas</a>), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.</p>
+<p>When it intercepts a request, it can do anything you wish to it (see <a href=/web/api/service_worker_api#Other_use_case_ideas>use case ideas</a>), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.</p>
 
 <p>The Cache API is a another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.</p>
 
@@ -734,7 +734,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or <code>undefined</code> if it isn't.</p>
 
-<p>If a match is found, we return it as the custom response. If not, we <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> the response from the network and return that instead.</p>
+<p>If a match is found, we return it as the custom response. If not, we <a href=/web/api/windoworworkerglobalscope/fetch>fetch()</a> the response from the network and return that instead.</p>
 
 <pre class="brush: js   notranslate">self.addEventListener('fetch', function(e) {
   console.log(e.request.url);
@@ -766,10 +766,10 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web storage API</a></li>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Cookies">Cookies</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service worker API</a></li>
+ <li><a href=/web/api/web_storage_api>Web storage API</a></li>
+ <li><a href=/web/api/indexeddb_api>IndexedDB API</a></li>
+ <li><a href=/web/http/cookies>Cookies</a></li>
+ <li><a href=/web/api/service_worker_api>Service worker API</a></li>
 </ul>
 
 <p>{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</p>
@@ -777,11 +777,11 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/introduction>Introduction to web APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/manipulating_documents>Manipulating documents</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/fetching_data>Fetching data from the server</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/third_party_apis>Third party APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/video_and_audio_apis>Video and audio APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/client-side_storage>Client-side storage</a></li>
 </ul>

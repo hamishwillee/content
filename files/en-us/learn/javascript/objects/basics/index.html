@@ -28,7 +28,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>).</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href=/learn/javascript/first_steps>First steps</a> and <a href=/learn/javascript/building_blocks>Building blocks</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -41,13 +41,13 @@ tags:
 
 <p>An object is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.) Let's work through an example to understand what they look like.</p>
 
-<p>To begin with, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console">developer tools JavaScript console</a> open and ready to type in some commands.</p>
+<p>To begin with, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your <a href=/learn/common_questions/what_are_browser_developer_tools#The_JavaScript_console>developer tools JavaScript console</a> open and ready to type in some commands.</p>
 
 <p>As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:</p>
 
 <pre class="brush: js">const person = {};</pre>
 
-<p>Now open your browser's <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console">JavaScript console</a>, enter <code>person</code> into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:</p>
+<p>Now open your browser's <a href=/learn/common_questions/what_are_browser_developer_tools#The_JavaScript_console>JavaScript console</a>, enter <code>person</code> into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:</p>
 
 <pre class="brush: js">[object Object]
 Object { }
@@ -202,7 +202,7 @@ person[myDataName] = myDataValue;</pre>
   alert('Hi! I\'m ' + this.name.first + '.');
 }</pre>
 
-<p>You are probably wondering what "this" is. The <code>this</code> keyword refers to the current object the code is being written inside — so in this case <code>this</code> is equivalent to <code>person</code>. So why not just write <code>person</code> instead? As you'll see in the <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a> article, when we start creating constructors and so on, <code>this</code> is very useful — it always ensures that the correct values are used when a member's context changes (for example, two different <code>person</code> object instances may have different names, but we want to use their own name when saying their greeting).</p>
+<p>You are probably wondering what "this" is. The <code>this</code> keyword refers to the current object the code is being written inside — so in this case <code>this</code> is equivalent to <code>person</code>. So why not just write <code>person</code> instead? As you'll see in the <a href=/learn/javascript/objects/object-oriented_js>Object-oriented JavaScript for beginners</a> article, when we start creating constructors and so on, <code>this</code> is very useful — it always ensures that the correct values are used when a member's context changes (for example, two different <code>person</code> object instances may have different names, but we want to use their own name when saying their greeting).</p>
 
 <p>Let's illustrate what we mean with a simplified pair of person objects:</p>
 
@@ -230,18 +230,18 @@ const person2 = {
 
 <pre class="brush: js">myString.split(',');</pre>
 
-<p>You were using a method available on an instance of the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> class. Every time you create a string in your code, that string is automatically created as an instance of <code>String</code>, and therefore has several common methods and properties available on it.</p>
+<p>You were using a method available on an instance of the <code><a href=/web/javascript/reference/global_objects/string>String</a></code> class. Every time you create a string in your code, that string is automatically created as an instance of <code>String</code>, and therefore has several common methods and properties available on it.</p>
 
 <p>When you accessed the document object model using lines like this:</p>
 
 <pre class="brush: js">const myDiv = document.createElement('div');
 const myVideo = document.querySelector('video');</pre>
 
-<p>You were using methods available on an instance of the <code><a href="/en-US/docs/Web/API/Document">Document</a></code> class. For each webpage loaded, an instance of <code>Document</code> is created, called <code>document</code>, which represents the entire page's structure, content, and other features such as its URL. Again, this means that it has several common methods and properties available on it.</p>
+<p>You were using methods available on an instance of the <code><a href=/web/api/document>Document</a></code> class. For each webpage loaded, an instance of <code>Document</code> is created, called <code>document</code>, which represents the entire page's structure, content, and other features such as its URL. Again, this means that it has several common methods and properties available on it.</p>
 
-<p>The same is true of pretty much any other built-in object or API you've been using — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></code>, and so on.</p>
+<p>The same is true of pretty much any other built-in object or API you've been using — <code><a href=/web/javascript/reference/global_objects/array>Array</a></code>, <code><a href=/web/javascript/reference/global_objects/math>Math</a></code>, and so on.</p>
 
-<p>Note that built in objects and APIs don't always create object instances automatically. As an example, the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> — which allows modern browsers to fire system notifications — requires you to instantiate a new object instance using the constructor for each notification you want to fire. Try entering the following into your JavaScript console:</p>
+<p>Note that built in objects and APIs don't always create object instances automatically. As an example, the <a href=/web/api/notifications_api>Notifications API</a> — which allows modern browsers to fire system notifications — requires you to instantiate a new object instance using the constructor for each notification you want to fire. Try entering the following into your JavaScript console:</p>
 
 <pre class="brush: js">const myNotification = new Notification('Hello!');</pre>
 
@@ -253,7 +253,7 @@ const myVideo = document.querySelector('video');</pre>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics">Test your skills: Object basics</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/objects/test_your_skills:_object_basics>Test your skills: Object basics</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -266,11 +266,11 @@ const myVideo = document.querySelector('video');</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+ <li><a href=/learn/javascript/objects/basics>Object basics</a></li>
+ <li><a href=/learn/javascript/objects/object-oriented_js>Object-oriented JavaScript for beginners</a></li>
+ <li><a href=/learn/javascript/objects/object_prototypes>Object prototypes</a></li>
+ <li><a href=/learn/javascript/objects/inheritance>Inheritance in JavaScript</a></li>
+ <li><a href=/learn/javascript/objects/json>Working with JSON data</a></li>
+ <li><a href=/learn/javascript/objects/object_building_practice>Object building practice</a></li>
+ <li><a href=/learn/javascript/objects/adding_bouncing_balls_features>Adding features to our bouncing balls demo</a></li>
 </ul>

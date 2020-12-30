@@ -37,7 +37,7 @@ tags:
 <figcaption><strong>Example WebXR hardware setup</strong></figcaption>
 <img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png"></figure>
 
-<p>While the older <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.</p>
+<p>While the older <a href=/web/api/webvr_api>WebVR API</a> was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.</p>
 
 <p>A typical XR device can have either 3 or 6 degrees of freedom and might or might not have an external positional sensor.</p>
 
@@ -82,7 +82,7 @@ tags:
  <dt>{{DOMxRef("XRInputSource")}}</dt>
  <dd>Represents any input device the user can use to perform targeted actions within the same virtual space as the viewer. Input sources may include devices such as hand controllers, optical tracking systems, and other devices which are explicitly associated with the XR device. Other input devices such as keyboards, mice, and gamepads are not presented as <code>XRInputSource</code> instances.</dd>
  <dt>{{DOMxRef("XRWebGLLayer")}}</dt>
- <dd>A layer which serves as a <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> frame buffer into which a scene's view is rendered. Using WebGL to render the scene gains substantial performance benefits due to graphics acceleration.</dd>
+ <dd>A layer which serves as a <a href=/web/api/webgl_api>WebGL</a> frame buffer into which a scene's view is rendered. Using WebGL to render the scene gains substantial performance benefits due to graphics acceleration.</dd>
 </dl>
 
 <h3 id="Event_interfaces">Event interfaces</h3>
@@ -116,64 +116,64 @@ tags:
 <h3 id="Foundations_and_basics">Foundations and basics</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">Fundamentals of WebXR</a></dt>
+ <dt><a href=/web/api/webxr_device_api/fundamentals>Fundamentals of WebXR</a></dt>
  <dd>Before diving into the details of how to create content using WebXR, it may be helpful to read this overview of the technology, which includes introductions to terminology that may be unfamiliar to you, or which may be used in a new way.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a></dt>
+ <dt><a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web</a></dt>
  <dd>A guide covering how matrices can be used on the web, including both for CSS transforms and for WebGL purposes, as well as to handle the positioning and orientation of objects in WebXR contexts.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Lifecycle">WebXR application life cycle </a></dt>
+ <dt><a href=/web/api/webxr_device_api/lifecycle>WebXR application life cycle </a></dt>
  <dd>An overview of the overall life cycle of a WebXR application, from startup to shutdown. This article serves as an introduction to the basics of what's involved in creating a WebXR experience without diving into the code in detail. It's a good way to prepare for the next steps.</dd>
 </dl>
 
 <h3 id="Creating_a_mixed_reality_experience">Creating a mixed reality experience</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">Starting up and shutting down a WebXR session</a></dt>
+ <dt><a href=/web/api/webxr_device_api/startup_and_shutdown>Starting up and shutting down a WebXR session</a></dt>
  <dd>Before actually presenting a scene using an XR device such as a headset or goggles, you need to create a WebXR session bound to a rendering layer that draws the scene for presentation in each of the XR device's displays so that the 3D effect can be presented to the user. This guide covers how to create and stop WebXR sessions.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></dt>
+ <dt><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR</a></dt>
  <dd>In this guide, the required concepts of 3D geometry are briefly reviewed, and the fundamentals of how that geometry is represented in WebXR are detailed. Learn how reference spaces are used to position objects—and the viewer—and the differences among the available types of reference space, as well as their use cases.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></dt>
+ <dt><a href=/web/api/webxr_device_api/spatial_tracking>Spatial tracking in WebXR</a></dt>
  <dd>This guide describes how objects—including the user's body and its parts—are located in space, and how their movement and orientation relative to one another is monitored and managed over time. This article explains the relationship between spaces, poses, viewers, and views.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</a></dt>
+ <dt><a href=/web/api/webxr_device_api/rendering>Rendering and the WebXR frame animation callback</a></dt>
  <dd>Starting with how you schedule frames to be rendered, this guide then continues to cover how to determine the placement of objects in the view and how to then render them into the WebGL buffer used for each of the two eyes' views of the scene.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR </a></dt>
+ <dt><a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers: Simulating cameras in WebXR </a></dt>
  <dd>WebGL (and therefore WebXR) doesn't really have a concept of a camera, which is the traditional concept used to represent a viewpoint in 3D graphics. In this article, we see how to simulate a camera and how to create the illusion of moving a viewer through a world in which the viewer doesn't really move.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Lighting">Lighting a WebXR setting</a></dt>
+ <dt><a href=/web/api/webxr_device_api/lighting>Lighting a WebXR setting</a></dt>
  <dd>Since WebXR rendering is based upon WebGL, the same lighting techniques used for any 3D application are applied to WebXR scenes. However, there are issues specific to creating augmented and virtual reality settings that need to be considered when writing your lighting code. This article discusses those issues.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</a></dt>
+ <dt><a href=/web/api/webxr_device_api/bounded_reference_spaces>Using bounded reference spaces</a></dt>
  <dd>In this article, we examine how to use a <code>bounded-floor</code> reference space to define the boundaries of where the viewer can safely move about without leaving the area tracked by their XR hardware or colliding with a physical obstacle. On devices which support it, <code>bounded-floor</code> can be a useful tool in your repertoire.</dd>
 </dl>
 
 <h3 id="Making_it_interactive">Making it interactive</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></dt>
+ <dt><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion: A WebXR example</a></dt>
  <dd>In this example and tutorial, we use information learned throughout the WebXR documentation to create a scene containing a rotating cube which the user can move around using both VR headset and keyboard and mouse.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a></dt>
+ <dt><a href=/web/api/webxr_device_api/inputs>Inputs and input sources</a></dt>
  <dd>A guide to input sources and how to efficiently manage the input devices being used to control the WebXR session, and how to receive and process user inputs from those devices.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Audio_API/Targeting">Targeting and hit detection </a></dt>
+ <dt><a href=/web/api/web_audio_api/targeting>Targeting and hit detection </a></dt>
  <dd>How to use an input source's targeting ray mode and targeting ray space to display a targeting ray, identify targeted surfaces or objects, and perform related tasks.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles</a></dt>
+ <dt><a href=/web/api/webxr_device_api/input_profiles>Using WebXR input profiles</a></dt>
  <dd>A guide to interpreting the {{Glossary("JSON")}} data provided by the <a href="https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry">WebXR Input Profiles Registry</a>, which can be used to determine what options and controls are available on the user's available input devices.</dd>
- <dt><a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications</a></dt>
+ <dt><a href=/web/webxr_device_api/gamepads>Supporting advanced controllers and gamepads in WebXR applications</a></dt>
  <dd>WebXR uses the {{domxref("Gamepad")}} object to describe the controls available on complex input devices (such as hand controllers with multiple buttons and/or axes) and gamepad-like devices. In this guide, learn how to make use of these devices' controls.</dd>
 </dl>
 
 <h3 id="Performance_and_security">Performance and security</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a></dt>
+ <dt><a href=/web/api/webxr_device_api/performance>WebXR performance guide</a></dt>
  <dd>Recommendations and tips to help you optimize the performance of your WebXR application.</dd>
- <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security">Permissions and security for WebXR</a></dt>
+ <dt><a href=/web/api/webxr_device_api/permissions_and_security>Permissions and security for WebXR</a></dt>
  <dd>The WebXR Device API has several areas of security to contend with, from establishing feature-policy to ensuring the user intends to use the mixed reality presentation before activating it.</dd>
 </dl>
 
 <h3 id="Including_other_media">Including other media</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Web/Media/3D_audio">Positional audio in a 3D environment</a></dt>
+ <dt><a href=/web/media/3d_audio>Positional audio in a 3D environment</a></dt>
  <dd>In 3D environments, which may either be 3D scenes rendered to the screen or a mixed reality experience experienced using a headset, it's important for audio to be performed so that it sounds like it's coming from the direction of its source. This guide covers how to accomplish this.</dd>
- <dt><a href="/en-US/docs/Web/Media/3D_video">Playing video in a 3D environment</a></dt>
- <dd>In this guide, we examine how to play video into a 3D scene. This technique can be used in both standard <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> applications presented on a flat computer screen, or in a <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a>-generated virtual or augmented reality environment.</dd>
+ <dt><a href=/web/media/3d_video>Playing video in a 3D environment</a></dt>
+ <dd>In this guide, we examine how to play video into a 3D scene. This technique can be used in both standard <a href=/web/api/webgl_api>WebGL</a> applications presented on a flat computer screen, or in a <a href=/web/api/webxr_device_api>WebXR</a>-generated virtual or augmented reality environment.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -200,9 +200,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/Graphics">Graphics on the web</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>: Accelerated 2D and 3D graphics on the web</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>: 2D drawing for the web</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a></li>
+ <li><a href=/web/guide/graphics>Graphics on the web</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a></li>
+ <li><a href=/web/api/webgl_api>WebGL API</a>: Accelerated 2D and 3D graphics on the web</li>
+ <li><a href=/web/api/canvas_api>Canvas API</a>: 2D drawing for the web</li>
+ <li><a href=/web/api/canvas_api/tutorial>Canvas tutorial</a></li>
 </ul>

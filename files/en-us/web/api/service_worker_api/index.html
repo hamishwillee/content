@@ -16,9 +16,9 @@ tags:
 
 <h2 id="Service_worker_concepts_and_usage">Service worker concepts and usage</h2>
 
-<p>A service worker is an event-driven <a href="/en-US/docs/Web/API/Worker">worker</a> registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).</p>
+<p>A service worker is an event-driven <a href=/web/api/worker>worker</a> registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).</p>
 
-<p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> and <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> can't be used inside a service worker.</p>
+<p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous <a href=/web/api/xmlhttprequest>XHR</a> and <a href=/web/api/web_storage_api>Web Storage</a> can't be used inside a service worker.</p>
 
 <p>Service workers only run over HTTPS, for security reasons. Having modified network requests, wide open to <em>man in the middle</em> attacks would be really bad. In Firefox, Service Worker APIs are also hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a>.</p>
 
@@ -27,7 +27,7 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Service workers make heavy use of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.</p>
+<p><strong>Note</strong>: Service workers make heavy use of <a href=/web/javascript/reference/global_objects/promise>promises</a>, as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.</p>
 </div>
 
 <h3 id="Registration">Registration</h3>
@@ -69,7 +69,7 @@ tags:
 <p><strong>Note</strong>: Because <code>install</code>/<code>activate</code> events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on <code>install</code> or <code>activate</code> events with a promise, functional events such as <code>fetch</code> and <code>push</code> will wait until the promise is successfully resolved.</p>
 </div>
 
-<p>For a complete tutorial to show how to build up your first basic example, read <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a>.</p>
+<p>For a complete tutorial to show how to build up your first basic example, read <a href=/web/api/serviceworker_api/using_service_workers>Using Service Workers</a>.</p>
 
 <h2 id="Other_use_case_ideas">Other use case ideas</h2>
 
@@ -89,7 +89,7 @@ tags:
 
 <ul>
  <li><a href="https://github.com/slightlyoff/BackgroundSync">Background synchronization</a>: Start up a service worker even when no users are at the site, so caches can be updated, etc.</li>
- <li><a href="/en-US/docs/Web/API/Push_API">Reacting to push messages</a>: Start up a service worker to send users a message to tell them new content is available.</li>
+ <li><a href=/web/api/push_api>Reacting to push messages</a>: Start up a service worker to send users a message to tell them new content is available.</li>
  <li>Reacting to a particular time &amp; date.</li>
  <li>Entering a geo-fence.</li>
 </ul>
@@ -164,7 +164,7 @@ tags:
 
 <ul>
  <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href=/web/api/serviceworker_api/using_service_workers>Using Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>

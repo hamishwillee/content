@@ -9,15 +9,15 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <a href="/en-US/docs/Web/CSS/margin-top">top</a> and <a href="/en-US/docs/Web/CSS/margin-bottom">bottom</a> margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as <strong>margin collapsing</strong>. Note that the margins of <a href="/en-US/docs/Web/CSS/float">floating</a> and <a href="/en-US/docs/Web/CSS/position#absolute">absolutely positioned</a> elements never collapse.</p>
+<p>The <a href=/web/css/margin-top>top</a> and <a href=/web/css/margin-bottom>bottom</a> margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as <strong>margin collapsing</strong>. Note that the margins of <a href=/web/css/float>floating</a> and <a href=/web/css/position#absolute>absolutely positioned</a> elements never collapse.</p>
 
 <p>Margin collapsing occurs in three basic cases:</p>
 
 <dl>
  <dt>Adjacent siblings</dt>
- <dd>The margins of adjacent siblings are collapsed (except when the latter sibling needs to be <a href="/en-US/docs/Web/CSS/clear">cleared</a> past floats).</dd>
+ <dd>The margins of adjacent siblings are collapsed (except when the latter sibling needs to be <a href=/web/css/clear>cleared</a> past floats).</dd>
  <dt>No content separating parent and descendants</dt>
- <dd>If there is no border, padding, inline part, <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> created, or <em><a href="/en-US/docs/Web/CSS/clear">clearance</a></em> to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, {{cssxref("min-height")}}, or {{cssxref("max-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.</dd>
+ <dd>If there is no border, padding, inline part, <a href=/web/guide/css/block_formatting_context>block formatting context</a> created, or <em><a href=/web/css/clear>clearance</a></em> to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, {{cssxref("min-height")}}, or {{cssxref("max-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.</dd>
  <dt>Empty blocks</dt>
  <dd>If there is no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate a block's {{cssxref("margin-top")}} from its {{cssxref("margin-bottom")}}, then its top and bottom margins collapse.</dd>
 </dl>

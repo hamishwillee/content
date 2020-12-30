@@ -49,7 +49,7 @@ exports.book_detail = function(req, res, <strong>next</strong>) {
 <p><strong>Note:</strong> We don't need to require <em>async</em> and <em>BookInstance</em> in this step, as we already imported those modules when we implemented the home page controller.</p>
 </div>
 
-<p>The method uses <code>async.parallel()</code> to find the <code>Book</code> and its associated copies (<code>BookInstances</code>) in parallel. The approach is exactly the same as described for the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">Genre detail page</a>. Since the key 'title' is used to give name to the webpage (as defined in the header in 'layout.pug'), this time we are passing <code>results.book.title</code> while rendering the webpage.</p>
+<p>The method uses <code>async.parallel()</code> to find the <code>Book</code> and its associated copies (<code>BookInstances</code>) in parallel. The approach is exactly the same as described for the <a href=/learn/server-side/express_nodejs/displaying_data/genre_detail_page>Genre detail page</a>. Since the key 'title' is used to give name to the webpage (as defined in the header in 'layout.pug'), this time we are passing <code>results.book.title</code> while rendering the webpage.</p>
 
 <h2 id="View">View</h2>
 
@@ -112,6 +112,6 @@ block content
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page">Author detail page</a>.</li>
+ <li>Return to <a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href=/learn/server-side/express_nodejs/displaying_data/author_detail_page>Author detail page</a>.</li>
 </ul>

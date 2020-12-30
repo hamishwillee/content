@@ -31,13 +31,13 @@ tags:
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/HTML/Element/input/date">date</a> and <a href="/en-US/docs/Web/HTML/Element/input/time">time</a> {{htmlelement("input")}} types are now enabled in all builds ({{bug("1399036")}}).</li>
+ <li>The <a href=/web/html/element/input/date>date</a> and <a href=/web/html/element/input/time>time</a> {{htmlelement("input")}} types are now enabled in all builds ({{bug("1399036")}}).</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>The <code>minimal-ui</code> and <code>standalone</code> values of the <code><a href="/en-US/docs/Web/CSS/@media/display-mode">display-mode</a></code> media query are now supported ({{bug(1369815)}}). See also the <a href="/en-US/docs/Web/Manifest#display">Web app manifest <code>display</code> field</a>.</li>
+ <li>The <code>minimal-ui</code> and <code>standalone</code> values of the <code><a href=/web/css/@media/display-mode>display-mode</a></code> media query are now supported ({{bug(1369815)}}). See also the <a href=/web/manifest#display>Web app manifest <code>display</code> field</a>.</li>
  <li>The {{CSSxRef("grid-row-gap")}} and {{CSSxRef("grid-column-gap")}} properties are no longer reset by the {{CSSxRef("grid")}} shorthand ({{bug(1387410)}}).</li>
  <li>The <code>layout.css.clip-path-shapes.enabled</code> preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}.  This support was shipped in Firefox 54 and can no longer be disabled.</li>
 </ul>
@@ -71,7 +71,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>The non-standard {{JSxRef("Statements/for_each...in", "for each...in")}} (E4X) loop has been removed. Please use {{JSxRef("Statements/for...of", "for...of")}} instead and see <a href="/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated">Warning: JavaScript 1.6's for-each-in loops are deprecated</a> for migration help. ({{bug(1083470)}}).</li>
+ <li>The non-standard {{JSxRef("Statements/for_each...in", "for each...in")}} (E4X) loop has been removed. Please use {{JSxRef("Statements/for...of", "for...of")}} instead and see <a href=/web/javascript/reference/errors/for-each-in_loops_are_deprecated>Warning: JavaScript 1.6's for-each-in loops are deprecated</a> for migration help. ({{bug(1083470)}}).</li>
  <li>The {{JSxRef("Object.prototype.watch()")}} and {{JSxRef("Object.unwatch", "unwatch()")}} methods are deprecated, will now throw a warning when used, and will be removed soon ({{bug(934669)}}).</li>
  <li>The non-standard {{JSxRef("Iterator")}} and {{JSxRef("StopIteration")}} objects as well as the legacy iteration protocol have been removed ({{bug(1098412)}}).</li>
  <li>Async generator is now enabled ({{bug(1352312)}}).</li>
@@ -84,14 +84,14 @@ tags:
 
 <ul>
  <li>The {{DOMxRef("PerformanceObserver")}} API is now enabled by default ({{bug(1386021)}}).</li>
- <li>The {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (known as the Abort API) have been added, allowing DOM requests (such as <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch requests</a>) to be aborted if desired ({{bug(1378342)}}).</li>
- <li>[2] The <a href="/en-US/docs/Web/API/Storage_API">Storage API</a> is implemented and enabled by default ({{bug(1399038)}}).</li>
+ <li>The {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (known as the Abort API) have been added, allowing DOM requests (such as <a href=/web/api/windoworworkerglobalscope/fetch>fetch requests</a>) to be aborted if desired ({{bug(1378342)}}).</li>
+ <li>[2] The <a href=/web/api/storage_api>Storage API</a> is implemented and enabled by default ({{bug(1399038)}}).</li>
 </ul>
 
 <h4 id="DOM">DOM</h4>
 
 <ul>
- <li>The {{DOMxRef("Selection.type")}} property of the <a href="/en-US/docs/Web/API/Selection_API">Selection API</a> is now implemented ({{bug(1359157)}}).</li>
+ <li>The {{DOMxRef("Selection.type")}} property of the <a href=/web/api/selection_api>Selection API</a> is now implemented ({{bug(1359157)}}).</li>
  <li>{{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} is now supported ({{bug(1388069)}}).</li>
  <li>The <code>files</code> property of the {{DOMxRef("HTMLInputElement")}} interface is now settable ({{bug(1384030)}}).</li>
  <li>The <code>HTMLDocument.getSelection()</code> method has been moved to the {{DOMxRef("Document.getSelection","Document")}} interface so it is available to XML documents ({{bug(718711)}}).</li>
@@ -106,11 +106,11 @@ tags:
 <h4 id="Media_and_WebRTC">Media and WebRTC</h4>
 
 <ul>
- <li>Support for messages of arbitrary size (up to 1GiB, although 256kiB is more interoperable) is now supported on {{DOMxRef("RTCDataChannel")}} through use of the end-of-record (EOR) flag on SCTP messages. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} for more information ({{bug(979417)}}).
+ <li>Support for messages of arbitrary size (up to 1GiB, although 256kiB is more interoperable) is now supported on {{DOMxRef("RTCDataChannel")}} through use of the end-of-record (EOR) flag on SCTP messages. See {{SectionOnPage(/web/api/webrtc_api/using_data_channels, "Understanding message size limits")}} for more information ({{bug(979417)}}).
   <div class="note">Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See {{bug(1381145)}} to track progress on implementing and deploying ndata support in Firefox..</div>
  </li>
  <li>The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a <code>TypeError</code> exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of {{bug(979417)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> has been updated so that {{event("error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.</li>
+ <li>The <a href=/web/api/mediastream_recording_api>MediaStream Recording API</a> has been updated so that {{event("error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.</li>
  <li>Updated the documentation around {{DOMxRef("OfflineAudioContext")}} since its constructor's inputs can now be specified in an object rather than as a list of parameters ({{bug(1388591)}}).</li>
  <li>The Web Audio API now properly supports multi-channel output ({{bug(1378070)}}).</li>
 </ul>
@@ -129,7 +129,7 @@ tags:
 <h3 id="Other">Other</h3>
 
 <ul>
- <li>Firefox <a href="/en-US/docs/Mozilla/Firefox/Headless_mode">headless mode</a> now includes a <code>-screenshot</code> flag that allows you to take website screenshots directly from the command line ({{bug(1378010)}}).</li>
+ <li>Firefox <a href=/mozilla/firefox/headless_mode>headless mode</a> now includes a <code>-screenshot</code> flag that allows you to take website screenshots directly from the command line ({{bug(1378010)}}).</li>
 </ul>
 
 <h2 id="Removals_from_the_web_platform">Removals from the web platform</h2>
@@ -137,13 +137,13 @@ tags:
 <h3 id="HTML_2">HTML</h3>
 
 <ul>
- <li><code>&lt;link rel="preload"&gt;</code> (see <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a>) has been disabled in Firefox 57 because of various web compatibility issues (e.g. {{bug(1405761)}}). An improved version that works for non-cacheable resources is expected to land in Firefox 58.</li>
+ <li><code>&lt;link rel="preload"&gt;</code> (see <a href=/web/html/preloading_content>Preloading content with rel="preload"</a>) has been disabled in Firefox 57 because of various web compatibility issues (e.g. {{bug(1405761)}}). An improved version that works for non-cacheable resources is expected to land in Firefox 58.</li>
 </ul>
 
 <h3 id="APIs_2">APIs</h3>
 
 <ul>
- <li>Mozilla's proprietary <a href="/en-US/docs/Archive/Social_API">Social API</a> has been completely removed ({{bug(1388902)}}).</li>
+ <li>Mozilla's proprietary <a href=/archive/social_api>Social API</a> has been completely removed ({{bug(1388902)}}).</li>
 </ul>
 
 <h3 id="SVG_2">SVG</h3>
@@ -161,111 +161,111 @@ tags:
 <p>The following APIs have been added or extended:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/bookmarks>bookmarks</a></code>
 
   <ul>
-   <li>support for separators through <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType">bookmarks.BookmarkTreeNodeType</a></code></li>
+   <li>support for separators through <code><a href=/mozilla/add-ons/webextensions/api/bookmarks/bookmarktreenodetype>bookmarks.BookmarkTreeNodeType</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code>
   <ul>
    <li><code>theme_icons</code> property for light/dark theme icons</li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/browseraction>browserAction</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup">browserAction.openPopup()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/browseraction/openpopup>browserAction.openPopup()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/browsersettings>browserSettings</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents">allowPopupsForUserEvents</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride">homepageOverride</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior">imageAnimationBehavior</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride">newTabPageOverride</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/browsersettings/allowpopupsforuserevents>allowPopupsForUserEvents</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/browsersettings/homepageoverride>homepageOverride</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/browsersettings/imageanimationbehavior>imageAnimationBehavior</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/browsersettings/newtabpageoverride>newTabPageOverride</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData">browsingData</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/browsingdata>browsingData</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage">browsingData.removeLocalStorage()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/browsingdata/removelocalstorage>browsingData.removeLocalStorage()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard">clipboard</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/clipboard>clipboard</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData">setImageData()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/clipboard/setimagedata>setImageData()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities">contextualIdentities</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/contextualidentities>contextualIdentities</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated">onCreated</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved">onRemoved</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated">onUpdated</a></code></li>
-   <li><code>colorCode</code> and <code>iconUrl</code> in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity">contextualIdentities.ContextualIdentity</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/contextualidentities/oncreated>onCreated</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/contextualidentities/onremoved>onRemoved</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/contextualidentities/onupdated>onUpdated</a></code></li>
+   <li><code>colorCode</code> and <code>iconUrl</code> in <code><a href=/mozilla/add-ons/webextensions/api/contextualidentities/contextualidentity>contextualIdentities.ContextualIdentity</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/devtools.panels>devtools.panels</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane">devtools.panels.ElementsPanel.createSidebarPane()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/devtools.panels/elementspanel/createsidebarpane>devtools.panels.ElementsPanel.createSidebarPane()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/downloads>downloads</a></code>
   <ul>
-   <li><code>incognito</code> option in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download">downloads.download()</a></code></li>
-   <li><code>estimatedEndTime</code> property in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem">downloads.DownloadItem</a></code></li>
+   <li><code>incognito</code> option in <code><a href=/mozilla/add-ons/webextensions/api/downloads/download>downloads.download()</a></code></li>
+   <li><code>estimatedEndTime</code> property in <code><a href=/mozilla/add-ons/webextensions/api/downloads/downloaditem>downloads.DownloadItem</a></code></li>
   </ul>
  </li>
  <li><code><a href="/en-US/Add-ons/WebExtensions/API/find">find</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/find">find()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults">highlightResults()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting">removeHighlighting()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/find/find>find()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/find/highlightresults>highlightResults()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/find/removehighlighting>removeHighlighting()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup">pageAction.openPopup()</a></code></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/pageaction/openpopup>pageAction.openPopup()</a></code></li>
  <li><code><a href="/en-US/Add-ons/WebExtensions/API/privacy/websites">privacy</a></code>
   <ul>
    <li><code><a href="/en-US/Add-ons/WebExtensions/API/privacy/websites">websites.trackingProtectionMode</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/proxy>proxy</a></code>
   <ul>
    <li><code>FindProxyForURL()</code> can now return an object</li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/runtime>runtime</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage">runtime.openOptionsPage()</a></code> support on Android</li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/runtime/openoptionspage>runtime.openOptionsPage()</a></code> support on Android</li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions">sessions</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/sessions>sessions</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue">setTabValue()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue">getTabValue()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue">removeTabValue()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue">setWindowValue()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue">getWindowValue()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue">removeWindowValue()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sessions/settabvalue>setTabValue()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sessions/gettabvalue>getTabValue()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sessions/removetabvalue>removeTabValue()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sessions/setwindowvalue>setWindowValue()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sessions/getwindowvalue>getWindowValue()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sessions/removewindowvalue>removeWindowValue()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">sidebarAction</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/sidebaraction>sidebarAction</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open">sidebarAction.open()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/sidebaraction/open>sidebarAction.open()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/storage>storage</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed">storage.managed</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/storage/managed>storage.managed</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/tabs>tabs</a></code>
   <ul>
-   <li><code>loadReplace</code> option in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update">tabs.update()</a></code></li>
-   <li><code>discarded</code> property in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab">tabs.Tab</a></code>, <code><a href="/en-US/docs/">tabs.onUpdated</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create">tabs.create()</a></code> can open "view-source:" URLs</li>
-   <li><code>openerTabId</code> property in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab">tabs.Tab</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create">tabs.create()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update">tabs.update()</a></code></li>
+   <li><code>loadReplace</code> option in <code><a href=/mozilla/add-ons/webextensions/api/tabs/update>tabs.update()</a></code></li>
+   <li><code>discarded</code> property in <code><a href=/mozilla/add-ons/webextensions/api/tabs/tab>tabs.Tab</a></code>, <code><a href=/>tabs.onUpdated</a></code>, and <code><a href=/mozilla/add-ons/webextensions/api/tabs/query>tabs.query()</a></code></li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/tabs/create>tabs.create()</a></code> can open "view-source:" URLs</li>
+   <li><code>openerTabId</code> property in <code><a href=/mozilla/add-ons/webextensions/api/tabs/tab>tabs.Tab</a></code>, <code><a href=/mozilla/add-ons/webextensions/api/tabs/create>tabs.create()</a></code>, <code><a href=/mozilla/add-ons/webextensions/api/tabs/query>tabs.query()</a></code>, and <code><a href=/mozilla/add-ons/webextensions/api/tabs/update>tabs.update()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/theme>theme</a></code>
   <ul>
    <li><code>colors.toolbar</code></li>
    <li><code>colors.toolbar_field</code></li>
@@ -273,20 +273,20 @@ tags:
    <li><code>colors.toolbar_text</code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">theme</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/theme>theme</a></code>
   <ul>
    <li><code>windowId</code> option to <code><a href="/en-US/Add-ons/WebExtensions/API/theme/update">theme.update()</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/webrequest>webRequest</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData">filterResponseData()</a></code></li>
-   <li><code>proxyInfo</code> property in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code> events</li>
+   <li><code><a href=/mozilla/add-ons/webextensions/api/webrequest/filterresponsedata>filterResponseData()</a></code></li>
+   <li><code>proxyInfo</code> property in <code><a href=/mozilla/add-ons/webextensions/api/webrequest>webRequest</a></code> events</li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></code>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/windows>windows</a></code>
   <ul>
-   <li><code>allowScriptsToClose</code> option in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create">windows.create()</a></code></li>
+   <li><code>allowScriptsToClose</code> option in <code><a href=/mozilla/add-ons/webextensions/api/windows/create>windows.create()</a></code></li>
   </ul>
  </li>
 </ul>

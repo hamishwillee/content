@@ -4,10 +4,10 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 ---
 <h2 id="mach_Setup">mach Setup</h2>
 
-<p>Most people should be reading the <a href="/en-US/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT">Eclipse CDT</a> page instead of this one, now that <code>mach ide eclipse</code> is a thing.</p>
+<p>Most people should be reading the <a href=/mozilla/developer_guide/eclipse/eclipse_cdt>Eclipse CDT</a> page instead of this one, now that <code>mach ide eclipse</code> is a thing.</p>
 
 <div class="notecard warning">
-<p>This page contains the content that used to live on the <a href="/en-US/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT">Eclipse CDT</a> page that most people will likely just consider noise. There is valuable information here that should be integrated back into that page, but a large amount of it is now taken care of by the <code>mach</code> project generation code. For now it's stored here until that integration happens in order that the Eclipse CDT page isn't hugely cluttered with mostly redundant information, make setting up Eclipse look much more complicated than it is nowadays.</p>
+<p>This page contains the content that used to live on the <a href=/mozilla/developer_guide/eclipse/eclipse_cdt>Eclipse CDT</a> page that most people will likely just consider noise. There is valuable information here that should be integrated back into that page, but a large amount of it is now taken care of by the <code>mach</code> project generation code. For now it's stored here until that integration happens in order that the Eclipse CDT page isn't hugely cluttered with mostly redundant information, make setting up Eclipse look much more complicated than it is nowadays.</p>
 </div>
 
 <h2 id="Setup_time">Setup time</h2>
@@ -18,7 +18,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p>You can expect it to take an hour or so to work through these instructions if you're doing so for the first time.</p>
 
-<p>(This assumes that you already have a copy of the Mozilla source, and that you have also <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build" title="Simple Firefox build">built the source</a> so that you have a pre-existing object directory. If that is not the case, then get your build going now so that it can be running while you continue with the instructions below. FAQ: {{ anch("Why_does_Eclipse_need_an_object_directory.3F","Wait, why does Eclipse need an object directory?") }})</p>
+<p>(This assumes that you already have a copy of the Mozilla source, and that you have also <a href=/mozilla/developer_guide/build_instructions/simple_firefox_build title="Simple Firefox build">built the source</a> so that you have a pre-existing object directory. If that is not the case, then get your build going now so that it can be running while you continue with the instructions below. FAQ: {{ anch("Why_does_Eclipse_need_an_object_directory.3F","Wait, why does Eclipse need an object directory?") }})</p>
 
 <h2 id="Code_assistance">Code assistance</h2>
 
@@ -76,7 +76,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p>Select "C/C++ &gt; Build &gt; Console" and set "Limit console output (number of lines)" to something large, like "1000000".</p>
 
-<p>Eclipse CDT will try to format C/C++ code that you add as you type. However, its default formats are not a good match to <a href="/en-US/docs/Mozilla/Developer_Guide/Coding_Style" title="Mozilla Coding Style Guide">Mozilla's style rules</a>. Download this <a href="/@api/deki/files/6241/=eclipse-formatter-for-mozilla.xml">first pass at an Eclipse formatter configuration for Mozilla C/C++ coding style</a>, and install it by opening the workspace preferences, selecting "C/C++ &gt; Code Style &gt; Formatter", and then using the "Import" button to import that file. The "Active profile" field should then automatically change to "Mozilla". Depending on the area of the code that you work on, you may need to tweak this configuration using the "Edit" button. (Note that the format settings under "General &gt; Editors &gt; Text Editors" have no effect in C/C++ views, since the C/C++ settings are more specific and override those settings. However, you may still want to tweak those settings if you'll be editing other file types in Eclipse.)</p>
+<p>Eclipse CDT will try to format C/C++ code that you add as you type. However, its default formats are not a good match to <a href=/mozilla/developer_guide/coding_style title="Mozilla Coding Style Guide">Mozilla's style rules</a>. Download this <a href="/@api/deki/files/6241/=eclipse-formatter-for-mozilla.xml">first pass at an Eclipse formatter configuration for Mozilla C/C++ coding style</a>, and install it by opening the workspace preferences, selecting "C/C++ &gt; Code Style &gt; Formatter", and then using the "Import" button to import that file. The "Active profile" field should then automatically change to "Mozilla". Depending on the area of the code that you work on, you may need to tweak this configuration using the "Edit" button. (Note that the format settings under "General &gt; Editors &gt; Text Editors" have no effect in C/C++ views, since the C/C++ settings are more specific and override those settings. However, you may still want to tweak those settings if you'll be editing other file types in Eclipse.)</p>
 
 <p>Select "C/C++ &gt; Editor" and set "Workspace default" to "Doxygen".</p>
 
@@ -139,7 +139,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <h3 id="Build_option_discovery">Build option discovery</h3>
 
-<div class="note">This section requires that you have already <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build">built your mozilla source tree</a> (so that you have an object directory for it), and it is strongly recommended that the object directory is up to date so that the just-print-mozilla-build.py script runs quickly.</div>
+<div class="note">This section requires that you have already <a href=/mozilla/developer_guide/build_instructions/simple_firefox_build>built your mozilla source tree</a> (so that you have an object directory for it), and it is strongly recommended that the object directory is up to date so that the just-print-mozilla-build.py script runs quickly.</div>
 
 <p>As explained in the {{ anch("Code assistance") }} section above, to provide good code assistance Eclipse CDT needs to collect build information for the source files by processing a build log from a full, clean build made using -j1 -w. Since such a non-parallel, full build would take a very long time, we're going to cheat and set Eclipse's "Build" action to run jwatt's just-print-mozilla-build.py script instead. This script will complete in about 30 seconds on a warm tree (files cached in RAM) if your object directory is up to date, although Eclipse will take several minutes to process the "build output" that it produces.</p>
 
@@ -151,7 +151,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <h3 id="Additional_discovery_for_C11_mode">Additional discovery for C++11 mode</h3>
 
-<p><a href="/en-US/docs/Using_CXX_in_Mozilla_code">As of Mozilla 25</a>, Mozilla is built in C++11 mode. When GCC is invoked in C++11 mode, it defines pre-processor symbols that enable conditional compilation of C++11 code in its standard library. To correctly parse this code, Eclipse CDT needs to know about these symbols. Unfortunately, the build option discovery process outlined above does not pick up this information, so CDT needs to be told separately about C++11 mode. To do this, go to "Preferences -&gt; C/C++ -&gt; Build -&gt; Settings -&gt; [Discovery] tab -&gt; CDT GCC Built-in Compiler Settings" and add the flag "-std=c++11" at the end of the field labeled "Command to get compiler specs".</p>
+<p><a href=/using_cxx_in_mozilla_code>As of Mozilla 25</a>, Mozilla is built in C++11 mode. When GCC is invoked in C++11 mode, it defines pre-processor symbols that enable conditional compilation of C++11 code in its standard library. To correctly parse this code, Eclipse CDT needs to know about these symbols. Unfortunately, the build option discovery process outlined above does not pick up this information, so CDT needs to be told separately about C++11 mode. To do this, go to "Preferences -&gt; C/C++ -&gt; Build -&gt; Settings -&gt; [Discovery] tab -&gt; CDT GCC Built-in Compiler Settings" and add the flag "-std=c++11" at the end of the field labeled "Command to get compiler specs".</p>
 
 <div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
 

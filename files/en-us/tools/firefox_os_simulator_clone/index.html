@@ -3,7 +3,7 @@ title: Firefox OS Simulator
 slug: Tools/Firefox_OS_Simulator_clone
 ---
 <div>{{ToolsSidebar}}</div><div class="note">
-<p>This page describes the Firefox OS Simulator for developers targeting Firefox OS 1.2 or later. If you're developing apps for Firefox OS 1.1, you should check out the documentation for the <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator">Firefox OS 1.1 Simulator</a> instead.</p>
+<p>This page describes the Firefox OS Simulator for developers targeting Firefox OS 1.2 or later. If you're developing apps for Firefox OS 1.1, you should check out the documentation for the <a href=/tools/firefox_os_1.1_simulator>Firefox OS 1.1 Simulator</a> instead.</p>
 </div>
 
 <p><span style="line-height: 1.5;">The Firefox OS Simulator is <span style="line-height: 1.5;">a version of the higher layers of Firefox OS</span> that simulates a Firefox OS device, but runs on the desktop</span><span style="line-height: 1.5;">. This means that in many cases, you don't need a real device to test and debug your app. </span><span style="line-height: 1.5;">It runs in a window the same size as a Firefox OS device, includes the Firefox OS user interface and built-in apps, and simulates many of the Firefox OS device APIs.</span></p>
@@ -30,7 +30,7 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <ul>
  <li>The button on the left takes you to the Home screen, or switches the Simulator off if you hold it down.</li>
- <li>The button on the right switches the Simulator between portrait and landscape orientation. This will generate the <a href="/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change">orientationchange</a> event.</li>
+ <li>The button on the right switches the Simulator between portrait and landscape orientation. This will generate the <a href=/webapi/managing_screen_orientation#Listening_orientation_change>orientationchange</a> event.</li>
 </ul>
 
 <h2 id="Limitations_of_the_Simulator">Limitations of the Simulator</h2>
@@ -60,13 +60,13 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <ul>
  <li><a href="/en-US/WebAPI/WebTelephony">Telephony</a></li>
- <li><a href="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
- <li><a href="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
- <li><a href="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
- <li><a href="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
- <li><a href="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
- <li><a href="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
- <li><a href="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+ <li><a href=/webapi/websms>WebSMS</a></li>
+ <li><a href=/webapi/webbluetooth>WebBluetooth</a></li>
+ <li><a href=/webapi/using_light_events>Ambient Light</a></li>
+ <li><a href=/webapi/proximity>Proximity</a></li>
+ <li><a href=/webapi/network_information>Network Information</a></li>
+ <li><a href=/online_and_offline_events>navigator.onLine and offline events</a></li>
+ <li><a href=/webapi/vibration>Vibration</a></li>
 </ul>
 
 <h2 id="Getting_help"><a name="Simulator-help"></a>Getting help</h2>
@@ -75,7 +75,7 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <h3 id="How_to_enable_verbose_logging"><a name="Simulator-verbose-logging"></a>How to enable verbose logging</h3>
 
-<p>You can see messages logged from your app in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, which you can attach to your app using the <a href="/docs/Tools/WebIDE/Troubleshooting">WebIDE</a>. If you want to catch early messages happening during app startup, before the console gets connected and working, you can enable verbose logging in the Simulator.</p>
+<p>You can see messages logged from your app in the <a href=/tools/web_console>Web Console</a>, which you can attach to your app using the <a href="/docs/Tools/WebIDE/Troubleshooting">WebIDE</a>. If you want to catch early messages happening during app startup, before the console gets connected and working, you can enable verbose logging in the Simulator.</p>
 
 <p>Visit about:config and <strong>create</strong> a new preference. The preference name is different for each version of the Simulator:</p>
 
@@ -84,4 +84,4 @@ slug: Tools/Firefox_OS_Simulator_clone
  <li>extensions.fxos_1_2_simulator@mozilla.org.sdk.console.logLevel for Firefox OS 1.2</li>
 </ul>
 
-<p>Set it to the string value "all", and disable, then re-enable, the add-on in the Add-on Manager. Now extra messages about the Simulator's operation will appear in the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>.</p>
+<p>Set it to the string value "all", and disable, then re-enable, the add-on in the Add-on Manager. Now extra messages about the Simulator's operation will appear in the <a href=/tools/browser_console>Browser Console</a>.</p>

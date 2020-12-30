@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy. A general understanding of <a href="/en-US/docs/Learn/Server-side/First_steps">server-side website programming</a>, and in particular the mechanics of <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">client-server interactions in websites</a>.</td>
+   <td>Basic computer literacy. A general understanding of <a href=/learn/server-side/first_steps>server-side website programming</a>, and in particular the mechanics of <a href=/learn/server-side/first_steps/client-server_overview>client-server interactions in websites</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -47,11 +47,11 @@ tags:
  <br>
  <em>A password hash is a fixed-length value created by sending the password through a <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash function</a>. Django can check if an entered password is correct by running it through the hash function and comparing the output to the stored hash value. However due to the "one-way" nature of the function, even if a stored hash value is compromised it is hard for an attacker to work out the original password.</em><br>
  <br>
- Django enables protection against many vulnerabilities by default, including SQL injection, cross-site scripting, cross-site request forgery and clickjacking (see <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> for more details of such attacks).</dd>
+ Django enables protection against many vulnerabilities by default, including SQL injection, cross-site scripting, cross-site request forgery and clickjacking (see <a href=/learn/server-side/first_steps/website_security>Website security</a> for more details of such attacks).</dd>
  <dt>Scalable</dt>
  <dd>Django uses a component-based “<a href="https://en.wikipedia.org/wiki/Shared_nothing_architecture">shared-nothing</a>” architecture (each part of the architecture is independent of the others, and can hence be replaced or changed if needed). Having a clear separation between the different parts means that it can scale for increased traffic by adding hardware at any level: caching servers, database servers, or application servers. Some of the busiest sites have successfully scaled Django to meet their demands (e.g. Instagram and Disqus, to name just two).</dd>
  <dt>Maintainable</dt>
- <dd>Django code is written using design principles and patterns that encourage the creation of maintainable and reusable code. In particular, it makes use of the Don't Repeat Yourself (DRY) principle so there is no unnecessary duplication, reducing the amount of code. Django also promotes the grouping of related functionality into reusable "applications" and, at a lower level, groups related code into modules (along the lines of the <a href="/en-US/docs/Glossary/MVC">Model View Controller (MVC)</a> pattern).</dd>
+ <dd>Django code is written using design principles and patterns that encourage the creation of maintainable and reusable code. In particular, it makes use of the Don't Repeat Yourself (DRY) principle so there is no unnecessary duplication, reducing the amount of code. Django also promotes the grouping of related functionality into reusable "applications" and, at a lower level, groups related code into modules (along the lines of the <a href=/glossary/mvc>Model View Controller (MVC)</a> pattern).</dd>
  <dt>Portable</dt>
  <dd>Django is written in Python, which runs on many platforms. That means that you are not tied to any particular server platform, and can run your applications on many flavours of Linux, Windows, and Mac OS X. Furthermore, Django is well-supported by many web hosting providers, who often provide specific infrastructure and documentation for hosting Django sites.</dd>
 </dl>
@@ -102,7 +102,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
+<p><strong>Note</strong>: Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href=/glossary/mvc>Model View Controller</a> architecture. </p>
 </div>
 
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
@@ -254,19 +254,19 @@ def index(request):
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href=/learn/server-side/django/introduction>Django introduction</a></li>
+ <li><a href=/learn/server-side/django/development_environment>Setting up a Django development environment</a></li>
+ <li><a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/django/skeleton_website>Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/django/models>Django Tutorial Part 3: Using models</a></li>
+ <li><a href=/learn/server-side/django/admin_site>Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href=/learn/server-side/django/home_page>Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href=/learn/server-side/django/generic_views>Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href=/learn/server-side/django/sessions>Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href=/learn/server-side/django/authentication>Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href=/learn/server-side/django/forms>Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href=/learn/server-side/django/testing>Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href=/learn/server-side/django/deployment>Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href=/learn/server-side/django/web_application_security>Django web application security</a></li>
+ <li><a href=/learn/server-side/django/django_assessment_blog>DIY Django mini blog</a></li>
 </ul>

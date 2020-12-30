@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><span class="seoSummary">Part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>, the {{domxref("WebGLRenderingContext")}} method <strong><code>getUniformLocation()</code></strong> returns the location of a specific <strong>uniform</strong> variable which is part of a given {{domxref("WebGLProgram")}}.</span> The uniform variable is returned as a {{domxref("WebGLUniformLocation")}} object, which is an opaque identifier used to specify where in the GPU's memory that uniform variable is located.</p>
+<p><span class="seoSummary">Part of the <a href=/web/api/webgl_api>WebGL API</a>, the {{domxref("WebGLRenderingContext")}} method <strong><code>getUniformLocation()</code></strong> returns the location of a specific <strong>uniform</strong> variable which is part of a given {{domxref("WebGLProgram")}}.</span> The uniform variable is returned as a {{domxref("WebGLUniformLocation")}} object, which is an opaque identifier used to specify where in the GPU's memory that uniform variable is located.</p>
 
 <p>Once you have the uniform's location, you can access the uniform itself using one of the other uniform access methods, passing in the uniform location as one of the inputs:</p>
 
@@ -77,7 +77,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, taken from the <code>animateScene()</code> method in the article <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">A basic 2D WebGL animation example</a>, obtains the locations of three uniforms from the shading program, then sets the value of each of the three uniforms.</p>
+<p>In this example, taken from the <code>animateScene()</code> method in the article <a href=/web/api/webgl_api/basic_2d_animation_example#Drawing_and_animating_the_scene>A basic 2D WebGL animation example</a>, obtains the locations of three uniforms from the shading program, then sets the value of each of the three uniforms.</p>
 
 <pre class="brush: js highlight[3-8]">gl.useProgram(shaderProgram);
 
@@ -92,7 +92,7 @@ gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
-<div class="callout-box">This code snippet is taken from <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the function <code>animateScene()</code></a> in "A basic 2D WebGL animation example." See that article for the full sample and to see the resulting animation in action.</div>
+<div class="callout-box">This code snippet is taken from <a href=/web/api/webgl_api/basic_2d_animation_example#Drawing_and_animating_the_scene>the function <code>animateScene()</code></a> in "A basic 2D WebGL animation example." See that article for the full sample and to see the resulting animation in action.</div>
 
 <p>After setting the current shading program to <code>shaderProgram</code>, this code fetches the three uniforms <code>"uScalingFactor"</code>, <code>"uGlobalColor"</code>, and <code>"uRotationVector"</code>, calling <code>getUniformLocation()</code> once for each uniform.</p>
 

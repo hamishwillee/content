@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>The <code>OVR_multiview2</code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds support for rendering into multiple views simultaneously. This especially useful for virtual reality (VR) and WebXR.</p>
+<p>The <code>OVR_multiview2</code> extension is part of the <a href=/web/api/webgl_api>WebGL API</a> and adds support for rendering into multiple views simultaneously. This especially useful for virtual reality (VR) and WebXR.</p>
 
 <p>For more information, see also:</p>
 
@@ -20,7 +20,7 @@ tags:
 	<li><a href="https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/">Multiview WebGL Rendering for Oculus Browser 6.0+</a></li>
 </ul>
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href=/web/api/webgl_api/using_extensions>Using Extensions</a> in the <a href=/web/api/webgl_api/tutorial>WebGL tutorial</a>.</p>
 
 <div class="note">
 <p><strong>Availability:</strong> Support depends on the system's graphics driver (Windows+ANGLE and Android are supported; Windows+GL, Mac, Linux are not supported).</p>
@@ -32,7 +32,7 @@ Currently, there is no way to use multiview to render to a multisampled backbuff
 
 <h2 id="Constants">Constants</h2>
 
-<p>This extension exposes 4 constants that can be used in <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/getParameter">getParameter()</a></code> or <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter">getFramebufferAttachmentParameter()</a></code>.</p>
+<p>This extension exposes 4 constants that can be used in <code><a href=/web/api/webglrenderingcontext/getparameter>getParameter()</a></code> or <code><a href=/web/api/webglrenderingcontext/getframebufferattachmentparameter>getFramebufferAttachmentParameter()</a></code>.</p>
 
 <dl>
 	<dt><code>FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR</code></dt>
@@ -42,13 +42,13 @@ Currently, there is no way to use multiview to render to a multisampled backbuff
 	<dt><code>MAX_VIEWS_OVR</code></dt>
 	<dd>The maximum number of views. Most VR headsets have two views, but there are prototypes of headset with ultra-wide FOV using 4 views which is currently the maximum number of views supported by multiview.</dd>
 	<dt><code>FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR</code></dt>
-	<dd>If baseViewIndex is not the same for all framebuffer attachment points where the value of <code>FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE</code> is not <code>NONE</code>, the framebuffer is considered incomplete. Calling <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus">checkFramebufferStatus</a></code> for a framebuffer in this state returns <code>FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR</code>.</dd>
+	<dd>If baseViewIndex is not the same for all framebuffer attachment points where the value of <code>FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE</code> is not <code>NONE</code>, the framebuffer is considered incomplete. Calling <code><a href=/web/api/webglrenderingcontext/checkframebufferstatus>checkFramebufferStatus</a></code> for a framebuffer in this state returns <code>FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR</code>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
-	<dt><code><a href="/en-US/docs/Web/API/OVR_multiview2/framebufferTextureMultiviewOVR">framebufferTextureMultiviewOVR()</a></code></dt>
+	<dt><code><a href=/web/api/ovr_multiview2/framebuffertexturemultiviewovr>framebufferTextureMultiviewOVR()</a></code></dt>
 	<dd>Simultaneously renders to multiple elements of a 2D texture array.</dd>
 </dl>
 
@@ -111,6 +111,6 @@ void main() {
 <ul>
 	<li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
 	<li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a></li>
+	<li><a href=/web/api/webxr_device_api>WebXR</a></li>
 	<li><a href="https://threejs.org/examples/webxr_vr_multiview">three.js multiview demo</a></li>
 </ul>

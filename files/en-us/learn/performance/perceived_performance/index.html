@@ -9,7 +9,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}</div>
 
-<p><span class="seoSummary"><strong><a href="/en-US/docs/Glossary/Perceived_performance">Perceived performance</a></strong> is how fast a website seems to the user.</span> How a user perceives your performance is as important, or perhaps more important, than any objective statistic, but it's subjective, and not as readily measurable. Perceived performance is user perspective, not a metric.</p>
+<p><span class="seoSummary"><strong><a href=/glossary/perceived_performance>Perceived performance</a></strong> is how fast a website seems to the user.</span> How a user perceives your performance is as important, or perhaps more important, than any objective statistic, but it's subjective, and not as readily measurable. Perceived performance is user perspective, not a metric.</p>
 
 <p>This article provides a brief introduction to perceived performance, looking at user perceptions, and what objective tools can be used to measure that which is subjective.</p>
 
@@ -17,7 +17,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web">client-side web technologies</a>.</td>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, and basic knowledge of <a href=/learn/getting_started_with_the_web>client-side web technologies</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -26,7 +26,7 @@ tags:
  </tbody>
 </table>
 
-<p>Performance is about user perception. How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or unavailability of the <a href="/en-US/docs/Glossary/Main_thread">main thread</a>), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.</p>
+<p>Performance is about user perception. How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or unavailability of the <a href=/glossary/main_thread>main thread</a>), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.</p>
 
 <h2 id="Perceived_performance">Perceived performance</h2>
 
@@ -34,11 +34,11 @@ tags:
 
 <p>There is no unicorn metric that can measure what the user feels, but metrics are useful in gauging improvements (and regressions). Relevant measurements include first meaningful paint (FMP), largest contentful paint (LCP), time to interactive (TTI), render start, DOM interactive, and speed index.</p>
 
-<p><strong><a href="/en-US/docs/Glossary/First_paint">First paint </a></strong>is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticeable. It doesn’t indicate completeness and may report a time when nothing visible is painted. <strong><a href="/en-US/docs/Glossary/First_contentful_paint">First Contentful Paint</a> (FCP)</strong> reports the time when the browser first rendered anything of significance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The <strong><a href="/en-US/docs/Glossary/first_meaningful_paint">First Meaningful Paint</a></strong>, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. <strong>Largest contentful paint (LCP)</strong> metric, defined in the <a href="https://wicg.github.io/largest-contentful-paint/">Largest Contentful Paint API</a>, reports the render time of the largest content element visible in the viewport.</p>
+<p><strong><a href=/glossary/first_paint>First paint </a></strong>is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticeable. It doesn’t indicate completeness and may report a time when nothing visible is painted. <strong><a href=/glossary/first_contentful_paint>First Contentful Paint</a> (FCP)</strong> reports the time when the browser first rendered anything of significance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The <strong><a href=/glossary/first_meaningful_paint>First Meaningful Paint</a></strong>, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. <strong>Largest contentful paint (LCP)</strong> metric, defined in the <a href="https://wicg.github.io/largest-contentful-paint/">Largest Contentful Paint API</a>, reports the render time of the largest content element visible in the viewport.</p>
 
-<p><strong><a href="/en-US/docs/Glossary/Speed_index">Speed index</a></strong> is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.</p>
+<p><strong><a href=/glossary/speed_index>Speed index</a></strong> is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.</p>
 
-<p>These metrics have to do with initial load and render. It is also important to ensure the site feels fast once the user begins interacting with it. For this, <strong><a href="/en-US/docs/Glossary/Time_to_interactive">time to interactive</a></strong>, is a good metric; it is the moment when the last <a href="/en-US/docs/Glossary/Long_task">long task </a>of the load process finishes and the UI is available for user interaction with delay.</p>
+<p>These metrics have to do with initial load and render. It is also important to ensure the site feels fast once the user begins interacting with it. For this, <strong><a href=/glossary/time_to_interactive>time to interactive</a></strong>, is a good metric; it is the moment when the last <a href=/glossary/long_task>long task </a>of the load process finishes and the UI is available for user interaction with delay.</p>
 
 <p>UI lack or responsiveness and jank both harm perceived performance. Even though a task may take a long time, though, there are ways to make it seem faster. There are several tips to improving perceived performance.</p>
 
@@ -93,16 +93,16 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Performance/why_web_performance">The "why" of web performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
+ <li><a href=/learn/performance/why_web_performance>The "why" of web performance</a></li>
+ <li><a href=/learn/performance/what_is_web_performance>What is web performance?</a></li>
+ <li><a href=/learn/performance/perceived_performance>How do users perceive performance?</a></li>
+ <li><a href=/learn/performance/measuring_performance>Measuring performance</a></li>
+ <li><a href=/learn/performance/multimedia>Multimedia: images</a></li>
+ <li><a href=/learn/performance/video>Multimedia: video</a></li>
+ <li><a href=/learn/performance/javascript>JavaScript performance best practices</a>.</li>
+ <li><a href=/learn/performance/html>HTML performance features</a></li>
+ <li><a href=/learn/performance/css>CSS performance features</a></li>
+ <li><a href=/learn/performance/fonts>Fonts and performance</a></li>
+ <li><a href=/learn/performance/mobile>Mobile performance</a></li>
+ <li><a href=/learn/performance/business_case_for_performance>Focusing on performance</a></li>
 </ul>

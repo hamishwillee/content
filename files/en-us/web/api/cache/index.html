@@ -19,7 +19,7 @@ tags:
 
 <p>An origin can have multiple, named <code>Cache</code> objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}}) handles <code>Cache</code> updates. Items in a <code>Cache</code> do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open()")}} to open a specific named <code>Cache</code> object and then call any of the <code>Cache</code> methods to maintain the <code>Cache</code>.</p>
 
-<p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. Cache quota usage estimates are available via the {{domxref("StorageEstimate")}} API. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Deleting old caches</a> for more information.</p>
+<p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. Cache quota usage estimates are available via the {{domxref("StorageEstimate")}} API. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href=/web/api/serviceworker_api/using_service_workers#Deleting_old_caches>Deleting old caches</a> for more information.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The key matching algorithm depends on the <a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">VARY header</a> in the value. So matching a new key requires looking at both key and value for entries in the Cache.</p>
@@ -152,7 +152,7 @@ self.addEventListener('fetch', function(event) {
 
 <h3 id="Storing_cookies_in_Caches">Storing cookies in Caches</h3>
 
-<p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("WindowOrWorkerGlobalScope", "fetch()")}}. So a <code>Response</code> stored in a Cache won't contain headers.</p>
+<p>The <a href=/web/api/fetch_api>Fetch API</a> requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("WindowOrWorkerGlobalScope", "fetch()")}}. So a <code>Response</code> stored in a Cache won't contain headers.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -183,9 +183,9 @@ self.addEventListener('fetch', function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href=/web/api/service_worker_api/using_service_workers>Using Service Workers</a></li>
  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
+ <li><a href=/web/api/web_workers_api/using_web_workers>Using web workers</a></li>
 </ul>

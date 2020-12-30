@@ -58,10 +58,10 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>Here is a segment of code taken from the code that goes with the article <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>. This code comes from the handler for the message sent to carry an offer to another peer across the signaling channel.</p>
+<p>Here is a segment of code taken from the code that goes with the article <a href=/web/api/webrtc_api/signaling_and_video_calling>Signaling and video calling</a>. This code comes from the handler for the message sent to carry an offer to another peer across the signaling channel.</p>
 
 <div class="note">
-<p>Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you. In this case, a <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> connection is used to send a {{Glossary("JSON")}} message with a <code>type</code> field with the value "video-answer" to the other peer, carrying the answer to the device which sent the offer to connect. The contents of the object being passed to the <code>sendToServer()</code> function, along with everything else in the promise fulfillment handler, depend entirely on your design</p>
+<p>Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you. In this case, a <a href=/web/api/websocket_api>WebSocket</a> connection is used to send a {{Glossary("JSON")}} message with a <code>type</code> field with the value "video-answer" to the other peer, carrying the answer to the device which sent the offer to connect. The contents of the object being passed to the <code>sendToServer()</code> function, along with everything else in the promise fulfillment handler, depend entirely on your design</p>
 </div>
 
 <pre class="brush: js">pc.createAnswer().then(function(answer) {
@@ -79,7 +79,7 @@ tags:
 
 <p>{{jsxref("Promise.catch()")}} is used to trap and handle errors.</p>
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Handling the invitation")}} to see the complete code, in context, from which this snippet is derived; that will help you understand the signaling process and how answers work.</p>
+<p>See {{SectionOnPage(/web/api/webrtc_api/signaling_and_video_calling, "Handling the invitation")}} to see the complete code, in context, from which this snippet is derived; that will help you understand the signaling process and how answers work.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

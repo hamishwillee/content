@@ -8,9 +8,9 @@ tags:
   - rowgroup
   - table
 ---
-<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
+<div>{{Page(/web/accessibility/aria/roles, "Subnav")}}</div>
 
-<p>An element with <code>role="rowgroup"</code> is a group of <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">rows</a> within a tabular structure. A <code>rowgroup</code> contains one or more rows of <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cells</a>,  <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">grid cells</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">column headers</a>, or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_Role">row headers</a> within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a class="new" href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role" rel="nofollow">treegrid</a></code>.</p>
+<p>An element with <code>role="rowgroup"</code> is a group of <a href=/web/accessibility/aria/roles/row_role>rows</a> within a tabular structure. A <code>rowgroup</code> contains one or more rows of <a href=/web/accessibility/aria/roles/cell_role>cells</a>,  <a href=/web/accessibility/aria/roles/gridcell_role>grid cells</a>, <a href=/web/accessibility/aria/roles/columnheader_role>column headers</a>, or <a href=/web/accessibility/aria/roles/rowheader_role>row headers</a> within a <code><a href=/web/accessibility/aria/roles/grid_role>grid</a></code>, <code><a href=/web/accessibility/aria/roles/table_role>table</a></code> or <code><a class="new" href=/web/accessibility/aria/roles/treegrid_role rel="nofollow">treegrid</a></code>.</p>
 
 <pre class="brush: html">&lt;div role="table" aria-label="Populations" aria-describedby="country_population_desc"&gt;
    &lt;div id="country_population_desc"&gt;World Populations by Country&lt;/div&gt;
@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>Rowgroup</code> establishes a relationship between owned row elements and is a structural equivalent to the <a href="/en-US/docs/Web/HTML/Element/thead">thead</a>, <a href="/en-US/docs/Web/HTML/Element/tfoot">tfoot </a>and <a href="/en-US/docs/Web/HTML/Element/tbody">tbody </a>elements in HTML. There is, however, no differentiation between different types of rowgroups. Their elements must be contained in, or owned by, elements with either the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table </a>or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> role. Using the native <a href="/en-US/docs/Web/HTML/Element/thead">&lt;thead&gt;</a>, <a href="/en-US/docs/Web/HTML/Element/tfoot">&lt;tfoot&gt;</a> , and <a href="/en-US/docs/Web/HTML/Element/tbody">&lt;tbody&gt;</a> HTML elements, whenever possible, is strongly encouraged.</p>
+<p><code>Rowgroup</code> establishes a relationship between owned row elements and is a structural equivalent to the <a href=/web/html/element/thead>thead</a>, <a href=/web/html/element/tfoot>tfoot </a>and <a href=/web/html/element/tbody>tbody </a>elements in HTML. There is, however, no differentiation between different types of rowgroups. Their elements must be contained in, or owned by, elements with either the <a href=/web/accessibility/aria/roles/table_role>table </a>or <a href=/web/accessibility/aria/roles/grid_role>grid</a> role. Using the native <a href=/web/html/element/thead>&lt;thead&gt;</a>, <a href=/web/html/element/tfoot>&lt;tfoot&gt;</a> , and <a href=/web/html/element/tbody>&lt;tbody&gt;</a> HTML elements, whenever possible, is strongly encouraged.</p>
 
 <p>To create an ARIA table header, table footer or table body, add <code>role="rowgroup"</code> to the element. That rowgroup should be nested within a grid, table or treegrid, encompassing a group of one or more rows. Each row, in turn, contains child cells. These cells can be of different types, depending on whether they are column or row headers, or plain or grid cells.</p>
 
@@ -48,19 +48,19 @@ tags:
 <h4 id="Context_roles">Context roles</h4>
 
 <dl>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">role="table"</a></dt>
- <dd>One of the three possible contexts (along with grid and treegrid) in which you'll find a row.  It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> HTML element. </dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">role="grid"</a></dt>
- <dd>One of the three possible contexts (along with table and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> HTML element.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridtree_Role">role="treegrid"</a></dt>
+ <dt><a href=/web/accessibility/aria/roles/table_role>role="table"</a></dt>
+ <dd>One of the three possible contexts (along with grid and treegrid) in which you'll find a row.  It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native <code><a href=/web/html/element/table>&lt;table&gt;</a></code> HTML element. </dd>
+ <dt><a href=/web/accessibility/aria/roles/grid_role>role="grid"</a></dt>
+ <dd>One of the three possible contexts (along with table and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native <code><a href=/web/html/element/table>&lt;table&gt;</a></code> HTML element.</dd>
+ <dt><a href=/web/accessibility/aria/roles/gridtree_role>role="treegrid"</a></dt>
  <dd>Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.</dd>
 </dl>
 
 <h4 id="Descendant_roles">Descendant roles</h4>
 
 <dl>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">role="row"</a></dt>
- <dd>A row of cells within a tabular structure. A row contains one or more <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cells</a>,  <a href="/en-US/docs/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a>, or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">column headers</a>, and sometimes a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_Role">row header</a>.</dd>
+ <dt><a href=/web/accessibility/aria/roles/row_role>role="row"</a></dt>
+ <dd>A row of cells within a tabular structure. A row contains one or more <a href=/web/accessibility/aria/roles/cell_role>cells</a>,  <a href=/en-us/docs/web/accessibility/aria/roles/gridcell_role>gridcell</a>, or <a href=/web/accessibility/aria/roles/columnheader_role>column headers</a>, and sometimes a <a href=/web/accessibility/aria/roles/rowheader_role>row header</a>.</dd>
 </dl>
 
 <h3 id="Keyboard_interactions">Keyboard interactions</h3>
@@ -132,7 +132,7 @@ tags:
    &lt;/tbody&gt;
  &lt;/table&gt;</pre>
 
-<p>Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as by setting the <a href="/en-US/docs/Web/CSS/display#Accessibility_concerns">display property to flex or grid</a>.</p>
+<p>Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as by setting the <a href=/web/css/display#Accessibility_concerns>display property to flex or grid</a>.</p>
 
 <h3 id="Added_benefits">Added benefits</h3>
 
@@ -156,8 +156,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Element/table">HTML table </a></li>
- <li><a href="/en-US/docs/Web/HTML/Element/tbody">HTML table body</a></li>
- <li><a href="/en-US/docs/Web/HTML/Element/tfoot">HTML table footer</a></li>
- <li><a href="/en-US/docs/Web/HTML/Element/thead">HTML table header</a></li>
+ <li><a href=/web/html/element/table>HTML table </a></li>
+ <li><a href=/web/html/element/tbody>HTML table body</a></li>
+ <li><a href=/web/html/element/tfoot>HTML table footer</a></li>
+ <li><a href=/web/html/element/thead>HTML table header</a></li>
 </ul>

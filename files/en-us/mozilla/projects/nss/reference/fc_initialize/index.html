@@ -17,7 +17,7 @@ tags:
   Points to a <code>CK_C_INITIALIZE_ARGS</code> structure.</dd>
 </dl>
 <h2 id="Description">Description</h2>
-<p><code>FC_Initialize</code> initializes the <a href="/en-US/docs/NSS_reference/NSS_cryptographic_module">NSS cryptographic module</a> for the <a href="/en-US/docs/NSS_reference/NSS_cryptographic_module/FIPS_mode_of_operation">FIPS mode of operation</a>. In addition to creating the internal data structures, it performs the FIPS software integrity test and power-up self-tests.</p>
+<p><code>FC_Initialize</code> initializes the <a href=/nss_reference/nss_cryptographic_module>NSS cryptographic module</a> for the <a href=/nss_reference/nss_cryptographic_module/fips_mode_of_operation>FIPS mode of operation</a>. In addition to creating the internal data structures, it performs the FIPS software integrity test and power-up self-tests.</p>
 <p>The <code>pInitArgs</code> argument must point to a <code>CK_C_INITIALIZE_ARGS</code> structure whose members should have the following values:</p>
 <ul>
  <li><code>CreateMutex</code> should be <code>NULL</code>.</li>
@@ -39,7 +39,7 @@ DB,forceOpen,optimizeSpace "
 <p>Mozilla Firefox initializes NSS with this string (on Windows):</p>
 <pre> "configdir='C:\\Documents and Settings\\wtc\\Application Data\\Mozilla\\Firefox\\Profiles\\default.7tt' certPrefix='' keyPrefix='' secmod='secmod.db' flags=optimizeSpace  manufacturerID='Mozilla.org' libraryDescription='PSM Internal Crypto Services' cryptoTokenDescription='Generic Crypto Services' dbTokenDescription='Software Security Device' cryptoSlotDescription='PSM Internal Cryptographic Services' dbSlotDescription='PSM Private Keys' FIPSSlotDescription='PSM Internal FIPS-140-1 Cryptographic Services' FIPSTokenDescription='PSM FIPS-140-1 User Private Key Services' minPS=0"
 </pre>
-<p>See <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS #11 Module Specs</a> for complete documentation of the library parameters string.</p>
+<p>See <a href=/mozilla/projects/nss/pkcs11/module_specs>PKCS #11 Module Specs</a> for complete documentation of the library parameters string.</p>
 <h3 id="Return_value">Return value</h3>
 <p><code>FC_Initialize</code> returns the following return codes.</p>
 <ul>
@@ -84,5 +84,5 @@ crv = pFunctionList-&gt;C_Initialize(&amp;initArgs);
 </pre>
 <h2 id="See_also">See also</h2>
 <ul>
- <li><a href="/en-US/docs/FC_Finalize">FC_Finalize</a></li>
+ <li><a href=/fc_finalize>FC_Finalize</a></li>
 </ul>

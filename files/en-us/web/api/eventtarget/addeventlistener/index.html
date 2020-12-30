@@ -35,9 +35,9 @@ tags:
 
 <dl>
  <dt><code><var>type</var></code></dt>
- <dd>A case-sensitive string representing the <a href="/en-US/docs/Web/Events">event type</a> to listen for.</dd>
+ <dd>A case-sensitive string representing the <a href=/web/events>event type</a> to listen for.</dd>
  <dt><code><var>listener</var></code></dt>
- <dd>The object that receives a notification (an object that implements the {{domxref("Event")}} interface) when an event of the specified type occurs. This must be an object implementing the {{domxref("EventListener")}} interface, or a JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a>. See {{anch("The event listener callback")}} for details on the callback itself.</dd>
+ <dd>The object that receives a notification (an object that implements the {{domxref("Event")}} interface) when an event of the specified type occurs. This must be an object implementing the {{domxref("EventListener")}} interface, or a JavaScript <a href=/web/javascript/guide/functions>function</a>. See {{anch("The event listener callback")}} for details on the callback itself.</dd>
  <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd>An options object specifies characteristics about the event listener. The available options are:
  <dl>
@@ -372,7 +372,7 @@ function nonePassiveHandler(event) {
 })
 </pre>
 
-<p>As a reminder, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#No_separate_this">arrow functions do not have their own <code>this</code> context</a>.</p>
+<p>As a reminder, <a href=/web/javascript/reference/functions/arrow_functions#No_separate_this>arrow functions do not have their own <code>this</code> context</a>.</p>
 
 <pre class="brush: js notranslate">my_element.addEventListener('click', (e) =&gt; {
   console.log(this.className)           // WARNING: `this` is not `my_element`
@@ -386,7 +386,7 @@ function nonePassiveHandler(event) {
 &lt;/table&gt;
 </pre>
 
-<p>Note that the value of <code>this</code> inside a function, <em>called by</em> the code in the attribute value, behaves as per <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">standard rules</a>. This is shown in the following example:</p>
+<p>Note that the value of <code>this</code> inside a function, <em>called by</em> the code in the attribute value, behaves as per <a href=/web/javascript/reference/operators/this>standard rules</a>. This is shown in the following example:</p>
 
 <pre class="brush: html notranslate">&lt;script&gt;
   function logID() { console.log(this.id); }
@@ -396,7 +396,7 @@ function nonePassiveHandler(event) {
 &lt;/table&gt;
 </pre>
 
-<p>The value of <code>this</code> within <code>logID()</code> is a reference to the global object {{domxref("Window")}} (or <code>undefined</code> in the case of <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
+<p>The value of <code>this</code> within <code>logID()</code> is a reference to the global object {{domxref("Window")}} (or <code>undefined</code> in the case of <a href=/web/javascript/reference/strict_mode>strict mode</a>.</p>
 
 <h4 id="Specifying_this_using_bind">Specifying "this" using bind()</h4>
 
@@ -479,7 +479,7 @@ myObject.register();</pre>
 
 <h3 id="Getting_data_into_and_out_of_an_event_listener">Getting data into and out of an event listener</h3>
 
-<p>It may seem that event listeners are like islands, and that it is extremely difficult to pass them any data, much less to get any data back from them after they execute. Event listeners only take one argument, the <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_objects">Event Object</a>, which is automatically passed to the listener, and the return value is ignored. So how can we get data in and back out of them again? There are a number of good methods for doing this.</p>
+<p>It may seem that event listeners are like islands, and that it is extremely difficult to pass them any data, much less to get any data back from them after they execute. Event listeners only take one argument, the <a href=/learn/javascript/building_blocks/events#Event_objects>Event Object</a>, which is automatically passed to the listener, and the return value is ignored. So how can we get data in and back out of them again? There are a number of good methods for doing this.</p>
 
 <h4 id="Getting_data_into_an_event_listener_using_this">Getting data into an event listener using "this"</h4>
 
@@ -497,7 +497,7 @@ myButton.addEventListener('click', function () {
 
 <h4 id="Getting_data_into_an_event_listener_using_the_outer_scope_property">Getting data into an event listener using the outer scope property</h4>
 
-<p>When an outer scope contains a variable declaration (with <code>const</code>, <code>let</code>), all the inner functions declared in that scope have access to that variable (look <a href="/en-US/docs/Glossary/Function#Different_types_of_functions">here</a> for information on outer/inner functions, and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#Implicit_globals_and_outer_function_scope">here</a> for information on variable scope). Therefore, one of the simplest ways to access data from outside of an event listener is to make it accessible to the scope in which the event listener is declared.</p>
+<p>When an outer scope contains a variable declaration (with <code>const</code>, <code>let</code>), all the inner functions declared in that scope have access to that variable (look <a href=/glossary/function#Different_types_of_functions>here</a> for information on outer/inner functions, and <a href=/web/javascript/reference/statements/var#Implicit_globals_and_outer_function_scope>here</a> for information on variable scope). Therefore, one of the simplest ways to access data from outside of an event listener is to make it accessible to the scope in which the event listener is declared.</p>
 
 <pre class="brush: js notranslate">const myButton = document.getElementById('my-button-id');
 const someString = 'Data';
@@ -779,6 +779,6 @@ window.addEventListener('scroll', function(event) {
 
 <ul>
  <li>{{domxref("EventTarget.removeEventListener()")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering custom events</a></li>
+ <li><a href=/web/guide/events/creating_and_triggering_events>Creating and triggering custom events</a></li>
  <li><a href="http://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
 </ul>

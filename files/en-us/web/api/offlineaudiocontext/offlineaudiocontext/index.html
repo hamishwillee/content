@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary"><span class="seoSummary">The <code><strong>OfflineAudioContext()</strong></code> constructor—part of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>—creates and returns a new {{domxref("OfflineAudioContext")}} object instance, which can then be used to render audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.</span></p>
+<p class="summary"><span class="seoSummary">The <code><strong>OfflineAudioContext()</strong></code> constructor—part of the <a href=/web/api/web_audio_api>Web Audio API</a>—creates and returns a new {{domxref("OfflineAudioContext")}} object instance, which can then be used to render audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -33,7 +33,7 @@ var <em>offlineAudioCtx</em> = new OfflineAudioContext(<em>options</em>);</pre>
  <dd>The sample-rate of the linear audio data in sample-frames per second. All user agents are required to support a range of 22050Hz to 96000Hz, and may support a wider range than that. The most commonly-used rate is 44100Hz, which is the sample rate used by CD audio.</dd>
 </dl>
 
-<p>It is important to note that, whereas you can create a new {{domxref("AudioContext")}} using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} constructor with no arguments, the <code>OfflineAudioContext()</code> constructor requires three arguments, since it needs to create an <code>AudioBuffer</code>. This works in exactly the same way as when you create a new {{domxref("AudioBuffer")}} with the {{domxref("AudioContext.createBuffer()")}} method. For more detail, read <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">Audio buffers: frames, samples and channels</a> from our <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts</a> guide.</p>
+<p>It is important to note that, whereas you can create a new {{domxref("AudioContext")}} using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} constructor with no arguments, the <code>OfflineAudioContext()</code> constructor requires three arguments, since it needs to create an <code>AudioBuffer</code>. This works in exactly the same way as when you create a new {{domxref("AudioBuffer")}} with the {{domxref("AudioContext.createBuffer()")}} method. For more detail, read <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api#Audio_buffers.3A_frames.2C_samples_and_channels>Audio buffers: frames, samples and channels</a> from our <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api>Basic concepts</a> guide.</p>
 
 <h3 id="Return_value">Return value</h3>
 

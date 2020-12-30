@@ -122,7 +122,7 @@ function doDrop(event) {
 
 <p>The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).</p>
 
-<p>As a result, the <a href="/en-US/docs/Web/API/Node/contains">contains</a> method no longer works; the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">includes</a> method should be used instead to check if a specific type of data is provided, using code like the following:</p>
+<p>As a result, the <a href=/web/api/node/contains>contains</a> method no longer works; the <a href=/web/javascript/reference/global_objects/array/includes>includes</a> method should be used instead to check if a specific type of data is provided, using code like the following:</p>
 
 <pre class="brush: js">if ([...event.dataTransfer.types].includes('text/html')) {
   // Do something
@@ -132,7 +132,7 @@ function doDrop(event) {
 
 <h2 id="image">Dragging Images</h2>
 
-<p>Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the <code>text/uri-list</code> type as with other URLs. The data should be the URL of the image, or a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URI</a> if the image is not stored on a web site or disk.</p>
+<p>Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the <code>text/uri-list</code> type as with other URLs. The data should be the URL of the image, or a <a href=/web/http/basics_of_http/data_uris><code>data:</code> URI</a> if the image is not stored on a web site or disk.</p>
 
 <p>As with links, the data for the <code>text/plain</code> type should also contain the URL. However, a <code>data:</code> URL is not usually useful in a text context, so you may wish to exclude the <code>text/plain</code> data in this situation.</p>
 

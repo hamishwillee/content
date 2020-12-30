@@ -22,7 +22,7 @@ tags:
 
 <p><span class="seoSummary">The process of creating an audio processor using JavaScript, establishing it as an audio worklet processor, and then using that processor within a Web Audio application is the topic of this article.</span></p>
 
-<p>It's worth noting that because audio processing can often involve substantial computation, your processor may benefit greatly from being built using <a href="/en-US/docs/WebAssembly">WebAssembly</a>, which brings near-native or fully native performance to web apps. Implementing your audio processing algorithm using WebAssembly can make it perform markedly better.</p>
+<p>It's worth noting that because audio processing can often involve substantial computation, your processor may benefit greatly from being built using <a href=/webassembly>WebAssembly</a>, which brings near-native or fully native performance to web apps. Implementing your audio processing algorithm using WebAssembly can make it perform markedly better.</p>
 
 <h2 id="High_level_overview">High level overview</h2>
 
@@ -92,7 +92,7 @@ registerProcessor("my-audio-processor", MyAudioProcessor);
 
 <p>The lists of inputs and outputs can be a little confusing at first, even though they're actually very simple once you realize what's going on.</p>
 
-<p>Let's start at the inside and work our way out. Fundamentally, the audio for a single audio channel (such as the left speaker or the subwoofer, for example) is represented as a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a></code> whose values are the individual audio samples. By specification, each block of audio your <code>process()</code> function receives contains 128 frames (that is, 128 samples for each channel), but it is planned that <em>this value will change in the future</em>, and may in fact vary depending on circumstances, so you should <em>always</em> check the array's <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length">length</a></code> rather than assuming a particular size. It is, however, guaranteed that the inputs and outputs will have the same block length.</p>
+<p>Let's start at the inside and work our way out. Fundamentally, the audio for a single audio channel (such as the left speaker or the subwoofer, for example) is represented as a <code><a href=/web/javascript/reference/global_objects/float32array>Float32Array</a></code> whose values are the individual audio samples. By specification, each block of audio your <code>process()</code> function receives contains 128 frames (that is, 128 samples for each channel), but it is planned that <em>this value will change in the future</em>, and may in fact vary depending on circumstances, so you should <em>always</em> check the array's <code><a href=/web/javascript/reference/global_objects/typedarray/length>length</a></code> rather than assuming a particular size. It is, however, guaranteed that the inputs and outputs will have the same block length.</p>
 
 <p>Each input can have a number of channels. A mono input has a single channel; stereo input has two channels. Surround sound might have six or more channels. So each input is, in turn, an array of channels. That is, an array of <code>Float32Array</code> objects.</p>
 
@@ -145,7 +145,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 }
 </pre>
 
-<p>Note that when determining the number of sources to process and send through to the corresponding outputs, we use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></code> to ensure that we only process as many channels as we have room for in the output list. The same check is performed when determining how many channels to process in the current input; we only process as many as there are room for in the destination output. This avoids errors due to overrunning these arrays.</p>
+<p>Note that when determining the number of sources to process and send through to the corresponding outputs, we use <code><a href=/web/javascript/reference/global_objects/math/min>Math.min()</a></code> to ensure that we only process as many channels as we have room for in the output list. The same check is performed when determining how many channels to process in the current input; we only process as many as there are room for in the destination output. This avoids errors due to overrunning these arrays.</p>
 
 <h3 id="Mixing_inputs">Mixing inputs</h3>
 
@@ -324,6 +324,6 @@ async function createMyAudioProcessor() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api>Web Audio API</a></li>
  <li><a href="https://developers.google.com/web/updates/2017/12/audio-worklet">Enter Audio Worklet</a> (Google Developers blog)</li>
 </ul>

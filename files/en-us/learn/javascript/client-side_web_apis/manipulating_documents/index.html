@@ -43,7 +43,7 @@ tags:
 <p><img alt="" src="https://mdn.mozillademos.org/files/14557/document-window-navigator.png" style="display: block; margin: 0 auto;"></p>
 
 <ul>
- <li>The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a> to the current window, and more.</li>
+ <li>The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an <a href=/learn/javascript/building_blocks/events#A_series_of_fortunate_events>event handler</a> to the current window, and more.</li>
  <li>The navigator represents the state and identity of the browser (i.e. the user-agent) as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.</li>
  <li>The document (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.</li>
 </ul>
@@ -111,7 +111,7 @@ tags:
 </ol>
 
 <div>
-<p>Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above <code>querySelector()</code> call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an <a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">array</a>-like object called a {{domxref("NodeList")}}.</p>
+<p>Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above <code>querySelector()</code> call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an <a href=/learn/javascript/first_steps/arrays>array</a>-like object called a {{domxref("NodeList")}}.</p>
 
 <p>There are older methods available for grabbing element references, such as:</p>
 
@@ -189,7 +189,7 @@ para.style.padding = '10px';
 para.style.width = '250px';
 para.style.textAlign = 'center';</pre>
  </li>
- <li>Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector/DOM inspector</a>, you'll see that these lines are indeed adding inline styles to the document:
+ <li>Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's <a href=/tools/page_inspector>Page Inspector/DOM inspector</a>, you'll see that these lines are indeed adding inline styles to the document:
   <pre class="brush: html notranslate">&lt;p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;"&gt;We hope you enjoyed the ride.&lt;/p&gt;</pre>
  </li>
 </ol>
@@ -281,15 +281,15 @@ div.style.height = winHeight + 'px';</pre>
 <ol>
  <li>To start with, download a copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html">shopping-list.html</a> starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.</li>
  <li>Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.</li>
- <li>Create a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">function</a> that will run in response to the button being clicked.</li>
- <li>Inside the function body, start off by storing the current <a href="/en-US/docs/Web/API/HTMLInputElement#Properties">value</a> of the input element in a variable.</li>
+ <li>Create a <a href=/learn/javascript/building_blocks/functions>function</a> that will run in response to the button being clicked.</li>
+ <li>Inside the function body, start off by storing the current <a href=/web/api/htmlinputelement#Properties>value</a> of the input element in a variable.</li>
  <li>Next, empty the input element by setting its value to an empty string — <code>''</code>.</li>
  <li>Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.</li>
  <li>Append the span and the button as children of the list item.</li>
  <li>Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.</li>
  <li>Append the list item as a child of the list.</li>
  <li>Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.</li>
- <li>Finally, use the <code><a href="/en-US/docs/Web/API/HTMLElement/focus">focus()</a></code> method to focus the input element ready for entering the next shopping list item.</li>
+ <li>Finally, use the <code><a href=/web/api/htmlelement/focus>focus()</a></code> method to focus the input element ready for entering the next shopping list item.</li>
 </ol>
 
 <div class="note">
@@ -311,7 +311,7 @@ div.style.height = winHeight + 'px';</pre>
  <li>{{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.</li>
 </ul>
 
-<p>(See our <a href="/en-US/docs/Web/API">Web API index</a> for the full list of Web APIs documented on MDN!)</p>
+<p>(See our <a href=/web/api>Web API index</a> for the full list of Web APIs documented on MDN!)</p>
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
@@ -319,12 +319,12 @@ div.style.height = winHeight + 'px';</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/introduction>Introduction to web APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/manipulating_documents>Manipulating documents</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/fetching_data>Fetching data from the server</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/third_party_apis>Third party APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/video_and_audio_apis>Video and audio APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/client-side_storage>Client-side storage</a></li>
 </ul>
 </div>

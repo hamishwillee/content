@@ -18,7 +18,7 @@ tags:
 
 <ul>
  <li>The {{domxref("RTCPeerConnection")}} was instantiated without specifying any ICE servers. If, for example, the {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} constructor was called with no parameters, you would have to then call <code>setConfiguration()</code> to add ICE servers before ICE negotiation could begin.</li>
- <li>Renegotiation of the connection is needed, and a different set of ICE servers needs to be used for some reason. Perhaps the user has moved into a new region, so using new regional ICE servers is necessary, for example. In this situation, one might call <code>setConfiguration()</code> to switch to new regional ICE servers, then initiate an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.</li>
+ <li>Renegotiation of the connection is needed, and a different set of ICE servers needs to be used for some reason. Perhaps the user has moved into a new region, so using new regional ICE servers is necessary, for example. In this situation, one might call <code>setConfiguration()</code> to switch to new regional ICE servers, then initiate an <a href=/web/api/webrtc_api/session_lifetime#ICE_restart>ICE restart</a>.</li>
 </ul>
 
 <div class="note">

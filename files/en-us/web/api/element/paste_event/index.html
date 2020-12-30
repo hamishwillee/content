@@ -32,13 +32,13 @@ tags:
  </tbody>
 </table>
 
-<p>If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> attribute set to <code>true</code>) then the default action is to insert the contents of the clipboard into the document at the cursor position.</p>
+<p>If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with <code><a href=/web/html/global_attributes/contenteditable>contenteditable</a></code> attribute set to <code>true</code>) then the default action is to insert the contents of the clipboard into the document at the cursor position.</p>
 
 <p>A handler for this event can access the clipboard contents by calling {{domxref("DataTransfer/getData", "getData()")}} on the event's <code>clipboardData</code> property.</p>
 
 <p>To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}, and then insert its desired data manually.</p>
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
+<p>It's possible to construct and dispatch a <a href=/web/guide/events/creating_and_triggering_events>synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
 
 <h2 id="Examples">Examples</h2>
 

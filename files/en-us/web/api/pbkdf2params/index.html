@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <strong><code>Pbkdf2Params</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a> algorithm.</p>
+<p>The <strong><code>Pbkdf2Params</code></strong> dictionary of the <a href=/web/api/web_crypto_api>Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the <a href=/web/api/subtlecrypto/derivekey#PBKDF2>PBKDF2</a> algorithm.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -19,7 +19,7 @@ tags:
  <dd>A {{domxref("DOMString")}}. This should be set to <code>PBKDF2</code>.</dd>
  <dt><code>hash</code></dt>
  <dd>
- <p>A {{domxref("DOMString")}} representing the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest algorithm</a> to use. This may be one of:</p>
+ <p>A {{domxref("DOMString")}} representing the <a href=/web/api/subtlecrypto/digest#Supported_algorithms>digest algorithm</a> to use. This may be one of:</p>
 
  <ul>
   <li><code>SHA-1</code></li>
@@ -33,7 +33,7 @@ tags:
  </div>
  </dd>
  <dt><code>salt</code></dt>
- <dd>A {{domxref("BufferSource")}}. This should be a random or pseudo-random value of at least 16 bytes. Unlike the input key material passed into <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a></code>, <code>salt</code> does not need to be kept secret.</dd>
+ <dd>A {{domxref("BufferSource")}}. This should be a random or pseudo-random value of at least 16 bytes. Unlike the input key material passed into <code><a href=/web/api/subtlecrypto/derivekey>deriveKey()</a></code>, <code>salt</code> does not need to be kept secret.</dd>
  <dt><code>iterations</code></dt>
  <dd>A <code>Number</code> representing the number of times the hash function will be executed in <code>deriveKey()</code>. This determines how computationally expensive (that is, slow) the <code>deriveKey()</code> operation will be. In this context, slow is good, since it makes it more expensive for an attacker to run a {{Glossary("dictionary attack")}} against the keys. The general guidance here is to use as many iterations as possible, subject to keeping an acceptable level of performance for your application.</dd>
 </dl>

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>The <strong><code>cache</code></strong> read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>.</p>
+<p>The <strong><code>cache</code></strong> read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's <a href=/web/http/caching>HTTP cache</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,8 +26,8 @@ tags:
  <li><code>default</code> — The browser looks for a matching request in its HTTP cache.
 
   <ul>
-   <li>If there is a match and it is <a href="/en-US/docs/Web/HTTP/Caching#Freshness">fresh</a>, it will be returned from the cache.</li>
-   <li>If there is a match but it is stale, the browser will make a <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
+   <li>If there is a match and it is <a href=/web/http/caching#Freshness>fresh</a>, it will be returned from the cache.</li>
+   <li>If there is a match but it is stale, the browser will make a <a href=/web/http/conditional_requests>conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
    <li>If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.</li>
   </ul>
  </li>
@@ -35,7 +35,7 @@ tags:
  <li><code>reload</code> — The browser fetches the resource from the remote server without first looking in the cache, <em>but then will</em> update the cache with the downloaded resource.</li>
  <li><code>no-cache</code> — The browser looks for a matching request in its HTTP cache.
   <ul>
-   <li>If there is a match,<em> fresh or stale,</em> the browser will make a <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
+   <li>If there is a match,<em> fresh or stale,</em> the browser will make a <a href=/web/http/conditional_requests>conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
    <li>If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.</li>
   </ul>
  </li>
@@ -48,9 +48,9 @@ tags:
  <li><code>only-if-cached</code> — The browser looks for a matching request in its HTTP cache.
   <ul>
    <li>If there is a match, <em>fresh or stale</em>, it will be returned from the cache.</li>
-   <li>If there is no match, the browser will respond with a <a href="/en-US/docs/Web/HTTP/Status/504">504 Gateway timeout</a> status.</li>
+   <li>If there is no match, the browser will respond with a <a href=/web/http/status/504>504 Gateway timeout</a> status.</li>
   </ul>
-  The <code>"only-if-cached"</code> mode can only be used if the request's <code><a href="/en-US/docs/Web/API/Request/mode">mode</a></code> is <code>"same-origin"</code>. Cached redirects will be followed if the request's <code>redirect</code> property is <code>"follow"</code> and the redirects do not violate the <code>"same-origin"</code> mode.</li>
+  The <code>"only-if-cached"</code> mode can only be used if the request's <code><a href=/web/api/request/mode>mode</a></code> is <code>"same-origin"</code>. Cached redirects will be followed if the request's <code>redirect</code> property is <code>"follow"</code> and the redirects do not violate the <code>"same-origin"</code> mode.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -134,7 +134,7 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+ <li><a href=/web/api/serviceworker_api>ServiceWorker API</a></li>
+ <li><a href=/web/http/access_control_cors>HTTP access control (CORS)</a></li>
+ <li><a href=/web/http>HTTP</a></li>
 </ul>

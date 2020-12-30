@@ -15,13 +15,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website. On completion we'll have a modular structure for our route handling code, which we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express!</p>
+<p class="summary">In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the <a href=/learn/server-side/express_nodejs/tutorial_local_library_website>LocalLibrary</a> website. On completion we'll have a modular structure for our route handling code, which we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express!</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Read the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a>. Complete previous tutorial topics (including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a>).</td>
+   <td>Read the <a href=/learn/server-side/express_nodejs/introduction>Express/Node introduction</a>. Complete previous tutorial topics (including <a href=/learn/server-side/express_nodejs/mongoose>Express Tutorial Part 3: Using a Database (with Mongoose)</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>In the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">last tutorial article</a> we defined <em>Mongoose</em> models to interact with the database, and used a (standalone) script to create some initial library records. We can now write the code to present that information to users. The first thing we need to do is determine what information we want to be able to display in our pages, and then define appropriate URLs for returning those resources. Then we're going to need to create the routes (URL handlers) and views (templates) to display those pages.</p>
+<p>In the <a href=/learn/server-side/express_nodejs/mongoose>last tutorial article</a> we defined <em>Mongoose</em> models to interact with the database, and used a (standalone) script to create some initial library records. We can now write the code to present that information to users. The first thing we need to do is determine what information we want to be able to display in our pages, and then define appropriate URLs for returning those resources. Then we're going to need to create the routes (URL handlers) and views (templates) to display those pages.</p>
 
 <p>The diagram below is provided as a reminder of the main flow of data and things that need to be implemented when handling an HTTP request/response. In addition to the views and routes the diagram shows "controllers" — functions that separate out the code to route requests from the code that actually processes requests.</p>
 
@@ -57,7 +57,7 @@ tags:
 <p>There are several ways to create routes. For this tutorial we're going to use the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
+<p><strong>Note:</strong> We discussed Express application routes briefly in our <a href=/learn/server-side/express_nodejs/introduction#Creating_route_handlers>Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
 </div>
 
 <p>The rest of this section provides an overview of how the <code>Router</code> can be used to define the routes.</p>
@@ -111,7 +111,7 @@ app.use('/wiki', wiki);</pre>
 <p>The callback takes three arguments (usually named as shown: <code>req</code>, <code>res</code>, <code>next</code>), that will contain the HTTP Request object, HTTP response, and the <em>next</em> function in the middleware chain.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Router functions are <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware">Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
+<p><strong>Note:</strong> Router functions are <a href=/learn/server-side/express_nodejs/introduction#Using_middleware>Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
 
 <p>The  router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).</p>
 </div>
@@ -143,7 +143,7 @@ app.use('/wiki', wiki);</pre>
  <li><code>()</code> : Grouping match on a set of characters to perform another operation on, e.g. <code>'/ab(cd)?e'</code> will perform a <code>?</code>-match on the group <code>(cd)</code>—it will match <code>abe</code> and <code>abcde</code>.</li>
 </ul>
 
-<p>The route paths can also be JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, the route path below will match <code>catfish </code>and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
+<p>The route paths can also be JavaScript <a href=/web/javascript/guide/regular_expressions>regular expressions</a>. For example, the route path below will match <code>catfish </code>and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
 
 <pre class="brush: js notranslate">app.get(/.*fish$/, function (req, res) {
   ...
@@ -595,7 +595,7 @@ SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 DEBUG=express-locallibrary-tutorial:* npm start</code>
 </pre>
  </li>
- <li>If you previously set up <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">nodemon</a>, you can instead use:
+ <li>If you previously set up <a href=/learn/server-side/express_nodejs/skeleton_website>nodemon</a>, you can instead use:
   <pre class="brush: bash notranslate"><code>// Windows
 SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong>
 
@@ -636,13 +636,13 @@ SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href=/learn/server-side/express_nodejs/introduction>Express/Node introduction</a></li>
+ <li><a href=/learn/server-side/express_nodejs/development_environment>Setting up a Node (Express) development environment</a></li>
+ <li><a href=/learn/server-side/express_nodejs/tutorial_local_library_website>Express Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/skeleton_website>Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/mongoose>Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><a href=/learn/server-side/express_nodejs/routes>Express Tutorial Part 4: Routes and controllers</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a></li>
+ <li><a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a></li>
+ <li><a href=/learn/server-side/express_nodejs/deployment>Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

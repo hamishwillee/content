@@ -20,7 +20,7 @@ tags:
 
 <p>Despite its name, <code>XMLHttpRequest</code> can be used to retrieve any type of data, not just XML.</p>
 
-<p>If your communication needs to involve receiving event data or message data from a server, consider using <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a> through the {{domxref("EventSource")}} interface. For full-duplex communication, <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> may be a better choice.</p>
+<p>If your communication needs to involve receiving event data or message data from a server, consider using <a href=/web/api/server-sent_events>server-sent events</a> through the {{domxref("EventSource")}} interface. For full-duplex communication, <a href=/web/api/websockets_api>WebSockets</a> may be a better choice.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -82,14 +82,14 @@ tags:
  <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}}{{gecko_minversion_inline("2.0")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
  <dd>{{jsxref("ArrayBuffer")}}. The response to the request, as a JavaScript typed array.</dd>
  <dt>{{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}</dt>
- <dd><strong>This Gecko-only feature, a boolean, was removed in Firefox/Gecko 22.</strong> Please use <a href="/en-US/docs/Web/API/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/Web/API/WebSockets_API">Web Sockets</a>, or <code>responseText</code> from progress events instead.</dd>
+ <dd><strong>This Gecko-only feature, a boolean, was removed in Firefox/Gecko 22.</strong> Please use <a href=/web/api/server-sent_events>Server-Sent Events</a>, <a href=/web/api/websockets_api>Web Sockets</a>, or <code>responseText</code> from progress events instead.</dd>
 </dl>
 
 <h3 id="Event_handlers">Event handlers</h3>
 
 <p><code>onreadystatechange</code> as a property of the <code>XMLHttpRequest</code> instance is supported in all browsers.</p>
 
-<p>Since then, a number of additional event handlers have been implemented in various browsers (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). See <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Since then, a number of additional event handlers have been implemented in various browsers (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). See <a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using XMLHttpRequest</a>.</p>
 
 <p>More recent browsers, including Firefox, also support listening to the <code>XMLHttpRequest</code> events via standard {{domxref("EventTarget.addEventListener", "addEventListener()")}} APIs in addition to setting <code>on*</code> properties to a handler function.</p>
 
@@ -120,7 +120,7 @@ tags:
  <div class="warning"><strong>Warning:</strong> This method must <em>not</em> be called from JavaScript.</div>
  </dd>
  <dt>{{domxref("XMLHttpRequest.openRequest()")}}</dt>
- <dd>Initializes a request. This method is to be used from native code; to initialize a request from JavaScript code, use <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()"><code>open()</code></a> instead. See the documentation for <code>open()</code>.</dd>
+ <dd>Initializes a request. This method is to be used from native code; to initialize a request from JavaScript code, use <a class="internal" href=/mozilla/tech/xpcom/reference/interface/nsixmlhttprequest#open()><code>open()</code></a> instead. See the documentation for <code>open()</code>.</dd>
  <dt>{{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}</dt>
  <dd>A variant of the <code>send()</code> method that sends binary data.</dd>
 </dl>
@@ -180,10 +180,10 @@ tags:
  <li>{{domxref("XMLSerializer")}}: Serializing a DOM tree into XML</li>
  <li>MDN tutorials covering <code>XMLHttpRequest</code>:
   <ul>
-   <li><a href="/en-US/docs/AJAX/Getting_Started">Ajax — Getting Started</a></li>
-   <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
-   <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
-   <li><a href="/en-US/docs/Web/API/Fetch_API" title="Fetch API">Fetch API</a></li>
+   <li><a href=/ajax/getting_started>Ajax — Getting Started</a></li>
+   <li><a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using XMLHttpRequest</a></li>
+   <li><a href=/web/api/xmlhttprequest/html_in_xmlhttprequest>HTML in XMLHttpRequest</a></li>
+   <li><a href=/web/api/fetch_api title="Fetch API">Fetch API</a></li>
   </ul>
  </li>
  <li><a class="external" href="http://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>

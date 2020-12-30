@@ -15,7 +15,7 @@ tags:
 
 <div>{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">In this assessment you'll use the Django knowledge you've picked up in the <a href="/en-US/docs/Learn/Server-side/Django">Django Web Framework (Python)</a> module to create a very basic blog.</p>
+<p class="summary">In this assessment you'll use the Django knowledge you've picked up in the <a href=/learn/server-side/django>Django Web Framework (Python)</a> module to create a very basic blog.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -219,7 +219,7 @@ tags:
 <p>The following sections describe what you need to do.</p>
 
 <ol>
- <li>Create a skeleton project and web application for the site (as described in <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a>). You might use 'diyblog' for the project name and 'blog' for the application name.</li>
+ <li>Create a skeleton project and web application for the site (as described in <a href=/learn/server-side/django/skeleton_website>Django Tutorial Part 2: Creating a skeleton website</a>). You might use 'diyblog' for the project name and 'blog' for the application name.</li>
  <li>Create models for the Blog posts, Comments, and any other objects needed. When thinking about your design, remember:
   <ul>
    <li>Each comment will have only one blog, but a blog may have many comments.</li>
@@ -237,13 +237,13 @@ tags:
 
 <h2 id="Hints_and_tips">Hints and tips</h2>
 
-<p>This project is very similar to the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> tutorial. You will be able to set up the skeleton, user login/logout behavior, support for static files, views, URLs, forms, base templates and admin site configuration using almost all the same approaches.</p>
+<p>This project is very similar to the <a href=/learn/server-side/django/tutorial_local_library_website>LocalLibrary</a> tutorial. You will be able to set up the skeleton, user login/logout behavior, support for static files, views, URLs, forms, base templates and admin site configuration using almost all the same approaches.</p>
 
 <p>Some general hints:</p>
 
 <ol>
  <li>The index page can be implemented as a basic function view and template (just like for the locallibrary).</li>
- <li>The list view for blog posts and bloggers, and the detail view for blog posts can be created using the <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">generic list and detail views</a>.</li>
+ <li>The list view for blog posts and bloggers, and the detail view for blog posts can be created using the <a href=/learn/server-side/django/generic_views>generic list and detail views</a>.</li>
  <li>The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
   <ul>
    <li>You will have to implement <code>get_queryset(self)</code> to do the filtering (much like in our library class <code>LoanedBooksAllListView</code>) and get the author information from the URL.</li>
@@ -271,7 +271,7 @@ tags:
  </li>
 </ol>
 
-<p>We briefly talked about passing a context to the template in a class-based view in the <a href="/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
+<p>We briefly talked about passing a context to the template in a class-based view in the <a href=/learn/server-side/django/generic_views#Overriding_methods_in_class-based_views>Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
 
 <pre class="brush: python notranslate">class SomeView(generic.ListView):
     ...
@@ -295,19 +295,19 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href=/learn/server-side/django/introduction>Django introduction</a></li>
+ <li><a href=/learn/server-side/django/development_environment>Setting up a Django development environment</a></li>
+ <li><a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/django/skeleton_website>Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/django/models>Django Tutorial Part 3: Using models</a></li>
+ <li><a href=/learn/server-side/django/admin_site>Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href=/learn/server-side/django/home_page>Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href=/learn/server-side/django/generic_views>Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href=/learn/server-side/django/sessions>Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href=/learn/server-side/django/authentication>Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href=/learn/server-side/django/forms>Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href=/learn/server-side/django/testing>Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href=/learn/server-side/django/deployment>Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href=/learn/server-side/django/web_application_security>Django web application security</a></li>
+ <li><a href=/learn/server-side/django/django_assessment_blog>DIY Django mini blog</a></li>
 </ul>

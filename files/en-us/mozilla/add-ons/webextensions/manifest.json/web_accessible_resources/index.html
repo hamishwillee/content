@@ -34,7 +34,7 @@ tags:
 
 <p>Sometimes you want to package resources—for example, images, HTML, CSS, or JavaScript—with your extension and make them available to web pages.</p>
 
-<p>For example, the <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">Beastify example extension</a> replaces a web page with an image of a beast selected by the user. The beast images are packaged with the extension. To make the selected image visible, the extension adds <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> elements whose <code>src</code> attribute points to the beast's image. For the web page to be able to load the images, they must be made web accessible.</p>
+<p>For example, the <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">Beastify example extension</a> replaces a web page with an image of a beast selected by the user. The beast images are packaged with the extension. To make the selected image visible, the extension adds <code><a href=/web/html/element/img>&lt;img&gt;</a></code> elements whose <code>src</code> attribute points to the beast's image. For the web page to be able to load the images, they must be made web accessible.</p>
 
 <p>With the <code>web_accessible_resources</code> key, you list all the packaged resources that you want to make available to web pages. You specify them as paths relative to the manifest.json file.</p>
 
@@ -52,7 +52,7 @@ tags:
     images/
         my-image.png</pre>
 
-<p>To enable a web page to use an <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element whose <code>src</code> attribute points to this image, you would specify <code>web_accessible_resources</code> like this:</p>
+<p>To enable a web page to use an <code><a href=/web/html/element/img>&lt;img&gt;</a></code> element whose <code>src</code> attribute points to this image, you would specify <code>web_accessible_resources</code> like this:</p>
 
 <pre class="brush: json no-line-numbers">"web_accessible_resources": ["images/my-image.png"]</pre>
 

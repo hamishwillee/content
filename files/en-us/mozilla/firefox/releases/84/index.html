@@ -20,7 +20,7 @@ tags:
 <h3 id="Developer_Tools">Developer Tools</h3>
 
 <ul>
- <li>The Firefox <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a> now supports displaying the <a href="/en-US/docs/Tools/Accessibility_inspector#Show_web_page_tabbing_order">keyboard tab order</a> on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).</li>
+ <li>The Firefox <a href=/tools/accessibility_inspector>Accessibility Inspector</a> now supports displaying the <a href=/tools/accessibility_inspector#Show_web_page_tabbing_order>keyboard tab order</a> on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -42,7 +42,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>Custom date/time formats specified as options to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>fractionalSecondDigits</code> — the number of digits used to represent fractions of a second ({{bug(1645107)}}).</li>
+ <li>Custom date/time formats specified as options to the <a href=/web/javascript/reference/global_objects/intl/datetimeformat/datetimeformat><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>fractionalSecondDigits</code> — the number of digits used to represent fractions of a second ({{bug(1645107)}}).</li>
 </ul>
 
 <h3 id="HTTP">HTTP</h3>
@@ -52,7 +52,7 @@ tags:
 <h3 id="Security">Security</h3>
 
 <ul>
- <li>Firefox now ensures that <code>localhost</code> URLs — such as <em>http://localhost/</em> and <em>http://dev.localhost/</em> — refer to the local host's loopback interface (e.g. <em>http://127.0.0.1</em>). As a result, resources loaded from <code>localhost</code> are now assumed to have been delivered securely (see <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a>), and also will not be treated as <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a> ({{bug(1220810)}}, {{bug(1488740)}}).</li>
+ <li>Firefox now ensures that <code>localhost</code> URLs — such as <em>http://localhost/</em> and <em>http://dev.localhost/</em> — refer to the local host's loopback interface (e.g. <em>http://127.0.0.1</em>). As a result, resources loaded from <code>localhost</code> are now assumed to have been delivered securely (see <a href=/web/security/secure_contexts>Secure contexts</a>), and also will not be treated as <a href=/web/security/mixed_content>mixed content</a> ({{bug(1220810)}}, {{bug(1488740)}}).</li>
 </ul>
 
 <h3 id="APIs">APIs</h3>
@@ -71,7 +71,7 @@ tags:
 <h4 id="Removals_2">Removals</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/HTML/Using_the_application_cache">application cache</a> has been removed — developers should use the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> instead ({{bug(1619673)}}).</li>
+ <li>The <a href=/web/html/using_the_application_cache>application cache</a> has been removed — developers should use the <a href=/web/api/service_worker_api>Service Worker API</a> instead ({{bug(1619673)}}).</li>
 </ul>
 
 <h3 id="WebAssembly">WebAssembly</h3>
@@ -85,13 +85,13 @@ tags:
  <li>The new Fission-compatible API has been enabled by default now. To revert to the former API the <code>marionette.actors.enabled</code> preference has to be set to <code>false</code> ({{bug(1669169)}}).</li>
  <li>Fixed <code>WebDriver:SwitchToWindow</code> to always switch back to the top-level browsing context ({{bug(1305822)}}).</li>
  <li>Improved browsing context checks for <code>WebDriver:SwitchToParentFrame</code> ({{bug(1671622)}}).</li>
- <li>Fixed a hang for <code>WebDriver:Back</code> encountered when the currently-selected <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
+ <li>Fixed a hang for <code>WebDriver:Back</code> encountered when the currently-selected <code><a href=/web/html/element/iframe>&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <ul>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove">browsingData.remove()</a></code> API now supports removing a subset of data types by <code>cookieStoreId</code>.</li>
+ <li>The <code><a href=/mozilla/add-ons/webextensions/api/browsingdata/remove>browsingData.remove()</a></code> API now supports removing a subset of data types by <code>cookieStoreId</code>.</li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

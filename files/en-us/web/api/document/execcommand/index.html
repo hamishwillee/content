@@ -11,9 +11,9 @@ tags:
 ---
 <div>{{ApiRef("DOM")}}{{Obsolete_header}}</div>
 
-<p><span class="seoSummary">When an HTML document has been switched to <code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code>, its <code>document</code> object exposes an <strong><code>execCommand</code></strong> method to run commands that manipulate the current editable region, such as <a href="/en-US/docs/Web/HTML/Element/input">form inputs</a> or <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code> elements.</span></p>
+<p><span class="seoSummary">When an HTML document has been switched to <code><a href=/web/api/document/designmode>designMode</a></code>, its <code>document</code> object exposes an <strong><code>execCommand</code></strong> method to run commands that manipulate the current editable region, such as <a href=/web/html/element/input>form inputs</a> or <code><a href=/web/html/global_attributes/contenteditable>contentEditable</a></code> elements.</span></p>
 
-<p>Most commands affect the document's <a href="/en-US/docs/Web/API/Selection">selection</a> (bold, italics, etc.), while others insert new elements (adding a link), or affect an entire line (indenting). When using <code>contentEditable</code>, <code>execCommand()</code> affects the currently active editable element.</p>
+<p>Most commands affect the document's <a href=/web/api/selection>selection</a> (bold, italics, etc.), while others insert new elements (adding a link), or affect an entire line (indenting). When using <code>contentEditable</code>, <code>execCommand()</code> affects the currently active editable element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -53,13 +53,13 @@ tags:
  <dt><code>copy</code></dt>
  <dd>Copies the current selection to the clipboard. Conditions of having this behavior enabled vary from one browser to another, and have evolved over time. Check the compatibility table to determine if you can use it in your case.</dd>
  <dt><code>createLink</code></dt>
- <dd>Creates an hyperlink from the selection, but only if there is a selection. Requires a <a href="/en-US/docs/Archive/Mozilla/URIs_and_URLs">URI</a> string as a value argument for the hyperlink's <code>href</code>. The URI must contain at least a single character, which may be whitespace. (Internet Explorer will create a link with a <code>null</code> value.)</dd>
+ <dd>Creates an hyperlink from the selection, but only if there is a selection. Requires a <a href=/archive/mozilla/uris_and_urls>URI</a> string as a value argument for the hyperlink's <code>href</code>. The URI must contain at least a single character, which may be whitespace. (Internet Explorer will create a link with a <code>null</code> value.)</dd>
  <dt><code>cut</code></dt>
  <dd>Removes the current selection and copies it to the clipboard. When this behavior is enabled varies between browsers, and its conditions have evolved over time. Check <a href="#Browser_compatibility">the compatibility table</a> for usage details.</dd>
  <dt><code>decreaseFontSize</code></dt>
  <dd>Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point. (Not supported by Internet Explorer.)</dd>
  <dt><code>defaultParagraphSeparator</code></dt>
- <dd>Changes the paragraph separator used when new paragraphs are created in editable text regions. See <a href="/en-US/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation">Differences in markup generation</a> for more details.</dd>
+ <dd>Changes the paragraph separator used when new paragraphs are created in editable text regions. See <a href=/web/guide/html/editable_content#Differences_in_markup_generation>Differences in markup generation</a> for more details.</dd>
  <dt><code>delete</code></dt>
  <dd>Deletes the current selection.</dd>
  <dt><code>enableAbsolutePositionEditor</code></dt>
@@ -95,11 +95,11 @@ tags:
  <dt><code>insertImage</code></dt>
  <dd>Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's <code>src</code> as a value argument. The requirements for this string are the same as <code>createLink</code>.</dd>
  <dt><code>insertOrderedList</code></dt>
- <dd>Creates a <a href="/en-US/docs/Web/HTML/Element/ol">numbered ordered list</a> for the selection or at the insertion point.</dd>
+ <dd>Creates a <a href=/web/html/element/ol>numbered ordered list</a> for the selection or at the insertion point.</dd>
  <dt><code>insertUnorderedList</code></dt>
- <dd>Creates a <a href="/en-US/docs/Web/HTML/Element/ul">bulleted unordered list</a> for the selection or at the insertion point.</dd>
+ <dd>Creates a <a href=/web/html/element/ul>bulleted unordered list</a> for the selection or at the insertion point.</dd>
  <dt><code>insertParagraph</code></dt>
- <dd>Inserts a <a href="/en-US/docs/Web/HTML/Element/p">paragraph</a> around the selection or the current line. (Internet Explorer inserts a paragraph at the insertion point and deletes the selection.)</dd>
+ <dd>Inserts a <a href=/web/html/element/p>paragraph</a> around the selection or the current line. (Internet Explorer inserts a paragraph at the insertion point and deletes the selection.)</dd>
  <dt><code>insertText</code></dt>
  <dd>Inserts the given plain text at the insertion point (deletes selection).</dd>
  <dt><code>italic</code></dt>
@@ -125,15 +125,15 @@ tags:
  <dt><code>strikeThrough</code></dt>
  <dd>Toggles strikethrough on/off for the selection or at the insertion point.</dd>
  <dt><code>subscript</code></dt>
- <dd>Toggles <a href="/en-US/docs/Web/HTML/Element/sub">subscript</a> on/off for the selection or at the insertion point.</dd>
+ <dd>Toggles <a href=/web/html/element/sub>subscript</a> on/off for the selection or at the insertion point.</dd>
  <dt><code>superscript</code></dt>
- <dd>Toggles <a href="/en-US/docs/Web/HTML/Element/sup">superscript</a> on/off for the selection or at the insertion point.</dd>
+ <dd>Toggles <a href=/web/html/element/sup>superscript</a> on/off for the selection or at the insertion point.</dd>
  <dt><code>underline</code></dt>
- <dd>Toggles <a href="/en-US/docs/Web/HTML/Element/u">underline</a> on/off for the selection or at the insertion point.</dd>
+ <dd>Toggles <a href=/web/html/element/u>underline</a> on/off for the selection or at the insertion point.</dd>
  <dt><code>undo</code></dt>
  <dd>Undoes the last executed command.</dd>
  <dt><code>unlink</code></dt>
- <dd>Removes the <a href="/en-US/docs/Web/HTML/Element/a">anchor element</a> from a selected hyperlink.</dd>
+ <dd>Removes the <a href=/web/html/element/a>anchor element</a> from a selected hyperlink.</dd>
  <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
  <dd>Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.</dd>
  <dd>NOTE: This argument is logically backwards (i.e. use <code>false</code> to use CSS, <code>true</code> to use HTML) and unsupported by Internet Explorer. This has been deprecated in favor of <code>styleWithCSS</code>.</dd>
@@ -172,6 +172,6 @@ tags:
 <ul>
  <li>{{domxref("HTMLElement.contentEditable")}}</li>
  <li>{{domxref("document.designMode")}}</li>
- <li><a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
+ <li><a href=/rich-text_editing_in_mozilla>Rich-Text Editing in Mozilla</a></li>
  <li><a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md">Scribe's "Browser Inconsistencies" documentation</a> with bugs related to <code>document.execCommand</code>.</li>
 </ul>

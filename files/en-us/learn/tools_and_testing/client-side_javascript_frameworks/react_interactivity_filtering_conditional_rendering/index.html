@@ -23,7 +23,7 @@ tags:
   <tr>
    <th scope="row">Prerequisites:</th>
    <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+    <p>Familiarity with the core <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> languages, knowledge of the <a href=/learn/tools_and_testing/understanding_client-side_tools/command_line>terminal/command line</a>.</p>
    </td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Editing_the_name_of_a_task"><span class="author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvlb5z71z71z86zgz69zz79z4z67z49z87zz71ziz80zz77z8z67zz83ztz83zz79zz84zz73zbi2">Editing the name of a task</span></h2>
 
-<p>We don’t have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an <code>editTask()</code> function in <code>App.js</code>. It’ll be similar to <code>deleteTask()</code> because it'll take an <code>id</code> to find its target object, but it'll also take a <code>newName</code> property containing the name to update the task to. We'll use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map()</a></code> instead of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a></code> because we want to return a new array with some changes, instead of deleting something from the array.</p>
+<p>We don’t have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an <code>editTask()</code> function in <code>App.js</code>. It’ll be similar to <code>deleteTask()</code> because it'll take an <code>id</code> to find its target object, but it'll also take a <code>newName</code> property containing the name to update the task to. We'll use <code><a href=/web/javascript/reference/global_objects/array/map>Array.prototype.map()</a></code> instead of <code><a href=/web/javascript/reference/global_objects/array/filter>Array.prototype.filter()</a></code> because we want to return a new array with some changes, instead of deleting something from the array.</p>
 
 <p>Add the <code>editTask()</code> function inside your App component, in the same place as the other functions:</p>
 
@@ -138,7 +138,7 @@ const viewTemplate = (
 
 <h2 id="Conditional_rendering">Conditional rendering</h2>
 
-<p>In JSX, we can use a condition to change what is rendered by the browser. To write a condition in JSX, we can use a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">ternary operator</a>.</p>
+<p>In JSX, we can use a condition to change what is rendered by the browser. To write a condition in JSX, we can use a <a href=/web/javascript/reference/operators/conditional_operator>ternary operator</a>.</p>
 
 <p>In the case of our <code>&lt;Todo /&gt;</code> component, our condition is "Is this task being edited?" Change the <code>return</code> statement inside <code>Todo()</code> so that it reads like so:</p>
 
@@ -260,7 +260,7 @@ const viewTemplate = (
  <li>The <code>Completed</code> filter shows tasks whose <code>completed</code> prop is <code>true</code>.</li>
 </ul>
 
-<p>Beneath our previous addition, add the following — here we are using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code> method to collect an array of <code>FILTER_NAMES</code>:</p>
+<p>Beneath our previous addition, add the following — here we are using the <code><a href=/web/javascript/reference/global_objects/object/keys>Object.keys()</a></code> method to collect an array of <code>FILTER_NAMES</code>:</p>
 
 <pre class="brush: js notranslate">const FILTER_NAMES = Object.keys(FILTER_MAP);</pre>
 
@@ -343,7 +343,7 @@ const viewTemplate = (
 
 <h3 id="Filtering_tasks_in_the_UI">Filtering tasks in the UI</h3>
 
-<p>Right now, our <code>taskList</code> constant in <code>App()</code> maps over the tasks state and returns a new <code>&lt;Todo /&gt;</code> component for all of them. This is not what we want! A task should only render if it is included in the results of applying the selected filter. Before we map over the tasks state, we should filter it (with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a></code>) to eliminate objects we don't want to render.</p>
+<p>Right now, our <code>taskList</code> constant in <code>App()</code> maps over the tasks state and returns a new <code>&lt;Todo /&gt;</code> component for all of them. This is not what we want! A task should only render if it is included in the results of applying the selected filter. Before we map over the tasks state, we should filter it (with <code><a href=/web/javascript/reference/global_objects/array/filter>Array.prototype.filter()</a></code>) to eliminate objects we don't want to render.</p>
 
 <p>Update your <code>taskList</code> like so:</p>
 
@@ -376,52 +376,52 @@ const viewTemplate = (
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/introduction>Introduction to client-side frameworks</a></li>
+ <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/main_features>Framework main features</a></li>
  <li>React
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_getting_started>Getting started with React</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_todo_list_beginning>Beginning our React todo list</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_components>Componentizing our React app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_events_state>React interactivity: Events and state</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_filtering_conditional_rendering>React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_accessibility>Accessibility in React</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_resources>React resources</a></li>
   </ul>
  </li>
  <li>Ember
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_getting_started>Getting started with Ember</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_structure_componentization>Ember app structure and componentization</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_interactivity_events_state>Ember interactivity: Events, classes and state</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_conditional_footer>Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_routing>Routing in Ember</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_resources>Ember resources and troubleshooting</a></li>
   </ul>
  </li>
  <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_getting_started>Getting started with Vue</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_first_component>Creating our first Vue component</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_rendering_lists>Rendering a list of Vue components</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_methods_events_models>Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_styling>Styling Vue components with CSS</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_computed_properties>Using Vue computed properties</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_conditional_rendering>Vue conditional rendering: editing existing todos</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_refs_focus_management>Focus management with Vue refs</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_resources>Vue resources</a></li>
   </ul>
  </li>
  <li>Svelte
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_getting_started>Getting started with Svelte</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_todo_list_beginning>Starting our Svelte Todo list app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_variables_props>Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_components>Componentizing our Svelte app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_reactivity_lifecycle_accessibility>Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_stores>Working with Svelte stores</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_typescript>TypeScript support in Svelte</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_deployment_next>Deployment and next steps</a></li>
   </ul>
  </li>
 </ul>

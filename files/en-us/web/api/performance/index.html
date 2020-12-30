@@ -11,12 +11,12 @@ tags:
 ---
 <div>{{APIRef("High Resolution Time")}}</div>
 
-<p>The <strong><code>Performance</code></strong> interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline API</a>, the <a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a>, the <a href="/en-US/docs/Web/API/User_Timing_API">User Timing API</a>, and the <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>.</p>
+<p>The <strong><code>Performance</code></strong> interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the <a href=/web/api/performance_timeline>Performance Timeline API</a>, the <a href=/web/api/navigation_timing_api>Navigation Timing API</a>, the <a href=/web/api/user_timing_api>User Timing API</a>, and the <a href=/web/api/resource_timing_api>Resource Timing API</a>.</p>
 
 <p>An object of this type can be obtained by calling the {{domxref("window.performance")}} read-only attribute.</p>
 
 <div class="note">
-<p><strong><em>Note</em>:</strong> This interface and its members are available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> via <code><a href="/en-US/docs/Web/API/WorkerGlobalScope/performance">WorkerGlobalScope.performance</a></code> , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.</p>
+<p><strong><em>Note</em>:</strong> This interface and its members are available in <a href=/web/api/web_workers_api>Web Workers</a> via <code><a href=/web/api/workerglobalscope/performance>WorkerGlobalScope.performance</a></code> , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -77,7 +77,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}</dt>
- <dd>Fired when the browser's<a href="/en-US/docs/Web/API/Performance/setResourceTimingBufferSize"> resource timing buffer</a> is full.<br>
+ <dd>Fired when the browser's<a href=/web/api/performance/setresourcetimingbuffersize> resource timing buffer</a> is full.<br>
  Also available via the {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}} property.</dd>
 </dl>
 

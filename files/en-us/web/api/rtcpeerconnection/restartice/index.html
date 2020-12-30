@@ -17,7 +17,7 @@ tags:
 ---
 <p>{{APIRef("WebRTC API")}}</p>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> API's {{domxref("RTCPeerConnection")}} interface offers the <code><strong>restartIce()</strong></code> method to allow a web application to easily request that {{Glossary("ICE")}} candidate gathering be redone on both ends of the connection.</span> This simplifies the process by allowing the same method to be used by either the caller or the receiver to trigger an ICE restart.</p>
+<p><span class="seoSummary">The <a href=/web/api/webrtc_api>WebRTC</a> API's {{domxref("RTCPeerConnection")}} interface offers the <code><strong>restartIce()</strong></code> method to allow a web application to easily request that {{Glossary("ICE")}} candidate gathering be redone on both ends of the connection.</span> This simplifies the process by allowing the same method to be used by either the caller or the receiver to trigger an ICE restart.</p>
 
 <p>After <code>restartIce()</code> returns, the offer returned by the next call to {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} is automatically configured to trigger ICE restart on both the local peer (once the local peer has been set) and on the remote peer, once the offer is sent across your signaling mechanism and the remote peer has set its description as well.</p>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>After calling <code>restartIce()</code>, the next offer created using {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} will initiate ICE restart once sent to the remote peer over your signaling mechanism. Restarting ICE essentially resets ICE so that it creates all new candidates using new credentials. Existing media transmissions continue uninterrupted during this process.</p>
 
-<p>For details about how ICE restart works, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} and {{RFC(5245, "ICE specification", "9.1.1.1")}}.</p>
+<p>For details about how ICE restart works, see {{SectionOnPage(/web/api/webrtc_api/session_lifetime, "ICE restart")}} and {{RFC(5245, "ICE specification", "9.1.1.1")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -84,7 +84,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a></li>
+ <li><a href=/web/api/webrtc_api>WebRTC API</a></li>
+ <li><a href=/web/api/webrtc_api/session_lifetime>Lifetime of a WebRTC session</a></li>
+ <li><a href=/web/api/webrtc_api/signaling_and_video_calling>Signaling and video calling</a></li>
 </ul>

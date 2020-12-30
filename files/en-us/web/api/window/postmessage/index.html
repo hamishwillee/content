@@ -14,9 +14,9 @@ tags:
 
 <p>The <strong><code>window.postMessage()</code></strong> method safely enables cross-origin communication between {{domxref("Window")}} objects; <em>e.g.,</em> between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.</p>
 
-<p>Normally, scripts on different pages are allowed to access each other if and only if the pages they originate from share the same protocol, port number, and host (also known as the "<a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>"). <code>window.postMessage()</code> provides a controlled mechanism to securely circumvent this restriction (if used properly).</p>
+<p>Normally, scripts on different pages are allowed to access each other if and only if the pages they originate from share the same protocol, port number, and host (also known as the "<a href=/web/security/same-origin_policy>same-origin policy</a>"). <code>window.postMessage()</code> provides a controlled mechanism to securely circumvent this restriction (if used properly).</p>
 
-<p>Broadly, one window may obtain a reference to another (<em>e.g.,</em> via <code>targetWindow = window.opener</code>), and then dispatch a {{domxref("MessageEvent")}} on it with <code>targetWindow.postMessage()</code>. The receiving window is then free to <a href="/en-US/docs/Web/Guide/Events">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code> (<em>i.e.,</em> the “message”) are <a href="#The_dispatched_event">exposed to the receiving window through the event object</a>.</p>
+<p>Broadly, one window may obtain a reference to another (<em>e.g.,</em> via <code>targetWindow = window.opener</code>), and then dispatch a {{domxref("MessageEvent")}} on it with <code>targetWindow.postMessage()</code>. The receiving window is then free to <a href=/web/guide/events>handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code> (<em>i.e.,</em> the “message”) are <a href="#The_dispatched_event">exposed to the receiving window through the event object</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,7 +34,7 @@ tags:
  </ul>
  </dd>
  <dt><code><em>message</em></code></dt>
- <dd>Data to be sent to the other window. The data is serialized using <a href="/en-US/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a>. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself. [<a href="/en-US/docs/">1</a>]</dd>
+ <dd>Data to be sent to the other window. The data is serialized using <a href=/dom/the_structured_clone_algorithm>the structured clone algorithm</a>. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself. [<a href=/>1</a>]</dd>
  <dt><code><em>targetOrigin</em></code></dt>
  <dd>Specifies what the origin of <code>targetWindow</code> must be for the event to be dispatched, either as the literal string <code>"*"</code> (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of <code>targetWindow</code>'s document does not match that provided in <code>targetOrigin</code>, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if <code>postMessage()</code> was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. <strong>Always provide a specific <code>targetOrigin</code>, not <code>*</code>, if you know where the other window's document should be located. Failing to provide a specific target discloses the data you send to any interested malicious site.</strong></dd>
  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
@@ -59,9 +59,9 @@ tags:
  <dt><code>data</code></dt>
  <dd>The object passed from the other window.</dd>
  <dt><code>origin</code></dt>
- <dd>The <a href="/en-US/docs/Origin">origin</a> of the window that sent the message at the time <code>postMessage</code> was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are <code class="nowiki">https://example.org</code> (implying port <code>443</code>), <code class="nowiki">http://example.net</code> (implying port <code>80</code>), and <code class="nowiki">http://example.com:8080</code>. Note that this origin is <em>not</em> guaranteed to be the current or future origin of that window, which might have been navigated to a different location since <code>postMessage</code> was called.</dd>
+ <dd>The <a href=/origin>origin</a> of the window that sent the message at the time <code>postMessage</code> was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are <code class="nowiki">https://example.org</code> (implying port <code>443</code>), <code class="nowiki">http://example.net</code> (implying port <code>80</code>), and <code class="nowiki">http://example.com:8080</code>. Note that this origin is <em>not</em> guaranteed to be the current or future origin of that window, which might have been navigated to a different location since <code>postMessage</code> was called.</dd>
  <dt><code>source</code></dt>
- <dd>A reference to the <code><a href="/en-US/docs/DOM/window">window</a></code> object that sent the message; you can use this to establish two-way communication between two windows with different origins.</dd>
+ <dd>A reference to the <code><a href=/dom/window>window</a></code> object that sent the message; you can use this to establish two-way communication between two windows with different origins.</dd>
 </dl>
 
 <h2 id="Security_concerns">Security concerns</h2>
@@ -77,15 +77,15 @@ tags:
 <p>If <code>postMessage()</code> throws when used with {{jsxref("SharedArrayBuffer")}} objects, you might need to make sure you cross-site isolated your site properly. Shared memory is gated behind two HTTP headers:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
+ <li><a href=/web/http/headers/cross-origin-opener-policy><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
+ <li><a href=/web/http/headers/cross-origin-embedder-policy><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
 </ul>
 
 <pre class="notranslate">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 
-<p>To check if cross origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
+<p>To check if cross origin isolation has been successful, you can test against the <code><a href=/web/api/windoworworkerglobalscope/crossoriginisolated>crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
 <pre class="brush: js notranslate">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
@@ -93,7 +93,7 @@ Cross-Origin-Embedder-Policy: require-corp
   // Do something else
 }</pre>
 
-<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes">Planned changes to shared memory</a> which is starting to roll out to browsers (Firefox 79, for example).</p>
+<p>See also <a href=/web/javascript/reference/global_objects/sharedarraybuffer/planned_changes>Planned changes to shared memory</a> which is starting to roll out to browsers (Firefox 79, for example).</p>
 
 <h2 id="Example">Example</h2>
 

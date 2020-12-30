@@ -13,15 +13,15 @@ tags:
 <p>Highlights:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Eyedropper">Eyedropper tool to select colors in web pages</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#Error_messages">full stack traces for console error messages</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Box_model_view">editable Box Model View</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#Styling_messages">%c formatting to style console messages</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#Copy_as_cURL">"copy as cURL" command in Network Monitor</a></li>
- <li><a href="/en-US/docs/tools/Keyboard_shortcuts#Source_editor">Sublime Text keybindings in the source editor</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#Network_request_list">Option to make Network Monitor logs persistent</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#JavaScript_errors_and_warnings">JavaScript warnings on by default in the Web Console</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#HTML_pane_2">Alt+click to expand all descendants of a node</a></li>
+ <li><a href=/tools/eyedropper>Eyedropper tool to select colors in web pages</a></li>
+ <li><a href=/tools/web_console#Error_messages>full stack traces for console error messages</a></li>
+ <li><a href=/tools/page_inspector#Box_model_view>editable Box Model View</a></li>
+ <li><a href=/tools/web_console#Styling_messages>%c formatting to style console messages</a></li>
+ <li><a href=/tools/network_monitor#Copy_as_cURL>"copy as cURL" command in Network Monitor</a></li>
+ <li><a href=/tools/keyboard_shortcuts#Source_editor>Sublime Text keybindings in the source editor</a></li>
+ <li><a href=/tools/network_monitor#Network_request_list>Option to make Network Monitor logs persistent</a></li>
+ <li><a href=/tools/web_console#JavaScript_errors_and_warnings>JavaScript warnings on by default in the Web Console</a></li>
+ <li><a href=/tools/page_inspector#HTML_pane_2>Alt+click to expand all descendants of a node</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2014-04-28&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-03-17&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20App%20Manager&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;product=Firefox&amp;list_id=10022921">All devtools bugs fixed between Firefox 30 and Firefox 31</a>.</p>
@@ -75,7 +75,7 @@ tags:
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>Partial implementation of the <a href="http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition">OpenType MATH table</a>, section 6.3.6 ({{Bug(407059)}}). For details, see the <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">fonts for Mozilla's MathML engine</a> and try the <a href="/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test">MathML torture test</a> .</li>
+ <li>Partial implementation of the <a href="http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition">OpenType MATH table</a>, section 6.3.6 ({{Bug(407059)}}). For details, see the <a href=/mozilla/mathml_project/fonts>fonts for Mozilla's MathML engine</a> and try the <a href=/mozilla/mathml_project/mathml_torture_test>MathML torture test</a> .</li>
  <li>The <code>:</code><span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>:-moz-math-stretchy</code> pseudo-element has been removed</span></span> ({{Bug(1000879)}}).</li>
  <li><span id="summary_alias_container"><span id="short_desc_nonedit_display">When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic mathvariants</span></span> ({{Bug(930504)}}).</li>
 </ul>
@@ -91,7 +91,7 @@ tags:
 <h2 id="Security">Security</h2>
 
 <ul>
- <li><a href="/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects">Privileged code now gets Xray vision for <code>Date</code> instances</a>.</li>
+ <li><a href=/xray_vision#Xrays_for_JavaScript_objects>Privileged code now gets Xray vision for <code>Date</code> instances</a>.</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
@@ -101,7 +101,7 @@ tags:
   <code>#urlbar-wrapper {<br>
     -moz-box-align: center;<br>
   }</code></li>
- <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()"><code>nsIDOMWindowUtils.sendQueryContentEvent()</code></a> and <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29"><code>nsIDOMWindowUtils.sendSelectionSetEvent()</code></a> have <code>aAdditionalFlags</code> as optional argument. If you called <code>nsIDOMWindowUtils.sendSelectionSetEvent()</code> with <code>true</code> for <code>aReverse</code>, the behavior would be broken by this change. See <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants">explanation of each flag</a> (<code>QUERY_CONTENT_FLAG_*</code> and <code>SELECTION_SET_FLAG_*</code>) for the detail of <code>aAdditionalFlags</code>.</li>
+ <li><a href=/mozilla/tech/xpcom/reference/interface/nsidomwindowutils#sendQueryContentEvent()><code>nsIDOMWindowUtils.sendQueryContentEvent()</code></a> and <a href=/mozilla/tech/xpcom/reference/interface/nsidomwindowutils#sendSelectionSetEvent%28%29><code>nsIDOMWindowUtils.sendSelectionSetEvent()</code></a> have <code>aAdditionalFlags</code> as optional argument. If you called <code>nsIDOMWindowUtils.sendSelectionSetEvent()</code> with <code>true</code> for <code>aReverse</code>, the behavior would be broken by this change. See <a href=/mozilla/tech/xpcom/reference/interface/nsidomwindowutils#Constants>explanation of each flag</a> (<code>QUERY_CONTENT_FLAG_*</code> and <code>SELECTION_SET_FLAG_*</code>) for the detail of <code>aAdditionalFlags</code>.</li>
 </ul>
 
 <h3 id="Add-on_SDK">Add-on SDK</h3>

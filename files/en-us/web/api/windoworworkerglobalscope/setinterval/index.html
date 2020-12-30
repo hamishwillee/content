@@ -111,7 +111,7 @@ function myCallback(a, b)
 
 <h3 id="Example_3_Typewriter_simulation">Example 3: Typewriter simulation</h3>
 
-<p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
+<p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href=/dom/nodelist><code>NodeList</code></a> that matches a specified group of selectors.</p>
 
 <pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -270,7 +270,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><a href="/files/3997/typewriter.html">View this demo in action</a>. See also: <a href="/en-US/docs/DOM/window.clearInterval"><code>clearInterval()</code></a>.</p>
+<p><a href="/files/3997/typewriter.html">View this demo in action</a>. See also: <a href=/dom/window.clearinterval><code>clearInterval()</code></a>.</p>
 
 <h2 id="Callback_arguments">Callback arguments</h2>
 
@@ -319,7 +319,7 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <pre class="brush:js notranslate">var intervalID = setInterval(function() { myFunc('one', 'two', 'three'); }, 1000);</pre>
 
-<p>Another possibility is to use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's bind</a>. Example:</p>
+<p>Another possibility is to use <a href=/web/javascript/reference/global_objects/function/bind>function's bind</a>. Example:</p>
 
 <pre class="brush:js notranslate">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
@@ -327,13 +327,13 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.</p>
 
-<h2 id="The_this_problem">The "<a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>" problem</h2>
+<h2 id="The_this_problem">The "<a href=/web/javascript/reference/operators/this><code>this</code></a>" problem</h2>
 
-<p>When you pass a method to <code>setInterval()</code> or any other function, it is invoked with the wrong <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> value. This problem is explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
+<p>When you pass a method to <code>setInterval()</code> or any other function, it is invoked with the wrong <a href=/web/javascript/reference/operators/this><code>this</code></a> value. This problem is explained in detail in the <a href=/web/javascript/reference/operators/this#As_an_object_method>JavaScript reference</a>.</p>
 
 <h3 id="Explanation">Explanation</h3>
 
-<p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
+<p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href=/web/javascript/reference/operators/this><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
 
 <pre class="brush:js notranslate">myArray = ['zero', 'one', 'two'];
 
@@ -357,7 +357,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 <h3 id="A_possible_solution">A possible solution</h3>
 
-<p>A possible way to solve the "<code>this</code>" problem is to replace the two native <code>setTimeout()</code> or <code>setInterval()</code> global functions with two <em>non-native</em> ones that enable their invocation through the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a> method. The following example shows a possible replacement:</p>
+<p>A possible way to solve the "<code>this</code>" problem is to replace the two native <code>setTimeout()</code> or <code>setInterval()</code> global functions with two <em>non-native</em> ones that enable their invocation through the <a href=/javascript/reference/global_objects/function/call><code>Function.prototype.call</code></a> method. The following example shows a possible replacement:</p>
 
 <pre class="brush:js notranslate">// Enable the passage of the 'this' object through the JavaScript timers
 
@@ -392,13 +392,13 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 </pre>
 
-<p>Another, more complex, solution for the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> problem is <a href="#MiniDaemon_-_A_framework_for_managing_timers">the following framework</a>.</p>
+<p>Another, more complex, solution for the <a href=/web/javascript/reference/operators/this><code>this</code></a> problem is <a href="#MiniDaemon_-_A_framework_for_managing_timers">the following framework</a>.</p>
 
-<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
+<div class="note">JavaScript 1.8.5 introduces the <code><a href=/web/javascript/reference/global_objects/function/bind>Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href=/web/javascript/reference/functions/arrow_functions>arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
 
 <h2 id="MiniDaemon_-_A_framework_for_managing_timers">MiniDaemon - A framework for managing timers</h2>
 
-<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
+<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href=/web/javascript/reference/operators/this><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 
 <div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
 
@@ -482,32 +482,32 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h3 id="Description">Description</h3>
 
-<p>Returns a JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a> containing all information needed by an animation (like the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object, the callback function, the length, the frame-rate).</p>
+<p>Returns a JavaScript <a href=/web/javascript/reference/global_objects/object><code>Object</code></a> containing all information needed by an animation (like the <a href=/web/javascript/reference/operators/this><code>this</code></a> object, the callback function, the length, the frame-rate).</p>
 
 <h4 id="Arguments">Arguments</h4>
 
 <dl>
  <dt><code>thisObject</code></dt>
- <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object on which the <em>callback</em> function is called. It can be an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>object</code></a> or <code>null</code>.</dd>
+ <dd>The <a href=/web/javascript/reference/operators/this><code>this</code></a> object on which the <em>callback</em> function is called. It can be an <a href=/web/javascript/reference/global_objects/object><code>object</code></a> or <code>null</code>.</dd>
  <dt><code>callback</code></dt>
- <dd>The function that is repeatedly invoked . <strong>It is called with three arguments</strong>: <em>index</em> (the iterative index of each invocation), <em>length</em> (the number of total invocations assigned to the <em>daemon</em> - finite or <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>) and <em>backwards</em> (a boolean expressing whether the <em>index</em> is increasing or decreasing). It is something like <em>callback</em>.call(<em>thisObject</em>, <em>index</em>, <em>length</em>, <em>backwards</em>). <strong>If the callback function returns a <code>false</code> value the <em>daemon</em> is paused</strong>.</dd>
+ <dd>The function that is repeatedly invoked . <strong>It is called with three arguments</strong>: <em>index</em> (the iterative index of each invocation), <em>length</em> (the number of total invocations assigned to the <em>daemon</em> - finite or <a href=/javascript/reference/global_objects/infinity><code>Infinity</code></a>) and <em>backwards</em> (a boolean expressing whether the <em>index</em> is increasing or decreasing). It is something like <em>callback</em>.call(<em>thisObject</em>, <em>index</em>, <em>length</em>, <em>backwards</em>). <strong>If the callback function returns a <code>false</code> value the <em>daemon</em> is paused</strong>.</dd>
  <dt><code>rate (optional)</code></dt>
  <dd>The time lapse (in number of milliseconds) between each invocation. The default value is 100.</dd>
  <dt><code>length (optional)</code></dt>
- <dd>The total number of invocations. It can be a positive integer or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>. The default value is <code>Infinity</code>.</dd>
+ <dd>The total number of invocations. It can be a positive integer or <a href=/web/javascript/reference/global_objects/infinity><code>Infinity</code></a>. The default value is <code>Infinity</code>.</dd>
 </dl>
 
 <h4 id="MiniDaemon_instances_properties"><code>MiniDaemon</code> instances properties</h4>
 
 <dl>
  <dt><code>myDaemon.owner</code></dt>
- <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object on which is executed the daemon (read/write). It can be an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>object</code></a> or <code>null</code>.</dd>
+ <dd>The <a href=/web/javascript/reference/operators/this><code>this</code></a> object on which is executed the daemon (read/write). It can be an <a href=/web/javascript/reference/global_objects/object><code>object</code></a> or <code>null</code>.</dd>
  <dt><code>myDaemon.task</code></dt>
- <dd>The function that is repeatedly invoked (read/write). It is called with three arguments: <em>index</em> (the iterative index of each invocation), <em>length</em> (the number of total invocations assigned to the daemon - finite or <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>) and backwards (a boolean expressing whether the <em>index</em> is decreasing or not) – see above. If the <code>myDaemon.task</code> function returns a <code>false</code> value the <em>daemon</em> is paused.</dd>
+ <dd>The function that is repeatedly invoked (read/write). It is called with three arguments: <em>index</em> (the iterative index of each invocation), <em>length</em> (the number of total invocations assigned to the daemon - finite or <a href=/javascript/reference/global_objects/infinity><code>Infinity</code></a>) and backwards (a boolean expressing whether the <em>index</em> is decreasing or not) – see above. If the <code>myDaemon.task</code> function returns a <code>false</code> value the <em>daemon</em> is paused.</dd>
  <dt><code>myDaemon.rate</code></dt>
  <dd>The time lapse (in number of milliseconds) between each invocation (read/write).</dd>
  <dt><code>myDaemon.length</code></dt>
- <dd>The total number of invocations. It can be a positive integer or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a> (read/write).</dd>
+ <dd>The total number of invocations. It can be a positive integer or <a href=/web/javascript/reference/global_objects/infinity><code>Infinity</code></a> (read/write).</dd>
 </dl>
 
 <h4 id="MiniDaemon_instances_methods"><code>MiniDaemon</code> instances methods</h4>
@@ -581,7 +581,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>It's possible for intervals to be nested; that is, the callback for <code>setInterval()</code> can in turn call <code>setInterval()</code> to start another interval running, even though the first one is still going. To mitigate the potential impact this can have on performance, once intervals are nested beyond five levels deep, the browser will automatically enforce a 4 ms minimum value for the interval. Attempts to specify a value less than 4 ms in deeply-nested calls to <code>setInterval()</code> will be pinned to 4 ms.</p>
 
-<p>Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given <code>delay</code>; see {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} for examples.</p>
+<p>Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given <code>delay</code>; see {{SectionOnPage(/web/api/windoworworkerglobalscope/settimeout, "Reasons for delays longer than specified")}} for examples.</p>
 
 <h3 id="Ensure_that_execution_duration_is_shorter_than_interval_frequency">Ensure that execution duration is shorter than interval frequency</h3>
 

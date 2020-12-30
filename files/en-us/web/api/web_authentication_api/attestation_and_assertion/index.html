@@ -19,14 +19,14 @@ tags:
 
 
 <div>
-<p><span>The attestation </span> <span>is returned through the WebAuthn API as the <a href="/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse</a>. The attestation format contains two basic ArrayBuffers:</span></p>
+<p><span>The attestation </span> <span>is returned through the WebAuthn API as the <a href=/web/api/authenticatorattestationresponse>AuthenticatorAttestationResponse</a>. The attestation format contains two basic ArrayBuffers:</span></p>
 
 <ul>
  <li>
   <div><span><strong><span>clientDataJSON</span></strong> - An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.</span></div>
  </li>
  <li>
-  <div><a href="/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject">attestationObject</a> - Cryptographic attestation that a newly generated keypair was created by that authenticator. Contains authenticator data and an attestation statement. The authenticator data contains an attestedCredentialData field. The attestedCredentialData field contains the credentialId and credentialPublicKey. (The <a href="/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData">authenticator data</a> is the same structure that is used in the AuthenticatorAssertionResponse. The attestedCredentialData is an optional field used in attestation. It is not included when used in the AuthenticatorAssertionResponse.)</div>
+  <div><a href=/web/api/authenticatorattestationresponse/attestationobject>attestationObject</a> - Cryptographic attestation that a newly generated keypair was created by that authenticator. Contains authenticator data and an attestation statement. The authenticator data contains an attestedCredentialData field. The attestedCredentialData field contains the credentialId and credentialPublicKey. (The <a href=/web/api/authenticatorassertionresponse/authenticatordata>authenticator data</a> is the same structure that is used in the AuthenticatorAssertionResponse. The attestedCredentialData is an optional field used in attestation. It is not included when used in the AuthenticatorAssertionResponse.)</div>
  </li>
 </ul>
 </div>
@@ -65,14 +65,14 @@ tags:
 
 <p><span>When a user chooses to log into a service, the server sends a challenge and the authenticator signs over it with a key pair previously registered to that service. This creates an assertion. Unlike the attestation, the format of the assertion is always the same regardless of the device being used.</span></p>
 
-<p><span>The assertion is returned through the WebAuthn API as the <a href="/en-US/docs/Web/API/AuthenticatorAssertionResponse">AuthenticatorAssertionResponse</a>. The assertion format is fairly simple as it contains four basic ArrayBuffers:</span></p>
+<p><span>The assertion is returned through the WebAuthn API as the <a href=/web/api/authenticatorassertionresponse>AuthenticatorAssertionResponse</a>. The assertion format is fairly simple as it contains four basic ArrayBuffers:</span></p>
 
 <ul>
  <li>
-  <div><span><a href="/en-US/docs/Web/API/AuthenticatorResponse/clientDataJSON">clientDataJSON</a> - The same as in attestation. An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.</span></div>
+  <div><span><a href=/web/api/authenticatorresponse/clientdatajson>clientDataJSON</a> - The same as in attestation. An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.</span></div>
  </li>
  <li>
-  <div><a href="/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData">authenticatorData</a> - data created and/or used by the authenticator</div>
+  <div><a href=/web/api/authenticatorassertionresponse/authenticatordata>authenticatorData</a> - data created and/or used by the authenticator</div>
  </li>
  <li>
   <div><strong>signature</strong> - a signature over the <span>clientDataJSON and authenticatorData that can be verified with the public key that was created during registration.</span></div>

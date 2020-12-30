@@ -34,7 +34,7 @@ tags:
  <li>The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by defaut ({{bug(1231485)}}).</li>
  <li>Gecko now accepts the <code>-webkit-</code> prefixed version of <a href="https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility">some properties</a>; it requires to switch <code>layout.css.prefixes.webkit</code> to <code>true</code> ({{bug(1213126)}}).</li>
  <li>The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch <code>layout.css.font-display.enabled</code> to <code>true</code> ({{bug(1157064)}}).</li>
- <li>Added support for <a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>@media (-webkit-transform-3d)</code></a> as a media query for 3D transform support, if about:config pref <code>layout.css.prefixes.webkit</code> is set to <code>true</code> ({{bug(1239799)}}).</li>
+ <li>Added support for <a href=/web/css/@media/-webkit-transform-3d><code>@media (-webkit-transform-3d)</code></a> as a media query for 3D transform support, if about:config pref <code>layout.css.prefixes.webkit</code> is set to <code>true</code> ({{bug(1239799)}}).</li>
  <li>{{cssxref("linear-gradient()")}} support for the omission of <code>0deg</code> units ({{bug(1239153)}}).</li>
  <li>Added {{cssxref("-webkit-filter")}} for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code> ({{bug(1236506)}}).</li>
  <li> [css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ({{bug(1230398)}}).</li>
@@ -48,8 +48,8 @@ tags:
  <li>The ES2015 {{jsxref("TypedArray.prototype.sort()")}} method has been implemented ({{bug(1121937)}}).</li>
  <li>The ES2015 {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}} has been implemented ({{bug(1067049)}}).</li>
  <li>The experimental <a href="https://tc39.github.io/ecmascript_sharedmem/shmem.html">EcmaScript Shared Memory API</a> has been implemented. See the {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects. To use this experimental API set <code>javascript.options.shared_memory</code> to <code>true</code> in about:config.</li>
- <li>Redeclaration of <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> variables now throws a {{jsxref("SyntaxError")}} instead of a {{jsxref("TypeError")}} as per the ECMAScript specification ({{bug(1198833)}}).</li>
- <li>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a>, setting properties on {{Glossary("primitive")}} values will now throw a {{jsxref("TypeError")}} ({{bug(603201)}}).</li>
+ <li>Redeclaration of <code><a href=/web/javascript/reference/statements/let>let</a></code> and <code><a href=/web/javascript/reference/statements/const>const</a></code> variables now throws a {{jsxref("SyntaxError")}} instead of a {{jsxref("TypeError")}} as per the ECMAScript specification ({{bug(1198833)}}).</li>
+ <li>In <a href=/web/javascript/reference/strict_mode>Strict mode</a>, setting properties on {{Glossary("primitive")}} values will now throw a {{jsxref("TypeError")}} ({{bug(603201)}}).</li>
  <li>The non-standard {{jsxref("WeakMap.prototype.clear()")}} and {{jsxref("WeakSet.prototype.clear()")}} methods have been removed ({{bug(1101817)}}).</li>
  <li>The non-standard, static <code>RegExp.multiline</code> property is now deprecated ({{bug(1220457)}}).</li>
  <li>Built-in accessor function names now have a "get" or "set" prefix ({{bug(1180290)}}, {{bug(1235656)}}).</li>
@@ -115,12 +115,12 @@ tags:
 
 <ul>
  <li>The asynchronous {{domxref("FileReader")}} is now available in Web workers ({{bug(901097)}}).</li>
- <li>Our experimental implementation of <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> has been updated:
+ <li>Our experimental implementation of <a href=/web/api/web_animations_api>Web Animations API</a> has been updated:
   <ul>
    <li>{{domxref("AnimationEffectTimingReadOnly")}} and {{domxref("AnimationEffectReadOnly.timing")}} have been implemented ({{bug(1214536)}}).</li>
   </ul>
  </li>
- <li>The <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> has now been enabled by default, for all release versions, not just Nightly as it previously was ({{bug(1221106)}}.)</li>
+ <li>The <a href=/web/api/permissions_api>Permissions API</a> has now been enabled by default, for all release versions, not just Nightly as it previously was ({{bug(1221106)}}.)</li>
  <li>Sanitization of WOFF fonts has been loosened a bit ({{bug (1244693)}}).</li>
 </ul>
 

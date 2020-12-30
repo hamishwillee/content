@@ -52,9 +52,9 @@ tags:
 
 <dl>
  <dt>{{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls are subject to <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> and satisfy those constraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
+ <dd>Returns <code>true</code> if the element's child controls are subject to <a href=/web/guide/html/html5/constraint_validation>constraint validation</a> and satisfy those constraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
  <dt>{{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls satisfy their <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validation constraints</a>. When <code>false</code> is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
+ <dd>Returns <code>true</code> if the element's child controls satisfy their <a href=/web/guide/html/html5/constraint_validation>validation constraints</a>. When <code>false</code> is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
  <dt>{{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}</dt>
  <dd>Requests that the form be submitted using the specified submit button and its corresponding configuration.</dd>
  <dt>{{domxref("HTMLFormElement.reset", "reset()")}}</dt>
@@ -90,7 +90,7 @@ tags:
 
 <h3 id="Obtaining_a_form_element_object">Obtaining a form element object</h3>
 
-<p>To obtain an <code>HTMLFormElement</code> object, you can use a <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS selector</a> with {{domxref("ParentNode.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.</p>
+<p>To obtain an <code>HTMLFormElement</code> object, you can use a <a href=/web/css/css_selectors>CSS selector</a> with {{domxref("ParentNode.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.</p>
 
 <p>{{domxref("Document.forms")}} returns an array of <code>HTMLFormElement</code> objects listing each of the forms on the page. You can then use any of the following syntaxes to get an individual form:</p>
 
@@ -226,7 +226,7 @@ f.submit();                               // Call the form's submit() method
 
 <h3 id="Submitting_forms_and_uploading_files_using_XMLHttpRequest">Submitting forms and uploading files using XMLHttpRequest</h3>
 
-<p>If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
+<p>If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read <a href=/dom/xmlhttprequest/using_xmlhttprequest#Submitting_forms_and_uploading_files>this paragraph</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

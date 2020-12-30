@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <strong><code>RsaHashedKeyGenParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.generateKey()")}}, when generating any RSA-based key pair: that is, when the algorithm is identified as any of <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>.</p>
+<p>The <strong><code>RsaHashedKeyGenParams</code></strong> dictionary of the <a href=/web/api/web_crypto_api>Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.generateKey()")}}, when generating any RSA-based key pair: that is, when the algorithm is identified as any of <a href=/web/api/subtlecrypto/sign#RSASSA-PKCS1-v1_5>RSASSA-PKCS1-v1_5</a>, <a href=/web/api/subtlecrypto/sign#RSA-PSS>RSA-PSS</a>, or <a href=/web/api/subtlecrypto/encrypt#RSA-OAEP>RSA-OAEP</a>.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -25,7 +25,7 @@ tags:
  </dd>
  <dt><code>hash</code></dt>
  <dd>
- <p>A {{domxref("DOMString")}} representing the name of the <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest function</a> to use. You can pass any of <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code> here.</p>
+ <p>A {{domxref("DOMString")}} representing the name of the <a href=/web/api/subtlecrypto/digest>digest function</a> to use. You can pass any of <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code> here.</p>
 
  <div class="notecard warning">
  <p><strong>Warning</strong>: Although you can technically pass <code>SHA-1</code> as a value here, this is strongly discouraged as SHA-1 is considered vulnerable.</p>

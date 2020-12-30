@@ -122,9 +122,9 @@ greetUser("Veronica");</pre>
  <dt>Window event loop</dt>
  <dd>The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this as described elsewhere in this article XXXX ????).</dd>
  <dt>Worker event loop</dt>
- <dd>A worker event loop is one which drives a worker; this includes all forms of workers, including basic <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, <a href="/en-US/docs/Web/API/SharedWorker">shared workers</a>, and <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>. Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.</dd>
+ <dd>A worker event loop is one which drives a worker; this includes all forms of workers, including basic <a href=/web/api/web_workers_api>web workers</a>, <a href=/web/api/sharedworker>shared workers</a>, and <a href=/web/api/service_worker_api>service workers</a>. Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.</dd>
  <dt>Worklet event loop</dt>
- <dd>A <a href="/en-US/docs/Web/API/Worklet">worklet</a> event loop is the event loop used to drive agents which run the code for the workelets for a given agent. This includes worklets of type {{domxref("Worklet")}}, {{domxref("AudioWorklet")}}, and {{domxref("PaintWorklet")}}.</dd>
+ <dd>A <a href=/web/api/worklet>worklet</a> event loop is the event loop used to drive agents which run the code for the workelets for a given agent. This includes worklets of type {{domxref("Worklet")}}, {{domxref("AudioWorklet")}}, and {{domxref("PaintWorklet")}}.</dd>
 </dl>
 
 <p>Several windows loaded from the same {{Glossary("origin")}} may be running on the same event loop, each queueing tasks onto the event loop so that their tasks take turns with the processor, one after another. Keep in mind that web parlance, the word "window" actually means "browser-level container that web content runs within," including an actual window, a tab, or a frame.</p>
@@ -158,9 +158,9 @@ greetUser("Veronica");</pre>
 
 <h3 id="Solutions">Solutions</h3>
 
-<p>The use of <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed web site or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.</p>
+<p>The use of <a href=/web/api/web_workers_api>web workers</a>, which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed web site or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.</p>
 
-<p>This is further alleviated by using <a href="/en-US/docs/Learn/JavaScript/Asynchronous">asynchronous JavaScript</a> techniques such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to allow the main code to continue to run while waiting for the results of a request. However, code running at a more fundamental level—such as code comprising a library or framework—may need a way to schedule code to be run at a safe time while still executing on the main thread, independent of the results of any single request or task.</p>
+<p>This is further alleviated by using <a href=/learn/javascript/asynchronous>asynchronous JavaScript</a> techniques such as <a href=/web/javascript/reference/global_objects/promise>promises</a> to allow the main code to continue to run while waiting for the results of a request. However, code running at a more fundamental level—such as code comprising a library or framework—may need a way to schedule code to be run at a safe time while still executing on the main thread, independent of the results of any single request or task.</p>
 
 <p>Microtasks are another solution to this problem, providing a finer degree of access by making it possible to schedule code to run before the next iteration of the event loop begins, instead of having to wait until the next one.</p>
 
@@ -169,15 +169,15 @@ greetUser("Veronica");</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Microtask guide</a></li>
+ <li><a href=/web/api/html_dom_api/microtask_guide>Microtask guide</a></li>
  <li>{{domxref("WindowOrWorkerGlobalScope.queueMicrotask", "queueMicrotask()")}}</li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a>
+ <li><a href=/learn/javascript/asynchronous>Asynchronous JavaScript</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
-   <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
-   <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
-   <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
-   <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+   <li><a href=/learn/javascript/asynchronous/concepts>General asynchronous programming concepts</a></li>
+   <li><a href=/learn/javascript/asynchronous/introducing>Introducing asynchronous JavaScript</a></li>
+   <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+   <li><a href=/learn/javascript/asynchronous/promises>Graceful asynchronous programming with Promises</a></li>
+   <li><a href=/learn/javascript/asynchronous/choosing_the_right_approach>Choosing the right approach</a></li>
   </ul>
  </li>
 </ul>

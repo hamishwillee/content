@@ -12,7 +12,7 @@ tags:
   - seizure disorders
   - seizures
 ---
-<p>Understaning color, luminance, and saturation is important in meeting <a href="/en-US/docs/Glossary/WCAG">WCAG 2 accessibility guidelines</a> in terms of ensuring enough <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">color contrast</a> for sighted users with color blindness or reduced vision and <a href="/en-US/docs/Web/Accessibility/Seizure_disorders">preventing seizures and other physical reactions</a> in people with vestibular disorders.</p>
+<p>Understaning color, luminance, and saturation is important in meeting <a href=/glossary/wcag>WCAG 2 accessibility guidelines</a> in terms of ensuring enough <a href=/web/accessibility/understanding_wcag/perceivable/color_contrast>color contrast</a> for sighted users with color blindness or reduced vision and <a href=/web/accessibility/seizure_disorders>preventing seizures and other physical reactions</a> in people with vestibular disorders.</p>
 
 <h2 id="Overview">Overview</h2>
 
@@ -28,13 +28,13 @@ tags:
 
 <h2 id="The_sRGB_color_space">The sRGB color space </h2>
 
-<p>The MDN document, <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> notes "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types">data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB color space</a>.</em>"</strong>  Color has many ways of being defined, including <strong>RGB</strong>, <strong>RGB decimal</strong>, <strong>RGB percent</strong>, <strong>HSL</strong>, <strong>CMYK</strong> among others.</p>
+<p>The MDN document, <strong><a href=/web/css/color_value>&lt;color&gt;</a></strong> notes "<em>The  <strong><a href=/web/css>CSS</a></strong> <strong><a href=/web/css/css_types>data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB color space</a>.</em>"</strong>  Color has many ways of being defined, including <strong>RGB</strong>, <strong>RGB decimal</strong>, <strong>RGB percent</strong>, <strong>HSL</strong>, <strong>CMYK</strong> among others.</p>
 
 <p>For digital concerns, much of the technology has historically resided in the <strong>RGB</strong> color space.  This is because the companies behind the evolution of digital technology set the standards, and these standards still retain a powerful presence today.  This is evolving, and new methods for measuring color involve measurements using other color spaces, but color measurements in the <strong>RGB</strong> color space still predominates, and this includes video production.  The <strong>RGB</strong> color model is extended to include “alpha” -- <strong>RGBA</strong> -- to allow specification of the <em>opacity</em> of a color.</p>
 
 <p>There's movement towards adopting the use of HSL color values rather than <strong>RGB</strong> values is <strong><a href="https://www.w3.org/TR/css-color-3/">CSS Color Module 3</a></strong> (see <strong><a href="https://www.w3.org/TR/2018/REC-css-color-3-20180619/#hsl-color">section 4.2.4</a></strong>), the rationale being that <strong>RGB</strong> is hardware-oriented, reflecting the use of CRTs, and that RGB is non-intuitive.  That said, <strong>HSL</strong> colors incorporate lightness, not luminance, and this is a significant consideration.  Note that in that same section of the <strong><a href="https://www.w3.org/TR/css-color-3">CSS Color Module 3</a></strong>, there are algorigthms available to translate the <strong>HSL</strong> to <strong>RGB</strong>.</p>
 
-<p>Newer technologies, such as <strong><a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a></strong> and <strong><a href="https://en.wikipedia.org/wiki/Direct3D">Direct3D</a></strong> incorporate support for the <strong>sRGB</strong> gamma curve, although some articles for OpenGL reference use of <strong>RGBA</strong> rather than <strong>sRGB</strong>. WebGL is usually in the <strong>RGBA</strong> format; see an example of how it is used in "<strong><a href="/en-US/docs/Web/API/WebGL_API/By_example/Clearing_with_colors">Clearing with colors</a></strong>".  </p>
+<p>Newer technologies, such as <strong><a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a></strong> and <strong><a href="https://en.wikipedia.org/wiki/Direct3D">Direct3D</a></strong> incorporate support for the <strong>sRGB</strong> gamma curve, although some articles for OpenGL reference use of <strong>RGBA</strong> rather than <strong>sRGB</strong>. WebGL is usually in the <strong>RGBA</strong> format; see an example of how it is used in "<strong><a href=/web/api/webgl_api/by_example/clearing_with_colors>Clearing with colors</a></strong>".  </p>
 
 <p>Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the <strong>sRGB</strong> color space, especially as it applies to color contrast ratios.  In speaking specifically to relative luminance, <strong><a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">WCAG's definition of relative luminance</a></strong> notes:</p>
 
@@ -118,7 +118,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <p>Put another way, as humans, the color blue is perceived differently than other colors, for multiple reasons.  First, because the blue cones are actually the most sensitive of the three, second, we have fewer blue cones than red or green, and third, it so happens that these "blue sensitive" cones tend to be located at the rims of our eyeballs, away from the center (<a href="http://hyperphysics.phy-astr.gsu.edu/hbase/vision/retina.html#c2">fovea centralis</a>) of the back of the eyeball, where the red and green cones tend to cluster. There is software that actually takes advantage of that fact.  Because we do not perceive the color "blue" as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" in them more heavily than other parts of an image. This fact is also used by televsion signals to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.</p>
 
-<p>Another important point to consider is the ambience of light surrounding the color.  The color will appear differently if the background lighting is dark, or light.  One of the greatest gifts to accessibility now in development is the <strong><a href="https://drafts.csswg.org/mediaqueries-5/">CSS Media Queries Level 5.</a> </strong>These queries will allow users to choose contrast levels that is right for them, and enable them to adjust these levels depending upon where they are, and what kind of screen they are using.  The MDN document, <strong><a href="/en-US/docs/Web/API/Ambient_Light_Events">Ambient Light Events</a></strong>, describes an experimental technology worth watching; this technology would enable a web page to be aware of any change in the light intensity, and consquently, adjust the text accordingly.  This would be a great boon to those with motor skills problems, or do not have the use of their hands.</p>
+<p>Another important point to consider is the ambience of light surrounding the color.  The color will appear differently if the background lighting is dark, or light.  One of the greatest gifts to accessibility now in development is the <strong><a href="https://drafts.csswg.org/mediaqueries-5/">CSS Media Queries Level 5.</a> </strong>These queries will allow users to choose contrast levels that is right for them, and enable them to adjust these levels depending upon where they are, and what kind of screen they are using.  The MDN document, <strong><a href=/web/api/ambient_light_events>Ambient Light Events</a></strong>, describes an experimental technology worth watching; this technology would enable a web page to be aware of any change in the light intensity, and consquently, adjust the text accordingly.  This would be a great boon to those with motor skills problems, or do not have the use of their hands.</p>
 
 <p>To summarize, color is as much about human physiology and perception in the brain as it is the measurement of light coming from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast.  Light, and its measurements, are linear, but human vision and human perception are not.</p>
 
@@ -240,11 +240,11 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 <h4 id="MDN"><strong>MDN</strong></h4>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility">Accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility">Accessibility learning path</a></li>
- <li><a href="/en-US/docs/Web/CSS/color">color</a></li>
- <li><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Seizure_disorders">Web accessibility for seizures and physical reactions</a></li>
+ <li><a href=/web/accessibility>Accessibility</a></li>
+ <li><a href=/learn/accessibility>Accessibility learning path</a></li>
+ <li><a href=/web/css/color>color</a></li>
+ <li><a href=/web/css/color_value>&lt;color&gt;</a></li>
+ <li><a href=/web/accessibility/seizure_disorders>Web accessibility for seizures and physical reactions</a></li>
  <li>Color blindness</li>
 </ul>
 

@@ -11,15 +11,15 @@ tags:
 ---
 <div>{{draft}}{{seecompattable}}{{APIRef("Reporting API")}}</div>
 
-<p class="summary">The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a>, <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a>, or feature deprecation reports) in a consistent manner.</p>
+<p class="summary">The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example <a href=/web/http/csp>Content Security Policy</a>, <a href=/web/http/headers/feature-policy>Feature-Policy</a>, or feature deprecation reports) in a consistent manner.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
 <p>There are a number of different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violations.</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a> violations.</li>
+ <li><a href=/web/http/csp>Content Security Policy</a> violations.</li>
+ <li><a href=/web/http/headers/feature-policy>Feature-Policy</a> violations.</li>
  <li>Deprecated feature usage (when you are using something that will stop working soon in browsers).</li>
  <li>Occurrence of crashes.</li>
  <li>Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).</li>
@@ -56,7 +56,7 @@ tags:
 
 <h3 id="Generating_reports_via_WebDriver">Generating reports via WebDriver</h3>
 
-<p>The Reporting API spec also defines a Generate Test Report <a href="/en-US/docs/Web/WebDriver">WebDriver</a> extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered <code>ReportObserver</code> objects present in the loaded website. This is not yet documented.</p>
+<p>The Reporting API spec also defines a Generate Test Report <a href=/web/webdriver>WebDriver</a> extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered <code>ReportObserver</code> objects present in the loaded website. This is not yet documented.</p>
 
 <h2 id="Reporting_API_interfaces">Reporting API interfaces</h2>
 
@@ -157,6 +157,6 @@ let observer = new ReportingObserver(function(reports, observer) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></li>
- <li><code><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a></code></li>
+ <li><a href=/web/http/csp>Content Security Policy</a></li>
+ <li><code><a href=/web/http/headers/feature-policy>Feature-Policy</a></code></li>
 </ul>

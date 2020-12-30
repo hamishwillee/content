@@ -21,7 +21,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, an <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>, and basic knowledge of <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> and <a href="/en-US/docs/Learn/Server-side/First_steps">server-side programming</a>.</td>
+   <td>Basic computer literacy, an <a href=/learn/html/introduction_to_html>understanding of HTML</a>, and basic knowledge of <a href=/web/http/basics_of_http>HTTP</a> and <a href=/learn/server-side/first_steps>server-side programming</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -34,14 +34,14 @@ tags:
 
 <h2 id="Clientserver_architecture">Client/server architecture</h2>
 
-<p>At it's most basic, the web uses a client/server architecture that can be summarized as follows. a client (usually a web browser) sends a request to a server (most of the time a web server like <a href="https://httpd.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external">Nginx</a>, <a href="https://www.iis.net/" rel="external">IIS</a>, <a href="https://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), using the <a href="/en-US/docs/HTTP">HTTP protocol</a>. The server answers the request using the same protocol.</p>
+<p>At it's most basic, the web uses a client/server architecture that can be summarized as follows. a client (usually a web browser) sends a request to a server (most of the time a web server like <a href="https://httpd.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external">Nginx</a>, <a href="https://www.iis.net/" rel="external">IIS</a>, <a href="https://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), using the <a href=/http>HTTP protocol</a>. The server answers the request using the same protocol.</p>
 
 <p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="display: block; height: 141px; margin: 0px auto; width: 400px;"></p>
 
 <p>An HTML form on a web page is nothing more than a convenient user-friendly way to configure an HTTP request to send data to a server. This enables the user to provide information to be delivered in the HTTP request.</p>
 
 <div class="note">
-<p><strong>Note</strong>: To get a better idea of how client-server architectures work, read our <a href="/en-US/docs/Learn/Server-side/First_steps">Server-side website programming first steps</a> module.</p>
+<p><strong>Note</strong>: To get a better idea of how client-server architectures work, read our <a href=/learn/server-side/first_steps>Server-side website programming first steps</a> module.</p>
 </div>
 
 <h2 id="On_the_client_side_defining_how_to_send_the_data">On the client side: defining how to send the data</h2>
@@ -50,7 +50,7 @@ tags:
 
 <h3 id="The_action_attribute">The action attribute</h3>
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Attributes/action">action</a></code> attribute defines where the data gets sent. Its value must be a valid relative or absolute <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL</a>. If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.</p>
+<p>The <code><a href=/web/html/attributes/action>action</a></code> attribute defines where the data gets sent. Its value must be a valid relative or absolute <a href=/learn/common_questions/what_is_a_url>URL</a>. If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.</p>
 
 <p>In this example, the data is sent to an absolute URL — <code>https://example.com</code>:</p>
 
@@ -74,13 +74,13 @@ tags:
 
 <h3 id="The_method_attribute">The method attribute</h3>
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Attributes/method">method</a></code> attribute defines how data is sent. The <a href="/en-US/docs/HTTP">HTTP protocol</a> provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the <code>GET</code> method and the <code>POST</code> method</p>
+<p>The <code><a href=/web/html/attributes/method>method</a></code> attribute defines how data is sent. The <a href=/http>HTTP protocol</a> provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the <code>GET</code> method and the <code>POST</code> method</p>
 
-<p>To understand the difference between those two methods, let's step back and examine <a href="/en-US/docs/Web/HTTP/Overview">how HTTP works</a>. Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a <a href="/en-US/docs/Web/HTTP/Headers">header</a> that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.</p>
+<p>To understand the difference between those two methods, let's step back and examine <a href=/web/http/overview>how HTTP works</a>. Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a <a href=/web/http/headers>header</a> that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.</p>
 
 <h4 id="The_GET_method">The GET method</h4>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Methods/GET"><code>GET</code> method</a> is the method used by the browser to ask the server to send back a given resource: "Hey server, I want to get this resource." In this case, the browser sends an empty body. Because the body is empty, if a form is sent using this method the data sent to the server is appended to the URL.</p>
+<p>The <a href=/web/http/methods/get><code>GET</code> method</a> is the method used by the browser to ask the server to send back a given resource: "Hey server, I want to get this resource." In this case, the browser sends an empty body. Because the body is empty, if a form is sent using this method the data sent to the server is appended to the URL.</p>
 
 <p>Consider the following form:</p>
 
@@ -118,7 +118,7 @@ Host: foo.com</pre>
 
 <h4 id="The_POST_method">The POST method</h4>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Methods/POST"><code>POST</code> method</a> is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.</p>
+<p>The <a href=/web/http/methods/post><code>POST</code> method</a> is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.</p>
 
 <p>Let's look at an example — this is the same form we looked at in the <code>GET</code> section above, but with the {{htmlattrxref("method","form")}} attribute set to <code>POST</code>.</p>
 
@@ -153,7 +153,7 @@ say=Hi&amp;to=Mom</pre>
 
 <h3 id="Viewing_HTTP_requests">Viewing HTTP requests</h3>
 
-<p>HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the <a href="/en-US/docs/Tools/Network_Monitor">Firefox Network Monitor</a> or the <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:</p>
+<p>HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the <a href=/tools/network_monitor>Firefox Network Monitor</a> or the <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:</p>
 
 <ol>
  <li>Open the developer tools.</li>
@@ -228,7 +228,7 @@ if __name__ == "__main__":
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">install Python/PIP</a>, then install Flask using <code>pip3 install flask</code>. At this point you should be able to run the example using <code>python3 python-example.py</code>, then navigating to <code>localhost:5000</code> in your browser.</p>
+<p><strong>Note</strong>: Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to <a href=/learn/server-side/django/development_environment#Installing_Python_3>install Python/PIP</a>, then install Flask using <code>pip3 install flask</code>. At this point you should be able to run the example using <code>python3 python-example.py</code>, then navigating to <code>localhost:5000</code> in your browser.</p>
 </div>
 
 <h3 id="Other_languages_and_frameworks">Other languages and frameworks</h3>
@@ -236,8 +236,8 @@ if __name__ == "__main__":
 <p>There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django" rel="external">Django</a> for Python (a bit more heavyweight than <a href="http://flask.pocoo.org/">Flask</a>, but with more tools and options).</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express</a> for Node.js.</li>
+ <li><a href=/learn/server-side/django rel="external">Django</a> for Python (a bit more heavyweight than <a href="http://flask.pocoo.org/">Flask</a>, but with more tools and options).</li>
+ <li><a href=/learn/server-side/express_nodejs>Express</a> for Node.js.</li>
  <li><a href="https://laravel.com/">Laravel</a> for PHP.</li>
  <li><a href="https://rubyonrails.org/" rel="external">Ruby On Rails</a> for Ruby.</li>
 </ul>
@@ -261,7 +261,7 @@ if __name__ == "__main__":
 <ul>
  <li>Set the {{htmlattrxref("method","form")}} attribute to <code>POST</code> because file content can't be put inside URL parameters.</li>
  <li>Set the value of {{htmlattrxref("enctype","form")}} to <code>multipart/form-data</code> because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).</li>
- <li>Include one or more <code><a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code> controls to allow your users to select the file(s) that will be uploaded.</li>
+ <li>Include one or more <code><a href=/web/html/element/input/file>&lt;input type="file"&gt;</a></code> controls to allow your users to select the file(s) that will be uploaded.</li>
 </ul>
 
 <p>For example:</p>
@@ -284,7 +284,7 @@ if __name__ == "__main__":
 
 <p>Each time you send data to a server, you need to consider security. HTML forms are by far the most common server attack vectors (places where attacks can occur). The problems never come from the HTML forms themselves — they come from how the server handles data.</p>
 
-<p>The <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> article of our <a href="/en-US/docs/Learn/Server-side">server-side</a> learning topic discusses a number of common attacks and potential defences against them in detail. You should go and check that article out, to get an idea of what's possible.</p>
+<p>The <a href=/learn/server-side/first_steps/website_security>Website security</a> article of our <a href=/learn/server-side>server-side</a> learning topic discusses a number of common attacks and potential defences against them in detail. You should go and check that article out, to get an idea of what's possible.</p>
 
 <h3 id="Be_paranoid_Never_trust_your_users">Be paranoid: Never trust your users</h3>
 
@@ -293,7 +293,7 @@ if __name__ == "__main__":
 <p>All data that comes to your server must be checked and sanitized. Always. No exception.</p>
 
 <ul>
- <li><strong>Escape potentially dangerous characters</strong>. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this. Things to watch out for are character sequences that look like executable code (such as <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> or <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> commands).</li>
+ <li><strong>Escape potentially dangerous characters</strong>. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this. Things to watch out for are character sequences that look like executable code (such as <a href=/learn/javascript>JavaScript</a> or <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> commands).</li>
  <li><strong>Limit the incoming amount of data to allow only what's necessary</strong>.</li>
  <li><strong>Sandbox uploaded files</strong>. Store them on a different server and allow access to the file only through a different subdomain or even better through a completely different domain.</li>
 </ul>
@@ -302,7 +302,7 @@ if __name__ == "__main__":
 
 <h2 id="Summary">Summary</h2>
 
-<p>As we'd alluded to above, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data.It's possible to perform <a href="/en-US/docs/Learn/Forms/Form_validation">client-side form validation</a>, but the server can't trust this validation because it has no way to truly know what has really happened on the client-side.</p>
+<p>As we'd alluded to above, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data.It's possible to perform <a href=/learn/forms/form_validation>client-side form validation</a>, but the server can't trust this validation because it has no way to truly know what has really happened on the client-side.</p>
 
 <p>If you've worked your way through these tutorials in order, you now know how to markup and style a form, do client-side validation, and have some idea about submitting a form.</p>
 
@@ -311,7 +311,7 @@ if __name__ == "__main__":
 <p>If you want to learn more about securing a web application, you can dig into these resources:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps">Server-side website programming first steps</a></li>
+ <li><a href=/learn/server-side/first_steps>Server-side website programming first steps</a></li>
  <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external">The Open Web Application Security Project (OWASP)</a></li>
  <li><a href="https://infosec.mozilla.org/guidelines/web_security">Web Security by Mozilla</a></li>
 </ul>
@@ -321,22 +321,22 @@ if __name__ == "__main__":
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>Basic native form controls</a></li>
+ <li><a href=/learn/forms/html5_input_types>The HTML5 input types</a></li>
+ <li><a href=/learn/forms/other_form_controls>Other form controls</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
+ <li><a href=/learn/forms/ui_pseudo-classes>UI pseudo-classes</a></li>
+ <li><a href=/learn/forms/form_validation>Client-side form validation</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form controls</a></li>
+ <li><a href=/learn/forms/sending_forms_through_javascript>Sending forms through JavaScript</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_widgets>Property compatibility table for form widgets</a></li>
 </ul>

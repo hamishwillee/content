@@ -13,11 +13,11 @@ tags:
 
 <p>The <code><strong>deriveBits()</strong></code> method of the {{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base key.</p>
 
-<p>It takes as its arguments the base key, the derivation algorithm to use, and the length of the bit string to derive. It returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> which will be fulfilled with an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the derived bits.</p>
+<p>It takes as its arguments the base key, the derivation algorithm to use, and the length of the bit string to derive. It returns a <a href=/web/javascript/reference/global_objects/promise title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> which will be fulfilled with an <code><a href=/web/javascript/reference/global_objects/arraybuffer>ArrayBuffer</a></code> containing the derived bits.</p>
 
-<p>This method is very similar to <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code>, except that <code>deriveKey()</code> returns a <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code> object rather than an <code>ArrayBuffer</code>. Essentially <code>deriveKey()</code> is composed of <code>deriveBits()</code> followed by <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a></code>.</p>
+<p>This method is very similar to <code><a href=/web/api/subtlecrypto/derivekey>SubtleCrypto.deriveKey()</a></code>, except that <code>deriveKey()</code> returns a <code><a href=/web/api/cryptokey>CryptoKey</a></code> object rather than an <code>ArrayBuffer</code>. Essentially <code>deriveKey()</code> is composed of <code>deriveBits()</code> followed by <code><a href=/web/api/subtlecrypto/importkey>importKey()</a></code>.</p>
 
-<p>This function supports the same derivation algorithms as <code>deriveKey()</code>: ECDH, HKDF, and PBKDF2. See <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported algorithms</a> for some more detail on these algorithms.</p>
+<p>This function supports the same derivation algorithms as <code>deriveKey()</code>: ECDH, HKDF, and PBKDF2. See <a href=/web/api/subtlecrypto/derivekey#Supported_algorithms>Supported algorithms</a> for some more detail on these algorithms.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,22 +31,22 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code><em>algorithm</em></code> is an object defining the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">derivation algorithm</a> to use.
+ <li><code><em>algorithm</em></code> is an object defining the <a href=/web/api/subtlecrypto/derivekey#Supported_algorithms>derivation algorithm</a> to use.
 
   <ul>
-   <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>, pass an <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code> object.</li>
-   <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>, pass an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.</li>
-   <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a>, pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code> object.</li>
+   <li>To use <a href=/web/api/subtlecrypto/derivekey#ECDH>ECDH</a>, pass an <code><a href=/web/api/ecdhkeyderiveparams>EcdhKeyDeriveParams</a></code> object.</li>
+   <li>To use <a href=/web/api/subtlecrypto/derivekey#HKDF>HKDF</a>, pass an <code><a href=/web/api/hkdfparams>HkdfParams</a></code> object.</li>
+   <li>To use <a href=/web/api/subtlecrypto/derivekey#PBKDF2>PBKDF2</a>, pass a <code><a href=/web/api/pbkdf2params>Pbkdf2Params</a></code> object.</li>
   </ul>
  </li>
- <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input to the derivation algorithm. If <code>algorithm</code> is ECDH, this will be the ECDH private key. Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a <code>CryptoKey</code> using <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.</li>
+ <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input to the derivation algorithm. If <code>algorithm</code> is ECDH, this will be the ECDH private key. Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a <code>CryptoKey</code> using <code><a href=/web/api/subtlecrypto/importkey>SubtleCrypto.importKey()</a></code>.</li>
  <li><code><em>length</em></code> is a number representing the number of bits to derive.</li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> that fulfills with an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> containing the derived bits.</li>
+ <li><code><em>result</em></code> is a <a href=/web/javascript/reference/global_objects/promise title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> that fulfills with an <a href=/web/javascript/reference/global_objects/arraybuffer title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> containing the derived bits.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -62,7 +62,7 @@ tags:
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
-<p>See the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
+<p>See the <a href=/web/api/subtlecrypto/derivekey#Supported_algorithms>Supported algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 

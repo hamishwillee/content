@@ -31,7 +31,7 @@ tags:
 
 <p>The removed child node still exists in memory, but is no longer part of the DOM. With the first syntax form shown, you may reuse the removed node later in your code, via the <code>oldChild</code> object reference.</p>
 
-<p>In the second syntax form, however, there is no <code>oldChild</code> reference kept, so assuming your code has not kept any other reference to the node elsewhere, it will immediately become unusable and irretrievable, and will usually be <a href="/en-US/docs/Web/JavaScript/Memory_Management">automatically deleted</a> from memory after a short time.</p>
+<p>In the second syntax form, however, there is no <code>oldChild</code> reference kept, so assuming your code has not kept any other reference to the node elsewhere, it will immediately become unusable and irretrievable, and will usually be <a href=/web/javascript/memory_management>automatically deleted</a> from memory after a short time.</p>
 
 <p>If <code>child</code> is actually not a child of the <code>element</code> node, the method throws an exception. This will also happen if <code>child</code> was in fact a child of <code>element</code> at the time of the call, but was removed by an event handler invoked in the course of trying to remove the element (e.g., {{Event("blur")}}.)</p>
 

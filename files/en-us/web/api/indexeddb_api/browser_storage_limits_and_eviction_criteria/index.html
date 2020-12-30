@@ -23,14 +23,14 @@ tags:
 <p>In Firefox, the following technologies make use of browser data storage to store data when required. We term them "quota clients" in this context:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></li>
+ <li><a href=/web/api/indexeddb_api>IndexedDB</a></li>
  <li><a href="http://asmjs.org/">asm.js</a> caching</li>
- <li><a href="/en-US/docs/Web/API/Cache">Cache API</a></li>
+ <li><a href=/web/api/cache>Cache API</a></li>
  <li>Cookies</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: In Firefox, <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> will soon start to use the same storage management tools too, as described in this document.</p>
+<p><strong>Note</strong>: In Firefox, <a href=/web/api/web_storage_api>Web Storage</a> will soon start to use the same storage management tools too, as described in this document.</p>
 </div>
 
 <div class="note">
@@ -39,7 +39,7 @@ tags:
 
 <p>The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.</p>
 
-<p>In Chrome/Opera, the Quota Management API handles quota management for <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a>, <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, WebSQL, and <a href="/en-US/docs/Web/API/File_System_API">File System API</a>.</p>
+<p>In Chrome/Opera, the Quota Management API handles quota management for <a href=/web/html/using_the_application_cache>AppCache</a>, <a href=/web/api/indexeddb_api>IndexedDB</a>, WebSQL, and <a href=/web/api/file_system_api>File System API</a>.</p>
 
 <h2 id="Different_types_of_data_storage">Different types of data storage</h2>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.</p>
 
-<p>Storage is temporary by default; developers can choose to use persistent storage for their sites using the {{domxref("StorageManager.persist()")}} method available in the <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>.</p>
+<p>Storage is temporary by default; developers can choose to use persistent storage for their sites using the {{domxref("StorageManager.persist()")}} method available in the <a href=/web/api/storage_api>Storage API</a>.</p>
 
 <h2 id="Where_is_the_data_stored">Where is the data stored?</h2>
 
@@ -69,7 +69,7 @@ tags:
 
 <div>
 <div class="note">
-<p><strong>Note</strong>: After introducing <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>, the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under &lt;profile&gt;/storage/default.</p>
+<p><strong>Note</strong>: After introducing <a href=/web/api/storage_api>Storage API</a>, the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under &lt;profile&gt;/storage/default.</p>
 </div>
 </div>
 

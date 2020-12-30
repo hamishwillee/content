@@ -28,7 +28,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>.</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href=/learn/javascript/first_steps>JavaScript first steps</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -83,9 +83,9 @@ console.log(madeAString);
 
 <p>Programmers call <strong>functions</strong> that are part of objects <strong>methods</strong>. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.</p>
 
-<p>The built-in code we've made use of so far come in both forms: <strong>functions</strong> and <strong>methods.</strong> You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">here</a>.</p>
+<p>The built-in code we've made use of so far come in both forms: <strong>functions</strong> and <strong>methods.</strong> You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods <a href=/web/javascript/reference/global_objects>here</a>.</p>
 
-<p>You've also seen a lot of <strong>custom functions</strong> in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example (see also the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">source code</a>) from our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">loops article</a>, we included a custom <code>draw()</code> function that looked like this:</p>
+<p>You've also seen a lot of <strong>custom functions</strong> in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example (see also the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">source code</a>) from our <a href=/learn/javascript/building_blocks/looping_code>loops article</a>, we included a custom <code>draw()</code> function that looked like this:</p>
 
 <pre class="brush: js  notranslate">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
@@ -107,7 +107,7 @@ console.log(madeAString);
   return Math.floor(Math.random()*number);
 }</pre>
 
-<p>We needed this function because the browser's built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.</p>
+<p>We needed this function because the browser's built-in <a href=/web/javascript/reference/global_objects/math/random>Math.random()</a> function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.</p>
 
 <h2 id="Invoking_functions">Invoking functions</h2>
 
@@ -193,11 +193,11 @@ anotherGreeting();</pre>
 <p><strong>Note</strong>: Parameters are sometimes called arguments, properties, or even attributes.</p>
 </div>
 
-<p>As an example, the browser's built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> function doesn't require any parameters. When called, it always returns a random number between 0 and 1:</p>
+<p>As an example, the browser's built-in <a href=/web/javascript/reference/global_objects/math/random>Math.random()</a> function doesn't require any parameters. When called, it always returns a random number between 0 and 1:</p>
 
 <pre class="brush: js  notranslate">let myNumber = Math.random();</pre>
 
-<p>The browser's built-in string <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:</p>
+<p>The browser's built-in string <a href=/web/javascript/reference/global_objects/string/replace>replace()</a> function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:</p>
 
 <pre class="brush: js  notranslate">let myText = 'I am a string';
 let newString = myText.replace('string', 'sausage');</pre>
@@ -206,7 +206,7 @@ let newString = myText.replace('string', 'sausage');</pre>
 <p><strong>Note</strong>: When you need to specify multiple parameters, they are separated by commas.</p>
 </div>
 
-<p>It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join()</a> function's parameter is optional:</p>
+<p>It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array <a href=/web/javascript/reference/global_objects/array/join>join()</a> function's parameter is optional:</p>
 
 <pre class="brush: js  notranslate">let myArray = ['I', 'love', 'chocolate', 'frogs'];
 let madeAString = myArray.join(' ');
@@ -272,7 +272,7 @@ function greeting() {
  <li>Now try entering the following in your console
   <pre class="brush: js  notranslate">output(y);
 output(z);</pre>
-  Both of these should return an error along the lines of "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Why is that? Because of function scope — <code>y</code> and <code>z</code> are locked inside the <code>a()</code> and <code>b()</code> functions, so <code>output()</code> can't access them when called from the global scope.</li>
+  Both of these should return an error along the lines of "<a href=/web/javascript/reference/errors/not_defined>ReferenceError: y is not defined</a>". Why is that? Because of function scope — <code>y</code> and <code>z</code> are locked inside the <code>a()</code> and <code>b()</code> functions, so <code>output()</code> can't access them when called from the global scope.</li>
  <li>However, what about when it's called from inside another function? Try editing <code>a()</code> and <code>b()</code> so they look like this:
   <pre class="brush: js  notranslate">function a() {
   let y = 2;
@@ -317,7 +317,7 @@ function b() {
  <li>
   <pre class="brush: js  notranslate">a();
 b();</pre>
-  This time the <code>a()</code> and <code>b()</code> calls will both return an annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>
+  This time the <code>a()</code> and <code>b()</code> calls will both return an annoying <a href=/web/javascript/reference/errors/not_defined>ReferenceError: <em>variable name</em> is not defined</a> error — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>
 </ol>
 
 <div class="note">
@@ -325,7 +325,7 @@ b();</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: "x" is not defined</a> error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.</p>
+<p><strong>Note</strong>: The <a href=/web/javascript/reference/errors/not_defined>ReferenceError: "x" is not defined</a> error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.</p>
 </div>
 
 <h3 id="Functions_inside_functions">Functions inside functions</h3>
@@ -377,7 +377,7 @@ function subFunction3(value) {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a>. These tests require skills that are covered in the next two articles, so you might want to read those first before trying it.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/building_blocks/test_your_skills:_functions>Test your skills: Functions</a>. These tests require skills that are covered in the next two articles, so you might want to read those first before trying it.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
@@ -386,9 +386,9 @@ function subFunction3(value) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions detailed guide</a> — covers some advanced features not included here.</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions reference</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default parameters</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> — advanced concept references</li>
+ <li><a href=/web/javascript/guide/functions>Functions detailed guide</a> — covers some advanced features not included here.</li>
+ <li><a href=/web/javascript/reference/functions>Functions reference</a></li>
+ <li><a href=/web/javascript/reference/functions/default_parameters>Default parameters</a>, <a href=/web/javascript/reference/functions/arrow_functions>Arrow functions</a> — advanced concept references</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}</p>
@@ -396,11 +396,11 @@ function subFunction3(value) {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+ <li><a href=/learn/javascript/building_blocks/conditionals>Making decisions in your code — conditionals</a></li>
+ <li><a href=/learn/javascript/building_blocks/looping_code>Looping code</a></li>
+ <li><a href=/learn/javascript/building_blocks/functions>Functions — reusable blocks of code</a></li>
+ <li><a href=/learn/javascript/building_blocks/build_your_own_function>Build your own function</a></li>
+ <li><a href=/learn/javascript/building_blocks/return_values>Function return values</a></li>
+ <li><a href=/learn/javascript/building_blocks/events>Introduction to events</a></li>
+ <li><a href=/learn/javascript/building_blocks/image_gallery>Image gallery</a></li>
 </ul>

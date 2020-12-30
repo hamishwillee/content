@@ -14,7 +14,7 @@ tags:
 <p>{{DefaultAPISidebar("Server Sent Events")}}</p>
 
 <div class="summary">
-<p>Developing a web application that uses <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a> is straightforward. You'll need a bit of code on the server to stream events to the front-end, but the client side code works almost identically to <a href="/en-US/docs/Web/API/WebSockets_API">websockets</a> in part of handling incoming events. This is one-way connection, so you can't send events from a client to a server.</p>
+<p>Developing a web application that uses <a href=/web/api/server-sent_events>server-sent events</a> is straightforward. You'll need a bit of code on the server to stream events to the front-end, but the client side code works almost identically to <a href=/web/api/websockets_api>websockets</a> in part of handling incoming events. This is one-way connection, so you can't send events from a client to a server.</p>
 </div>
 
 <h2 id="Receiving_events_from_the_server">Receiving events from the server</h2>
@@ -105,7 +105,7 @@ while (true) {
 
 <h2 id="Error_handling">Error handling</h2>
 
-<p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/HTTP/Access_control_CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
+<p>When problems occur (such as a network timeout or issues pertaining to <a href=/http/access_control_cors>access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
 
 <pre class="brush: js notranslate">evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);
@@ -120,7 +120,7 @@ while (true) {
 
 <h2 id="Event_stream_format">Event stream format</h2>
 
-<p>The event stream is a simple stream of text data which must be encoded using <a href="/en-US/docs/Glossary/UTF-8">UTF-8</a>. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.</p>
+<p>The event stream is a simple stream of text data which must be encoded using <a href=/glossary/utf-8>UTF-8</a>. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.</p>
 
 <div class="note"><strong>Note:</strong> The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.</div>
 

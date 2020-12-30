@@ -15,14 +15,14 @@ tags:
 <p>The <strong>Cooperative Scheduling of Background Tasks API</strong> (also referred to as the Background Tasks API or the <code>requestIdleCallback()</code> API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note:</strong> This API is <em>not available</em> in <a href=/web/api/web_workers_api>Web Workers</a>.</p>
 </div>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
 <p>The main thread of a Web browser is centered around its event loop. This code draws any pending updates to the {{domxref("Document")}} currently being displayed, runs any JavaScript code the page needs to run, accepts events from input devices, and dispatches those events to the elements that should receive them. In addition, the event loop handles interactions with the operating system, updates to the browser's own user interface, and so forth. It's an extremely busy chunk of code, and your main JavaScript code may run right inside this thread along with all of this. Certainly most if not all code that is capable of making changes to the DOM is running in the main thread, since it's common for user interface changes to only be available to the main thread.</p>
 
-<p>Because event handling and screen updates are two of the most obvious ways users notice performance issues, it's important for your code to be a good citizen of the Web and help to prevent stalls in the execution of the event loop. In the past, there's been no way to do this reliably other than by writing code that's as efficient as possible and by offloading as much work as possible to <a href="/en-US/docs/Web/API/Web_Workers_API">workers</a>. {{domxref("Window.requestIdleCallback()")}} makes it possible to become actively engaged in helping to ensure that the browser's event loop runs smoothly, by allowing the browser to tell your code how much time it can safely use without causing the system to lag. If you stay within the limit given, you can make the user's experience much better.</p>
+<p>Because event handling and screen updates are two of the most obvious ways users notice performance issues, it's important for your code to be a good citizen of the Web and help to prevent stalls in the execution of the event loop. In the past, there's been no way to do this reliably other than by writing code that's as efficient as possible and by offloading as much work as possible to <a href=/web/api/web_workers_api>workers</a>. {{domxref("Window.requestIdleCallback()")}} makes it possible to become actively engaged in helping to ensure that the browser's event loop runs smoothly, by allowing the browser to tell your code how much time it can safely use without causing the system to lag. If you stay within the limit given, you can make the user's experience much better.</p>
 
 <h3 id="Getting_the_most_out_of_idle_callbacks">Getting the most out of idle callbacks</h3>
 
@@ -91,7 +91,7 @@ tags:
 <p>In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (ID <code>"Container"</code>) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (with the ID <code>"logBox"</code>), which is used to display textual output.</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;
-  Demonstration of using &lt;a href="/en-US/docs/Web/API/Background_Tasks_API"&gt;
+  Demonstration of using &lt;a href=/web/api/background_tasks_api&gt;
   cooperatively scheduled background tasks&lt;/a&gt; using the &lt;code&gt;requestIdleCallback()&lt;/code&gt;
   method.
 &lt;/p&gt;
@@ -294,7 +294,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
  <li><code>taskData</code> is an object which is passed into the task handler as an input parameter, to allow the task to receive custom data.</li>
 </ul>
 
-<p>To enqueue the task, we <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a> an object onto the <code>taskList</code> array; the object contains the <code>taskHandler</code> and <code>taskData</code> values under the names <code>handler</code> and <code>data</code>, respectively, then increment <code>totalTaskCount</code>, which reflects the total number of tasks which have ever been enqueued (we don't decrement it when tasks are removed from the queue).</p>
+<p>To enqueue the task, we <a href=/web/javascript/reference/global_objects/array/push>push</a> an object onto the <code>taskList</code> array; the object contains the <code>taskHandler</code> and <code>taskData</code> values under the names <code>handler</code> and <code>data</code>, respectively, then increment <code>totalTaskCount</code>, which reflects the total number of tasks which have ever been enqueued (we don't decrement it when tasks are removed from the queue).</p>
 
 <p>Next, we check to see if we already have an idle callback created; if <code>taskHandle</code> is 0, we know there isn't an idle callback yet, so we call {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} to create one. It's configured to call a function called <code>runTaskQueue()</code>, which we'll look at shortly, and with a <code>timeout</code> of 1 second, so that it will be run at least once per second even if there isn't any actual idle time available.</p>
 
@@ -324,7 +324,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <p>For each task in the queue that we have time to execute, we do the following:</p>
 
 <ol>
- <li>We <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">remove the task object from the queue</a>.</li>
+ <li>We <a href=/web/javascript/reference/global_objects/array/shift>remove the task object from the queue</a>.</li>
  <li>We increment <code>currentTaskNumber</code> to track how many tasks we've executed.</li>
  <li>We call the task's handler, <code>task.handler</code>, passing into it the task's data object (<code>task.data</code>).</li>
  <li>We call a function, <code>scheduleStatusRefresh()</code>, to handle scheduling a screen update to reflect changes to our progress.</li>
@@ -435,7 +435,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <p>Everything is triggered when the user clicks the Start button, which causes the <code>decodeTechnoStuff()</code> function to be called.</p>
 
 <div class="hidden">
-<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive">getRandomIntInclusive()</a></code> method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.</p>
+<p>The <code><a href=/web/javascript/reference/global_objects/math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive>getRandomIntInclusive()</a></code> method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.</p>
 
 <pre class="brush: js notranslate">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -466,7 +466,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 <p><code>decodeTechnoStuff()</code> starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls <code>updateDisplay()</code> to reset the display to its "nothing's happened yet" state.</p>
 
-<p>This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive"><code>getRandomIntInclusive()</code> function</a> that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.</p>
+<p>This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the <a href=/web/javascript/reference/global_objects/math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive><code>getRandomIntInclusive()</code> function</a> that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.</p>
 
 <p>Then we start a loop to create the actual tasks. For each task, we create an object, <code>taskData</code>, which includes two properties:</p>
 

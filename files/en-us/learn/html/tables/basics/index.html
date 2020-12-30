@@ -27,7 +27,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>The basics of HTML (see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>).</td>
+   <td>The basics of HTML (see <a href=/learn/html/introduction_to_html>Introduction to HTML</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -194,18 +194,18 @@ tags:
 
 <p>You can also have a <a href="https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html">look at the live example</a> on GitHub! One thing you'll notice is that the table does look a bit more readable there — this is because the table you see above on this page has minimal styling, whereas the GitHub version has more significant CSS applied.</p>
 
-<p>Be under no illusion; for tables to be effective on the web, you need to provide some styling information with <a href="/en-US/docs/Learn/CSS">CSS</a>, as well as good solid structure with HTML. In this module we are focusing on the HTML part; to find out about the CSS part you should visit our <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling tables</a> article after you've finished here.</p>
+<p>Be under no illusion; for tables to be effective on the web, you need to provide some styling information with <a href=/learn/css>CSS</a>, as well as good solid structure with HTML. In this module we are focusing on the HTML part; to find out about the CSS part you should visit our <a href=/learn/css/styling_boxes/styling_tables>Styling tables</a> article after you've finished here.</p>
 
 <p>We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">stylesheet here</a>, and you can also find an <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">HTML template</a> that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.</p>
 
 <h3 id="When_should_you_NOT_use_HTML_tables">When should you NOT use HTML tables?</h3>
 
-<p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href="/en-US/docs/Learn/Accessibility/HTML#Page_layouts">Page Layouts</a> in our <a href="/en-US/docs/Learn/Accessibility">Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
+<p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href=/learn/accessibility/html#Page_layouts>Page Layouts</a> in our <a href=/learn/accessibility>Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
 
-<p>In short, using tables for layout rather than <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout techniques</a> is a bad idea. The main reasons are as follows:</p>
+<p>In short, using tables for layout rather than <a href=/learn/css/css_layout>CSS layout techniques</a> is a bad idea. The main reasons are as follows:</p>
 
 <ol>
- <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
+ <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href=/learn/tools_and_testing/cross_browser_testing/accessibility#Screenreaders>Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
  <li><strong>Tables produce tag soup</strong>: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.</li>
  <li><strong>Tables are not automatically responsive</strong>: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.</li>
 </ol>
@@ -216,8 +216,8 @@ tags:
 
 <ol>
  <li>First of all, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> in a new directory on your local machine.</li>
- <li>The content of every table is enclosed by these two tags : <strong><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Add these inside the body of your HTML.</li>
- <li>The smallest container inside a table is a table cell, which is created by a <strong><code><a href="/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> element ('td' stands for 'table data'). Add the following inside your table tags:
+ <li>The content of every table is enclosed by these two tags : <strong><code><a href=/web/html/element/table>&lt;table&gt;&lt;/table&gt;</a></code></strong>. Add these inside the body of your HTML.</li>
+ <li>The smallest container inside a table is a table cell, which is created by a <strong><code><a href=/web/html/element/td>&lt;td&gt;</a></code></strong> element ('td' stands for 'table data'). Add the following inside your table tags:
   <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
  </li>
  <li>If we want a row of four cells, we need to copy these tags three times. Update the contents of your table to look like so:
@@ -230,7 +230,7 @@ tags:
 
 <p>As you will see, the cells are not placed underneath each other, rather they are automatically aligned with each other on the same row. Each <code>&lt;td&gt;</code> element creates a single cell and together they make up the first row. Every cell we add makes the row grow longer.</p>
 
-<p>To stop this row from growing and start placing subsequent cells on a second row, we need to use the <strong><code><a href="/en-US/docs/Web/HTML/Element/tr">&lt;tr&gt;</a></code></strong> element ('tr' stands for 'table row'). Let's investigate this now.</p>
+<p>To stop this row from growing and start placing subsequent cells on a second row, we need to use the <strong><code><a href=/web/html/element/tr>&lt;tr&gt;</a></code></strong> element ('tr' stands for 'table row'). Let's investigate this now.</p>
 
 <ol>
  <li>Place the four cells you've already created inside <code>&lt;tr&gt;</code> tags, like so:
@@ -360,7 +360,7 @@ tags:
 
 <ol>
  <li>First, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html">dogs-table.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.</li>
- <li>To recognize the table headers as headers, both visually and semantically, you can use the <strong><code><a href="/en-US/docs/Web/HTML/Element/th">&lt;th&gt;</a></code></strong> element ('th' stands for 'table header'). This works in exactly the same way as a <code>&lt;td&gt;</code>, except that it denotes a header, not a normal cell. Go into your HTML, and change all the <code>&lt;td&gt;</code> elements surrounding the table headers into <code>&lt;th&gt;</code> elements.</li>
+ <li>To recognize the table headers as headers, both visually and semantically, you can use the <strong><code><a href=/web/html/element/th>&lt;th&gt;</a></code></strong> element ('th' stands for 'table header'). This works in exactly the same way as a <code>&lt;td&gt;</code>, except that it denotes a header, not a normal cell. Go into your HTML, and change all the <code>&lt;td&gt;</code> elements surrounding the table headers into <code>&lt;th&gt;</code> elements.</li>
  <li>Save your HTML and load it in a browser, and you should see that the headers now look like headers.</li>
 </ol>
 
@@ -460,10 +460,10 @@ tags:
 
 <h2 id="Providing_common_styling_to_columns">Providing common styling to columns</h2>
 
-<p>There is one last feature we'll tell you about in this article before we move on. HTML has a method of defining styling information for an entire column of data all in one place — the <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong> elements. These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on <em>every</em> <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
+<p>There is one last feature we'll tell you about in this article before we move on. HTML has a method of defining styling information for an entire column of data all in one place — the <strong><code><a href=/web/html/element/col>&lt;col&gt;</a></code></strong> and <strong><code><a href=/web/html/element/colgroup>&lt;colgroup&gt;</a></code></strong> elements. These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on <em>every</em> <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Styling columns like this is <a href="https://www.w3.org/TR/CSS22/tables.html#columns">limited to a few properties</a>: <code><a href="/en-US/docs/Web/CSS/border">border</a></code>, <code><a href="/en-US/docs/Web/CSS/background">background</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, and <code><a href="/en-US/docs/Web/CSS/visibility">visibility</a></code>. To set other properties you'll have to either style every <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
+<p><strong>Note</strong>: Styling columns like this is <a href="https://www.w3.org/TR/CSS22/tables.html#columns">limited to a few properties</a>: <code><a href=/web/css/border>border</a></code>, <code><a href=/web/css/background>background</a></code>, <code><a href=/web/css/width>width</a></code>, and <code><a href=/web/css/visibility>visibility</a></code>. To set other properties you'll have to either style every <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
 </div>
 
 <p>Take the following simple example:</p>
@@ -566,8 +566,8 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Basics">HTML table basics</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
+ <li><a href=/learn/html/tables/basics>HTML table basics</a></li>
+ <li><a href=/learn/html/tables/advanced>HTML table advanced features and accessibility</a></li>
+ <li><a href=/learn/html/tables/structuring_planet_data>Structuring planet data</a></li>
 </ul>
 </div>

@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>Note that as a string, <code>lastModified</code> cannot <em>easily</em> be used for comparing the modification dates of documents. Here is a possible example of how to show an alert message when the page changes (see also: <a href="/en-US/docs/DOM/document.cookie">JavaScript cookies API</a>):</p>
+<p>Note that as a string, <code>lastModified</code> cannot <em>easily</em> be used for comparing the modification dates of documents. Here is a possible example of how to show an alert message when the page changes (see also: <a href=/dom/document.cookie>JavaScript cookies API</a>):</p>
 
 <pre class="brush: js notranslate">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
@@ -67,7 +67,7 @@ if (isNaN(nLastVisit) || nLastModif &gt; nLastVisit) {
 
 <div class="note"><strong>Note:</strong> WebKit returns the time string in UTC; Gecko and Internet Explorer return a time in the local timezone. (See: <a href="https://bugs.webkit.org/show_bug.cgi?id=4363">Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time</a>)</div>
 
-<p>If you want to know <strong>whether <em>an external page</em> has changed</strong>, please read <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date">this paragraph about the <code>XMLHttpRequest()</code> API</a>.</p>
+<p>If you want to know <strong>whether <em>an external page</em> has changed</strong>, please read <a href=/web/api/xmlhttprequest/using_xmlhttprequest#Get_last_modified_date>this paragraph about the <code>XMLHttpRequest()</code> API</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

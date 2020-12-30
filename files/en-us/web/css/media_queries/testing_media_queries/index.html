@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{cssref}}</div>
 
-<p>The {{Glossary("DOM")}} provides features that can test the results of a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a <code>MediaQueryList</code> object, you can check the result of the query or receive notifications when the result changes.</p>
+<p>The {{Glossary("DOM")}} provides features that can test the results of a <a href=/web/css/media_queries>media query</a> programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a <code>MediaQueryList</code> object, you can check the result of the query or receive notifications when the result changes.</p>
 
 <h2 id="Creating_a_media_query_list">Creating a media query list</h2>
 
@@ -39,7 +39,7 @@ tags:
 
 <h2 id="Receiving_query_notifications">Receiving query notifications</h2>
 
-<p>If you need to be aware of changes to the evaluated result of the query on an ongoing basis, it's more efficient to register a <a href="/en-US/docs/Web/API/EventTarget/addEventListener">listener</a> than to poll the query's result. To do this, call the <code>addListener()</code> method on the {{domxref("MediaQueryList")}} object, with a callback function to invoke when the media query status changes (e.g., the media query test goes from <code>true</code> to <code>false</code>):</p>
+<p>If you need to be aware of changes to the evaluated result of the query on an ongoing basis, it's more efficient to register a <a href=/web/api/eventtarget/addeventlistener>listener</a> than to poll the query's result. To do this, call the <code>addListener()</code> method on the {{domxref("MediaQueryList")}} object, with a callback function to invoke when the media query status changes (e.g., the media query test goes from <code>true</code> to <code>false</code>):</p>
 
 <pre class="brush: js">// Create the query list.
 const mediaQueryList = window.matchMedia("(orientation: portrait)");
@@ -69,7 +69,7 @@ mediaQueryList.addListener(handleOrientationChange);
 }
 </pre>
 
-<p>Above, we define the parameter as <code>evt</code> — an event object. This makes sense because <a href="/en-US/docs/Web/API/MediaQueryList#Browser_compatibility">newer implementations of <code>MediaQueryList</code></a> handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an <a href="/en-US/docs/Web/API/Event">event object</a> of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.</p>
+<p>Above, we define the parameter as <code>evt</code> — an event object. This makes sense because <a href=/web/api/mediaquerylist#Browser_compatibility>newer implementations of <code>MediaQueryList</code></a> handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an <a href=/web/api/event>event object</a> of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.</p>
 
 <p>This event object also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the <code>MediaQueryList</code> by directly accessing it, or accessing the event object.</p>
 
@@ -89,7 +89,7 @@ mediaQueryList.addListener(handleOrientationChange);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+ <li><a href=/css/media_queries>Media queries</a></li>
  <li>{{domxref("window.matchMedia()")}}</li>
  <li>{{domxref("MediaQueryList")}}</li>
  <li>{{domxref("MediaQueryListEvent")}}</li>

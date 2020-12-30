@@ -32,7 +32,7 @@ tags:
    <li>{{cssxref("align-self")}} and {{cssxref("justify-self")}} are now supported on grid layouts ({{bug(1151213)}}).</li>
    <li>{{cssxref("align-content")}} and {{cssxref("justify-content")}} are now supported on grid layouts ({{bug(1151214)}}).</li>
    <li>Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).</li>
-   <li>The related feature {{cssxref("display")}}: contents has been supported since <a href="/en-US/docs/Mozilla/Firefox/Releases/37">Firefox 37</a></li>
+   <li>The related feature {{cssxref("display")}}: contents has been supported since <a href=/mozilla/firefox/releases/37>Firefox 37</a></li>
   </ul>
  </li>
  <li>Implement full support for CSS Box Alignment for CSS Grid, support the missing values: <code>start,</code> <code>end,</code> <code>self-start,</code> <code>self-end,</code> <code>left,</code> <code>right,last-baseline,space-evenly </code>({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.</li>
@@ -49,7 +49,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a> are now enabled by default ({{bug(1197932)}}).</li>
+ <li>ES2015 <a href=/web/javascript/reference/classes>Classes</a> are now enabled by default ({{bug(1197932)}}).</li>
  <li>{{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated and will now present a warning in the console ({{bug(995610)}}).</li>
  <li>{{jsxref("String.prototype.replace")}} does not restore {{jsxref("Global_Objects/RegExp/n", "RegExp static properties", "", 1)}} after executing function parameter anymore ({{bug(1226936)}}).</li>
  <li>{{jsxref("Math.random()")}} has been updated to the better XorShift128+ algorithm ({{bug(322529)}}).</li>
@@ -60,7 +60,7 @@ tags:
 <h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
 
 <ul>
- <li>For compatibility, the non-standard property <code><a href="/en-US/docs/Web/API/Node/innerText">Node.innerText</a></code> has been implemented ({{bug(264412)}}).</li>
+ <li>For compatibility, the non-standard property <code><a href=/web/api/node/innertext>Node.innerText</a></code> has been implemented ({{bug(264412)}}).</li>
  <li>The {{domxref("HTMLImageElement.srcset")}} attribute now reacts to resize/viewport changes ({{bug(1166138)}}).</li>
  <li>{{domxref("Element.getAttributeNames()")}} has been implemented ({{bug(1228634)}}).</li>
 </ul>
@@ -99,9 +99,9 @@ tags:
 <h4 id="Miscellaneous">Miscellaneous</h4>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech Synthesis API</a> has been implemented on Firefox Desktop ({{bug(1003439)}}).</li>
+ <li><a href=/web/api/web_speech_api>Web Speech Synthesis API</a> has been implemented on Firefox Desktop ({{bug(1003439)}}).</li>
  <li>The {{domxref("Window.onstorage")}} event handler property has been added.</li>
- <li>The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> ({{bug(1108055)}}).</li>
+ <li>The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of <a href=/web/api/web_animations_api>Web Animations API</a> ({{bug(1108055)}}).</li>
  <li>The {{domxref("Document.onselectionchange")}} event handler property has been added ({{bug(1231193)}}).</li>
  <li>After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can nowadd another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).</li>
 </ul>
@@ -159,12 +159,12 @@ tags:
 
 <h3 id="Search_plugins">Search plugins</h3>
 
-<p>Starting in Firefox 45, search plugins located in the user's profile's <code>searchplugins</code> directory are no longer automatically loaded on startup. Instead, a list of user-installed plugins is maintained and only those plugins are loaded. In effect, this means that the only ways to install new search plugins are for the user to do so in the Firefox UX (via <a href="/en-US/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox">OpenSearch discovery</a>, for instance) or for an add-on to install it. Also, when a new search plugin is installed, more information is recorded about where it came from, for future use by profile debugging and cleaning tools.</p>
+<p>Starting in Firefox 45, search plugins located in the user's profile's <code>searchplugins</code> directory are no longer automatically loaded on startup. Instead, a list of user-installed plugins is maintained and only those plugins are loaded. In effect, this means that the only ways to install new search plugins are for the user to do so in the Firefox UX (via <a href=/mozilla/add-ons/creating_opensearch_plugins_for_firefox>OpenSearch discovery</a>, for instance) or for an add-on to install it. Also, when a new search plugin is installed, more information is recorded about where it came from, for future use by profile debugging and cleaning tools.</p>
 
 <h3 id="Other">Other</h3>
 
 <ul>
- <li>WebIDL constructors could be called without the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> operator in chrome context.  Now such code will raise a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> as in Web content since Firefox 30. For example, <code>var req = XMLHttpRequest();</code> needs to be <code>var req = new XMLHttpRequest();</code>.</li>
+ <li>WebIDL constructors could be called without the <a href=/web/javascript/reference/operators/new><code>new</code></a> operator in chrome context.  Now such code will raise a <a href=/web/javascript/reference/global_objects/typeerror><code>TypeError</code></a> as in Web content since Firefox 30. For example, <code>var req = XMLHttpRequest();</code> needs to be <code>var req = new XMLHttpRequest();</code>.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

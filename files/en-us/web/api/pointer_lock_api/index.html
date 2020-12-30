@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Basic_concepts">Basic concepts</h2>
 
-<p>Pointer lock is related to <a href="/en-US/docs/Web/API/Element/setCapture" title="element.setCapture">mouse capture</a>. Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:</p>
+<p>Pointer lock is related to <a href=/web/api/element/setcapture title="element.setCapture">mouse capture</a>. Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:</p>
 
 <ul>
  <li>It is persistent: Pointer lock does not release the mouse until an explicit API call is made or the user uses a specific release gesture.</li>
@@ -34,7 +34,7 @@ tags:
 
 <h3 id="requestPointerLock">requestPointerLock()</h3>
 
-<p>The Pointer lock API, similar to the <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Fullscreen API</a>, extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. As it has recently unprefixed, you would currently declare it something like this, for example if you wanted to request pointer lock on a <code>canvas</code> element:</p>
+<p>The Pointer lock API, similar to the <a href=/web/guide/api/dom/using_full_screen_mode>Fullscreen API</a>, extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. As it has recently unprefixed, you would currently declare it something like this, for example if you wanted to request pointer lock on a <code>canvas</code> element:</p>
 
 <pre class="brush: js">canvas.requestPointerLock = canvas.requestPointerLock ||
                             canvas.mozRequestPointerLock;
@@ -166,7 +166,7 @@ document.addEventListener('mozpointerlockchange', lockChangeAlert, false);</pre>
   }
 }</pre>
 
-<p>The updatePosition() function updates the position of the ball on the canvas (<code>x</code> and <code>y</code>), and also includes <code>if()</code> statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> call has previously been made, and if so, calls it again as required, and calls the <code>canvasDraw()</code> function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.</p>
+<p>The updatePosition() function updates the position of the ball on the canvas (<code>x</code> and <code>y</code>), and also includes <code>if()</code> statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a <code><a href=/web/api/window/requestanimationframe>requestAnimationFrame()</a></code> call has previously been made, and if so, calls it again as required, and calls the <code>canvasDraw()</code> function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.</p>
 
 <pre class="brush: js">var tracker = document.getElementById('tracker');
 

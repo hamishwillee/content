@@ -16,12 +16,12 @@ tags:
 </div>
 
 <div>
-<p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}} interface requests opening a <a href="/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>.</p>
+<p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}} interface requests opening a <a href=/indexeddb#gloss_database_connection>connection to a database</a>.</p>
 
 <p>The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and performs the open operation asynchronously. If the operation is successful, a <code>success</code> event is fired on the request object that is returned from this method, with its <code>result</code> attribute set to the new {{domxref("IDBDatabase")}} object for the connection.</p>
 </div>
 
-<p>If an error occurs while the database connection is being opened, then an <a href="/en-US/docs/IndexedDB/IDBErrorEvent">error event</a> is fired on the request object returned from this method.</p>
+<p>If an error occurs while the database connection is being opened, then an <a href=/indexeddb/idberrorevent>error event</a> is fired on the request object returned from this method.</p>
 
 <p>May trigger <code>upgradeneeded</code>, <code>blocked</code> or <code>versionchange</code> events.</p>
 
@@ -54,7 +54,7 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: You can find out more information on the different available storage types, and how Firefox handles client-side data storage, at <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a>.</p>
+<p><strong>Note</strong>: You can find out more information on the different available storage types, and how Firefox handles client-side data storage, at <a href=/web/api/indexeddb_api/browser_storage_limits_and_eviction_criteria>Browser storage limits and eviction criteria</a>.</p>
 </div>
 
 <h3 id="Return_value">Return value</h3>
@@ -151,7 +151,7 @@ DBOpenRequest.onsuccess = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li><a href=/web/api/indexeddb_api/using_indexeddb>Using IndexedDB</a></li>
  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

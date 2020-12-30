@@ -16,7 +16,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>.)</td>
+   <td>HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/first_steps>CSS first steps</a> and <a href=/learn/css/building_blocks>CSS building blocks</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -102,7 +102,7 @@ tags:
 
 <p>In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see <code>width</code> or <code>height</code> used alone.</p>
 
-<p>There are a number of other media features that you can test for, although some of the newer features introduced in Level 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a full list at <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">Using Media Queries: Media Features</a>.</p>
+<p>There are a number of other media features that you can test for, although some of the newer features introduced in Level 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a full list at <a href=/web/css/media_queries/using_media_queries#Media_features>Using Media Queries: Media Features</a>.</p>
 
 <h4 id="Orientation">Orientation</h4>
 
@@ -182,7 +182,7 @@ tags:
 
 <p>There are now far too many devices, with a huge variety of sizes, to make that feasible. This means that instead of targeting specific sizes for all designs, a better approach is to change the design at the size where the content starts to break in some way. Perhaps the line lengths become far too long, or a boxed out sidebar gets squashed and hard to read. That's the point at which you want to use a media query to change the design to a better one for the space you have available. This approach means that it doesn't matter what the exact dimensions are of the device being used, every range is catered for. The points at which a media query is introduced are known as <strong>breakpoints</strong>.</p>
 
-<p>The <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> in Firefox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller and larger to see where the content would be improved by adding a media query and tweaking the design.</p>
+<p>The <a href=/tools/responsive_design_mode>Responsive Design Mode</a> in Firefox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller and larger to see where the content would be improved by adding a media query and tweaking the design.</p>
 
 <p><img alt="A screenshot of a layout in a mobile view in Firefox DevTools." src="https://mdn.mozillademos.org/files/16867/rwd-mode.png" style="height: 917px; width: 1443px;"></p>
 
@@ -357,13 +357,13 @@ article {
 
 <pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</pre>
 
-<p>This is the <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
+<p>This is the <a href=/mozilla/mobile/viewport_meta_tag>viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
 
 <p>This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 960 pixels, then mobile layouts (for example created using a media query of <code>@media screen and (max-width: 600px) { ... }</code>) are not going to render as expected.</p>
 
 <p>To remedy this, including a viewport meta tag like the one above on your page tells the browser "don't render the content with a 960 pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.</p>
 
-<p>There are a number of other options you can put inside the <code>content</code> attribute of the viewport meta tag — see <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for more details.</p>
+<p>There are a number of other options you can put inside the <code>content</code> attribute of the viewport meta tag — see <a href=/mozilla/mobile/viewport_meta_tag>Using the viewport meta tag to control layout on mobile browsers</a> for more details.</p>
 
 <h2 id="Do_you_really_need_a_media_query">Do you really need a media query?</h2>
 
@@ -414,7 +414,7 @@ article {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/CSS_layout/rwd_skills">Test your skills: Responsive Web Design</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see <a href=/learn/css/css_layout/rwd_skills>Test your skills: Responsive Web Design</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -429,16 +429,16 @@ article {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
+ <li><a href=/learn/css/css_layout/introduction>Introduction to CSS layout</a></li>
+ <li><a href=/learn/css/css_layout/normal_flow>Normal flow</a></li>
+ <li><a href=/learn/css/css_layout/flexbox>Flexbox</a></li>
+ <li><a href=/learn/css/css_layout/grids>Grid</a></li>
+ <li><a href=/learn/css/css_layout/floats>Floats</a></li>
+ <li><a href=/learn/css/css_layout/positioning>Positioning</a></li>
+ <li><a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a></li>
+ <li><a href=/learn/css/css_layout/responsive_design>Responsive design</a></li>
+ <li><a href=/learn/css/css_layout/media_queries>Beginner's guide to media queries</a></li>
+ <li><a href=/learn/css/css_layout/legacy_layout_methods>Legacy layout methods</a></li>
+ <li><a href=/learn/css/css_layout/supporting_older_browsers>Supporting older browsers</a></li>
+ <li><a href=/learn/css/css_layout/fundamental_layout_comprehension>Fundamental layout comprehension assessment</a></li>
 </ul>

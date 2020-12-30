@@ -60,7 +60,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the <code>logURL()</code> function just before starting the request. The <code>logURL()</code> function grabs the URL of the request from the event object and logs it to the browser console. The <code>{urls: ["&lt;all_urls&gt;"]}</code> <a href="/en-US/Add-ons/WebExtensions/Match_patterns">pattern</a> means we will intercept HTTP requests to all URLs.</p>
 
-<p>To test it out, <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">install the extension</a>, <a href="/en-US/docs/Tools/Browser_Console">open the Browser Console</a>, and open some Web pages. In the Browser Console, you should see the URLs for any resources that the browser requests:</p>
+<p>To test it out, <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">install the extension</a>, <a href=/tools/browser_console>open the Browser Console</a>, and open some Web pages. In the Browser Console, you should see the URLs for any resources that the browser requests:</p>
 
 <p>{{EmbedYouTube("X3rMgkRkB1Q")}}</p>
 
@@ -88,7 +88,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 }</pre>
 
-<p>The only change here is to add the <code>"webRequestBlocking"</code> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a></code>. We need to ask for this extra permission whenever we are actively modifying a request.</p>
+<p>The only change here is to add the <code>"webRequestBlocking"</code> <code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a></code>. We need to ask for this extra permission whenever we are actively modifying a request.</p>
 
 <p>Next, replace "background.js" with this:</p>
 
@@ -113,7 +113,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Also note that we're passing an option called <code>"blocking"</code>: we need to pass this whenever we want to modify the request. It makes the listener function block the network request, so the browser waits for the listener to return before continuing. See the {{WebExtAPIRef("webRequest.onBeforeRequest")}} documentation for more on <code>"blocking"</code>.</p>
 
-<p>To test it out, open a page on MDN that contains a lot of images (for example <a href="/en-US/docs/Tools/Network_Monitor">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a>), <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">reload the extension</a>, and then reload the MDN page:</p>
+<p>To test it out, open a page on MDN that contains a lot of images (for example <a href=/tools/network_monitor>https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a>), <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">reload the extension</a>, and then reload the MDN page:</p>
 
 <p>{{EmbedYouTube("ix5RrXGr0wA")}}</p>
 

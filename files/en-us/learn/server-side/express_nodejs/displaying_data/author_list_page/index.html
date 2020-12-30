@@ -53,14 +53,14 @@ block content
 <p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
 
 <div class="note">
-<p><strong>Note:</strong> The appearance of the author <em>lifespan</em> dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
+<p><strong>Note:</strong> The appearance of the author <em>lifespan</em> dates is ugly! You can improve this using the <a href=/learn/server-side/express_nodejs/displaying_data/date_formatting_using_moment>same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
  <br>
  However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:</p>
 
 <p><code>return this.date_of_birth ? DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED) : '';</code></p>
 </div>
 
-<h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a class="button section-edit only-icon" href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex">Edit</a></h2>
+<h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a class="button section-edit only-icon" href=/learn/server-side/express_nodejs/displaying_data$edit#Genre_list_page—challenge! rel="nofollow, noindex">Edit</a></h2>
 
 <p>In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.</p>
 
@@ -82,6 +82,6 @@ block content
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</p>
+<p>Return to <a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a>.</p>
 
-<p>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">Genre detail page</a>.</p>
+<p>Proceed to the next subarticle of part 5: <a href=/learn/server-side/express_nodejs/displaying_data/genre_detail_page>Genre detail page</a>.</p>

@@ -10,7 +10,7 @@ tags:
 <div>{{APIRef("WebGL")}}</div>
 
 <p>The <code><strong>WEBGL_multi_draw</strong></code> extension is part of the
-<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and allows to render more
+<a href=/web/api/webgl_api>WebGL API</a> and allows to render more
 than one primitive with a single function call. This can improve a WebGL application's performance
 as it reduces binding costs in the renderer and speeds up GPU thread time with uniform data.</p>
 
@@ -33,18 +33,18 @@ as it reduces binding costs in the renderer and speeds up GPU thread time with u
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL"><code>ext.multiDrawArraysWEBGL()</code></a></dt>
+ <dt><a href=/web/api/webgl_multi_draw/multidrawarrayswebgl><code>ext.multiDrawArraysWEBGL()</code></a></dt>
  <dd>Renders multiple primitives from array data (identical to multiple calls to 
-   <a href="/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><code>drawArrays</code></a>).</dd>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL"><code>ext.multiDrawElementsWEBGL()</code></a></dt>
+   <a href=/web/api/webglrenderingcontext/drawarrays><code>drawArrays</code></a>).</dd>
+ <dt><a href=/web/api/webgl_multi_draw/multidrawelementswebgl><code>ext.multiDrawElementsWEBGL()</code></a></dt>
  <dd>Renders multiple primitives from element array data (identical to multiple calls to 
    <a href="en-US/docs/Web/API/WebGLRenderingContext/drawElements"><code>drawElements</code></a>).</dd>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL"><code>ext.multiDrawArraysInstancedWEBGL()</code></a></dt>
+ <dt><a href=/web/api/webgl_multi_draw/multidrawarraysinstancedwebgl><code>ext.multiDrawArraysInstancedWEBGL()</code></a></dt>
  <dd>Renders multiple primitives from array data (identical to multiple calls to 
-   <a href="/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"><code>drawArraysInstanced</code></a>).</dd>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL"><code>ext.multiDrawElementsInstancedWEBGL()</code></a></dt>
+   <a href=/web/api/webgl2renderingcontext/drawarraysinstanced><code>drawArraysInstanced</code></a>).</dd>
+ <dt><a href=/web/api/webgl_multi_draw/multidrawelementsinstancedwebgl><code>ext.multiDrawElementsInstancedWEBGL()</code></a></dt>
  <dd>Renders multiple primitives from element array data (identical to multiple calls to 
-   <a href="/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><code>drawElementsInstanced</code></a>).</dd>
+   <a href=/web/api/webgl2renderingcontext/drawelementsinstanced><code>drawElementsInstanced</code></a>).</dd>
 </dl>
 
 <h2 id="Shader_extension">Shader extension</h2>
@@ -71,8 +71,8 @@ void main() {
 <h3>Enabling the extension</h3>
 
 <p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. 
-  For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a>
-  in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+  For more information, see also <a href=/web/api/webgl_api/using_extensions>Using Extensions</a>
+  in the <a href=/web/api/webgl_api/tutorial>WebGL tutorial</a>.</p>
 
 <pre class="brush:js">
 let ext = gl.getExtension('WEBGL_multi_draw');
@@ -80,8 +80,8 @@ let ext = gl.getExtension('WEBGL_multi_draw');
 
 <h3>Drawing multiple arrays</h3>
 
-<p>Example calls for <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL"><code>ext.multiDrawArraysWEBGL()</code></a>
-and <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL"><code>ext.multiDrawArraysInstancedWEBGL()</code></a>:</p>
+<p>Example calls for <a href=/web/api/webgl_multi_draw/multidrawarrayswebgl><code>ext.multiDrawArraysWEBGL()</code></a>
+and <a href=/web/api/webgl_multi_draw/multidrawarraysinstancedwebgl><code>ext.multiDrawArraysInstancedWEBGL()</code></a>:</p>
 
 <pre class="brush:js">
 // multiDrawArrays variant
@@ -99,8 +99,8 @@ ext.multiDrawArraysInstancedWEBGL(
 
 <h3>Drawing multiple elements</h3>
 
-<p>Example calls for <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL"><code>ext.multiDrawElementsWEBGL()</code></a>
-and <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL"><code>ext.multiDrawElementsInstancedWEBGL()</code></a>.</p>
+<p>Example calls for <a href=/web/api/webgl_multi_draw/multidrawelementswebgl><code>ext.multiDrawElementsWEBGL()</code></a>
+and <a href=/web/api/webgl_multi_draw/multidrawelementsinstancedwebgl><code>ext.multiDrawElementsInstancedWEBGL()</code></a>.</p>
 <p>Assumes that the indices which have been previously uploaded to the 
 <code>ELEMENT_ARRAY_BUFFER</code> are to be treated as <code>UNSIGNED_SHORT</code>.</p>
 

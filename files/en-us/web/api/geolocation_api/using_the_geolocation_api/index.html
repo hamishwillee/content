@@ -12,7 +12,7 @@ tags:
 
 <h2 id="The_geolocation_object">The geolocation object</h2>
 
-<p>The <a href="/en-US/docs/Web/API/Geolocation">Geolocation API</a> is available through the {{domxref("navigator.geolocation")}} object.</p>
+<p>The <a href=/web/api/geolocation>Geolocation API</a> is available through the {{domxref("navigator.geolocation")}} object.</p>
 
 <p>If the object exists, geolocation services are available. You can test for the presence of geolocation thusly:</p>
 
@@ -97,7 +97,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);</p
 
 <h2 id="Handling_errors">Handling errors</h2>
 
-<p>The error callback function, if provided when calling <code>getCurrentPosition()</code> or <code>watchPosition()</code>, expects a <code><a href="/en-US/docs/Web/API/GeolocationPositionError">GeolocationPositionError</a></code> object instance as its first parameter. This object type contains two properties, a <code>code</code> indicating what type of error has been returned, and a human-readable <code>message</code> that describes what the error code means.</p>
+<p>The error callback function, if provided when calling <code>getCurrentPosition()</code> or <code>watchPosition()</code>, expects a <code><a href=/web/api/geolocationpositionerror>GeolocationPositionError</a></code> object instance as its first parameter. This object type contains two properties, a <code>code</code> indicating what type of error has been returned, and a human-readable <code>message</code> that describes what the error code means.</p>
 
 <p>You could use it like so:</p>
 

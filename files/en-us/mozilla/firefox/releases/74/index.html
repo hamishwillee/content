@@ -18,9 +18,9 @@ tags:
 <h4 id="Web_console">Web console</h4>
 
 <ul>
- <li>The <code>$x()</code> <a href="/en-US/docs/Tools/Web_Console/Helpers">web console helper</a>'s third argument (result type) now accepts simple string values as well as <a href="/en-US/docs/Web/API/XPathResult#Constants"><code>XPathResult</code> constants</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1602591">bug 1602591</a>).</li>
+ <li>The <code>$x()</code> <a href=/tools/web_console/helpers>web console helper</a>'s third argument (result type) now accepts simple string values as well as <a href=/web/api/xpathresult#Constants><code>XPathResult</code> constants</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1602591">bug 1602591</a>).</li>
  <li>Freshly landed support for the optional chaining operator "?." which can also be used with Console's autocomplete (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1594009">bug 1594009</a>).</li>
- <li>The Debugger can now inspect and debug <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">nested workers</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590766">bug 1590766</a>)</li>
+ <li>The Debugger can now inspect and debug <a href=/web/api/web_workers_api/using_web_workers>nested workers</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590766">bug 1590766</a>)</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -30,15 +30,15 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/CSS/text-underline-position">text-underline-position</a></code> is now enabled by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1606997">bug 1606997</a>).</li>
- <li>The <code><a href="/en-US/docs/Web/CSS/text-underline-offset">text-underline-offset</a></code> and <code><a href="/en-US/docs/Web/CSS/text-decoration-thickness">text-decoration-thickness</a></code> properties now accept percentage values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1607534">bug 1607534</a>).</li>
+ <li><code><a href=/web/css/text-underline-position>text-underline-position</a></code> is now enabled by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1606997">bug 1606997</a>).</li>
+ <li>The <code><a href=/web/css/text-underline-offset>text-underline-offset</a></code> and <code><a href=/web/css/text-decoration-thickness>text-decoration-thickness</a></code> properties now accept percentage values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1607534">bug 1607534</a>).</li>
  <li>The <code>auto</code> value of the {{cssxref("outline-style")}} property has been enabled by default ({{bug(1031664)}}).</li>
 </ul>
 
 <h4 id="Removals">Removals</h4>
 
 <ul>
- <li>The <code>-moz-</code> prefixed-<a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a> properties have been removed ({{bug(1308636)}}). <a href="https://www.fxsitecompat.dev/en-CA/docs/2020/prefixed-css-multi-column-properties-have-been-removed/">See the Firefox Site Compatibility Notes</a> for more details.</li>
+ <li>The <code>-moz-</code> prefixed-<a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a> properties have been removed ({{bug(1308636)}}). <a href="https://www.fxsitecompat.dev/en-CA/docs/2020/prefixed-css-multi-column-properties-have-been-removed/">See the Firefox Site Compatibility Notes</a> for more details.</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -49,7 +49,7 @@ tags:
 
 <ul>
  <li>The <a href="/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining operator</a> has been implemented ({{bug(1566143)}}).</li>
- <li>When a JavaScript URL (<code>javascript:</code>) is evaluated and the result is a string, this string is parsed to create an HTML document, which is then presented. Previously, this document's URL (as reported by the <code><a href="/en-US/docs/Web/API/Document/location">document.location</a></code> property, for example) was the originating <code>javascript:</code> URL; it is now correctly the URL of the document the <code>javascript:</code> URL was evaluated in ({{bug(836567)}}).</li>
+ <li>When a JavaScript URL (<code>javascript:</code>) is evaluated and the result is a string, this string is parsed to create an HTML document, which is then presented. Previously, this document's URL (as reported by the <code><a href=/web/api/document/location>document.location</a></code> property, for example) was the originating <code>javascript:</code> URL; it is now correctly the URL of the document the <code>javascript:</code> URL was evaluated in ({{bug(836567)}}).</li>
 </ul>
 
 <h4 id="Removals_2">Removals</h4>
@@ -75,7 +75,7 @@ tags:
 <h4 id="Canvas_and_WebGL">Canvas and WebGL</h4>
 
 <ul>
- <li>The {{domxref("TextMetrics")}} interface has been extended to contain four more properties measuring the actual bounding box — <code><a href="/en-US/docs/Web/API/TextMetrics/actualBoundingBoxLeft">actualBoundingBoxLeft</a></code>, <code><a href="/en-US/docs/Web/API/TextMetrics/actualBoundingBoxRight">actualBoundingBoxRight</a></code>, <code><a href="/en-US/docs/Web/API/TextMetrics/actualBoundingBoxAscent">actualBoundingBoxAscent</a></code>, and <code><a href="/en-US/docs/Web/API/TextMetrics/actualBoundingBoxDescent">actualBoundingBoxDescent</a></code>. Text metrics can be retrieved using the {{domxref("CanvasRenderingContext2D.measureText()")}} method ({{bug(1102584)}}).</li>
+ <li>The {{domxref("TextMetrics")}} interface has been extended to contain four more properties measuring the actual bounding box — <code><a href=/web/api/textmetrics/actualboundingboxleft>actualBoundingBoxLeft</a></code>, <code><a href=/web/api/textmetrics/actualboundingboxright>actualBoundingBoxRight</a></code>, <code><a href=/web/api/textmetrics/actualboundingboxascent>actualBoundingBoxAscent</a></code>, and <code><a href=/web/api/textmetrics/actualboundingboxdescent>actualBoundingBoxDescent</a></code>. Text metrics can be retrieved using the {{domxref("CanvasRenderingContext2D.measureText()")}} method ({{bug(1102584)}}).</li>
 </ul>
 
 <h4 id="Removals_3">Removals</h4>
@@ -91,7 +91,7 @@ tags:
 
 <ul>
  <li>Feature Policy is now enabled by default! Use the {{HTMLElement("iframe")}} element's {{htmlattrxref("allow", "iframe")}} attribute (and the {{domxref("HTMLIFrameElement")}} property {{domxref("HTMLIFrameElement.allow", "allow")}}) to set permissions for your frames ({{bug(1617219)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy">Cross-Origin-Resource-Policy</a></code> header is now enabled by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1602363">bug 1602363</a>).</li>
+ <li>The <code><a href=/web/http/headers/cross-origin-resource-policy>Cross-Origin-Resource-Policy</a></code> header is now enabled by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1602363">bug 1602363</a>).</li>
 </ul>
 
 <h3 id="Security">Security</h3>

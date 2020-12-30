@@ -58,7 +58,7 @@ tags:
 
 <p>The Web Crypto API provides four algorithms that can be used for signing and signature verification.</p>
 
-<p>Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification. These systems all use a <a href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest algorithm</a> to hash the message to a short fixed size before signing. The choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.</p>
+<p>Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification. These systems all use a <a href=/web/api/subtlecrypto/digest#Supported_algorithms>digest algorithm</a> to hash the message to a short fixed size before signing. The choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.</p>
 
 <p>The fourth algorithm — HMAC — uses the same algorithm and key for signing and for verification: this means that the verification key must be kept secret, which in turn means that this algorithm is not suitable for many signature use cases. It can be a good choice however when the signer and verifier are the same entity.</p>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>The HMAC algorithm calculates and verifies hash-based message authentication codes according to the <a href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS 198-1 standard</a>.</p>
 
-<p>The digest algorithm to use is specified in the <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> object that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code> object that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.</p>
+<p>The digest algorithm to use is specified in the <code><a href=/web/api/hmackeygenparams>HmacKeyGenParams</a></code> object that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the <code><a href=/web/api/hmacimportparams>HmacImportParams</a></code> object that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 

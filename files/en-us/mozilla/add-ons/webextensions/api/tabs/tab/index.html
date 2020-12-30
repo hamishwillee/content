@@ -34,11 +34,11 @@ tags:
  <dt><code>autoDiscardable</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Whether the tab can be discarded automatically by the browser when resources are low.</dd>
  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), you can pass this as the <code>storeId</code> option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), you can pass this as the <code>storeId</code> option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the <code>"cookies"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>.</dd>
  <dt><code>discarded</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.</dd>
  <dt><code>favIconUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the tab's favicon. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. It may also be an empty string if the tab is loading.</dd>
+ <dd><code>string</code>. The URL of the tab's favicon. Only present if the extension has the <code>"tabs"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>. It may also be an empty string if the tab is loading.</dd>
  <dt><code>height</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The height of the tab in pixels.</dd>
  <dt><code>hidden</code></dt>
@@ -76,9 +76,9 @@ tags:
  <dt><code>successorTabId</code> {{optional_inline}}</dt>
  <dd><code>integer</code> The ID of the tab's successor.</dd>
  <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The title of the tab. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. The title of the tab. Only present if the extension has the <code>"tabs"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>.</dd>
  <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the document that the tab is displaying. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. The URL of the document that the tab is displaying. Only present if the extension has the <code>"tabs"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>.</dd>
  <dt><code>width</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The width of the tab in pixels.</dd>
  <dt><code>windowId</code></dt>

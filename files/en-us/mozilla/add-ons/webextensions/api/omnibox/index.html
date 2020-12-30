@@ -18,7 +18,7 @@ tags:
 <p>The omnibox API provides the extension a way to customise the suggestions displayed in the drop-down, when the user enters a keyword defined by the extension. It works as follows:</p>
 
 <ol>
- <li>First, the extension must include an "<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a>" key in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, which defines a keyword.</li>
+ <li>First, the extension must include an "<a href=/mozilla/add-ons/webextensions/manifest.json/omnibox>omnibox</a>" key in its <a href=/mozilla/add-ons/webextensions/manifest.json>manifest.json</a> file, which defines a keyword.</li>
  <li>When the user focuses the address bar and types the keyword, followed by a space, the extension will get an {{WebExtAPIRef("omnibox.onInputStarted")}} event.</li>
  <li>Optionally, the extension can call {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} to define the first suggestion that will be displayed in the address bar drop-down.</li>
  <li>As the user continues to type characters after this, the extension will get {{WebExtAPIRef("omnibox.onInputChanged")}} events. The event listener will be passed the current value the user has typed, and will be able to populate the address bar drop-down with suggestions. If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.</li>

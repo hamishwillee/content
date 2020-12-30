@@ -15,13 +15,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">We're now ready to add the pages that display the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website books and other data. The pages will include a home page that shows how many records we have of each model type and list and detail pages for all of our models. Along the way, we'll gain practical experience in getting records from the database, and using templates.</p>
+<p class="summary">We're now ready to add the pages that display the <a href=/learn/server-side/express_nodejs/tutorial_local_library_website>LocalLibrary</a> website books and other data. The pages will include a home page that shows how many records we have of each model type and list and detail pages for all of our models. Along the way, we'll gain practical experience in getting records from the database, and using templates.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Complete previous tutorial topics (including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a>).</td>
+   <td>Complete previous tutorial topics (including <a href=/learn/server-side/express_nodejs/routes>Express Tutorial Part 4: Routes and controllers</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>In our previous tutorial articles, we defined <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Mongoose models</a> that we can use to interact with a database and created some initial library records. We then <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">created all the routes</a> needed for the LocalLibrary website, but with "dummy controller" functions (these are skeleton controller functions that just return a "not implemented" message when a page is accessed).</p>
+<p>In our previous tutorial articles, we defined <a href=/learn/server-side/express_nodejs/mongoose>Mongoose models</a> that we can use to interact with a database and created some initial library records. We then <a href=/learn/server-side/express_nodejs/routes>created all the routes</a> needed for the LocalLibrary website, but with "dummy controller" functions (these are skeleton controller functions that just return a "not implemented" message when a page is accessed).</p>
 
 <p>The next step is to provide proper implementations for the pages that <em>display</em> our library information (we'll look at implementing pages featuring forms to create, update, or delete information in later articles). This includes updating the controller functions to fetch records using our models and defining templates to display this information to users.</p>
 
@@ -45,18 +45,18 @@ tags:
 <p>The following subarticles go through the process of adding the different features required for us to display the required website pages. You need to read and work through each one of these in turn, before moving on to the next one.</p>
 
 <ol>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Asynchronous flow control using async</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer">Template primer</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">The LocalLibrary base template</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">Home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">Book list page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page">BookInstance list page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">Date formatting using luxon</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">Author list page and Genre list page challenge</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">Genre detail page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page">Book detail page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page">Author detail page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge">BookInstance detail page and challenge</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/flow_control_using_async>Asynchronous flow control using async</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/template_primer>Template primer</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/locallibrary_base_template>The LocalLibrary base template</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/home_page>Home page</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/book_list_page>Book list page</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/bookinstance_list_page>BookInstance list page</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/date_formatting_using_moment>Date formatting using luxon</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/author_list_page>Author list page and Genre list page challenge</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/genre_detail_page>Genre detail page</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/book_detail_page>Book detail page</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/author_detail_page>Author detail page</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data/bookinstance_detail_page_and_challenge>BookInstance detail page and challenge</a></li>
 </ol>
 
 <h2 id="Summary">Summary</h2>
@@ -79,13 +79,13 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href=/learn/server-side/express_nodejs/introduction>Express/Node introduction</a></li>
+ <li><a href=/learn/server-side/express_nodejs/development_environment>Setting up a Node (Express) development environment</a></li>
+ <li><a href=/learn/server-side/express_nodejs/tutorial_local_library_website>Express Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/skeleton_website>Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/mongoose>Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><a href=/learn/server-side/express_nodejs/routes>Express Tutorial Part 4: Routes and controllers</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a></li>
+ <li><a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a></li>
+ <li><a href=/learn/server-side/express_nodejs/deployment>Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

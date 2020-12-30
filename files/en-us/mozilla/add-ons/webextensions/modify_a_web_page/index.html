@@ -44,7 +44,7 @@ tags:
 
 }</pre>
 
-<p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key is how you load scripts into pages that match URL patterns. In this case, <code>content_scripts</code> instructs the browser to load a script called "page-eater.js" into all pages under <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+<p>The <code><a href=/mozilla/add-ons/webextensions/manifest.json/content_scripts>content_scripts</a></code> key is how you load scripts into pages that match URL patterns. In this case, <code>content_scripts</code> instructs the browser to load a script called "page-eater.js" into all pages under <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
 
 <div class="note">
 <p>Since the <code>"js"</code> property of <code>content_scripts</code> is an array, you can use it to inject more than one script into matching pages. If you do this the pages share the same scope, just like multiple scripts loaded by a page, and they are loaded in the order that they are listed in the array.</p>
@@ -96,8 +96,8 @@ document.body.appendChild(header);</pre>
 <p>Here, we've removed the <code>content_scripts</code> key, and added two new keys:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>: To inject scripts into pages we need permissions for the page we're modifying. The <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> is a way to get this temporarily for the currently active tab. We also need the <code>contextMenus</code> permission to be able to add context menu items.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></code>: We're using this to load a persistent <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"background script"</a> called <code>background.js</code>, in which we'll set up the context menu and inject the content script.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a></code>: To inject scripts into pages we need permissions for the page we're modifying. The <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> is a way to get this temporarily for the currently active tab. We also need the <code>contextMenus</code> permission to be able to add context menu items.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/background>background</a></code>: We're using this to load a persistent <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"background script"</a> called <code>background.js</code>, in which we'll set up the context menu and inject the content script.</li>
 </ul>
 
 <p>Let's create this file. Create a new file called <code>background.js</code> in the <code>modify-page</code> directory, and give it the following contents:</p>
@@ -116,7 +116,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 </pre>
 
-<p>In this script we're creating a <a href="/en-US/Add-ons/WebExtensions/API/ContextMenus/create">context menu item</a>, giving it a specific id and title (the text to be displayed in the context menu). Then we set up an event listener so that when the user clicks a context menu item, we check to see if it is our <code>eat-page</code> item. If it is, we inject "page-eater.js" into the current tab using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code> API. This API optionally takes a tab ID as an argument: we've omitted the tab ID, which means that the script is injected into the currently active tab.</p>
+<p>In this script we're creating a <a href="/en-US/Add-ons/WebExtensions/API/ContextMenus/create">context menu item</a>, giving it a specific id and title (the text to be displayed in the context menu). Then we set up an event listener so that when the user clicks a context menu item, we check to see if it is our <code>eat-page</code> item. If it is, we inject "page-eater.js" into the current tab using the <code><a href=/mozilla/add-ons/webextensions/api/tabs/executescript>tabs.executeScript()</a></code> API. This API optionally takes a tab ID as an argument: we've omitted the tab ID, which means that the script is injected into the currently active tab.</p>
 
 <p>At this point the extension should look like this:</p>
 
@@ -158,7 +158,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 </table>
 
 <div class="notecard note">
-<p>In addition to this method of communication, which sends one-off messages, you can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>. For advice on choosing between the options, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging">Choosing between one-off messages and connection-based messaging</a>.</p>
+<p>In addition to this method of communication, which sends one-off messages, you can also use a <a href=/mozilla/add-ons/webextensions/content_scripts#Connection-based_messaging>connection-based approach to exchange messages</a>. For advice on choosing between the options, see <a href=/mozilla/add-ons/webextensions/content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging>Choosing between one-off messages and connection-based messaging</a>.</p>
 </div>
 
 <p>Let's update our example to show how to send a message from the background script.</p>
@@ -194,7 +194,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 </pre>
 
-<p>Now, after injecting <code>page-eater.js</code>, we use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code> to get the currently active tab, and then use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code> to send a message to the content scripts loaded into that tab. The message has the payload <code>{replacement: "Message from the extension!"}</code>.</p>
+<p>Now, after injecting <code>page-eater.js</code>, we use <code><a href=/mozilla/add-ons/webextensions/api/tabs/query>tabs.query()</a></code> to get the currently active tab, and then use <code><a href=/mozilla/add-ons/webextensions/api/tabs/sendmessage>tabs.sendMessage()</a></code> to send a message to the content scripts loaded into that tab. The message has the payload <code>{replacement: "Message from the extension!"}</code>.</p>
 
 <p>Next, update <code>page-eater.js</code> like this:</p>
 
@@ -207,37 +207,37 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 browser.runtime.onMessage.addListener(eatPageReceiver);
 </pre>
 
-<p>Now, instead of just eating the page right away, the content script listens for a message using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>. When a message arrives, the content script runs essentially the same code as before, except that the replacement text is taken from <code>request.replacement</code>.</p>
+<p>Now, instead of just eating the page right away, the content script listens for a message using <code><a href=/mozilla/add-ons/webextensions/api/runtime/onmessage>runtime.onMessage</a></code>. When a message arrives, the content script runs essentially the same code as before, except that the replacement text is taken from <code>request.replacement</code>.</p>
 
 <p>Since <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code> is an asynchronous function, and to ensure we send message only after listener has been added in <code>page-eater.js</code>, we use <code>onExecuted()</code> which will be called after <code>page-eater.js</code> executed.</p>
 
 <div class="note">
-<p>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR <code>web-ext run --bc</code> to open <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> to view <code>console.log</code> in background script.</p>
+<p>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR <code>web-ext run --bc</code> to open <a href=/tools/browser_console>Browser Console</a> to view <code>console.log</code> in background script.</p>
 
 <p>Alternatively, use <a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a>  which allows you set breakpoint. There is currently no way to <a href="https://github.com/mozilla/web-ext/issues/759">start Add-on Debugger directly from web-ext</a>.</p>
 </div>
 
-<p>If we want send messages back from the content script to the background page,  we would use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> instead of <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code>, e.g.:</p>
+<p>If we want send messages back from the content script to the background page,  we would use <code><a href=/mozilla/add-ons/webextensions/api/runtime/sendmessage>runtime.sendMessage()</a></code> instead of <code><a href=/mozilla/add-ons/webextensions/api/tabs/sendmessage>tabs.sendMessage()</a></code>, e.g.:</p>
 
 <pre class="brush: js notranslate">browser.runtime.sendMessage({
     title: "from page-eater.js"
 });</pre>
 
 <div class="note">
-<p>These examples all inject JavaScript; you can also inject CSS programmatically using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> function.</p>
+<p>These examples all inject JavaScript; you can also inject CSS programmatically using the <code><a href=/mozilla/add-ons/webextensions/api/tabs/insertcss>tabs.insertCSS()</a></code> function.</p>
 </div>
 
 <h2 id="Learn_more">Learn more</h2>
 
 <ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> guide</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code></li>
+ <li><a href=/mozilla/add-ons/webextensions/content_scripts>Content scripts</a> guide</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/content_scripts>content_scripts</a></code> manifest key</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a></code> manifest key</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/tabs/executescript>tabs.executeScript()</a></code></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/tabs/insertcss>tabs.insertCSS()</a></code></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/tabs/sendmessage>tabs.sendMessage()</a></code></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/runtime/sendmessage>runtime.sendMessage()</a></code></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/runtime/onmessage>runtime.onMessage</a></code></li>
  <li>Examples using <code>content_scripts</code>:
   <ul>
    <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/borderify">borderify</a></li>

@@ -41,7 +41,7 @@ tags:
 
 <p>If we didn't have arrays, we'd have to store every item in a separate variable, then call the code that does the printing and adding separately for each item. This would be much longer to write out, less efficient, and more error-prone. If we had 10 items to add to the invoice it would already be annoying, but what about 100 items, or 1000? We'll return to this example later on in the article.</p>
 
-<p>As in previous articles, let's learn about the real basics of arrays by entering some examples into <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer console</a>.</p>
+<p>As in previous articles, let's learn about the real basics of arrays by entering some examples into <a href=/learn/common_questions/what_are_browser_developer_tools>browser developer console</a>.</p>
 
 <h3 id="Creating_arrays">Creating arrays</h3>
 
@@ -95,12 +95,12 @@ for (let i = 0; i &lt; sequence.length; i++) {
   console.log(sequence[i]);
 }</pre>
 
-<p>You'll learn about loops properly later on (in our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a> article), but briefly, this code is saying:</p>
+<p>You'll learn about loops properly later on (in our <a href=/learn/javascript/building_blocks/looping_code>Looping code</a> article), but briefly, this code is saying:</p>
 
 <ol>
  <li>Start looping at item number 0 in the array.</li>
  <li>Stop looping at the item number equal to the length of the array. This works for an array of any length, but in this case it stops looping at item number 7 (this is good, as the last item — which we want the loop to include — is item 6).</li>
- <li>For each item, print it out to the browser console with <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code>.</li>
+ <li>For each item, print it out to the browser console with <code><a href=/web/api/console/log>console.log()</a></code>.</li>
 </ol>
 
 <h2 id="Some_useful_array_methods">Some useful array methods</h2>
@@ -193,7 +193,7 @@ removedItem;</pre>
 <ol>
  <li>Below the <code>// number 1</code> comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called <code>products</code>.</li>
  <li>On the same line as the <code>// number 2</code> comment is the beginning of a for loop. In this line we currently have <code>i &lt;= 0</code>, which is a conditional test that causes the <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops">for loop</a> to only run once, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts at 0. We'd like you to replace this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.</li>
- <li>Just below the <code>// number 3</code> comment we want you to write a line of code that splits the current array item (<code>name:price</code>) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.</li>
+ <li>Just below the <code>// number 3</code> comment we want you to write a line of code that splits the current array item (<code>name:price</code>) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the <a href=/learn/javascript/first_steps/useful_string_methods>Useful string methods</a> article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.</li>
  <li>As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the <a href="/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">first strings article</a>.</li>
  <li>There is a variable called <code>total</code> that is created and given a value of 0 at the top of the code. Inside the loop (below <code>// number 4</code>) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an <a href="/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators">assignment operator</a> to do this.</li>
  <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>
@@ -534,7 +534,7 @@ textarea.onkeyup = function(){
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays">Test your skills: Arrays</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/first_steps/test_your_skills:_arrays>Test your skills: Arrays</a>.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
@@ -545,7 +545,7 @@ textarea.onkeyup = function(){
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a> — an advanced level guide to arrays and their cousins, typed arrays.</li>
+ <li><a href=/web/javascript/guide/indexed_collections>Indexed collections</a> — an advanced level guide to arrays and their cousins, typed arrays.</li>
  <li>{{jsxref("Array")}} — the <code>Array</code> object reference page — for a detailed reference guide to the features discussed in this page, and many more.</li>
 </ul>
 
@@ -554,13 +554,13 @@ textarea.onkeyup = function(){
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
+ <li><a href=/learn/javascript/first_steps/what_is_javascript>What is JavaScript?</a></li>
+ <li><a href=/learn/javascript/first_steps/a_first_splash>A first splash into JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/what_went_wrong>What went wrong? Troubleshooting JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/variables>Storing the information you need — Variables</a></li>
+ <li><a href=/learn/javascript/first_steps/math>Basic math in JavaScript — numbers and operators</a></li>
+ <li><a href=/learn/javascript/first_steps/strings>Handling text — strings in JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/useful_string_methods>Useful string methods</a></li>
+ <li><a href=/learn/javascript/first_steps/arrays>Arrays</a></li>
+ <li><a href=/learn/javascript/first_steps/silly_story_generator>Assessment: Silly story generator</a></li>
 </ul>

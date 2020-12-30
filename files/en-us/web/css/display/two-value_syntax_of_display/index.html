@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>Firefox 70 implemented the two-value syntax for the <code><a href="/en-US/docs/Web/CSS/display">display</a></code> property, which is part of the <a href="https://drafts.csswg.org/css-display/">CSS Display Module Level 3</a>. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the <code>display</code> property.</p>
+<p>Firefox 70 implemented the two-value syntax for the <code><a href=/web/css/display>display</a></code> property, which is part of the <a href="https://drafts.csswg.org/css-display/">CSS Display Module Level 3</a>. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the <code>display</code> property.</p>
 
 <h2 id="What_happens_when_we_change_the_value_of_the_display_property">What happens when we change the value of the display property?</h2>
 
@@ -21,7 +21,7 @@ tags:
 } </code>
 </pre>
 
-<p>More recently we have gained <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>. To access these we also use values of the <code>display</code> property — <code>display: grid</code> and <code>display: flex</code>. Only when the value of <code>display</code> is changed do the children become flex or grid items and begin to respond to the other properties in the grid or flexbox specifications. Changing an element's <code>display</code> value changes the formatting context of its direct children.</p>
+<p>More recently we have gained <a href=/web/css/css_grid_layout>CSS Grid Layout</a> and <a href=/web/css/css_flexible_box_layout>Flexbox</a>. To access these we also use values of the <code>display</code> property — <code>display: grid</code> and <code>display: flex</code>. Only when the value of <code>display</code> is changed do the children become flex or grid items and begin to respond to the other properties in the grid or flexbox specifications. Changing an element's <code>display</code> value changes the formatting context of its direct children.</p>
 
 <p>What grid and flexbox demonstrate, however, is that an element has both an <strong>outer</strong> and an <strong>inner</strong> display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.</p>
 
@@ -92,13 +92,13 @@ tags:
 
 <h2 id="display_block_flow-root_and_display_inline_flow-root">display: block flow-root and display: inline flow-root</h2>
 
-<p>In terms of how these new values help to clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The two-value <code>display: block flow-root</code> maps to a fairly recent single value; <code>display: flow-root</code>. This value's only purpose is to create a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block Formatting Context</a> (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. The most obvious use-case for creating a new BFC is to contain floats, and avoid the need for clearfix hacks.</p>
+<p>In terms of how these new values help to clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The two-value <code>display: block flow-root</code> maps to a fairly recent single value; <code>display: flow-root</code>. This value's only purpose is to create a new <a href=/web/guide/css/block_formatting_context>Block Formatting Context</a> (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. The most obvious use-case for creating a new BFC is to contain floats, and avoid the need for clearfix hacks.</p>
 
 <p>In the example below we have a floated item inside a container. The float is contained by the bordered box, which wraps it and the text alongside. If you remove the line <code>display: flow-root</code> then the float will poke out of the bottom of the box. If you are using Firefox you can replace it with the newer <code>display: block flow-root</code>, which will achieve the same as the single <code>flow-root</code> value.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 440)}}</p>
 
-<p>The <code>flow-root</code> value makes sense if you think about block and inline layout, which is sometimes called <a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">normal flow</a>. Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of <code>display</code> to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.</p>
+<p>The <code>flow-root</code> value makes sense if you think about block and inline layout, which is sometimes called <a href=/learn/css/css_layout/normal_flow>normal flow</a>. Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of <code>display</code> to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.</p>
 
 <p>The two-value syntax for <code>display: flow-root</code> being <code>display: block flow-root</code> therefore makes a lot of sense. You are creating a block formatting context, with a block-level box and children participating in normal flow. What about the matched pair <code>display: inline flow-root</code>? This is the new way of describing <code>display: inline-block</code>.</p>
 

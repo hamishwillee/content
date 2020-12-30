@@ -36,7 +36,7 @@ tags:
 <p>The <code>RTCOfferOptions</code> dictionary is used to customize the offer created by this method.</p>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/API/RTCOfferOptions/iceRestart">iceRestart</a></code> {{optional_inline}}</dt>
+ <dt><code><a href=/web/api/rtcofferoptions/icerestart>iceRestart</a></code> {{optional_inline}}</dt>
  <dd>To restart ICE on an active connection, set this to <code>true</code>. This will cause the returned offer to have different credentials than those already in place. If you then apply the returned offer, ICE will restart. Specify <code>false</code> to keep the same credentials and therefore not restart ICE. <strong>The default is <code>false</code></strong>.</dd>
  <dt><code>offerToReceiveAudio</code> {{optional_inline}} (Legacy)</dt>
  <dd>A legacy Boolean option which used to control whether or not to offer to the remote peer the opportunity to try to send audio. If this value is <code>false</code>, the remote peer will not be offered to send audio data, even if the local side will be sending audio data. If this value is <code>true</code>, the remote peer will be offered to send audio data, even if the local side will <em>not</em> be sending audio data. The default behavior is to offer to receive audio only if the local side is sending audio, not otherwise.</dd>
@@ -91,7 +91,7 @@ tags:
 <p>Here we see a handler for the {{event("negotiationneeded")}} event which creates the offer and sends it to the remote system over a signaling channel.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you. In this case, a <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> connection is used to send a {{Glossary("JSON")}} message with a <code>type</code> field with the value "video-offer" to the other peer. The contents of the object being passed to the <code>sendToServer()</code> function, along with everything else in the promise fulfillment handler, depend entirely on your design.</p>
+<p><strong>Note:</strong> Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you. In this case, a <a href=/web/api/websocket_api>WebSocket</a> connection is used to send a {{Glossary("JSON")}} message with a <code>type</code> field with the value "video-offer" to the other peer. The contents of the object being passed to the <code>sendToServer()</code> function, along with everything else in the promise fulfillment handler, depend entirely on your design.</p>
 </div>
 
 <pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
@@ -113,7 +113,7 @@ tags:
 
 <p>Use {{jsxref("Promise.catch()")}} to trap and handle errors.</p>
 
-<p>See <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a> for the complete example from which this snippet is derived; this will help you to understand how the signaling code here works.</p>
+<p>See <a href=/web/api/webrtc_api/signaling_and_video_calling>Signaling and video calling</a> for the complete example from which this snippet is derived; this will help you to understand how the signaling code here works.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

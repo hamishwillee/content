@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.</td>
+   <td>Basic computer literacy, and a basic <a href=/learn/html/introduction_to_html>understanding of HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -31,7 +31,7 @@ tags:
  </tbody>
 </table>
 
-<p>The flexibility of forms makes them one of the most complex structures in <a href="/en-US/docs/Learn/HTML">HTML</a>; you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and <a href="/en-US/docs/Learn/Accessibility">accessible</a>.</p>
+<p>The flexibility of forms makes them one of the most complex structures in <a href=/learn/html>HTML</a>; you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and <a href=/learn/accessibility>accessible</a>.</p>
 
 <h2 id="The_&lt;form&gt;_element">The &lt;form&gt; element</h2>
 
@@ -41,7 +41,7 @@ tags:
 
 <div class="warning"><strong>Warning:</strong> It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea.</div>
 
-<p>It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using the <a href="/en-US/docs/Web/HTML/Attributes/form"><code>form</code></a> attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.</p>
+<p>It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using the <a href=/web/html/attributes/form><code>form</code></a> attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.</p>
 
 <p>Let's move forward and cover the structural elements you'll find nested in a form.</p>
 
@@ -79,7 +79,7 @@ tags:
 
 <p>The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.</p>
 
-<p>Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">listen to how a screen reader</a> interprets it. If it sounds odd, try to improve the form structure.</p>
+<p>Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to <a href=/learn/tools_and_testing/cross_browser_testing/accessibility#Screenreaders>listen to how a screen reader</a> interprets it. If it sounds odd, try to improve the form structure.</p>
 
 <h2 id="The_&lt;label&gt;_element">The &lt;label&gt; element</h2>
 
@@ -152,7 +152,7 @@ tags:
 
 <p>{{EmbedLiveSample("Multiple_labels", 120, 120)}}</p>
 
-<p>The paragraph at the top states a rule for required elements. The rule must be included <em>before</em> it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "<em>star</em>"  when encountered. When hovered by a sighted mouse user, "<em>required</em>" should appear,  which is achieved by use of the <code>title</code> attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code> attribute, which is always read by screen readers.</p>
+<p>The paragraph at the top states a rule for required elements. The rule must be included <em>before</em> it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "<em>star</em>"  when encountered. When hovered by a sighted mouse user, "<em>required</em>" should appear,  which is achieved by use of the <code>title</code> attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the <code><a href=/web/accessibility/aria/aria_techniques/using_the_aria-label_attribute>aria-label</a></code> attribute, which is always read by screen readers.</p>
 
 <p>The above variants increase in effectiveness as you go through them:</p>
 
@@ -182,7 +182,7 @@ tags:
 
 <h3 id="Active_learning_building_a_form_structure">Active learning: building a form structure</h3>
 
-<p>Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article (<a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a>). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.</p>
+<p>Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article (<a href=/learn/forms/basic_native_form_controls>Basic native form controls</a>). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.</p>
 
 <ol>
  <li>To start with, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">blank template file</a> and the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css">CSS for our payment form</a> in a new directory on your computer.</li>
@@ -247,7 +247,7 @@ tags:
     &lt;/p&gt;
 &lt;/section&gt;</pre>
  </li>
- <li>The second <code>&lt;section&gt;</code> of our form is the payment information. We have three distinct controls along with their labels, each contained inside a <code>&lt;p&gt;</code>. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an <code>&lt;input&gt;</code> element of type <code>tel</code>, for entering a credit card number; while we could have used the <code>number</code> type, we don't want the number's spinner UI. The last one is an <code>&lt;input&gt;</code> element of type <code>date</code>, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.<br>
+ <li>The second <code>&lt;section&gt;</code> of our form is the payment information. We have three distinct controls along with their labels, each contained inside a <code>&lt;p&gt;</code>. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an <code>&lt;input&gt;</code> element of type <code>tel</code>, for entering a credit card number; while we could have used the <code>number</code> type, we don't want the number's spinner UI. The last one is an <code>&lt;input&gt;</code> element of type <code>date</code>, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in <a href=/learn/forms/html5_input_types>The HTML5 input types</a>.<br>
   <br>
   Enter the following below the previous section:
   <pre class="brush: html">&lt;section&gt;
@@ -290,7 +290,7 @@ tags:
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find a further test to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_structure">Test your skills: Form structure</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find a further test to verify that you've retained this information before you move on — see <a href=/learn/forms/test_your_skills:_form_structure>Test your skills: Form structure</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -307,22 +307,22 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>Basic native form controls</a></li>
+ <li><a href=/learn/forms/html5_input_types>The HTML5 input types</a></li>
+ <li><a href=/learn/forms/other_form_controls>Other form controls</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
+ <li><a href=/learn/forms/ui_pseudo-classes>UI pseudo-classes</a></li>
+ <li><a href=/learn/forms/form_validation>Client-side form validation</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form controls</a></li>
+ <li><a href=/learn/forms/sending_forms_through_javascript>Sending forms through JavaScript</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_widgets>Property compatibility table for form widgets</a></li>
 </ul>

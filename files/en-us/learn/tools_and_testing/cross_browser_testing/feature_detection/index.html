@@ -24,7 +24,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea of the high-level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross-browser testing</a>.</td>
+   <td>Familiarity with the core <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> languages; an idea of the high-level <a href=/learn/tools_and_testing/cross_browser_testing/introduction>principles of cross-browser testing</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -37,7 +37,7 @@ tags:
 
 <p>The idea behind feature detection is that you can run a test to determine whether a feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that <em>do</em> support the feature, and browsers that <em>don't</em>. If you don't do this, browsers that don't support the features you are using in your code won't display your sites properly and will just fail, creating a bad user experience.</p>
 
-<p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
+<p>Let's recap and look at the example we touched on in our <a href=/learn/tools_and_testing/cross_browser_testing/javascript#Feature_detection>Handling common JavaScript problems</a> — the <a href=/web/api/geolocation/using_geolocation>Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href=/web/api/navigator>Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
 <pre class="language-js">if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -49,7 +49,7 @@ tags:
 
 <p>It is probably better to use an established feature detection library however, rather than writing your own all the time. Modernizr is the industry standard for feature detection tests, and we'll look at that later on.</p>
 
-<p>Before we move on, we'd like to say one thing upfront — don't confuse feature detection with <strong>browser sniffing</strong> (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_bad_browser_sniffing_code">Using bad browser sniffing code</a> for more details.</p>
+<p>Before we move on, we'd like to say one thing upfront — don't confuse feature detection with <strong>browser sniffing</strong> (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See <a href=/learn/tools_and_testing/cross_browser_testing/javascript#Using_bad_browser_sniffing_code>Using bad browser sniffing code</a> for more details.</p>
 
 <h2 id="Writing_your_own_feature_detection_tests">Writing your own feature detection tests</h2>
 
@@ -57,9 +57,9 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<p>You can write tests for CSS features by testing for the existence of <em><a href="/en-US/docs/Web/API/HTMLElement/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform</code>) in JavaScript.</p>
+<p>You can write tests for CSS features by testing for the existence of <em><a href=/web/api/htmlelement/style>element.style.property</a></em> (e.g. <code>paragraph.style.transform</code>) in JavaScript.</p>
 
-<p>A classic example might be to test for <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.</p>
+<p>A classic example might be to test for <a href=/learn/css/css_layout/flexbox>Flexbox</a> support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.</p>
 
 <p>Let's implement something that demonstrates this, although we'll keep it simple for now.</p>
 
@@ -91,12 +91,12 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 <p>When you save everything and try out your example, you should see the flexbox layout applied to the page if the browser supports modern flexbox, and the float layout if not.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behavior">CSS fallback behavior</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">Handling CSS prefixes</a>.</p>
+<p><strong>Note</strong>: Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in <a href=/learn/tools_and_testing/cross_browser_testing/html_and_css#CSS_fallback_behavior>CSS fallback behavior</a> and <a href=/learn/tools_and_testing/cross_browser_testing/html_and_css#Handling_CSS_prefixes>Handling CSS prefixes</a>.</p>
 </div>
 
 <h4 id="supports">@supports</h4>
 
-<p>In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> (see also <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Responsive design problems</a>) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.</p>
+<p>In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to <a href=/web/css/media_queries>media queries</a> (see also <a href=/learn/tools_and_testing/cross_browser_testing/html_and_css#Responsive_design_problems>Responsive design problems</a>) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.</p>
 
 <p>For example, we could rewrite our previous example to use <code>@supports</code> — see <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html">supports-feature-detect.html</a></code> and <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css">supports-styling.css</a></code>. If you look at the latter, you'll see a couple of <code>@supports</code> blocks, for example:</p>
 
@@ -152,7 +152,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
   </tr>
   <tr>
    <td><em>Property on element</em></td>
-   <td>Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it. The example shown is a way of detecting <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.</td>
+   <td>Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it. The example shown is a way of detecting <a href=/web/api/canvas_api>HTML5 Canvas</a> support.</td>
    <td><code>function supports_canvas() {<br>
     return !!document.createElement('canvas').getContext;<br>
     }<br>
@@ -344,12 +344,12 @@ Modernizr.fetch</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/introduction>Introduction to cross browser testing</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/testing_strategies>Strategies for carrying out testing</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/html_and_css>Handling common HTML and CSS problems</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/javascript>Handling common JavaScript problems</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/accessibility>Handling common accessibility problems</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/feature_detection>Implementing feature detection</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/automated_testing>Introduction to automated testing</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/your_own_automation_environment>Setting up your own test automation environment</a></li>
 </ul>

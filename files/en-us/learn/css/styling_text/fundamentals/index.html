@@ -25,7 +25,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS basics (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>).</td>
+   <td>Basic computer literacy, HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), CSS basics (study <a href=/learn/css/introduction_to_css>Introduction to CSS</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -39,7 +39,7 @@ tags:
 <p>As you'll have already experienced in your work with HTML and CSS, text inside an element is laid out inside the element's content box. It starts at the top left of the content area (or the top right, in the case of RTL language content), and flows towards the end of the line. Once it reaches the end, it goes down to the next line and continues, then the next line, until all the content has been placed in the box. Text content effectively behaves like a series of inline elements, being laid out on lines adjacent to one another, and not creating line breaks until the end of the line is reached, or unless you force a line break manually using the {{htmlelement("br")}} element.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If the above paragraph leaves you feeling confused, then no matter — go back and review our <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> article, to brush up on the box model theory, before carrying on.</p>
+<p><strong>Note</strong>: If the above paragraph leaves you feeling confused, then no matter — go back and review our <a href=/learn/css/introduction_to_css/box_model>Box model</a> article, to brush up on the box model theory, before carrying on.</p>
 </div>
 
 <p>The CSS properties used to style text generally fall into two categories, which we'll look at separately in this article:</p>
@@ -50,7 +50,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like <a href="/en-US/docs/Web/CSS/::first-letter">::first-letter</a> (selects the first letter of an element's text), <a href="/en-US/docs/Web/CSS/::first-line">::first-line</a> (selects the first line of an element's text), or <a href="/en-US/docs/Web/CSS/::selection">::selection</a> (selects the text currently highlighted by the cursor.)</p>
+<p><strong>Note</strong>: Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like <a href=/web/css/::first-letter>::first-letter</a> (selects the first letter of an element's text), <a href=/web/css/::first-line>::first-line</a> (selects the first line of an element's text), or <a href=/web/css/::selection>::selection</a> (selects the text currently highlighted by the cursor.)</p>
 </div>
 
 <h2 id="Fonts">Fonts</h2>
@@ -162,7 +162,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: <strong>web fonts</strong>. This is a little bit more complex, and we will be discussing this in a <a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">separate article</a> later on in the module.</p>
+<p><strong>Note</strong>: There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: <strong>web fonts</strong>. This is a little bit more complex, and we will be discussing this in a <a href=/learn/css/styling_text/web_fonts>separate article</a> later on in the module.</p>
 </div>
 
 <h4 id="Default_fonts">Default fonts</h4>
@@ -252,7 +252,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h3 id="Font_size">Font size</h3>
 
-<p>In our previous module's <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS values and units</a> article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages">percentages</a>), however the most common units you'll use to size text are:</p>
+<p>In our previous module's <a href=/learn/css/building_blocks/values_and_units>CSS values and units</a> article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages">percentages</a>), however the most common units you'll use to size text are:</p>
 
 <ul>
  <li><code>px</code> (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.</li>
@@ -396,7 +396,7 @@ p {
  <li>The horizontal offset of the shadow from the original text — this can take most available CSS <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>, but you'll most commonly use <code>px</code>; positive values move the shadow right, and negative values left. This value has to be included.</li>
  <li>The vertical offset of the shadow from the original text; behaves basically just like the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.</li>
  <li>The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>.</li>
- <li>The base color of the shadow, which can take any <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS color unit</a>. If not included, it defaults to <code><a href="/en-US/docs/Web/CSS/color_value#currentcolor_keyword">currentColor</a></code>, i.e. the shadow’s color is taken from the element’s <code><a href="/en-US/docs/Web/CSS/color">color</a></code> property.</li>
+ <li>The base color of the shadow, which can take any <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS color unit</a>. If not included, it defaults to <code><a href=/web/css/color_value#currentcolor_keyword>currentColor</a></code>, i.e. the shadow’s color is taken from the element’s <code><a href=/web/css/color>color</a></code> property.</li>
 </ol>
 
 <h4 id="Multiple_shadows">Multiple shadows</h4>
@@ -726,7 +726,7 @@ window.addEventListener("load", drawOutput);
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, and already did some skill testing in our Active Learning section, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see <a href="/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Typesetting a community school homepage</a>.</p>
+<p>You've reached the end of this article, and already did some skill testing in our Active Learning section, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see <a href=/learn/css/styling_text/typesetting_a_homepage>Typesetting a community school homepage</a>.</p>
 
 <p>This assessment tests all the knowledge discussed in this module, so you might want to read the other articles before moving on to it.</p>
 
@@ -739,9 +739,9 @@ window.addEventListener("load", drawOutput);
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li>
+ <li><a href=/learn/css/styling_text/fundamentals>Fundamental text and font styling</a></li>
+ <li><a href=/learn/css/styling_text/styling_lists>Styling lists</a></li>
+ <li><a href=/learn/css/styling_text/styling_links>Styling links</a></li>
+ <li><a href=/learn/css/styling_text/web_fonts>Web fonts</a></li>
  <li><a href="/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage">Typesetting a community school homepage</a></li>
 </ul>

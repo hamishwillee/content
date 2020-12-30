@@ -24,7 +24,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, and understanding of <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">what accessibility is</a>.</td>
+   <td>Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, and understanding of <a href=/learn/accessibility/what_is_accessibility>what accessibility is</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -43,7 +43,7 @@ tags:
 
 <h3 id="Correct_semantics_and_user_expectation">Correct semantics and user expectation</h3>
 
-<p>It is possible to use CSS to make any HTML element look like <em>anything</em>, but this doesn't mean that you should. As we frequently mentioned in our <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> article, you should use the appropriate semantic element for the job, whenever possible. If you don't, it can cause confusion and usability issues for everyone, but particularly users with disabilities. Using correct semantics has a lot to do with user expectations — elements look and behave in certain ways, according to their functionality, and these common conventions are expected by users.</p>
+<p>It is possible to use CSS to make any HTML element look like <em>anything</em>, but this doesn't mean that you should. As we frequently mentioned in our <a href=/learn/accessibility/html>HTML: A good basis for accessibility</a> article, you should use the appropriate semantic element for the job, whenever possible. If you don't, it can cause confusion and usability issues for everyone, but particularly users with disabilities. Using correct semantics has a lot to do with user expectations — elements look and behave in certain ways, according to their functionality, and these common conventions are expected by users.</p>
 
 <p>As an example, a screen reader user can't navigate a page via heading elements if the developer hasn't appropriately used heading elements to markup the content. By the same token, a heading loses its visual purpose if you style it so it doesn't look like a heading.</p>
 
@@ -81,7 +81,7 @@ p, li {
  <li>Your text color should contrast well with your background color.</li>
 </ul>
 
-<p>See <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> and <a href="/en-US/docs/Learn/CSS/Styling_text">Styling text</a> for more information.</p>
+<p>See <a href=/learn/html/introduction_to_html/html_text_fundamentals>HTML text fundamentals</a> and <a href=/learn/css/styling_text>Styling text</a> for more information.</p>
 
 <h4 id="Emphasised_text">Emphasised text</h4>
 
@@ -97,7 +97,7 @@ p, li {
   color: #a60000;
 }</pre>
 
-<p>You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognisable, and changing the style can cause confusion. For more on emphasis, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance">Emphasis and importance</a>.</p>
+<p>You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognisable, and changing the style can cause confusion. For more on emphasis, see <a href=/learn/html/introduction_to_html/html_text_fundamentals#Emphasis_and_importance>Emphasis and importance</a>.</p>
 
 <h4 id="Abbreviations">Abbreviations</h4>
 
@@ -111,7 +111,7 @@ p, li {
   color: #a60000;
 }</pre>
 
-<p>The recognised styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">Abbreviations</a>.</p>
+<p>The recognised styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href=/learn/html/introduction_to_html/advanced_text_formatting#Abbreviations>Abbreviations</a>.</p>
 
 <h4 id="Links">Links</h4>
 
@@ -180,7 +180,7 @@ a:active {
 
 <h3 id="Hiding_things">Hiding things</h3>
 
-<p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
+<p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href=/learn/css/css_layout/positioning>positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13368/tabbed-info-box.png" style="display: block; height: 400px; margin: 0px auto; width: 450px;"></p>
 
@@ -211,16 +211,16 @@ a:active {
 
 <p>Modern JavaScript is a powerful language, and we can do so much with it these days, from simple content and UI updates to fully-fledged 2D and 3D games. There is no rule that says all content has to be 100% accessible to all people — you just need to do what you can, and make your apps as accessible as possible.</p>
 
-<p>Simple content and functionality is arguably easy to make accessible — for example text, images, tables, forms and push button that activate functions. As we looked at in our <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> article, the key considerations are:</p>
+<p>Simple content and functionality is arguably easy to make accessible — for example text, images, tables, forms and push button that activate functions. As we looked at in our <a href=/learn/accessibility/html>HTML: A good basis for accessibility</a> article, the key considerations are:</p>
 
 <ul>
  <li>Good semantics: Using the right element for the right job. For example, making sure you use headings and paragraphs, and {{htmlelement("button")}} and {{htmlelement("a")}} elements</li>
- <li>Making sure content is available as text, either directly as text content, good text labels for form elements, or <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">text alternatives</a>, e.g. alt text for images.</li>
+ <li>Making sure content is available as text, either directly as text content, good text labels for form elements, or <a href=/learn/accessibility/html#Text_alternatives>text alternatives</a>, e.g. alt text for images.</li>
 </ul>
 
-<p>We also looked at an example of how to use JavaScript to build in functionality where it is missing — see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>. This is not ideal — really you should just use the right element for the right job — but it shows that it is possible in situations where for some reason you can't control the markup that is used. Another way to improve accessibility for non-semantic JavaScript-powered widgets is to use WAI-ARIA to provide extra semantics for screen reader users. The next article will also cover this in detail.</p>
+<p>We also looked at an example of how to use JavaScript to build in functionality where it is missing — see <a href=/learn/accessibility/html#Building_keyboard_accessibility_back_in>Building keyboard accessibility back in</a>. This is not ideal — really you should just use the right element for the right job — but it shows that it is possible in situations where for some reason you can't control the markup that is used. Another way to improve accessibility for non-semantic JavaScript-powered widgets is to use WAI-ARIA to provide extra semantics for screen reader users. The next article will also cover this in detail.</p>
 
-<p>Complex functionality like 3D games are not so easy to make accessible — a complex 3D game created using <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> will be rendered on a {{htmlelement("canvas")}} element, which has no facility at this time to provide text alternatives or other information for severely visually impaired users to make use of. It is arguable that such a game doesn't really have this group of people as a part of its main target audience, and it would be unreasonable to expect you to make it 100% accessible to blind people, however you could implement <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">keyboard controls</a> so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.</p>
+<p>Complex functionality like 3D games are not so easy to make accessible — a complex 3D game created using <a href=/web/api/webgl_api>WebGL</a> will be rendered on a {{htmlelement("canvas")}} element, which has no facility at this time to provide text alternatives or other information for severely visually impaired users to make use of. It is arguable that such a game doesn't really have this group of people as a part of its main target audience, and it would be unreasonable to expect you to make it 100% accessible to blind people, however you could implement <a href=/games/techniques/control_mechanisms/desktop_with_mouse_and_keyboard>keyboard controls</a> so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.</p>
 
 <h3 id="The_problem_with_too_much_JavaScript">The problem with too much JavaScript</h3>
 
@@ -277,7 +277,7 @@ function validate(e) {
 
 <p>Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (<code>if(testItem.input.value === '')</code>).</p>
 
-<p>When the validation has been performed, if the tests pass then the form is submitted. If there are errors (<code>if(errorList.innerHTML !== '')</code>) then we stop the form submitting (using <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.</p>
+<p>When the validation has been performed, if the tests pass then the form is submitted. If there are errors (<code>if(errorList.innerHTML !== '')</code>) then we stop the form submitting (using <code><a href=/web/api/event/preventdefault>preventDefault()</a></code>), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.</p>
 
 <p>For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the <code>errorList</code>.</p>
 
@@ -309,7 +309,7 @@ function validate(e) {
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
-<p>We will explain these attributes in our next article, which covers <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> in much more detail.</p>
+<p>We will explain these attributes in our next article, which covers <a href=/learn/accessibility/wai-aria_basics>WAI-ARIA</a> in much more detail.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Some of you will probably be thinking about that fact that HTML5 forms have built-in validation mechanisms like the <code>required</code>, <code>min</code>/<code>minlength</code>, and <code>max</code>/<code>maxlength</code> attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).</p>
@@ -325,9 +325,9 @@ function validate(e) {
 
 <h4 id="mouse-specific_events">mouse-specific events</h4>
 
-<p>As you will be aware, most user interactions are implemented in client-side JavaScript using event handlers, which allow us to run functions in response to certain events happening. Some events can have accessibility issues. The main example you'll come across is mouse-specific events like <a href="/en-US/docs/Web/Events/mouseover">mouseover</a>, <a href="/en-US/docs/Web/Events/mouseout">mouseout</a>, <a href="/en-US/docs/Web/Events/dblclick">dblclick</a>, etc. Functionality that runs in response to these events will not be accessible using other mechanisms, like keyboard controls.</p>
+<p>As you will be aware, most user interactions are implemented in client-side JavaScript using event handlers, which allow us to run functions in response to certain events happening. Some events can have accessibility issues. The main example you'll come across is mouse-specific events like <a href=/web/events/mouseover>mouseover</a>, <a href=/web/events/mouseout>mouseout</a>, <a href=/web/events/dblclick>dblclick</a>, etc. Functionality that runs in response to these events will not be accessible using other mechanisms, like keyboard controls.</p>
 
-<p>To mitigate such problems, you should double up these events with similar events that can be activated by other means (so-called device-independent event handlers) — <a href="/en-US/docs/Web/Events/focus">focus</a> and <a href="/en-US/docs/Web/Events/blur">blur</a> would provide accessibility for keyboard users.</p>
+<p>To mitigate such problems, you should double up these events with similar events that can be activated by other means (so-called device-independent event handlers) — <a href=/web/events/focus>focus</a> and <a href=/web/events/blur>blur</a> would provide accessibility for keyboard users.</p>
 
 <p>Let's look at an example that highlights when this could be useful. Maybe we want to provide a thumbnail image that shows a larger version of the image when it is moused over or focused (like you'd see on an e-commerce product catalog.)</p>
 
@@ -341,11 +341,11 @@ imgThumb.onblur = hideImg;</pre>
 
 <p>The first two lines run the functions when the mouse pointer hovers over and stops hovering over the thumbnail, respectively. This won't allow us to access the zoomed view by keyboard though — to allow that, we've included the last two lines, which run the functions when the image is focused and blurred (when focus stops). This can be done by tabbing over the image, because we've included <code>tabindex="0"</code> on it.</p>
 
-<p>The <a href="/en-US/docs/Web/Events/click">click</a> event is interesting — it sounds mouse-dependent, but most browsers will activate <a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>).</p>
+<p>The <a href=/web/events/click>click</a> event is interesting — it sounds mouse-dependent, but most browsers will activate <a href=/web/api/globaleventhandlers/onclick>onclick</a> event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see <a href=/learn/accessibility/html#Building_keyboard_accessibility_back_in>Building keyboard accessibility back in</a>).</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility">Test your skills: CSS and JavaScript accessibility</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/accessibility/css_and_javascript/test_your_skills:_css_and_javascript_accessibility>Test your skills: CSS and JavaScript accessibility</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -359,12 +359,12 @@ imgThumb.onblur = hideImg;</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
+ <li><a href=/learn/accessibility/what_is_accessibility>What is accessibility?</a></li>
+ <li><a href=/learn/accessibility/html>HTML: A good basis for accessibility</a></li>
+ <li><a href=/learn/accessibility/css_and_javascript>CSS and JavaScript accessibility best practices</a></li>
+ <li><a href=/learn/accessibility/wai-aria_basics>WAI-ARIA basics</a></li>
+ <li><a href=/learn/accessibility/multimedia>Accessible multimedia</a></li>
+ <li><a href=/learn/accessibility/mobile>Mobile accessibility</a></li>
+ <li><a href=/learn/accessibility/accessibility_troubleshooting>Accessibility troubleshooting</a></li>
 </ul>
 </div>

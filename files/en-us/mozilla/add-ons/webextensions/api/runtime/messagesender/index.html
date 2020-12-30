@@ -28,7 +28,7 @@ tags:
  <dt><code>frameId</code>{{optional_inline}}</dt>
  <dd><code>integer</code>. The frame that opened the connection. Zero for top-level frames, positive for child frames. This will only be set when <code>tab</code> is set.</dd>
  <dt><code>id</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json, then <code>id</code> will have this value. Otherwise it will have the ID that was generated for the sender.</dd>
+ <dd><code>string</code>. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the <a href=/mozilla/add-ons/webextensions/manifest.json/applications>applications</a> key in manifest.json, then <code>id</code> will have this value. Otherwise it will have the ID that was generated for the sender.</dd>
  <dd>Note that in Firefox, before version 54, this value was the extension's internal ID (that is, the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a> that appears in the extension's URL).</dd>
  <dt><code>url</code>{{optional_inline}}</dt>
  <dd><code>string</code>. The URL of the page or frame hosting the script that sent the message.</dd>

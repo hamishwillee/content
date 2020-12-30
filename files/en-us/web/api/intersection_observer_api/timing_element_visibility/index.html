@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Intersection Observer API")}}</div>
 
-<p>The <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> makes it easy to be asynchronously notified when elements of interest become more or less obscured by a shared ancestor node or element, including the {{domxref("Document")}} itself. <span class="seoSummary">In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the Intersection Observer API to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.</span></p>
+<p>The <a href=/web/api/intersection_observer_api>Intersection Observer API</a> makes it easy to be asynchronously notified when elements of interest become more or less obscured by a shared ancestor node or element, including the {{domxref("Document")}} itself. <span class="seoSummary">In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the Intersection Observer API to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.</span></p>
 
 <p>Although many aspects of this example will not match real world usage (in particular, the articles all have the same text and aren't loaded from a database, and there are just a handful of simple text-only ads that are selected from an array), this should provide enough understanding of the API to quickly learn how to apply the Intersection Observer API to your own site.</p>
 
@@ -22,7 +22,7 @@ tags:
 <div id="fullpage_example">
 <h2 id="Site_structure_The_HTML">Site structure: The HTML</h2>
 
-<p>The site's structure is not too complicated. We'll be using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> to style and lay out the site, so we can be pretty straightforward here:</p>
+<p>The site's structure is not too complicated. We'll be using <a href=/web/css/css_grid_layout>CSS Grid</a> to style and lay out the site, so we can be pretty straightforward here:</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header&gt;
@@ -248,7 +248,7 @@ function startup() {
 
 <h3 id="Handling_document_visibility_changes">Handling document visibility changes</h3>
 
-<p>Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the <a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a> to detect these tab switches and disable our timers for the duration.</p>
+<p>Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the <a href=/web/api/page_visibility_api>Page Visibility API</a> to detect these tab switches and disable our timers for the duration.</p>
 
 <pre class="brush: js">function handleVisibilityChange() {
   if (document.hidden) {
@@ -559,6 +559,6 @@ function buildContents() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></li>
- <li><a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a></li>
+ <li><a href=/web/api/intersection_observer_api>Intersection Observer API</a></li>
+ <li><a href=/web/api/page_visibility_api>Page Visibility API</a></li>
 </ul>

@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{DefaultAPISidebar("CSS Painting API")}}</div>
 
-<p>The CSS Painting API — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.</p>
+<p>The CSS Painting API — part of the <a href=/web/houdini>CSS Houdini</a> umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
-<p>Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('paint', 'paint()')}}, a CSS <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.</p>
+<p>Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('paint', 'paint()')}}, a CSS <code><a href=/web/css/image>&lt;image&gt;</a></code> function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.</p>
 
 <p>For example:</p>
 
@@ -23,18 +23,18 @@ tags:
   background-image: paint(myPaintedImage);
 }</pre>
 
-<p>The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can be used to programmatically generate an image that responds to computed style changes. To find out more about how this is used, consult <a href="/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</a>.</p>
+<p>The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can be used to programmatically generate an image that responds to computed style changes. To find out more about how this is used, consult <a href=/web/api/css_painting_api/guide>Using the CSS Painting API</a>.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
  <dt>{{domxref('PaintWorklet')}}</dt>
- <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file. "><code>CSS.paintWorklet</code></a>.</dd>
+ <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href=/web/api/css/paintworklet title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file. "><code>CSS.paintWorklet</code></a>.</dd>
  <dt>{{domxref('PaintWorkletGlobalScope')}}</dt>
  <dd>The global execution context of the <code>paintWorklet</code>.</dd>
  <dt>{{domxref('PaintRenderingContext2D')}}</dt>
  <dd>
- <p>Implements a subset of the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D API</a>. It has an output bitmap that is the size of the object it is rendering to.</p>
+ <p>Implements a subset of the <a href=/web/api/canvasrenderingcontext2d>CanvasRenderingContext2D API</a>. It has an output bitmap that is the size of the object it is rendering to.</p>
  </dd>
  <dt>{{domxref('PaintSize')}}</dt>
  <dd>Returns the read-only values of the output bitmap's width and height.</dd>
@@ -44,14 +44,14 @@ tags:
 
 <dl>
  <dt>{{domxref('PaintRenderingContext2DSettings')}}</dt>
- <dd>A dictionary providing a subset of <a href="/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D</a> settings.</dd>
+ <dd>A dictionary providing a subset of <a href=/web/api/canvasrenderingcontext2d>CanvasRenderingContext2D</a> settings.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="/en-US/docs/Web/CSS/paint()" title="The documentation about this has not yet been written; please consider contributing!"><code>paint()</code></a></code>  function.</p>
+<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href=/web/api/paintworklet/registerpaint>registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href=/web/css/paint() title="The documentation about this has not yet been written; please consider contributing!"><code>paint()</code></a></code>  function.</p>
 
-<p>We create our PaintWorklet called 'hollowHighlights' using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function:</p>
+<p>We create our PaintWorklet called 'hollowHighlights' using the <code><a href=/web/api/paintworklet/registerpaint>registerPaint()</a></code> function:</p>
 
 <pre class="brush: js">registerPaint('hollowHighlights', class {
 
@@ -189,7 +189,7 @@ li:nth-of-type(3n+1) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Houdini/Learn/CSS_Painting_API">Using the CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/CSS_Typed_OM">CSS Typed Object Model API</a></li>
- <li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
+ <li><a href=/web/houdini/learn/css_painting_api>Using the CSS Painting API</a></li>
+ <li><a href=/web/css_typed_om>CSS Typed Object Model API</a></li>
+ <li><a href=/web/houdini>CSS Houdini</a></li>
 </ul>

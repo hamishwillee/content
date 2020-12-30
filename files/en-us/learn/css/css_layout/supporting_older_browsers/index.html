@@ -23,7 +23,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)</td>
+   <td>HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/introduction_to_css>Introduction to CSS</a> and <a href=/learn/css/styling_boxes>Styling boxes</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -58,9 +58,9 @@ tags:
 
 <h2 id="Creating_fallbacks_in_CSS">Creating fallbacks in CSS</h2>
 
-<p>CSS specifications contain information that explains what the browser does when two layout methods are applied to the same item. This means that there is a definition for what happens if a floated item, for example, is also a Grid Item using CSS Grid Layout. Couple this information with the knowledge that browsers ignore CSS that they don’t understand, and you have a way to create simple layouts using the <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">legacy techniques</a> we have already covered, which are then overwritten by your Grid layout in modern browsers that understand it.</p>
+<p>CSS specifications contain information that explains what the browser does when two layout methods are applied to the same item. This means that there is a definition for what happens if a floated item, for example, is also a Grid Item using CSS Grid Layout. Couple this information with the knowledge that browsers ignore CSS that they don’t understand, and you have a way to create simple layouts using the <a href=/learn/css/css_layout/legacy_layout_methods>legacy techniques</a> we have already covered, which are then overwritten by your Grid layout in modern browsers that understand it.</p>
 
-<p>In the below example, we have floated three <code>&lt;div&gt;</code>s so they display in a row. Any browser that does not support <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid Layout</a> will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the <code>display: grid</code> and related properties and the floated layout is used.</p>
+<p>In the below example, we have floated three <code>&lt;div&gt;</code>s so they display in a row. Any browser that does not support <a href=/learn/css/css_layout/grids>CSS Grid Layout</a> will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the <code>display: grid</code> and related properties and the floated layout is used.</p>
 
 <div id="Example1">
 <pre class="brush: css notranslate">* {box-sizing: border-box;}
@@ -105,11 +105,11 @@ tags:
  <dt>display: inline-block</dt>
  <dd>This method can be used to create column layouts, if an item has <code>display: inline-block</code> set but then becomes a flex or grid item, the inline-block behavior is ignored.</dd>
  <dt>display: table</dt>
- <dd>The method of creating CSS Tables described in the <a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">introduction</a> to these lessons can be used as a fallback. Items that have CSS table layouts set on them will lose this behavior if they become flex or grid items. Importantly, the anonymous boxes created to fix up the table structure are not created.</dd>
+ <dd>The method of creating CSS Tables described in the <a href=/learn/css/css_layout/introduction>introduction</a> to these lessons can be used as a fallback. Items that have CSS table layouts set on them will lose this behavior if they become flex or grid items. Importantly, the anonymous boxes created to fix up the table structure are not created.</dd>
  <dt>Multiple-column Layout</dt>
- <dd>For certain layouts you could use <a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">multi-col</a> as a fallback, if your container has any of the <code>column-*</code> properties defined on it and then becomes a grid container, the multicol behavior will not happen.</dd>
+ <dd>For certain layouts you could use <a href=/learn/css/css_layout/multiple-column_layout>multi-col</a> as a fallback, if your container has any of the <code>column-*</code> properties defined on it and then becomes a grid container, the multicol behavior will not happen.</dd>
  <dt>Flexbox as a Fallback for Grid</dt>
- <dd><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> has greater browser support than Grid due to being supported by IE10 and 11, although do check out the information later in this lesson explaining the rather patchy and confusing support for Flexbox in older browsers. If you make a flex container into a grid container, any <code>flex</code> property applied to the children will be ignored.</dd>
+ <dd><a href=/learn/css/css_layout/flexbox>Flexbox</a> has greater browser support than Grid due to being supported by IE10 and 11, although do check out the information later in this lesson explaining the rather patchy and confusing support for Flexbox in older browsers. If you make a flex container into a grid container, any <code>flex</code> property applied to the children will be ignored.</dd>
 </dl>
 
 <p>For many layout tweaks in older browsers, you may find you can give a decent experience by using CSS in this way. We add a simpler layout based on older and well-supported techniques, then use the newer CSS to create the layout that over 90% of your audience will see. There are cases, however, when the fallback code will need to include something that the new browsers will also interpret. A good example of this is if we were to add percentage widths to our floated items to make the columns more like the grid display, stretching to fill the container.</p>
@@ -202,11 +202,11 @@ tags:
 
 <p>The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have <em>modern</em> grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is  <code>-ms-</code> prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.</p>
 
-<p>The guide to <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">Progressive Enhancement in Grid Layout</a> can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.</p>
+<p>The guide to <a href=/web/css/css_grid_layout/css_grid_and_progressive_enhancement>Progressive Enhancement in Grid Layout</a> can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.</p>
 
 <h2 id="Testing_older_browsers">Testing older browsers</h2>
 
-<p>With the majority of browsers supporting Flexbox and Grid, it can be reasonably hard to test older browsers. One way is to use an online testing tool such as Sauce Labs, as detailed in the <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a> module.</p>
+<p>With the majority of browsers supporting Flexbox and Grid, it can be reasonably hard to test older browsers. One way is to use an online testing tool such as Sauce Labs, as detailed in the <a href=/learn/tools_and_testing/cross_browser_testing>Cross browser testing</a> module.</p>
 
 <p>You can also download and install Virtual Machines, and run older versions of browsers in a contained environment on your own computer. Having access to older versions of Internet Explorer is particularly useful, and for that purpose, Microsoft has made <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">a range of Virtual Machines available for free download</a>. These are available for Mac, Windows and Linux operating systems and so are a great way to test in old and modern Windows browsers even if you are not using a Windows computer.</p>
 
@@ -218,8 +218,8 @@ tags:
 
 <ul>
  <li><a href="https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/">Using Feature Queries in CSS</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox">Backwards Compatibility of Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
+ <li><a href=/web/css/css_flexible_box_layout/backwards_compatibility_of_flexbox>Backwards Compatibility of Flexbox</a></li>
+ <li><a href=/web/css/css_grid_layout/css_grid_and_progressive_enhancement>CSS Grid Layout and Progressive Enhancement</a></li>
  <li><a href="https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/">Using CSS Grid: Supporting Browsers Without Grid</a></li>
  <li><a href="https://24ways.org/2012/css3-grid-layout/">A tutorial which uses the IE10 and 11 version of Grid</a></li>
  <li><a href="https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/">Should I try to use the IE10 implementation of Grid Layout</a>?</li>
@@ -232,16 +232,16 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
+ <li><a href=/learn/css/css_layout/introduction>Introduction to CSS layout</a></li>
+ <li><a href=/learn/css/css_layout/normal_flow>Normal flow</a></li>
+ <li><a href=/learn/css/css_layout/flexbox>Flexbox</a></li>
+ <li><a href=/learn/css/css_layout/grids>Grid</a></li>
+ <li><a href=/learn/css/css_layout/floats>Floats</a></li>
+ <li><a href=/learn/css/css_layout/positioning>Positioning</a></li>
+ <li><a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a></li>
+ <li><a href=/learn/css/css_layout/responsive_design>Responsive design</a></li>
+ <li><a href=/learn/css/css_layout/media_queries>Beginner's guide to media queries</a></li>
+ <li><a href=/learn/css/css_layout/legacy_layout_methods>Legacy layout methods</a></li>
+ <li><a href=/learn/css/css_layout/supporting_older_browsers>Supporting older browsers</a></li>
+ <li><a href=/learn/css/css_layout/fundamental_layout_comprehension>Fundamental layout comprehension assessment</a></li>
 </ul>

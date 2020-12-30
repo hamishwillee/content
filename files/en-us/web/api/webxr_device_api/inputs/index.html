@@ -149,11 +149,11 @@ let targetRayVector = targetRayPose.transform.orientation;
 
 <p>Each input source has a {{domxref("XRInputSource.gamepad", "gamepad")}} property which, if not <code>NULL</code>, is a {{domxref("Gamepad")}} object describing the various controls and widgets available on the controller. If the input device only has the primary movement sensors, a squeeze control, and a button, it may not have a <code>Gamepad</code> record. If, however, the <code>gamepad</code> is present, you can use it to identify and poll the buttons and axes available on the controller.</p>
 
-<p>While the <code>Gamepad</code> record is defined by the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> specification, it's not actually managed by the Gamepad API, and doesn't function exactly the same way. See <a href="/en-US/docs/Web/WebXR_Device_API/Gamepads" rel="nofollow">Supporting advanced controllers and gamepads in WebXR applications</a> for more detailed information.</p>
+<p>While the <code>Gamepad</code> record is defined by the <a href=/web/api/gamepad_api>Gamepad API</a> specification, it's not actually managed by the Gamepad API, and doesn't function exactly the same way. See <a href=/web/webxr_device_api/gamepads rel="nofollow">Supporting advanced controllers and gamepads in WebXR applications</a> for more detailed information.</p>
 
 <h4 id="Profile_strings">Profile strings</h4>
 
-<p>Each input source can have zero or more <strong>input profile name</strong> strings, found in the array {{domxref("XRInputSource.profiles", "profiles")}}, each of which describes a preferred visual representation of the input source within the 3D world as well as how the input source functions. The use of these profiles is briefly described under {{Anch("Input profiles")}} below, and a more complete guide may be found in our article <a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles</a>.</p>
+<p>Each input source can have zero or more <strong>input profile name</strong> strings, found in the array {{domxref("XRInputSource.profiles", "profiles")}}, each of which describes a preferred visual representation of the input source within the 3D world as well as how the input source functions. The use of these profiles is briefly described under {{Anch("Input profiles")}} below, and a more complete guide may be found in our article <a href=/web/api/webxr_device_api/input_profiles>Using WebXR input profiles</a>.</p>
 
 <h3 id="Transient_input_sources">Transient input sources</h3>
 
@@ -470,7 +470,7 @@ xrSession.onselect = function(event) {
 
 <p><strong>Facing</strong> is the direction in which the viewer is looking. This isn't provided using an input source. Instead, it's obtained using the {{domxref("XRPose")}} obtained from the current animation frame's {{domxref("XRFrame.getViewerPose()")}} method. The rotation component of the viewer pose's transform matrix is the viewer's facing direction.</p>
 
-<p>You can learn more about how to use this the viewer pose to determine the facing direction in the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers</a>. </p>
+<p>You can learn more about how to use this the viewer pose to determine the facing direction in the article <a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers</a>. </p>
 
 <p><strong>Targeting</strong> is the act of the user pointing in a particular direction using an input source. The input source's {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} is an {{domxref("XRSpace")}} (and actually probably an {{domxref("XRReferenceSpace")}}) which can be used to determine the orientation of the target ray relative to the viewer's facing direction.</p>
 
@@ -518,7 +518,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSession")}} property {{domxref("XRInputSession.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether thye're virtual or real-world.</p>
 
-<p>See <a href="/en-US/docs/Web/API/Web_Audio_API/Targeting">Targeting and hit detection</a> for a more detailed look at what's involved..</p>
+<p>See <a href=/web/api/web_audio_api/targeting>Targeting and hit detection</a> for a more detailed look at what's involved..</p>
 
 <h3 id="Presenting_hand-held_objects">Presenting hand-held objects</h3>
 
@@ -533,7 +533,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 <p>An {{domxref("XRInputSource")}} has a {{domxref("XRInputSource.gamepad", "gamepad")}} property whose value, if not <code>null</code>, is a {{domxref("Gamepad")}} object which provides access to gamepad-style buttons, axis controllers (such as joysticks or thumbpads), and so forth. This may include the same buttons that trigger the standard {{domxref("XRInputSource")}} actions, but may include any number of additional buttons and controls.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> While <code>Gamepad</code> is defined by the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.</p>
+<p><strong>Note:</strong> While <code>Gamepad</code> is defined by the <a href=/web/api/gamepad_api>Gamepad API</a>, it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.</p>
 </div>
 
 <p>If the value of <code>gamepad</code> is <code>null</code>, the input source doesn't define any controls using the <code>Gamepad</code> record, either because it doesn't support it or because it doesn't have any added controls on it.</p>
@@ -542,7 +542,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>Because this use of the <code>Gamepad</code> interface is a convenience rather than a true application of the Gamepad API, there are several differences between how it's used with WebXR and how it's used in Gamepad API applications. The most notable—but not the only—difference is that WebXR adds the <code>xr-standard</code> gamepad mapping, expanding the {{domxref("GamepadMappingType")}} enumerated type. This gamepad mapping defines how the controls on a typical one-hand handheld VR controller are mapped to gamepad controls. </p>
 
-<p>For details on the gamepad mapping as well as the other differences how the use of the {{domxref("Gamepad")}} object and its children differs from its use in the Gamepad API, see the article <a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications</a>.</p>
+<p>For details on the gamepad mapping as well as the other differences how the use of the {{domxref("Gamepad")}} object and its children differs from its use in the Gamepad API, see the article <a href=/web/webxr_device_api/gamepads>Supporting advanced controllers and gamepads in WebXR applications</a>.</p>
 
 <h2 id="Incorporating_input_from_non-WebXR_sources">Incorporating input from non-WebXR sources</h2>
 
@@ -612,7 +612,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>The <code>drawFrame()</code> function shown here is the callback invoked when it's time to draw the frame, as established by calling the the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}. It calls a function <code>applyExternalInputs()</code> which we'll define momentarily; it takes the <code>avatar</code> object and uses its information to update the avatar's reference frame.</p>
 
-<p>After that, everything proceeds as usual, getting the viewer's pose from the updated reference frame, requesting the next frame callback through <code>requestAnimationFrame()</code>, and then continuing to set up WebGL and draw the scene. The drawing and other related code can be found in the example <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</a>.</p>
+<p>After that, everything proceeds as usual, getting the viewer's pose from the updated reference frame, requesting the next frame callback through <code>requestAnimationFrame()</code>, and then continuing to set up WebGL and draw the scene. The drawing and other related code can be found in the example <a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion</a>.</p>
 
 <p>The <code>applyExternalInputs()</code> method takes the <code>avatar</code> object replaces its <code>referenceSpace</code> property with a new reference space that incorporates the updated deltas.</p>
 
@@ -631,12 +631,12 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Targeting">Targeting and hit detection </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles </a></li>
- <li><a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
+ <li><a href=/web/api/web_audio_api/targeting>Targeting and hit detection </a></li>
+ <li><a href=/web/api/webxr_device_api/input_profiles>Using WebXR input profiles </a></li>
+ <li><a href=/web/webxr_device_api/gamepads>Supporting advanced controllers and gamepads in WebXR applications </a></li>
+ <li><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR </a></li>
+ <li><a href=/web/api/webxr_device_api/spatial_tracking>Spatial tracking in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/rendering>Rendering and the WebXR frame animation callback</a></li>
+ <li><a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers: Simulating cameras in WebXR </a></li>
+ <li><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion: A WebXR example</a></li>
 </ul>

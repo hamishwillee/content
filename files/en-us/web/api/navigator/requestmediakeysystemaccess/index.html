@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{APIRef("Encrypted Media Extensions")}}</div>
 
-<p>The <strong><code>Navigator.requestMediaKeySystemAccess()</code></strong> method returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a>, which brings support for encrypted media and DRM-protected video to the web.</p>
+<p>The <strong><code>Navigator.requestMediaKeySystemAccess()</code></strong> method returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the <a href=/web/api/encrypted_media_extensions_api>Encrypted Media Extensions API</a>, which brings support for encrypted media and DRM-protected video to the web.</p>
 
 <p>This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call <code>requestMediaKeySystemAccess</code><code>()</code>; you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a {{domxref("MediaKeys")}} object by calling the returned {{domxref("MediaKeySystemAccess")}} object's {{domxref("MediaKeySystemAccess.createMediaKeys", "createMediaKeys()")}} method.</p>
 
@@ -124,7 +124,7 @@ navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+ <li><a href=/web/api/encrypted_media_extensions_api>Encrypted Media Extensions API</a></li>
+ <li><a href=/web/api/media_streams_api>Media Capture and Streams API</a></li>
+ <li><a href=/web/api/webrtc_api>WebRTC API</a></li>
 </ul>

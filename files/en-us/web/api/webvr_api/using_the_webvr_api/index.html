@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}{{deprecated_header}}</div>
 
-<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href=/web/api/webxr_api>WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
 
 <p class="summary">The WebVR API is a fantastic addition to the web developer's toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.</p>
 
@@ -54,7 +54,7 @@ tags:
 <p><strong>Note</strong>: If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose <em>Run with graphics processor &gt; High-performance NVIDIA processor</em>.</p>
 </div>
 
-<p>Our demo features the holy grail of WebGL demos — a rotating 3D cube. We've implemented this using raw <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> code. We won't be teaching any basic JavaScript or WebGL, just the WebVR parts.</p>
+<p>Our demo features the holy grail of WebGL demos — a rotating 3D cube. We've implemented this using raw <a href=/web/api/webgl_api>WebGL API</a> code. We won't be teaching any basic JavaScript or WebGL, just the WebVR parts.</p>
 
 <p>Our demo also features:</p>
 
@@ -66,7 +66,7 @@ tags:
 <p>When you look through the source code of <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">our demo's main JavaScript file</a>, you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.</p>
 
 <div class="note">
-<p><strong>Note</strong>: To find out more about basic JavaScript and WebGL, consult our <a href="/en-US/docs/Learn/JavaScript">JavaScript learning material</a>, and our <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL Tutorial</a>.</p>
+<p><strong>Note</strong>: To find out more about basic JavaScript and WebGL, consult our <a href=/learn/javascript>JavaScript learning material</a>, and our <a href=/web/api/webgl_api/tutorial>WebGL Tutorial</a>.</p>
 </div>
 
 <h2 id="How_does_it_work">How does it work?</h2>
@@ -171,7 +171,7 @@ document.body.onload = start;</pre>
 
 <p>Now we have a {{domxref("VRDisplay")}} object, we can use it do a number of things. The next thing we want to do is wire up functionality to start and stop presentation of the WebGL content to the display.</p>
 
-<p>Continuing on with the previous code block, we now add an event listener to our start/stop button (<code>btn</code>) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> contains).</p>
+<p>Continuing on with the previous code block, we now add an event listener to our start/stop button (<code>btn</code>) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button <code><a href=/web/api/node/textcontent>textContent</a></code> contains).</p>
 
 <p>If the display is not already presenting, we use the {{domxref("VRDisplay.requestPresent()")}} method to request that the browser start presenting content to the display. This takes as a parameter an array of the {{domxref("VRLayerInit")}} objects representing the layers you want to present in the display.</p>
 
@@ -401,7 +401,7 @@ document.body.onload = start;</pre>
   var angVel = pose.angularVelocity;
   var angAcc = pose.angularAcceleration;</pre>
 
-<p>We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed()</a></code>, as the values are hard to read otherwise.</p>
+<p>We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using <code><a href=/web/javascript/reference/global_objects/number/tofixed>toFixed()</a></code>, as the values are hard to read otherwise.</p>
 
 <p>You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return <code>null</code> if they are not successfully reported).</p>
 
@@ -425,7 +425,7 @@ document.body.onload = start;</pre>
 
 <h2 id="WebVR_events">WebVR events</h2>
 
-<p>The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see <a href="/en-US/docs/Web/API/WebVR_API#Window_events">Window events</a>). For example:</p>
+<p>The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see <a href=/web/api/webvr_api#Window_events>Window events</a>). For example:</p>
 
 <ul>
  <li>{{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.</li>

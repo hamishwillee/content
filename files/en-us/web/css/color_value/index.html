@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{CSSReF}}</div>
 
-<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color in the <a class="external" href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a class="external" href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a class="external" href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
+<p>The <strong><code>&lt;color&gt;</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_types>data type</a> represents a color in the <a class="external" href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a class="external" href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a class="external" href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
 
 <p>A <code>&lt;color&gt;</code> can be defined in any of the following ways:</p>
 
@@ -28,7 +28,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note:</strong> This article describes the <code>&lt;color&gt;</code> data type in detail. To learn more about using color in HTML, see <a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a>.</p>
+<p><strong>Note:</strong> This article describes the <code>&lt;color&gt;</code> data type in detail. To learn more about using color in HTML, see <a href=/web/html/applying_color>Applying color to HTML elements using CSS</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -46,7 +46,7 @@ tags:
 <p>There are a few caveats to consider when using color keywords:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML">HTML</a> only recognizes the 16 basic color keywords found in CSS1, using a specific algorithm to convert unrecognized values (often to completely different colors). The other color keywords should only be used in CSS and <a href="/en-US/docs/Web/SVG">SVG</a>.</li>
+ <li><a href=/web/html>HTML</a> only recognizes the 16 basic color keywords found in CSS1, using a specific algorithm to convert unrecognized values (often to completely different colors). The other color keywords should only be used in CSS and <a href=/web/svg>SVG</a>.</li>
  <li>Unlike HTML, CSS will completely ignore unknown keywords.</li>
  <li>The color keywords all represent plain, solid colors, without transparency.</li>
  <li>Several keywords are aliases for each other:
@@ -911,7 +911,7 @@ tags:
 
 <h3 id="System_Colors">System Colors</h3>
 
-<p>In <em>forced colors mode</em> (detectable with the <a href="/en-US/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
+<p>In <em>forced colors mode</em> (detectable with the <a href=/web/css/@media/forced-colors>forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
 
 <p>The keywords in the following list are defined by the CSS Color Module Level 4 specification.</p>
 
@@ -1215,11 +1215,11 @@ tags:
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>In animations and <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">gradients</a>, <code>&lt;color&gt;</code> values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the <a class="external" href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a>.</p>
+<p>In animations and <a href=/web/css/css_images/using_css_gradients>gradients</a>, <code>&lt;color&gt;</code> values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the <a class="external" href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the <a href=/web/css/single-transition-timing-function>timing function</a>.</p>
 
 <h2 id="Accessibility_considerations">Accessibility considerations</h2>
 
-<p>Some people have difficulty distinguishing colors. The <a class="external" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+<p>Some people have difficulty distinguishing colors. The <a class="external" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href=/learn/accessibility/css_and_javascript#Color_and_color_contrast>Color and color contrast</a> for more information.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -1578,5 +1578,5 @@ hsla(240 100% 50% / 5%)      <span style="background: hsla(240,100%,50%,0.05);">
 <ul>
  <li>The {{Cssxref("opacity")}} property lets you define transparency at the element level.</li>
  <li>Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
+ <li><a href=/web/html/applying_color>Applying color to HTML elements using CSS</a></li>
 </ul>

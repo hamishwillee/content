@@ -36,7 +36,7 @@ tags:
 <p>This example specifies a MIME type of <code>"text/plain"</code>, overriding the server's stated type for the data being received.</p>
 
 <div class="note">
-<p><strong>Note:</strong> If the server doesn't provide a <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> header, {{domxref("XMLHttpRequest")}} assumes that the MIME type is <code>"text/xml"</code>. If the content isn't valid XML, an "XML Parsing Error: not well-formed" error occurs. You can avoid this by calling <code>overrideMimeType()</code> to specify a different type.</p>
+<p><strong>Note:</strong> If the server doesn't provide a <code><a href=/web/http/headers/content-type>Content-Type</a></code> header, {{domxref("XMLHttpRequest")}} assumes that the MIME type is <code>"text/xml"</code>. If the content isn't valid XML, an "XML Parsing Error: not well-formed" error occurs. You can avoid this by calling <code>overrideMimeType()</code> to specify a different type.</p>
 </div>
 
 <pre class="brush: js">// Interpret the received data as plain text
@@ -72,6 +72,6 @@ req.send();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using XMLHttpRequest</a></li>
  <li>{{domxref("XMLHttpRequest.responseType")}}</li>
 </ul>

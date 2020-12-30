@@ -13,19 +13,19 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}</div>
 
-<p class="summary">Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more. This article explains the basics.</p>
+<p class="summary">Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href=/web/api/gamepad_api>Gamepad API</a>, and specifically the <a href=/web/api/gamepad_api#Experimental_Gamepad_extensions>Gamepad Extensions API</a> that adds API features for accessing <a href=/web/api/gamepadpose>controller pose</a>, <a href=/web/api/gamepadhapticactuator>haptic actuators</a>, and more. This article explains the basics.</p>
 
 <h2 id="The_WebVR_API">The WebVR API</h2>
 
-<p>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g. orientation and position) that can be used to update the display on each frame of the animation loop, and more.</p>
+<p>The <a href=/web/api/webvr_api>WebVR API</a> is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g. orientation and position) that can be used to update the display on each frame of the animation loop, and more.</p>
 
-<p>Before you read this article, you should really be familiar with the basics of the WebVR API already — go and read <a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a> first, if you haven't already done so, which also details browser support and required hardware setup.</p>
+<p>Before you read this article, you should really be familiar with the basics of the WebVR API already — go and read <a href=/web/api/webvr_api/using_the_webvr_api>Using the WebVR API</a> first, if you haven't already done so, which also details browser support and required hardware setup.</p>
 
 <h2 id="The_Gamepad_API">The Gamepad API</h2>
 
-<p>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is a fairly well-supported API that allows developers to access gamepads/controllers connected to your computer and use them to control web apps. The basic Gamepad API provides access to connected controllers as {{domxref("Gamepad")}} objects, which can then be queried to find out what buttons are being pressed and thumbsticks (axes) are being moved at any point, etc.</p>
+<p>The <a href=/web/api/gamepad_api>Gamepad API</a> is a fairly well-supported API that allows developers to access gamepads/controllers connected to your computer and use them to control web apps. The basic Gamepad API provides access to connected controllers as {{domxref("Gamepad")}} objects, which can then be queried to find out what buttons are being pressed and thumbsticks (axes) are being moved at any point, etc.</p>
 
-<p>You can find more about basic Gamepad API usage in <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a>, and <a href="/en-US/docs/Games/Techniques/Controls_Gamepad_API">Implementing controls using the Gamepad API</a>.</p>
+<p>You can find more about basic Gamepad API usage in <a href=/web/api/gamepad_api/using_the_gamepad_api>Using the Gamepad API</a>, and <a href=/games/techniques/controls_gamepad_api>Implementing controls using the Gamepad API</a>.</p>
 
 <p>However, in this article we will mainly be concentrating on some of the new features provided by the {{specname("GamepadExtensions")}} API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g. vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.</p>
 
@@ -161,7 +161,7 @@ window.addEventListener('gamepaddisconnected', function(e) {
 
 <p>Now let's look at the Gamepad API being used inside a real WebVR demo. You can find this demo at <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-controller-example">raw-webgl-controller-example</a> (<a href="https://mdn.github.io/webvr-tests/raw-webgl-controller-example/">see it live here also</a>).</p>
 
-<p>In exactly the same way as our <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">raw-webgl-example</a> (see <a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a> for details), this renders a spinning 3D cube, which you can choose to present in a VR display. The only difference is that, while in VR presenting mode, this demo allows you to move the cube by moving a VR controller (the original demo moves the cube as you move your VR headset).</p>
+<p>In exactly the same way as our <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">raw-webgl-example</a> (see <a href=/web/api/webvr_api/using_the_webvr_api>Using the WebVR API</a> for details), this renders a spinning 3D cube, which you can choose to present in a VR display. The only difference is that, while in VR presenting mode, this demo allows you to move the cube by moving a VR controller (the original demo moves the cube as you move your VR headset).</p>
 
 <p>We'll explore the code differences in this version below — see <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-controller-example/webgl-demo.js">webgl-demo.js</a>.</p>
 
@@ -258,8 +258,8 @@ if(gp) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
- <li><a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a></li>
- <li><a href="/en-US/docs/Games/Techniques/Controls_Gamepad_API">Implementing controls using the Gamepad API</a></li>
+ <li><a href=/web/api/webvr_api>WebVR API</a></li>
+ <li><a href=/web/api/gamepad_api>Gamepad API</a></li>
+ <li><a href=/web/api/webvr_api/using_the_webvr_api>Using the WebVR API</a></li>
+ <li><a href=/games/techniques/controls_gamepad_api>Implementing controls using the Gamepad API</a></li>
 </ul>

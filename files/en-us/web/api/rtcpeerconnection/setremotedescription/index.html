@@ -50,7 +50,7 @@ tags:
   return createMyStream();
 })</pre>
 
-<p>Using <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> syntax, you can further simplify this to:</p>
+<p>Using <code><a href=/web/javascript/reference/statements/async_function>async</a></code>/<code><a href=/web/javascript/reference/operators/await>await</a></code> syntax, you can further simplify this to:</p>
 
 <pre class="brush: js">await myPeerConnection.setRemoteDescription(description);
 createMyStream();</pre>
@@ -62,7 +62,7 @@ createMyStream();</pre>
 <p>A {{jsxref("Promise")}} which is fulfilled once the value of the connection's {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection). The promise fulfillment handler receives no input parameters.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for more details on this process.</p>
+<p><strong>Note:</strong> The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed. See {{SectionOnPage(/web/api/webrtc_api/connectivity, "Pending and current descriptions")}} for more details on this process.</p>
 </div>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -124,7 +124,7 @@ createMyStream();</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>Here we see a function which handles an offer received from the remote peer. This code is derived from the example and tutorial in the article <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>; take a look at that for more details and a more in-depth explanation of what's going on.</p>
+<p>Here we see a function which handles an offer received from the remote peer. This code is derived from the example and tutorial in the article <a href=/web/api/webrtc_api/signaling_and_video_calling>Signaling and video calling</a>; take a look at that for more details and a more in-depth explanation of what's going on.</p>
 
 <pre class="brush: js">function handleOffer(msg) {
   createMyPeerConnection();
@@ -176,6 +176,6 @@ createMyStream();</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+	<li><a href=/web/guide/api/webrtc>WebRTC</a></li>
 	<li>{{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
 </ul>

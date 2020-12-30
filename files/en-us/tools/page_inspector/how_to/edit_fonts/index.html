@@ -18,10 +18,10 @@ tags:
 
 <h2 id="The_Fonts_tab">The Fonts tab</h2>
 
-<p>The Fonts tab is located on the right-hand side of the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> when it is docked to the bottom of the screen. When it is docked to the right or left sides of the screen, the Fonts tab appears beneath the HTML pane. To access it:</p>
+<p>The Fonts tab is located on the right-hand side of the <a href=/tools/page_inspector>Page Inspector</a> when it is docked to the bottom of the screen. When it is docked to the right or left sides of the screen, the Fonts tab appears beneath the HTML pane. To access it:</p>
 
 <ol>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Open_the_Inspector">Open the Page Inspector</a>.</li>
+ <li><a href=/tools/page_inspector/how_to/open_the_inspector>Open the Page Inspector</a>.</li>
  <li>Select the Fonts tab; the last of the tabs shown in the right-hand side of the CSS pane.</li>
 </ol>
 
@@ -69,7 +69,7 @@ tags:
 <p>This can be set using <code>em</code>, <code>rem</code>, <code>%</code>, <code>px</code>, <code>vh</code>, or <code>vw</code> units. You can select values using the slider or enter a numeric value directly into the text box.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you want to use a different unit such as <code>pt</code> for <code>font-size</code> or <code>line-height</code>, you can set the property value applied to the currently inspected element to use that unit via the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">rules view</a>, and the font editor will automatically pick it up and make it available in the associated units dropdown menu.</p>
+<p><strong>Note</strong>: If you want to use a different unit such as <code>pt</code> for <code>font-size</code> or <code>line-height</code>, you can set the property value applied to the currently inspected element to use that unit via the <a href=/tools/page_inspector/ui_tour#Rules_view>rules view</a>, and the font editor will automatically pick it up and make it available in the associated units dropdown menu.</p>
 </div>
 
 <p>Changing the unit of measure converts the numerical value to its equivalent in the new unit, so the same computed value is maintained.</p>
@@ -97,7 +97,7 @@ tags:
 <p>You can select values using the slider or enter a numeric value directly into the text box. For non-variable fonts the slider ranges from 100 to 900 in increments of 100.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">variable fonts</a> (see below) that define a <code>wght</code> variation axis, this range is custom.</p>
+<p><strong>Note</strong>: For <a href=/web/css/css_fonts/variable_fonts_guide>variable fonts</a> (see below) that define a <code>wght</code> variation axis, this range is custom.</p>
 </div>
 
 <h3 id="Italic">Italic</h3>
@@ -135,9 +135,9 @@ tags:
 
 <h3 id="What_are_variable_fonts">What are variable fonts?</h3>
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable Fonts</a>, or <strong>OpenType Font Variations</strong>, define a new font file format that allows the font designer to include multiple variations of a typeface inside a single font file. That means you no longer have to apply several different web fonts to a single page to represent a complete typeface for which a variable font is available, provided it includes the desired values for the different characteristics you want to vary.</p>
+<p><a href=/web/css/css_fonts/variable_fonts_guide>Variable Fonts</a>, or <strong>OpenType Font Variations</strong>, define a new font file format that allows the font designer to include multiple variations of a typeface inside a single font file. That means you no longer have to apply several different web fonts to a single page to represent a complete typeface for which a variable font is available, provided it includes the desired values for the different characteristics you want to vary.</p>
 
-<p>Variable fonts make it easy to vary font characteristics in a much more granular fashion because their allowable ranges are defined by <strong>axes of variation</strong> (see <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Introducing_the_'variation_axis'">Introducing the 'variation axis'</a> for more information). For example, {{cssxref("font-weight")}} can be set to any value between 1 and 1000 in variable fonts (although it is not guaranteed that a variable font will support this entire range).</p>
+<p>Variable fonts make it easy to vary font characteristics in a much more granular fashion because their allowable ranges are defined by <strong>axes of variation</strong> (see <a href=/web/css/css_fonts/variable_fonts_guide#Introducing_the_'variation_axis'>Introducing the 'variation axis'</a> for more information). For example, {{cssxref("font-weight")}} can be set to any value between 1 and 1000 in variable fonts (although it is not guaranteed that a variable font will support this entire range).</p>
 
 <p>There are several registered axes. Although it isn't required that these axes be defined for every font, if the font designer <em>does</em> implement a registered axis, its behavior <em>must</em> follow the defined behavior.</p>
 
@@ -221,7 +221,7 @@ tags:
 <p>Finally, here are a few tips for making effective use of the Fonts tab:</p>
 
 <ul>
- <li>When using the Page Inspector's <a href="/en-US/docs/Tools/Page_Inspector/3-pane_mode">3-pane mode</a>, you can view the CSS rules for the inspected element simultaneously alongside the Fonts tab.</li>
+ <li>When using the Page Inspector's <a href=/tools/page_inspector/3-pane_mode>3-pane mode</a>, you can view the CSS rules for the inspected element simultaneously alongside the Fonts tab.</li>
  <li>If you hover over the {{cssxref("font-family")}} property in the Rules view, a tooltip shows a sample of the font:
   <p><img alt="" src="https://mdn.mozillademos.org/files/16170/fonts_62_tooltip_cropped.png" style="border: 1px solid black; display: block; height: 153px; margin: 0px auto; width: 450px;"></p>
  </li>

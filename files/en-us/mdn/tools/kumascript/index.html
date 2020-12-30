@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
+<p><span class="seoSummary">On the <a href=/mdn/kuma>Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
 
 <p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
 
@@ -409,7 +409,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 &lt;% } else if ("de" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a href="/de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen"&gt;CSS Referenz: Mozilla Erweiterungen&lt;/a&gt;
 &lt;% } else { %&gt;
-&lt;%- template("CSSRef") %&gt; « &lt;a href="/en-US/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS Reference: Mozilla Extensions&lt;/a&gt;
+&lt;%- template("CSSRef") %&gt; « &lt;a href=/css_reference/mozilla_extensions&gt;CSS Reference: Mozilla Extensions&lt;/a&gt;
 &lt;% } %&gt;</pre>
 
 <p>Depending on what text editor is your favorite, you may be able to copy &amp; paste from the browser-based editor and attack this pattern with a series of search/replace regexes to get you most of the way there.</p>

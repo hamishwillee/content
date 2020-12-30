@@ -111,7 +111,7 @@ const audioCtx = new AudioContext();</pre>
 
 <p>This is great, but wouldn't it be nice if we had an amplitude envelope to go with it? Let's create a simple one so we get used to the methods we need to create an envelope with the Web Audio API.</p>
 
-<p>Let's say our envelope has attack and release. We can allow the user to control these using <a href="/en-US/docs/Web/HTML/Element/input/range">range inputs</a> on the interface:</p>
+<p>Let's say our envelope has attack and release. We can allow the user to control these using <a href=/web/html/element/input/range>range inputs</a> on the interface:</p>
 
 <pre class="brush: html">&lt;label for="attack"&gt;Attack&lt;/label&gt;
 &lt;input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" /&gt;
@@ -295,7 +295,7 @@ noise.start();</pre>
 <p>We want something in the range of pink or brown noise. We want to cut off those high frequencies and possibly some of the lower ones. Let's pick a bandpass biquad filter for the job.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The Web Audio API comes with two types of filter nodes: {{domxref("BiquadFilterNode")}} and {{domxref("IIRFilterNode")}}. For the most part a biquad filter will be good enough — it comes with different types such as lowpass, highpass, and bandpass. If you're looking to do something more bespoke, however, the IIR filter might be a good option — see <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> for more information.</p>
+<p><strong>Note</strong>: The Web Audio API comes with two types of filter nodes: {{domxref("BiquadFilterNode")}} and {{domxref("IIRFilterNode")}}. For the most part a biquad filter will be good enough — it comes with different types such as lowpass, highpass, and bandpass. If you're looking to do something more bespoke, however, the IIR filter might be a good option — see <a href=/web/api/web_audio_api/using_iir_filters>Using IIR filters</a> for more information.</p>
 </div>
 
 <p>Wiring this up is the same as we've seen before. We create the {{domxref("BiquadFilterNode")}}, configure the properties we want for it and connect it through our graph. Different types of biquad filters have different properties — for instance setting the frequency on a bandpass type adjusts the middle frequency, however on a lowpass it would set the top frequency.</p>
@@ -363,7 +363,7 @@ bandControl.addEventListener('input', function() {
 
 <h3 id="Loading_the_sample">Loading the sample</h3>
 
-<p>We want to make sure our file has loaded and been decoded into a buffer before we use it, so let's create an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> function to allow us to do this:</p>
+<p>We want to make sure our file has loaded and been decoded into a buffer before we use it, so let's create an <code><a href=/web/javascript/reference/statements/async_function>async</a></code> function to allow us to do this:</p>
 
 <pre class="brush: js">async function getFile(audioContext, filepath) {
   const response = await fetch(filepath);
@@ -372,7 +372,7 @@ bandControl.addEventListener('input', function() {
   return audioBuffer;
 }</pre>
 
-<p>We can then use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> operator when calling this function, which ensures that we can only run subsequent code when it has finished executing.</p>
+<p>We can then use the <code><a href=/web/javascript/reference/operators/await>await</a></code> operator when calling this function, which ensures that we can only run subsequent code when it has finished executing.</p>
 
 <p>Let's create another <code>async</code> function to set up the sample — we can combine the two async functions in a nice promise pattern to perform further actions when this file is loaded and buffered:</p>
 
@@ -414,7 +414,7 @@ bandControl.addEventListener('input', function() {
 
 <h3 id="Dial-up_user_controls">Dial-up user controls</h3>
 
-<p>The {{domxref("AudioBufferSourceNode")}} comes with a <code><a href="/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate">playbackRate</a></code> property. Let's expose that to our UI, so we can speed up and slow down our sample. We'll do that in the same sort of way as before:</p>
+<p>The {{domxref("AudioBufferSourceNode")}} comes with a <code><a href=/web/api/audiobuffersourcenode/playbackrate>playbackRate</a></code> property. Let's expose that to our UI, so we can speed up and slow down our sample. We'll do that in the same sort of way as before:</p>
 
 <pre class="brush: html">&lt;label for="rate"&gt;Rate&lt;/label&gt;
 &lt;input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" /&gt;</pre>
@@ -446,7 +446,7 @@ rateControl.addEventListener('input', function() {
 
 <p>A common problem with digital audio applications is getting the sounds to play in time so that the beat remains consistent, and things do not slip out of time.</p>
 
-<p>{{domxref("AudioContext")}} object instances have a <code><a href="/en-US/docs/Web/API/BaseAudioContext/currentTime">currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
+<p>{{domxref("AudioContext")}} object instances have a <code><a href=/web/api/baseaudiocontext/currenttime>currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
 
 <p>We could schedule our voices to play within a <code>for</code> loop, however the biggest problem with this is updating whilst it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes are going to play and push them into a queue. We can start them at a precise time with the currentTime property and also take into account any changes.</p>
 

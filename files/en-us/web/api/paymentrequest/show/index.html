@@ -28,7 +28,7 @@ tags:
 
 <p>If your architecture doesn't necessarily have all of the data ready to go at the moment it instantiates the payment interface by calling <code>show()</code>, specify the <code>detailsPromise</code> parameter, providing a {{jsxref("Promise")}} that is fulfilled once the data is ready. If this is provided, <code>show()</code> will not allow the user to interact with the payment interface until the promise is fulfilled, so that data can be updated prior to the user engaging with the payment process.</p>
 
-<p>Processing the result and, if necessary, calling {{domxref("PaymentResponse.retry()")}} to retry a failed payment can all be done either asynchronously or synchronously, depending on your needs. For the best user experience, asynchronous solutions are typically the best way to go. Most examples on MDN and elsewhere use <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> to wait asynchronously while results are validated and so forth.</p>
+<p>Processing the result and, if necessary, calling {{domxref("PaymentResponse.retry()")}} to retry a failed payment can all be done either asynchronously or synchronously, depending on your needs. For the best user experience, asynchronous solutions are typically the best way to go. Most examples on MDN and elsewhere use <code><a href=/web/javascript/reference/statements/async_function>async</a></code>/<code><a href=/web/javascript/reference/operators/await>await</a></code> to wait asynchronously while results are validated and so forth.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -65,7 +65,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The most common patterns for using <code>show()</code> involve either the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> syntax or the use of <code>show().then().catch()</code> to handle the response and any possible rejection. Those look like this:</p>
+<p>The most common patterns for using <code>show()</code> involve either the <code><a href=/web/javascript/reference/statements/async_function>async</a></code>/<code><a href=/web/javascript/reference/operators/await>await</a></code> syntax or the use of <code>show().then().catch()</code> to handle the response and any possible rejection. Those look like this:</p>
 
 <h3 id="asyncawait_syntax">async/await syntax</h3>
 
@@ -147,7 +147,7 @@ tags:
 }
 </pre>
 
-<p>See the article <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> for more information if you need more information about working with promises.</p>
+<p>See the article <a href=/web/javascript/guide/using_promises>Using promises</a> for more information if you need more information about working with promises.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -225,8 +225,8 @@ document.getElementById("buyButton").onclick = requestPayment;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
+ <li><a href=/web/api/payment_request_api>Payment Request API</a></li>
+ <li><a href=/web/api/payment_request_api/using_the_payment_request_api>Using the Payment Request API</a></li>
  <li>{{domxref('PaymentRequest.abort()')}}</li>
  <li>{{domxref("PaymentRequest.retry()")}}</li>
  <li>{{domxref("PaymentRequest.complete()")}}</li>

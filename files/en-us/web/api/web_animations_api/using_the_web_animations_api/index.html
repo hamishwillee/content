@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Meet_the_Web_Animations_API">Meet the Web Animations API</h2>
 
-<p>The <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> opens the browser’s animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>, and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.</p>
+<p>The <a href=/web/api/web_animations_api>Web Animations API</a> opens the browser’s animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both <a href=/web/css/css_animations>CSS Animations</a> and <a href=/web/css/css_transitions>CSS Transitions</a>, and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.</p>
 
 <p>With the Web Animations API, we can move interactive animations from stylesheets to JavaScript, separating presentation from behavior. We no longer need to rely on DOM-heavy techniques such as writing CSS properties and scoping classes onto elements to control playback direction. And unlike pure, declarative CSS, JavaScript also lets us dynamically set values from properties to durations. For building custom animation libraries and creating interactive animations, the Web Animations API might be the perfect tool for the job. Let's see what it can do!</p>
 
@@ -62,7 +62,7 @@ tags:
   }
 }</pre>
 
-<p>This changes Alice’s color and her transform’s rotation over 3 seconds at a constant (linear) rate and loops infinitely. In the <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> block we can see that 30% of the way through each loop (about .9 seconds in), Alice’s color changes from black to a deep burgundy then back again by the end of the loop.</p>
+<p>This changes Alice’s color and her transform’s rotation over 3 seconds at a constant (linear) rate and loops infinitely. In the <a href=/web/css/@keyframes>@keyframes</a> block we can see that 30% of the way through each loop (about .9 seconds in), Alice’s color changes from black to a deep burgundy then back again by the end of the loop.</p>
 
 <h3 id="Moving_it_to_JavaScript">Moving it to JavaScript</h3>
 
@@ -70,7 +70,7 @@ tags:
 
 <h4 id="Representing_keyframes">Representing keyframes</h4>
 
-<p>The first thing we need is to create a <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Object</a> corresponding to our CSS <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> block:</p>
+<p>The first thing we need is to create a <a href=/web/api/web_animations_api/keyframe_formats>Keyframe Object</a> corresponding to our CSS <a href=/web/css/@keyframes>@keyframes</a> block:</p>
 
 <pre class="brush: js notranslate">var aliceTumbling = [
   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
@@ -103,7 +103,7 @@ tags:
 </ul>
 
 <div class="note">
-<p>There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string <code>"infinite"</code>, but instead uses the JavaScript keyword <code>Infinity</code>. And instead of <code>timing-function</code> we use <code>easing</code>. We aren’t listing an <code>easing</code> value here because, unlike CSS Animations where the default <a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a> is <code>ease</code>, in the Web Animations API the default easing is <code>linear</code> — which is what we want here.</p>
+<p>There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string <code>"infinite"</code>, but instead uses the JavaScript keyword <code>Infinity</code>. And instead of <code>timing-function</code> we use <code>easing</code>. We aren’t listing an <code>easing</code> value here because, unlike CSS Animations where the default <a href=/web/css/animation-timing-function>animation-timing-function</a> is <code>ease</code>, in the Web Animations API the default easing is <code>linear</code> — which is what we want here.</p>
 </div>
 
 <h4 id="Bring_the_pieces_together">Bring the pieces together</h4>
@@ -288,7 +288,7 @@ drinking.pause();</pre>
 
 <p>Now all three animations are linked to just one duration, which we can change easily from one place.</p>
 
-<p>We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's <code><a href="/en-US/docs/Web/API/Animation/currentTime">currentTime</a></code> and dividing it by her <code>activeDuration</code>:</p>
+<p>We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's <code><a href=/web/api/animation/currenttime>currentTime</a></code> and dividing it by her <code>activeDuration</code>:</p>
 
 <pre class="brush: js notranslate">var endGame = function() {
 
@@ -327,8 +327,8 @@ drinking.pause();</pre>
 <p>CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code> is the event handler for the <code>cancel</code> event and can be triggers with <code><a href="/en-US/docs/Web/API/Animation/cancel">cancel()</a></code>.</li>
+ <li><code><a href=/web/api/animation/onfinish>onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href=/web/api/animation/finish>finish()</a></code>.</li>
+ <li><code><a href=/web/api/animation/oncancel>oncancel</a></code> is the event handler for the <code>cancel</code> event and can be triggers with <code><a href=/web/api/animation/cancel>cancel()</a></code>.</li>
 </ul>
 
 <p>Here we set the callbacks for the cake, bottle, and Alice to fire the <code>endGame</code> function:</p>
@@ -342,7 +342,7 @@ aliceChange.onfinish = endGame;
 
 </pre>
 
-<p>Better still, the Web Animations API also provides a <code><a href="/en-US/docs/Web/API/Animation/finished">finished</a></code> promise that will resolve when the animation finishes, or reject if it is canceled.</p>
+<p>Better still, the Web Animations API also provides a <code><a href=/web/api/animation/finished>finished</a></code> promise that will resolve when the animation finishes, or reject if it is canceled.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 

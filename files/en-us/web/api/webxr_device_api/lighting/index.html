@@ -16,7 +16,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}</p>
 
-<p>Because the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> relies on other technologies—namely, <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> and frameworks based upon it—to perform all rendering, texturing, and lighting of a scene, the same general lighting concepts apply to WebXR settings or scenes as to any other WebGL-generated display.</p>
+<p>Because the <a href=/web/api/webxr_device_api>WebXR Device API</a> relies on other technologies—namely, <a href=/web/api/webgl_api>WebGL</a> and frameworks based upon it—to perform all rendering, texturing, and lighting of a scene, the same general lighting concepts apply to WebXR settings or scenes as to any other WebGL-generated display.</p>
 
 <p><span class="seoSummary">However, there are issues and details to keep in mind while creating your lighting code, especially for augmented reality (AR) applications. This guide discusses these topics.</span> And while this article provides brief reminders as to how lighting works in general, it is not by any means a tutorial in lighting or a guide to how to create a properly-lit 3D scene.</p>
 
@@ -172,7 +172,7 @@ tags:
  <li>The effect of light reflected off of other surfaces within the scene; the color, directionality, and brightness of reflected light will affect the color of the pixels the light touches.</li>
 </ul>
 
-<p>You can learn more about how to perform lighting in WebGL in the article <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a>.</p>
+<p>You can learn more about how to perform lighting in WebGL in the article <a href=/web/api/webgl_api/tutorial/lighting_in_webgl>Lighting in WebGL</a>.</p>
 
 <h2 id="Lighting_issues_for_mixed_reality_content">Lighting issues for mixed reality content</h2>
 
@@ -200,7 +200,7 @@ tags:
 
 <h2 id="Lighting_estimation">Lighting estimation</h2>
 
-<p><strong>Lighting estimation</strong> is a technique used by augmented reality platforms to attempt to match the lighting of the virtual objects in the scene to the lighting of the real world surrounding the viewer. This involves the collection of data that may come from various sensors (including the accelerometer and compass, if available), cameras, and potentially others. Other data is collected using the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a>, and then all this data is put through algorithms and machine learning engines to generate the estimated lighting information.</p>
+<p><strong>Lighting estimation</strong> is a technique used by augmented reality platforms to attempt to match the lighting of the virtual objects in the scene to the lighting of the real world surrounding the viewer. This involves the collection of data that may come from various sensors (including the accelerometer and compass, if available), cameras, and potentially others. Other data is collected using the <a href=/web/api/geolocation_api>Geolocation API</a>, and then all this data is put through algorithms and machine learning engines to generate the estimated lighting information.</p>
 
 <p>At present, WebXR doesn't offer support for lighting estimation. However, a <a href="https://github.com/immersive-web/lighting-estimation">specification is currently being drafted</a> under the auspices of the W3C. You can learn all about the proposed API and a fair amount about the concept of lighting estimation in the <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">explainer documnent</a> that's included in the specification's GitHub repository.</p>
 
@@ -216,7 +216,7 @@ tags:
 
 <h3 id="Ambient_Light_Sensor_API">Ambient Light Sensor API</h3>
 
-<p>The collection of light data using the <a href="/en-US/docs/Web/API/Ambient_Light_Sensor_API">Ambient Light Sensor API</a> introduces various potential privacy issues.</p>
+<p>The collection of light data using the <a href=/web/api/ambient_light_sensor_api>Ambient Light Sensor API</a> introduces various potential privacy issues.</p>
 
 <ul>
  <li>Lighting information can leak to the web information about the user's surroundings and device usage patterns. Such information can be used to enhance user profiling and behavior analysis data.</li>
@@ -250,8 +250,8 @@ tags:
 <ul>
  <li><a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">WebXR Lighting Estimation API explainer</a></li>
  <li><a href="https://github.com/immersive-web/lighting-estimation">WebXR Lighting Estimation API Level 1 specification</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL">Using shaders to apply color in WebGL</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures in WebGL</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a></li>
- <li><a href="/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">GLSL Shaders</a></li>
+ <li><a href=/web/api/webgl_api/tutorial/using_shaders_to_apply_color_in_webgl>Using shaders to apply color in WebGL</a></li>
+ <li><a href=/web/api/webgl_api/tutorial/using_textures_in_webgl>Using textures in WebGL</a></li>
+ <li><a href=/web/api/webgl_api/tutorial/lighting_in_webgl>Lighting in WebGL</a></li>
+ <li><a href=/games/techniques/3d_on_the_web/glsl_shaders>GLSL Shaders</a></li>
 </ul>

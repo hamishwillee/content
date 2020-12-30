@@ -13,7 +13,7 @@ tags:
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>The <strong><code>AudioWorkletProcessor</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents an audio processing code behind a custom {{domxref("AudioWorkletNode")}}. It lives in the {{domxref("AudioWorkletGlobalScope")}} and runs on the Web Audio rendering thread. In turn, an {{domxref("AudioWorkletNode")}} based on it runs on the main thread.</p>
+<p>The <strong><code>AudioWorkletProcessor</code></strong> interface of the <a href=/web/api/web_audio_api>Web Audio API</a> represents an audio processing code behind a custom {{domxref("AudioWorkletNode")}}. It lives in the {{domxref("AudioWorkletGlobalScope")}} and runs on the Web Audio rendering thread. In turn, an {{domxref("AudioWorkletNode")}} based on it runs on the main thread.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a <em>static getter</em> on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the <code>AudioWorkletNode</code>.</p>
 
-<p>The resulting <code>AudioParam</code>s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as <code><a href="/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime">linearRampToValueAtTime</a></code>. Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.</p>
+<p>The resulting <code>AudioParam</code>s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as <code><a href=/web/api/audioparam/linearramptovalueattime>linearRampToValueAtTime</a></code>. Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.</p>
 
 <h3 id="Processing_audio">Processing audio</h3>
 
@@ -123,6 +123,6 @@ whiteNoiseNode.connect(audioContext.destination)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api>Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></li>
 </ul>

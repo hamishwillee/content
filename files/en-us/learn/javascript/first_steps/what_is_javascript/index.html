@@ -39,7 +39,7 @@ tags:
 
 <h2 id="A_high-level_definition">A high-level definition</h2>
 
-<p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (<a href="/en-US/docs/Learn/HTML">HTML</a> and <a href="/en-US/docs/Learn/CSS">CSS</a>) we have covered in much more detail in other parts of the Learning Area.</p>
+<p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (<a href=/learn/html>HTML</a> and <a href=/learn/css>CSS</a>) we have covered in much more detail in other parts of the Learning Area.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13502/cake.png" style="display: block; margin: 0 auto;"></p>
 
@@ -121,7 +121,7 @@ function updateName() {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Many of the above demos won't work in an older browser — when experimenting, it's a good idea to use a modern browser like Firefox, Chrome, Edge or Opera to run your code in. You will need to consider <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">cross browser testing</a> in more detail when you get closer to delivering production code (i.e. real code that real customers will use).</p>
+<p><strong>Note</strong>: Many of the above demos won't work in an older browser — when experimenting, it's a good idea to use a modern browser like Firefox, Chrome, Edge or Opera to run your code in. You will need to consider <a href=/learn/tools_and_testing/cross_browser_testing>cross browser testing</a> in more detail when you get closer to delivering production code (i.e. real code that real customers will use).</p>
 </div>
 
 <p><strong>Third party APIs</strong> are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:</p>
@@ -132,7 +132,7 @@ function updateName() {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: These APIs are advanced, and we'll not be covering any of these in this module. You can find out much more about these in our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Client-side web APIs module</a>.</p>
+<p><strong>Note</strong>: These APIs are advanced, and we'll not be covering any of these in this module. You can find out much more about these in our <a href=/learn/javascript/client-side_web_apis>Client-side web APIs module</a>.</p>
 </div>
 
 <p>There's a lot more available, too! However, don't get over excited just yet. You won't be able to build the next Facebook, Google Maps, or Instagram after studying JavaScript for 24 hours — there are a lot of basics to cover first. And that's why you're here — let's move on!</p>
@@ -145,7 +145,7 @@ function updateName() {
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13504/execution.png" style="display: block; margin: 0 auto;"></p>
 
-<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">Script loading strategies</a> section.</p>
+<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href=/learn/javascript/first_steps/what_is_javascript#Script_loading_strategies>Script loading strategies</a> section.</p>
 
 <h3 id="Browser_security">Browser security</h3>
 
@@ -170,7 +170,7 @@ function updateName() {
 
 <p>Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the <code>updateName()</code> code block (lines 5–8) is run. The <code>updateName()</code> code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.</p>
 
-<p>If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer console</a> — <code>TypeError: para is undefined</code>. This means that the <code>para</code> object does not exist yet, so we can't add an event listener to it.</p>
+<p>If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the <a href=/learn/common_questions/what_are_browser_developer_tools>browser developer console</a> — <code>TypeError: para is undefined</code>. This means that the <code>para</code> object does not exist yet, so we can't add an event listener to it.</p>
 
 <div class="note">
 <p><strong>Note</strong>: This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.</p>
@@ -190,7 +190,7 @@ function updateName() {
 
 <p>You might also hear the terms <strong>server-side</strong> and <strong>client-side</strong> code, especially in the context of web development. Client-side code is code that is run on the user's computer — when a web page is viewed, the page's client-side code is downloaded, then run and displayed by the browser. In this module we are explicitly talking about <strong>client-side JavaScript</strong>.</p>
 
-<p>Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser. Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET and... JavaScript! JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our <a href="/en-US/docs/Learn/Server-side">Dynamic Websites – Server-side programming</a> topic.</p>
+<p>Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser. Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET and... JavaScript! JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our <a href=/learn/server-side>Dynamic Websites – Server-side programming</a> topic.</p>
 
 <h3 id="Dynamic_versus_static_code">Dynamic versus static code</h3>
 
@@ -307,7 +307,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <h3 id="Script_loading_strategies">Script loading strategies</h3>
 
-<p>There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">Document Object Model</a>), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.</p>
+<p>There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the <a href=/learn/javascript/client-side_web_apis/manipulating_documents#The_document_object_model>Document Object Model</a>), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.</p>
 
 <p>In the above code examples, in the internal and external examples the JavaScript is loaded and run in the head of the document, before the HTML body is parsed. This could cause an error, so we've used some constructs to get around it.</p>
 
@@ -317,7 +317,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
   ...
 });</pre>
 
-<p>This is an event listener, which listens for the browser's "DOMContentLoaded" event, which signifies that the HTML body is completely loaded and parsed. The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided (you'll <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">learn about events</a> later in the course).</p>
+<p>This is an event listener, which listens for the browser's "DOMContentLoaded" event, which signifies that the HTML body is completely loaded and parsed. The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided (you'll <a href=/learn/javascript/building_blocks/events>learn about events</a> later in the course).</p>
 
 <p>In the external example, we use a more modern JavaScript feature to solve the problem, the <code>defer</code> attribute, which tells the browser to continue downloading the HTML content once the <code>&lt;script&gt;</code> tag element has been reached.</p>
 
@@ -414,20 +414,20 @@ for (let i = 0; i &lt; buttons.length ; i++) {
 
 <p>So there you go, your first step into the world of JavaScript. We've begun with just theory, to start getting you used to why you'd use JavaScript and what kind of things you can do with it. Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, amongst other things.</p>
 
-<p>JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps that will make sense going forward. In the next article, we will <a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">plunge straight into the practical</a>, getting you to jump straight in and build your own JavaScript examples.</p>
+<p>JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps that will make sense going forward. In the next article, we will <a href=/learn/javascript/first_steps/a_first_splash>plunge straight into the practical</a>, getting you to jump straight in and build your own JavaScript examples.</p>
 
 <p>{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
+ <li><a href=/learn/javascript/first_steps/what_is_javascript>What is JavaScript?</a></li>
+ <li><a href=/learn/javascript/first_steps/a_first_splash>A first splash into JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/what_went_wrong>What went wrong? Troubleshooting JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/variables>Storing the information you need — Variables</a></li>
+ <li><a href=/learn/javascript/first_steps/math>Basic math in JavaScript — numbers and operators</a></li>
+ <li><a href=/learn/javascript/first_steps/strings>Handling text — strings in JavaScript</a></li>
+ <li><a href=/learn/javascript/first_steps/useful_string_methods>Useful string methods</a></li>
+ <li><a href=/learn/javascript/first_steps/arrays>Arrays</a></li>
+ <li><a href=/learn/javascript/first_steps/silly_story_generator>Assessment: Silly story generator</a></li>
 </ul>

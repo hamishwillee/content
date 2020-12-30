@@ -27,7 +27,7 @@ tags:
 
 <p>Once your WebXR environment has been set up and an {{domxref("XRSession")}} created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. <span class="seoSummary">This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the {{domxref("XRSession")}} to obtain an {{domxref("XRFrame")}} object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.</span></p>
 
-<p>Before you can render the virtual environment, you need to establish a WebXR session by creating an {{domxref("XRSession")}} using the <code><a href="/en-US/docs/Web/API/XRSystem/requestSession">navigator.xr.requestSession()</a></code> method; you also need to associate the session with a framebuffer and perform other setup tasks. These setup tasks are described in the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">Starting up and shutting down a WebXR session</a>.</p>
+<p>Before you can render the virtual environment, you need to establish a WebXR session by creating an {{domxref("XRSession")}} using the <code><a href=/web/api/xrsystem/requestsession>navigator.xr.requestSession()</a></code> method; you also need to associate the session with a framebuffer and perform other setup tasks. These setup tasks are described in the article <a href=/web/api/webxr_device_api/startup_and_shutdown>Starting up and shutting down a WebXR session</a>.</p>
 
 <h2 id="Preparing_the_renderer">Preparing the renderer</h2>
 
@@ -103,7 +103,7 @@ async function runXR(xrSession) {
 
 <p>For these reasons, unless your renderer is fairly small and lightweight, with little to do, you should consider offloading everything you can to a worker so you can be computing the next frame while the browser handles other things. By having your computations and data ready before the frame is actually called for, you can make your site or app render much more efficiently, improving main thread performance and generally making the user experience better.</p>
 
-<p>Fortunately, there are some tricks you can use to further reduce your impact and optimize performance if your rendering needs are particularly heavy. See the <a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a> for recommendations and tips that will help you ensure your performance is as good as it can be.</p>
+<p>Fortunately, there are some tricks you can use to further reduce your impact and optimize performance if your rendering needs are particularly heavy. See the <a href=/web/api/webxr_device_api/performance>WebXR performance guide</a> for recommendations and tips that will help you ensure your performance is as good as it can be.</p>
 
 <h2 id="WebXR_frames">WebXR frames</h2>
 
@@ -135,7 +135,7 @@ async function runXR(xrSession) {
 
 <p>After rendering the scene twice—once into the left half of the framebuffer and once into the right half of the framebuffer—the framebuffer is sent to the XR hardware, which displays each half of the framebuffer to the corresponding eye. This is often (but not always) done by drawing the image to a single screen and using lenses to transfer the correct half of that image to each eye.</p>
 
-<p>You can learn more about how 3D is represented by WebXR in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Cameras", "Representing 3D with WebXR")}}.</p>
+<p>You can learn more about how 3D is represented by WebXR in {{SectionOnPage(/web/api/webxr_device_api/cameras, "Representing 3D with WebXR")}}.</p>
 
 <h2 id="Drawing_the_scene">Drawing the scene</h2>
 
@@ -162,7 +162,7 @@ async function runXR(xrSession) {
 
 <p>Put, this form of renderer is using <strong>view-first order</strong>. Each of the two views making up the XR device's display are rendered back to back, where every object is drawn on one view before rendering the same set of objects on the other view. As a result, there's a good bit of replicated effort, since much of the data needed to draw an object winds up getting sent to the GPU twice per frame. However, it simplifies porting existing WebGL code and is frequently good enough to do the job, so we'll look at this method first.</p>
 
-<p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#Optimizing_by_rendering_in_object-first_order">Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
+<p>See <a href=/web/api/webxr_device_api/rendering#Optimizing_by_rendering_in_object-first_order>Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
 
 <h4 id="Sample_rendering_callback">Sample rendering callback</h4>
 
@@ -214,11 +214,11 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>The <code>myDrawFrame()</code> function grabs the {{domxref("XRSession")}} from the {{domxref("XRFrame")}} object specified by the <code>frame</code> parameter, then calls the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to immediately schedule the rendering of the next frame. This ensures we get into the queue right away, allowing the rest of the time spent in this iteration of the <code>myDrawFrame()</code> function to count toward the timing of drawing the next frame.</p>
 
-<p>We then get the {{domxref("XRViewerPose")}} object that describes the viewer's pose—their position and orientation—using the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method, passing in the viewer's reference space from the <code>viewerRefSpace</code> previously obtained <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#Preparing_the_renderer">while setting up the WebXR session</a>.</p>
+<p>We then get the {{domxref("XRViewerPose")}} object that describes the viewer's pose—their position and orientation—using the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method, passing in the viewer's reference space from the <code>viewerRefSpace</code> previously obtained <a href=/web/api/webxr_device_api/rendering#Preparing_the_renderer>while setting up the WebXR session</a>.</p>
 
-<p>With the viewer's pose in hand, we can then begin to render the frame. The first step is to obtain access to the framebuffer into which the WebXR device wants the frame drawn; this is done by getting the target WebGL layer from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property, then getting the {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} from that {{domxref("XRWebGLLayer")}} object. We then call <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">gl.bindFrameBuffer()</a></code> to bind that framebuffer as the target for all upcoming drawing commands.</p>
+<p>With the viewer's pose in hand, we can then begin to render the frame. The first step is to obtain access to the framebuffer into which the WebXR device wants the frame drawn; this is done by getting the target WebGL layer from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property, then getting the {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} from that {{domxref("XRWebGLLayer")}} object. We then call <code><a href=/web/api/webglrenderingcontext/bindframebuffer>gl.bindFrameBuffer()</a></code> to bind that framebuffer as the target for all upcoming drawing commands.</p>
 
-<p>The next step is to erase the framebuffer. While you can in theory skip this step—<em>if and only if your rendering code is guaranteed to write every single pixel in the framebuffer</em>—it's generally safest to just go ahead and clear it before you begin to draw, unless you need to eke out every ounce of performance you can and know you're touching all the pixels anyway. The background color is set to fully opaque black using <a href="/en-US/docs/Web/API/WebGLRenderingContext/clearColor"><code>gl.clearColor()</code></a>; the clear depth is set to 1.0 by calling <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/clearDepth">gl.cleardepth()</a></code>, in order to clear all pixels regardless of how far away the object they're part of is; and finally, the frame's pixel and depth buffers are both erased by calling <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/clear">gl.clear()</a></code>, passing in a bit mask in which both <code>COLOR_BUFFER_BIT</code> and <code>DEPTH_BUFFER_BIT</code> are set.</p>
+<p>The next step is to erase the framebuffer. While you can in theory skip this step—<em>if and only if your rendering code is guaranteed to write every single pixel in the framebuffer</em>—it's generally safest to just go ahead and clear it before you begin to draw, unless you need to eke out every ounce of performance you can and know you're touching all the pixels anyway. The background color is set to fully opaque black using <a href=/web/api/webglrenderingcontext/clearcolor><code>gl.clearColor()</code></a>; the clear depth is set to 1.0 by calling <code><a href=/web/api/webglrenderingcontext/cleardepth>gl.cleardepth()</a></code>, in order to clear all pixels regardless of how far away the object they're part of is; and finally, the frame's pixel and depth buffers are both erased by calling <code><a href=/web/api/webglrenderingcontext/clear>gl.clear()</a></code>, passing in a bit mask in which both <code>COLOR_BUFFER_BIT</code> and <code>DEPTH_BUFFER_BIT</code> are set.</p>
 
 <p>Since WebXR uses a single framebuffer for every view, with viewports upon the view being used to separate each eye's viewpoint within the framebuffer, we only need to clear a single framebuffer rather than cleaning it for each eye (or other viewpoints, if any) individually.</p>
 
@@ -226,7 +226,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>It's now time to actually render the scene for each eye. We iterate over the views within the viewer poses's {{domxref("XRViewerPose.views", "views")}} array. For each of these {{domxref("XRView")}} objects representing an eye's perspective on the scene, we need to begin by limiting drawing to the area of the framebuffer which represents the current eye's visible image.</p>
 
-<p>We begin by preparing WebGL to render the eye's contents by getting the viewport that restricts drawing to the area within the framebuffer that's reserved for the current eye's image by calling the {{domxref("XRWebGLLayer")}} method {{domxref("XRWebGLLayer.getViewport", "getViewport()")}}. We then set the WebGL viewport to match, passing in the X and Y origin of the viewport along with its width and height into <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/viewport">gl.viewport()</a></code>.</p>
+<p>We begin by preparing WebGL to render the eye's contents by getting the viewport that restricts drawing to the area within the framebuffer that's reserved for the current eye's image by calling the {{domxref("XRWebGLLayer")}} method {{domxref("XRWebGLLayer.getViewport", "getViewport()")}}. We then set the WebGL viewport to match, passing in the X and Y origin of the viewport along with its width and height into <code><a href=/web/api/webglrenderingcontext/viewport>gl.viewport()</a></code>.</p>
 
 <p>Finally, we call our method <code>myDrawSceneIntoView()</code> to actually use WebGL to render the scene. Into this, we pass the {{domxref("XRView")}} representing the eye we're drawing for (in order to perform perspective mapping and the like) and <code>deltaTime</code>, so the scene drawing code can accurately represent the elapsed time when determining the positions of objects moving over time.</p>
 
@@ -320,13 +320,13 @@ const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 
 <h2 id="Additional_tasks_related_to_animating_the_scene">Additional tasks related to animating the scene</h2>
 
-<p>There are, of course, other things that probably need to happen each pass through the renderer. Two of the most common are <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">handling of user inputs</a> and performing updates to the positions of objects (or the viewer) based on known factors, such as those user control states or known animation paths of the objects in the scene.</p>
+<p>There are, of course, other things that probably need to happen each pass through the renderer. Two of the most common are <a href=/web/api/webxr_device_api/inputs>handling of user inputs</a> and performing updates to the positions of objects (or the viewer) based on known factors, such as those user control states or known animation paths of the objects in the scene.</p>
 
 <h3 id="Handling_user_control_inputs">Handling user control inputs</h3>
 
 <p>There are three methods by which users might provide input while using a WebXR application. First, WebXR supports directly handling inputs from the controllers which are integrated with the XR hardware itself. These input sources may include devices such as hand controllers, optical tracking systems, acclerometers and magnetometers, and other devices of that nature.</p>
 
-<p>The second type of input is a gamepad that's connected through the XR system. This uses interfaces inherited from the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> but you interact with them through WebXR.</p>
+<p>The second type of input is a gamepad that's connected through the XR system. This uses interfaces inherited from the <a href=/web/api/gamepad_api>Gamepad API</a> but you interact with them through WebXR.</p>
 
 <p>The third and final type of input is the traditional non-XR input device such as keyboards, mice, trackpads, touch screens, and non-XR gamepads and joysticks.</p>
 
@@ -338,7 +338,7 @@ const ZDistanceMoved = zSpeedPerSecond * deltaTime;
  <li>Non-XR input device inputs</li>
 </ul>
 
-<p>To learn more about how to handle user inputs while presenting a scene using WebXR, see the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>.</p>
+<p>To learn more about how to handle user inputs while presenting a scene using WebXR, see the article <a href=/web/api/webxr_device_api/inputs>Inputs and input sources</a>.</p>
 
 <h3 id="Updating_object_positions">Updating object positions</h3>
 
@@ -348,18 +348,18 @@ const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 
 <p>In addition, there may be objects and structures in motion. In a sports game, there may be a ball arcing through the air, its movement needing to be simulated. In racing games there may be cars or other vehicles, with moving parts to animate including the wheels. If there's water in the scene, it needs ripples or waves to look realistic. Parts of structures may be moving, such as doors, walls and floors (for some types of games), and so forth.</p>
 
-<p>Another common source of motion is the player themself. After interpreting inputs from the controls (both XR-affliated and otherwise), you need to apply those changes to the scene in order to simulate the user's movement. See the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</a> for details and a thorough example of how this works.</p>
+<p>Another common source of motion is the player themself. After interpreting inputs from the controls (both XR-affliated and otherwise), you need to apply those changes to the scene in order to simulate the user's movement. See the article <a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion</a> for details and a thorough example of how this works.</p>
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Once you've got your renderer written—or at least got something that works, even if it's not finished—you can begin to deal with the camera and its movement through the scene. This is covered in our article about <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">viewpoints and viewers</a> in WebXR.</p>
+<p>Once you've got your renderer written—or at least got something that works, even if it's not finished—you can begin to deal with the camera and its movement through the scene. This is covered in our article about <a href=/web/api/webxr_device_api/cameras>viewpoints and viewers</a> in WebXR.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a></li>
+ <li><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/spatial_tracking>Spatial tracking in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers: Simulating cameras in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion: A WebXR example</a></li>
+ <li><a href=/web/api/webxr_device_api/performance>WebXR performance guide</a></li>
 </ul>

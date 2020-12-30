@@ -19,14 +19,14 @@ tags:
 <div class="note">
 <p>In this article, we'll use the output of a simple program as an example. If you want to get the program to experiment with your profile, you can find it <a href="https://github.com/mdn/performance-scenarios/blob/gh-pages/js-call-tree-1/">here</a>. You can find the specific profile we discuss <a href="https://github.com/mdn/performance-scenarios/blob/gh-pages/js-call-tree-1/profile/call-tree.json">here</a> - just import it to the performance tool to follow along.</p>
 
-<p>There's a short page describing the structure of this program <a href="/en-US/docs/Tools/Performance/Examples/Sorting_algorithms_comparison">here</a>.</p>
+<p>There's a short page describing the structure of this program <a href=/tools/performance/examples/sorting_algorithms_comparison>here</a>.</p>
 
-<p>Note that we use the same program - the same profile, in fact - in the documentation page for the <a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Chart</a>.</p>
+<p>Note that we use the same program - the same profile, in fact - in the documentation page for the <a href=/tools/performance/flame_chart>Flame Chart</a>.</p>
 </div>
 
 <p>The screenshot below shows the output of a program that compares three sorting algorithms - bubble sort, selection sort, and quicksort. To do this, it generates some arrays filled with random integers and sorts them using each algorithm in turn.</p>
 
-<p>We've <a href="/en-US/docs/Tools/Performance/UI_Tour#Zooming_in">zoomed</a> into the part of the recording that shows a long JavaScript marker:</p>
+<p>We've <a href=/tools/performance/ui_tour#Zooming_in>zoomed</a> into the part of the recording that shows a long JavaScript marker:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10981/perf-call-tree.png" style="display: block; height: 574px; margin-left: auto; margin-right: auto; width: 1052px;"></p>
 
@@ -115,7 +115,7 @@ tags:
 <p>One thing to be aware of here is that idle time is classified as <em>Gecko</em>, so parts of your profile where your JavaScript isn't running will contribute <em>Gecko</em> samples. These aren't relevant to the performance of your site.</p>
 
 <div class="note">
-<p>By default, the Call Tree doesn't split platform data out into separate functions, because they add a great deal of noise, and the details are not likely to be useful to people not working on Firefox. If you want to see the details, check "Show Gecko Platform Data" in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Toolbar">Settings</a>.</p>
+<p>By default, the Call Tree doesn't split platform data out into separate functions, because they add a great deal of noise, and the details are not likely to be useful to people not working on Firefox. If you want to see the details, check "Show Gecko Platform Data" in the <a href=/tools/performance/ui_tour#Toolbar>Settings</a>.</p>
 </div>
 
 <h2 id="Using_an_inverted_aka_Bottom-Up_Call_Tree">Using an inverted, aka Bottom-Up, Call Tree</h2>

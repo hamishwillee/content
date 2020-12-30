@@ -13,9 +13,9 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Use this function to get detailed information about the <a href="/en-US/docs/Glossary/TLS">TLS</a> connection associated with a particular request.</p>
+<p>Use this function to get detailed information about the <a href=/glossary/tls>TLS</a> connection associated with a particular request.</p>
 
-<p>You pass this function the <code>requestId</code> for the request in question, and some optional extra parameters. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which will resolve to a {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object.</p>
+<p>You pass this function the <code>requestId</code> for the request in question, and some optional extra parameters. It returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> which will resolve to a {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object.</p>
 
 <p>You can only call this function from inside the {{WebExtAPIRef("webRequest.onHeadersReceived")}} listener. The <code>requestId</code> can be found in the <code>details</code> object which is passed into the listener.</p>
 
@@ -48,7 +48,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which resolves to a {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> which resolves to a {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p>The <code>ConstantSourceNode</code> interface—part of the Web Audio API—represents an audio source (based upon {{domxref("AudioScheduledSourceNode")}}) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible {{domxref("AudioParam")}} by automating the value of its {{domxref("ConstantSourceNode.offset", "offset")}} or by connecting another node to it; see <a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a>.</p>
+<p>The <code>ConstantSourceNode</code> interface—part of the Web Audio API—represents an audio source (based upon {{domxref("AudioScheduledSourceNode")}}) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible {{domxref("AudioParam")}} by automating the value of its {{domxref("ConstantSourceNode.offset", "offset")}} or by connecting another node to it; see <a href=/web/api/web_audio_api/controlling_multiple_parameters_with_constantsourcenode>Controlling multiple parameters with ConstantSourceNode</a>.</p>
 
 <p>A <code>ConstantSourceNode</code> has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the {{domxref("ConstantSourceNode.offset", "offset")}} parameter.</p>
 
@@ -75,7 +75,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In the article <a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a>, a <code>ConstantSourceNode</code> is created to allow one slider control to change the gain on two {{domxref("GainNode")}}s. The three nodes are set up like this:</p>
+<p>In the article <a href=/web/api/web_audio_api/controlling_multiple_parameters_with_constantsourcenode>Controlling multiple parameters with ConstantSourceNode</a>, a <code>ConstantSourceNode</code> is created to allow one slider control to change the gain on two {{domxref("GainNode")}}s. The three nodes are set up like this:</p>
 
 <pre class="brush: js">gainNode2 = context.createGain();
 gainNode3 = context.createGain();
@@ -95,7 +95,7 @@ gainNode3.connect(context.destination);
 
 <p>Now, whenever the value of {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} changes, the gain on both <code>gainNode2</code> and <code>gainNode3</code> will change to have that same value.</p>
 
-<p>To see this example in action, as well as to read the rest of the code from which these snippets were derived, see <a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode.</a></p>
+<p>To see this example in action, as well as to read the rest of the code from which these snippets were derived, see <a href=/web/api/web_audio_api/controlling_multiple_parameters_with_constantsourcenode>Controlling multiple parameters with ConstantSourceNode.</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -124,7 +124,7 @@ gainNode3.connect(context.destination);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></li>
  <li>{{domxref("AudioScheduledSourceNode")}}</li>
  <li>{{domxref("AudioNode")}}</li>
 </ul>

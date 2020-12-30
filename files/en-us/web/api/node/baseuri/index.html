@@ -15,7 +15,7 @@ tags:
 
 <p>The base URL is used to resolve relative URLs when the browser needs to obtain an absolute URL, for example when processing the HTML {{HTMLElement("img")}} element's <code>src</code> attribute or XML <code>{{glossary("xlink")}}:href</code> attribute.</p>
 
-<p>In most cases the base URL is the location of the document, but it can be affected by many factors, including the {{HTMLElement("base")}} element in HTML and the <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> attribute in XML.</p>
+<p>In most cases the base URL is the location of the document, but it can be affected by many factors, including the {{HTMLElement("base")}} element in HTML and the <code><a href=/xml/xml:base>xml:base</a></code> attribute in XML.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>The base URL of an <em>element</em> in HTML normally equals the base URL of the document the node is in.</p>
 
-<p>If the document contains <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> attributes (which you shouldn't do in HTML documents), the <code><em>element</em>.baseURI</code> takes the <code>xml:base</code> attributes of element's parents into account when computing the base URL. See <a href="/en-US/docs/XML/xml:base">xml:base</a> for details.</p>
+<p>If the document contains <code><a href=/xml/xml:base>xml:base</a></code> attributes (which you shouldn't do in HTML documents), the <code><em>element</em>.baseURI</code> takes the <code>xml:base</code> attributes of element's parents into account when computing the base URL. See <a href=/xml/xml:base>xml:base</a> for details.</p>
 
 <p>You can use <code>{{domxref("element")}}.baseURI</code> to obtain the base URL of an element.</p>
 
@@ -76,6 +76,6 @@ tags:
 
 <ul>
  <li>{{HTMLElement("base")}} element (HTML)</li>
- <li><code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> attribute (XML documents).</li>
+ <li><code><a href=/xml/xml:base>xml:base</a></code> attribute (XML documents).</li>
  <li>{{domxref("Node.baseURIObject")}} - a variant of this API for Mozilla add-ons and internal code. Returns the base URL as an {{interface("nsIURI")}}.</li>
 </ul>

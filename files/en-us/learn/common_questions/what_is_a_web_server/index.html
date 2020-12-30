@@ -14,7 +14,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You should already know <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work">how the Internet works</a>, and <a href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines">understand the difference between a web page, a web site, a web server, and a search engine</a>.</td>
+   <td>You should already know <a href=/learn/common_questions/how_does_the_internet_work>how the Internet works</a>, and <a href=/learn/common_questions/pages_sites_servers_and_search_engines>understand the difference between a web page, a web site, a web server, and a search engine</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -32,7 +32,7 @@ tags:
  <li>On the software side, a web server includes several parts that control how web users access hosted files. At a minimum, this is an <em>HTTP server</em>. An HTTP server is software that understands {{Glossary("URL","URLs")}} (web addresses) and {{Glossary("HTTP")}} (the protocol your browser uses to view webpages). An HTTP server can be accessed through the domain names of the websites it stores, and it delivers the content of these hosted websites to the end user's device.</li>
 </ol>
 
-<p>At the most basic level, whenever a browser needs a file that is hosted on a web server, the browser requests the file via HTTP. When the request reaches the correct (hardware) web server, the (software) <em>HTTP server</em> accepts the request, finds the requested document, and sends it back to the browser, also through HTTP. (If the server doesn't find the requested document, it returns a <a href="/en-US/docs/Web/HTTP/Status/404">404</a> response instead.)</p>
+<p>At the most basic level, whenever a browser needs a file that is hosted on a web server, the browser requests the file via HTTP. When the request reaches the correct (hardware) web server, the (software) <em>HTTP server</em> accepts the request, finds the requested document, and sends it back to the browser, also through HTTP. (If the server doesn't find the requested document, it returns a <a href=/web/http/status/404>404</a> response instead.)</p>
 
 <p><img alt="Basic representation of a client/server connection through HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></p>
 
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Active_learning">Active learning</h2>
 
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+<p><em>There is no active learning available yet. <a href=/mdn/getting_started>Please, consider contributing</a>.</em></p>
 
 <h2 id="Deeper_dive">Deeper dive</h2>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details <a href="https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting">in this article</a>.</p>
 
-<p>Once you have web hosting service, you must <a href="/en-US/docs/Learn/Upload_files_to_a_web_server">upload your files to your web server</a>.</p>
+<p>Once you have web hosting service, you must <a href=/learn/upload_files_to_a_web_server>upload your files to your web server</a>.</p>
 
 <h3 id="Communicating_through_HTTP">Communicating through HTTP</h3>
 
@@ -82,7 +82,7 @@ tags:
  <dd>Neither the server nor the client remember previous communications. For example, relying on HTTP alone, a server can't remember a password you typed or remember your progress on an incomplete transaction. You need an application server for tasks like that. (We'll cover that sort of technology in other articles.)</dd>
 </dl>
 
-<p>HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a <a href="/en-US/docs/Web/HTTP">technical article</a> later. For now, just be aware of these things:</p>
+<p>HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a <a href=/web/http>technical article</a> later. For now, just be aware of these things:</p>
 
 <ul>
  <li>Only <em>clients</em> can make HTTP requests, and then only to <em>servers</em>. Servers can only <em>respond</em> to a <em>client</em>'s HTTP request.</li>
@@ -90,7 +90,7 @@ tags:
  <li>The web server <em>must answer</em> every HTTP request, at least with an error message.</li>
 </ul>
 
-<p><a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="https://mdn.mozillademos.org/files/8661/mdn-404.jpg" style="float: right; height: 300px; width: 300px;"></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
+<p><a href=/web/http/status/404><img alt="The MDN 404 page as an example of such error page" src="https://mdn.mozillademos.org/files/8661/mdn-404.jpg" style="float: right; height: 300px; width: 300px;"></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
 
 <ol>
  <li>Upon receiving a request, an HTTP server first checks if the requested URL matches an existing file.</li>
@@ -104,7 +104,7 @@ tags:
 
 <p>The term <em>dynamic</em> means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.</p>
 
-<p>Take, for example, the page you're reading right now. On the web server hosting it, there is an application server that takes article content from a database, formats it, puts it inside some HTML templates, and sends you the results. In this case, the application server is called <a href="/en-US/docs/MDN/Kuma">Kuma</a>. Kuma is built with the programming language <a href="https://www.python.org/">Python</a> (using the <a href="https://www.djangoproject.com/">Django</a> framework). The Mozilla team built Kuma for the specific needs of MDN, but there are many similar applications built on many other technologies.</p>
+<p>Take, for example, the page you're reading right now. On the web server hosting it, there is an application server that takes article content from a database, formats it, puts it inside some HTML templates, and sends you the results. In this case, the application server is called <a href=/mdn/kuma>Kuma</a>. Kuma is built with the programming language <a href="https://www.python.org/">Python</a> (using the <a href="https://www.djangoproject.com/">Django</a> framework). The Mozilla team built Kuma for the specific needs of MDN, but there are many similar applications built on many other technologies.</p>
 
 <p>There are so many application servers that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or eCommerce; others, called {{Glossary("CMS", "CMSs")}} (content management systems), are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just <a href="https://en.wikipedia.org/wiki/Reinventing_the_wheel">reinventing the wheel</a>.</p>
 
@@ -113,7 +113,7 @@ tags:
 <p>Now that you are familiar with web servers, you could:</p>
 
 <ul>
- <li>read up on <a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost">how much it costs to do something on the web</a></li>
- <li>learn more about <a href="/en-US/docs/Learn/Common_questions/What_software_do_I_need">various software you need to create a website</a></li>
- <li>move on to something practical like <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">how to upload files on a web server</a>.</li>
+ <li>read up on <a href=/learn/common_questions/how_much_does_it_cost>how much it costs to do something on the web</a></li>
+ <li>learn more about <a href=/learn/common_questions/what_software_do_i_need>various software you need to create a website</a></li>
+ <li>move on to something practical like <a href=/learn/common_questions/upload_files_to_a_web_server>how to upload files on a web server</a>.</li>
 </ul>

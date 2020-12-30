@@ -4,20 +4,20 @@ slug: Web/API/CSS_Properties_and_Values_API
 tags:
   - Houdini
 ---
-<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</p>
+<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href=/web/houdini>CSS Houdini</a> umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
 	<dt>{{domxref('CSS.registerProperty')}}</dt>
-	<dd>Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS.registerProperty')}} in <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.</dd>
+	<dd>Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS.registerProperty')}} in <a href=/web/javascript>JavaScript</a>.</dd>
 	<dt>{{cssxref('@property')}}</dt>
-	<dd>Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> in <a href="/en-US/docs/Web/CSS">CSS</a>.</dd>
+	<dd>Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} <a href=/web/css/at-rule>at-rule</a> in <a href=/web/css>CSS</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following uses {{domxref('CSS.registerProperty')}} in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> to type a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-color</code>, as a color, give it a default value, and not allow it to inherit its value:</p>
+<p>The following uses {{domxref('CSS.registerProperty')}} in <a href=/web/javascript>JavaScript</a> to type a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-color</code>, as a color, give it a default value, and not allow it to inherit its value:</p>
 
 <pre class="brush: js notranslate">window.CSS.registerProperty({
   name: '--my-color',
@@ -27,7 +27,7 @@ tags:
 });
 </pre>
 
-<p>The same registration can take place in <a href="/en-US/docs/Web/CSS">CSS</a> using the {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
+<p>The same registration can take place in <a href=/web/css>CSS</a> using the {{cssxref('@property')}} <a href=/web/css/at-rule>at-rule</a>:</p>
 
 <pre class="brush: css notranslate">@property --my-color {
   syntax: '&lt;color&gt;';
@@ -60,8 +60,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide">Using the CSS properties and values API</a></li>
-	<li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</a></li>
-	<li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
+	<li><a href=/web/api/css_properties_and_values_api/guide>Using the CSS properties and values API</a></li>
+	<li><a href=/web/api/css_painting_api>CSS Painting API</a></li>
+	<li><a href=/web/api/css_typed_om_api>CSS Typed Object Model</a></li>
+	<li><a href=/web/houdini>CSS Houdini</a></li>
 </ul>

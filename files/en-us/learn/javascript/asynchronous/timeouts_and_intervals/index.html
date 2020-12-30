@@ -41,11 +41,11 @@ tags:
 <p>These functions are:</p>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code></dt>
+ <dt><code><a href=/web/api/windoworworkerglobalscope/settimeout>setTimeout()</a></code></dt>
  <dd>Execute a specified block of code once after a specified time has elapsed.</dd>
- <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code></dt>
+ <dt><code><a href=/web/api/windoworworkerglobalscope/setinterval>setInterval()</a></code></dt>
  <dd>Execute a specified block of code repeatedly with a fixed time delay between each call.</dd>
- <dt><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code></dt>
+ <dt><code><a href=/web/api/window/requestanimationframe>requestAnimationFrame()</a></code></dt>
  <dd>The modern version of <code>setInterval()</code>. Executes a specified block of code before the browser next repaints the display, allowing an animation to be run at a suitable framerate regardless of the environment it is being run in.</dd>
 </dl>
 
@@ -59,7 +59,7 @@ tags:
 
 <h2 id="setTimeout">setTimeout()</h2>
 
-<p>As we said before, <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> executes a particular block of code once after a specified time has elapsed. It takes the following parameters:</p>
+<p>As we said before, <code><a href=/web/api/windoworworkerglobalscope/settimeout>setTimeout()</a></code> executes a particular block of code once after a specified time has elapsed. It takes the following parameters:</p>
 
 <ul>
  <li>A function to run, or a reference to a function defined elsewhere.</li>
@@ -113,7 +113,7 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <h3 id="Clearing_timeouts">Clearing timeouts</h3>
 
-<p>Finally, if a timeout has been created, you can cancel it before the specified time has elapsed by calling <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout">clearTimeout()</a></code>, passing it the identifier of the <code>setTimeout()</code> call as a parameter. So to cancel our above timeout, you'd do this:</p>
+<p>Finally, if a timeout has been created, you can cancel it before the specified time has elapsed by calling <code><a href=/web/api/windoworworkerglobalscope/cleartimeout>clearTimeout()</a></code>, passing it the identifier of the <code>setTimeout()</code> call as a parameter. So to cancel our above timeout, you'd do this:</p>
 
 <pre class="brush: js notranslate">clearTimeout(myGreeting);</pre>
 
@@ -125,9 +125,9 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <p><code>setTimeout()</code> works perfectly when you need to run code once after a set period of time. But what happens when you need to run the code over and over again—for example, in the case of an animation?</p>
 
-<p>This is where <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> comes in. This works in a very similar way to <code>setTimeout()</code>, except that the function you pass as the first parameter is executed repeatedly at no less than the number of milliseconds given by the second parameter apart, rather than once. You can also pass any parameters required by the function being executed as subsequent parameters of the <code>setInterval()</code> call.</p>
+<p>This is where <code><a href=/web/api/windoworworkerglobalscope/setinterval>setInterval()</a></code> comes in. This works in a very similar way to <code>setTimeout()</code>, except that the function you pass as the first parameter is executed repeatedly at no less than the number of milliseconds given by the second parameter apart, rather than once. You can also pass any parameters required by the function being executed as subsequent parameters of the <code>setInterval()</code> call.</p>
 
-<p>Let's look at an example. The following function creates a new <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a></code> object, extracts a time string out of it using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString">toLocaleTimeString()</a></code>, and then displays it in the UI. It then runs the function once per second using <code>setInterval()</code>, creating the effect of a digital clock that updates once per second (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
+<p>Let's look at an example. The following function creates a new <code><a href=/web/javascript/reference/global_objects/date>Date()</a></code> object, extracts a time string out of it using <code><a href=/web/javascript/reference/global_objects/date/tolocaletimestring>toLocaleTimeString()</a></code>, and then displays it in the UI. It then runs the function once per second using <code>setInterval()</code>, creating the effect of a digital clock that updates once per second (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
 
 <pre class="brush: js notranslate">function displayTime() {
    let date = new Date();
@@ -141,7 +141,7 @@ const createClock = setInterval(displayTime, 1000);</pre>
 
 <h3 id="Clearing_intervals">Clearing intervals</h3>
 
-<p><code>setInterval()</code> keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the <code>setInterval()</code> call to the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">clearInterval()</a></code> function:</p>
+<p><code>setInterval()</code> keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the <code>setInterval()</code> call to the <code><a href=/web/api/windoworworkerglobalscope/clearinterval>clearInterval()</a></code> function:</p>
 
 <pre class="brush: js notranslate">const myInterval = setInterval(myFunction, 2000);
 
@@ -244,14 +244,14 @@ alert('Hello');</pre>
 
 <h2 id="requestAnimationFrame">requestAnimationFrame()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> is a specialized looping function created for running animations efficiently in the browser. It is basically the modern version of <code>setInterval()</code> — it executes a specified block of code before the browser next repaints the display, allowing an animation to be run at a suitable frame rate regardless of the environment it is being run in.</p>
+<p><code><a href=/web/api/window/requestanimationframe>requestAnimationFrame()</a></code> is a specialized looping function created for running animations efficiently in the browser. It is basically the modern version of <code>setInterval()</code> — it executes a specified block of code before the browser next repaints the display, allowing an animation to be run at a suitable frame rate regardless of the environment it is being run in.</p>
 
 <p>It was created in response to perceived problems with <code>setInterval()</code>, which for example doesn't run at a frame rate optimized for the device, sometimes drops frames, continues to run even if the tab is not the active tab or the animation is scrolled off the page, etc.</p>
 
 <p>(<a href="http://creativejs.com/resources/requestanimationframe/index.html">Read more about this on CreativeJS</a>.)</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find examples of using <code>requestAnimationFrame()</code> elsewhere in the course — see for example <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a>, and <a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a>.</p>
+<p><strong>Note</strong>: You can find examples of using <code>requestAnimationFrame()</code> elsewhere in the course — see for example <a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a>, and <a href=/learn/javascript/objects/object_building_practice>Object building practice</a>.</p>
 </div>
 
 <p>The method takes as an argument a callback to be invoked before the repaint. This is the general pattern you'll see it used in:</p>
@@ -266,9 +266,9 @@ draw();</pre>
 <p>The idea is to define a function in which your animation is updated (e.g. your sprites are moved, score is updated, data is refreshed, or whatever). Then, you call it to start the process off. At the end of the function block you call <code>requestAnimationFrame()</code> with the function reference passed as the parameter, and this instructs the browser to call the function again on the next display repaint. This is then run continuously, as the code is calling <code>requestAnimationFrame()</code> recursively.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you want to perform some kind of simple constant DOM animation, <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> are probably faster. They are calculated directly by the browser's internal code, rather than JavaScript.</p>
+<p><strong>Note</strong>: If you want to perform some kind of simple constant DOM animation, <a href=/web/css/css_animations>CSS Animations</a> are probably faster. They are calculated directly by the browser's internal code, rather than JavaScript.</p>
 
-<p>If, however, you are doing something more complex and involving objects that are not directly accessible inside the DOM (such as <a href="/en-US/docs/Web/API/Canvas_API">2D Canvas API</a> or <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> objects), <code>requestAnimationFrame()</code> is the better option in most cases.</p>
+<p>If, however, you are doing something more complex and involving objects that are not directly accessible inside the DOM (such as <a href=/web/api/canvas_api>2D Canvas API</a> or <a href=/web/api/webgl_api>WebGL</a> objects), <code>requestAnimationFrame()</code> is the better option in most cases.</p>
 </div>
 
 <h3 id="How_fast_does_your_animation_run">How fast does your animation run?</h3>
@@ -451,7 +451,7 @@ let rAF;
 
 <p>One limitation of <code>requestAnimationFrame()</code> is that you can't choose your frame rate. This isn't a problem most of the time, as generally you want your animation to run as smoothly as possible. But what about when you want to create an old school, 8-bit-style animation?</p>
 
-<p>This was a problem, for example, in the Monkey Island-inspired walking animation from our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing Graphics</a> article:</p>
+<p>This was a problem, for example, in the Monkey Island-inspired walking animation from our <a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing Graphics</a> article:</p>
 
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}</p>
 
@@ -614,7 +614,7 @@ function start() {
   <ol>
    <li>First, cancel the spinner animation with {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (it is always good to clean up unneeded processes), and hide the spinner container.</li>
    <li>Next, display the results paragraph and set its text content to "PLAYERS GO!!" to signal to the players that they can now press their button to win.</li>
-   <li>Attach a <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> event listener to the document. When any button is pressed down, the <code>keyHandler()</code> function is run.</li>
+   <li>Attach a <code><a href=/web/api/document/keydown_event>keydown</a></code> event listener to the document. When any button is pressed down, the <code>keyHandler()</code> function is run.</li>
    <li>Inside <code>keyHandler()</code>, the code includes the event object as a parameter (represented by <code>e</code>) — its {{domxref("KeyboardEvent.key", "key")}} property contains the key that was just pressed, and you can use this to respond to specific key presses with specific actions.</li>
    <li>Set the variable <code>isOver</code> to false, so we can track whether the correct keys were pressed for player 1 or 2 to win. We don't want the game ending when a wrong key was pressed.</li>
    <li>Log <code>e.key</code> to the console, which is a useful way of finding out the <code>key</code> value of different keys you are pressing.</li>
@@ -639,12 +639,12 @@ function start() {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+ <li><a href=/learn/javascript/asynchronous/concepts>General asynchronous programming concepts</a></li>
+ <li><a href=/learn/javascript/asynchronous/introducing>Introducing asynchronous JavaScript</a></li>
+ <li><a href=/learn/javascript/asynchronous/timeouts_and_intervals>Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+ <li><a href=/learn/javascript/asynchronous/promises>Graceful asynchronous programming with Promises</a></li>
+ <li><a href=/learn/javascript/asynchronous/async_await>Making asynchronous programming easier with async and await</a></li>
+ <li><a href=/learn/javascript/asynchronous/choosing_the_right_approach>Choosing the right approach</a></li>
 </ul>
 
 <div id="gtx-trans" style="position: absolute; left: 70px; top: 13746px;">

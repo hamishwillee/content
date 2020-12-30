@@ -36,7 +36,7 @@ tags:
 
 <p>Background scripts are the place to put code that needs to maintain long-term state, or perform long-term operations, independently of the lifetime of any particular web pages or browser windows.</p>
 
-<p>Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled, unless <code>persistent</code> is specified as <code>false</code>. You can use any of the WebExtension APIs in the script, as long as you have requested the necessary <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>.</p>
+<p>Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled, unless <code>persistent</code> is specified as <code>false</code>. You can use any of the WebExtension APIs in the script, as long as you have requested the necessary <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a>.</p>
 
 <p>See the "Background pages" section in <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages">Anatomy of an extension</a> for some more details.</p>
 
@@ -56,7 +56,7 @@ tags:
     <p>If you specify a value for <code>scripts</code>, then an empty page will be created in which your scripts are run.</p>
 
     <div class="note">
-    <p><strong>Note:</strong> If you want to fetch a script from a remote location with the <code>&lt;script&gt;</code> tag (e.g. <code>&lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt;</code>), you will also have to change the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> key in the manifest.json file of your extension.</p>
+    <p><strong>Note:</strong> If you want to fetch a script from a remote location with the <code>&lt;script&gt;</code> tag (e.g. <code>&lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt;</code>), you will also have to change the <code><a href=/mozilla/add-ons/webextensions/manifest.json/content_security_policy>content_security_policy</a></code> key in the manifest.json file of your extension.</p>
     </div>
 
     <div class="note">
@@ -86,7 +86,7 @@ tags:
 
     <ul>
      <li><code>true</code> indicates the background page is to be kept in memory from when the extension is loaded or the browser starts until the extension is unloaded or disabled, or the browser is closed (i.e. the background page is persistent).</li>
-     <li><code>false</code> indicates the background page may be unloaded from memory when idle and recreated when needed. Such background pages are often called Event Pages, because they are loaded into memory to allow the background page to handle the events to which it has added listeners. Registration of listeners is persistent when the page is unloaded from memory, but other values are not persistent. If you want to store data persistently in an event page, then you should use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage API</a>.</li>
+     <li><code>false</code> indicates the background page may be unloaded from memory when idle and recreated when needed. Such background pages are often called Event Pages, because they are loaded into memory to allow the background page to handle the events to which it has added listeners. Registration of listeners is persistent when the page is unloaded from memory, but other values are not persistent. If you want to store data persistently in an event page, then you should use the <a href=/mozilla/add-ons/webextensions/api/storage>storage API</a>.</li>
     </ul>
    </td>
   </tr>

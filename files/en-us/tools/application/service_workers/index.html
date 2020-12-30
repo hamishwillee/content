@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>In this article we will look at debugging <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> using the Firefox DevTools <a href="/en-US/docs/Tools/Application">Application Panel</a>.</p>
+<p>In this article we will look at debugging <a href=/web/api/service_worker_api>service workers</a> using the Firefox DevTools <a href=/tools/application>Application Panel</a>.</p>
 
 <p>When you open the Application panel’s <em>Service Workers</em> view on a page that doesn't have a service worker registered, you'll get the following output shown:</p>
 
@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Getting_your_service_worker_to_register">Getting your service worker to register</h2>
 
-<p>Before you can look at your service worker in action in the <em>Applications</em> panel, you need to successfully register it. Registration is done with a block of code along these lines, using the <code><a href="/en-US/docs/Web/API/ServiceWorkerContainer/register">register()</a></code> method:</p>
+<p>Before you can look at your service worker in action in the <em>Applications</em> panel, you need to successfully register it. Registration is done with a block of code along these lines, using the <code><a href=/web/api/serviceworkercontainer/register>register()</a></code> method:</p>
 
 <pre class="brush: js notranslate">if('serviceWorker' in navigator) {
   navigator.serviceWorker
@@ -28,7 +28,7 @@ tags:
            .then(function() { console.log('Service Worker Registered'); });
 }</pre>
 
-<p>If you get the path wrong, for example, you'll get an error in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> giving you a hint as to what's wrong, which depends on what exactly is wrong with the code. If this is not enough to help you figure out the problem, you could also try going to the <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a> and stepping through your code to pinpoint exactly where it is going wrong.</p>
+<p>If you get the path wrong, for example, you'll get an error in the <a href=/tools/web_console>Web Console</a> giving you a hint as to what's wrong, which depends on what exactly is wrong with the code. If this is not enough to help you figure out the problem, you could also try going to the <a href=/tools/debugger>JavaScript Debugger</a> and stepping through your code to pinpoint exactly where it is going wrong.</p>
 
 <h2 id="Debugging_your_service_worker">Debugging your service worker</h2>
 
@@ -54,7 +54,7 @@ tags:
 
 <h3 id="Unregister">Unregister</h3>
 
-<p>On the right-hand side of the <em>Service Workers</em> view there is an <em>Unregister</em> button, which when pressed unregisters the service worker. This is very useful because, once registered, the service worker will not necessarily update to the new version immediately, which can make debugging a pain. From <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Updating_your_service_worker">Updating your service worker</a>:</p>
+<p>On the right-hand side of the <em>Service Workers</em> view there is an <em>Unregister</em> button, which when pressed unregisters the service worker. This is very useful because, once registered, the service worker will not necessarily update to the new version immediately, which can make debugging a pain. From <a href=/web/api/service_worker_api/using_service_workers#Updating_your_service_worker>Updating your service worker</a>:</p>
 
 <blockquote>
 <p>If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.</p>
@@ -66,15 +66,15 @@ tags:
 <p><strong>Important</strong>: The <em>Debug</em> button is currently enabled only in Firefox Nightly.</p>
 </div>
 
-<p>When your service worker is running, a <em>Debug</em> button is available next to the Source information (it is disabled when the service worker is stopped). When pressed, this takes you straight to the <a href="/en-US/docs/Tools/Debugger">JavaScript debugger</a> view of your service worker code, and you can use the full power of the debugger to debug it — stepping through code, etc.</p>
+<p>When your service worker is running, a <em>Debug</em> button is available next to the Source information (it is disabled when the service worker is stopped). When pressed, this takes you straight to the <a href=/tools/debugger>JavaScript debugger</a> view of your service worker code, and you can use the full power of the debugger to debug it — stepping through code, etc.</p>
 
 <p><img alt="the firefox JS debugger show the code for a service worker" src="https://mdn.mozillademos.org/files/17311/sw-debugger.jpg" style="border-style: solid; border-width: 1px; height: 667px; width: 900px;"></p>
 
 <h2 id="Testing_a_service_worker_cache">Testing a service worker cache</h2>
 
-<p>If you are using your service worker to store your site assets in Cache Storage (using the <a href="/en-US/docs/Web/API/Cache">Cache API</a>), which is essential for creating offline apps, it can be annoying to test the cache. When you fill up the cache with assets, but then want to alter the behavior slightly, you previously had to manually write code to empty the cache, and then fill it again.</p>
+<p>If you are using your service worker to store your site assets in Cache Storage (using the <a href=/web/api/cache>Cache API</a>), which is essential for creating offline apps, it can be annoying to test the cache. When you fill up the cache with assets, but then want to alter the behavior slightly, you previously had to manually write code to empty the cache, and then fill it again.</p>
 
-<p>The <a href="/en-US/docs/Tools/Storage_Inspector">Firefox DevTools’ Storage tab</a> has a Cache Storage section that lists all the different Caches you have stored under each different origin.</p>
+<p>The <a href=/tools/storage_inspector>Firefox DevTools’ Storage tab</a> has a Cache Storage section that lists all the different Caches you have stored under each different origin.</p>
 
 <p><img alt="the firefox storage inspector showing cache storage items" src="https://mdn.mozillademos.org/files/17314/sw-storage.jpg" style="border-style: solid; border-width: 1px; height: 689px; width: 900px;"></p>
 
@@ -89,7 +89,7 @@ tags:
 
 <p>These options make it much easier to remove a cache if it is required for testing a code update.</p>
 
-<p>It is also worth knowing that if you are testing an app's offline capabilities, you'll be able to see whether requests are being retrieved from a service worker-initiated cache rather than from the network by looking at <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>.</p>
+<p>It is also worth knowing that if you are testing an app's offline capabilities, you'll be able to see whether requests are being retrieved from a service worker-initiated cache rather than from the network by looking at <a href=/tools/network_monitor>Network Monitor</a>.</p>
 
 <p><img alt="the network monitor, showing that requests that come from a cache are marked with service worker" src="https://mdn.mozillademos.org/files/17309/cache-network.jpg" style="border-style: solid; border-width: 1px; height: 445px; width: 900px;"></p>
 

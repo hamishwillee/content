@@ -17,7 +17,7 @@ tags:
 ---
 <p>{{APIRef("Media Session API")}}</p>
 
-<p>The Boolean property <code><strong>fastSeek</strong></code> in the {{domxref("MediaSessionActionDetails")}} dictionary is an optional value which, when specified and <code>true</code>, indicates that the requested <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekto">seekto</a></code> operation is part of an ongoing series of <code>seekto</code> operations. Your handler should take steps to return as quickly as possible by skipping any steps of its operation which are only necessary when the seek operation is complete.</p>
+<p>The Boolean property <code><strong>fastSeek</strong></code> in the {{domxref("MediaSessionActionDetails")}} dictionary is an optional value which, when specified and <code>true</code>, indicates that the requested <code><a href=/web/api/mediasessionactiondetails#seekto>seekto</a></code> operation is part of an ongoing series of <code>seekto</code> operations. Your handler should take steps to return as quickly as possible by skipping any steps of its operation which are only necessary when the seek operation is complete.</p>
 
 <p>Once <code>fastSeek</code> is <code>false</code> or not present, the repeating series of <code>seekto</code> actions is complete and you can finalize the state of your web app or content.</p>
 
@@ -59,6 +59,6 @@ let <em>shouldFastSeek</em> = <em>mediaSessionActionDetails</em>.fastSeek;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a></li>
+ <li><a href=/web/api/media_session_api>Media Session API</a></li>
  <li>Refer to the {{domxref("MediaSession")}} method {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</li>
 </ul>

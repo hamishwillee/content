@@ -24,7 +24,7 @@ tags:
 </ul>
 
 <div class="notecard warning">
-<p>This API requires the presence of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> key in the manifest.json, even if no API script is specified. For example. <code>user_scripts: {}</code>.</p>
+<p>This API requires the presence of the <code><a href=/mozilla/add-ons/webextensions/manifest.json/user_scripts>user_scripts</a></code> key in the manifest.json, even if no API script is specified. For example. <code>user_scripts: {}</code>.</p>
 </div>
 
 <p>To use the API, call <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> passing in an object defining the scripts to register. The method returns a Promise that is resolved with a <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code> object.</p>
@@ -51,7 +51,7 @@ tags:
 
 <dl>
  <dt>{{WebExtAPIRef("userScripts.onBeforeScript")}}</dt>
- <dd>An event available to the API script, registered in<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">"user_scripts"</a></code>, that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.</dd>
+ <dd>An event available to the API script, registered in<code><a href=/mozilla/add-ons/webextensions/manifest.json/user_scripts>"user_scripts"</a></code>, that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -61,6 +61,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts">Working with <code>userScripts</code></a></li>
+ <li><a href=/mozilla/add-ons/webextensions/api/userscripts/working_with_userscripts>Working with <code>userScripts</code></a></li>
  <li>{{WebExtAPIRef("contentScripts","browser.contentScripts")}}</li>
 </ul>

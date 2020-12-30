@@ -25,10 +25,10 @@ tags:
  <li><em><code>algorithm</code></em> is a dictionary object defining the type of key to generate and providing extra algorithm-specific parameters.
 
   <ul>
-   <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>: pass an <code><a href="/en-US/docs/Web/API/RsaHashedKeyGenParams">RsaHashedKeyGenParams</a></code> object.</li>
-   <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a> or <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>: pass an <code><a href="/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams</a></code> object.</li>
-   <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: pass an <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> object.</li>
-   <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: pass an <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code> object.</li>
+   <li>For <a href=/web/api/subtlecrypto/sign#RSASSA-PKCS1-v1_5>RSASSA-PKCS1-v1_5</a>, <a href=/web/api/subtlecrypto/sign#RSA-PSS>RSA-PSS</a>, or <a href=/web/api/subtlecrypto/encrypt#RSA-OAEP>RSA-OAEP</a>: pass an <code><a href=/web/api/rsahashedkeygenparams>RsaHashedKeyGenParams</a></code> object.</li>
+   <li>For <a href=/web/api/subtlecrypto/sign#ECDSA>ECDSA</a> or <a href=/web/api/subtlecrypto/derivekey#ECDH>ECDH</a>: pass an <code><a href=/web/api/eckeygenparams>EcKeyGenParams</a></code> object.</li>
+   <li>For <a href=/web/api/subtlecrypto/sign#HMAC>HMAC</a>: pass an <code><a href=/web/api/hmackeygenparams>HmacKeyGenParams</a></code> object.</li>
+   <li>For <a href=/web/api/subtlecrypto/encrypt#AES-CTR>AES-CTR</a>, <a href=/web/api/subtlecrypto/encrypt#AES-CBC>AES-CBC</a>, <a href=/web/api/subtlecrypto/encrypt#AES-GCM>AES-GCM</a>, or <a href=/web/api/subtlecrypto/encrypt#AES-KW>AES-KW</a>: pass an <code><a href=/web/api/aeskeygenparams>AesKeyGenParams</a></code> object.</li>
   </ul>
  </li>
  <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.</li>

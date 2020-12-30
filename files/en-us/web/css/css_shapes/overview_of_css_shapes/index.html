@@ -51,7 +51,7 @@ tags:
 
 <p>We have already seen how <code>circle()</code> creates a circular shape. An <code>ellipse()</code> is essentially a squashed circle. If none of these simple shapes do the trick you can create a <code>polygon()</code> and make the shape as complex as you want.</p>
 
-<p>In our <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">Guide to Basic Shapes</a> we explore each of the possible Basic Shapes and how to create them.</p>
+<p>In our <a href=/web/css/css_shapes/basic_shapes>Guide to Basic Shapes</a> we explore each of the possible Basic Shapes and how to create them.</p>
 
 <h3 id="Shapes_from_the_Box_Value">Shapes from the Box Value</h3>
 
@@ -68,13 +68,13 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}</p>
 
-<p>To explore the box values in more detail see our guide covering <a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values">Shapes From Box Values</a>.</p>
+<p>To explore the box values in more detail see our guide covering <a href=/web/css/css_shapes/shapes_from_box_values>Shapes From Box Values</a>.</p>
 
 <h3 id="Shapes_from_images">Shapes from images</h3>
 
 <p>An interesting way to generate your path is to use an image with an alpha channel — the text will then wrap around the non-transparent parts of the image. This allows the overlay of wrapped content around an image, or the use of an image which is never displayed on the page purely as a method of creating a complex shape without needing to carefully map a polygon.</p>
 
-<p>Note that images used in this way must be <a href="/en-US/docs/Web/HTTP/CORS">CORS compatible</a>, otherwise <code>shape-outside</code> will act as if <code>none</code> had been given as the value, and you will get no shape.</p>
+<p>Note that images used in this way must be <a href=/web/http/cors>CORS compatible</a>, otherwise <code>shape-outside</code> will act as if <code>none</code> had been given as the value, and you will get no shape.</p>
 
 <p>In this next example, we have an image with a fully transparent area, and we are using an image as the URL value for <code>shape-outside</code>. The shape is created around the opaque area — the image of the balloon.</p>
 
@@ -88,7 +88,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}</p>
 
-<p>We take a deeper look at creating shapes from images in the <a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">Shapes from Images</a> guide.</p>
+<p>We take a deeper look at creating shapes from images in the <a href=/web/css/css_shapes/shapes_from_images>Shapes from Images</a> guide.</p>
 
 <h2 id="The_shape-margin_property">The <code>shape-margin</code> property</h2>
 
@@ -116,7 +116,7 @@ tags:
 
 <h2 id="Developer_Tools_for_Shapes">Developer Tools for Shapes</h2>
 
-<p>Along with CSS Shapes support in the browser, Firefox are shipping a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shape Path Editor</a> in the Firefox DevTools. This tool means that you can inspect any shapes on your page, and even change the values in the live page. If your polygon isn’t quite right you can use the Shapes Editor to tweak it, then copy the new value back into your CSS.</p>
+<p>Along with CSS Shapes support in the browser, Firefox are shipping a <a href=/tools/page_inspector/how_to/edit_css_shapes>Shape Path Editor</a> in the Firefox DevTools. This tool means that you can inspect any shapes on your page, and even change the values in the live page. If your polygon isn’t quite right you can use the Shapes Editor to tweak it, then copy the new value back into your CSS.</p>
 
 <p>The Shape Path Editor will be enabled by default in Firefox 60 for shapes generated via <code>clip-path</code>. You can also use it to edit shapes generated via <code>shape-outside</code>, but only when you enable it via the <code>layout.css.shape-outside.enabled</code> pref.</p>
 

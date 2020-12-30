@@ -137,7 +137,7 @@ tags:
 
 <ul>
  <li><a href="https://www.owasp.org/index.php/Clickjacking">Clickjacking</a>. In this attack, a malicious user hijacks clicks meant for a visible top-level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials into an invisible {{htmlelement("iframe")}} controlled by the attacker. Clickjacking could also be used to get the user to click a button on a visible site, but in doing so actually unwittingly click a completely different button. As a defense, your site can prevent itself from being embedded in an iframe in another site by setting the appropriate HTTP headers.</li>
- <li><a href="/en-US/docs/Glossary/Distributed_Denial_of_Service">Denial of Service</a> (DoS). DoS is usually achieved by flooding a target site with fake requests so that access to a site is disrupted for legitimate users. The requests may be numerous, or they may individually consume large amounts of resource (e.g., slow reads or uploading of large files). DoS defenses usually work by identifying and blocking "bad" traffic while allowing legitimate messages through. These defenses are typically located before or in the web server (they are not part of the web application itself).</li>
+ <li><a href=/glossary/distributed_denial_of_service>Denial of Service</a> (DoS). DoS is usually achieved by flooding a target site with fake requests so that access to a site is disrupted for legitimate users. The requests may be numerous, or they may individually consume large amounts of resource (e.g., slow reads or uploading of large files). DoS defenses usually work by identifying and blocking "bad" traffic while allowing legitimate messages through. These defenses are typically located before or in the web server (they are not part of the web application itself).</li>
  <li><a href="https://en.wikipedia.org/wiki/Directory_traversal_attack">Directory Traversal</a> (File and disclosure). In this attack, a malicious user attempts to access parts of the web server file system that they should not be able to access. This vulnerability occurs when the user is able to pass filenames that include file system navigation characters (for example, <code>../../</code>). The solution is to sanitize input before using it.</li>
  <li><a href="https://en.wikipedia.org/wiki/File_inclusion_vulnerability">File Inclusion</a>. In this attack, a user is able to specify an "unintended" file for display or execution in data passed to the server. When loaded, this file might be executed on the web server or the client-side (leading to an XSS attack). The solution is to sanitize input before using it.</li>
  <li><a href="https://www.owasp.org/index.php/Command_Injection">Command Injection</a>. Command injection attacks allow a malicious user to execute arbitrary system commands on the host operating system. The solution is to sanitize user input before it might be used in system calls.</li>
@@ -157,7 +157,7 @@ tags:
 
 <ul>
  <li>Use more effective password management. Encourage strong passwords that are changed regularly. Consider two-factor authentication for your site, so that in addition to a password the user must enter another authentication code (usually one that is delivered via some physical hardware that only the user will have, such as a code in an SMS sent to their phone).</li>
- <li>Configure your web server to use <a href="/en-US/docs/Glossary/https">HTTPS</a> and <a href="/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, <code>POST</code> requests data and header information are not easily available to attackers.</li>
+ <li>Configure your web server to use <a href=/glossary/https>HTTPS</a> and <a href=/web/security/http_strict_transport_security>HTTP Strict Transport Security</a> (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, <code>POST</code> requests data and header information are not easily available to attackers.</li>
  <li>Keep track of the most popular threats (the <a href="https://owasp.org/www-project-top-ten/">current OWASP list is here</a>) and address the most common vulnerabilities first.</li>
  <li>Use <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">vulnerability scanning tools</a> to perform automated security testing on your site. Later on, your very successful website may also find bugs by offering a bug bounty <a href="https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/">like Mozilla does here</a>.</li>
  <li>Only store and display data that you need. For example, if your users must store sensitive information like credit card details, only display enough of the card number that it can be identified by the user, and not enough that it can be copied by an attacker and used on another site. The most common pattern at this time is to only display the last 4 digits of a credit card number.</li>
@@ -169,15 +169,15 @@ tags:
 
 <p>This article has explained the concept of web security and some of the more common threats against which your website should attempt to protect. Most importantly, you should understand that a web application cannot trust any data from the web browser. All user data should be sanitized before it is displayed, or used in SQL queries and file system calls.</p>
 
-<p>With this article, you've come to the end of <a href="/en-US/docs/Learn/Server-side/First_steps">this module</a>, covering your first steps in server-side website programming. We hope you've enjoyed learning these fundamental concepts, and you're now ready to select a Web Framework and start programming.</p>
+<p>With this article, you've come to the end of <a href=/learn/server-side/first_steps>this module</a>, covering your first steps in server-side website programming. We hope you've enjoyed learning these fundamental concepts, and you're now ready to select a Web Framework and start programming.</p>
 
 <p>{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href=/learn/server-side/first_steps/introduction>Introduction to the server side</a></li>
+ <li><a href=/learn/server-side/first_steps/client-server_overview>Client-Server overview</a></li>
+ <li><a href=/learn/server-side/first_steps/web_frameworks>Server-side web frameworks</a></li>
+ <li><a href=/learn/server-side/first_steps/website_security>Website security</a></li>
 </ul>

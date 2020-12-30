@@ -11,7 +11,7 @@ tags:
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}</div>
 
 <div class="summary">
-<p>Until now we have created our own <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">shapes</a> and <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">applied styles</a> to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images.  These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!</p>
+<p>Until now we have created our own <a href=/web/api/canvas_api/tutorial/drawing_shapes>shapes</a> and <a href=/web/api/canvas_api/tutorial/applying_styles_and_colors>applied styles</a> to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images.  These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!</p>
 </div>
 
 <p>Importing images into a canvas is basically a two step process:</p>
@@ -54,7 +54,7 @@ tags:
 
 <h3 id="Using_images_from_other_domains">Using images from other domains</h3>
 
-<p>Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to <code>drawImage()</code>. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will <a href="/en-US/docs/Web/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" rel="internal">taint the canvas</a>.</p>
+<p>Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to <code>drawImage()</code>. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will <a href=/web/html/cors_enabled_image#What_is_a_.22tainted.22_canvas.3F rel="internal">taint the canvas</a>.</p>
 
 <h3 id="Using_other_canvas_elements">Using other canvas elements</h3>
 
@@ -85,13 +85,13 @@ img.src = 'myImage.png'; // Set source path
 
 <h3 id="Embedding_an_image_via_data_URL">Embedding an image via data: URL</h3>
 
-<p>Another possible way to include images is via the <a class="external" href="/en-US/docs/Web/HTTP/data_URIs" rel="external">data: url</a>. Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.</p>
+<p>Another possible way to include images is via the <a class="external" href=/web/http/data_uris rel="external">data: url</a>. Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.</p>
 
 <pre class="brush: js">var img = new Image();   // Create new img element
 img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
 </pre>
 
-<p>One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your <a href="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, <a href="/en-US/docs/Web/HTML">HTML</a>, and images, making it more portable to other locations.</p>
+<p>One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your <a href=/web/css>CSS</a>, <a href=/web/javascript>JavaScript</a>, <a href=/web/html>HTML</a>, and images, making it more portable to other locations.</p>
 
 <p>Some disadvantages of this method are that your image is not cached, and for larger images the encoded url can become quite long.</p>
 

@@ -16,7 +16,7 @@ tags:
 
 <p>The <code>pkcs11</code> API enables an extension to enumerate <a href="https://en.wikipedia.org/wiki/PKCS_11">PKCS #11</a> security modules and to make them accessible to the browser as sources of keys and certificates.</p>
 
-<p>To use this API you need to have the "pkcs11" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+<p>To use this API you need to have the "pkcs11" <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>.</p>
 
 <h2 id="Using_the_Firefox_Preferences_Dialog_to_Install_PKCS_11_Modules">Using the Firefox Preferences Dialog to Install PKCS #11 Modules</h2>
 
@@ -62,14 +62,14 @@ tags:
 
 <ul>
  <li>One or more <code>PKCS #11</code> modules must be installed on the user's computer</li>
- <li>For each installed <code>PKCS #11</code> module, there must be a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">native manifest</a> file that enables the browser to locate the module.</li>
+ <li>For each installed <code>PKCS #11</code> module, there must be a <a href=/mozilla/add-ons/webextensions/native_manifests>native manifest</a> file that enables the browser to locate the module.</li>
 </ul>
 
 <p>Most probably, the user or device administrator would install the <code>PKCS #11 </code>module, and its installer would install the native manifest file at the same time.</p>
 
 <p>However, the module and manifest can't be installed as part of the extension's own installation process.</p>
 
-<p>For details about the manifest file's contents and location, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">Native manifests</a>.</p>
+<p>For details about the manifest file's contents and location, see <a href=/mozilla/add-ons/webextensions/native_manifests>Native manifests</a>.</p>
 
 <h2 id="Functions">Functions</h2>
 

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("XDomain")}}{{obsolete_header}}{{non-standard_header}}</div>
 
-<p>XDomainRequest is an implementation of <a href="/en-US/docs/HTTP/Access_control_CORS">HTTP access control (CORS) </a>that worked in Internet Explorer 8 and 9. It was removed in Internet Explorer 10 in favor of using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest </a>with proper CORS; if you are targeting Internet Explorer 10 or later, or wish to support any other browser, you need to use standard <a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a>.</p>
+<p>XDomainRequest is an implementation of <a href=/http/access_control_cors>HTTP access control (CORS) </a>that worked in Internet Explorer 8 and 9. It was removed in Internet Explorer 10 in favor of using <a href=/web/api/xmlhttprequest>XMLHttpRequest </a>with proper CORS; if you are targeting Internet Explorer 10 or later, or wish to support any other browser, you need to use standard <a href=/web/http/access_control_cors>HTTP access control</a>.</p>
 
 <p>This interface can send both GET and POST requests.</p>
 
@@ -97,7 +97,7 @@ tags:
 
 <ul>
  <li>The origin's security protocol must match that of the requested URL. (http to http, https to https). If these do not match, the request will error "Access is Denied".</li>
- <li>The requested URL's server must have the <a href="/en-US/docs/Web/HTTP/Access_control_CORS#Access-Control-Allow-Origin"><code>Access-Control-Allow-Origin</code></a> header set to either all ("*") or to include the origin of the request.</li>
+ <li>The requested URL's server must have the <a href=/web/http/access_control_cors#Access-Control-Allow-Origin><code>Access-Control-Allow-Origin</code></a> header set to either all ("*") or to include the origin of the request.</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>

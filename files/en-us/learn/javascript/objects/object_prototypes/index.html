@@ -23,14 +23,14 @@ tags:
 <p class="summary">Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain how prototype chains work and look at how the <code>prototype</code> property can be used to add methods to existing constructors.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note</strong>: This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ECMAScript 2015 classes</a>.</p>
+<p class="summary"><strong>Note</strong>: This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href=/learn/javascript/objects/inheritance#ECMAScript_2015_Classes>ECMAScript 2015 classes</a>.</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Understanding JavaScript functions, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>), and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Understanding JavaScript functions, familiarity with JavaScript basics (see <a href=/learn/javascript/first_steps>First steps</a> and <a href=/learn/javascript/building_blocks>Building blocks</a>), and OOJS basics (see <a href=/learn/javascript/object-oriented/introduction>Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -48,7 +48,7 @@ tags:
 <p>In JavaScript, a link is made between the object instance and its prototype (its <code>__proto__</code> property, which is derived from the <code>prototype</code> property on the constructor), and the properties and methods are found by walking up the chain of prototypes.</p>
 
 <div class="note">
-<p><strong>Note:</strong> It's important to understand that there is a distinction between <strong>an object's <code>prototype</code></strong> (available via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code>, or via the deprecated <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> property) and <strong>the <code>prototype</code> property on constructor functions</strong>.</p>
+<p><strong>Note:</strong> It's important to understand that there is a distinction between <strong>an object's <code>prototype</code></strong> (available via <code><a href=/web/javascript/reference/global_objects/object/getprototypeof>Object.getPrototypeOf(<var>obj</var>)</a></code>, or via the deprecated <code><a href=/web/javascript/reference/global_objects/object/proto>__proto__</a></code> property) and <strong>the <code>prototype</code> property on constructor functions</strong>.</p>
 
 <p>The former is the property on each instance, and the latter is the property on the constructor. That is, <code>Object.getPrototypeOf(new <var>Foobar</var>())</code> refers to the same object as <code><var>Foobar</var>.prototype</code>.</p>
 </div>
@@ -101,31 +101,31 @@ tags:
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The prototype chain is traversed only while retrieving properties. If properties are set or <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>d directly on the object, the prototype chain is not traversed.</p>
+<p><strong>Note</strong>: The prototype chain is traversed only while retrieving properties. If properties are set or <code><a href=/web/javascript/reference/operators/delete>delete</a></code>d directly on the object, the prototype chain is not traversed.</p>
 </div>
 
 <div class="note">
 <p><strong>Note</strong>: Before ECMAScript 2015, there wasn't officially a way to access an object's <code>prototype</code> directly — the "links" between the items in the chain are defined in an internal property, referred to as <code>[[prototype]]</code> in the specification for the JavaScript language (see {{glossary("ECMAScript")}}).</p>
 
-<p>Most modern browsers, however, do offer property available called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (that's 2 underscores either side), which contains the object's constructor's <code>prototype </code>object. For example, try <code>person1.__proto__</code> and <code>person1.__proto__.__proto__</code> to see what the chain looks like in code!</p>
+<p>Most modern browsers, however, do offer property available called <code><a href=/web/javascript/reference/global_objects/object/proto>__proto__</a></code> (that's 2 underscores either side), which contains the object's constructor's <code>prototype </code>object. For example, try <code>person1.__proto__</code> and <code>person1.__proto__.__proto__</code> to see what the chain looks like in code!</p>
 
 <p>Since ECMAScript 2015, you can access an object's prototype object indirectly via <code>Object.getPrototypeOf(obj)</code>.</p>
 </div>
 
 <h2 id="The_prototype_property_Where_inherited_members_are_defined">The prototype property: Where inherited members are defined</h2>
 
-<p>So, where are the inherited properties and methods defined? If you look at the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> reference page, you'll see listed in the left hand side a large number of properties and methods — many more than the number of inherited members we saw available on the <code>person1</code> object. Some are inherited, and some aren't — why is this?</p>
+<p>So, where are the inherited properties and methods defined? If you look at the <code><a href=/web/javascript/reference/global_objects/object>Object</a></code> reference page, you'll see listed in the left hand side a large number of properties and methods — many more than the number of inherited members we saw available on the <code>person1</code> object. Some are inherited, and some aren't — why is this?</p>
 
 <p>As mentioned above, the inherited ones are the ones defined on the <code>prototype</code> property (you could call it a sub-namespace) — that is, the ones that begin with <code>Object.prototype.</code>, and not the ones that begin with just <code>Object.</code> The <code>prototype</code> property's value is an object, which is basically a bucket for storing properties and methods that we want to be inherited by objects further down the prototype chain.</p>
 
-<p>So <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.prototype.toString()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf()</a></code>, etc., are available to any object types that inherit from <code>Object.prototype</code>, including new object instances created from the <code>Person()</code> constructor.</p>
+<p>So <code><a href=/web/javascript/reference/global_objects/object/tostring>Object.prototype.toString()</a></code>, <code><a href=/web/javascript/reference/global_objects/object/valueof>Object.prototype.valueOf()</a></code>, etc., are available to any object types that inherit from <code>Object.prototype</code>, including new object instances created from the <code>Person()</code> constructor.</p>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>, and other members not defined inside the <code>prototype</code> bucket are not inherited by object instances or object types that inherit from <code>Object.prototype</code>. They are methods/properties available just on the <code>Object()</code> constructor itself.</p>
+<p><code><a href=/web/javascript/reference/global_objects/object/is>Object.is()</a></code>, <code><a href=/web/javascript/reference/global_objects/object/keys>Object.keys()</a></code>, and other members not defined inside the <code>prototype</code> bucket are not inherited by object instances or object types that inherit from <code>Object.prototype</code>. They are methods/properties available just on the <code>Object()</code> constructor itself.</p>
 
 <div class="note">
 <p><strong>Note</strong>: This seems strange — how can you have a method defined on a constructor, which is itself a function?</p>
 
-<p>Well, a function is also a type of object. See the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> constructor reference if you don't believe us.</p>
+<p>Well, a function is also a type of object. See the <code><a href=/web/javascript/reference/global_objects/function>Function()</a></code> constructor reference if you don't believe us.</p>
 </div>
 
 <ol>
@@ -139,14 +139,14 @@ tags:
 
 <p>You'll see a large number of methods defined on <code>Object</code>'s <code>prototype</code> property, which are then available on objects that inherit from <code>Object</code>, as shown earlier.</p>
 
-<p>You'll see other examples of prototype chain inheritance all over JavaScript — try looking for the methods and properties defined on the prototype of the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> global objects, for example. These all have a number of members defined on their prototype, which is why for example when you create a string, like this:</p>
+<p>You'll see other examples of prototype chain inheritance all over JavaScript — try looking for the methods and properties defined on the prototype of the <code><a href=/web/javascript/reference/global_objects/string>String</a></code>, <code><a href=/web/javascript/reference/global_objects/date>Date</a></code>, <code><a href=/web/javascript/reference/global_objects/number>Number</a></code>, and <code><a href=/web/javascript/reference/global_objects/array>Array</a></code> global objects, for example. These all have a number of members defined on their prototype, which is why for example when you create a string, like this:</p>
 
 <pre class="brush: js   notranslate">let myString = 'This is my string.';</pre>
 
-<p><code>myString</code> immediately has a number of useful methods available on it, like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code>, etc.</p>
+<p><code>myString</code> immediately has a number of useful methods available on it, like <code><a href=/web/javascript/reference/global_objects/string/split>split()</a></code>, <code><a href=/web/javascript/reference/global_objects/string/indexof>indexOf()</a></code>, <code><a href=/web/javascript/reference/global_objects/string/replace>replace()</a></code>, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It is worth reading our more in-depth guide to "<a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript">Using prototypes in JavaScript</a>", once you've made sense of this section and wish to know more. This section is intentionally simplified to make these concepts a little easier to understand when you first meet them.</p>
+<p><strong>Note</strong>: It is worth reading our more in-depth guide to "<a href=/web/javascript/inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript>Using prototypes in JavaScript</a>", once you've made sense of this section and wish to know more. This section is intentionally simplified to make these concepts a little easier to understand when you first meet them.</p>
 </div>
 
 <div class="warning">
@@ -155,7 +155,7 @@ tags:
 
 <h2 id="Revisiting_create">Revisiting create()</h2>
 
-<p>Earlier on we showed how the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code> method can be used to create a new object instance.</p>
+<p>Earlier on we showed how the <code><a href=/web/javascript/reference/global_objects/object/create>Object.create()</a></code> method can be used to create a new object instance.</p>
 
 <ol>
  <li>For example, try this in your previous example's JavaScript console:
@@ -170,7 +170,7 @@ tags:
 
 <h2 id="The_constructor_property">The constructor property</h2>
 
-<p>Every constructor function has a <code>prototype</code> property whose value is an object containing a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code> property. This <code>constructor</code> property points to the original constructor function.</p>
+<p>Every constructor function has a <code>prototype</code> property whose value is an object containing a <code><a href=/web/javascript/reference/global_objects/object/constructor>constructor</a></code> property. This <code>constructor</code> property points to the original constructor function.</p>
 
 <p>As you will see in the next section, properties defined on the <code>Person.prototype</code> property (or in general on a constructor function's <code>prototype</code> property, which is an object, as mentioned in the above section) become available to all the instance objects created using the <code>Person()</code> constructor. Hence, the constructor property is also available to both <code>person1</code> and <code>person2</code> objects.</p>
 
@@ -195,7 +195,7 @@ person3.bio()</pre>
 
 <p>This works well. You won't need to use it often, but it can be really useful when you want to create a new instance and don't have a reference to the original constructor easily available for some reason.</p>
 
-<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code> property has other uses. For example, if you have an object instance and you want to return the name of the constructor it is an instance of, you can use the following:</p>
+<p>The <code><a href=/web/javascript/reference/global_objects/object/constructor>constructor</a></code> property has other uses. For example, if you have an object instance and you want to return the name of the constructor it is an instance of, you can use the following:</p>
 
 <pre class="brush: js   notranslate">instanceName.constructor.name</pre>
 
@@ -205,7 +205,7 @@ person3.bio()</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The value of <code>constructor.name</code> can change (due to prototypical inheritance, binding, preprocessors, transpilers, etc.). Therefore, for more complex examples, you'll want to use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></code> operator instead. </p>
+<p><strong>Note</strong>: The value of <code>constructor.name</code> can change (due to prototypical inheritance, binding, preprocessors, transpilers, etc.). Therefore, for more complex examples, you'll want to use the <code><a href=/web/javascript/reference/operators/instanceof>instanceof</a></code> operator instead. </p>
 </div>
 
 <h2 id="Modifying_prototypes">Modifying prototypes</h2>
@@ -242,11 +242,11 @@ Person.prototype.farewell = function() {
 
 <p>But the <code>farewell()</code> method is <em>still</em> available on the <code>person1</code> object instance — its members have been automatically updated to include the newly defined <code>farewell()</code> method.</p>
 
-<div class="note"><strong>Note</strong>: Conversely, deleting properties defined on the constructor's prototype using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> operator removes the respective properties from all other class instances too.<br>
+<div class="note"><strong>Note</strong>: Conversely, deleting properties defined on the constructor's prototype using the <code><a href=/web/javascript/reference/operators/delete>delete</a></code> operator removes the respective properties from all other class instances too.<br>
 <br>
 In the above example, performing <code>delete person1.__proto__.farewell</code> or <code>delete Person.prototype.farewell</code> would remove the <code>farewell()</code> method from all <code>Person</code> instances.<br>
 <br>
-In order to mitigate this issue, you could use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> instead.</div>
+In order to mitigate this issue, you could use <code><a href=/web/javascript/reference/global_objects/object/defineproperty>Object.defineProperty()</a></code> instead.</div>
 
 <div class="note">
 <p><strong>Note</strong>: If you are having trouble getting this example to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> example (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">running live</a> also).</p>
@@ -284,7 +284,7 @@ Test.prototype.y = function() { ... };
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript">Test your skills: Object-oriented JavaScript</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/objects/test_your_skills:_object-oriented_javascript>Test your skills: Object-oriented JavaScript</a>.</p>
 
 <p>Note that this set of tests relies on some of the knowledge taught in the next article, so you might want to read that first before you try them.</p>
 
@@ -299,11 +299,11 @@ Test.prototype.y = function() { ... };
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+ <li><a href=/learn/javascript/objects/basics>Object basics</a></li>
+ <li><a href=/learn/javascript/objects/object-oriented_js>Object-oriented JavaScript for beginners</a></li>
+ <li><a href=/learn/javascript/objects/object_prototypes>Object prototypes</a></li>
+ <li><a href=/learn/javascript/objects/inheritance>Inheritance in JavaScript</a></li>
+ <li><a href=/learn/javascript/objects/json>Working with JSON data</a></li>
+ <li><a href=/learn/javascript/objects/object_building_practice>Object building practice</a></li>
+ <li><a href=/learn/javascript/objects/adding_bouncing_balls_features>Adding features to our bouncing balls demo</a></li>
 </ul>

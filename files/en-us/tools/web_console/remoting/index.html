@@ -264,7 +264,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Page_errors">Page errors</h2>
 
-<p>Page errors come from the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a>. Each allowed page error is an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> object.</p>
+<p>Page errors come from the <a href=/xpcom_interface_reference/nsiconsoleservice><code>nsIConsoleService</code></a>. Each allowed page error is an <a href=/xpcom_interface_reference/nsiscripterror><code>nsIScriptError</code></a> object.</p>
 
 <p>The <code>pageError</code> packet is:</p>
 
@@ -296,7 +296,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Console_API_messages">Console API messages</h2>
 
-<p>The <a href="/en-US/docs/DOM/console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
+<p>The <a href=/dom/console><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
 
 <p>We use the <code>ObjectActor</code> from <a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> without a <code>ThreadActor</code>, to avoid slowing down the page scripts - the debugger deoptimizes JavaScript execution in the target page. The <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Grip_Lifetimes">lifetime of object actors</a> in the Web Console is different than the lifetime of these objects in the debugger - which is usually per pause or per thread. The Web Console manages the lifetime of <code>ObjectActors</code> manually.</p>
 
@@ -304,7 +304,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 <p>Prior to Firefox 23 we used a different actor (<code>WebConsoleObjectActor</code>) for working with JavaScript objects through the protocol. In <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> we did a number of changes that allowed us to reuse the <code>ObjectActor</code> from the debugger.</p>
 </div>
 
-<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIOb<span style="display: none;"> </span>serverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
+<p>Console API messages come through the <a href=/xpcom_interface_reference/nsiobserverservice><code>nsIOb<span style="display: none;"> </span>serverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
 
 <p>For each console message we receive in the server, we send the following <code>consoleAPICall</code> packet to the client:</p>
 
@@ -357,7 +357,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 }
 </pre>
 
-<p>The <code>bindObjectActor</code> property is an optional <code>ObjectActor</code> ID that points to a <code>Debugger.Object</code>. This option allows you to bind <code>_self</code> to the <code>Debugger.Object</code> of the given object actor, during string evaluation. See <a href="/en-US/docs/SpiderMonkey/JS_Debugger_API_Reference/Debugger.Object#evalInGlobalWithBindings%28%29"><code>evalInGlobalWithBindings()</code></a> for information about bindings.</p>
+<p>The <code>bindObjectActor</code> property is an optional <code>ObjectActor</code> ID that points to a <code>Debugger.Object</code>. This option allows you to bind <code>_self</code> to the <code>Debugger.Object</code> of the given object actor, during string evaluation. See <a href=/spidermonkey/js_debugger_api_reference/debugger.object#evalInGlobalWithBindings%28%29><code>evalInGlobalWithBindings()</code></a> for information about bindings.</p>
 
 <div class="note">
 <p>The variable view needs to update objects and it does so by binding <code>_self</code> to the <code>Debugger.Object</code> of the <code>ObjectActor</code> that is being viewed. As such, variable view sends strings like these for evaluation:</p>
@@ -366,7 +366,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 </pre>
 </div>
 
-<p>The <code>frameActor</code> property is an optional <code>FrameActor</code> ID. The FA holds a reference to a <a href="/en-US/docs/SpiderMonkey/JS_Debugger_API_Reference/Debugger.Frame"><code>Debugger.Frame</code></a>. This option allows you to evaluate the string in the frame of the given FA.</p>
+<p>The <code>frameActor</code> property is an optional <code>FrameActor</code> ID. The FA holds a reference to a <a href=/spidermonkey/js_debugger_api_reference/debugger.frame><code>Debugger.Frame</code></a>. This option allows you to evaluate the string in the frame of the given FA.</p>
 
 <p>The <code>url</code> property is an optional URL to evaluate the script as (new in Firefox 25). The default source URL for evaluation is "debugger eval code".</p>
 
@@ -456,7 +456,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 }
 </pre>
 
-<p>This packet is used to inform the Web Console of a new network event. For each request a new <code>NetworkEventActor</code> instance is created. The <code>isXHR</code> flag indicates if the request was initiated via an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> instance, that is: the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a>'s notification is of an <a href="/en-US/docs/nsIXMLHttpRequest">nsIXMLHttpRequest</a> interface.</p>
+<p>This packet is used to inform the Web Console of a new network event. For each request a new <code>NetworkEventActor</code> instance is created. The <code>isXHR</code> flag indicates if the request was initiated via an <a href=/web/api/xmlhttprequest>XMLHttpRequest</a> instance, that is: the <a href=/xpcom_interface_reference/nsihttpchannel>nsIHttpChannel</a>'s notification is of an <a href=/nsixmlhttprequest>nsIXMLHttpRequest</a> interface.</p>
 
 <p>The <code>private</code> flag tells if the network request comes from a private window/tab (added in Firefox 24).</p>
 

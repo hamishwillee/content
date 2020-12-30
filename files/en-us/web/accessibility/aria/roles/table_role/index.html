@@ -10,9 +10,9 @@ tags:
   - Reference
   - Table Role
 ---
-<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
+<div>{{Page(/web/accessibility/aria/roles, "Subnav")}}</div>
 
-<p>The table value of the ARIA role attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native <a href="/en-US/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> HTML element.</p>
+<p>The table value of the ARIA role attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native <a href=/web/html/element/table><code>&lt;table&gt;</code></a> HTML element.</p>
 
 <pre class="brush: html">&lt;div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
   &lt;div id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/div&gt;
@@ -48,16 +48,16 @@ tags:
 <p>An element with role="table" is a static tabular structure with rows containing cells. The cells are not focusable or selectable, though widgets within individual cells of the table can be interactive. Using a native HTML table element whenever possible is strongly encouraged.</p>
 
 <div class="warning">
-<p>If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use <a href=/web/accessibility/aria/roles/grid_role>grid</a> or <a href=/>treegrid</a> instead.</p>
 </div>
 
 <p>To create an ARIA table, add <code>role="table"</code> to the container element. Within that container, each row has <code>role="row"</code> set and contains child cells. Each cell has a role of either <code>columnheader</code>, <code>rowheader</code>, or <code>cell</code>. Rows can be children of the table or within a <code>rowgroup</code>.</p>
 
 <p>The table caption can be defined via aria-labelledby or aria-label.  All other semantic table elements, such as <code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> need to be added via associated roles, such as <code>rowgroup</code>, <code>row</code>, <code>columnheader</code>, and <code>cell</code>.</p>
 
-<p>If the table contains sortable columns or rows, the <code>aria-sort</code> attribute should be added on the header cell element (not the table itself). If any rows or columns are hidden, the <code>aria-colcount</code> or <code>aria-rowcount</code> should be included indicating the total number of columns or rows, respectively, along with the <code>aria-colindex</code> or <code>aria-rowindex</code> on each cell. The <code>aria-colindex</code> or <code>aria-rowindex</code> is set to the position of a cell within the row or column, respectively. If the table includes cells that span multiple rows or multiple columns, then <code>aria-rowspan</code> or <code>aria-colspan</code> should be included as well. Realize, it is much simpler to use the <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> element, along with all the related semantic elements and attributes that are all supported by all assistive technologies.</p>
+<p>If the table contains sortable columns or rows, the <code>aria-sort</code> attribute should be added on the header cell element (not the table itself). If any rows or columns are hidden, the <code>aria-colcount</code> or <code>aria-rowcount</code> should be included indicating the total number of columns or rows, respectively, along with the <code>aria-colindex</code> or <code>aria-rowindex</code> on each cell. The <code>aria-colindex</code> or <code>aria-rowindex</code> is set to the position of a cell within the row or column, respectively. If the table includes cells that span multiple rows or multiple columns, then <code>aria-rowspan</code> or <code>aria-colspan</code> should be included as well. Realize, it is much simpler to use the <code><a href=/web/html/element/table>&lt;table&gt;</a></code> element, along with all the related semantic elements and attributes that are all supported by all assistive technologies.</p>
 
-<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href=/web/accessibility/aria/roles/grid_role>grid</a> or <a href=/>treegrid</a> instead.</p>
 
 <div class="note">
 <p>Note: Using a native HTML table element whenever possible is strongly encouraged.</p>
@@ -68,7 +68,7 @@ tags:
 <dl>
  <dt>role="rowgroup"</dt>
  <dd>An optional child of the table, the row group encapsulates a group of rows, similar to thead, tbody, and tfoot.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">role="row"</a></dt>
+ <dt><a href=/web/accessibility/aria/roles/row_role>role="row"</a></dt>
  <dd>A row within the table, and optionally within a rowgroup, that is a container for one or more cells, columnheaders, or rowheaders.</dd>
  <dt>aria-describedby attribute</dt>
  <dd>Takes as its value the id of the element that serves as a description for the table.</dd>
@@ -88,7 +88,7 @@ tags:
 
 <h3 id="Required_JavaScript_features">Required JavaScript features</h3>
 
-<p>None. For sortable columns, see the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a> aria role.</p>
+<p>None. For sortable columns, see the <a href=/web/accessibility/aria/roles/columnheader_role>columnheader</a> aria role.</p>
 
 <div class="note">
 <p><span class="ILfuVd yZ8quc">The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. Employ the HTML &lt;table&gt; element instead of the ARIA role of table whenever possible.</span></p>
@@ -157,6 +157,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table element</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">ARIA: grid role</a></li>
+ <li><a href=/learn/html/tables/advanced>HTML table element</a></li>
+ <li><a href=/web/accessibility/aria/roles/grid_role>ARIA: grid role</a></li>
 </ul>

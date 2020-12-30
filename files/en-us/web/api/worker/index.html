@@ -13,17 +13,17 @@ tags:
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be created via script, which can send messages back to its creator.</span> Creating a worker is done by calling the <code>Worker("path/to/worker/script")</code> constructor.</p>
+<p><span class="seoSummary">The <strong><code>Worker</code></strong> interface of the <a href=/web/api/web_workers_api>Web Workers API</a> represents a background task that can be created via script, which can send messages back to its creator.</span> Creating a worker is done by calling the <code>Worker("path/to/worker/script")</code> constructor.</p>
 
-<p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href="/en-US/docs/Web/Security/Same-origin_policy">origin</a> as the parent page. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">nested workers are not yet implemented in WebKit</a>).</p>
+<p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href=/web/security/same-origin_policy>origin</a> as the parent page. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">nested workers are not yet implemented in WebKit</a>).</p>
 
-<p><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers" title="Functions and classes available to Web Workers">Not all interfaces and functions are available</a> to scripts inside a <code>Worker</code>. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its <code>responseXML</code> and <code>channel</code> attributes are always <code>null</code>. (<code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> is also available, with no such restrictions.)</p>
+<p><a href=/web/api/web_workers_api/functions_and_classes_available_to_workers title="Functions and classes available to Web Workers">Not all interfaces and functions are available</a> to scripts inside a <code>Worker</code>. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its <code>responseXML</code> and <code>channel</code> attributes are always <code>null</code>. (<code><a href=/web/api/fetch_api>fetch</a></code> is also available, with no such restrictions.)</p>
 
 <h2 id="Constructors">Constructors</h2>
 
 <dl>
  <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>Creates a dedicated web worker that executes the script at the specified URL. This also works for <a href="/en-US/docs/Web/API/Blob">Blob URLs</a>.</dd>
+ <dd>Creates a dedicated web worker that executes the script at the specified URL. This also works for <a href=/web/api/blob>Blob URLs</a>.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -49,24 +49,24 @@ tags:
  <dt>{{domxref("Worker.postMessage()")}}</dt>
  <dd>Sends a message — consisting of any JavaScript object — to the worker's inner scope.</dd>
  <dt>{{domxref("Worker.terminate()")}}</dt>
- <dd>Immediately terminates the worker. This does not let worker finish its operations; it is halted at once. <code><a href="/en-US/docs/Web/API/ServiceWorker">ServiceWorker</a></code> instances do not support this method.</dd>
+ <dd>Immediately terminates the worker. This does not let worker finish its operations; it is halted at once. <code><a href=/web/api/serviceworker>ServiceWorker</a></code> instances do not support this method.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/API/Worker/message_event">message</a></code></dt>
+ <dt><code><a href=/web/api/worker/message_event>message</a></code></dt>
  <dd>Fires when the worker's parent receives a message from that worker.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/Worker/messageerror_event">messageerror</a></code></dt>
- <dd>Fires when a <code>Worker</code> object receives a message that can't be <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">deserialized</a>.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/Worker/onmessageerror">onmessageerror</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code></dt>
+ Also available via the <code><a href=/web/api/worker/onmessage>onmessage</a></code> property.</dd>
+ <dt><code><a href=/web/api/worker/messageerror_event>messageerror</a></code></dt>
+ <dd>Fires when a <code>Worker</code> object receives a message that can't be <a href=/web/api/web_workers_api/structured_clone_algorithm>deserialized</a>.<br>
+ Also available via the <code><a href=/web/api/worker/onmessageerror>onmessageerror</a></code> property.</dd>
+ <dt><code><a href=/web/api/window/rejectionhandled_event>rejectionhandled</a></code></dt>
  <dd>Fires every time a {{jsxref("Promise")}} rejects, regardless of whether or not there is a handler to catch the rejection.<br>
- Also available through the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code> event handler property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code></dt>
+ Also available through the <code><a href=/web/api/windoweventhandlers/onrejectionhandled>onrejectionhandled</a></code> event handler property.</dd>
+ <dt><code><a href=/web/api/window/unhandledrejection_event>unhandledrejection</a></code></dt>
  <dd>Fires when a {{jsxref("Promise")}} rejects with no handler to catch the rejection.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code> event handler property.</dd>
+ Also available using the <code><a href=/web/api/windoweventhandlers/onunhandledrejection>onunhandledrejection</a></code> event handler property.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -114,7 +114,7 @@ first.onchange = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="en/Using DOM workers">Using Web Workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a></li>
- <li>Other kind of workers: {{domxref("SharedWorker")}} and <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>.</li>
+ <li><a class="internal" href=/web/api/web_workers_api/using_web_workers title="en/Using DOM workers">Using Web Workers</a></li>
+ <li><a href=/web/api/web_workers_api/functions_and_classes_available_to_workers>Functions and classes available to Web Workers</a></li>
+ <li>Other kind of workers: {{domxref("SharedWorker")}} and <a href=/web/api/service_worker_api>Service Worker</a>.</li>
 </ul>

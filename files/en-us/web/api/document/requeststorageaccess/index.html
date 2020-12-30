@@ -44,7 +44,7 @@ tags:
  <li>The origin is given an ephemeral storage access grant for the current top-level origin.</li>
  <li>The number of origins the requesting origin has storage access to is incremented by one.
   <ul>
-   <li>Note that this number is also incremented when automatic access grants are given through <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Automatic_storage_access_upon_interaction">our compatibility heuristics</a>.</li>
+   <li>Note that this number is also incremented when automatic access grants are given through <a href=/mozilla/firefox/privacy/storage_access_policy#Automatic_storage_access_upon_interaction>our compatibility heuristics</a>.</li>
   </ul>
  </li>
  <li>The ephemeral storage access grant is:
@@ -75,7 +75,7 @@ tags:
 <p>When an ephemeral or persistent storage access grant expires, the number of origins the requesting origin has storage access to is decremented by one.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If the requesting origin is not <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Tracking_protection_explained">classified as a tracking origin</a>, the access request is automatically given an ephemeral storage access grant, which will go away when the page is reloaded. The user is never shown a prompt in this case, and calling <code>requestStorageAccess()</code> won’t have any side effects besides changing the value returned by {{domxref("Document.hasStorageAccess()")}}.</p>
+<p><strong>Note</strong>: If the requesting origin is not <a href=/mozilla/firefox/privacy/storage_access_policy#Tracking_protection_explained>classified as a tracking origin</a>, the access request is automatically given an ephemeral storage access grant, which will go away when the page is reloaded. The user is never shown a prompt in this case, and calling <code>requestStorageAccess()</code> won’t have any side effects besides changing the value returned by {{domxref("Document.hasStorageAccess()")}}.</p>
 </div>
 
 <h2 id="Debugging">Debugging</h2>
@@ -123,4 +123,4 @@ tags:
 
 <h2 id="See_also">See also</h2>
 
-<p><a href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a></p>
+<p><a href=/web/api/storage_access_api>Storage Access API</a></p>

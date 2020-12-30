@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.</td>
+   <td>Basic computer literacy, and a basic <a href=/learn/html/introduction_to_html>understanding of HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="What_are_web_forms">What are web forms?</h2>
 
-<p><strong>Web forms</strong> are one of the main points of interaction between a user and a web site or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage (see <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a> later in the module), or used on the client-side to immediately update the interface in some way (for example, add another item to a list, or show or hide a UI feature).</p>
+<p><strong>Web forms</strong> are one of the main points of interaction between a user and a web site or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage (see <a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a> later in the module), or used on the client-side to immediately update the interface in some way (for example, add another item to a list, or show or hide a UI feature).</p>
 
 <p>A web form's HTML is made up of one or more <strong>form controls</strong> (sometimes called <strong>widgets</strong>), plus some additional elements to help structure the overall form — they are often referred to as <strong>HTML forms</strong>. The controls can be single or multi-line text fields, dropdown boxes, buttons, checkboxes, or radio buttons, and are mostly created using the {{htmlelement("input")}} element, although there are some other elements to learn about too.</p>
 
@@ -68,7 +68,7 @@ tags:
 
 &lt;/form&gt;</pre>
 
-<p>This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the <a href="/en-US/docs/Web/HTML/Attributes/action"><code>action</code></a> and <a href="/en-US/docs/Web/HTML/Attributes/method"><code>method</code></a> attributes:</p>
+<p>This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the <a href=/web/html/attributes/action><code>action</code></a> and <a href=/web/html/attributes/method><code>method</code></a> attributes:</p>
 
 <ul>
  <li>The <code>action</code> attribute defines the location (URL) where the form's collected data should be sent when it is submitted.</li>
@@ -76,7 +76,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: We'll look at how those attributes work in our <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> article later on.</p>
+<p><strong>Note</strong>: We'll look at how those attributes work in our <a href=/learn/html/forms/sending_and_retrieving_form_data>Sending form data</a> article later on.</p>
 </div>
 
 <p>For now, add the above {{htmlelement("form")}} element into your HTML {{htmlelement("body")}}.</p>
@@ -112,18 +112,18 @@ tags:
 
 <p>Update your form code to look like the above.</p>
 
-<p>The {{HTMLelement("li")}} elements are there to conveniently structure our code and make styling easier (see later in the article). For usability and accessibility, we include an explicit label for each form control. Note the use of the<a href="/en-US/docs/Web/HTML/Attributes/for"> <code>for</code> </a>attribute on all {{HTMLelement("label")}} elements, which takes as its value the <a href="/en-US/docs/Web/HTML/Attributes/id"><code>id</code></a> of the form control with which it is associated — this is how you associate a form control with its label.</p>
+<p>The {{HTMLelement("li")}} elements are there to conveniently structure our code and make styling easier (see later in the article). For usability and accessibility, we include an explicit label for each form control. Note the use of the<a href=/web/html/attributes/for> <code>for</code> </a>attribute on all {{HTMLelement("label")}} elements, which takes as its value the <a href=/web/html/attributes/id><code>id</code></a> of the form control with which it is associated — this is how you associate a form control with its label.</p>
 
-<p>There is great benefit to doing this — it associates the label with the form control, enabling mouse, trackpad, and touch device users to click on the label to activate the corresponding control, and it also provides an accessible name for screen readers to read out to their users. You'll find further details of form labels in <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a>.</p>
+<p>There is great benefit to doing this — it associates the label with the form control, enabling mouse, trackpad, and touch device users to click on the label to activate the corresponding control, and it also provides an accessible name for screen readers to read out to their users. You'll find further details of form labels in <a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a>.</p>
 
-<p>On the {{HTMLelement("input")}} element, the most important attribute is the <code>type</code> attribute. This attribute is extremely important because it defines the way the {{HTMLelement("input")}} element appears and behaves. You'll find more about this in the <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a> article later on.</p>
+<p>On the {{HTMLelement("input")}} element, the most important attribute is the <code>type</code> attribute. This attribute is extremely important because it defines the way the {{HTMLelement("input")}} element appears and behaves. You'll find more about this in the <a href=/learn/forms/basic_native_form_controls>Basic native form controls</a> article later on.</p>
 
 <ul>
  <li>In our simple example, we use the value {{HTMLelement("input/text")}} for the first input — the default value for this attribute. It represents a basic single-line text field that accepts any kind of text input.</li>
- <li>For the second input, we use the value {{HTMLelement("input/email")}}, which defines a single-line text field that only accepts a well-formed e-mail address. This turns a basic text field into a kind of "intelligent" field that will perform some validation checks on the data typed by the user. It also causes a more appropriate keyboard layout for entering email addresses (e.g. with an @ symbol by default) to appear on devices with dynamic keyboards, like smartphones. You'll find out more about form validation in the <a href="/en-US/docs/Learn/Forms/Form_validation">client-side form validation</a> article later on.</li>
+ <li>For the second input, we use the value {{HTMLelement("input/email")}}, which defines a single-line text field that only accepts a well-formed e-mail address. This turns a basic text field into a kind of "intelligent" field that will perform some validation checks on the data typed by the user. It also causes a more appropriate keyboard layout for entering email addresses (e.g. with an @ symbol by default) to appear on devices with dynamic keyboards, like smartphones. You'll find out more about form validation in the <a href=/learn/forms/form_validation>client-side form validation</a> article later on.</li>
 </ul>
 
-<p>Last but not least, note the syntax of <code>&lt;input&gt;</code> vs. <code>&lt;textarea&gt;&lt;/textarea&gt;</code>. This is one of the oddities of HTML. The <code>&lt;input&gt;</code> tag is an empty element, meaning that it doesn't need a closing tag. {{HTMLElement("textarea")}} is not an empty element, meaning it should be closed with the proper ending tag. This has an impact on a specific feature of forms: the way you define the default value. To define the default value of an {{HTMLElement("input")}} element you have to use the <a href="/en-US/docs/Web/HTML/Attributes/value"><code>value</code></a> attribute like this:</p>
+<p>Last but not least, note the syntax of <code>&lt;input&gt;</code> vs. <code>&lt;textarea&gt;&lt;/textarea&gt;</code>. This is one of the oddities of HTML. The <code>&lt;input&gt;</code> tag is an empty element, meaning that it doesn't need a closing tag. {{HTMLElement("textarea")}} is not an empty element, meaning it should be closed with the proper ending tag. This has an impact on a specific feature of forms: the way you define the default value. To define the default value of an {{HTMLElement("input")}} element you have to use the <a href=/web/html/attributes/value><code>value</code></a> attribute like this:</p>
 
 <pre class="brush:html; notranslate">&lt;input type="text" value="by default this element is filled with this text"&gt;</pre>
 
@@ -245,9 +245,9 @@ button {
 
 <h2 id="Sending_form_data_to_your_web_server">Sending form data to your web server</h2>
 
-<p>The last part, and perhaps the trickiest, is to handle form data on the server side. The {{HTMLelement("form")}} element defines where and how to send the data thanks to the <a href="/en-US/docs/Web/HTML/Attributes/action"><code>action</code></a> and <a href="/en-US/docs/Web/HTML/Attributes/method"><code>method</code></a> attributes.</p>
+<p>The last part, and perhaps the trickiest, is to handle form data on the server side. The {{HTMLelement("form")}} element defines where and how to send the data thanks to the <a href=/web/html/attributes/action><code>action</code></a> and <a href=/web/html/attributes/method><code>method</code></a> attributes.</p>
 
-<p>We provide a <a href="/en-US/docs/Web/HTML/Attributes/name"><code>name</code></a> to each form control. The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name. The form data is sent to the server as name/value pairs.</p>
+<p>We provide a <a href=/web/html/attributes/name><code>name</code></a> to each form control. The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name. The form data is sent to the server as name/value pairs.</p>
 
 <p>To name the data in a form you need to use the <code>name</code> attribute on each form widget that will collect a specific piece of data. Let's look at some of our form code again:</p>
 
@@ -269,9 +269,9 @@ button {
   ...
 </pre>
 
-<p>In our example, the form will send 3 pieces of data named "<code>user_name</code>", "<code>user_email</code>", and "<code>user_message</code>". That data will be sent to the URL "<code>/my-handling-form-page</code>" using the <a href="/en-US/docs/Web/HTTP/Methods/POST">HTTP <code>POST</code></a> method.</p>
+<p>In our example, the form will send 3 pieces of data named "<code>user_name</code>", "<code>user_email</code>", and "<code>user_message</code>". That data will be sent to the URL "<code>/my-handling-form-page</code>" using the <a href=/web/http/methods/post>HTTP <code>POST</code></a> method.</p>
 
-<p>On the server side, the script at the URL "<code>/my-handling-form-page</code>" will receive the data as a list of 3 key/value items contained in the HTTP request. The way this script will handle that data is up to you. Each server-side language (PHP, Python, Ruby, Java, C#, etc.) has its own mechanism of handling form data. It's beyond the scope of this guide to go deeply into that subject, but if you want to know more, we have provided some examples in our <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data"><span>Sending form data</span></a> article later on.</p>
+<p>On the server side, the script at the URL "<code>/my-handling-form-page</code>" will receive the data as a list of 3 key/value items contained in the HTTP request. The way this script will handle that data is up to you. Each server-side language (PHP, Python, Ruby, Java, C#, etc.) has its own mechanism of handling form data. It's beyond the scope of this guide to go deeply into that subject, but if you want to know more, we have provided some examples in our <a href=/learn/html/forms/sending_and_retrieving_form_data><span>Sending form data</span></a> article later on.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -286,22 +286,22 @@ button {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>Basic native form controls</a></li>
+ <li><a href=/learn/forms/html5_input_types>The HTML5 input types</a></li>
+ <li><a href=/learn/forms/other_form_controls>Other form controls</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
+ <li><a href=/learn/forms/ui_pseudo-classes>UI pseudo-classes</a></li>
+ <li><a href=/learn/forms/form_validation>Client-side form validation</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form controls</a></li>
+ <li><a href=/learn/forms/sending_forms_through_javascript>Sending forms through JavaScript</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_widgets>Property compatibility table for form widgets</a></li>
 </ul>

@@ -13,7 +13,7 @@ tags:
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>
 
 <div class="summary">
-<p>Now that we have set up our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">canvas environment</a>, we can get into the details of how to draw on the canvas. By the end of this article, you will have learned how to draw rectangles, triangles, lines, arcs and curves, providing familiarity with some of the basic shapes. Working with paths is essential when drawing objects onto the canvas and we will see how that can be done.</p>
+<p>Now that we have set up our <a href=/web/api/canvas_api/tutorial/basic_usage>canvas environment</a>, we can get into the details of how to draw on the canvas. By the end of this article, you will have learned how to draw rectangles, triangles, lines, arcs and curves, providing familiarity with some of the basic shapes. Working with paths is essential when drawing objects onto the canvas and we will see how that can be done.</p>
 </div>
 
 <h2 id="The_grid">The grid</h2>
@@ -77,7 +77,7 @@ tags:
 
 <ol>
  <li>First, you create the path.</li>
- <li>Then you use <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">drawing commands</a> to draw into the path.</li>
+ <li>Then you use <a href=/web/api/canvasrenderingcontext2d#Paths>drawing commands</a> to draw into the path.</li>
  <li>Once the path has been created, you can stroke or fill the path to render it.</li>
 </ol>
 
@@ -86,7 +86,7 @@ tags:
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}</dt>
  <dd>Creates a new path. Once created, future drawing commands are directed into the path and used to build the path up.</dd>
- <dt><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">Path methods</a></dt>
+ <dt><a href=/web/api/canvasrenderingcontext2d#Paths>Path methods</a></dt>
  <dd>Methods to set different paths for objects.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}</dt>
  <dd>Adds a straight line to the path, going to the start of the current sub-path.</dd>
@@ -257,7 +257,7 @@ tags:
 
 <p>The following example is a little more complex than the ones we've seen above. It draws 12 different arcs all with different angles and fills.</p>
 
-<p>The two <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for"><code>for</code> loops</a> are for looping through the rows and columns of arcs. For each arc, we start a new path by calling <code>beginPath()</code>. In the code, each of the parameters for the arc is in a variable for clarity, but you wouldn't necessarily do that in real life.</p>
+<p>The two <a href=/web/javascript/reference/statements/for><code>for</code> loops</a> are for looping through the rows and columns of arcs. For each arc, we start a new path by calling <code>beginPath()</code>. In the code, each of the parameters for the arc is in a variable for clarity, but you wouldn't necessarily do that in real life.</p>
 
 <p>The <code>x</code> and <code>y</code> coordinates should be clear enough. <code>radius</code> and <code>startAngle</code> are fixed. The <code>endAngle</code> starts at 180 degrees (half a circle) in the first column and is increased by steps of 90 degrees, culminating in a complete circle in the last column.</p>
 
@@ -517,14 +517,14 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 <dl>
  <dt>{{domxref("Path2D.Path2D", "Path2D()")}}</dt>
- <dd>The <code><strong>Path2D()</strong></code> constructor returns a newly instantiated <code>Path2D</code> object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> data.</dd>
+ <dd>The <code><strong>Path2D()</strong></code> constructor returns a newly instantiated <code>Path2D</code> object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of <a href=/web/svg/tutorial/paths>SVG path</a> data.</dd>
 </dl>
 
 <pre class="brush: js notranslate">new Path2D();     // empty path object
 new Path2D(path); // copy from another Path2D object
 new Path2D(d);    // path from SVG path data</pre>
 
-<p>All <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">path methods</a> like <code>moveTo</code>, <code>rect</code>, <code>arc</code> or <code>quadraticCurveTo</code>, etc., which we got to know above, are available on <code>Path2D</code> objects.</p>
+<p>All <a href=/web/api/canvasrenderingcontext2d#Paths>path methods</a> like <code>moveTo</code>, <code>rect</code>, <code>arc</code> or <code>quadraticCurveTo</code>, etc., which we got to know above, are available on <code>Path2D</code> objects.</p>
 
 <p>The <code>Path2D</code> API also adds a way to combine paths using the <code>addPath</code> method. This can be useful when you want to build objects from several components, for example.</p>
 
@@ -567,9 +567,9 @@ new Path2D(d);    // path from SVG path data</pre>
 
 <h3 id="Using_SVG_paths">Using SVG paths</h3>
 
-<p>Another powerful feature of the new canvas <code>Path2D</code> API is using <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path data</a> to initialize paths on your canvas. This might allow you to pass around path data and re-use them in both, SVG and canvas.</p>
+<p>Another powerful feature of the new canvas <code>Path2D</code> API is using <a href=/web/svg/tutorial/paths>SVG path data</a> to initialize paths on your canvas. This might allow you to pass around path data and re-use them in both, SVG and canvas.</p>
 
-<p>The path will move to point (<code>M10 10</code>) and then move horizontally 80 points to the right (<code>h 80</code>), then 80 points down (<code>v 80</code>), then 80 points to the left (<code>h -80</code>), and then back to the start (<code>z</code>). You can see this example on the <a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths"><code>Path2D</code> constructor</a> page.</p>
+<p>The path will move to point (<code>M10 10</code>) and then move horizontally 80 points to the right (<code>h 80</code>), then 80 points down (<code>v 80</code>), then 80 points to the left (<code>h -80</code>), and then back to the start (<code>z</code>). You can see this example on the <a href=/web/api/path2d.path2d#Using_SVG_paths><code>Path2D</code> constructor</a> page.</p>
 
 <pre class="brush: js; notranslate">var p = new Path2D('M10 10 h 80 v 80 h -80 Z');</pre>
 

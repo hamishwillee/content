@@ -23,7 +23,7 @@ tags:
 <p>To read from the clipboard, you must first have the <code>"clipboard-read"</code> permission.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The asynchronous Clipboard and <a href="/en-US/docs/Web/API/Permissions_API">Permissions APIs</a> are still in the process of being integrated into most browsers, so they often deviate from the official rules for permissions and the like. Be sure to review the {{anch("Browser compatibility", "compatibility table")}} before using these methods.</p>
+<p><strong>Note:</strong> The asynchronous Clipboard and <a href=/web/api/permissions_api>Permissions APIs</a> are still in the process of being integrated into most browsers, so they often deviate from the official rules for permissions and the like. Be sure to review the {{anch("Browser compatibility", "compatibility table")}} before using these methods.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -65,7 +65,7 @@ navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> At this time, while Firefox does implement <code>read()</code>, it does not recognize the <code>"clipboard-read"</code> permission, so attempting to use the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> to manage access to the API will not work.</p>
+<p><strong>Note:</strong> At this time, while Firefox does implement <code>read()</code>, it does not recognize the <code>"clipboard-read"</code> permission, so attempting to use the <a href=/web/api/permissions_api>Permissions API</a> to manage access to the API will not work.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -92,7 +92,7 @@ navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
+ <li><a href=/web/api/clipboard_api>Clipboard API</a></li>
  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</a></li>
  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async Clipboard article</a></li>
 </ul>

@@ -16,7 +16,7 @@ tags:
 
 <p>Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,9 +46,9 @@ tags:
   </dd>
   <dd>Specify an empty string (<code>""</code>) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.</dd>
   <dt><code>startTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
+  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href=/web/javascript/reference/global_objects/date>Date</a></code> object, an <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
   <dt><code>endTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
+  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href=/web/javascript/reference/global_objects/date>Date</a></code> object, an <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
   <dt><code>maxResults</code> {{optional_inline}}</dt>
   <dd><code>number</code>. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a <code>maxResults</code> value less than 1.</dd>
  </dl>
@@ -57,7 +57,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> will be fulfilled with an array of objects of type {{WebExtAPIRef("history.HistoryItem")}}, each describing a single matching history item. Items are sorted in reverse chronological order.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> will be fulfilled with an array of objects of type {{WebExtAPIRef("history.HistoryItem")}}, each describing a single matching history item. Items are sorted in reverse chronological order.</p>
 
 <h2 id="Examples">Examples</h2>
 

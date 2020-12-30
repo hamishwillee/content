@@ -17,13 +17,13 @@ tags:
 
 <p>Adds a new pane to the sidebar in the HTML/CSS inspector.</p>
 
-<p>The HTML/CSS inspector, called the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> in Firefox and the <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/">Elements panel</a> in Chrome, displays the page DOM in the main part of its window, and has a sidebar that displays various other aspects of the page HTML/CSS in a tabbed interface. For example, in Firefox, the sidebar can display the CSS rules for the selected element, or its fonts, or its box model.</p>
+<p>The HTML/CSS inspector, called the <a href=/tools/page_inspector>Page Inspector</a> in Firefox and the <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/">Elements panel</a> in Chrome, displays the page DOM in the main part of its window, and has a sidebar that displays various other aspects of the page HTML/CSS in a tabbed interface. For example, in Firefox, the sidebar can display the CSS rules for the selected element, or its fonts, or its box model.</p>
 
 <p>The <code>createSidebarPane()</code> function adds a new pane to the sidebar. For example, the screenshot below shows a new pane titled "My pane", that displays a JSON object:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15607/inspector-sidebar.png" style="display: block; height: 276px; margin-left: auto; margin-right: auto; width: 836px;"></p>
 
-<p>This function takes one argument, which is a string representing the pane's title. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to an <code><a href="/en-US/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> object representing the new pane. You can use that object to define the pane's content and behavior.</p>
+<p>This function takes one argument, which is a string representing the pane's title. It returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> that resolves to an <code><a href="/en-US/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> object representing the new pane. You can use that object to define the pane's content and behavior.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -41,7 +41,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code><a href="/en-US/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> object representing the new pane.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> that will be fulfilled with an <code><a href="/en-US/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> object representing the new pane.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

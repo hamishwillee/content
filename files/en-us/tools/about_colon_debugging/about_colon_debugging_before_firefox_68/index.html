@@ -23,7 +23,7 @@ slug: 'Tools/about:debugging/about:debugging_before_Firefox_68'
 <h2 id="Add-ons">Add-ons</h2>
 
 <div class="note">
-<p>The Add-ons section in about:debugging only supports restartless add-ons, including <a href="/en-US/Add-ons/Bootstrapped_extensions">basic bootstrapped extensions</a>, <a href="/en-US/Add-ons/SDK">Add-on SDK add-ons</a>, and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p>
+<p>The Add-ons section in about:debugging only supports restartless add-ons, including <a href="/en-US/Add-ons/Bootstrapped_extensions">basic bootstrapped extensions</a>, <a href="/en-US/Add-ons/SDK">Add-on SDK add-ons</a>, and <a href=/mozilla/add-ons/webextensions>WebExtensions</a>.</p>
 </div>
 
 <p>This page enables you to do two things:</p>
@@ -45,16 +45,16 @@ slug: 'Tools/about:debugging/about:debugging_before_Firefox_68'
 
 <p>If the "Debug" button is disabled, check the "Enable add-on debugging" box.</p>
 
-<p>If you click "Debug", you'll see a dialog asking you to accept an incoming connection. Click "OK", and the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> will start in a separate window. Note that sometimes the debugger window is hidden by the main Firefox window.</p>
+<p>If you click "Debug", you'll see a dialog asking you to accept an incoming connection. Click "OK", and the <a href=/mozilla/add-ons/add-on_debugger>Add-on Debugger</a> will start in a separate window. Note that sometimes the debugger window is hidden by the main Firefox window.</p>
 
 <p>{{EmbedYouTube("tGGcA3bT3VA")}}</p>
 
-<p>See the page on the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> for all the things you can do with this tool.</p>
+<p>See the page on the <a href=/mozilla/add-ons/add-on_debugger>Add-on Debugger</a> for all the things you can do with this tool.</p>
 
 <div class="note">
 <p><a id="Enabling_add-on_debugging">The "Enable add-on debugging" button</a> works by turning on the <code>devtools.chrome.enabled</code> and <code>devtools.debugger.remote-enabled</code> preferences. Both preferences must be true to enable add-on debugging. Checking the box sets both preferences to <code>true</code>, and unchecking it sets them both to <code>false</code>.</p>
 
-<p>You can also modify the preferences directly in about:config, or by checking "Enable browser chrome and add-on debugging toolboxes" and "Enable remote debugging" in the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Developer Tools Settings</a>.</p>
+<p>You can also modify the preferences directly in about:config, or by checking "Enable browser chrome and add-on debugging toolboxes" and "Enable remote debugging" in the <a href=/tools/tools_toolbox#Settings>Developer Tools Settings</a>.</p>
 </div>
 
 <h3 id="Loading_a_temporary_add-on">Loading a temporary add-on</h3>
@@ -79,9 +79,9 @@ slug: 'Tools/about:debugging/about:debugging_before_Firefox_68'
 <h4 id="Before_Firefox_48">Before Firefox 48</h4>
 
 <ul>
-	<li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
+	<li>If you change files that are loaded on demand, like <a href=/mozilla/add-ons/webextensions/content_scripts>content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
 	<li>If you change files that stay loaded the whole time, like <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>, then you can pick up changes you've made by disabling and then re-enabling the add-on in the about:addons page.</li>
-	<li>If you change files that are only parsed at install time, like the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, you'll need to restart Firefox, then load the add-on again.</li>
+	<li>If you change files that are only parsed at install time, like the <a href=/mozilla/add-ons/webextensions/manifest.json>manifest.json</a> file, you'll need to restart Firefox, then load the add-on again.</li>
 </ul>
 
 <div class="note">
@@ -93,11 +93,11 @@ slug: 'Tools/about:debugging/about:debugging_before_Firefox_68'
 <p>From Firefox 48 onwards:</p>
 
 <ul>
-	<li>as before: if you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
+	<li>as before: if you change files that are loaded on demand, like <a href=/mozilla/add-ons/webextensions/content_scripts>content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
 	<li>there's a better way to handle the other cases: click the "Reload" button next to the "Debug" button. This does what it says:
 	<ul>
 		<li>reloading any persistent scripts, such as <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
-		<li>parsing the manifest.json file again, so changes to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> or any other keys will take effect.</li>
+		<li>parsing the manifest.json file again, so changes to <code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/content_scripts>content_scripts</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code> or any other keys will take effect.</li>
 	</ul>
 	</li>
 </ul>
@@ -125,9 +125,9 @@ slug: 'Tools/about:debugging/about:debugging_before_Firefox_68'
 <p>The Workers page shows your workers, categorized as follows:</p>
 
 <ul>
-	<li>All registered <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
-	<li>All registered <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
-	<li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
+	<li>All registered <a href=/web/api/service_worker_api>Service Workers</a></li>
+	<li>All registered <a href=/web/api/sharedworker>Shared Workers</a></li>
+	<li>Other workers, including <a href=/web/api/chromeworker>Chrome Workers</a> and <a href=/web/api/web_workers_api/using_web_workers#Dedicated_workers>Dedicated Workers</a></li>
 </ul>
 
 <p>You can connect the developer tools to each worker, and send push notifications to service workers.</p>
@@ -186,7 +186,7 @@ slug: 'Tools/about:debugging/about:debugging_before_Firefox_68'
 <p>Sending push events in about:debugging is new in Firefox 47.</p>
 </div>
 
-<p>To debug push notifications, you can set a breakpoint in the <a href="/en-US/docs/Web/API/PushEvent">push event</a> listener. However, you can also debug push notifications locally, without needing the server. Just click the "Push" button to send a push event to the service worker:</p>
+<p>To debug push notifications, you can set a breakpoint in the <a href=/web/api/pushevent>push event</a> listener. However, you can also debug push notifications locally, without needing the server. Just click the "Push" button to send a push event to the service worker:</p>
 
 <p>{{EmbedYouTube("62SkLyA-Zno")}}</p>
 

@@ -14,7 +14,7 @@ slug: Tools/Performance/Waterfall
 
 <p>Along the X-axis is time. Recorded operations, called markers, are shown as horizontal bars, laid out in a waterfall to reflect the serial nature of the browser's execution.</p>
 
-<p>When a marker is selected you'll see more information about it in a sidebar on the right. This includes the marker's duration and some more information that's specific to the <a href="/en-US/docs/Tools/Performance/Waterfall#Markers">marker type</a>.</p>
+<p>When a marker is selected you'll see more information about it in a sidebar on the right. This includes the marker's duration and some more information that's specific to the <a href=/tools/performance/waterfall#Markers>marker type</a>.</p>
 
 <h2 id="Markers"><a id="timeline-color-coding"></a>Markers</h2>
 
@@ -144,7 +144,7 @@ slug: Tools/Performance/Waterfall
    <td>
     <p><strong>Garbage Collection</strong></p>
 
-    <p><a href="/en-US/docs/Tools/Performance/Waterfall#Garbage_collection">Garbage collection event</a>. Non-incremental GC events are labeled "(Non-incremental)".</p>
+    <p><a href=/tools/performance/waterfall#Garbage_collection>Garbage collection event</a>. Non-incremental GC events are labeled "(Non-incremental)".</p>
    </td>
    <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
    <td>
@@ -158,7 +158,7 @@ slug: Tools/Performance/Waterfall
     <div class="geckoVersionNote">
     <p>New in Firefox 46: if the GC event was caused by allocation pressure, a link appears, labeled "Show Allocation Triggers". Click the link to see the allocation profile leading up to this GC event.</p>
 
-    <p>See <a href="/en-US/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">Allocations and Garbage Collection</a> for more details.</p>
+    <p>See <a href=/tools/performance/allocations#Allocations_and_garbage_collection>Allocations and Garbage Collection</a> for more details.</p>
     </div>
    </td>
   </tr>
@@ -206,7 +206,7 @@ slug: Tools/Performance/Waterfall
      <dt>Stack at start</dt>
      <dd>Call stack <code>console.time()</code>, with links to functions.</dd>
      <dt>Stack at End</dt>
-     <dd>(New in Firefox 41). Call stack at <code>console.timeEnd()</code>. If this is inside a callback from a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, this will also show the <a href="/en-US/docs/Tools/Performance/Waterfall#Async_stack">"Async stack"</a>.</dd>
+     <dd>(New in Firefox 41). Call stack at <code>console.timeEnd()</code>. If this is inside a callback from a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code>, this will also show the <a href=/tools/performance/waterfall#Async_stack>"Async stack"</a>.</dd>
     </dl>
    </td>
   </tr>
@@ -214,7 +214,7 @@ slug: Tools/Performance/Waterfall
    <td>
     <p><strong>Timestamp</strong></p>
 
-    <p>A single call to <code><a href="/en-US/docs/Web/API/Console/timeStamp">console.timeStamp()</a></code>.</p>
+    <p>A single call to <code><a href=/web/api/console/timestamp>console.timeStamp()</a></code>.</p>
    </td>
    <td><img alt="" src="https://mdn.mozillademos.org/files/10953/blue.png" style="height: 54px; width: 60px;"></td>
    <td>
@@ -228,7 +228,7 @@ slug: Tools/Performance/Waterfall
    <td>
     <p><strong>DOMContentLoaded</strong></p>
 
-    <p>The document's <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> event.</p>
+    <p>The document's <code><a href=/web/events/domcontentloaded>DOMContentLoaded</a></code> event.</p>
    </td>
    <td><img alt="" src="https://mdn.mozillademos.org/files/12191/red.png" style="height: 21px; width: 60px;"></td>
    <td></td>
@@ -237,7 +237,7 @@ slug: Tools/Performance/Waterfall
    <td>
     <p><strong>Load</strong></p>
 
-    <p>The document's <code><a href="/en-US/docs/Web/Events/load">load</a></code> event.</p>
+    <p>The document's <code><a href=/web/events/load>load</a></code> event.</p>
    </td>
    <td><img alt="" src="https://mdn.mozillademos.org/files/12193/blue.png" style="height: 21px; width: 60px;"></td>
    <td></td>
@@ -281,11 +281,11 @@ slug: Tools/Performance/Waterfall
  </tbody>
 </table>
 
-<p>The markers, and their colors, are the same in the Waterfall tool as in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Waterfall_overview">Waterfall overview</a>, making is easy to correlate from one to the other.</p>
+<p>The markers, and their colors, are the same in the Waterfall tool as in the <a href=/tools/performance/ui_tour#Waterfall_overview>Waterfall overview</a>, making is easy to correlate from one to the other.</p>
 
 <h3 id="Filtering_markers">Filtering markers</h3>
 
-<p>You can control which markers are displayed using a button in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Toolbar">Toolbar</a>:</p>
+<p>You can control which markers are displayed using a button in the <a href=/tools/performance/ui_tour#Toolbar>Toolbar</a>:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13238/perf-markers.png" style="display: block; height: 694px; margin-left: auto; margin-right: auto; width: 799px;"></p>
 
@@ -313,12 +313,12 @@ slug: Tools/Performance/Waterfall
 <p>Importantly for responsiveness, the browser doesn't always have to go through every step:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS animations</a> update the page without having to run any JavaScript.</li>
- <li>Not all CSS property changes cause a reflow. Changing properties that can alter an object's geometry and position, such as <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, <code><a href="/en-US/docs/Web/CSS/display">display</a></code>, <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, or <code><a href="/en-US/docs/Web/CSS/top">top</a></code>, will cause a reflow. However, changing properties that don't alter geometry or position, such as <code><a href="/en-US/docs/Web/CSS/color">color</a></code> or <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, will not.</li>
- <li>Not all CSS property changes cause a repaint. In particular, if you animate an element using the <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code> property, the browser will use a separate layer for the transformed element, and doesn't even have to repaint when the element is moved: the new position of the element is handled in composition.</li>
+ <li><a href=/web/guide/css/using_css_animations>CSS animations</a> update the page without having to run any JavaScript.</li>
+ <li>Not all CSS property changes cause a reflow. Changing properties that can alter an object's geometry and position, such as <code><a href=/web/css/width>width</a></code>, <code><a href=/web/css/display>display</a></code>, <code><a href=/web/css/font-size>font-size</a></code>, or <code><a href=/web/css/top>top</a></code>, will cause a reflow. However, changing properties that don't alter geometry or position, such as <code><a href=/web/css/color>color</a></code> or <code><a href=/web/css/opacity>opacity</a></code>, will not.</li>
+ <li>Not all CSS property changes cause a repaint. In particular, if you animate an element using the <code><a href=/web/css/transform>transform</a></code> property, the browser will use a separate layer for the transformed element, and doesn't even have to repaint when the element is moved: the new position of the element is handled in composition.</li>
 </ul>
 
-<p>The <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties">Animating CSS properties</a> article shows how animating different CSS properties can give different performance outcomes, and how the Waterfall can help signal that.</p>
+<p>The <a href=/tools/performance/scenarios/animating_css_properties>Animating CSS properties</a> article shows how animating different CSS properties can give different performance outcomes, and how the Waterfall can help signal that.</p>
 
 <h3 id="Blocking_JavaScript">Blocking JavaScript</h3>
 
@@ -328,15 +328,15 @@ slug: Tools/Performance/Waterfall
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10973/perf-js-blocking-waterfall.png" style="display: block; height: 432px; margin-left: auto; margin-right: auto; width: 1128px;"></p>
 
-<p>The <a href="/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript">Intensive JavaScript</a> article shows how the Waterfall can highlight responsiveness problems caused by long JavaScript functions, and how you can use asynchronous methods to keep the main thread responsive.</p>
+<p>The <a href=/tools/performance/scenarios/intensive_javascript>Intensive JavaScript</a> article shows how the Waterfall can highlight responsiveness problems caused by long JavaScript functions, and how you can use asynchronous methods to keep the main thread responsive.</p>
 
 <h3 id="Expensive_paints">Expensive paints</h3>
 
-<p>Some paint effects, such as <code><a href="/en-US/docs/Web/CSS/box-shadow">box-shadow</a></code>, can be expensive, especially if you are applying them in a transition where the browser has to calculate them in every frame. If you're seeing drops in the frame rate, especially during graphically-intensive operations and transitions, check the Waterfall for long green markers.</p>
+<p>Some paint effects, such as <code><a href=/web/css/box-shadow>box-shadow</a></code>, can be expensive, especially if you are applying them in a transition where the browser has to calculate them in every frame. If you're seeing drops in the frame rate, especially during graphically-intensive operations and transitions, check the Waterfall for long green markers.</p>
 
 <h3 id="Garbage_collection">Garbage collection</h3>
 
-<p>Red markers in the Waterfall represent garbage collection (GC) events, in which <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> (the JavaScript engine in Firefox) walks the heap looking for memory that's no longer reachable and subsequently releasing it. GC is relevant to performance because while it's running the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
+<p>Red markers in the Waterfall represent garbage collection (GC) events, in which <a href=/mozilla/projects/spidermonkey>SpiderMonkey</a> (the JavaScript engine in Firefox) walks the heap looking for memory that's no longer reachable and subsequently releasing it. GC is relevant to performance because while it's running the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
 
 <p>To help reduce the length of pauses, SpiderMonkey implements <em>incremental GC</em>: this means that it can perform garbage collection in fairly small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
 
@@ -353,12 +353,12 @@ slug: Tools/Performance/Waterfall
  <li>whether the GC was incremental or not</li>
  <li>the reason the GC was performed</li>
  <li>if the GC was non-incremental, the reason it was non-incremental</li>
- <li>starting in Firefox 46, if the GC event was caused by allocation pressure, a link appears, labeled "Show Allocation Triggers". Click the link to see the allocation profile leading up to this GC event. See <a href="/en-US/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">Allocations and Garbage Collection</a> for more details.</li>
+ <li>starting in Firefox 46, if the GC event was caused by allocation pressure, a link appears, labeled "Show Allocation Triggers". Click the link to see the allocation profile leading up to this GC event. See <a href=/tools/performance/allocations#Allocations_and_garbage_collection>Allocations and Garbage Collection</a> for more details.</li>
 </ul>
 
 <h2 id="Adding_markers_with_the_console_API">Adding markers with the console API</h2>
 
-<p>Two markers are directly controlled by <a href="/en-US/docs/Web/API/Console">console API</a> calls: "Console" and "Timestamp".</p>
+<p>Two markers are directly controlled by <a href=/web/api/console>console API</a> calls: "Console" and "Timestamp".</p>
 
 <h3 id="Console_markers">Console markers</h3>
 
@@ -406,7 +406,7 @@ function calculatePrimes() {
 
 <p class="geckoVersionNote">New in Firefox 41.</p>
 
-<p>Starting in Firefox 41, the right-hand sidebar will also show the stack at the end of the period: that is, at the point <code>console.timeEnd()</code> was called. If <code>console.timeEnd()</code> was called from the resolution of a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, it will also display "(Async: Promise)", under which it will show the "async stack": that is, the call stack at the point the promise was made.</p>
+<p>Starting in Firefox 41, the right-hand sidebar will also show the stack at the end of the period: that is, at the point <code>console.timeEnd()</code> was called. If <code>console.timeEnd()</code> was called from the resolution of a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code>, it will also display "(Async: Promise)", under which it will show the "async stack": that is, the call stack at the point the promise was made.</p>
 
 <p>For example, consider code like this:</p>
 
@@ -437,7 +437,7 @@ function runTimer(t) {
 
 <p>Timestamps enable you to mark an instant in the recording.</p>
 
-<p>To make a timestamp marker, call <code><a href="/en-US/docs/Web/API/Console/timeStamp">console.timeStamp()</a></code>. You can pass an argument to label the timestamp.</p>
+<p>To make a timestamp marker, call <code><a href=/web/api/console/timestamp>console.timeStamp()</a></code>. You can pass an argument to label the timestamp.</p>
 
 <p>For example, suppose we adapt the code above to make a timestamp every 10 iterations of the loop, labeled with the iteration number:</p>
 

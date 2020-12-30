@@ -108,8 +108,8 @@ tags:
 <p>This method has the same purpose as <code>Ball()</code>'s <code>draw()</code> method: It draws the object instance on the canvas. It will work in a very similar way, so you can start by copying the <code>Ball.prototype.draw</code> definition. You should then make the following changes:</p>
 
 <ul>
-	<li>We want the evil circle to not be filled in, but rather just have an outer line (stroke). You can achieve this by updating <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> and <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> to <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> and <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
-	<li>We also want to make the stroke a bit thicker, so you can see the evil circle a bit more easily. This can be achieved by setting a value for <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> somewhere after the <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> call (3 will do).</li>
+	<li>We want the evil circle to not be filled in, but rather just have an outer line (stroke). You can achieve this by updating <code><a href=/web/api/canvasrenderingcontext2d/fillstyle>fillStyle</a></code> and <code><a href=/web/api/canvasrenderingcontext2d/fill>fill()</a></code> to <code><a href=/web/api/canvasrenderingcontext2d/strokestyle>strokeStyle</a></code> and <code><a href=/web/api/canvasrenderingcontext2d/stroke>stroke()</a></code>.</li>
+	<li>We also want to make the stroke a bit thicker, so you can see the evil circle a bit more easily. This can be achieved by setting a value for <code><a href=/web/api/canvasrenderingcontext2d/linewidth>lineWidth</a></code> somewhere after the <code><a href=/web/api/canvasrenderingcontext2d/beginpath>beginPath()</a></code> call (3 will do).</li>
 </ul>
 
 <h4 id="checkBounds"><code>checkBounds()</code></h4>
@@ -138,7 +138,7 @@ window.onkeydown = function(e) {
     }
   }</pre>
 
-<p>So when a key is pressed, the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/key">key</a></code> property is consulted to see which key is pressed. If it is one of the four specified keys, then the evil circle will move left/right/up/down.</p>
+<p>So when a key is pressed, the event object's <code><a href=/web/api/keyboardevent/key>key</a></code> property is consulted to see which key is pressed. If it is one of the four specified keys, then the evil circle will move left/right/up/down.</p>
 
 <p>For a bonus point, can you tell us why we've had to set <code>let _this = this;</code> in the position it is in? It is something to do with function scope.</p>
 
@@ -207,11 +207,11 @@ window.onkeydown = function(e) {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+	<li><a href=/learn/javascript/objects/basics>Object basics</a></li>
+	<li><a href=/learn/javascript/objects/object-oriented_js>Object-oriented JavaScript for beginners</a></li>
+	<li><a href=/learn/javascript/objects/object_prototypes>Object prototypes</a></li>
+	<li><a href=/learn/javascript/objects/inheritance>Inheritance in JavaScript</a></li>
+	<li><a href=/learn/javascript/objects/json>Working with JSON data</a></li>
+	<li><a href=/learn/javascript/objects/object_building_practice>Object building practice</a></li>
+	<li><a href=/learn/javascript/objects/adding_bouncing_balls_features>Adding features to our bouncing balls demo</a></li>
 </ul>

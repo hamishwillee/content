@@ -75,7 +75,7 @@ var myTrack = myVideo.textTracks[0];</pre>
 
 <h2 id="Retrieving_the_IMSC_file">Retrieving the IMSC file<span id="cke_bm_89C" style="display: none;"> </span></h2>
 
-<p>The browser will not retrieve the document automatically for us. In most browsers only <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> is implemented at the moment. Therefore, these browsers expect that the value of the <code>src</code> attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the <code>src</code> attribute is pointing to. We use the <code>src</code> attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the <code>XMLHttpRequest</code> method for this task:</p>
+<p>The browser will not retrieve the document automatically for us. In most browsers only <a href=/web/api/webvtt_api>WebVTT</a> is implemented at the moment. Therefore, these browsers expect that the value of the <code>src</code> attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the <code>src</code> attribute is pointing to. We use the <code>src</code> attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the <code>XMLHttpRequest</code> method for this task:</p>
 
 <pre class="brush: js">var client = new XMLHttpRequest();
 
@@ -241,26 +241,26 @@ client.send()</pre>
   pointer-events: none;
 }</pre>
 
-<p>This has the effect that pointer events are going "through" the overlay (see <a href="/en-US/docs/Web/CSS/pointer-events">reference documentation for point events</a> for more details).</p>
+<p>This has the effect that pointer events are going "through" the overlay (see <a href=/web/css/pointer-events>reference documentation for point events</a> for more details).</p>
 
 <p>The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artefacts.</p>
 
-<p>the best solution is to building your own custom controls. Find out how in our <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> tutorial.</p>
+<p>the best solution is to building your own custom controls. Find out how in our <a href=/web/apps/fundamentals/audio_and_video_delivery/cross_browser_video_player>Creating a cross-browser video player</a> tutorial.</p>
 
 <section class="Quick_links" id="Quick_Links">
 <ol>
- <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
+ <li><a href=/related/imsc/><strong>IMSC</strong></a></li>
  <li class="toggle">
   <details open><summary>IMSC guides</summary>
   <ol>
-   <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
+   <li><a href=/related/imsc/basics>IMSC basics</a></li>
+   <li><a href=/related/imsc/using_the_imscjs_polyfill>Using the imscJS polyfill</a></li>
+   <li><a href=/related/imsc/styling>Styling IMSC documents</a></li>
+   <li><a href=/related/imsc/subtitle_placement>Subtitle placement in IMSC</a></li>
+   <li><a href=/related/imsc/namespaces>Namespaces in IMSC</a></li>
+   <li><a href=/related/imsc/timing_in_imsc>Timing in IMSC</a></li>
+   <li><a href=/related/imsc/mapping_video_time_codes_to_imsc>Mapping video time codes to IMSC</a></li>
+   <li><a href=/related/imsc/imsc_and_other_standards>IMSC and other standards</a></li>
   </ol>
   </details>
  </li>

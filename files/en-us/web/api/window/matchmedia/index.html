@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The {{domxref("Window")}} interface's <code><strong>matchMedia()</strong></code> method returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if the {{domxref("document")}} matches the <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a> string, as well as to monitor the document to detect when it matches (or stops matching) that media query.</p>
+<p>The {{domxref("Window")}} interface's <code><strong>matchMedia()</strong></code> method returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if the {{domxref("document")}} matches the <a href=/web/css/media_queries/using_media_queries>media query</a> string, as well as to monitor the document to detect when it matches (or stops matching) that media query.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>To perform a one-time, instantaneous check to see if the document matches the media query, look at the value of the {{domxref("MediaQueryList.matches", "matches")}} property, which will be <code>true</code> if the document meets the media query's requirements.</p>
 
-<p>If you need to be kept aware of whether or not the document matches the media query at all times, you can instead watch for the {{domxref("MediaQueryList.change_event", "change")}} event to be delivered to the object. There's <a href="/en-US/docs/Web/API/Window/devicePixelRatio#Example">a good example of this</a> in the article on {{domxref("Window.devicePixelRatio")}}.</p>
+<p>If you need to be kept aware of whether or not the document matches the media query at all times, you can instead watch for the {{domxref("MediaQueryList.change_event", "change")}} event to be delivered to the object. There's <a href=/web/api/window/devicepixelratio#Example>a good example of this</a> in the article on {{domxref("Window.devicePixelRatio")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -74,7 +74,7 @@ document.querySelector(".mq-value").innerText = mql.matches;
 
 <p>{{EmbedLiveSample("Examples", "100%", "60")}}</p>
 
-<p>See <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries programmatically</a> for additional code examples.</p>
+<p>See <a href=/web/css/media_queries/testing_media_queries>Testing media queries programmatically</a> for additional code examples.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -102,8 +102,8 @@ document.querySelector(".mq-value").innerText = mql.matches;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a></li>
- <li><a href="/en-US/docs/DOM/Using_media_queries_from_code" title="CSS/Using media queries from code">Using media queries from code</a></li>
+ <li><a href=/css/media_queries title="CSS/Media queries">Media queries</a></li>
+ <li><a href=/dom/using_media_queries_from_code title="CSS/Using media queries from code">Using media queries from code</a></li>
  <li>{{domxref("MediaQueryList")}}</li>
  <li>{{domxref("MediaQueryListListener")}}</li>
 </ul>

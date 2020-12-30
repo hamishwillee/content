@@ -25,7 +25,7 @@ tags:
 </ul>
 </div>
 
-<p>For an app to receive push messages, it has to have an active <a href="/en-US/docs/Web/API/ServiceWorker_API">service worker</a>. When the service worker is active, it can subscribe to push notifications, using {{domxref("PushManager.subscribe()")}}.</p>
+<p>For an app to receive push messages, it has to have an active <a href=/web/api/serviceworker_api>service worker</a>. When the service worker is active, it can subscribe to push notifications, using {{domxref("PushManager.subscribe()")}}.</p>
 
 <p>The resulting {{domxref("PushSubscription")}} includes all the information that the application needs to send a push message: an endpoint and the encryption key needed for sending data.</p>
 
@@ -47,7 +47,7 @@ tags:
 
 <dl>
  <dt>{{domxref("PushEvent")}}</dt>
- <dd>Represents a push action, sent to the <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> of a {{domxref("ServiceWorker")}}. It contains information sent from an application to a {{domxref("PushSubscription")}}.</dd>
+ <dd>Represents a push action, sent to the <a href=/web/api/serviceworkerglobalscope>global scope</a> of a {{domxref("ServiceWorker")}}. It contains information sent from an application to a {{domxref("PushSubscription")}}.</dd>
  <dt>{{domxref("PushManager")}}</dt>
  <dd>Provides a way to receive notifications from third-party servers, as well as request URLs for push notifications. This interface has replaced the functionality offered by the obsolete {{domxref("PushRegistrationManager")}} interface.</dd>
  <dt>{{domxref("PushMessageData")}}</dt>
@@ -58,7 +58,7 @@ tags:
 
 <h2 id="Service_worker_additions">Service worker additions</h2>
 
-<p>The following additions to the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> have been specified in the Push API spec to provide an entry point for using Push messages. They also monitor and respond to push and subscription change events.</p>
+<p>The following additions to the <a href=/web/api/service_worker_api>Service Worker API</a> have been specified in the Push API spec to provide an entry point for using Push messages. They also monitor and respond to push and subscription change events.</p>
 
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
@@ -109,7 +109,7 @@ tags:
 <ul>
  <li><a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">Sending VAPID identified WebPush Notifications via Mozilla’s Push Service</a></li>
  <li><a href="https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/">Web Push Notifications: Timely, Relevant, and Precise</a>, Joseph Medley</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
+ <li><a href=/web/api/service_worker_api>Service Worker API</a></li>
 </ul>
 
 <div>{{DefaultAPISidebar("Push API")}}</div>

@@ -14,7 +14,7 @@ tags:
 
 <p>An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.</p>
 
-<p>If the request is not secured using <a href="/en-US/docs/Glossary/TLS">TLS</a>, then this object will contain only the property <code>state</code>, whose value will be <code>"insecure"</code>.</p>
+<p>If the request is not secured using <a href=/glossary/tls>TLS</a>, then this object will contain only the property <code>state</code>, whose value will be <code>"insecure"</code>.</p>
 
 <h2 id="Type">Type</h2>
 
@@ -44,9 +44,9 @@ tags:
  <p>Note though that at present you can only call <code>getSecurityInfo()</code> in the <code>onHeaderReceived</code> listener, and the <code>onHeaderReceived</code> event is not fired when the handshake fails. So in practice this will never be set. </p>
  </dd>
  <dt><code>hpkp</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the host uses <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">Public Key Pinning</a>, <code>false</code> otherwise.</dd>
+ <dd><code>Boolean</code>. <code>true</code> if the host uses <a href=/web/http/public_key_pinning>Public Key Pinning</a>, <code>false</code> otherwise.</dd>
  <dt><code>hsts</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the host uses <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict Transport Security</a>, <code>false</code> otherwise.</dd>
+ <dd><code>Boolean</code>. <code>true</code> if the host uses <a href=/web/http/headers/strict-transport-security>Strict Transport Security</a>, <code>false</code> otherwise.</dd>
  <dt><code>isDomainMismatch</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> if the server's domain name does not match the domain name in its certificate, <code>false</code> otherwise.</dd>
  <dt><code>isExtendedValidation</code> {{optional_inline}}</dt>

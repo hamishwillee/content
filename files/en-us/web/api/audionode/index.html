@@ -39,7 +39,7 @@ tags:
 
 <p>Each input and output has a given amount of <em>channels</em>. For example, mono audio has one channel, while stereo audio has two channels. The Web Audio API will up-mix or down-mix the number of channels as required; check the Web Audio spec for details.</p>
 
-<p>For a list of all audio nodes, see the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> homepage.</p>
+<p>For a list of all audio nodes, see the <a href=/web/api/web_audio_api>Web Audio API</a> homepage.</p>
 
 <h3 id="Creating_an_AudioNode">Creating an <code>AudioNode</code></h3>
 
@@ -82,11 +82,11 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
  <dd>Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of <code>0</code> for this attribute.</dd>
  <dt>{{domxref("AudioNode.channelCount")}}</dt>
- <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
+ <dd>Represents an integer used to determine how many channels are used when <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api#Up-mixing_and_down-mixing>up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
  <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
  <dd>Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</dd>
  <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
- <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.<br>
+ <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href=/web/api/web_audio_api/basic_concepts_behind_web_audio_api#Up-mixing_and_down-mixing>up-mixing and down-mixing</a> will happen.<br>
  The possible values are <code>"speakers"</code> or <code>"discrete"</code>.</dd>
 </dl>
 
@@ -103,7 +103,7 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
+<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href=/web/api/web_audio_api>Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
 
 <pre class="brush: js; notranslate">const audioCtx = new AudioContext();
 
@@ -144,5 +144,5 @@ oscillator.channelCount;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></li>
 </ul>

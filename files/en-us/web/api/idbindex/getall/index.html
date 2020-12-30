@@ -15,7 +15,7 @@ tags:
 <p>The <strong><code>getAll()</code></strong> method of the {{domxref("IDBIndex")}} interface retrieves all objects that are inside the index.</p>
 </div>
 
-<p>There is a performance cost associated with looking at the <code>value</code> property of a cursor, because the object is created lazily. To use a feature like <code>getAll()</code>, the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a <a href="/en-US/docs/Web/API/IDBCursor">cursor</a>. If you are trying to get an array of all the objects in an object store, though, you should use <code>getAll()</code>.</p>
+<p>There is a performance cost associated with looking at the <code>value</code> property of a cursor, because the object is created lazily. To use a feature like <code>getAll()</code>, the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a <a href=/web/api/idbcursor>cursor</a>. If you are trying to get an array of all the objects in an object store, though, you should use <code>getAll()</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -93,7 +93,7 @@ getAllRequest.onsuccess = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li><a href=/web/api/indexeddb_api/using_indexeddb>Using IndexedDB</a></li>
  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

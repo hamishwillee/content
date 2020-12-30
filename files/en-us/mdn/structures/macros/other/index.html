@@ -7,19 +7,19 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p>In contrast to the macros listed in <a href="/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros">Commonly-used macros</a>, the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.</p>
+<p>In contrast to the macros listed in <a href=/mdn/contribute/structures/macros/commonly-used_macros>Commonly-used macros</a>, the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.</p>
 
 <h2 id="Special_contexts">Special contexts</h2>
 
 <p>These macros are used only with particular contexts, such as a specific API reference.</p>
 
 <ul>
- <li>{{TemplateLink("jsapixref")}} links to a page in the <a href="/en-US/docs/SpiderMonkey/JSAPI_Reference" title="en-US/docs/JSAPI_Reference">JSAPI Reference</a>.</li>
+ <li>{{TemplateLink("jsapixref")}} links to a page in the <a href=/spidermonkey/jsapi_reference title="en-US/docs/JSAPI_Reference">JSAPI Reference</a>.</li>
  <li>{{TemplateLink("XPCOMxref")}} links to a page in the XPCOM reference. You can specify the name of an XPCOM function, class, component, or interface (although for the latter, you should use {{TemplateLink("Interface")}} instead). This macro will find the page and create a link to it, wherever it is in the XPCOM reference subtree.</li>
- <li>{{TemplateLink("npapi")}} links to the <a href="/en-US/docs/Gecko_Plugin_API_Reference" title="en-US/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a>.</li>
+ <li>{{TemplateLink("npapi")}} links to the <a href=/gecko_plugin_api_reference title="en-US/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a>.</li>
  <li>{{TemplateLink("interface")}} can be used when linking to XPCOM interfaces.<br>
   Example: <code>\{{interface("nsIIOService")}}</code> results in: {{ Interface("nsIIOService") }}.</li>
- <li>{{TemplateLink("ifmethod")}} and {{TemplateLink("ifattribute")}} let you create a link to a particular method or attribute (respectively) on a Mozilla interface that's been created using our <a href="/en-US/docs/MDN/Contribute/Howto/Write_interface_reference_documentation" title="en-US/docs/Project:Writing_interface_reference_documentation">standard format for interface documentation</a>. For example, <code>\{\{ifmethod("nsIAutoCompleteSearch","stopSearch")\}\}</code> shows up as {{ ifmethod("nsIAutoCompleteSearch", "stopSearch") }}. Note that for {{TemplateLink("ifattribute")}}, <code>id="..."</code> must be added explicitly in the target, since attributes do not have headings.</li>
+ <li>{{TemplateLink("ifmethod")}} and {{TemplateLink("ifattribute")}} let you create a link to a particular method or attribute (respectively) on a Mozilla interface that's been created using our <a href=/mdn/contribute/howto/write_interface_reference_documentation title="en-US/docs/Project:Writing_interface_reference_documentation">standard format for interface documentation</a>. For example, <code>\{\{ifmethod("nsIAutoCompleteSearch","stopSearch")\}\}</code> shows up as {{ ifmethod("nsIAutoCompleteSearch", "stopSearch") }}. Note that for {{TemplateLink("ifattribute")}}, <code>id="..."</code> must be added explicitly in the target, since attributes do not have headings.</li>
  <li>{{TemplateLink("Interwiki")}} makes it easy to create interwiki links. Currently it supports linking to Wikipedia and Wikimo. The first parameter is the name of the wiki ("wikipedia" or "wikimo"), and the second is the path of the article. For example, <code>\{\{interwiki("wikipedia", "Firefox")\}\}</code> shows up as {{ interwiki("wikipedia", "Firefox") }}. This template auto-detects the page language and directs to the same language on Wikipedia, for example.</li>
  <li>{{TemplateLink("RFC")}} creates a link to the specified RFC, given its number. The syntax is: <code>\{\{RFC(number)\}\}</code>. For example, <code>\{\{RFC(2616)\}\}</code> becomes {{ RFC(2616) }}.</li>
 </ul>
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="Quicklinks">Quicklinks</h3>
 
-<p>We have some macros specifically designed to create <a href="/en-US/docs/MDN/Contribute/Style_guide/Quicklinks">quicklinks</a>:</p>
+<p>We have some macros specifically designed to create <a href=/mdn/contribute/style_guide/quicklinks>quicklinks</a>:</p>
 
 <ul>
  <li>The {{TemplateLink("MakeSimpleQuicklinks")}} macro creates a flat list of links in the quicklinks box. Give it a set of paths to destination pages as its input arguments. Each link's text is the page title, and each link has a tooltip derived from the page summary.</li>
@@ -74,7 +74,7 @@ tags:
 <p>{{TemplateLink("page")}} lets you embed some or all of a specific page into a document. It accepts five parameters:</p>
 
 <ol>
- <li>The URI of the page to transclude. For example, "/en-US/docs/Project:MDN/About".</li>
+ <li>The URI of the page to transclude. For example, /project:mdn/about.</li>
  <li>The name of the section within the page to transclude. This can be specified either as the title string or as the ID of a block to copy over. If not specified, the entire article is transcluded. {{optional_inline}}</li>
  <li>The revision number of the page version to transclude. This feature is not currently implemented, but would allow including text from specific versions of an article. {{unimplemented_inline}}</li>
  <li>A Boolean value indicating whether or not to show the heading of the top-level section being transcluded. This is useful if you wish to specify your own heading. The default value is false, meaning the heading is not included by default. {{optional_inline}}</li>
@@ -83,19 +83,19 @@ tags:
 
 <h4 id="Example_without_heading">Example without heading</h4>
 
-<p>\{{Page("/en-US/docs/MDN/About", "About Mozilla")}}</p>
+<p>\{{Page(/mdn/about, "About Mozilla")}}</p>
 
 <p>Result:</p>
 
-<p>{{Page("/en-US/docs/MDN/About", "About Mozilla")}}</p>
+<p>{{Page(/mdn/about, "About Mozilla")}}</p>
 
 <h4 id="Example_with_heading">Example with heading</h4>
 
-<p>\{{Page("/en-US/docs/MDN/About", "About Mozilla", 0, 1)}}</p>
+<p>\{{Page(/mdn/about, "About Mozilla", 0, 1)}}</p>
 
 <p>Result:</p>
 
-<p>{{Page("/en-US/docs/MDN/About", "About Mozilla", 0, 1)}}</p>
+<p>{{Page(/mdn/about, "About Mozilla", 0, 1)}}</p>
 
 <h3 id="Creating_new_badges">Creating new badges</h3>
 
@@ -115,22 +115,22 @@ tags:
 
 <ul>
  <li>The {{TemplateLink("anch")}} macro inserts a link to an anchor. <code class="nowiki">\{\{Anch("top")\}\}</code> produces <code class="nowiki">&lt;a href="#top"&gt;top&lt;/a&gt;</code> ({{ Anch("top") }}). You can also add a second parameter which contains replacement text to display as the link text. \{{anch("Other badges", "you can use other badges")}} produces this result: {{anch("Other badges", "you can use other badges")}}. The idea was to create a template that allows easy linking to other sections in a document. <strong>Replacement:</strong> Use the Anchor toolbar button in the Editor interface. <em>This isn't really a "replacement" and there's some discussion about whether this is truly deprecated at this time.</em></li>
- <li>The {{TemplateLink("SectionOnPage")}} macro creates a phrase that links to both the name of a section and the article containing that section. For example, <code>\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</code> outputs the following: <em>{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</em>.</li>
+ <li>The {{TemplateLink("SectionOnPage")}} macro creates a phrase that links to both the name of a section and the article containing that section. For example, <code>\{{SectionOnPage(/mozilla/firefox/releases/21, "Changes for Web developers")}}</code> outputs the following: <em>{{SectionOnPage(/mozilla/firefox/releases/21, "Changes for Web developers")}}</em>.</li>
  <li>The {{TemplateLink("manch")}} inserts a link to a method within the current interface; this is intended only for use in interface documentation pages. <code>\{\{manch("foo")\}\}</code> produces <code>&lt;code&gt;&lt;a href="current/path#foo"&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> ({{ manch("foo") }}).</li>
  <li>The {{TemplateLink("Link")}} macro inserts a link to the specified page on MDN, using the page's title as the visible string to click on, and the tooltip picked up from the page's SEO summary.</li>
  <li>The {{TemplateLink("LinkItem")}} macro inserts a link to a specified URL, with the indicated text as the visible string to click on. The link automatically picks up as its tooltip the summary of the target page. This differs from {{TemplateLink("Link")}} in that you must specify the title.</li>
  <li>The {{TemplateLink("LinkItemDL")}} macro inserts a link to a specified URL, with the indicated text as a {{HTMLElement("dt")}} which is also the link. The {{HTMLElement("dd")}} element contains the specified page's summary.</li>
  <li>{{TemplateLink("funcref")}} creates links to global functions (usually C++) documented on top-level pages. However, such pages are no longer created at the top-level of MDN.</li>
- <li>{{TemplateLink("Pref")}} inserts a link to the entry in the <a href="/en-US/docs/Mozilla/Preferences/Preference_reference">Preference reference</a> for the specified preference.</li>
+ <li>{{TemplateLink("Pref")}} inserts a link to the entry in the <a href=/mozilla/preferences/preference_reference>Preference reference</a> for the specified preference.</li>
  <li>{{TemplateLInk("spec")}} inserts a link to a specification. <strong>Replacement:</strong> Use {{TemplateLink("Spec2")}} or {{TemplateLink("SpecName")}} instead.</li>
  <li>{{TemplateLink("source")}} allows you to link to a Mozilla source code file without having to type a long MXR URL using this syntax: <code>\{\{Source("browser/Makefile.in")\}\}</code>. This gives you: {{ Source("browser/Makefile.in") }}. The text of the link is the path provided; if you want different text, then just provide a second parameter, like so: <code>\{\{Source("browser/Makefile.in", "the browser/ Makefile.in")\}\}</code>, which produces {{ Source("browser/Makefile.in", "the browser/ Makefile.in") }}. Note that the link will be to the very latest version of the file in bleeding-edge code.</li>
- <li>{{TemplateLink("Source_cvs")}} works just like {{TemplateLink("source")}}, except it links to the <a href="/en-US/docs/Developer_Guide/Source_Code/CVS" title="en-US/docs/Developer Guide/Source Code/CVS">CVS</a> repository instead of the newer <a href="/en-US/docs/mozilla-central" title="en-US/docs/mozilla-central">mozilla-central</a> one.</li>
+ <li>{{TemplateLink("Source_cvs")}} works just like {{TemplateLink("source")}}, except it links to the <a href=/developer_guide/source_code/cvs title="en-US/docs/Developer Guide/Source Code/CVS">CVS</a> repository instead of the newer <a href=/mozilla-central title="en-US/docs/mozilla-central">mozilla-central</a> one.</li>
  <li>{{TemplateLink("LXRSearch")}} can be used to create an LXR search URL.</li>
 </ul>
 
 <h3 id="Code_samples">Code samples</h3>
 
-<p>The following macros were used prior to the implementation of the built-in <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">live sample system</a> in Kuma, and should be replaced by uses of {{TemplateLink("EmbedLiveSample")}} or {{TemplateLink("LiveSampleLink")}}.</p>
+<p>The following macros were used prior to the implementation of the built-in <a href=/mdn/contribute/structures/live_samples>live sample system</a> in Kuma, and should be replaced by uses of {{TemplateLink("EmbedLiveSample")}} or {{TemplateLink("LiveSampleLink")}}.</p>
 
 <ul>
  <li>{{TemplateLink("LiveSample")}} lets you create a button linking to a sample file; these samples were sent to <a class="link-mailto" href="mailto:eshepherd@mozilla.com">Eric Shepherd</a> for uploading. These were used on Reference pages when linking to live, standalone sample pages. The template accepts one parameter, the name of the HTML file to link to.</li>

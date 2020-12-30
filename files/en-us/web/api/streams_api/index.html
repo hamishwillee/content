@@ -29,14 +29,14 @@ tags:
 
 <p>There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed of the stream is being read at.</p>
 
-<p>The basic usage of Streams hinges around making responses available as streams. For example, the response {{domxref("Body")}} returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> can be exposed as a {{domxref("ReadableStream")}}, and you can then read it using a reader created with {{domxref("ReadableStream.getReader()")}}, cancel it with {{domxref("ReadableStream.cancel()")}}, etc.</p>
+<p>The basic usage of Streams hinges around making responses available as streams. For example, the response {{domxref("Body")}} returned by a successful <a href=/web/api/windoworworkerglobalscope/fetch>fetch request</a> can be exposed as a {{domxref("ReadableStream")}}, and you can then read it using a reader created with {{domxref("ReadableStream.getReader()")}}, cancel it with {{domxref("ReadableStream.cancel()")}}, etc.</p>
 
-<p>More complicated uses involve creating your own stream using the {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor, for example to process data inside a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>.</p>
+<p>More complicated uses involve creating your own stream using the {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor, for example to process data inside a <a href=/web/api/service_worker_api>service worker</a>.</p>
 
 <p>You can also write data to streams using {{domxref("WritableStream")}}.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more details about the theory and practice of streams in our articles — <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a>, <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</a>, and <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a>.</p>
+<p><strong>Note</strong>: You can find a lot more details about the theory and practice of streams in our articles — <a href=/web/api/streams_api/concepts>Streams API concepts</a>, <a href=/web/api/streams_api/using_readable_streams>Using readable streams</a>, and <a href=/web/api/streams_api/using_writable_streams>Using writable streams</a>.</p>
 </div>
 
 <h2 id="Stream_interfaces">Stream interfaces</h2>
@@ -45,7 +45,7 @@ tags:
 
 <dl>
  <dt>{{domxref("ReadableStream")}}</dt>
- <dd>Represents a readable stream of data. It can be used to handle response streams of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, or developer-defined streams (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).</dd>
+ <dd>Represents a readable stream of data. It can be used to handle response streams of the <a href=/web/api/fetch_api>Fetch API</a>, or developer-defined streams (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).</dd>
  <dt>{{domxref("ReadableStreamDefaultReader")}}</dt>
  <dd>Represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request).</dd>
  <dt>{{domxref("ReadableStreamDefaultController")}}</dt>
@@ -78,7 +78,7 @@ tags:
  <dt>{{domxref("Request")}}</dt>
  <dd>When a new <code>Request</code> object is constructed, you can pass it a {{domxref("ReadableStream")}} in the <code>body</code> property of its <code>RequestInit</code> dictionary.  This <code>Request</code> could then be passed to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} to commence fetching the stream.</dd>
  <dt>{{domxref("Body")}}</dt>
- <dd>The response {{domxref("Body")}} returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.</dd>
+ <dd>The response {{domxref("Body")}} returned by a successful <a href=/web/api/windoworworkerglobalscope/fetch>fetch request</a> is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.</dd>
 </dl>
 
 <h3 id="ByteStream-related_interfaces">ByteStream-related interfaces</h3>
@@ -106,7 +106,7 @@ tags:
  <li><a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream</a>: This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.</li>
  <li><a href="https://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee example</a>: This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.</li>
  <li><a href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer</a>: This example shows how to write to a writable stream, then decode the stream and write the contents to the UI.</li>
- <li><a href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">Unpack chunks of a PNG</a>: This example shows how <a href="/en-US/docs/Web/API/ReadableStream/pipeThrough"><code>pipeThrough()</code></a> can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.</li>
+ <li><a href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">Unpack chunks of a PNG</a>: This example shows how <a href=/web/api/readablestream/pipethrough><code>pipeThrough()</code></a> can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.</li>
 </ul>
 
 <p>Examples from other developers:</p>
@@ -149,7 +149,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a></li>
+ <li><a href=/web/api/streams_api/concepts>Streams API concepts</a></li>
+ <li><a href=/web/api/streams_api/using_readable_streams>Using readable streams</a></li>
+ <li><a href=/web/api/streams_api/using_writable_streams>Using writable streams</a></li>
 </ul>

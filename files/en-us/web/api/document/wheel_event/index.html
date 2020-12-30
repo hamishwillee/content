@@ -33,10 +33,10 @@ tags:
  </tbody>
 </table>
 
-<p>This event replaces the non-standard deprecated <code><a href="/en-US/docs/Web/API/Element/mousewheel_event">mousewheel</a></code> event.</p>
+<p>This event replaces the non-standard deprecated <code><a href=/web/api/element/mousewheel_event>mousewheel</a></code> event.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Don't confuse the <code>wheel</code> event with the <code><a href="/en-US/docs/Web/API/Document/scroll_event">scroll</a></code> event. The default action of a <code>wheel</code> event is implementation-specific, and doesn't necessarily dispatch a <code>scroll</code> event. Even when it does, the <code>delta*</code> values in the <code>wheel</code> event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the <code>wheel</code> event's <code>delta*</code> properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} in the <code>scroll</code> event.</p>
+<p><strong>Note:</strong> Don't confuse the <code>wheel</code> event with the <code><a href=/web/api/document/scroll_event>scroll</a></code> event. The default action of a <code>wheel</code> event is implementation-specific, and doesn't necessarily dispatch a <code>scroll</code> event. Even when it does, the <code>delta*</code> values in the <code>wheel</code> event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the <code>wheel</code> event's <code>delta*</code> properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} in the <code>scroll</code> event.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -89,7 +89,7 @@ document.onwheel = zoom;</pre>
 
 <h3 id="addEventListener_equivalent">addEventListener equivalent</h3>
 
-<p>The event handler can also be set up using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method:</p>
+<p>The event handler can also be set up using the <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> method:</p>
 
 <pre class="brush: js notranslate">document.addEventListener('wheel', zoom);</pre>
 

@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic HTML familiarity, as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>.</td>
+   <td>Basic HTML familiarity, as covered in <a href=/learn/html/introduction_to_html/getting_started>Getting started with HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -53,7 +53,7 @@ tags:
   &lt;title&gt;My test page&lt;/title&gt;
 &lt;/head&gt;</pre>
 
-<p>In larger pages however, the head can get quite full. Try going to some of your favorite websites and use the <a href="/en-US/docs/Learn/Discover_browser_developer_tools">developer tools</a> to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.</p>
+<p>In larger pages however, the head can get quite full. Try going to some of your favorite websites and use the <a href=/learn/discover_browser_developer_tools>developer tools</a> to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.</p>
 
 <h2 id="Adding_a_title">Adding a title</h2>
 
@@ -130,7 +130,7 @@ started with developing web sites and applications."&gt;</pre>
 
 <p>Specifying an author is beneficial in many ways: it is useful to be able to understand who wrote the page, if you have any questions about the content and you would like to contact them. Some content management systems have facilities to automatically extract page author information and make it available for such purposes.</p>
 
-<p>Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines (such activities are termed <a href="/en-US/docs/Glossary/SEO">Search Engine Optimization</a>, or {{glossary("SEO")}}.)</p>
+<p>Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines (such activities are termed <a href=/glossary/seo>Search Engine Optimization</a>, or {{glossary("SEO")}}.)</p>
 
 <h3 id="Active_learning_The_descriptions_use_in_search_engines">Active learning: The description's use in search engines</h3>
 
@@ -215,7 +215,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 <p>Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code.</p>
 
 <div class="note">
-<p><strong>Note:</strong> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src"><code>img-src</code> directive</a> is not preventing access to it.</p>
+<p><strong>Note:</strong> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's <a href=/web/http/headers/content-security-policy/img-src><code>img-src</code> directive</a> is not preventing access to it.</p>
 </div>
 
 <h2 id="Applying_CSS_and_JavaScript_to_HTML">Applying CSS and JavaScript to HTML</h2>
@@ -229,7 +229,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
   <pre class="brush: html notranslate">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
  </li>
  <li>
-  <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript at the same time as the page's HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">Script loading strategies</a>). </p>
+  <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript at the same time as the page's HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href=/learn/javascript/first_steps/what_is_javascript#Script_loading_strategies>Script loading strategies</a>). </p>
 
   <pre class="brush: html notranslate">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
 
@@ -262,7 +262,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
 <h2 id="Setting_the_primary_language_of_the_document">Setting the primary language of the document</h2>
 
-<p>Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang attribute</a> to the opening HTML tag (as seen in the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a> and shown below.)</p>
+<p>Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the <a href=/web/html/global_attributes/lang>lang attribute</a> to the opening HTML tag (as seen in the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a> and shown below.)</p>
 
 <pre class="brush: html notranslate">&lt;html lang="en-US"&gt;</pre>
 
@@ -283,13 +283,13 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What’s in the head? Metadata in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Marking up a letter</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structuring a page of content</a></li>
+ <li><a href=/learn/html/introduction_to_html/getting_started>Getting started with HTML</a></li>
+ <li><a href=/learn/html/introduction_to_html/the_head_metadata_in_html>What’s in the head? Metadata in HTML</a></li>
+ <li><a href=/learn/html/introduction_to_html/html_text_fundamentals>HTML text fundamentals</a></li>
+ <li><a href=/learn/html/introduction_to_html/creating_hyperlinks>Creating hyperlinks</a></li>
+ <li><a href=/learn/html/introduction_to_html/advanced_text_formatting>Advanced text formatting</a></li>
+ <li><a href=/learn/html/introduction_to_html/document_and_website_structure>Document and website structure</a></li>
+ <li><a href=/learn/html/introduction_to_html/debugging_html>Debugging HTML</a></li>
+ <li><a href=/learn/html/introduction_to_html/marking_up_a_letter>Marking up a letter</a></li>
+ <li><a href=/learn/html/introduction_to_html/structuring_a_page_of_content>Structuring a page of content</a></li>
 </ul>

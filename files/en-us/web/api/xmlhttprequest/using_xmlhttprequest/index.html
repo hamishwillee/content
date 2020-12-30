@@ -17,9 +17,9 @@ tags:
 ---
 <div>{{APIRef("XMLHttpRequest")}}</div>
 
-<p><span class="seoSummary">In this guide, we'll take a look at how to use {{domxref("XMLHttpRequest")}} to issue <a href="/en-US/docs/Web/HTTP">HTTP</a> requests in order to exchange data between the web site and a server</span>. Examples of both common and more obscure use cases for <code>XMLHttpRequest</code> are included.</p>
+<p><span class="seoSummary">In this guide, we'll take a look at how to use {{domxref("XMLHttpRequest")}} to issue <a href=/web/http>HTTP</a> requests in order to exchange data between the web site and a server</span>. Examples of both common and more obscure use cases for <code>XMLHttpRequest</code> are included.</p>
 
-<p>To send an HTTP request, create an <code>XMLHttpRequest</code> object, open a URL, and send the request. After the transaction completes, the object will contain useful information such as the response body and the <a href="/en-US/docs/Web/HTTP/Status">HTTP status</a> of the result.</p>
+<p>To send an HTTP request, create an <code>XMLHttpRequest</code> object, open a URL, and send the request. After the transaction completes, the object will contain useful information such as the response body and the <a href=/web/http/status>HTTP status</a> of the result.</p>
 
 <pre class="brush: js notranslate">function reqListener () {
   console.log(this.responseText);
@@ -32,7 +32,7 @@ oReq.send();</pre>
 
 <h2 id="Types_of_requests">Types of requests</h2>
 
-<p>A request made via <code>XMLHttpRequest</code> can fetch the data in one of two ways, asynchronously or synchronously. The type of request is dictated by the optional <code>async</code> argument (the third argument) that is set on the {{domxref("XMLHttpRequest.open()")}} method. If this argument is <code>true</code> or not specified, the <code>XMLHttpRequest</code> is processed asynchronously, otherwise the process is handled synchronously. A detailed discussion and demonstrations of these two types of requests can be found on the <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">synchronous and asynchronous requests</a> page. Do not use synchronous requests outside Web Workers.</p>
+<p>A request made via <code>XMLHttpRequest</code> can fetch the data in one of two ways, asynchronously or synchronously. The type of request is dictated by the optional <code>async</code> argument (the third argument) that is set on the {{domxref("XMLHttpRequest.open()")}} method. If this argument is <code>true</code> or not specified, the <code>XMLHttpRequest</code> is processed asynchronously, otherwise the process is handled synchronously. A detailed discussion and demonstrations of these two types of requests can be found on the <a href=/dom/xmlhttprequest/synchronous_and_asynchronous_requests>synchronous and asynchronous requests</a> page. Do not use synchronous requests outside Web Workers.</p>
 
 <div class="note"><strong>Note:</strong> Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.</div>
 
@@ -47,14 +47,14 @@ oReq.send();</pre>
 <p>If you use <code>XMLHttpRequest</code> to get the content of a remote XML document, the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property will be a DOM object containing a parsed XML document. This could prove difficult to manipulate and analyze. There are four primary ways of analyzing this XML document:</p>
 
 <ol>
- <li>Using <a href="/en-US/docs/Web/XPath">XPath</a> to address (or point to) parts of it.</li>
- <li>Manually <a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a> to strings or objects.</li>
+ <li>Using <a href=/web/xpath>XPath</a> to address (or point to) parts of it.</li>
+ <li>Manually <a href=/web/guide/parsing_and_serializing_xml>Parsing and serializing XML</a> to strings or objects.</li>
  <li>Using {{domxref("XMLSerializer")}} to serialize <strong>DOM trees to strings or to files</strong>.</li>
  <li>{{jsxref("RegExp")}} can be used if you always know the content of the XML document beforehand. You might want to remove line breaks, if you use <code>RegExp</code> to scan with regard to line breaks. However, this method is a "last resort" since if the XML code changes slightly, the method will likely fail.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note:</strong> <code>XMLHttpRequest</code> can now interpret HTML for you using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the article about <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> to learn how to do this.</p>
+<p><strong>Note:</strong> <code>XMLHttpRequest</code> can now interpret HTML for you using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the article about <a href=/web/api/xmlhttprequest/html_in_xmlhttprequest>HTML in XMLHttpRequest</a> to learn how to do this.</p>
 </div>
 
 <h3 id="Processing_a_responseText_property_containing_an_HTML_document">Processing a responseText property containing an HTML document</h3>
@@ -62,8 +62,8 @@ oReq.send();</pre>
 <p>If you use <code>XMLHttpRequest</code> to get the content of a remote HTML webpage, the {{domxref("XMLHttpRequest.responseText", "responseText")}} property is a string containing the raw HTML. This could prove difficult to manipulate and analyze. There are three primary ways to analyze and parse this raw HTML string:</p>
 
 <ol>
- <li>Use the <code>XMLHttpRequest.responseXML</code> property as covered in the article <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a>.</li>
- <li>Inject the content into the body of a <a href="/en-US/docs/Web/API/DocumentFragment">document fragment</a> via <code>fragment.body.innerHTML</code> and traverse the DOM of the fragment.</li>
+ <li>Use the <code>XMLHttpRequest.responseXML</code> property as covered in the article <a href=/web/api/xmlhttprequest/html_in_xmlhttprequest>HTML in XMLHttpRequest</a>.</li>
+ <li>Inject the content into the body of a <a href=/web/api/documentfragment>document fragment</a> via <code>fragment.body.innerHTML</code> and traverse the DOM of the fragment.</li>
  <li>{{jsxref("RegExp")}} can be used if you always know the content of the HTML <code>responseText</code> beforehand. You might want to remove line breaks, if you use RegExp to scan with regard to linebreaks. However, this method is a "last resort" since if the HTML code changes slightly, the method will likely fail.</li>
 </ol>
 
@@ -92,7 +92,7 @@ oReq.open("GET", url);
 oReq.responseType = "arraybuffer";
 oReq.send();</pre>
 
-<p>For more examples check out the <a href="/en-US/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data">Sending and Receiving Binary Data</a> page</p>
+<p>For more examples check out the <a href=/dom/xmlhttprequest/sending_and_receiving_binary_data>Sending and Receiving Binary Data</a> page</p>
 
 <h2 id="Monitoring_progress">Monitoring progress</h2>
 
@@ -188,7 +188,7 @@ function loadEnd(e) {
  <li>using the {{domxref("XMLHttpRequest.FormData", "FormData")}} API</li>
 </ul>
 
-<p>Using the <code>FormData</code> API is the simplest and fastest, but has the disadvantage that data collected can not be <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringified</a>.<br>
+<p>Using the <code>FormData</code> API is the simplest and fastest, but has the disadvantage that data collected can not be <a href=/web/javascript/reference/global_objects/json/stringify>stringified</a>.<br>
  Using only AJAX is more complex, but typically more flexible and powerful.</p>
 
 <h3 id="Using_nothing_but_XMLHttpRequest">Using nothing but <code>XMLHttpRequest</code></h3>
@@ -226,7 +226,7 @@ baz=The first line.
 The second line.</pre>
  </li>
  <li>
-  <p>Method: <code>POST</code>; Encoding type: <code><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">multipart/form-data</a></code>:</p>
+  <p>Method: <code>POST</code>; Encoding type: <code><a href=/web/http/basics_of_http/mime_types#multipartform-data>multipart/form-data</a></code>:</p>
 
   <pre class="brush:plain notranslate">Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
@@ -545,13 +545,13 @@ print_r($_FILES);
 
 <div class="note"><strong>Note:</strong> This framework uses the {{domxref("FileReader")}} API to transmit file uploads. This is a recent API and is not implemented in IE9 or below. For this reason, the AJAX-only upload is considered <strong>an experimental technique</strong>. If you do not need to upload binary files, this framework works fine in most browsers.</div>
 
-<div class="note"><strong>Note:</strong> The best way to send binary content is via {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjuncton with the {{domxref("XMLHttpRequest.send()", "send()")}} method and possibly the {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the <code>FileReader</code> API. But, since the aim of this script is to work with a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a> raw data, we used the {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} method in conjunction with the {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} method of the <code>FileReader</code> API. As such, the above script makes sense only when you are dealing with small files. If you do not intend to upload binary content, consider instead using the <code>FormData</code> API.</div>
+<div class="note"><strong>Note:</strong> The best way to send binary content is via {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjuncton with the {{domxref("XMLHttpRequest.send()", "send()")}} method and possibly the {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the <code>FileReader</code> API. But, since the aim of this script is to work with a <a href=/web/javascript/reference/global_objects/json/stringify>stringifiable</a> raw data, we used the {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} method in conjunction with the {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} method of the <code>FileReader</code> API. As such, the above script makes sense only when you are dealing with small files. If you do not intend to upload binary content, consider instead using the <code>FormData</code> API.</div>
 
 <div class="note"><strong>Note:</strong> The non-standard <code>sendAsBinary</code> method is considered deprecated as of Gecko 31 {{geckoRelease(31)}} and will be removed soon. The standard <code>send(Blob data)</code> method can be used instead.</div>
 
 <h3 id="Using_FormData_objects">Using FormData objects</h3>
 
-<p>The {{domxref("XMLHttpRequest.FormData", "FormData")}} constructor lets you compile a set of key/value pairs to send using <code>XMLHttpRequest</code>. Its primary use is in sending form data, but can also be used independently from a form in order to transmit user keyed data. The transmitted data is in the same format the form's <code>submit()</code> method uses to send data, if the form's encoding type were set to "multipart/form-data". FormData objects can be utilized in a number of ways with an <code>XMLHttpRequest</code>. For examples, and explanations of how one can utilize FormData with XMLHttpRequests, see the <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData Objects</a> page. For didactic purposes here is <strong>a <em>translation</em> of <a href="#A_little_vanilla_framework">the previous example</a> transformed to use the <code>FormData</code> API</strong>. Note the brevity of the code:</p>
+<p>The {{domxref("XMLHttpRequest.FormData", "FormData")}} constructor lets you compile a set of key/value pairs to send using <code>XMLHttpRequest</code>. Its primary use is in sending form data, but can also be used independently from a form in order to transmit user keyed data. The transmitted data is in the same format the form's <code>submit()</code> method uses to send data, if the form's encoding type were set to "multipart/form-data". FormData objects can be utilized in a number of ways with an <code>XMLHttpRequest</code>. For examples, and explanations of how one can utilize FormData with XMLHttpRequests, see the <a href=/dom/xmlhttprequest/formdata/using_formdata_objects>Using FormData Objects</a> page. For didactic purposes here is <strong>a <em>translation</em> of <a href="#A_little_vanilla_framework">the previous example</a> transformed to use the <code>FormData</code> API</strong>. Note the brevity of the code:</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: html notranslate">&lt;!doctype html&gt;
@@ -677,7 +677,7 @@ function AJAXSubmit (oFormElement) {
 &lt;/html&gt;</pre>
 </div>
 
-<div class="note"><strong>Note:</strong> As we said,<strong> {{domxref("FormData")}} objects are not <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a> objects</strong>. If you want to stringify a submitted data, use <a href="#A_little_vanilla_framework">the previous <em>pure</em>-AJAX example</a>. Note also that, although in this example there are some <code>file</code> {{ HTMLElement("input") }} fields, <strong>when you submit a form through the <code>FormData</code> API you do not need to use the {{domxref("FileReader")}} API also</strong>: files are automatically loaded and uploaded.</div>
+<div class="note"><strong>Note:</strong> As we said,<strong> {{domxref("FormData")}} objects are not <a href=/web/javascript/reference/global_objects/json/stringify>stringifiable</a> objects</strong>. If you want to stringify a submitted data, use <a href="#A_little_vanilla_framework">the previous <em>pure</em>-AJAX example</a>. Note also that, although in this example there are some <code>file</code> {{ HTMLElement("input") }} fields, <strong>when you submit a form through the <code>FormData</code> API you do not need to use the {{domxref("FileReader")}} API also</strong>: files are automatically loaded and uploaded.</div>
 
 <h2 id="Get_last_modified_date">Get last modified date</h2>
 
@@ -725,7 +725,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 <h2 id="Cross-site_XMLHttpRequest">Cross-site XMLHttpRequest</h2>
 
-<p>Modern browsers support cross-site requests by implementing the <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing</a> (CORS) standard. As long as the server is configured to allow requests from your web application's origin, <code>XMLHttpRequest</code> will work. Otherwise, an <code>INVALID_ACCESS_ERR</code> exception is thrown.</p>
+<p>Modern browsers support cross-site requests by implementing the <a href=/web/http/cors>Cross-Origin Resource Sharing</a> (CORS) standard. As long as the server is configured to allow requests from your web application's origin, <code>XMLHttpRequest</code> will work. Otherwise, an <code>INVALID_ACCESS_ERR</code> exception is thrown.</p>
 
 <h2 id="Bypassing_the_cache">Bypassing the cache</h2>
 
@@ -788,10 +788,10 @@ oReq.send(null);</pre>
 <h2 id="See_also">See also</h2>
 
 <ol>
- <li><a href="/en-US/docs/AJAX/Getting_Started">MDN AJAX introduction</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a></li>
- <li><a href="/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL">How to check the security state of an XMLHTTPRequest over SSL</a></li>
+ <li><a href=/ajax/getting_started>MDN AJAX introduction</a></li>
+ <li><a href=/web/api/xmlhttprequest/html_in_xmlhttprequest>HTML in XMLHttpRequest</a></li>
+ <li><a href=/web/http/access_control_cors>HTTP access control</a></li>
+ <li><a href=/how_to_check_the_security_state_of_an_xmlhttprequest_over_ssl>How to check the security state of an XMLHTTPRequest over SSL</a></li>
  <li><a href="http://www.peej.co.uk/articles/rich-user-experience.html">XMLHttpRequest - REST and the Rich User Experience</a></li>
  <li><a href="https://msdn.microsoft.com/library/ms535874">Microsoft documentation</a></li>
  <li><a href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest Object" (jibbering.com)</a></li>

@@ -25,7 +25,7 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Element.getBoundingClientRect()</strong></code> method returns a {{domxref("DOMRect")}} object providing information about the size of an element and its position relative to the <a href="/en-US/docs/Glossary/Viewport">viewport</a>.</p>
+<p>The <code><strong>Element.getBoundingClientRect()</strong></code> method returns a {{domxref("DOMRect")}} object providing information about the size of an element and its position relative to the <a href=/glossary/viewport>viewport</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,7 +37,7 @@ tags:
 
 <p style="display: block;"><img alt="" src="https://mdn.mozillademos.org/files/17155/element-box-diagram.png"></p>
 
-<p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}} object returned by the method include the <code>padding</code> and <code>border-width</code>, not only the content width/height. In the standard box model, this would be equal to the <code>width</code> or <code>height</code> property of the element + <code>padding</code> + <code>border-width</code>. But if <code><a href="/en-US/docs/Web/CSS/box-sizing">box-sizing: border-box</a></code> is set for the element this would be directly equal to its <code>width</code> or <code>height</code>.</p>
+<p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}} object returned by the method include the <code>padding</code> and <code>border-width</code>, not only the content width/height. In the standard box model, this would be equal to the <code>width</code> or <code>height</code> property of the element + <code>padding</code> + <code>border-width</code>. But if <code><a href=/web/css/box-sizing>box-sizing: border-box</a></code> is set for the element this would be directly equal to its <code>width</code> or <code>height</code>.</p>
 
 <p>The returned value can be thought of as the union of the rectangles returned by {{domxref("Element.getClientRects", "getClientRects()")}} for the element, i.e., the CSS border-boxes associated with the element.</p>
 

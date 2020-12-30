@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;basic-shape&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.</p>
+<p>The <strong><code>&lt;basic-shape&gt;</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_types>data type</a> represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}</div>
 
@@ -22,7 +22,7 @@ tags:
 
 <h3 id="Shape_functions">Shape functions</h3>
 
-<p>The following shapes are supported. All <code>&lt;basic-shape&gt;</code> values use functional notation and are defined here using the <a href="/en-US/docs/Web/CSS/Value_definition_syntax">value definition syntax</a>.</p>
+<p>The following shapes are supported. All <code>&lt;basic-shape&gt;</code> values use functional notation and are defined here using the <a href=/web/css/value_definition_syntax>value definition syntax</a>.</p>
 
 <dl>
  <dt><code><a id="inset()"></a>inset()</code></dt>
@@ -33,7 +33,7 @@ tags:
 
  <p>When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.</p>
 
- <p>The optional <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.</p>
+ <p>The optional <a href=/web/css/border-radius><code>&lt;border-radius&gt;</code></a> argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.</p>
 
  <p>A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.</p>
  </dd>
@@ -57,7 +57,7 @@ tags:
  <dd>
  <pre class="syntaxbox notranslate"><code>polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</code></pre>
 
- <p><code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
+ <p><code>&lt;fill-rule&gt;</code> represents the <a href=/web/svg/attribute/fill-rule>filling rule</a> used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
  <p>Each pair argument in the list represents <em>x<sub>i</sub></em> and <em>y<sub>i</sub></em> - the x and y axis coordinates of the i<sup>th</sup> vertex of the polygon.</p>
  </dd>
@@ -65,9 +65,9 @@ tags:
  <dd>
  <pre class="syntaxbox notranslate"><code>path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</code></pre>
 
- <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
+ <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href=/web/svg/attribute/fill-rule>filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
- <p>The required &lt;string&gt; is an <a href="/en-US/docs/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
+ <p>The required &lt;string&gt; is an <a href=/svg/attribute/d>SVG Path</a> string encompassed in quotes</p>
  </dd>
 </dl>
 
@@ -91,7 +91,7 @@ tags:
 <ul>
  <li>Omitted values are included and compute to their defaults.</li>
  <li>A {{cssxref("&lt;position&gt;")}} value in <code>circle()</code> or <code>ellipse()</code> is computed as a pair of offsets (horizontal then vertical) from the top left origin, each given as a combination of an absolute length and a percentage.</li>
- <li>A <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> value in <code>inset()</code> is computed as an expanded list of all eight {{cssxref("length")}} or percentage values.</li>
+ <li>A <a href=/web/css/border-radius><code>&lt;border-radius&gt;</code></a> value in <code>inset()</code> is computed as an expanded list of all eight {{cssxref("length")}} or percentage values.</li>
 </ul>
 
 <h3 id="Interpolation_of_basic_shapes">Interpolation of basic shapes</h3>
@@ -111,7 +111,7 @@ tags:
 
 <h3 id="Animated_polygon">Animated polygon</h3>
 
-<p>In this example, we use the <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.</p>
+<p>In this example, we use the <a href=/web/css/@keyframes>@keyframes</a> at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -169,5 +169,5 @@ tags:
 
 <ul>
  <li>Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Edit Shape Paths in CSS — Firefox Developer Tools</a></li>
+ <li><a href=/tools/page_inspector/how_to/edit_css_shapes>Edit Shape Paths in CSS — Firefox Developer Tools</a></li>
 </ul>

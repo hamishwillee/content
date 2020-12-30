@@ -27,7 +27,7 @@ tags:
 <h2 id="Notable_Changes_in_NSS_3.18.1">Notable Changes in NSS 3.18.1</h2>
 
 <ul>
- <li>The following CA certificate had the Websites and Code Signing trust<strong> bits restored to their original state</strong> to allow more time to develop a better transition strategy for affected sites. The Websites and Code Signing trust bits were turned off in <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_3.18_release_notes">NSS 3.18</a>. But when Firefox 38 went into Beta, there was a huge spike in the number of certificate verification errors attributed to this change. So, <span style="background-color: rgb(245, 246, 245);">to give website administrators more time to update their web servers, </span>we reverted the trust bits back to being enabled.
+ <li>The following CA certificate had the Websites and Code Signing trust<strong> bits restored to their original state</strong> to allow more time to develop a better transition strategy for affected sites. The Websites and Code Signing trust bits were turned off in <a href=/mozilla/projects/nss/nss_3.18_release_notes>NSS 3.18</a>. But when Firefox 38 went into Beta, there was a huge spike in the number of certificate verification errors attributed to this change. So, <span style="background-color: rgb(245, 246, 245);">to give website administrators more time to update their web servers, </span>we reverted the trust bits back to being enabled.
 
   <ul>
    <li>OU = Equifax Secure Certificate Authority

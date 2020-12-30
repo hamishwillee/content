@@ -9,7 +9,7 @@ tags:
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</div>
 
 <div class="summary">
-<p>In the last chapter we made some <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">basic animations</a> and got to know ways to get things moving. In this part we will have a closer look at the motion itself and are going to add some physics to make our animations more advanced.</p>
+<p>In the last chapter we made some <a href=/web/api/canvas_api/tutorial/basic_animations>basic animations</a> and got to know ways to get things moving. In this part we will have a closer look at the motion itself and are going to add some physics to make our animations more advanced.</p>
 </div>
 
 <h2 id="Drawing_a_ball">Drawing a ball</h2>
@@ -44,7 +44,7 @@ ball.draw();</pre>
 
 <h2 id="Adding_velocity">Adding velocity</h2>
 
-<p>Now that we have a ball, we are ready to add a basic animation like we have learned in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">last chapter</a> of this tutorial. Again, {{domxref("window.requestAnimationFrame()")}} helps us to control the animation. The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.</p>
+<p>Now that we have a ball, we are ready to add a basic animation like we have learned in the <a href=/web/api/canvas_api/tutorial/basic_animations>last chapter</a> of this tutorial. Again, {{domxref("window.requestAnimationFrame()")}} helps us to control the animation. The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.</p>
 
 <pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -289,7 +289,7 @@ ball.draw();</pre>
 
 <h2 id="Adding_mouse_control">Adding mouse control</h2>
 
-<p>To get some control over the ball, we can make it follow our mouse using the <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code> event, for example. The <code><a href="/en-US/docs/Web/Events/click">click</a></code> event releases the ball and lets it bounce again.</p>
+<p>To get some control over the ball, we can make it follow our mouse using the <code><a href=/web/reference/events/mousemove>mousemove</a></code> event, for example. The <code><a href=/web/events/click>click</a></code> event releases the ball and lets it bounce again.</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -367,13 +367,13 @@ ball.draw();
 
 <h2 id="Breakout">Breakout</h2>
 
-<p>This short chapter only explains some techniques to create more advanced animations. There are many more! How about adding a paddle, some bricks, and turn this demo into a <a href="https://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a> game? Check out our <a href="/en-US/docs/Games">Game development</a> area for more gaming related articles.</p>
+<p>This short chapter only explains some techniques to create more advanced animations. There are many more! How about adding a paddle, some bricks, and turn this demo into a <a href="https://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a> game? Check out our <a href=/games>Game development</a> area for more gaming related articles.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("window.requestAnimationFrame()")}}</li>
- <li><a href="/en-US/docs/Games/Techniques/Efficient_animation_for_web_games">Efficient animation for web games</a></li>
+ <li><a href=/games/techniques/efficient_animation_for_web_games>Efficient animation for web games</a></li>
 </ul>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</p>

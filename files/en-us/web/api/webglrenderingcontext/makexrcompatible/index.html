@@ -24,7 +24,7 @@ tags:
 ---
 <p>{{APIRef("WebGL")}}</p>
 
-<p>The {{domxref("WebGLRenderingContext")}} method <code><strong>makeXRCompatible()</strong></code> ensures that the rendering context described by the <code>WebGLRenderingContext</code> is ready to render the scene for the immersive <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> device on which it will be displayed. If necessary, the <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> layer may reconfigure the context to be ready to render to a different device than it originally was.</p>
+<p>The {{domxref("WebGLRenderingContext")}} method <code><strong>makeXRCompatible()</strong></code> ensures that the rendering context described by the <code>WebGLRenderingContext</code> is ready to render the scene for the immersive <a href=/web/api/webxr_device_api>WebXR</a> device on which it will be displayed. If necessary, the <a href=/web/api/webgl_api>WebGL</a> layer may reconfigure the context to be ready to render to a different device than it originally was.</p>
 
 <p>This is useful if you have an application which can start out being presented on a standard 2D display but can then be transitioned to a 3D immersion system.</p>
 
@@ -38,7 +38,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which successfully resolves once the WebGL context is ready to be used for rendering <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> content.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> which successfully resolves once the WebGL context is ready to be used for rendering <a href=/web/api/webxr_device_api>WebXR</a> content.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -53,9 +53,9 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Because <code>makeXRCompatible()</code> may involve replacing the underlying WebGL context with a new one that uses the new rendering hardware, the existing contents of the context may be lost and, therefore, would need to be re-rendered. This is why the <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code> and <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code> events are used: the first gives you the opportunity to discard anything you won't need anymore, while the second gives you the opportunity to load resources and prepare to render the scene in its new context.</p>
+<p>Because <code>makeXRCompatible()</code> may involve replacing the underlying WebGL context with a new one that uses the new rendering hardware, the existing contents of the context may be lost and, therefore, would need to be re-rendered. This is why the <code><a href=/web/api/htmlcanvaselement/webglcontextlost_event>webglcontextlost</a></code> and <code><a href=/web/api/htmlcanvaselement/webglcontextrestored_event>webglcontextrestored</a></code> events are used: the first gives you the opportunity to discard anything you won't need anymore, while the second gives you the opportunity to load resources and prepare to render the scene in its new context.</p>
 
-<p>While this method is available through the {{domxref("WebGLRenderingContext")}} interface, it's actually defined by the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> rather than by WebGL.</p>
+<p>While this method is available through the {{domxref("WebGLRenderingContext")}} interface, it's actually defined by the <a href=/web/api/webxr_device_api>WebXR Device API</a> rather than by WebGL.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -147,7 +147,7 @@ function startGame() {
 
 <p>Then the <code>startGame()</code> function is called to trigger the beginning of gameplay.</p>
 
-<p>Handlers are provided for both <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code> and <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>; in the first case, we make sure we're aware that the state can be recovered, while in the latter we actually reload the scene to ensure we have the correct resources for the current screen or headset configuration.</p>
+<p>Handlers are provided for both <code><a href=/web/api/htmlcanvaselement/webglcontextlost_event>webglcontextlost</a></code> and <code><a href=/web/api/htmlcanvaselement/webglcontextrestored_event>webglcontextrestored</a></code>; in the first case, we make sure we're aware that the state can be recovered, while in the latter we actually reload the scene to ensure we have the correct resources for the current screen or headset configuration.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

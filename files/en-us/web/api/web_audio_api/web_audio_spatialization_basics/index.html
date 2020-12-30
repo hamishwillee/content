@@ -24,7 +24,7 @@ tags:
 
 <h2 id="3D_boombox_demo">3D boombox demo</h2>
 
-<p>To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> guide. see the <a href="https://mdn.github.io/webaudio-examples/spacialization/">3D spatialization demo live</a> (and see the <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">source code</a> also).</p>
+<p>To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic <a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a> guide. see the <a href="https://mdn.github.io/webaudio-examples/spacialization/">3D spatialization demo live</a> (and see the <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">source code</a> also).</p>
 
 <p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="https://mdn.mozillademos.org/files/16232/web-audio-spatialization.png" style="border-style: solid; border-width: 1px; height: 724px; width: 949px;"></p>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Creating_an_audio_listener">Creating an audio listener</h2>
 
-<p>So let's begin! The {{domxref("BaseAudioContext")}} (the interface the {{domxref("AudioContext")}} is extended from) has a <code><a href="/en-US/docs/Web/API/BaseAudioContext/listener">listener</a></code> property that returns an {{domxref("AudioListener")}} object. This represents the listener of the scene, usually your user. You can define where they are in space and in which direction they are facing. They remain static. The <code>pannerNode</code> can then calculate its sound position relative to the position of the listener.</p>
+<p>So let's begin! The {{domxref("BaseAudioContext")}} (the interface the {{domxref("AudioContext")}} is extended from) has a <code><a href=/web/api/baseaudiocontext/listener>listener</a></code> property that returns an {{domxref("AudioListener")}} object. This represents the listener of the scene, usually your user. You can define where they are in space and in which direction they are facing. They remain static. The <code>pannerNode</code> can then calculate its sound position relative to the position of the listener.</p>
 
 <p>Let's create our context and listener and set the listener's position to emulate a person looking into our room:</p>
 
@@ -69,7 +69,7 @@ listener.upZ.value = 0;
 
 <p>Let's create our {{domxref("PannerNode")}}. This has a whole bunch of properties associated with it. Let's take a look at each of them:</p>
 
-<p>To start we can set the <a href="/en-US/docs/Web/API/PannerNode/panningModel"><code>panningModel</code></a>. This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:</p>
+<p>To start we can set the <a href=/web/api/pannernode/panningmodel><code>panningModel</code></a>. This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:</p>
 
 <p><code>equalpower</code> — The default and the general way panning is figured out</p>
 
@@ -80,29 +80,29 @@ listener.upZ.value = 0;
 <pre class="brush: js notranslate">const pannerModel = 'HRTF';
 </pre>
 
-<p>The <a href="/en-US/docs/Web/API/PannerNode/coneInnerAngle"><code>coneInnerAngle</code></a> and <a href="/en-US/docs/Web/API/PannerNode/coneOuterAngle"><code>coneOuterAngle</code></a> properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the <a href="/en-US/docs/Web/API/PannerNode/coneOuterGain"><code>coneOuterGain</code></a> value. Let's create constants that store the values we'll use for these parameters later on:</p>
+<p>The <a href=/web/api/pannernode/coneinnerangle><code>coneInnerAngle</code></a> and <a href=/web/api/pannernode/coneouterangle><code>coneOuterAngle</code></a> properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the <a href=/web/api/pannernode/coneoutergain><code>coneOuterGain</code></a> value. Let's create constants that store the values we'll use for these parameters later on:</p>
 
 <pre class="brush: js notranslate">const innerCone = 60;
 const outerCone = 90;
 const outerGain = 0.3;
 </pre>
 
-<p>The next parameter is <a href="/en-US/docs/Web/API/PannerNode/distanceModel"><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
+<p>The next parameter is <a href=/web/api/pannernode/distancemodel><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
 
 <pre class="notranslate">const distanceModel = 'linear';
 </pre>
 
-<p>We can set a maximum distance (<a href="/en-US/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
+<p>We can set a maximum distance (<a href=/web/api/pannernode/maxdistance><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
 
 <pre class="brush: js notranslate">const maxDistance = 10000;
 </pre>
 
-<p>There's also a reference distance (<code><a href="/en-US/docs/Web/API/PannerNode/refDistance">refDistance</a></code>), which is used by the distance models. We can keep that at the default value of <code>1</code> as well:</p>
+<p>There's also a reference distance (<code><a href=/web/api/pannernode/refdistance>refDistance</a></code>), which is used by the distance models. We can keep that at the default value of <code>1</code> as well:</p>
 
 <pre class="brush: js notranslate">const refDistance = 1;
 </pre>
 
-<p>Then there's the roll-off factor (<a href="/en-US/docs/Web/API/PannerNode/rolloffFactor"><code>rolloffFactor</code></a>) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.</p>
+<p>Then there's the roll-off factor (<a href=/web/api/pannernode/rollofffactor><code>rolloffFactor</code></a>) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.</p>
 
 <pre class="brush: js notranslate">const rollOff = 10;
 </pre>
@@ -144,7 +144,7 @@ const orientationZ = -1.0;
 
 <p>Now we're going to move our boombox around our 'room'. We've got some controls set up to do this. We can move it left and right, up and down, and back and forth; we can also rotate it. The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e. make it project to the back when the boombox is rotated 180 degrees and facing away from us.</p>
 
-<p>We need to set up a few things for the interface. First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS transforms</a> to actually do the movement. Finally, we'll set some bounds so our boombox doesn't move too far in any direction:</p>
+<p>We need to set up a few things for the interface. First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up <a href=/web/css/css_transforms>CSS transforms</a> to actually do the movement. Finally, we'll set some bounds so our boombox doesn't move too far in any direction:</p>
 
 <pre class="brush: js notranslate">const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
 const boombox = document.querySelector('.boombox-body');
@@ -217,7 +217,7 @@ case 'forward':
 break;
 </pre>
 
-<p>Our rotation values are a little more involved, however, as we need to move the sound <em>around</em>. Not only do we have to update two axis values (e.g. if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this. The rotation is a circle and we need <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin">Math.sin</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos">Math.cos</a></code> to help us draw that circle.</p>
+<p>Our rotation values are a little more involved, however, as we need to move the sound <em>around</em>. Not only do we have to update two axis values (e.g. if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this. The rotation is a circle and we need <code><a href=/web/javascript/reference/global_objects/math/sin>Math.sin</a></code> and <code><a href=/web/javascript/reference/global_objects/math/cos>Math.cos</a></code> to help us draw that circle.</p>
 
 <p>Let's set up a rotation rate, which we'll convert into a radian range value for use in <code>Math.sin</code> and <code>Math.cos</code> later, when we want to figure out the new coordinates when we're rotating our boombox:</p>
 
@@ -452,7 +452,7 @@ this.dataset.playing = 'false';
 }, false);
 </pre>
 
-<p>For a more in depth look at playing/controlling audio and audio graphs check out <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using The Web Audio API.</a></p>
+<p>For a more in depth look at playing/controlling audio and audio graphs check out <a href=/web/api/web_audio_api/using_web_audio_api>Using The Web Audio API.</a></p>
 
 <h2 id="Summary">Summary</h2>
 

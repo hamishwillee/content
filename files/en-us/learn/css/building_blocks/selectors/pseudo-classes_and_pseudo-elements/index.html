@@ -18,7 +18,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/first_steps>CSS first steps</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -48,9 +48,9 @@ tags:
 <p>All pseudo-classes behave in this same kind of way. They target some bit of your document that is in a certain state, behaving as if you had added a class into your HTML. Take a look at some other examples on MDN:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/CSS/:last-child">:last-child</a></code></li>
- <li><code><a href="/en-US/docs/Web/CSS/:only-child">:only-child</a></code></li>
- <li><code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code></li>
+ <li><code><a href=/web/css/:last-child>:last-child</a></code></li>
+ <li><code><a href=/web/css/:only-child>:only-child</a></code></li>
+ <li><code><a href=/web/css/:invalid>:invalid</a></code></li>
 </ul>
 
 <div class="notecard note">
@@ -62,8 +62,8 @@ tags:
 <p>Some pseudo-classes only apply when the user interacts with the document in some way. These <strong>user-action</strong> pseudo-classes, sometimes referred to as <strong>dynamic pseudo-classes</strong>, act as if a class had been added to the element when the user interacts with it. Examples include:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/CSS/:hover">:hover</a></code> — mentioned above; this only applies if the user moves their pointer over an element, typically a link.</li>
- <li><code><a href="/en-US/docs/Web/CSS/:focus">:focus</a></code> — only applies if the user focuses the element using keyboard controls.</li>
+ <li><code><a href=/web/css/:hover>:hover</a></code> — mentioned above; this only applies if the user moves their pointer over an element, typically a link.</li>
+ <li><code><a href=/web/css/:focus>:focus</a></code> — only applies if the user focuses the element using keyboard controls.</li>
 </ul>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}</p>
@@ -99,7 +99,7 @@ tags:
 
 <h2 id="Generating_content_with_before_and_after">Generating content with ::before and ::after</h2>
 
-<p>There are a couple of special pseudo-elements, which are used along with the <code><a href="/en-US/docs/Web/CSS/content">content</a></code> property to insert content into your document using CSS.</p>
+<p>There are a couple of special pseudo-elements, which are used along with the <code><a href=/web/css/content>content</a></code> property to insert content into your document using CSS.</p>
 
 <p>You could use these to insert a string of text, such as in the live example below. Try changing the text value of the {{cssxref("content")}} property and see it change in the output. You could also change the <code>::before</code> pseudo-element to <code>::after</code> and see the text inserted at the end of the element instead of the beginning.</p>
 
@@ -143,7 +143,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":blank") }}</td>
-   <td>Matches an <a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code> element</a> whose input value is empty.</td>
+   <td>Matches an <a href=/web/html/element/input><code>&lt;input&gt;</code> element</a> whose input value is empty.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":checked") }}</td>
@@ -159,7 +159,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":dir") }}</td>
-   <td>Select an element based on its directionality (value of the HTML <code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code> attribute or CSS <code><a href="/en-US/docs/Web/CSS/direction">direction</a></code> property).</td>
+   <td>Select an element based on its directionality (value of the HTML <code><a href=/web/html/global_attributes/dir>dir</a></code> attribute or CSS <code><a href=/web/css/direction>direction</a></code> property).</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":disabled") }}</td>
@@ -175,7 +175,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":first") }}</td>
-   <td>In <a href="/en-US/docs/Web/CSS/Paged_Media">Paged Media</a>, matches the first page.</td>
+   <td>In <a href=/web/css/paged_media>Paged Media</a>, matches the first page.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":first-child") }}</td>
@@ -207,7 +207,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":indeterminate") }}</td>
-   <td>Matches UI elements whose value is in an indeterminate state, usually <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkboxes</a>.</td>
+   <td>Matches UI elements whose value is in an indeterminate state, usually <a href=/web/html/element/input/checkbox>checkboxes</a>.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":in-range") }}</td>
@@ -219,7 +219,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":lang") }}</td>
-   <td>Matches an element based on language (value of the HTML <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a> attribute).</td>
+   <td>Matches an element based on language (value of the HTML <a href=/web/html/global_attributes/lang>lang</a> attribute).</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":last-child") }}</td>
@@ -231,7 +231,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":left") }}</td>
-   <td>In <a href="/en-US/docs/Web/CSS/CSS_Pages">Paged Media</a>, matches left-hand pages.</td>
+   <td>In <a href=/web/css/css_pages>Paged Media</a>, matches left-hand pages.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":link")}}</td>
@@ -311,7 +311,7 @@ tags:
   </tr>
   <tr>
    <td>{{ Cssxref(":right") }}</td>
-   <td>In <a href="/en-US/docs/Web/CSS/CSS_Pages">Paged Media</a>, matches right-hand pages.</td>
+   <td>In <a href=/web/css/css_pages>Paged Media</a>, matches right-hand pages.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":root") }}</td>
@@ -386,23 +386,23 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href=/learn/css/building_blocks/cascade_and_inheritance>Cascade and inheritance</a></li>
+ <li><a href=/learn/css/building_blocks/selectors>CSS selectors</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/type_class_and_id_selectors>Type, class, and ID selectors</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/attribute_selectors>Attribute selectors</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/pseudo-classes_and_pseudo-elements>Pseudo-classes and pseudo-elements</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/combinators>Combinators</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href=/learn/css/building_blocks/the_box_model>The box model</a></li>
+ <li><a href=/learn/css/building_blocks/backgrounds_and_borders>Backgrounds and borders</a></li>
+ <li><a href=/learn/css/building_blocks/handling_different_text_directions>Handling different text directions</a></li>
+ <li><a href=/learn/css/building_blocks/overflowing_content>Overflowing content</a></li>
+ <li><a href=/learn/css/building_blocks/values_and_units>Values and units</a></li>
+ <li><a href=/learn/css/building_blocks/sizing_items_in_css>Sizing items in CSS</a></li>
+ <li><a href=/learn/css/building_blocks/images_media_form_elements>Images, media, and form elements</a></li>
+ <li><a href=/learn/css/building_blocks/styling_tables>Styling tables</a></li>
+ <li><a href=/learn/css/building_blocks/debugging_css>Debugging CSS</a></li>
+ <li><a href=/learn/css/building_blocks/organizing>Organizing your CSS</a></li>
 </ol>

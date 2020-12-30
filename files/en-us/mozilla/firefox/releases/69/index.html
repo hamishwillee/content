@@ -18,8 +18,8 @@ tags:
 <h4 id="Debugger">Debugger</h4>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints">Event Listener Breakpoints</a> let you diagnose which code a page executes in response to browser events. You can pick specific types, such as <code>click</code> or <code>keydown</code>, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).</li>
- <li>Scripts shown in the debugger's  <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">source list pane</a> can now be saved via the <em>Download file</em> context menu option ({{bug(888161)}}).</li>
+ <li><a href=/tools/debugger/set_event_listener_breakpoints>Event Listener Breakpoints</a> let you diagnose which code a page executes in response to browser events. You can pick specific types, such as <code>click</code> or <code>keydown</code>, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).</li>
+ <li>Scripts shown in the debugger's  <a href=/tools/debugger/ui_tour#Source_list_pane>source list pane</a> can now be saved via the <em>Download file</em> context menu option ({{bug(888161)}}).</li>
  <li>In the debugger's source list pane, loaded extensions are listed with their name, rather than just their UUID ({{bug(1486416)}}), making it much easier to find the extension code you want to debug.</li>
  <li>The debugger now loads significantly faster via lazy-loading scripts ({{bug(1527488)}}).</li>
 </ul>
@@ -27,7 +27,7 @@ tags:
 <h4 id="Console">Console</h4>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> messages from <a href="/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection">tracking protection errors</a>, <a href="/en-US/docs/Web/HTTP/CSP">CSP errors</a>, and <a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a> are grouped automatically to reduce noise from repeated blocked resources and storage access ({{bug(1522396)}}).</li>
+ <li><a href=/tools/browser_console>Browser Console</a> messages from <a href=/mozilla/firefox/privacy/tracking_protection>tracking protection errors</a>, <a href=/web/http/csp>CSP errors</a>, and <a href=/web/http/cors/errors>CORS errors</a> are grouped automatically to reduce noise from repeated blocked resources and storage access ({{bug(1522396)}}).</li>
  <li>All visible logs in the console can shared by saving to a file or copying to clipboard via a new <em>Export visible messages to</em> context menu item ({{bug(1517728)}}).</li>
  <li>The console's toolbar now responsively reduces its height into a single row to save vertical space ({{bug(972530)}}).</li>
  <li>Messages from content can now be hidden in the console to focus on logs from the Firefox UI ({{bug(1523842)}}).</li>
@@ -36,21 +36,21 @@ tags:
 <h4 id="Network">Network</h4>
 
 <ul>
- <li>Resources that got blocked because of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> or <a href="/en-US/docs/Web/Security/Mixed_content">Mixed Content</a> are now shown in the Network panel, with details of the reason ({{bug(1556451)}}).</li>
+ <li>Resources that got blocked because of <a href=/web/http/csp>CSP</a> or <a href=/web/security/mixed_content>Mixed Content</a> are now shown in the Network panel, with details of the reason ({{bug(1556451)}}).</li>
  <li>A new optional <em>URL</em> column in the Network panel can be enabled to show the full URL for resources ({{bug(1341155)}}).</li>
 </ul>
 
 <h4 id="Inspector">Inspector</h4>
 
 <ul>
- <li>When you hover over an element in the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>, the infobar that appears now includes the fact that an element is a flex container, or flex item ({{bug(1521188)}}).</li>
+ <li>When you hover over an element in the <a href=/tools/page_inspector>Page Inspector</a>, the infobar that appears now includes the fact that an element is a flex container, or flex item ({{bug(1521188)}}).</li>
  <li>When inspecting a page containing a grid with a subgrid, the parent grid's overlay lines are displayed whenever the subgrid's lines are displayed; if the parent grid's overlay checkbox is unselected, then its lines are translucent ({{bug(1550519)}}).</li>
 </ul>
 
 <h4 id="Remote_debugging">Remote debugging</h4>
 
 <ul>
- <li>For our mobile web developers, we have migrated remote debugging from the old WebIDE into a re-designed <a href="/en-US/docs/Tools/about:debugging">about:debugging</a>, making the experience of debugging <a href="https://hacks.mozilla.org/2019/06/geckoview-in-2019/">GeckoView</a> on remote devices via USB much better ({{bug(1462208)}}).</li>
+ <li>For our mobile web developers, we have migrated remote debugging from the old WebIDE into a re-designed <a href=/tools/about:debugging>about:debugging</a>, making the experience of debugging <a href="https://hacks.mozilla.org/2019/06/geckoview-in-2019/">GeckoView</a> on remote devices via USB much better ({{bug(1462208)}}).</li>
 </ul>
 
 <h4 id="General">General</h4>
@@ -76,12 +76,12 @@ tags:
 <ul>
  <li>We implemented the <code>break-spaces</code> value of the {{cssxref("white-space")}} property ({{bug(1351432)}}).</li>
  <li>The SVG geometry attributes (such as {{SVGAttr("width")}} and {{SVGAttr("height")}}) can now also be defined as CSS properties ({{bug(1383650)}}).</li>
- <li>The {{cssxref("::cue")}} selector — used to style the captions ("cues") displayed by <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> — now enforces the limitations on which CSS properties may be used within cues, as per the specification ({{bug(1321488)}}).</li>
+ <li>The {{cssxref("::cue")}} selector — used to style the captions ("cues") displayed by <a href=/web/api/webvtt_api>WebVTT</a> — now enforces the limitations on which CSS properties may be used within cues, as per the specification ({{bug(1321488)}}).</li>
  <li>We've restricted the properties that may apply to {{cssxref("::marker")}} as per the specification ({{bug(1552578)}})</li>
  <li>The {{cssxref("overflow-block")}} and {{cssxref("overflow-inline")}} properties have been implemented ({{bug(1470695)}}).</li>
  <li>We added the ability to test for support of a selector when using CSS Feature Queries ({{cssxref("@supports")}}), with the <code>selector()</code> method ({{bug(1513643)}}).</li>
  <li>The {{cssxref("user-select")}} property — which specifies whether or not the user is able to select text in the affected element — has been unprefixed ({{bug(1492739)}}).</li>
- <li>We implemented local-specific casing behavior for Lithuanian ({{bug(1322992)}}), <a href="/en-US/docs/Web/CSS/text-transform#lowercase_lithuanian">as seen in this example</a>.</li>
+ <li>We implemented local-specific casing behavior for Lithuanian ({{bug(1322992)}}), <a href=/web/css/text-transform#lowercase_lithuanian>as seen in this example</a>.</li>
  <li>We've implemented the {{cssxref("line-break")}} property of CSS Text ({{bug(1011369)}} and {{bug(1531715)}}).</li>
  <li>The {{cssxref("contain")}} property — which allows developers to define that an element and its contents are mostly independent of the rest of the DOM tree — got implemented {{bug(1487493)}}.</li>
 </ul>
@@ -96,8 +96,8 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations">Public class fields</a> are enabled by default ({{bug(1555464)}}). See also <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields">Class fields</a> for more information.</li>
- <li>The promise rejection events <code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code> and <code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code> are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.</li>
+ <li><a href=/web/javascript/reference/classes#Field_declarations>Public class fields</a> are enabled by default ({{bug(1555464)}}). See also <a href=/web/javascript/reference/classes/class_fields>Class fields</a> for more information.</li>
+ <li>The promise rejection events <code><a href=/web/api/window/unhandledrejection_event>unhandledrejection</a></code> and <code><a href=/web/api/window/rejectionhandled_event>rejectionhandled</a></code> are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see {{SectionOnPage(/web/javascript/guide/using_promises, "Promise rejection events")}}.</li>
 </ul>
 
 <h3 id="HTTP">HTTP</h3>
@@ -111,7 +111,7 @@ tags:
 <h4 id="New_APIs">New APIs</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/API/Resize_Observer_API">Resize Observer API</a> is supported by default ({{bug(1543839)}}).</li>
+ <li>The <a href=/web/api/resize_observer_api>Resize Observer API</a> is supported by default ({{bug(1543839)}}).</li>
  <li>The Microtask API ({{domxref("WindowOrWorkerGlobalScope.queueMicrotask()")}}) has been implemented ({{bug(1480236)}}).</li>
 </ul>
 
@@ -134,7 +134,7 @@ tags:
 <h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
 
 <ul>
- <li>For improved user security, and in-keeping with the latest versions of the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams</a> specification, the {{domxref("navigator.mediaDevices")}} property is no longer present if the context is insecure. To use {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}, and so forth, be sure your content is loaded using {{Glossary("HTTPS")}} ({{bug(1528031)}}).</li>
+ <li>For improved user security, and in-keeping with the latest versions of the <a href=/web/api/media_streams_api>Media Capture and Streams</a> specification, the {{domxref("navigator.mediaDevices")}} property is no longer present if the context is insecure. To use {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}, and so forth, be sure your content is loaded using {{Glossary("HTTPS")}} ({{bug(1528031)}}).</li>
  <li>The Web Audio API's {{domxref("AudioParam.value")}} property now returns the actual value of the property at the current time, taking into account all scheduled or gradiated value changes. Previously, Firefox only returned the most recent explicitly-set value (as through using the <code>value</code> setter) ({{bug(893020)}}).</li>
  <li>We've updated {{domxref("MediaStreamAudioSourceNode")}} to use the new, lexicographical, ordering for tracks. Previously, track ordering was up to the individual browser, and could even change arbitrarily. In addition, attempting to create a <code>MediaStreamAudioSourceNode</code> using a stream that has no audio tracks now throws an <code>InvalidStateError</code> exception ({{bug(1553215)}}).</li>
  <li>The {{domxref("MediaTrackSettings.facingMode", "facingMode")}}, {{domxref("MediaTrackSettings.deviceId", "deviceId")}}, and {{domxref("MediaTrackSettings.groupId", "groupId")}} settings are now included as members of the {{domxref("MediaTrackSettings")}} object returned by calls to {{domxref("MediaStreamTrack.getSettings()")}} ({{bug(1537986)}}).</li>
@@ -167,8 +167,8 @@ tags:
 <h3 id="API_changes">API changes</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts">UserScripts API</a> is now enabled by default.</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get">topSites.get()</a></code> method now has new options available — <code>includePinned</code> and <code>includeSearchShortcuts</code> ({{bug(1547669)}}).</li>
+ <li>The <a href=/mozilla/add-ons/webextensions/api/userscripts>UserScripts API</a> is now enabled by default.</li>
+ <li>The <code><a href=/mozilla/add-ons/webextensions/api/topsites/get>topSites.get()</a></code> method now has new options available — <code>includePinned</code> and <code>includeSearchShortcuts</code> ({{bug(1547669)}}).</li>
 </ul>
 
 <h3 id="Other_changes">Other changes</h3>

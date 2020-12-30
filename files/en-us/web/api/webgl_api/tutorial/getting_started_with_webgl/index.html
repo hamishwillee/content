@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> enables web content to use an API based on <a class="external" href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 to perform 2D and 3D rendering in an HTML <a class="internal" href="/en-US/docs/Web/API/Canvas_API"><code>canvas</code></a> in browsers that support it without the use of plug-ins.</span> WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</p>
+<p><span class="seoSummary"><a href=/web/api/webgl_api>WebGL</a> enables web content to use an API based on <a class="external" href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 to perform 2D and 3D rendering in an HTML <a class="internal" href=/web/api/canvas_api><code>canvas</code></a> in browsers that support it without the use of plug-ins.</span> WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</p>
 
 <p>This article will introduce you to the basics of using WebGL. It's assumed that you already have an understanding of the mathematics involved in 3D graphics, and this article doesn't pretend to try to teach you 3D graphics concepts itself.</p>
 
@@ -54,7 +54,7 @@ window.onload = main;
 
 <p>The first thing we do here is obtain a reference to the canvas, assigning it to a variable named <code>canvas</code>.</p>
 
-<p>Once we have the canvas, we try to get a <code><a href="/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a></code> for it by calling <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> and passing it the string <code>"webgl"</code>. If the browser does not support WebGL, <code>getContext()</code> will return <code>null</code> in which case we display a message to the user and exit. </p>
+<p>Once we have the canvas, we try to get a <code><a href=/web/api/webglrenderingcontext>WebGLRenderingContext</a></code> for it by calling <code><a href=/web/api/htmlcanvaselement/getcontext>getContext()</a></code> and passing it the string <code>"webgl"</code>. If the browser does not support WebGL, <code>getContext()</code> will return <code>null</code> in which case we display a message to the user and exit. </p>
 
 <p>If the context is successfully initialized, the variable <code>gl</code> is our reference to it. In this case, we set the clear color to black, and clear the context to that color (redrawing the canvas with the background color).</p>
 

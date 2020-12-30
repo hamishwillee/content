@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> API has a rather handy module available for internationalizing extensions — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a>. In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as <a href="http://i18njs.com/">i18n.js</a>.</p>
+<p>The <a href=/mozilla/add-ons/webextensions>WebExtensions</a> API has a rather handy module available for internationalizing extensions — <a href=/mozilla/add-ons/webextensions/api/i18n>i18n</a>. In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as <a href="http://i18njs.com/">i18n.js</a>.</p>
 
 <div class="note">
 <p>The example extension featured in this article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — is available on GitHub. Follow along with the source code as you go through the sections below.</p>
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Anatomy_of_an_internationalized_extension">Anatomy of an internationalized extension</h2>
 
-<p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
+<p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>, <a href=/mozilla/add-ons/webextensions/content_scripts>content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
 
 <ul class="directory-tree">
  <li>extension-root-directory/
@@ -116,7 +116,7 @@ tags:
 <p>This file is standard JSON — each one of its members is an object with a name, which contains a <code>message</code> and a <code>description</code>. All of these items are strings; <code>$URL$</code> is a placeholder, which is replaced with a substring at the time the <code>notificationContent</code> member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find much more information about the contents of <code>messages.json</code> files in our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a>.</p>
+<p><strong>Note</strong>: You can find much more information about the contents of <code>messages.json</code> files in our <a href=/mozilla/add-ons/webextensions/api/i18n/locale-specific_message_reference>Locale-Specific Message reference</a>.</p>
 </div>
 
 <h2 id="Internationalizing_manifest.json">Internationalizing manifest.json</h2>
@@ -148,7 +148,7 @@ tags:
 
 <h3 id="Specifying_a_default_locale">Specifying a default locale</h3>
 
-<p>Another field you should specify in your manifest.json is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a>:</p>
+<p>Another field you should specify in your manifest.json is <a href=/mozilla/add-ons/webextensions/manifest.json/default_locale>default_locale</a>:</p>
 
 <pre class="brush: json">"default_locale": "en"</pre>
 
@@ -166,7 +166,7 @@ tags:
 
 <h2 id="Retrieving_message_strings_from_JavaScript">Retrieving message strings from JavaScript</h2>
 
-<p>So, you've got your message strings set up, and your manifest. Now you just need to start calling your message strings from JavaScript so your extension can talk the right language as much as possible. The actual <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n API</a> is pretty simple, containing just four main methods:</p>
+<p>So, you've got your message strings set up, and your manifest. Now you just need to start calling your message strings from JavaScript so your extension can talk the right language as much as possible. The actual <a href=/mozilla/add-ons/webextensions/api/i18n>i18n API</a> is pretty simple, containing just four main methods:</p>
 
 <ul>
  <li>You'll probably use {{WebExtAPIRef("i18n.getMessage()")}} most often — this is the method you use to retrieve a specific language string, as mentioned above. We'll see specific usage examples of this below.</li>
@@ -317,7 +317,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
     <p>You can't use this message in a manifest file.</p>
 
-    <p>Also note that this ID is <em>not</em> the add-on ID returned by {{WebExtAPIRef("runtime.id")}}, and that can be set using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json. It's the generated UUID that appears in the add-on's URL. This means that you can't use this value as the <code>extensionId</code> parameter to {{WebExtAPIRef("runtime.sendMessage()")}}, and can't use it to check against the <code>id</code> property of a {{WebExtAPIRef("runtime.MessageSender")}} object.</p>
+    <p>Also note that this ID is <em>not</em> the add-on ID returned by {{WebExtAPIRef("runtime.id")}}, and that can be set using the <a href=/mozilla/add-ons/webextensions/manifest.json/applications>applications</a> key in manifest.json. It's the generated UUID that appears in the add-on's URL. This means that you can't use this value as the <code>extensionId</code> parameter to {{WebExtAPIRef("runtime.sendMessage()")}}, and can't use it to check against the <code>id</code> property of a {{WebExtAPIRef("runtime.MessageSender")}} object.</p>
    </td>
   </tr>
   <tr>

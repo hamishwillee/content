@@ -19,7 +19,7 @@ tags:
 <p><span class="seoSummary">The <code><strong>send()</strong></code> method of the {{domxref("RTCDataChannel")}} interface sends data across the data channel to the remote peer.</span> This can be done any time except during the initial process of creating the underlying transport channel. Data sent before connecting is buffered if possible (or an error occurs if it's not possible), and is also buffered if sent while the connection is closing or closed.</p>
 
 <div class="note">
-<p>Different browsers have different limitations on the size of the message you can send. Specifications exist to define how to automatically fragment large messages, but not all browsers implement them, and those that do have various additional restrictions. This will get less complicated over time, but for now, if you have questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}}.</p>
+<p>Different browsers have different limitations on the size of the message you can send. Specifications exist to define how to automatically fragment large messages, but not all browsers implement them, and those that do have various additional restrictions. This will get less complicated over time, but for now, if you have questions, see {{SectionOnPage(/web/api/webrtc_api/using_data_channels, "Understanding message size limits")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -46,7 +46,7 @@ tags:
  <dt><code>NetworkError</code></dt>
  <dd>The specified <code>data</code> would need to be buffered, and there isn't room for it in the buffer. In this scenario, the underlying transport is immediately closed.</dd>
  <dt><code>TypeError</code></dt>
- <dd>The specified <code>data</code> is too large for the other peer to receive. Since there are multiple techniques for breaking up large data into smaller pieces for transfer, it's possible to encounter scenarios in which the other peer does not support the same ones. For example, if one peer is a modern browser that supports using the <code>EOR</code> (End of Record) flag to indicate when a received message is the last piece of a multi-part object sent using <code>send()</code>. For more information about message size restrictions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}}.</dd>
+ <dd>The specified <code>data</code> is too large for the other peer to receive. Since there are multiple techniques for breaking up large data into smaller pieces for transfer, it's possible to encounter scenarios in which the other peer does not support the same ones. For example, if one peer is a modern browser that supports using the <code>EOR</code> (End of Record) flag to indicate when a received message is the last piece of a multi-part object sent using <code>send()</code>. For more information about message size restrictions, see {{SectionOnPage(/web/api/webrtc_api/using_data_channels, "Understanding message size limits")}}.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -91,7 +91,7 @@ function sendMessage(msg) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+ <li><a href=/web/guide/api/webrtc>WebRTC</a></li>
  <li>{{domxref("RTCDataChannel")}}</li>
  <li>{{domxref("RTCDataChannel.readyState")}}</li>
  <li>{{event("close")}} event</li>

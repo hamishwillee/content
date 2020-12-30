@@ -18,13 +18,13 @@ tags:
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>The {{domxref("WebGLRenderingContext")}} method <code><strong>enableVertexAttribArray()</strong></code>, part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.</p>
+<p>The {{domxref("WebGLRenderingContext")}} method <code><strong>enableVertexAttribArray()</strong></code>, part of the <a href=/web/api/webgl_api>WebGL API</a>, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.</p>
 
 <div class="note">
 <p>You can disable the attribute array by calling {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.</p>
 </div>
 
-<p>In WebGL, values that apply to a specific vertex are stored in <a href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a>. These are only available to the JavaScript code and the vertex shader. Attributes are referenced by an index number into the list of attributes maintained by the GPU. Some vertex attribute indices may have predefined purposes, depending on the platform and/or the GPU. Others are assigned by the WebGL layer when you create the attributes.</p>
+<p>In WebGL, values that apply to a specific vertex are stored in <a href=/web/api/webgl_api/data#Attributes>attributes</a>. These are only available to the JavaScript code and the vertex shader. Attributes are referenced by an index number into the list of attributes maintained by the GPU. Some vertex attribute indices may have predefined purposes, depending on the platform and/or the GPU. Others are assigned by the WebGL layer when you create the attributes.</p>
 
 <p>Either way, since attributes cannot be used unless enabled, and are disabled by default, you need to call <code>enableVertexAttribArray()</code> to enable individual attributes so that they can be used. Once that's been done, other methods can be used to access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}, {{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}, and {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}.</p>
 
@@ -55,7 +55,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This code — a snippet taken from the full example <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">A basic 2D WebGL animation example</a> — shows the use of <code>enableVertexArray()</code> to activate the attribute that will be used by the WebGL layer to pass individual vertexes from the vertex buffer into the vertex shader function.</p>
+<p>This code — a snippet taken from the full example <a href=/web/api/webgl_api/basic_2d_animation_example>A basic 2D WebGL animation example</a> — shows the use of <code>enableVertexArray()</code> to activate the attribute that will be used by the WebGL layer to pass individual vertexes from the vertex buffer into the vertex shader function.</p>
 
 <pre class="brush: js highlight[6]">gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
@@ -68,7 +68,7 @@ gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);</pre>
 
-<div class="callout-box">This code snippet is taken from <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the function <code>animateScene()</code></a> in "A basic 2D WebGL animation example." See that article for the full sample and to see the resulting animation in action.</div>
+<div class="callout-box">This code snippet is taken from <a href=/web/api/webgl_api/basic_2d_animation_example#Drawing_and_animating_the_scene>the function <code>animateScene()</code></a> in "A basic 2D WebGL animation example." See that article for the full sample and to see the resulting animation in action.</div>
 
 <p>This code sets the buffer of vertexes that will be used to draw the triangles of the shape by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.</p>
 
@@ -109,8 +109,8 @@ gl.drawArrays(gl.TRIANGLES, 0, vertexCount);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Data">Data in WebGL</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">Adding 2D content to a WebGL context</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">A basic 2D WebGL animation sample</a></li>
+ <li><a href=/web/api/webgl_api/data>Data in WebGL</a></li>
+ <li><a href=/web/api/webgl_api/tutorial/adding_2d_content_to_a_webgl_context>Adding 2D content to a WebGL context</a></li>
+ <li><a href=/web/api/webgl_api/basic_2d_animation_example>A basic 2D WebGL animation sample</a></li>
  <li>{{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}</li>
 </ul>

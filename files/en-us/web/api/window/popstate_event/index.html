@@ -41,7 +41,7 @@ tags:
 
 <h2 id="The_history_stack">The history stack</h2>
 
-<p>If the history entry being activated was created by a call to <code><a href="/en-US/docs/Web/API/History_API#The_pushState()_method">history.pushState()</a></code> or was affected by a call to <code><a href="/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a></code>, the <code>popstate</code> event's <code>state</code> property contains a copy of the history entry's state object.</p>
+<p>If the history entry being activated was created by a call to <code><a href=/web/api/history_api#The_pushState()_method>history.pushState()</a></code> or was affected by a call to <code><a href=/web/api/history_api#The_replaceState()_method>history.replaceState()</a></code>, the <code>popstate</code> event's <code>state</code> property contains a copy of the history entry's state object.</p>
 
 <p>These methods and their corresponding events can be used to add data to the history stack which can be used to reconstruct a dynamically generated page, or to otherwise alter the state of the content being presented while remaining on the same {{domxref("Document")}}.</p>
 
@@ -64,7 +64,7 @@ tags:
  <li>If <strong>current-entry</strong>'s title wasn't set using one of the History API methods ({{domxref("History.pushState", "pushState()")}} or {{domxref("History.replaceState", "replaceState()")}}, set the entry's title to the string returned by its {{domxref("document.title")}} attribute.</li>
  <li>If the browser has state information it wishes to store with the <strong>current-entry</strong> before navigating away from it, it then does so. The entry is now said to have "persisted user state." This information the browser might add to the history session entry may include, for instance, the document's scroll position, the values of form inputs, and other such data.</li>
  <li>If <strong>new-entry</strong> has a different <code>Document</code> object than <strong>current-entry</strong>, the browsing context is updated so that its {{domxref("Window.document", "document")}} property refers to the document referred to by <strong>new-entry</strong>, and the context's name is updated to match the context name of the now-current document.</li>
- <li>Each form control within <strong>new-entry</strong>'s {{domxref("Document")}} that has {{htmlattrxref("autocomplete", "input")}} configured with its autofill field name set to <code>off</code> is reset. See <a href="/en-US/docs/Web/HTML/Attributes/autocomplete">The HTML autocomplete attribute</a> for more about the autocomplete field names and how autocomplete works.</li>
+ <li>Each form control within <strong>new-entry</strong>'s {{domxref("Document")}} that has {{htmlattrxref("autocomplete", "input")}} configured with its autofill field name set to <code>off</code> is reset. See <a href=/web/html/attributes/autocomplete>The HTML autocomplete attribute</a> for more about the autocomplete field names and how autocomplete works.</li>
  <li>If <strong>new-entry</strong>'s document is already fully loaded and ready—that is, its {{domxref("Document.readyState", "readyState")}} is <code>complete</code>—and the document is not already visible, it's made visible and the {{domxref("Document.pageshow_event", "pageshow")}} event is fired at the document with the {{domxref("PageTransitionEvent")}}'s {{domxref("PageTransitionEvent.persisted", "persisted")}} attribute set to <code>true</code>.</li>
  <li>The document's {{domxref("Document.URL", "URL")}} is set to that of <strong>new-entry</strong>.</li>
  <li>If the history traversal is being performed with replacement enabled, the entry immediately prior to the destination entry (taking into account the <code>delta</code> parameter on methods such as {{domxref("History.go", "go()")}}) is removed from the history stack.</li>
@@ -130,6 +130,6 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/History_API">Manipulating the browser history (the History API)</a></li>
- <li><a href="/en-US/docs/Web/API/Window/hashchange_event">Window: <code>hashchange</code> event</a></li>
+ <li><a href=/web/api/history_api>Manipulating the browser history (the History API)</a></li>
+ <li><a href=/web/api/window/hashchange_event>Window: <code>hashchange</code> event</a></li>
 </ul>

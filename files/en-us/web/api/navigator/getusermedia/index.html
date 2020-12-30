@@ -31,7 +31,7 @@ tags:
 
 <dl>
  <dt><code><var>constraints</var></code></dt>
- <dd>A {{domxref("MediaStreamConstraints")}} object specifying the types of media to request, along with any requirements for each type. For details, see the <a href="/en-US/docs/Web/API/MediaDevices/getUserMedia#Parameters">constraints</a> section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well as the article <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>.</dd>
+ <dd>A {{domxref("MediaStreamConstraints")}} object specifying the types of media to request, along with any requirements for each type. For details, see the <a href=/web/api/mediadevices/getusermedia#Parameters>constraints</a> section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well as the article <a href=/web/api/media_streams_api/constraints>Capabilities, constraints, and settings</a>.</dd>
  <dt><code><var>successCallback</var></code></dt>
  <dd>A function which is invoked when the request for media access is approved. The function is called with one parameter: the {{domxref("MediaStream")}} object that contains the media stream. Your callback can then assign the stream to the desired object (such as an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), as shown in the following example:
  <pre class="brush: js notranslate">function(stream) {
@@ -52,13 +52,13 @@ tags:
 
 <h3 id="Errors">Errors</h3>
 
-<p>{{page("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Errors")}}</p>
+<p>{{page(/web/api/mediadevices/getusermedia, "Errors")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Width_and_height">Width and height</h3>
 
-<p>Here's an example of using <code>getUserMedia()</code>, including code to cope with various browsers' prefixes. Note that this is the deprecated way of doing it: See the <a href="/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate">Examples</a> section under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.</p>
+<p>Here's an example of using <code>getUserMedia()</code>, including code to cope with various browsers' prefixes. Note that this is the deprecated way of doing it: See the <a href=/web/api/mediadevices/getusermedia#Frame_rate>Examples</a> section under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.</p>
 
 <pre class="brush: js notranslate">navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
@@ -109,7 +109,7 @@ if (navigator.getUserMedia) {
 
 <ul>
  <li>{{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.</li>
- <li><a href="/en-US/docs/WebRTC">WebRTC</a> - the introductory page to the API</li>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API">MediaStream API</a> - the API for the media stream objects</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
+ <li><a href=/webrtc>WebRTC</a> - the introductory page to the API</li>
+ <li><a href=/webrtc/mediastream_api>MediaStream API</a> - the API for the media stream objects</li>
+ <li><a href=/webrtc/taking_webcam_photos>Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
 </ul>

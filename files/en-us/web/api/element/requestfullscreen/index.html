@@ -22,7 +22,7 @@ tags:
 
 <p>It's not guaranteed that the element will be put into full screen mode. If permission to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve and the element will receive a {{Event("fullscreenchange")}} event to let it know that it's now in full screen mode. If permission is denied, the promise is rejected and the element receives a {{Event('fullscreenerror')}} event instead. If the element has been detached from the original document, then the document receives these events instead.</p>
 
-<p>Earlier implementations of the Fullscreen API would always send these events to the document rather than the element, and you may need to be able to handle that situation. Check {{SectionOnPage("/en-US/docs/Web/Events/fullscreen", "Browser compatibility")}} for specifics on when each browser made this change.</p>
+<p>Earlier implementations of the Fullscreen API would always send these events to the document rather than the element, and you may need to be able to handle that situation. Check {{SectionOnPage(/web/events/fullscreen, "Browser compatibility")}} for specifics on when each browser made this change.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This method must be called while responding to a user interaction or a device orientation change; otherwise it will fail.</p>
@@ -131,7 +131,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
+ <li><a href=/web/api/fullscreen_api>Fullscreen API</a></li>
  <li>{{DOMxRef("Document.exitFullscreen()")}}</li>
  <li>{{DOMxRef("Document.fullscreen")}}</li>
  <li>{{DOMxRef("Document.fullscreenElement")}}</li>

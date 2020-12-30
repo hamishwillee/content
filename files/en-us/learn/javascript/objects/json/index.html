@@ -27,7 +27,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href=/learn/javascript/first_steps>First steps</a> and <a href=/learn/javascript/building_blocks>Building blocks</a>) and OOJS basics (see <a href=/learn/javascript/object-oriented/introduction>Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -40,7 +40,7 @@ tags:
 
 <p>{{glossary("JSON")}} is a text-based data format following JavaScript object syntax, which was popularized by <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a>. Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.</p>
 
-<p>JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue —  JavaScript provides a global <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object that has methods available for converting between the two.</p>
+<p>JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue —  JavaScript provides a global <a href=/web/javascript/reference/global_objects/json>JSON</a> object that has methods available for converting between the two.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Converting a string to a native object is called <em>deserialization</em>, while converting a native object to a string so it can be transmitted across the network is called <em>serialization</em>.</p>
@@ -94,7 +94,7 @@ tags:
   ]
 }'</pre>
 
-<p>If we loaded this string into a JavaScript program, parsed it into a variable called <code>superHeroes</code> for example, we could then access the data inside it using the same dot/bracket notation we looked at in the <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> article. For example:</p>
+<p>If we loaded this string into a JavaScript program, parsed it into a variable called <code>superHeroes</code> for example, we could then access the data inside it using the same dot/bracket notation we looked at in the <a href=/learn/javascript/objects/basics>JavaScript object basics</a> article. For example:</p>
 
 <pre class="brush: js notranslate">superHeroes.homeTown
 superHeroes['active']</pre>
@@ -190,17 +190,17 @@ const section = document.querySelector('section');</pre>
  <li>To create a request, we need to create a new request object instance from the <code>XMLHttpRequest</code> constructor, using the <code>new</code> keyword. Add the following below your last line:
   <pre class="brush: js notranslate">let request = new XMLHttpRequest();</pre>
  </li>
- <li>Now we need to open the request using the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a></code> method. Add the following line:
+ <li>Now we need to open the request using the <code><a href=/web/api/xmlhttprequest/open>open()</a></code> method. Add the following line:
   <pre class="brush: js notranslate">request.open('GET', requestURL);</pre>
 
   <p>This takes at least two parameters — there are other optional parameters available. We only need the two mandatory ones for this simple example:</p>
 
   <ul>
-   <li>The HTTP method to use when making the network request. In this case <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> is fine, as we are just retrieving some simple data.</li>
+   <li>The HTTP method to use when making the network request. In this case <code><a href=/web/http/methods/get>GET</a></code> is fine, as we are just retrieving some simple data.</li>
    <li>The URL to make the request to — this is the URL of the JSON file that we stored earlier.</li>
   </ul>
  </li>
- <li>Next, add the following two lines — here we are setting the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> to JSON, so that XHR knows that the server will be returning JSON, and that this should be converted behind the scenes into a JavaScript object. Then we send the request with the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a></code> method:
+ <li>Next, add the following two lines — here we are setting the <code><a href=/web/api/xmlhttprequest/responsetype>responseType</a></code> to JSON, so that XHR knows that the server will be returning JSON, and that this should be converted behind the scenes into a JavaScript object. Then we send the request with the <code><a href=/web/api/xmlhttprequest/send>send()</a></code> method:
   <pre class="brush: js notranslate">request.responseType = 'json';
 request.send();</pre>
  </li>
@@ -213,9 +213,9 @@ request.send();</pre>
  </li>
 </ol>
 
-<p>Here we are storing the response to our request (available in the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/response">response</a></code> property) in a variable called <code>superHeroes</code>; this variable now contains the JavaScript object based on the JSON! We are then passing that object to two function calls — the first one fills the &lt;<code>header&gt;</code> with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the <code>&lt;section&gt;</code>.</p>
+<p>Here we are storing the response to our request (available in the <code><a href=/web/api/xmlhttprequest/response>response</a></code> property) in a variable called <code>superHeroes</code>; this variable now contains the JavaScript object based on the JSON! We are then passing that object to two function calls — the first one fills the &lt;<code>header&gt;</code> with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the <code>&lt;section&gt;</code>.</p>
 
-<p>We have wrapped the code in an event handler that runs when the load event fires on the request object (see <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) — this is because the load event fires when the response has successfully returned; doing it this way guarantees that <code>request.response</code> will definitely be available when we come to try to do something with it.</p>
+<p>We have wrapped the code in an event handler that runs when the load event fires on the request object (see <code><a href=/web/api/xmlhttprequesteventtarget/onload>onload</a></code>) — this is because the load event fires when the response has successfully returned; doing it this way guarantees that <code>request.response</code> will definitely be available when we come to try to do something with it.</p>
 
 <h3 id="Populating_the_header">Populating the header</h3>
 
@@ -231,7 +231,7 @@ request.send();</pre>
   header.appendChild(myPara);
 }</pre>
 
-<p>Here we first create an {{HTMLElement("h1")}} element with <code><a href="/en-US/docs/Web/API/Document/createElement">createElement()</a></code>, set its <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> to equal the <code>squadName</code> property of the object, then append it to the header using <code><a href="/en-US/docs/Web/API/Node/appendChild">appendChild()</a></code>. We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. The only difference is that its text is set to a concatenated string containing both the <code>homeTown</code> and <code>formed</code> properties of the object.</p>
+<p>Here we first create an {{HTMLElement("h1")}} element with <code><a href=/web/api/document/createelement>createElement()</a></code>, set its <code><a href=/web/api/node/textcontent>textContent</a></code> to equal the <code>squadName</code> property of the object, then append it to the header using <code><a href=/web/api/node/appendchild>appendChild()</a></code>. We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. The only difference is that its text is set to a concatenated string containing both the <code>homeTown</code> and <code>formed</code> properties of the object.</p>
 
 <h3 id="Creating_the_hero_information_cards">Creating the hero information cards</h3>
 
@@ -272,7 +272,7 @@ request.send();</pre>
 
 <p>To start with, we store the <code>members</code> property of the JavaScript object in a new variable. This array contains multiple objects that contain the information for each hero.</p>
 
-<p>Next, we use a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a> to loop through each object in the array. For each one, we:</p>
+<p>Next, we use a <a href=/learn/javascript/building_blocks/looping_code#The_standard_for_loop>for loop</a> to loop through each object in the array. For each one, we:</p>
 
 <ol>
  <li>Create several new elements: an <code>&lt;article&gt;</code>, an <code>&lt;h2&gt;</code>, three <code>&lt;p&gt;</code>s, and a <code>&lt;ul&gt;</code>.</li>
@@ -288,7 +288,7 @@ request.send();</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you are having trouble following the dot/bracket notation we are using to access the JavaScript object, it can help to have the <a href="https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">superheroes.json</a> file open in another tab or your text editor, and refer to it as you look at our JavaScript. You should also refer back to our <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> article for more information on dot and bracket notation.</p>
+<p><strong>Note</strong>: If you are having trouble following the dot/bracket notation we are using to access the JavaScript object, it can help to have the <a href="https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">superheroes.json</a> file open in another tab or your text editor, and refer to it as you look at our JavaScript. You should also refer back to our <a href=/learn/javascript/objects/basics>JavaScript object basics</a> article for more information on dot and bracket notation.</p>
 </div>
 
 <h2 id="Converting_between_objects_and_text">Converting between objects and text</h2>
@@ -297,11 +297,11 @@ request.send();</pre>
 
 <pre class="brush: js notranslate">request.responseType = 'json';</pre>
 
-<p>But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending. Luckily, these two problems are so common in web development that a built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object is available in browsers, which contains the following two methods:</p>
+<p>But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending. Luckily, these two problems are so common in web development that a built-in <a href=/web/javascript/reference/global_objects/json>JSON</a> object is available in browsers, which contains the following two methods:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">parse()</a></code>: Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringify()</a></code>: Accepts an object as a parameter, and returns the equivalent JSON string.</li>
+ <li><code><a href=/web/javascript/reference/global_objects/json/parse>parse()</a></code>: Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.</li>
+ <li><code><a href=/web/javascript/reference/global_objects/json/stringify>stringify()</a></code>: Accepts an object as a parameter, and returns the equivalent JSON string.</li>
 </ul>
 
 <p>You can see the first one in action in our <a href="https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html">heroes-finished-json-parse.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html">source code</a>) — this does exactly the same thing as the example we built up earlier, except that we set the XHR to return the raw JSON text, then used <code>parse()</code> to convert it to an actual JavaScript object. The key snippet of code is here:</p>
@@ -328,7 +328,7 @@ myString</pre>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON">Test your skills: JSON</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/objects/test_your_skills:_json>Test your skills: JSON</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -337,10 +337,10 @@ myString</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON reference page</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest object reference page</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
+ <li><a href=/web/javascript/reference/global_objects/json>JSON reference page</a></li>
+ <li><a href=/web/api/xmlhttprequest>XMLHttpRequest object reference page</a></li>
+ <li><a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using XMLHttpRequest</a></li>
+ <li><a href=/web/http/methods>HTTP request methods</a></li>
  <li><a href="http://json.org">Official JSON web site with link to ECMA standard</a></li>
 </ul>
 
@@ -349,11 +349,11 @@ myString</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+ <li><a href=/learn/javascript/objects/basics>Object basics</a></li>
+ <li><a href=/learn/javascript/objects/object-oriented_js>Object-oriented JavaScript for beginners</a></li>
+ <li><a href=/learn/javascript/objects/object_prototypes>Object prototypes</a></li>
+ <li><a href=/learn/javascript/objects/inheritance>Inheritance in JavaScript</a></li>
+ <li><a href=/learn/javascript/objects/json>Working with JSON data</a></li>
+ <li><a href=/learn/javascript/objects/object_building_practice>Object building practice</a></li>
+ <li><a href=/learn/javascript/objects/adding_bouncing_balls_features>Adding features to our bouncing balls demo</a></li>
 </ul>

@@ -18,7 +18,7 @@ tags:
 
 <p>By default, the Network Monitor shows a list of all the network requests made in the course of loading the page. Each request is displayed in its own row:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16258/Network_request_list.png" style="border: 1px solid black; display: block; height: 328px; margin: 0px auto; width: 900px;">By default, the Network Monitor is cleared each time you navigate to a new page or reload the current page. You can override this behavior by checking "Enable persistent logs" in the <a href="/en-US/docs/Tools_Toolbox#Common_preferences">Settings</a>.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16258/Network_request_list.png" style="border: 1px solid black; display: block; height: 328px; margin: 0px auto; width: 900px;">By default, the Network Monitor is cleared each time you navigate to a new page or reload the current page. You can override this behavior by checking "Enable persistent logs" in the <a href=/tools_toolbox#Common_preferences>Settings</a>.</p>
 
 <h3 id="Network_request_columns">Network request columns</h3>
 
@@ -43,7 +43,7 @@ tags:
   <ul>
    <li>If the request used SSL/TLS and the connection had security weaknesses such as weak ciphers, you'll see a warning triangle next to the domain. Y</li>
    <li>Hover over the domain to see the IP address.</li>
-   <li>There's an icon next to the domain that gives you extra information about the security status of that request. See <a href="/en-US/docs/Tools/Network_Monitor/request_list#Security_icons">Security icons</a>.</li>
+   <li>There's an icon next to the domain that gives you extra information about the security status of that request. See <a href=/tools/network_monitor/request_list#Security_icons>Security icons</a>.</li>
   </ul>
  </li>
  <li><strong>File</strong>: The basename of the file requested.
@@ -61,7 +61,7 @@ tags:
  <li><strong>Set-Cookies:</strong> The number of response cookies associated to the request. This column is hidden by default. This is new in Firefox 55.</li>
  <li><strong>Transferred</strong>: The number of bytes that were actually transferred to load the resource, or a message about why the resource was not transferred. A number value is less than <strong>Size</strong> if the resource was compressed.
   <ul>
-   <li>If the resource was fetched from a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> cache, then this cell displays "service worker".</li>
+   <li>If the resource was fetched from a <a href=/web/api/service_worker_api>service worker</a> cache, then this cell displays "service worker".</li>
    <li>Cached resources may be fetched from the cache and the network simultaneously, which may improve load time for slow caches. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1358038">Starting with Firefox 68</a>, the transferred column lists either "cached (raced)" or "[size] (raced)" depending on the faster source. This feature is called <a href="https://slides.com/valentingosu/race-cache-with-network-2017#">Race Cache With Network (RCWN)</a>.</li>
    <li>If the resource was blocked, the message indicates why it was blocked. For example, "CSP", "Malware", "CORS Missing Allow Origin", "Blocked by [Name of Extension]".</li>
   </ul>
@@ -124,13 +124,13 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16259/timeline.png" style="border: 1px solid black; display: block; height: 331px; margin: 0px auto; width: 900px;"></p>
 
-<p>Each timeline is given a horizontal position in its row relative to the other network requests, so you can see the total time taken to load the page. For more details on the color-coding used here, see the section on the <a href="/en-US/docs/Tools/Network_Monitor#Timings">Timings</a> page.</p>
+<p>Each timeline is given a horizontal position in its row relative to the other network requests, so you can see the total time taken to load the page. For more details on the color-coding used here, see the section on the <a href=/tools/network_monitor#Timings>Timings</a> page.</p>
 
 <p>Starting in Firefox 45, the timeline also contains two vertical lines:</p>
 
 <ul>
- <li>The <span style="color: blue;">blue</span> line marks the point at which the page's <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> event is triggered.</li>
- <li>The <span style="color: red;">red</span> line marks the point at which the page's <code><a href="/en-US/docs/Web/Events/load">load</a></code> event is triggered.</li>
+ <li>The <span style="color: blue;">blue</span> line marks the point at which the page's <code><a href=/web/events/domcontentloaded>DOMContentLoaded</a></code> event is triggered.</li>
+ <li>The <span style="color: red;">red</span> line marks the point at which the page's <code><a href=/web/events/load>load</a></code> event is triggered.</li>
 </ul>
 
 <h3 id="Blocking_specific_URLs">Blocking specific URLs</h3>
@@ -184,7 +184,7 @@ tags:
 </ol>
 
 <div class="notecard note">
-<p><strong>Note:</strong> (Starting in Firefox 80) You can also block and unblock URLs from the <strong><a href="/en-US/docs/Tools/Web_Console">Web Console</a></strong>, using the <code>:block</code> and <code>:unblock</code> helper commands. These accept any string, and affect any URL containing the string.</p>
+<p><strong>Note:</strong> (Starting in Firefox 80) You can also block and unblock URLs from the <strong><a href=/tools/web_console>Web Console</a></strong>, using the <code>:block</code> and <code>:unblock</code> helper commands. These accept any string, and affect any URL containing the string.</p>
 </div>
 
 <h3 id="Filtering_requests">Filtering requests</h3>
@@ -201,29 +201,29 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Content type</th>
-   <td>Use the buttons in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a> (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>).</td>
+   <td>Use the buttons in the <a href=/tools/network_monitor#Toolbar>toolbar</a> (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>).</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("XHR (XMLHttpRequest)", "XHR")}} requests</th>
-   <td>Use the <strong>XHR</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>.</td>
+   <td>Use the <strong>XHR</strong> button in the <a href=/tools/network_monitor#Toolbar>toolbar</a>.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connections</th>
-   <td>Use the <strong>WS</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. You can filter by plain text (in which case the text is used to find partial matches; entering "for" will match any message that contains the word "for") or—as of <a href="/en-US/docs/Mozilla/Firefox/Releases/75">Firefox 75</a>—using <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> (by writing the regexp bracketed within slashes; "/.+Corp.*/" will look for any occurrence of "Corp" which has at least one character before it and may or may not have any characters after it, for example).
+   <th scope="row"><a href=/web/api/websockets_api>WebSocket</a> connections</th>
+   <td>Use the <strong>WS</strong> button in the <a href=/tools/network_monitor#Toolbar>toolbar</a>. You can filter by plain text (in which case the text is used to find partial matches; entering "for" will match any message that contains the word "for") or—as of <a href=/mozilla/firefox/releases/75>Firefox 75</a>—using <a href=/web/javascript/guide/regular_expressions>regular expressions</a> (by writing the regexp bracketed within slashes; "/.+Corp.*/" will look for any occurrence of "Corp" which has at least one character before it and may or may not have any characters after it, for example).
     <p>The third-party add-on <a href="https://addons.mozilla.org/en-US/firefox/addon/websocketsniff">WebSocket Sniffer</a> may be helpful as well.</p>
    </td>
   </tr>
   <tr>
    <th scope="row">URL</th>
    <td>
-    <p>Use the <em>Filter URLs</em> box in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. You can focus it by clicking in the filter box, or by pressing <kbd>Ctrl</kbd> + <kbd>F</kbd> (or <kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac); then start typing. The list of network requests is filtered to include only requests that contain your filter string, in either the Domain or the File portions.</p>
+    <p>Use the <em>Filter URLs</em> box in the <a href=/tools/network_monitor#Toolbar>toolbar</a>. You can focus it by clicking in the filter box, or by pressing <kbd>Ctrl</kbd> + <kbd>F</kbd> (or <kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac); then start typing. The list of network requests is filtered to include only requests that contain your filter string, in either the Domain or the File portions.</p>
 
     <p>You can filter requests that <em>don't</em> contain your filter string by prefixing your query with the "-" operator. For example, the query "-google.com" will show all requests that don't have "google.com" in the URL.</p>
    </td>
   </tr>
   <tr>
    <th scope="row">Request properties</th>
-   <td>Use the search box in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. See next section.</td>
+   <td>Use the search box in the <a href=/tools/network_monitor#Toolbar>toolbar</a>. See next section.</td>
   </tr>
  </tbody>
 </table>
@@ -382,7 +382,7 @@ tags:
   </tr>
   <tr>
    <td>Copy &gt; Copy as Fetch</td>
-   <td>Copies the request as a call to the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> method, including the URL and any settings object.</td>
+   <td>Copies the request as a call to the <a href=/web/api/windoworworkerglobalscope/fetch>fetch()</a> method, including the URL and any settings object.</td>
   </tr>
   <tr>
    <td>Copy &gt; Copy Request Headers</td>
@@ -422,15 +422,15 @@ tags:
   </tr>
   <tr>
    <td>Open in Style Editor</td>
-   <td>For a CSS resource, opens it in the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a>.</td>
+   <td>For a CSS resource, opens it in the <a href=/tools/style_editor>Style Editor</a>.</td>
   </tr>
   <tr>
-   <td>Start <a href="/en-US/docs/Tools/Network_Monitor#Performance_analysis">Performance Analysis</a></td>
+   <td>Start <a href=/tools/network_monitor#Performance_analysis>Performance Analysis</a></td>
    <td></td>
   </tr>
   <tr>
    <td>Use as Fetch in Console</td>
-   <td>Submits the request as a call to the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> method in the console.</td>
+   <td>Submits the request as a call to the <a href=/web/api/windoworworkerglobalscope/fetch>fetch()</a> method in the console.</td>
   </tr>
  </tbody>
 </table>
@@ -487,9 +487,9 @@ tags:
 <p>The following articles cover different aspects of using the network monitor:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Network_Monitor/Toolbar">Toolbar</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor/request_details">Network request details</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor/recording">Network traffic recording</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor/Performance_Analysis">Performance analysis</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor/Throttling">Throttling</a></li>
+ <li><a href=/tools/network_monitor/toolbar>Toolbar</a></li>
+ <li><a href=/tools/network_monitor/request_details>Network request details</a></li>
+ <li><a href=/tools/network_monitor/recording>Network traffic recording</a></li>
+ <li><a href=/tools/network_monitor/performance_analysis>Performance analysis</a></li>
+ <li><a href=/tools/network_monitor/throttling>Throttling</a></li>
 </ul>

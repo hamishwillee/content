@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Computer literacy, a reasonable understanding of <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>.</td>
+   <td>Computer literacy, a reasonable understanding of <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -33,7 +33,7 @@ tags:
 
 <p>Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data.</p>
 
-<p>However, client-side validation <em>should not be considered</em> an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> <strong>as well</strong> as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server. Read <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
+<p>However, client-side validation <em>should not be considered</em> an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> <strong>as well</strong> as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server. Read <a href=/learn/server-side/first_steps/website_security>Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
 
 <h2 id="What_is_form_validation">What is form validation?</h2>
 
@@ -55,7 +55,7 @@ tags:
 <ul>
  <li><strong>We want to get the right data, in the right format.</strong> Our applications won't work properly if our users' data is stored in the wrong format, is incorrect, or is omitted altogether.</li>
  <li><strong>We want to protect our users' data</strong>. Forcing our users to enter secure passwords makes it easier to protect their account information.</li>
- <li><strong>We want to protect ourselves</strong>. There are many ways that malicious users can misuse unprotected forms to damage the application (see <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>).<br>
+ <li><strong>We want to protect ourselves</strong>. There are many ways that malicious users can misuse unprotected forms to damage the application (see <a href=/learn/server-side/first_steps/website_security>Website security</a>).<br>
   {{warning("Never trust data passed to your server from the client. Even if your form is validating correctly and preventing malformed input on the client-side, a malicious user can still alter the network request.")}}</li>
 </ul>
 
@@ -70,14 +70,14 @@ tags:
 
 <h2 id="Using_built-in_form_validation">Using built-in form validation</h2>
 
-<p>One of the most significant features of <a href="/en-US/docs/Learn/Forms/HTML5_input_types">HTML5 form controls</a> is the ability to validate most user data without relying on JavaScript. This is done by using validation attributes on form elements. We've seen many of these earlier in the course, but to recap:</p>
+<p>One of the most significant features of <a href=/learn/forms/html5_input_types>HTML5 form controls</a> is the ability to validate most user data without relying on JavaScript. This is done by using validation attributes on form elements. We've seen many of these earlier in the course, but to recap:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code>: Specifies whether a form field needs to be filled in before the form can be submitted.</li>
- <li><code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>: Specifies the minimum and maximum length of textual data (strings)</li>
- <li><code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>: Specifies the minimum and maximum values of numerical input types</li>
+ <li><code><a href=/web/html/attributes/required>required</a></code>: Specifies whether a form field needs to be filled in before the form can be submitted.</li>
+ <li><code><a href=/web/html/attributes/minlength>minlength</a></code> and <code><a href=/web/html/attributes/maxlength>maxlength</a></code>: Specifies the minimum and maximum length of textual data (strings)</li>
+ <li><code><a href=/web/html/attributes/min>min</a></code> and <code><a href=/web/html/attributes/max>max</a></code>: Specifies the minimum and maximum values of numerical input types</li>
  <li><code>type</code>: Specifies whether the data needs to be a number, an email address, or some other specific preset type. </li>
- <li><code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code>: Specifies a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> that defines a pattern the entered data needs to follow.</li>
+ <li><code><a href=/web/html/attributes/pattern>pattern</a></code>: Specifies a <a href=/web/javascript/guide/regular_expressions>regular expression</a> that defines a pattern the entered data needs to follow.</li>
 </ul>
 
 <p>If the data entered in a form field follows all of the rules specified by the above attributes, it is considered valid. If not, it is considered invalid.</p>
@@ -128,7 +128,7 @@ input:valid {
 
 <h3 id="The_required_attribute">The required attribute</h3>
 
-<p>The simplest HTML5 validation feature is the <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> attribute. To make an input mandatory, add this attribute to the element. When this attribute is set, the element matches the {{cssxref(':required')}} UI pseudo-class and the form won't submit, displaying an error message on submission when the input is empty. While empty, the input will also be considered invalid, matching the {{cssxref(':invalid')}} UI pseudo-class.</p>
+<p>The simplest HTML5 validation feature is the <code><a href=/web/html/attributes/required>required</a></code> attribute. To make an input mandatory, add this attribute to the element. When this attribute is set, the element matches the {{cssxref(':required')}} UI pseudo-class and the form won't submit, displaying an error message on submission when the input is empty. While empty, the input will also be considered invalid, matching the {{cssxref(':invalid')}} UI pseudo-class.</p>
 
 <p>Add a <code>required</code> attribute to your input, as shown below.</p>
 
@@ -165,12 +165,12 @@ input:valid {
 <p>The presence of the <code>required</code> attribute on any element that supports this attribute means the element matches the {{cssxref(':required')}} pseudoclass whether it has a value or not. If the {{HTMLElement("input")}} has no value, the <code>input</code> will match the {{cssxref(':invalid')}} pseudoclass.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For good user experience, indicate to the user when form fields are required. It isn't only good user experience, it is required by WCAG <a href="/en-US/docs/Learn/Accessibility">accessibility</a> guidelines. Also, only require users to input data you actually need: For example, why do you really need to know someone's gender or title?</p>
+<p><strong>Note</strong>: For good user experience, indicate to the user when form fields are required. It isn't only good user experience, it is required by WCAG <a href=/learn/accessibility>accessibility</a> guidelines. Also, only require users to input data you actually need: For example, why do you really need to know someone's gender or title?</p>
 </div>
 
 <h3 id="Validating_against_a_regular_expression">Validating against a regular expression</h3>
 
-<p>Another useful validation feature is the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute, which expects a <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</p>
+<p>Another useful validation feature is the <a href=/web/html/attributes/pattern><code>pattern</code></a> attribute, which expects a <a href=/javascript/guide/regular_expressions>Regular Expression</a> as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</p>
 
 <p>Regexps are quite complex, and we don't intend to teach you them exhaustively in this article. Below are some examples to give you a basic idea of how they work.</p>
 
@@ -183,9 +183,9 @@ input:valid {
  <li><code>abc|xyz</code> — Matches exactly <code>abc</code> or exactly <code>xyz</code> (but not <code>abcxyz</code> or <code>a</code> or <code>y</code>, and so on).</li>
 </ul>
 
-<p>There are many more possibilities that we don't cover here. For a complete list and many examples, consult our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular expressions</a> documentation.</p>
+<p>There are many more possibilities that we don't cover here. For a complete list and many examples, consult our <a href=/web/javascript/guide/regular_expressions>Regular expressions</a> documentation.</p>
 
-<p>Let's implement an example. Update your HTML to add a <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute like this:</p>
+<p>Let's implement an example. Update your HTML to add a <a href=/web/html/attributes/pattern><code>pattern</code></a> attribute like this:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
@@ -214,27 +214,27 @@ input:valid {
 
 <p>In this example, the {{HTMLElement("input")}} element accepts one of four possible values: the strings "banana", "Banana", "cherry", or "Cherry". Regular expressions are case-sensitive, but we've made it support capitalized as well as lower-case versions using an extra "Aa" pattern nested inside square brackets.</p>
 
-<p>At this point, try changing the value inside the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute to equal some of the examples you saw earlier, and look at how that affects the values you can enter to make the input value valid. Try writing some of your own, and see how it goes. Make them fruit-related where possible so that your examples make sense!</p>
+<p>At this point, try changing the value inside the <a href=/web/html/attributes/pattern><code>pattern</code></a> attribute to equal some of the examples you saw earlier, and look at how that affects the values you can enter to make the input value valid. Try writing some of your own, and see how it goes. Make them fruit-related where possible so that your examples make sense!</p>
 
 <p>If a non-empty value of the {{HTMLElement("input")}} doesn't match the regular expression's pattern, the <code>input</code> will match the {{cssxref(':invalid')}} pseudoclass.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Some {{HTMLElement("input")}} element types don't need a <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute to be validated against a regular expression. Specifying the <code>email</code> type, for example, validates the inputs value against a well-formed email address pattern or a pattern matching a comma-separated list of email addresses if it has the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> attribute.</p>
+<p><strong>Note:</strong> Some {{HTMLElement("input")}} element types don't need a <a href=/web/html/attributes/pattern><code>pattern</code></a> attribute to be validated against a regular expression. Specifying the <code>email</code> type, for example, validates the inputs value against a well-formed email address pattern or a pattern matching a comma-separated list of email addresses if it has the <a href=/web/html/attributes/multiple><code>multiple</code></a> attribute.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The {{HTMLElement("textarea")}} element doesn't support the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute.</p>
+<p><strong>Note</strong>: The {{HTMLElement("textarea")}} element doesn't support the <a href=/web/html/attributes/pattern><code>pattern</code></a> attribute.</p>
 </div>
 
 <h3 id="Constraining_the_length_of_your_entries">Constraining the length of your entries</h3>
 
-<p>You can constrain the character length of all text fields created by {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by using the <a href="/en-US/docs/Web/HTML/Attributes/minlength"><code>minlength</code></a> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes. A field is invalid if it has a value and that value has fewer characters than the <a href="/en-US/docs/Web/HTML/Attributes/minlength"><code>minlength</code></a> value or more than the <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> value.</p>
+<p>You can constrain the character length of all text fields created by {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by using the <a href=/web/html/attributes/minlength><code>minlength</code></a> and <code><a href=/web/html/attributes/maxlength>maxlength</a></code> attributes. A field is invalid if it has a value and that value has fewer characters than the <a href=/web/html/attributes/minlength><code>minlength</code></a> value or more than the <code><a href=/web/html/attributes/maxlength>maxlength</a></code> value.</p>
 
 <p>Browsers often don't let the user type a longer value than expected into text fields. A better user experience than just using <code>maxlength</code> is to also provide character count feedback in an accessible manner and let them edit their content down to size. An example of this is the character limit seen on Twitter when Tweeting. JavaScript, including <a href="https://github.com/mimo84/bootstrap-maxlength">solutions using <code>maxlength</code></a>, can be used to provide this</p>
 
 <h3 id="Constraining_the_values_of_your_entries">Constraining the values of your entries</h3>
 
-<p>For number fields (i.e. <code><a href="/en-US/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code>), the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attributes can be used to provide a range of valid values. If the field contains a value outside this range, it will be invalid.</p>
+<p>For number fields (i.e. <code><a href=/web/html/element/input/number>&lt;input type="number"&gt;</a></code>), the <code><a href=/web/html/attributes/min>min</a></code> and <code><a href=/web/html/attributes/max>max</a></code> attributes can be used to provide a range of valid values. If the field contains a value outside this range, it will be invalid.</p>
 
 <p>Let's look at another example. Create a new copy of the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> file.</p>
 
@@ -282,7 +282,7 @@ div {
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>&lt;input type="number"&gt;</code> (and other types, such as <code>range</code> and <code>date</code>) can also take a <a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute, which specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons). In the above example we've not included a <code>step</code> attribute, so the value defaults to <code>1</code>. This means that floats, like 3.2, will also show as invalid.</p>
+<p><strong>Note</strong>: <code>&lt;input type="number"&gt;</code> (and other types, such as <code>range</code> and <code>date</code>) can also take a <a href=/web/html/attributes/step><code>step</code></a> attribute, which specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons). In the above example we've not included a <code>step</code> attribute, so the value defaults to <code>1</code>. This means that floats, like 3.2, will also show as invalid.</p>
 </div>
 
 <h3 id="Full_example">Full example</h3>
@@ -369,7 +369,7 @@ input:focus:invalid {
 
 <p>{{EmbedLiveSample("Full_example", "100%", 420)}}</p>
 
-<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
+<p>See <a href=/web/guide/html/html5/constraint_validation#Validation-related_attributes>Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html">full-example.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html">source code</a>.)</p>
@@ -381,15 +381,15 @@ input:focus:invalid {
 
 <h3 id="The_Constraint_Validation_API">The Constraint Validation API</h3>
 
-<p>Most browsers support the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a>, which consists of a set of methods and properties available on the following form element DOM interfaces:</p>
+<p>Most browsers support the <a href=/web/api/constraint_validation>Constraint Validation API</a>, which consists of a set of methods and properties available on the following form element DOM interfaces:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code> (represents a <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> element)</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLFieldSetElement">HTMLFieldSetElement</a></code> (represents a <code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code> element)</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement</a></code> (represents an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> element)</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></code> (represents an <code><a href="/en-US/docs/Web/HTML/Element/output">&lt;output&gt;</a></code> element)</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code> (represents a <code><a href="/en-US/docs/Web/HTML/Element/select">&lt;select&gt;</a></code> element)</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code> (represents a <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> element)</li>
+ <li><code><a href=/web/api/htmlbuttonelement>HTMLButtonElement</a></code> (represents a <code><a href=/web/html/element/button>&lt;button&gt;</a></code> element)</li>
+ <li><code><a href=/web/api/htmlfieldsetelement>HTMLFieldSetElement</a></code> (represents a <code><a href=/web/html/element/fieldset>&lt;fieldset&gt;</a></code> element)</li>
+ <li><code><a href=/web/api/htmlinputelement>HTMLInputElement</a></code> (represents an <code><a href=/web/html/element/input>&lt;input&gt;</a></code> element)</li>
+ <li><code><a href=/web/api/htmloutputelement>HTMLOutputElement</a></code> (represents an <code><a href=/web/html/element/output>&lt;output&gt;</a></code> element)</li>
+ <li><code><a href=/web/api/htmlselectelement>HTMLSelectElement</a></code> (represents a <code><a href=/web/html/element/select>&lt;select&gt;</a></code> element)</li>
+ <li><code><a href=/web/api/htmltextareaelement>HTMLTextAreaElement</a></code> (represents a <code><a href=/web/html/element/textarea>&lt;textarea&gt;</a></code> element)</li>
 </ul>
 
 <p id="Constraint_validation_API_properties">The Constraint validation API makes the following properties available on the above elements.</p>
@@ -414,7 +414,7 @@ input:focus:invalid {
 <p id="Constraint_validation_API_methods">The Constraint Validation API also makes the following methods available on the above elements.</p>
 
 <ul>
- <li><code>checkValidity()</code>: Returns <code>true</code> if the element's value has no validity problems; <code>false</code> otherwise. If the element is invalid, this method also fires an <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> event</a> on the element.</li>
+ <li><code>checkValidity()</code>: Returns <code>true</code> if the element's value has no validity problems; <code>false</code> otherwise. If the element is invalid, this method also fires an <a href=/web/api/htmlinputelement/invalid_event><code>invalid</code> event</a> on the element.</li>
  <li><code>setCustomValidity(<em>message</em>)</code>: Adds a custom error message to the element; if you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML5 validation constraints. The message is shown to the user when reporting the problem.</li>
 </ul>
 
@@ -431,7 +431,7 @@ input:focus:invalid {
 
 <p><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></p>
 
-<p>Customizing these error messages is one of the most common use cases of the <a href="/en-US/docs/Web/API/Constraint_validation" rel="external">constraint validation API</a>. Let's work through a simple example of how to do this.</p>
+<p>Customizing these error messages is one of the most common use cases of the <a href=/web/api/constraint_validation rel="external">constraint validation API</a>. Let's work through a simple example of how to do this.</p>
 
 <p>We'll start with some simple HTML (feel free to put this in a blank HTML file; use a fresh copy of <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> as a basis, if you like):</p>
 
@@ -455,7 +455,7 @@ email.addEventListener("input", function (event) {
 
 <p>Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.</p>
 
-<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
+<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href=/html/html5/constraint_validation#Constraint_API's_element.setCustomValidity()><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
 
 <p>If the <code>validity.typeMismatch</code> property returns <code>false</code>, we call the <code>setCustomValidity()</code> method an empty string. This renders the input valid, so the form will submit.</p>
 
@@ -484,11 +484,11 @@ email.addEventListener("input", function (event) {
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>This simple form uses the <code><a href="/en-US/docs/Web/HTML/Attributes/novalidate">novalidate</a></code> attribute to turn off the browser's automatic validation; this lets our script take control over validation. However, this doesn't disable support for the constraint validation API nor the application of CSS pseudo-classes like {{cssxref(":valid")}}, etc. That means that even though the browser doesn't automatically check the validity of the form before sending its data, you can still do it yourself and style the form accordingly.</p>
+<p>This simple form uses the <code><a href=/web/html/attributes/novalidate>novalidate</a></code> attribute to turn off the browser's automatic validation; this lets our script take control over validation. However, this doesn't disable support for the constraint validation API nor the application of CSS pseudo-classes like {{cssxref(":valid")}}, etc. That means that even though the browser doesn't automatically check the validity of the form before sending its data, you can still do it yourself and style the form accordingly.</p>
 
-<p>Our input to validate is an <code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code>, which is <code>required</code>, and has a <code>minlength</code> of 8 characters. Let's check these using our own code, and show a custom error message for each one.</p>
+<p>Our input to validate is an <code><a href=/web/html/element/input/email>&lt;input type="email"&gt;</a></code>, which is <code>required</code>, and has a <code>minlength</code> of 8 characters. Let's check these using our own code, and show a custom error message for each one.</p>
 
-<p>We are aiming to show the error messages inside a <code>&lt;span&gt;</code> element. The <a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> attribute is set on that <code>&lt;span&gt;</code> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.</p>
+<p>We are aiming to show the error messages inside a <code>&lt;span&gt;</code> element. The <a href=/accessibility/aria/aria_live_regions><code>aria-live</code></a> attribute is set on that <code>&lt;span&gt;</code> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: A key point here is that setting the <code>novalidate</code> attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</p>
@@ -606,7 +606,7 @@ function showError() {
 
 <ul>
  <li>Every time we change the value of the input, we check to see if it contains valid data. If it has then we remove any error message being shown. If the data is not valid, we run <code>showError()</code> to show the appropriate error.</li>
- <li>Every time we try to submit the form, we again check to see if the data is valid. If so, we let the form submit. If not, we run <code>showError()</code> to show the appropriate error, and stop the form submitting with <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>.</li>
+ <li>Every time we try to submit the form, we again check to see if the data is valid. If so, we let the form submit. If not, we run <code>showError()</code> to show the appropriate error, and stop the form submitting with <code><a href=/web/api/event/preventdefault>preventDefault()</a></code>.</li>
  <li>The <code>showError()</code> function uses various properties of the input's <code>validity</code> object to determine what the error is, and then displays an error message as appropriate.</li>
 </ul>
 
@@ -621,12 +621,12 @@ function showError() {
 <p>The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For further information, see our <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation guide</a>, and the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a> reference.</p>
+<p><strong>Note</strong>: For further information, see our <a href=/web/guide/html/html5/constraint_validation>Constraint validation guide</a>, and the <a href=/web/api/constraint_validation>Constraint Validation API</a> reference.</p>
 </div>
 
 <h3 id="Validating_forms_without_a_built-in_API">Validating forms without a built-in API</h3>
 
-<p>In some cases, such as legacy browser support or <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">custom controls</a>, you won't be able to or won't want to use the Constraint Validation API.You're still able to use JavaScript to validate your form, but you'll just have to write your own.</p>
+<p>In some cases, such as legacy browser support or <a href=/learn/forms/how_to_build_custom_form_controls>custom controls</a>, you won't be able to or won't want to use the Constraint Validation API.You're still able to use JavaScript to validate your form, but you'll just have to write your own.</p>
 
 <p>To validate a form, ask yourself a few questions:</p>
 
@@ -803,7 +803,7 @@ addEvent(form, "submit", function () {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_validation">Test your skills: Form validation</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/forms/test_your_skills:_form_validation>Test your skills: Form validation</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -815,29 +815,29 @@ addEvent(form, "submit", function () {
  <li>Point out exactly where the error occurs, especially on large forms.</li>
 </ul>
 
-<p>Once you have checked that the form is filled out correctly, the form can be submitted. We'll cover <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">sending form data</a> next.</p>
+<p>Once you have checked that the form is filled out correctly, the form can be submitted. We'll cover <a href=/learn/forms/sending_and_retrieving_form_data>sending form data</a> next.</p>
 
 <p>{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>Basic native form controls</a></li>
+ <li><a href=/learn/forms/html5_input_types>The HTML5 input types</a></li>
+ <li><a href=/learn/forms/other_form_controls>Other form controls</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
+ <li><a href=/learn/forms/ui_pseudo-classes>UI pseudo-classes</a></li>
+ <li><a href=/learn/forms/form_validation>Client-side form validation</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form controls</a></li>
+ <li><a href=/learn/forms/sending_forms_through_javascript>Sending forms through JavaScript</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_widgets>Property compatibility table for form widgets</a></li>
 </ul>

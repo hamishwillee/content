@@ -19,7 +19,7 @@ tags:
 
 <p>In Firefox and Internet Explorer, switching the browser to offline mode sends a <code>false</code> value. Until Firefox 41, all other conditions return a <code>true</code> value; testing actual behavior on Nightly 68 on Windows shows that it only looks for LAN connection like Chrome and Safari giving false positives.</p>
 
-<p>You can see changes in the network state by listening for the events on <a href="/en-US/docs/Web/API/document.ononline"><code>window.ononline</code></a> and <a href="/en-US/docs/Web/API/document.onoffline"><code>window.onoffline</code></a>.</p>
+<p>You can see changes in the network state by listening for the events on <a href=/web/api/document.ononline><code>window.ononline</code></a> and <a href=/web/api/document.onoffline><code>window.onoffline</code></a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,7 +46,7 @@ tags:
 
 <h3 id="Listening_for_changes_in_network_status">Listening for changes in network status</h3>
 
-<p>To see changes in the network state, use <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code> to listen for the events on <code>window.online</code> and <code>window.offline</code>, as in the following example:</p>
+<p>To see changes in the network state, use <code><a href=/dom/element.addeventlistener>addEventListener</a></code> to listen for the events on <code>window.online</code> and <code>window.offline</code>, as in the following example:</p>
 
 <pre class="brush: js notranslate">window.addEventListener('offline', function(e) { console.log('offline'); });
 
@@ -78,7 +78,7 @@ window.addEventListener('online', function(e) { console.log('online'); });
 
 <h2 id="Notes">Notes</h2>
 
-<p>See <a href="/en-US/docs/Online_and_offline_events">Online/Offline Events‎</a> for a more detailed description of this property as well as new offline-related features introduced in Firefox 3.</p>
+<p>See <a href=/online_and_offline_events>Online/Offline Events‎</a> for a more detailed description of this property as well as new offline-related features introduced in Firefox 3.</p>
 
 <h2 id="See_also">See also</h2>
 

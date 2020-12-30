@@ -70,7 +70,7 @@ slug: Tools/Web_Console/Console_messages
 <h3 id="Network">Network</h3>
 
 <div class="note">
-<p>Network log messages are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">filtering</a> feature to show them.</p>
+<p>Network log messages are not shown by default. Use the <a href=/tools/web_console/console_messages#Filtering_by_category>filtering</a> feature to show them.</p>
 </div>
 
 <p>Network requests are logged with a line that looks like this:</p>
@@ -88,9 +88,9 @@ slug: Tools/Web_Console/Console_messages
    <td>
     <p>The specific HTTP request method.</p>
 
-    <p>If the request was made as an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, there's an additional "XHR" tag indicating this.</p>
+    <p>If the request was made as an <a href=/web/api/xmlhttprequest>XMLHttpRequest</a>, there's an additional "XHR" tag indicating this.</p>
 
-    <p>If more information is available, a disclosure triangle lets you display it, in an embedded panel that is identical to the <a href="/en-US/docs/Tools/Network_Monitor/request_details">Network Monitor request details</a>.</p>
+    <p>If more information is available, a disclosure triangle lets you display it, in an embedded panel that is identical to the <a href=/tools/network_monitor/request_details>Network Monitor request details</a>.</p>
    </td>
   </tr>
   <tr>
@@ -123,7 +123,7 @@ slug: Tools/Web_Console/Console_messages
 
 <h3 id="JS">JS</h3>
 
-<p>JavaScript errors contain a "Learn more" link that takes you to the<a href="/en-US/docs/Web/JavaScript/Reference/Errors"> JavaScript error reference</a> containing additional advice for fixing issues:</p>
+<p>JavaScript errors contain a "Learn more" link that takes you to the<a href=/web/javascript/reference/errors> JavaScript error reference</a> containing additional advice for fixing issues:</p>
 
 <p>{{EmbedYouTube("OabJc2QR6o0")}}</p>
 
@@ -133,14 +133,14 @@ slug: Tools/Web_Console/Console_messages
 
 <h4 id="Async_stack_frames">Async stack frames</h4>
 
-<p>Stack traces show stack frames for <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async functions</a> separately from those for synchronous functions. When you run code containing an async function, its traces (<a href="/en-US/docs/Web/API/Console/trace">console.trace</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">thrown error</a>) are shown with an <em>Async:</em> prefix.</p>
+<p>Stack traces show stack frames for <a href=/web/javascript/reference/statements/async_function>async functions</a> separately from those for synchronous functions. When you run code containing an async function, its traces (<a href=/web/api/console/trace>console.trace</a> or <a href=/web/javascript/reference/global_objects/error>thrown error</a>) are shown with an <em>Async:</em> prefix.</p>
 
 <p><img alt="Console log showing a trace containing async code" src="https://mdn.mozillademos.org/files/17026/Async-trace.png" style="height: 442px; width: 771px;"></p>
 
 <h3 id="CSS">CSS</h3>
 
 <div class="note">
-<p><strong>Note</strong>: CSS warnings and reflow messages are not shown by default, for performance reasons (see {{bug(1452143)}}). Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">filtering</a> feature to show them.</p>
+<p><strong>Note</strong>: CSS warnings and reflow messages are not shown by default, for performance reasons (see {{bug(1452143)}}). Use the <a href=/tools/web_console/console_messages#Filtering_by_category>filtering</a> feature to show them.</p>
 </div>
 
 <p>Some CSS messages contain a disclosure triangle at the left of the message. Click it to view more information about the error, as well as which DOM nodes are affected by the error.</p>
@@ -161,27 +161,27 @@ slug: Tools/Web_Console/Console_messages
   </tr>
   <tr>
    <td>Blocked loading mixed active content</td>
-   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser blocked this active content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser blocked this active content. See <a href=/security/mixedcontent>Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>Blocked loading mixed display content</td>
-   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser blocked this display content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser blocked this display content. See <a href=/security/mixedcontent>Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>Loading mixed (insecure) active content on a secure page</td>
-   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser loaded this active content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser loaded this active content. See <a href=/security/mixedcontent>Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>Loading mixed (insecure) display content on a secure page</td>
-   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser loaded this display content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser loaded this display content. See <a href=/security/mixedcontent>Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>This site specified both an X-Content-Security-Policy/Report-Only header and a Content-Security-Policy/Report-Only header. The X-Content-Security-Policy/Report-Only header(s) will be ignored.</td>
-   <td>See <a href="/en-US/docs/Security/CSP">Content Security Policy</a> for more details.</td>
+   <td>See <a href=/security/csp>Content Security Policy</a> for more details.</td>
   </tr>
   <tr>
    <td>The X-Content-Security-Policy and X-Content-Security-Report-Only headers will be deprecated in the future. Please use the Content-Security-Policy and Content-Security-Report-Only headers with CSP spec compliant syntax instead.</td>
-   <td>See <a href="/en-US/docs/Security/CSP">Content Security Policy</a> for more details.</td>
+   <td>See <a href=/security/csp>Content Security Policy</a> for more details.</td>
   </tr>
   <tr>
    <td>Password fields present on an insecure (http://) page. This is a security risk that allows user login credentials to be stolen.</td>
@@ -197,7 +197,7 @@ slug: Tools/Web_Console/Console_messages
   </tr>
   <tr>
    <td>The site specified an invalid Strict-Transport-Security header.</td>
-   <td>See <a href="/en-US/docs/Security/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a> for more details.</td>
+   <td>See <a href=/security/http_strict_transport_security>HTTP Strict Transport Security</a> for more details.</td>
   </tr>
   <tr>
    <td>
@@ -206,7 +206,7 @@ slug: Tools/Web_Console/Console_messages
    <td>
     <p>The site uses a certificate whose signature uses the SHA-1 hash algorithm.</p>
 
-    <p>SHA-1 is still widely used in certificates, but it is starting to show its age. Web sites and Certification Authorities are encouraged to switch to stronger hash algorithms in future. See the <a href="/en-US/docs/Security/Weak_Signature_Algorithm">Weak Signature Algorithm</a> article for more details.</p>
+    <p>SHA-1 is still widely used in certificates, but it is starting to show its age. Web sites and Certification Authorities are encouraged to switch to stronger hash algorithms in future. See the <a href=/security/weak_signature_algorithm>Weak Signature Algorithm</a> article for more details.</p>
 
     <p>Note that the SHA-1 certificate may not be your site's own certificate, but may be the certificate belonging to a Certification Authority that was used to sign your site's certificate.</p>
    </td>
@@ -219,30 +219,30 @@ slug: Tools/Web_Console/Console_messages
 <h3 id="Logging">Logging</h3>
 
 <div class="note">
-<p>Messages logged from <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a>, <a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a>, add-ons, and <a href="/en-US/docs/Mozilla/ChromeWorkers">Chrome Workers</a> are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">filtering</a> feature to show them.</p>
+<p>Messages logged from <a href=/web/api/sharedworker>Shared Workers</a>, <a href=/web/api/serviceworker_api>Service Workers</a>, add-ons, and <a href=/mozilla/chromeworkers>Chrome Workers</a> are not shown by default. Use the <a href=/tools/web_console/console_messages#Filtering_by_category>filtering</a> feature to show them.</p>
 </div>
 
-<p>The Logging category includes messages logged using the <a href="/en-US/docs/Web/API/Console">Console</a> API.</p>
+<p>The Logging category includes messages logged using the <a href=/web/api/console>Console</a> API.</p>
 
-<p>The Web console supports the following <a href="/en-US/docs/Web/API/Console">Console API</a> messages:</p>
+<p>The Web console supports the following <a href=/web/api/console>Console API</a> messages:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Console.assert"><code>assert()</code></a></li>
- <li><code><a href="/en-US/docs/Web/API/Console/clear">clear()</a></code></li>
- <li><a href="/en-US/docs/Web/API/Console.count"><code>count()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.dir"><code>dir()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.dirxml"><code>dirxml()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.error"><code>error()</code></a></li>
+ <li><a href=/web/api/console.assert><code>assert()</code></a></li>
+ <li><code><a href=/web/api/console/clear>clear()</a></code></li>
+ <li><a href=/web/api/console.count><code>count()</code></a></li>
+ <li><a href=/web/api/console.dir><code>dir()</code></a></li>
+ <li><a href=/web/api/console.dirxml><code>dirxml()</code></a></li>
+ <li><a href=/web/api/console.error><code>error()</code></a></li>
  <li><code>exception()</code></li>
- <li><code><a href="/en-US/docs/Web/API/Console.group">group()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Console/groupEnd">groupEnd()</a></code></li>
+ <li><code><a href=/web/api/console.group>group()</a></code></li>
+ <li><code><a href=/web/api/console/groupend>groupEnd()</a></code></li>
  <li><code>info()</code></li>
- <li><a href="/en-US/docs/Web/API/Console.log"><code>log()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.table"><code>table()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.time"><code>time()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.timeEnd"><code>timeEnd()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.trace"><code>trace()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.warn"><code>warn()</code></a></li>
+ <li><a href=/web/api/console.log><code>log()</code></a></li>
+ <li><a href=/web/api/console.table><code>table()</code></a></li>
+ <li><a href=/web/api/console.time><code>time()</code></a></li>
+ <li><a href=/web/api/console.timeend><code>timeEnd()</code></a></li>
+ <li><a href=/web/api/console.trace><code>trace()</code></a></li>
+ <li><a href=/web/api/console.warn><code>warn()</code></a></li>
 </ul>
 
 <p>The console prints a stack trace for all error messages, like this:</p>
@@ -285,7 +285,7 @@ doStuff();</pre>
 
 <h3 id="Interpreter_inputoutput">Interpreter input/output</h3>
 
-<p>Commands sent to the browser using the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter" title="#command-line">Web Console's JavaScript interpreter</a>, and the corresponding responses, are logged in the console messages.</p>
+<p>Commands sent to the browser using the <a href=/tools/web_console/the_command_line_interpreter title="#command-line">Web Console's JavaScript interpreter</a>, and the corresponding responses, are logged in the console messages.</p>
 
 <p>For responses that contain objects or variables, the following context menu options are available:</p>
 

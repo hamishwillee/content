@@ -23,7 +23,7 @@ tags:
 ---
 <p>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</p>
 
-<p><span class="seoSummary">The read-only {{domxref("XRInputSourceEvent")}} property <code><strong>frame</strong></code> specifies an {{domxref("XRFrame")}} object representing the event frame during which a <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> user input occurred.</span> This may thus be an event which occurred in the past rather than a current or impending event.</p>
+<p><span class="seoSummary">The read-only {{domxref("XRInputSourceEvent")}} property <code><strong>frame</strong></code> specifies an {{domxref("XRFrame")}} object representing the event frame during which a <a href=/web/api/webxr_device_api>WebXR</a> user input occurred.</span> This may thus be an event which occurred in the past rather than a current or impending event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The event frame does not correspond to a visual frame as is delivered to the frame rendering callback function (see <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame rendering callback</a> for details on the callback). Instead, the <code>XRFrame</code> specified by the <code>frame</code> property is a method to provide access to the {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the relative positions of the objects in the scene at the time the event occurred.</p>
+<p>The event frame does not correspond to a visual frame as is delivered to the frame rendering callback function (see <a href=/web/api/webxr_device_api/rendering>Rendering and the WebXR frame rendering callback</a> for details on the callback). Instead, the <code>XRFrame</code> specified by the <code>frame</code> property is a method to provide access to the {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the relative positions of the objects in the scene at the time the event occurred.</p>
 
 <p>However, since the event frame isn't an animation frame, there is no viewer pose available to represent the viewer's current point of view; the results of calling {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an  {{domxref("XRViewerPose")}} with an empty {{domxref("XRViewerPose.views", "views")}} list.</p>
 

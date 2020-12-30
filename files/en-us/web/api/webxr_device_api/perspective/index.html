@@ -19,7 +19,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}{{Draft}}</p>
 
-<p>Because <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> uses <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> to render the views that form the 3D environment displayed using the XR hardware, it's easy to think that the perspective-related matters are identical to those found in any WebGL project. This is largely true, but there are a few specific topics that need to be revisited and some minor additional guidelines considered in order to ensure that your app looks right and, more importantly, that your 3D world doesn't cause people to become ill from vertigo or other effects that can be caused when what's being seen doesn't match what the brain expects from reality.</p>
+<p>Because <a href=/web/api/webxr_device_api>WebXR</a> uses <a href=/web/api/webgl_api>WebGL</a> to render the views that form the 3D environment displayed using the XR hardware, it's easy to think that the perspective-related matters are identical to those found in any WebGL project. This is largely true, but there are a few specific topics that need to be revisited and some minor additional guidelines considered in order to ensure that your app looks right and, more importantly, that your 3D world doesn't cause people to become ill from vertigo or other effects that can be caused when what's being seen doesn't match what the brain expects from reality.</p>
 
 <p><span class="seoSummary">In this article, we examine scenarios in which the way your project calculates, applies, and thinks about perspective may differ from code written for non-XR applications.</span></p>
 
@@ -27,11 +27,11 @@ tags:
 
 <p>Every WebXR session, represented by an {{domxref("XRSession")}} object, offers a set of options that can be configured by creating a new {{domxref("XRRenderState")}} object and activating the updated state by calling the session's {{domxref("XRSession.updateRenderState", "updateRenderState()")}} method to replace the current configuration.</p>
 
-<p>The majority of these values define the XR device's <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#The_viewing_frustum">viewing frustum</a>; that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the aspect ratio of the rendered image, and the distances to the near and far clipping planes.</p>
+<p>The majority of these values define the XR device's <a href=/web/api/webgl_api/webgl_model_view_projection#The_viewing_frustum>viewing frustum</a>; that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the aspect ratio of the rendered image, and the distances to the near and far clipping planes.</p>
 
 <h3 id="Welcome_to_the_projection_matrix">Welcome to the projection matrix</h3>
 
-<p>Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#Perspective_projection_matrix">perspective projection matrix</a></strong>. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.</p>
+<p>Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the <strong><a href=/web/api/webgl_api/webgl_model_view_projection#Perspective_projection_matrix>perspective projection matrix</a></strong>. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.</p>
 
 <p>Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the <code>XRView</code> are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause {{interwiki("wikipedia", "virtual reality sickness")}} in at least some of your users.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 <p>Although normally you should avoid manually building or altering the projection matrix provided by the view, you can do so in some situations. The most common reason it may make sense to do this is to alter the near and far clipping plane distances to increase or reduce the number of polygons to be rendered, for performance reasons. When games offer preferences to adjust the viewing distance, that is done by changing these plane distance values.</p>
 
-<p>In immersive mode, the WebXR system obtains the default <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#The_viewing_frustum">viewing frustum</a> from the software provided by the hardware vendor. This viewing frustum is based on some combination of the device's lenses, display hardware, and cameras. Everything from the size of the imaging sensor to the focal length of the lens is involved in this calculation.</p>
+<p>In immersive mode, the WebXR system obtains the default <a href=/web/api/webgl_api/webgl_model_view_projection#The_viewing_frustum>viewing frustum</a> from the software provided by the hardware vendor. This viewing frustum is based on some combination of the device's lenses, display hardware, and cameras. Everything from the size of the imaging sensor to the focal length of the lens is involved in this calculation.</p>
 
 <p>Immersive experiences use hardware-defined fields of view, focal lengths, and so forth, so when using an immersive session, you can only change the near and far clipping distances. This is done by setting the values of the <code>XRRenderState</code> properties {{domxref("XRRenderState.depthNear", "depthNear")}} and {{domxref("XRRenderState.depthFar", "depthFar")}}.</p>
 
@@ -82,6 +82,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
+ <li><a href=/web/api/webgl_api/webgl_model_view_projection>WebGL model view projection </a></li>
+ <li><a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers: Simulating cameras in WebXR</a></li>
 </ul>

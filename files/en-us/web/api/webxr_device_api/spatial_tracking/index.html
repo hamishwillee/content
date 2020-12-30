@@ -31,15 +31,15 @@ tags:
 <p><span class="seoSummary">In this guide, we'll explore how WebXR uses <strong>spaces</strong> and, more specifically, <strong>reference spaces</strong>, to track the positions, orientations, and movements of objects and of the user's body in the virtual world.</span></p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This article presumes that you are familiar with the concepts introduced in <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a>: that is, the basics of 3D coordinate systems, as well as WebXR spaces, reference spaces, and how reference spaces are used to create local coordinate systems for individual objects or movable components within a scene.</p>
+<p><strong>Note:</strong> This article presumes that you are familiar with the concepts introduced in <a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR</a>: that is, the basics of 3D coordinate systems, as well as WebXR spaces, reference spaces, and how reference spaces are used to create local coordinate systems for individual objects or movable components within a scene.</p>
 </div>
 
 <h2 id="Representing_a_position_using_a_reference_space">Representing a position using a reference space</h2>
 
-<p>As covered in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Defining spatial relationships with reference spaces")}}, reference spaces establish a local coordinate system which is offset from another coordinate system that is itself defined by some other space. Thus, a reference space can be used to define the position and orientation of a point and by extension the entire object for which that point is the origin. While this is a little heavy-handed to be used for every single object in a scene, it can be very useful for a few specific objects to have their own coordinate system in this manner.</p>
+<p>As covered in {{SectionOnPage(/web/api/webxr_device_api/geometry, "Defining spatial relationships with reference spaces")}}, reference spaces establish a local coordinate system which is offset from another coordinate system that is itself defined by some other space. Thus, a reference space can be used to define the position and orientation of a point and by extension the entire object for which that point is the origin. While this is a little heavy-handed to be used for every single object in a scene, it can be very useful for a few specific objects to have their own coordinate system in this manner.</p>
 
 <ul>
- <li><strong>The world space</strong>; the origin of this space is the origin of the <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL coordinate system</a> underlying the entire 3D canvas.</li>
+ <li><strong>The world space</strong>; the origin of this space is the origin of the <a href=/web/api/webgl_api/webgl_model_view_projection>WebGL coordinate system</a> underlying the entire 3D canvas.</li>
  <li>The player, avatar, or camera; the origin of this space is used as the camera position for rendering the scene to be displayed to the user.</li>
  <li>The hand and/or hand controller; each of these represents one of the user's hands, either in the form of the hand itself or a controller (or both). The origin is generally the center of the user's fisted hand.</li>
  <li><strong>The target ray</strong>; each controller or other handheld device may have a targeting ray associated with it, which is represented by a space whose origin is at the point on the controller at which the ray is emitted, and is oriented so that -Z extends in the direction of the target it's pointing at.</li>
@@ -69,7 +69,7 @@ tags:
 
 <h3 id="Viewer_poses">Viewer poses</h3>
 
-<p>A specialized type of pose, the <strong>viewer pose</strong>, is the pose that represents the perspective of the viewer of the scene. A viewer pose is represented by WebXR's {{domxref("XRViewerPose")}} interface. When rendering a frame, you'll use the viewer pose to determine the position and facing direction of the viewer in order to <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">place the virtual camera</a> and <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">render the scene</a>.</p>
+<p>A specialized type of pose, the <strong>viewer pose</strong>, is the pose that represents the perspective of the viewer of the scene. A viewer pose is represented by WebXR's {{domxref("XRViewerPose")}} interface. When rendering a frame, you'll use the viewer pose to determine the position and facing direction of the viewer in order to <a href=/web/api/webxr_device_api/cameras>place the virtual camera</a> and <a href=/web/api/webxr_device_api/rendering>render the scene</a>.</p>
 
 <p>The only way to obtain a pose that adapts positional information from one space to another is through the {{domxref("XRFrame")}} object received by your frame rendering callback function specified when you called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
 
@@ -93,7 +93,7 @@ tags:
 
 <p>The <code>frame</code> parameter is the {{domxref("XRFrame")}} representing the animation frame information provided by WebXR. When called, this function begins by getting the {{domxref("XRSession")}} from the frame object, then uses the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method to compute the {{domxref("XRViewerPose")}} for the viewer, given <code>viewerRefSpace</code>, which describes the current facing direction and position of the viewer.</p>
 
-<p>The returned viewer pose, <code>viewerPose</code>, can in turn be used to <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">compute positions and orientations to properly render</a> the objects in the scene given the user's point of view.</p>
+<p>The returned viewer pose, <code>viewerPose</code>, can in turn be used to <a href=/web/api/webxr_device_api/cameras>compute positions and orientations to properly render</a> the objects in the scene given the user's point of view.</p>
 
 <h2 id="Offsetting_or_moving_reference_spaces">Offsetting or moving reference spaces</h2>
 
@@ -195,10 +195,10 @@ function myDrawFrame(currentFrameTime, frame) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</a></li>
+ <li><a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web </a></li>
+ <li><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/rendering>Rendering and the WebXR frame animation callback</a></li>
+ <li><a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers: Simulating cameras in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion: A WebXR example</a></li>
+ <li><a href=/web/api/webxr_device_api/bounded_reference_spaces>Using bounded reference spaces</a></li>
 </ul>

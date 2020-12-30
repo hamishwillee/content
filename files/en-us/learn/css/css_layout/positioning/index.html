@@ -23,7 +23,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of How CSS works (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <td>HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of How CSS works (study <a href=/learn/css/introduction_to_css>Introduction to CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -77,7 +77,7 @@ tags:
 left: 30px;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The values of these properties can take any <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">units</a> you'd logically expect — pixels, mm, rems, %, etc.</p>
+<p><strong>Note</strong>: The values of these properties can take any <a href=/learn/css/introduction_to_css/values_and_units>units</a> you'd logically expect — pixels, mm, rems, %, etc.</p>
 </div>
 
 <p>If you now save and refresh, you'll get a result something like this:</p>
@@ -190,7 +190,7 @@ span {
 
 <h3 id="Positioning_contexts">Positioning contexts</h3>
 
-<p>Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element (See <a href="/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">Identifying the containing block</a>). </p>
+<p>Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element (See <a href=/web/css/containing_block#Identifying_the_containing_block>Identifying the containing block</a>). </p>
 
 <p>If no ancestor elements have their position property explicitly defined, then by default all ancestor elements will have a static position. The result of this is, the absolutely positioned element will be contained in the <strong>initial containing block</strong>. The initial containing block has the dimensions of the viewport, and is also the block that contains the {{htmlelement("html")}} element. In other words, the absolutely positioned element will be displayed outside of the {{htmlelement("html")}} element, and be positioned relative to the initial viewport. </p>
 
@@ -326,7 +326,7 @@ p:nth-of-type(1) {
 
 <h3 id="Fixed_positioning">Fixed positioning</h3>
 
-<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ascendants is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
+<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ascendants is a fixed containing block due to its <a href=/web/css/transform>transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
 
 <p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
 
@@ -548,7 +548,7 @@ dt {
 
 <p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
 
-<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ascendants' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
+<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ascendants' <a href=/web/css/position>position</a> property.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can see this example live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>).</p>
@@ -556,7 +556,7 @@ dt {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/CSS_layout/Position_skills">Test your skills: Positioning</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/css/css_layout/position_skills>Test your skills: Positioning</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -568,22 +568,22 @@ dt {
 
 <ul>
  <li>The {{cssxref("position")}} property reference.</li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a>, for some more useful ideas.</li>
+ <li><a href=/learn/css/css_layout/practical_positioning_examples>Practical positioning examples</a>, for some more useful ideas.</li>
 </ul>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
+ <li><a href=/learn/css/css_layout/introduction>Introduction to CSS layout</a></li>
+ <li><a href=/learn/css/css_layout/normal_flow>Normal flow</a></li>
+ <li><a href=/learn/css/css_layout/flexbox>Flexbox</a></li>
+ <li><a href=/learn/css/css_layout/grids>Grid</a></li>
+ <li><a href=/learn/css/css_layout/floats>Floats</a></li>
+ <li><a href=/learn/css/css_layout/positioning>Positioning</a></li>
+ <li><a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a></li>
+ <li><a href=/learn/css/css_layout/responsive_design>Responsive design</a></li>
+ <li><a href=/learn/css/css_layout/media_queries>Beginner's guide to media queries</a></li>
+ <li><a href=/learn/css/css_layout/legacy_layout_methods>Legacy layout methods</a></li>
+ <li><a href=/learn/css/css_layout/supporting_older_browsers>Supporting older browsers</a></li>
+ <li><a href=/learn/css/css_layout/fundamental_layout_comprehension>Fundamental layout comprehension assessment</a></li>
 </ul>

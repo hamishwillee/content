@@ -35,16 +35,16 @@ tags:
 	</tbody>
 </table>
 
-<p>Use the <code>options_ui</code> key to define an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages">options page</a> for your extension.</p>
+<p>Use the <code>options_ui</code> key to define an <a href=/mozilla/add-ons/webextensions/options_pages>options page</a> for your extension.</p>
 
 <p>The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.</p>
 
-<p>You specify <code>options_ui</code> as a path to an HTML file packaged with your extension. The HTML file can include CSS and JavaScript files, just like a normal web page. Unlike a normal page, though, the JavaScript can use all the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> that the extension has <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for. However, it runs in a different scope than your background scripts.</p>
+<p>You specify <code>options_ui</code> as a path to an HTML file packaged with your extension. The HTML file can include CSS and JavaScript files, just like a normal web page. Unlike a normal page, though, the JavaScript can use all the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> that the extension has <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a> for. However, it runs in a different scope than your background scripts.</p>
 
-<p>If you want to <strong>share</strong> data or functions between the JavaScript on your <strong>options page</strong> and your <strong>background script(s)</strong>, you can do so directly by obtaining a reference to the <a href="/en-US/docs/Web/API/Window">Window</a> of your background scripts by using {{WebExtAPIRef("extension.getBackgroundPage()")}}, or a reference to the {{domxref("Window")}} of any of the pages running within your extension with {{WebExtAPIRef("extension.getViews()")}}. Alternately, you can communicate between the JavaScript for your options page and your background script(s) using {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, or {{WebExtAPIRef("runtime.connect()")}}.<br>
+<p>If you want to <strong>share</strong> data or functions between the JavaScript on your <strong>options page</strong> and your <strong>background script(s)</strong>, you can do so directly by obtaining a reference to the <a href=/web/api/window>Window</a> of your background scripts by using {{WebExtAPIRef("extension.getBackgroundPage()")}}, or a reference to the {{domxref("Window")}} of any of the pages running within your extension with {{WebExtAPIRef("extension.getViews()")}}. Alternately, you can communicate between the JavaScript for your options page and your background script(s) using {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, or {{WebExtAPIRef("runtime.connect()")}}.<br>
 The latter (or {{WebExtAPIRef("runtime.Port")}} equivalents) can also be used to share options between your <a href="/en-US/Add-ons/WebExtensions/Background_scripts">background script(s)</a> and your <strong><a href="/en-US/Add-ons/WebExtensions/Content_scripts">content script(s).</a></strong></p>
 
-<p>In general, you will want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync()")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local()")}} (if the settings are local to the current machine/profile). If you do so and your <a href="/en-US/Add-ons/WebExtensions/Background_scripts">background script(s)</a> (or <a href="/en-US/docs/">content script(s)</a>) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.</p>
+<p>In general, you will want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync()")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local()")}} (if the settings are local to the current machine/profile). If you do so and your <a href="/en-US/Add-ons/WebExtensions/Background_scripts">background script(s)</a> (or <a href=/>content script(s)</a>) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -60,7 +60,7 @@ The latter (or {{WebExtAPIRef("runtime.Port")}} equivalents) can also be used 
 	</thead>
 	<tbody>
 		<tr>
-			<td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser_style</a></code><br>
+			<td><code><a href=/mozilla/add-ons/webextensions/user_interface/browser_styles>browser_style</a></code><br>
 			{{optional_inline}}</td>
 			<td><code>Boolean</code></td>
 			<td>
@@ -110,7 +110,7 @@ The latter (or {{WebExtAPIRef("runtime.Port")}} equivalents) can also be used 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page">options_page</a></code> {{deprecated_inline}}</li>
-	<li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a></li>
-	<li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options pages</a></li>
+	<li><code><a href=/mozilla/add-ons/webextensions/manifest.json/options_page>options_page</a></code> {{deprecated_inline}}</li>
+	<li><a href=/mozilla/add-ons/webextensions/user_interface/browser_styles>Browser styles</a></li>
+	<li><a href=/mozilla/add-ons/webextensions/user_interface/options_pages>Options pages</a></li>
 </ul>

@@ -65,7 +65,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser_style</a></code></td>
+   <td><code><a href=/mozilla/add-ons/webextensions/user_interface/browser_styles>browser_style</a></code></td>
    <td><code>Boolean</code></td>
    <td>
     <p>Optional, defaulting to <code>false</code>.</p>
@@ -74,7 +74,7 @@ tags:
 
     <p>In Firefox, the stylesheet can be seen at chrome://browser/content/extension.css, or chrome://browser/content/extension-mac.css on OS X. When setting dimensions, be aware that this style sheet currently sets <code>box-sizing: border-box</code> (see <a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
 
-    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a> describes the classes you can apply to elements in the popup in order to get particular styles.</p>
+    <p><a href=/mozilla/add-ons/webextensions/user_interface/browser_styles>Browser styles</a> describes the classes you can apply to elements in the popup in order to get particular styles.</p>
 
     <p>The <a href="https://github.com/mdn/webextensions-examples/tree/master/latest-download">latest-download</a> example extension uses <code>browser_style</code> in its popup.</p>
 
@@ -142,9 +142,9 @@ tags:
    <td>
     <p>The path to an HTML file containing the specification of the popup.</p>
 
-    <p>The HTML file may include CSS and JavaScript files using <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> elements, just like a normal web page. However, <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt; </a></code>must have <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code> attribute to load a file. Don't use <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> with embedded code, because you'll get a confusing Content Violation Policy error.</p>
+    <p>The HTML file may include CSS and JavaScript files using <code><a href=/web/html/element/link>&lt;link&gt;</a></code> and <code><a href=/web/html/element/script>&lt;script&gt;</a></code> elements, just like a normal web page. However, <code><a href=/web/html/element/script>&lt;script&gt; </a></code>must have <code><a href=/web/html/element/script>src</a></code> attribute to load a file. Don't use <code><a href=/web/html/element/script>&lt;script&gt;</a></code> with embedded code, because you'll get a confusing Content Violation Policy error.</p>
 
-    <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
+    <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a>).</p>
 
     <p>This is a <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
    </td>
@@ -203,8 +203,8 @@ tags:
 <p>In Firefox:</p>
 
 <ul>
- <li>The default height and width for icons in the toolbar is 16 * <code><a href="/en-US/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</a></code>.</li>
- <li>The default height and width for icons in the menu panel is 32 * <code><a href="/en-US/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</a></code>.</li>
+ <li>The default height and width for icons in the toolbar is 16 * <code><a href=/web/api/window/devicepixelratio>window.devicePixelRatio</a></code>.</li>
+ <li>The default height and width for icons in the menu panel is 32 * <code><a href=/web/api/window/devicepixelratio>window.devicePixelRatio</a></code>.</li>
 </ul>
 
 <p>So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:</p>
@@ -250,7 +250,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/page_action>page_action</a></code></li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/sidebar_action>sidebar_action</a></code></li>
+ <li><a href=/mozilla/add-ons/webextensions/user_interface/browser_styles>Browser styles</a></li>
 </ul>

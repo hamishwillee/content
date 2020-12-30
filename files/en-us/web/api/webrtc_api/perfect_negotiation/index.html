@@ -17,7 +17,7 @@ tags:
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p>Because <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> doesn't mandate a specific transport mechanism for signaling during the negotiation of a new peer connection, it's highly flexible. However, despite that flexibility in transport and communication of signaling messages, there's still a recommended design pattern you should follow when possible, known as <strong>perfect negotiation</strong>. <span class="seoSummary">This article introduces WebRTC perfect negotiation, describing how it works and why it's the recommended way to negotiate a WebRTC connection between peers, and provides sample code to demonstrate the technique.</span></p>
+<p>Because <a href=/web/api/webrtc_api>WebRTC</a> doesn't mandate a specific transport mechanism for signaling during the negotiation of a new peer connection, it's highly flexible. However, despite that flexibility in transport and communication of signaling messages, there's still a recommended design pattern you should follow when possible, known as <strong>perfect negotiation</strong>. <span class="seoSummary">This article introduces WebRTC perfect negotiation, describing how it works and why it's the recommended way to negotiate a WebRTC connection between peers, and provides sample code to demonstrate the technique.</span></p>
 
 <p>After the first deployments of WebRTC-capable browsers, it was realized that parts of the negotiation process were more complicated than they needed to be for typical use cases. This was due to a small number of issues with the API and some potential race conditions that needed to be prevented. These issues have since been addressed, letting us simplify our WebRTC negotiation significantly. The perfect negotiation pattern is an example of the ways in which negotiation have improved since the early days of WebRTC.</p>
 
@@ -98,7 +98,7 @@ const pc = new RTCPeerConnection(config);
 };
 </pre>
 
-<p>When the <code>track</code> event occurs, this handler executes. Using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a>, the {{domxref("RTCTrackEvent")}}'s {{domxref("RTCTrackEvent.track", "track")}} and {{domxref("RTCTrackEvent.streams", "streams")}} properties are extracted. The former is either the video track or the audio track being received. The latter is an array of {{domxref("MediaStream")}} objects, each representing a stream containing this track (a track may in rare cases belong to multiple streams at once). In our case, this will always contain one stream, at index 0, because we passed one stream into <code>addTrack()</code> earlier.</p>
+<p>When the <code>track</code> event occurs, this handler executes. Using <a href=/web/javascript/reference/operators/destructuring_assignment>destructuring</a>, the {{domxref("RTCTrackEvent")}}'s {{domxref("RTCTrackEvent.track", "track")}} and {{domxref("RTCTrackEvent.streams", "streams")}} properties are extracted. The former is either the video track or the audio track being received. The latter is an array of {{domxref("MediaStream")}} objects, each representing a stream containing this track (a track may in rare cases belong to multiple streams at once). In our case, this will always contain one stream, at index 0, because we passed one stream into <code>addTrack()</code> earlier.</p>
 
 <p>We add an unmute event handler to the track, because the track will become unmuted once it starts receiving packets. We put the remainder of our reception code in there.</p>
 
@@ -179,7 +179,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <p>Upon receiving an incoming message from the <code>SignalingChannel</code> through its <code>onmessage</code> event handler, the received JSON object is destructured to obtain the <code>description</code> or <code>candidate</code> found within. If the incoming message has a <code>description</code>, it's either an offer or an answer sent by the other peer.</p>
 
-<p>If, on the other hand, the message has a <code>candidate</code>, it's an ICE candidate received from the remote peer as part of <a href="/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates">trickle ICE</a>. The candidate is destined to be delivered to the local ICE layer by passing it into {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}.</p>
+<p>If, on the other hand, the message has a <code>candidate</code>, it's an ICE candidate received from the remote peer as part of <a href=/web/api/rtcpeerconnection/cantrickleicecandidates>trickle ICE</a>. The candidate is destined to be delivered to the local ICE layer by passing it into {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}.</p>
 
 <h5 id="On_receiving_a_description">On receiving a description</h5>
 
@@ -292,17 +292,17 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>The code checks to see if the message is an offer, and if so, if the local signaling state isn't <code>stable</code>. If it's not stable, <em>and</em> the local peer is the polite one, we need to trigger rollback so we can replace the outgoing offer with the new incoming one. and these must both be completed before we can proceed with handling the received offer.</p>
 
-<p>Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code>, which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously <em>sent</em> offer with the newly <em>received</em> offer. The impolite peer has now become the callee instead of the caller.</p>
+<p>Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of <code><a href=/web/javascript/reference/global_objects/promise/all>Promise.all()</a></code>, which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously <em>sent</em> offer with the newly <em>received</em> offer. The impolite peer has now become the callee instead of the caller.</p>
 
 <p>Alll other descriptions received from the impolite peer are processed as normal, by passing them into {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.</p>
 
 <p>Finally, we process a received offer by calling <code>setLocalDescription()</code> to set our local description to the one returned by {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}. Then that gets sent to the polite peer using the signaling channel.</p>
 
-<p>If the incoming message is an ICE candidate rather than an SDP description, it's delivered to the ICE layer by passing it into the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}. If an error occurs here and we didn't just discard an offer due to being the impolite peer during a collision, we <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/throw">throw</a></code> the error so the caller can handle it. Otherwise, we drop the error, ignoring it, since it doesn't matter in this context.</p>
+<p>If the incoming message is an ICE candidate rather than an SDP description, it's delivered to the ICE layer by passing it into the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}. If an error occurs here and we didn't just discard an offer due to being the impolite peer during a collision, we <code><a href=/web/javascript/reference/statements/throw>throw</a></code> the error so the caller can handle it. Otherwise, we drop the error, ignoring it, since it doesn't matter in this context.</p>
 
 <h4 id="Perfect_negotiation_with_the_updated_API_2">Perfect negotiation with the updated API</h4>
 
-<p>The updated code takes advantage of the fact that you can now call {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} with no parameters so it just does the right thing for you, as well as the fact that <code>setRemoteDescription()</code> automatically rolls back if necessary. This lets us get rid of the need to use a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> to keep the timing in order, since the rollback becomes an essentially atomic part of the <code>setRemoteDescription()</code> call.</p>
+<p>The updated code takes advantage of the fact that you can now call {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} with no parameters so it just does the right thing for you, as well as the fact that <code>setRemoteDescription()</code> automatically rolls back if necessary. This lets us get rid of the need to use a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> to keep the timing in order, since the rollback becomes an essentially atomic part of the <code>setRemoteDescription()</code> call.</p>
 
 <pre class="brush: js example-good notranslate">let ignoreOffer = false;
 
@@ -352,7 +352,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <h3 id="Explicit_restartIce_method_added">Explicit restartIce() method added</h3>
 
-<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
+<p>The techniques previously used to trigger an <a href=/web/api/webrtc_api/session_lifetime#ICE_restart>ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
 
 <h4 id="The_old_way_2">The old way</h4>
 
@@ -385,7 +385,7 @@ pc.oniceconnectionstatechange = () =&gt; {
   }
 };</pre>
 
-<p>With this improved technique, instead of directly calling <code>onnegotiationneeded</code> with options to trigger ICE restart, the <code>failed</code> <a href="/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState">ICE connection state</a> calls {{domxref("RTCPeerConnection.restartIce", "restartIce()")}}. <code>restartIce()</code> tells the ICE layer to automatically add the <code>iceRestart</code> flag to the next ICE message sent. Problem solved!</p>
+<p>With this improved technique, instead of directly calling <code>onnegotiationneeded</code> with options to trigger ICE restart, the <code>failed</code> <a href=/web/api/rtcpeerconnection/iceconnectionstate>ICE connection state</a> calls {{domxref("RTCPeerConnection.restartIce", "restartIce()")}}. <code>restartIce()</code> tells the ICE layer to automatically add the <code>iceRestart</code> flag to the next ICE message sent. Problem solved!</p>
 
 <h3 id="Rollback_no_longer_supported_in_the_pranswer_state">Rollback no longer supported in the pranswer state</h3>
 
@@ -396,6 +396,6 @@ pc.oniceconnectionstatechange = () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
+ <li><a href=/web/api/webrtc_api>WebRTC API</a></li>
+ <li><a href=/web/api/webrtc_api/session_lifetime>Lifetime of a WebRTC session</a></li>
 </ul>

@@ -19,7 +19,7 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;"></p>
 
-<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> upgrade, the <code>onBeforeRedirect</code> event will be triggered immediately after <code>onBeforeRequest</code>.</p>
+<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an <a href=/web/http/headers/strict-transport-security>HSTS</a> upgrade, the <code>onBeforeRedirect</code> event will be triggered immediately after <code>onBeforeRequest</code>.</p>
 
 <p>All events—<em>except</em> <code>onErrorOccurred</code>—can take three arguments to <code>addListener()</code>:</p>
 
@@ -83,7 +83,7 @@ tags:
 
 <h2 id="Accessing_security_information">Accessing security information</h2>
 
-<p>In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the <a href="/en-US/docs/Glossary/TLS">TLS</a> properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the <code>extraInfoSpec</code> argument to the event's <code>addListener()</code>.</p>
+<p>In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the <a href=/glossary/tls>TLS</a> properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the <code>extraInfoSpec</code> argument to the event's <code>addListener()</code>.</p>
 
 <p>You can read details of the TLS handshake, but can't modify them or override the browser's trust decisions.</p>
 
@@ -120,7 +120,7 @@ tags:
 
 <dl>
  <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>The maximum number of times that <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged" title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> can be called in a 10 minute period.</dd>
+ <dd>The maximum number of times that <code><a href=/mozilla/add-ons/webextensions/api/webrequest/handlerbehaviorchanged title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> can be called in a 10 minute period.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -131,7 +131,7 @@ tags:
  <dt>{{WebExtAPIRef("webRequest.filterResponseData()")}}</dt>
  <dd>Returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a given request.</dd>
  <dt>{{WebExtAPIRef("webRequest.getSecurityInfo()")}}</dt>
- <dd>Gets detailed information about the <a href="/en-US/docs/Glossary/TLS">TLS</a> connection associated with a given request.</dd>
+ <dd>Gets detailed information about the <a href=/glossary/tls>TLS</a> connection associated with a given request.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -161,7 +161,7 @@ tags:
 
 <p>{{Compat("webextensions.api.webRequest")}}</p>
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
+<p><a href=/mozilla/add-ons/webextensions/chrome_incompatibilities#webRequest_incompatibilities>Extra notes on Chrome incompatibilities</a>.</p>
 
 <p>{{WebExtExamples("h2")}}</p>
 

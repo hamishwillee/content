@@ -78,7 +78,7 @@ tags:
 
 <h3 id="Cross-origin_images">Cross-origin images</h3>
 
-<p>As reported in the <a class="external" href="https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Chromium Blog</a> and documented in <a href="/en-US/docs/Web/HTML/CORS_enabled_image">Allowing cross-origin use of images and canvas</a> can lead to fingerprinting attacks.</p>
+<p>As reported in the <a class="external" href="https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Chromium Blog</a> and documented in <a href=/web/html/cors_enabled_image>Allowing cross-origin use of images and canvas</a> can lead to fingerprinting attacks.</p>
 
 <p>To mitigate the possibility of these attacks, you should use the <code>crossorigin</code> attribute in the images you request and the code snippet below in your <code>.htaccess</code> to set the CORS header from the server.</p>
 
@@ -103,7 +103,7 @@ tags:
 
 <p>The <a class="external" href="https://www.w3.org/TR/resource-timing/">Resource Timing Level 1</a> specification defines an interface for web applications to access the complete timing information for resources in a document.</p>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</a> response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.</p>
+<p>The <a href=/web/http/headers/timing-allow-origin>Timing-Allow-Origin</a> response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.</p>
 
 <p>If a resource isn't served with a <code>Timing-Allow-Origin</code> or if the header does not include the origin making the request some of the attributes of the <code>PerformanceResourceTiming</code> object will be set to zero.</p>
 
@@ -426,7 +426,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 <h2 id="Prevent_some_browsers_from_MIME-sniffing_the_response">Prevent some browsers from MIME-sniffing the response</h2>
 
 <ol>
- <li>Restricts all fetches by default to the origin of the current website by setting the <code>default-src</code> directive to <code>'self'</code> - which acts as a fallback to all <a href="/en-US/docs/Glossary/Fetch_directive">Fetch directives</a>.
+ <li>Restricts all fetches by default to the origin of the current website by setting the <code>default-src</code> directive to <code>'self'</code> - which acts as a fallback to all <a href=/glossary/fetch_directive>Fetch directives</a>.
 
   <ul>
    <li>This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: <code>connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'</code>, etc</li>
@@ -450,7 +450,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
    <li><strong><code>upgrade-insecure-requests</code> does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the <code>Strict-Transport-Security</code> header</strong></li>
   </ul>
  </li>
- <li>Includes the <code>Content-Security-Policy</code> header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#CSP_in_workers">web workers</a></li>
+ <li>Includes the <code>Content-Security-Policy</code> header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target <a href=/web/http/headers/content-security-policy#CSP_in_workers>web workers</a></li>
 </ol>
 
 <p>Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.</p>
@@ -480,7 +480,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <h2 id="Disable_TRACE_HTTP_Method">Disable TRACE HTTP Method</h2>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Methods/TRACE">TRACE</a> method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See <a class="external" href="https://www.owasp.org/index.php/Cross_Site_Tracing">A Cross-Site Tracing (XST) attack</a> and <a class="external" href="https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)">OWASP Web Security Testing Guide</a></p>
+<p>The <a href=/web/http/methods/trace>TRACE</a> method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See <a class="external" href="https://www.owasp.org/index.php/Cross_Site_Tracing">A Cross-Site Tracing (XST) attack</a> and <a class="external" href="https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)">OWASP Web Security Testing Guide</a></p>
 
 <p>Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.</p>
 
@@ -584,7 +584,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <h2 id="Cache_expiration">Cache expiration</h2>
 
-<p>Serve resources with a far-future expiration date using the <a class="external" href="https://httpd.apache.org/docs/current/mod/mod_expires.html">mod_expires</a> module, and <a href="/en-US/docs/Web/HTTP/Headers/Cache-Control">Cache-Control</a> and <a href="/en-US/docs/Web/HTTP/Headers/Expires">Expires</a> headers.</p>
+<p>Serve resources with a far-future expiration date using the <a class="external" href="https://httpd.apache.org/docs/current/mod/mod_expires.html">mod_expires</a> module, and <a href=/web/http/headers/cache-control>Cache-Control</a> and <a href=/web/http/headers/expires>Expires</a> headers.</p>
 
 <pre class="brush: bash notranslate">&lt;IfModule mod_expires.c&gt;
     ExpiresActive on

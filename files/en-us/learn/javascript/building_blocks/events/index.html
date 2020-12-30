@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>.</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href=/learn/javascript/first_steps>JavaScript first steps</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -49,7 +49,7 @@ tags:
  <li>An error occurs.</li>
 </ul>
 
-<p>You can gather from this (and from glancing at the MDN <a href="/en-US/docs/Web/Events">Event reference</a>) that there are <strong>a lot</strong> of events that can be responded to.</p>
+<p>You can gather from this (and from glancing at the MDN <a href=/web/events>Event reference</a>) that there are <strong>a lot</strong> of events that can be responded to.</p>
 
 <p>Each available event has an <strong>event handler</strong>, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are <strong>registering an event handler</strong>. Note: Event handlers are sometimes called <strong>event listeners</strong> — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</p>
 
@@ -80,7 +80,7 @@ btn.onclick = function() {
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<p>In this code, we store a reference to the button inside a constant called <code>btn</code>, using the {{domxref("Document.querySelector()")}} function. We also define a function that returns a random number. The third part of the code is the event handler. The <code>btn</code> constant points to a <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> element, and this type of object has a number of events that can fire on it, and therefore, event handlers available. We are listening for the <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event firing, by setting the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> event handler property to equal an anonymous function containing code that generates a random RGB color and sets the <code><a href="/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a></code> <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code> equal to it.</p>
+<p>In this code, we store a reference to the button inside a constant called <code>btn</code>, using the {{domxref("Document.querySelector()")}} function. We also define a function that returns a random number. The third part of the code is the event handler. The <code>btn</code> constant points to a <code><a href=/web/html/element/button>&lt;button&gt;</a></code> element, and this type of object has a number of events that can fire on it, and therefore, event handlers available. We are listening for the <code><a href=/web/api/element/click_event>click</a></code> event firing, by setting the <code><a href=/web/api/globaleventhandlers/onclick>onclick</a></code> event handler property to equal an anonymous function containing code that generates a random RGB color and sets the <code><a href=/web/html/element/body>&lt;body&gt;</a></code> <code><a href=/web/css/background-color>background-color</a></code> equal to it.</p>
 
 <p>This code is run whenever the click event fires on the <code>&lt;button&gt;</code> element, that is, whenever a user selects it.</p>
 
@@ -92,9 +92,9 @@ btn.onclick = function() {
 
 <p>Another thing worth mentioning at this point is that events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way. In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.</p>
 
-<p>For example, <a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Node.js</a> is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications. The <a href="https://nodejs.org/docs/latest-v12.x/api/events.html">Node.js event model</a> relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like <code>on()</code> to register an event listener, and <code>once()</code> to register an event listener that unregisters after it has run once. The <a href="https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect">HTTP connect event docs</a> provide a good example.</p>
+<p>For example, <a href=/learn/server-side/express_nodejs>Node.js</a> is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications. The <a href="https://nodejs.org/docs/latest-v12.x/api/events.html">Node.js event model</a> relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like <code>on()</code> to register an event listener, and <code>once()</code> to register an event listener that unregisters after it has run once. The <a href="https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect">HTTP connect event docs</a> provide a good example.</p>
 
-<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples"><code>runtime.onMessage</code> page</a> for an example.</p>
+<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href=/mozilla/add-ons/webextensions>WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples"><code>runtime.onMessage</code> page</a> for an example.</p>
 
 <p>You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.</p>
 
@@ -113,9 +113,9 @@ btn.onclick = function() {
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/HTMLElement/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
+<p>The <code><a href=/web/api/globaleventhandlers/onclick>onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href=/web/api/node/textcontent>btn.textContent</a></code>, or <code><a href=/web/api/htmlelement/style>btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
 
-<p>You could also set the handler property to be equal to a named function name (like we saw in <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a>). The following works just the same:</p>
+<p>You could also set the handler property to be equal to a named function name (like we saw in <a href=/learn/javascript/building_blocks/build_your_own_function>Build your own function</a>). The following works just the same:</p>
 
 <pre class="brush: js notranslate">const btn = document.querySelector('button');
 
@@ -131,13 +131,13 @@ btn.onclick = bgChange;</pre>
 <p>First, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html">random-color-eventhandlerproperty.html</a>, and open it in your browser. It's just a copy of the simple random color example we've played with already. Now try changing <code>btn.onclick</code> to the following different values in turn, and observing the results in the example:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onfocus">btn.onfocus</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onblur">btn.onblur</a></code> — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button. These are often used to display information about filling in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.</li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">btn.ondblclick</a></code> — The color changes only when the button is double-clicked.</li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">window.onkeypress</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">window.onkeydown</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">window.onkeyup</a></code> — The color changes when a key is pressed on the keyboard. The <code>keypress</code> event refers to a general press (button down and then up), while <code>keydown</code> and <code>keyup</code> refer to just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event handler on the button itself — we've had to register it on the <a href="/en-US/docs/Web/API/Window">window</a> object, which represents the entire browser window.</li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.</li>
+ <li><code><a href=/web/api/globaleventhandlers/onfocus>btn.onfocus</a></code> and <code><a href=/web/api/globaleventhandlers/onblur>btn.onblur</a></code> — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button. These are often used to display information about filling in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.</li>
+ <li><code><a href=/web/api/globaleventhandlers/ondblclick>btn.ondblclick</a></code> — The color changes only when the button is double-clicked.</li>
+ <li><code><a href=/web/api/globaleventhandlers/onkeypress>window.onkeypress</a></code>, <code><a href=/web/api/globaleventhandlers/onkeydown>window.onkeydown</a></code>, <code><a href=/web/api/globaleventhandlers/onkeyup>window.onkeyup</a></code> — The color changes when a key is pressed on the keyboard. The <code>keypress</code> event refers to a general press (button down and then up), while <code>keydown</code> and <code>keyup</code> refer to just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event handler on the button itself — we've had to register it on the <a href=/web/api/window>window</a> object, which represents the entire browser window.</li>
+ <li><code><a href=/web/api/globaleventhandlers/onmouseover>btn.onmouseover</a></code> and <code><a href=/web/api/globaleventhandlers/onmouseout>btn.onmouseout</a></code> — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.</li>
 </ul>
 
-<p>Some events are general and available nearly anywhere (e.g. an <code>onclick</code> handler can be registered on nearly any element), whereas some are more specific and only useful in certain situations (e.g. it makes sense to use <a href="/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay</a> only on specific elements, such as {{htmlelement("video")}}).</p>
+<p>Some events are general and available nearly anywhere (e.g. an <code>onclick</code> handler can be registered on nearly any element), whereas some are more specific and only useful in certain situations (e.g. it makes sense to use <a href=/web/api/globaleventhandlers/globaleventhandlers.onplay>onplay</a> only on specific elements, such as {{htmlelement("video")}}).</p>
 
 <h3 id="Inline_event_handlers_—_dont_use_these">Inline event handlers — don't use these</h3>
 
@@ -171,7 +171,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
   buttons[i].onclick = bgChange;
 }</pre>
 
-<p class="brush: js">Note that another option here would be to use the <code><a href="/en-US/docs/Web/API/NodeList/forEach">forEach()</a></code> built-in method available on <code><a href="/en-US/docs/Web/API/NodeList">NodeList</a></code> objects:</p>
+<p class="brush: js">Note that another option here would be to use the <code><a href=/web/api/nodelist/foreach>forEach()</a></code> built-in method available on <code><a href=/web/api/nodelist>NodeList</a></code> objects:</p>
 
 <pre class="brush: js notranslate">buttons.forEach(function(button) {
   button.onclick = bgChange;
@@ -183,7 +183,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
 
 <h3 id="addEventListener_and_removeEventListener">addEventListener() and removeEventListener()</h3>
 
-<p>The newest type of event mechanism is defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Events/">Document Object Model (DOM) Level 2 Events</a> Specification, which provides browsers with a new function — <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>. This functions in a similar way to the event handler properties, but the syntax is obviously different. We could rewrite our random color example to look like this:</p>
+<p>The newest type of event mechanism is defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Events/">Document Object Model (DOM) Level 2 Events</a> Specification, which provides browsers with a new function — <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code>. This functions in a similar way to the event handler properties, but the syntax is obviously different. We could rewrite our random color example to look like this:</p>
 
 <pre class="brush: js notranslate">const btn = document.querySelector('button');
 
@@ -205,7 +205,7 @@ btn.addEventListener('click', bgChange);</pre>
   document.body.style.backgroundColor = rndCol;
 });</pre>
 
-<p>This mechanism has some advantages over the older mechanisms discussed earlier. First, there is a counterpart function, <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>, which removes a previously added listener. For example, this would remove the listener set in the first code block in this section:</p>
+<p>This mechanism has some advantages over the older mechanisms discussed earlier. First, there is a counterpart function, <code><a href=/web/api/eventtarget/removeeventlistener>removeEventListener()</a></code>, which removes a previously added listener. For example, this would remove the listener set in the first code block in this section:</p>
 
 <pre class="brush: js notranslate">btn.removeEventListener('click', bgChange);</pre>
 
@@ -223,7 +223,7 @@ myElement.addEventListener('click', functionB);</pre>
 
 <p>Both functions would now run when the element is selected.</p>
 
-<p>In addition, there are other powerful features and options available with this event mechanism. These are a little out of scope for this article, but if you want to read them, visit the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code> reference pages.</p>
+<p>In addition, there are other powerful features and options available with this event mechanism. These are a little out of scope for this article, but if you want to read them, visit the <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> and <code><a href=/web/api/eventtarget/removeeventlistener>removeEventListener()</a></code> reference pages.</p>
 
 <h3 id="What_mechanism_should_I_use">What mechanism should I use?</h3>
 
@@ -331,7 +331,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 
 <p>{{ EmbedLiveSample('Hidden_example', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href="/en-US/docs/Web/API/MediaRecorder_API">Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
+<p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href=/web/api/mediarecorder_api>Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href=/web/api/mediarecorder/ondataavailable>ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
 
 <h3 id="Preventing_default_behavior">Preventing default behavior</h3>
 
@@ -363,7 +363,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 </pre>
 </div>
 
-<p>Now some JavaScript — here we implement a very simple check inside an <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a></code> event handler (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty. If they are, we call the <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:</p>
+<p>Now some JavaScript — here we implement a very simple check inside an <code><a href=/web/api/globaleventhandlers/onsubmit>onsubmit</a></code> event handler (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty. If they are, we call the <code><a href=/web/api/event/preventdefault>preventDefault()</a></code> function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:</p>
 
 <pre class="brush: js notranslate">const form = document.querySelector('form');
 const fname = document.getElementById('fname');
@@ -532,7 +532,7 @@ video.onclick = function() {
 
 <h4 id="Fixing_the_problem_with_stopPropagation">Fixing the problem with stopPropagation()</h4>
 
-<p>This is a very annoying behavior, but there is a way to fix it! The standard <code><a href="/en-US/docs/Web/API/Event">Event</a></code> object has a function available on it called <code><a href="/en-US/docs/Web/API/Event/stopPropagation">stopPropagation()</a></code> which, when invoked on a handler's event object, makes it so that first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.</p>
+<p>This is a very annoying behavior, but there is a way to fix it! The standard <code><a href=/web/api/event>Event</a></code> object has a function available on it called <code><a href=/web/api/event/stoppropagation>stopPropagation()</a></code> which, when invoked on a handler's event object, makes it so that first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.</p>
 
 <p>We can, therefore, fix our current problem by changing the second handler function in the previous code block to this:</p>
 
@@ -548,7 +548,7 @@ video.onclick = function() {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, and setting the optional third property to <code>true</code>.</p>
+<p><strong>Note</strong>: As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code>, and setting the optional third property to <code>true</code>.</p>
 </div>
 
 <h4 id="Event_delegation">Event delegation</h4>
@@ -561,7 +561,7 @@ video.onclick = function() {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events">Test your skills: Events</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see <a href=/learn/javascript/building_blocks/test_your_skills:_events>Test your skills: Events</a>.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
@@ -576,7 +576,7 @@ video.onclick = function() {
 <ul>
  <li><a href="http://www.quirksmode.org/js/events_order.html">Event order</a> (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.</li>
  <li><a href="http://www.quirksmode.org/js/events_access.html">Event accessing</a> (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.</li>
- <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+ <li><a href=/web/events>Event reference</a></li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</p>
@@ -584,11 +584,11 @@ video.onclick = function() {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+ <li><a href=/learn/javascript/building_blocks/conditionals>Making decisions in your code — conditionals</a></li>
+ <li><a href=/learn/javascript/building_blocks/looping_code>Looping code</a></li>
+ <li><a href=/learn/javascript/building_blocks/functions>Functions — reusable blocks of code</a></li>
+ <li><a href=/learn/javascript/building_blocks/build_your_own_function>Build your own function</a></li>
+ <li><a href=/learn/javascript/building_blocks/return_values>Function return values</a></li>
+ <li><a href=/learn/javascript/building_blocks/events>Introduction to events</a></li>
+ <li><a href=/learn/javascript/building_blocks/image_gallery>Image gallery</a></li>
 </ul>

@@ -9,9 +9,9 @@ tags:
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>The <strong>WEBGL_lose_context</strong> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.</p>
+<p>The <strong>WEBGL_lose_context</strong> extension is part of the <a href=/web/api/webgl_api>WebGL API</a> and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.</p>
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href=/web/api/webgl_api/using_extensions>Using Extensions</a> in the <a href=/web/api/webgl_api/tutorial>WebGL tutorial</a>.</p>
 
 <div class="note">
 <p><strong>Availability:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>With this extension, you can simulate the <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code> and <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code> events:</p>
+<p>With this extension, you can simulate the <code><a href=/web/api/htmlcanvaselement/webglcontextlost_event>webglcontextlost</a></code> and <code><a href=/web/api/htmlcanvaselement/webglcontextrestored_event>webglcontextrestored</a></code> events:</p>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
@@ -69,5 +69,5 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 
 <ul>
  <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>Events: <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code>, <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>, <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code></li>
+ <li>Events: <code><a href=/web/api/htmlcanvaselement/webglcontextlost_event>webglcontextlost</a></code>, <code><a href=/web/api/htmlcanvaselement/webglcontextrestored_event>webglcontextrestored</a></code>, <code><a href=/web/api/htmlcanvaselement/webglcontextcreationerror_event>webglcontextcreationerror</a></code></li>
 </ul>

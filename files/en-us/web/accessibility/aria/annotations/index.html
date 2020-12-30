@@ -23,9 +23,9 @@ tags:
 <p>The ARIA attributes providing these new abilities are as follows:</p>
 
 <ul>
- <li><code>aria-description=""</code> — provides a detailed description of an HTML element, as opposed to the brief label provided by <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code>.</li>
- <li><code>role="insertion"</code> and <code>role="deletion"</code> — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML <code><a href="/en-US/docs/Web/HTML/Element/ins">&lt;ins&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/del">&lt;del&gt;</a></code> elements. Note that these aren’t part of the new ARIA annotations features, but they are of central relevance.</li>
- <li><code>role="mark"</code> — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML <code><a href="/en-US/docs/Web/HTML/Element/mark">&lt;mark&gt;</a></code> element.</li>
+ <li><code>aria-description=""</code> — provides a detailed description of an HTML element, as opposed to the brief label provided by <code><a href=/web/accessibility/aria/aria_techniques/using_the_aria-label_attribute>aria-label</a></code>.</li>
+ <li><code>role="insertion"</code> and <code>role="deletion"</code> — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML <code><a href=/web/html/element/ins>&lt;ins&gt;</a></code> and <code><a href=/web/html/element/del>&lt;del&gt;</a></code> elements. Note that these aren’t part of the new ARIA annotations features, but they are of central relevance.</li>
+ <li><code>role="mark"</code> — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML <code><a href=/web/html/element/mark>&lt;mark&gt;</a></code> element.</li>
  <li><code>role="suggestion"</code> — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see <code>role="insertion"</code> and <code>role="deletion"</code> above).</li>
  <li><code>role="comment"</code> — semantically denotes a comment/reaction to some content on the page, or to a previous comment.</li>
 </ul>
@@ -39,14 +39,14 @@ tags:
  <li>Chrome from version 81 onwards, currently behind the <code>#enable-accessibility-expose-aria-annotations</code> flag (go to <code>chrome://flags</code> to enable this.)</li>
 </ul>
 
-<p>Unfortunately, you won’t be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like <a href="/en-US/docs/Tools/Accessibility_inspector">Firefox Accessibility Inspector</a>. The annotations should just work once screenreader support is added.</p>
+<p>Unfortunately, you won’t be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like <a href=/tools/accessibility_inspector>Firefox Accessibility Inspector</a>. The annotations should just work once screenreader support is added.</p>
 
 <h2 id="Associating_annotated_elements_with_their_details">Associating annotated elements with their details</h2>
 
 <p>There are a number of different ways in which you can associate UI features with text labels or descriptions for accessibility purposes. It is useful to know when to use each. You’ll see examples of most of these later on in the article, but briefly:</p>
 
 <ul>
- <li><code>aria-label=""</code> can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a <a href="/en-US/docs/Web/HTML/Element/input/search">search input</a> in a horizontal nav bar.</li>
+ <li><code>aria-label=""</code> can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a <a href=/web/html/element/input/search>search input</a> in a horizontal nav bar.</li>
  <li><code>aria-labelledby=""</code> can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element’s label is available in the UI, but for some reason a conventional <code>&lt;label&gt;</code> won’t work.</li>
  <li><code>aria-description=""</code> works the same as <code>aria-label=""</code>, but is used when you want to give an element a more detailed description, rather than a short label.</li>
  <li><code>aria-describedby=""</code> works the same as <code>aria-labelledby=""</code>, but is used when you want to associate the element with a more detailed description, rather than a short label.</li>
@@ -110,7 +110,7 @@ tags:
 
 <h2 id="Insertions_and_deletions">Insertions and deletions</h2>
 
-<p>A common wish in online document systems like Google Docs is to be able to track changes, to see what reviewers or editors have suggested as changes to the text, before the managing editor or author accepts or rejects those changes. The semantics for this have long been available in HTML, via the <code><a href="/en-US/docs/Web/HTML/Element/ins">&lt;ins&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/del">&lt;del&gt;</a></code> elements:</p>
+<p>A common wish in online document systems like Google Docs is to be able to track changes, to see what reviewers or editors have suggested as changes to the text, before the managing editor or author accepts or rejects those changes. The semantics for this have long been available in HTML, via the <code><a href=/web/html/element/ins>&lt;ins&gt;</a></code> and <code><a href=/web/html/element/del>&lt;del&gt;</a></code> elements:</p>
 
 <pre class="brush: html">&lt;p&gt;Freida’s pet is a &lt;del&gt;black Cat called Luna&lt;/del&gt;&lt;ins&gt;purple Tyrannosaurus Rex called Tiny&lt;/ins&gt;.&lt;/p&gt;</pre>
 

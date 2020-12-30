@@ -21,7 +21,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy. Basic understanding of how server-side code handles and responds to HTTP requests (see <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a>).</td>
+   <td>Basic computer literacy. Basic understanding of how server-side code handles and responds to HTTP requests (see <a href=/learn/server-side/first_steps/client-server_overview>Client-Server overview</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -178,7 +178,7 @@ def youngest(request):
    <li><em>Framework purpose/origin</em>: Some web frameworks were initially created to solve certain types of problems, and remain <em>better</em> at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.</li>
    <li><em>Opinionated vs unopinionated</em>: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.</li>
    <li><em>Batteries included vs. get it yourself</em>: Some web frameworks include tools/libraries that address every problem their developers can think "by default", while more lightweight frameworks expect web developers to pick and choose solution to problems from separate libraries (Django is an example of the former, while Flask is an example of a very light-weight framework). Frameworks that include everything are often easier to get started with because you already have everything you need, and the chances are that it is well integrated and well documented. However if a smaller framework has everything you (will ever) need then it can run in more constrained environments and will have a smaller and easier subset of things to learn.</li>
-   <li><em>Whether or not the framework encourages good development practices</em>: For example, a framework that encourages a <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model-View-Controller</a> architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.</li>
+   <li><em>Whether or not the framework encourages good development practices</em>: For example, a framework that encourages a <a href=/web/apps/fundamentals/modern_web_app_architecture/mvc_architecture>Model-View-Controller</a> architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.</li>
   </ul>
  </li>
  <li><strong>Performance of the framework/programming language:</strong> Usually "speed" is not the biggest factor in selection because even relatively slow runtimes like Python are more than "good enough" for mid-sized sites running on moderate hardware. The perceived speed benefits of another language, e.g. C++ or JavaScript, may well be offset by the costs of learning and maintenance.</li>
@@ -240,7 +240,7 @@ def youngest(request):
 
 <h3 id="Express_Node.jsJavaScript">Express (Node.js/JavaScript)</h3>
 
-<p><a href="http://expressjs.com/">Express</a> is a fast, unopinionated, flexible and minimalist web framework for <a href="https://nodejs.org/en/">Node.js</a> (node is a browserless environment for running JavaScript). It provides a robust set of features for web and mobile applications and delivers useful HTTP utility methods and <a href="/en-US/docs/Glossary/Middleware">middleware</a>.</p>
+<p><a href="http://expressjs.com/">Express</a> is a fast, unopinionated, flexible and minimalist web framework for <a href="https://nodejs.org/en/">Node.js</a> (node is a browserless environment for running JavaScript). It provides a robust set of features for web and mobile applications and delivers useful HTTP utility methods and <a href=/glossary/middleware>middleware</a>.</p>
 
 <p>Express is extremely popular, partially because it eases the migration of client-side JavaScript web programmers into server-side development, and partially because it is resource-efficient (the underlying node environment uses lightweight multitasking within a thread rather than spawning separate processes for every new web request). </p>
 
@@ -252,9 +252,9 @@ def youngest(request):
 
 <h3 id="Deno_JavaScript">Deno (JavaScript)</h3>
 
-<p><a href="https://deno.land/">Deno</a> is a simple, modern, and secure <a href="/en-US/docs/Web/JavaScript">JavaScript</a>/TypeScript runtime and framework built on top of Chrome V8 and <a href="/en-US/docs/Mozilla/Rust">Rust</a>.</p>
+<p><a href="https://deno.land/">Deno</a> is a simple, modern, and secure <a href=/web/javascript>JavaScript</a>/TypeScript runtime and framework built on top of Chrome V8 and <a href=/mozilla/rust>Rust</a>.</p>
 
-<p>Deno is powered by <a href="https://tokio.rs/">Tokio</a> — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for <a href="/en-US/docs/WebAssembly">WebAssembly</a>, which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in <a href="/en-US/docs/Learn/Server-side/Node_server_without_framework">Node.js</a> by providing a mechanism that naturally maintains better security.</p>
+<p>Deno is powered by <a href="https://tokio.rs/">Tokio</a> — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for <a href=/webassembly>WebAssembly</a>, which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in <a href=/learn/server-side/node_server_without_framework>Node.js</a> by providing a mechanism that naturally maintains better security.</p>
 
 <p>Deno's features include:</p>
 
@@ -339,8 +339,8 @@ def youngest(request):
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href=/learn/server-side/first_steps/introduction>Introduction to the server side</a></li>
+ <li><a href=/learn/server-side/first_steps/client-server_overview>Client-Server overview</a></li>
+ <li><a href=/learn/server-side/first_steps/web_frameworks>Server-side web frameworks</a></li>
+ <li><a href=/learn/server-side/first_steps/website_security>Website security</a></li>
 </ul>

@@ -18,13 +18,13 @@ tags:
 <p>Site storage—the data stored for a Web site which is managed by the Storage Standard—includes:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB databases</a></li>
- <li><a href="/en-US/docs/Web/API/Cache">Cache API data</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker registrations</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API data</a> managed using {{domxref("window.localStorage")}}</li>
+ <li><a href=/web/api/indexeddb_api>IndexedDB databases</a></li>
+ <li><a href=/web/api/cache>Cache API data</a></li>
+ <li><a href=/web/api/service_worker_api>Service Worker registrations</a></li>
+ <li><a href=/web/api/web_storage_api>Web Storage API data</a> managed using {{domxref("window.localStorage")}}</li>
  <li>History state information saved using {{domxref("History.pushState()")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Application caches</a> (highly deprecated!)</li>
- <li><a href="/en-US/docs/Web/API/Notifications_API">Notification data</a></li>
+ <li><a href=/web/html/using_the_application_cache>Application caches</a> (highly deprecated!)</li>
+ <li><a href=/web/api/notifications_api>Notification data</a></li>
  <li>Other kinds of site-accessible, site-specific data that may be maintained</li>
 </ul>
 
@@ -60,7 +60,7 @@ tags:
 <p>If the site or app has the <strong><code>"persistent-storage"</code></strong> feature permission, it can use the {{domxref("StorageManager.persist()")}} method to request that its box be made persistent. It's also possible for the user agent to decide to make the site's storage unit persistent due to usage characteristics or other metrics. The <code>"persistent-storage"</code> feature's permission-related flags, algorithms, and types are all set to the standard defaults for a permission, except that the <strong>permission state</strong> must be the same across the entire origin, and that if the permission state isn't <code>"granted"</code> (meaning that for whatever reason, access to the persistent storage feature was denied), the origin's site storage unit's box mode is always <code>"best-effort"</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a> for further details about obtaining and managing permissions.</p>
+<p><strong>Note</strong>: See <a href=/web/api/permissions_api/using_the_permissions_api>Using the Permissions API</a> for further details about obtaining and managing permissions.</p>
 </div>
 
 <p>When clearing site storage units, an origin's box is treated as a single entity; if the user agent needs to clear it and the user approves, the entire data store is cleared rather than providing some means of clearing only data from individual APIs.</p>
@@ -119,5 +119,5 @@ tags:
 <ul>
  <li>{{domxref("NavigatorStorage.storage", "navigator.storage")}}</li>
  <li>{{domxref("StorageManager")}} (the object returned by <code>navigator.storage</code>)</li>
- <li><a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a></li>
+ <li><a href=/web/api/permissions_api/using_the_permissions_api>Using the Permissions API</a></li>
 </ul>

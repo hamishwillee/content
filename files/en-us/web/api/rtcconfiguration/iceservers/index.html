@@ -34,7 +34,7 @@ let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
 
 <h3 id="Value">Value</h3>
 
-<p>An array of zero or more {{domxref("RTCIceServer")}} objects, each of which describes one <a href="/en-US/docs/Web/API/WebRTC_API/Protocols">STUN or TURN server</a> for the ICE agent to use <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_the_connection">during the connection's negotiation</a>. Each object must at least have an {{domxref("RTCIceServer.urls", "urls")}} property, which is an array of one or more strings, each providing one server's URL.</p>
+<p>An array of zero or more {{domxref("RTCIceServer")}} objects, each of which describes one <a href=/web/api/webrtc_api/protocols>STUN or TURN server</a> for the ICE agent to use <a href=/web/api/webrtc_api/session_lifetime#Establishing_the_connection>during the connection's negotiation</a>. Each object must at least have an {{domxref("RTCIceServer.urls", "urls")}} property, which is an array of one or more strings, each providing one server's URL.</p>
 
 <p>If the array is empty, or if the <code>iceServers</code> option isn't specified, the ICE agent will negotiate without the use of any servers, which will limit the connection to local peers.</p>
 
@@ -42,7 +42,7 @@ let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
 
 <p>How the list of servers you provide is used is up to the implementation of the {{Glossary("user agent")}}. While it can be useful to provide a second server as a fallback in case the first is offline, listing too many servers can delay the user's connection being established, depending on the network's performance and how many servers get used for negotiation before a connection is established.</p>
 
-<p>If the list of servers is changed while a connection is already active by calling the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate effect occurs. However, the new list of servers is used for any future renegotiation, such as while handling an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.</p>
+<p>If the list of servers is changed while a connection is already active by calling the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate effect occurs. However, the new list of servers is used for any future renegotiation, such as while handling an <a href=/web/api/webrtc_api/session_lifetime#ICE_restart>ICE restart</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -85,9 +85,9 @@ var pc = new RTCPeerConnection(configuration);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_the_connection">Lifetime of a WebRTC connection</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation">Establishing a connection: The WebRTC perfect negotiation pattern</a></li>
+ <li><a href=/web/api/webrtc_api/protocols>Introduction to WebRTC protocols</a></li>
+ <li><a href=/web/api/webrtc_api/session_lifetime#Establishing_the_connection>Lifetime of a WebRTC connection</a></li>
+ <li><a href=/web/api/webrtc_api/perfect_negotiation>Establishing a connection: The WebRTC perfect negotiation pattern</a></li>
 </ul>
 </div>
 </div>

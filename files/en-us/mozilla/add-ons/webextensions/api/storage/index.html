@@ -15,22 +15,22 @@ tags:
 
 <p>Enables extensions to store and retrieve data, and listen for changes to stored items.</p>
 
-<p>The storage system is based on the <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, with a few differences. Among other differences, these include:</p>
+<p>The storage system is based on the <a href=/web/api/web_storage_api>Web Storage API</a>, with a few differences. Among other differences, these include:</p>
 
 <ul>
  <li>It's asynchronous.</li>
  <li>Values are scoped to the extension, not to a specific domain (i.e. the same set of key/value pairs are available to all scripts in the background context and content scripts).</li>
- <li>The values stored can be any JSON-ifiable value, not just <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>. Among other things, this includes: <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>, but only when their contents can be represented as JSON, which does not include DOM nodes. You don't need to convert your values to JSON <code>Strings</code> prior to storing them, but they are represented as JSON internally, thus the requirement that they be JSON-ifiable.</li>
+ <li>The values stored can be any JSON-ifiable value, not just <code><a href=/web/javascript/reference/global_objects/string>String</a></code>. Among other things, this includes: <code><a href=/web/javascript/reference/global_objects/array>Array</a></code> and <code><a href=/web/javascript/reference/global_objects/object>Object</a></code>, but only when their contents can be represented as JSON, which does not include DOM nodes. You don't need to convert your values to JSON <code>Strings</code> prior to storing them, but they are represented as JSON internally, thus the requirement that they be JSON-ifiable.</li>
  <li>Multiple key/value pairs can be set or retrieved in the same API call.</li>
 </ul>
 
-<p>To use this API you need to include the <code>"storage"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in your <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
+<p>To use this API you need to include the <code>"storage"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a> in your <code><a href=/mozilla/add-ons/webextensions/manifest.json>manifest.json</a></code> file.</p>
 
 <p>Each extension has its own storage area, which can be split into different types of storage.</p>
 
-<p>Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use <code>Window.localStorage</code> in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> API will be correctly persisted in these scenarios.</p>
+<p>Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use <code>Window.localStorage</code> in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the <code><a href=/mozilla/add-ons/webextensions/api/storage/local>storage.local</a></code> API will be correctly persisted in these scenarios.</p>
 
-<p>You can examine the stored data under the Extension Storage item in the <a href="/en-US/docs/">Storage Inspector</a> tab of the <a href="https://extensionworkshop.com/documentation/develop/debugging/">developer toolbox</a>, accessible from <code>about:debugging</code>.</p>
+<p>You can examine the stored data under the Extension Storage item in the <a href=/>Storage Inspector</a> tab of the <a href="https://extensionworkshop.com/documentation/develop/debugging/">developer toolbox</a>, accessible from <code>about:debugging</code>.</p>
 
 <div class="note">The storage area is not encrypted and shouldn't be used for storing confidential user information.</div>
 

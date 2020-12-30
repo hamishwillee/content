@@ -24,7 +24,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a>.</td>
+   <td>Basic computer literacy, <a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of <a href=/learn/css/introduction_to_css/how_css_works>How CSS works</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -39,7 +39,7 @@ tags:
 
 <h3 id="External_stylesheet">External stylesheet</h3>
 
-<p>An external stylesheet contains CSS in a separate file with a <code>.css</code> extension. This is the most common and useful method of bringing CSS to a document. You can link a single CSS file to multiple web pages, styling all of them with the same CSS stylesheet. In the <a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a>, we linked an external stylesheet to our web page.</p>
+<p>An external stylesheet contains CSS in a separate file with a <code>.css</code> extension. This is the most common and useful method of bringing CSS to a document. You can link a single CSS file to multiple web pages, styling all of them with the same CSS stylesheet. In the <a href=/learn/css/first_steps/getting_started>Getting started with CSS</a>, we linked an external stylesheet to our web page.</p>
 
 <p>You reference an external CSS stylesheet from an HTML <code>&lt;link&gt;</code> element:</p>
 
@@ -170,7 +170,7 @@ p {
 
 <h2 id="Selectors">Selectors</h2>
 
-<p>A selector targets HTML to apply styles to content. We have already discovered a variety of selectors in the <a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a> tutorial. If CSS is not applying to content as expected, your selector may not match the way you think it should match.</p>
+<p>A selector targets HTML to apply styles to content. We have already discovered a variety of selectors in the <a href=/learn/css/first_steps/getting_started>Getting started with CSS</a> tutorial. If CSS is not applying to content as expected, your selector may not match the way you think it should match.</p>
 
 <p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors or lists of selectors.</p>
 
@@ -186,7 +186,7 @@ h1, h2, .intro</pre>
 <p>Try creating some CSS rules that use the selectors above. Add HTML to be styled by the selectors. If any of the syntax above is not familiar, try searching MDN.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You will learn more about selectors in the next module: <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>.</p>
+<p><strong>Note</strong>: You will learn more about selectors in the next module: <a href=/learn/css/building_blocks/selectors>CSS selectors</a>.</p>
 </div>
 
 <h3 id="Specificity">Specificity</h3>
@@ -219,7 +219,7 @@ p {
 
 <p>Try this experiment for yourself! Add HTML, then add the two <code>p { ... }</code> rules to your stylesheet. Next, change the first <code>p</code> selector to <code>.special</code> to see how it changes the styling.</p>
 
-<p>The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a> section in the next module explains this in detail, including how to calculate specificity.</p>
+<p>The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The <a href=/learn/css/building_blocks/cascade_and_inheritance>Cascade and inheritance</a> section in the next module explains this in detail, including how to calculate specificity.</p>
 
 <p>For now, remember that specificity exists. Sometimes, CSS might not apply as you expected because something else in the stylesheet has more specificity. Recognizing that more than one rule could apply to an element, is the first step in fixing these kinds of issues.</p>
 
@@ -321,11 +321,11 @@ p {
 
 <h2 id="rules">@rules</h2>
 
-<p>CSS <a href="/en-US/docs/Web/CSS/At-rule">@rules</a> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
+<p>CSS <a href=/web/css/at-rule>@rules</a> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
 
 <pre class="brush: css notranslate">@import 'styles2.css';</pre>
 
-<p>One common @rule that you are likely to encounter is <code>@media</code>, which is used to create <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>. Media queries use conditional logic for applying CSS styling.</p>
+<p>One common @rule that you are likely to encounter is <code>@media</code>, which is used to create <a href=/web/css/media_queries>media queries</a>. Media queries use conditional logic for applying CSS styling.</p>
 
 <p>In the example below, the stylesheet defines a default pink background for the <code>&lt;body&gt;</code> element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.</p>
 
@@ -374,7 +374,7 @@ background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;</pre>
 
-<p>Later in the course, you will encounter many other examples of shorthand properties. MDN's <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a> is a good resource for more information about any shorthand property.</p>
+<p>Later in the course, you will encounter many other examples of shorthand properties. MDN's <a href=/web/css/reference>CSS reference</a> is a good resource for more information about any shorthand property.</p>
 
 <p><strong>Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.</strong></p>
 
@@ -510,16 +510,16 @@ padding- left: 10px;</pre>
 
 <h2 id="Whats_next">What's next?</h2>
 
-<p>It's useful to understand how the browser uses HTML and CSS to display a webpage. The next article, <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a>, explains the process.</p>
+<p>It's useful to understand how the browser uses HTML and CSS to display a webpage. The next article, <a href=/learn/css/first_steps/how_css_works>How CSS works</a>, explains the process.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
+ <li><a href=/learn/css/first_steps/what_is_css>What is CSS?</a></li>
+ <li><a href=/learn/css/first_steps/getting_started>Getting started with CSS</a></li>
+ <li><a href=/learn/css/first_steps/how_css_is_structured>How CSS is structured</a></li>
+ <li><a href=/learn/css/first_steps/how_css_works>How CSS works</a></li>
+ <li><a href=/learn/css/first_steps/using_your_new_knowledge>Using your new knowledge</a></li>
 </ol>

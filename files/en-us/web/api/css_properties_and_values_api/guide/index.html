@@ -10,11 +10,11 @@ tags:
   - JavaScript
   - Learn
 ---
-<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — <span class="seoSummary">allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</span></p>
+<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href=/web/houdini>CSS Houdini</a> umbrella of APIs — <span class="seoSummary">allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</span></p>
 
 <h2 id="Registering_a_custom_property">Registering a custom property</h2>
 
-<p>Registering a custom property allows you to tell the browser how the custom property should behave; what are allowed types, whether the custom property inherits its value, and what the default value of the custom property is. There are two ways to register a property, in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> or in <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+<p>Registering a custom property allows you to tell the browser how the custom property should behave; what are allowed types, whether the custom property inherits its value, and what the default value of the custom property is. There are two ways to register a property, in <a href=/web/javascript>JavaScript</a> or in <a href=/web/css>CSS</a>.</p>
 
 <h3 id="CSS.registerProperty">CSS.registerProperty</h3>
 
@@ -30,7 +30,7 @@ tags:
 
 <h3 id="property">@property</h3>
 
-<p>The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>, as a color, give it a default value, and have it not inherit its value:</p>
+<p>The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{cssxref('@property')}} <a href=/web/css/at-rule>at-rule</a>, as a color, give it a default value, and have it not inherit its value:</p>
 
 <pre class="brush: css notranslate">@property --my-prop {
   syntax: '&lt;color&gt;';
@@ -116,6 +116,6 @@ button {
 
 <h2 id="Gotchas">Gotchas</h2>
 
-<p>There are two gotchas when registering a property. The first is that, once a property is registered, there's no way to update it, and trying to re-register it with <a href="/en-US/docs/Web/JavaScript">JavaScript</a> will throw an error indicating it's already been defined.</p>
+<p>There are two gotchas when registering a property. The first is that, once a property is registered, there's no way to update it, and trying to re-register it with <a href=/web/javascript>JavaScript</a> will throw an error indicating it's already been defined.</p>
 
 <p>Second, unlike standard properties, registered properties aren't validated when they're parsed. Rather, they're validated when they're computed. That means both that invalid values won't appear as invalid when inspecting the element's properties, and that including an invalid property after a valid one won't fall back to the valid property. An invalid property will, however, fall back to its registered default.</p>

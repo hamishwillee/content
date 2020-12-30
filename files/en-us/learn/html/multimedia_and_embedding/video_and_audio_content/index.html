@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>) and <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a>.</td>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href=/learn/html/introduction_to_html/getting_started>Getting started with HTML</a>) and <a href=/learn/html/multimedia_and_embedding/images_in_html>Images in HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -57,7 +57,7 @@ tags:
  <dt>{{htmlattrxref("src","video")}}</dt>
  <dd>In the same way as for the {{htmlelement("img")}} element, the <code>src</code> (source) attribute contains a path to the video you want to embed. It works in exactly the same way.</dd>
  <dt>{{htmlattrxref("controls","video")}}</dt>
- <dd>Users must be able to control video and audio playback (it's especially critical for people who have <a href="https://en.wikipedia.org/wiki/Epilepsy#Epidemiology">epilepsy</a>.) You must either use the <code>controls</code> attribute to include the browser's own control interface, or build your interface using the appropriate <a href="/en-US/docs/Web/API/HTMLMediaElement">JavaScript API</a>. At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.</dd>
+ <dd>Users must be able to control video and audio playback (it's especially critical for people who have <a href="https://en.wikipedia.org/wiki/Epilepsy#Epidemiology">epilepsy</a>.) You must either use the <code>controls</code> attribute to include the browser's own control interface, or build your interface using the appropriate <a href=/web/api/htmlmediaelement>JavaScript API</a>. At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.</dd>
  <dt>The paragraph inside the <code>&lt;video&gt;</code> tags</dt>
  <dd>This is called <strong>fallback content</strong> — this will be displayed if the browser accessing the page doesn't support the <code>&lt;video&gt;</code> element, allowing us to provide a fallback for older browsers. This can be anything you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.</dd>
 </dl>
@@ -74,13 +74,13 @@ tags:
 
 <h4 id="Contents_of_a_media_file">Contents of a media file</h4>
 
-<p>First, let's go through the terminology quickly. Formats like MP3, MP4 and WebM are called <strong><a href="/en-US/docs/Web/Media/Formats/Containers">container formats</a></strong>. They define a structure in which the audio and/or video tracks that make up the media are stored, along with metadata describing the media, what codecs are used to encode its channels, and so forth.</p>
+<p>First, let's go through the terminology quickly. Formats like MP3, MP4 and WebM are called <strong><a href=/web/media/formats/containers>container formats</a></strong>. They define a structure in which the audio and/or video tracks that make up the media are stored, along with metadata describing the media, what codecs are used to encode its channels, and so forth.</p>
 
 <p>A WebM file containing a movie which has a main video track and one alternate angle track, plus audio for both English and Spanish, in addition to audio for an English commentary track can be conceptualized as shown in the diagram below. Also included are text tracks containing closed captions for the feature film, Spanish subtitles for the film, and English captions for the commentary.</p>
 
 <p><a href="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"><img alt="Diagram conceptualizing the contents of a media file at the track level." src="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg" style="height: 472px; width: 640px;"></a></p>
 
-<p>The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codec</a>, while video tracks are encoded using (as you probably have guessed) <a href="/en-US/docs/Web/Media/Formats/Video_codecs">a video codec</a>. As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).</p>
+<p>The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an <a href=/web/media/formats/audio_codecs>audio codec</a>, while video tracks are encoded using (as you probably have guessed) <a href=/web/media/formats/video_codecs>a video codec</a>. As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).</p>
 
 <p>For example:</p>
 
@@ -108,7 +108,7 @@ tags:
 
 <p>Things become slightly more complicated because not only does each browser support a different set of container file formats, they also each support a different selection of codecs. In order to maximize the likelihood that your web site or app will work on a user's browser, you may need to provide each media file you use in multiple formats. If your site and the user's browser don't share a media format in common, your media won't play.</p>
 
-<p>Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See {{SectionOnPage("/en-US/docs/Web/Media/Formats/Containers", "Choosing the right container")}} for help selecting the container file format best suited for your needs; similarly, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} and {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} for help selecting the first media codecs to use for your content and your target audience.</p>
+<p>Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See {{SectionOnPage(/web/media/formats/containers, "Choosing the right container")}} for help selecting the container file format best suited for your needs; similarly, see {{SectionOnPage(/web/media/formats/video_codecs, "Choosing a video codec")}} and {{SectionOnPage(/web/media/formats/audio_codecs, "Choosing an audio codec")}} for help selecting the first media codecs to use for your content and your target audience.</p>
 
 <p>One additional thing to keep in mind: mobile browsers may support additional formats not supported by their desktop equivalents, just like they may not support all the same formats the desktop version does. On top of that, both desktop and mobile browsers <em>may</em> be designed to offload handling of media playback (either for all media or only for specific types it can't handle internally). This means media support is partly dependent on what software the user has installed.</p>
 
@@ -124,7 +124,7 @@ tags:
 
 <p>Each <code>&lt;source&gt;</code> element also has a {{htmlattrxref("type", "source")}} attribute. This is optional, but it is advised that you include it. The <code>type</code> attribute contains the {{glossary("MIME type")}} of the file specified by the <code>&lt;source&gt;</code>, and browsers can use the <code>type</code> to immediately skip videos they don't understand. If<code>type</code> isn't included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.</p>
 
-<p>Refer to our <a href="/en-US/docs/Web/Media/Formats">guide to media types and formats</a> for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.</p>
+<p>Refer to our <a href=/web/media/formats>guide to media types and formats</a> for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.</p>
 
 <h3 id="Other_&lt;video&gt;_features">Other &lt;video&gt; features</h3>
 
@@ -208,7 +208,7 @@ tags:
  <li>People who don't speak the language of the video might want a text transcript or even translation to help them understand the media content.</li>
 </ul>
 
-<p>Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML video, you can. To do so we use the <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT</a> file format and the {{htmlelement("track")}} element.</p>
+<p>Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML video, you can. To do so we use the <a href=/web/api/web_video_text_tracks_format>WebVTT</a> file format and the {{htmlelement("track")}} element.</p>
 
 <div class="note">
 <p><strong>Note</strong>: "Transcribe" means "to write down spoken words as text." The resulting text is a "transcript."</p>
@@ -285,7 +285,7 @@ This is the second.
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding">Test your skills: Multimedia and embedding</a>. Note that the third assessment question in this test assumes knowledge of some of the techniques covered in the <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">next article</a>, so you may want to read that before attempting it.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/html/multimedia_and_embedding/video_and_audio_content/test_your_skills:_multimedia_and_embedding>Test your skills: Multimedia and embedding</a>. Note that the third assessment question in this test assumes knowledge of some of the techniques covered in the <a href=/learn/html/multimedia_and_embedding/other_embedding_technologies>next article</a>, so you may want to read that before attempting it.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -296,11 +296,11 @@ This is the second.
 <ul>
  <li>The HTML media elements: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, and {{htmlelement("track")}}</li>
  <li><a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video delivery</a>: A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio and Video manipulation</a>: A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)</li>
+ <li><a href=/web/apps/fundamentals/audio_and_video_delivery>Audio and Video delivery</a>: A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.</li>
+ <li><a href=/web/apps/fundamentals/audio_and_video_manipulation>Audio and Video manipulation</a>: A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)</li>
  <li>Automated options to <a href="http://www.inwhatlanguage.com/blog/translate-video-audio/">translate multimedia</a>.</li>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
+ <li><a href=/web/media>Web media technologies</a></li>
+ <li><a href=/web/media/formats>Guide to media types and formats on the web</a></li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}</p>
@@ -308,10 +308,10 @@ This is the second.
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/images_in_html>Images in HTML</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/other_embedding_technologies>From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/adding_vector_graphics_to_the_web>Adding vector graphics to the Web</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/responsive_images>Responsive images</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/mozilla_splash_page>Mozilla splash page</a></li>
 </ul>

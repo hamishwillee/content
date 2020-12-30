@@ -19,7 +19,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/first_steps>CSS first steps</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -60,15 +60,15 @@ tags:
 
 <p>At this point, we'd better also explain <strong>inner</strong> and <strong>outer</strong> display types. As mentioned above, boxes in CSS have an <em>outer</em> display type, which details whether the box is block or inline.</p>
 
-<p>Boxes also have an <em>inner</em> display type, however, which dictates how elements inside that box are laid out. By default, the elements inside a box are laid out in <strong><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">normal flow</a></strong>, which means that they behave just like any other block and inline elements (as explained above).</p>
+<p>Boxes also have an <em>inner</em> display type, however, which dictates how elements inside that box are laid out. By default, the elements inside a box are laid out in <strong><a href=/learn/css/css_layout/normal_flow>normal flow</a></strong>, which means that they behave just like any other block and inline elements (as explained above).</p>
 
-<p>We can, however, change the inner display type by using <code>display</code> values like <code>flex</code>. If we set <code>display: flex;</code> on an element, the outer display type is <code>block</code>, but the inner display type is changed to <code>flex</code>. Any direct children of this box will become flex items and will be laid out according to the rules set out in the <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> spec, which you'll learn about later on.</p>
+<p>We can, however, change the inner display type by using <code>display</code> values like <code>flex</code>. If we set <code>display: flex;</code> on an element, the outer display type is <code>block</code>, but the inner display type is changed to <code>flex</code>. Any direct children of this box will become flex items and will be laid out according to the rules set out in the <a href=/learn/css/css_layout/flexbox>Flexbox</a> spec, which you'll learn about later on.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide to <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout</a>.</p>
+<p><strong>Note</strong>: To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide to <a href=/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow>Block and Inline Layout</a>.</p>
 </div>
 
-<p>When you move on to learn about CSS Layout in more detail, you will encounter <code>flex</code>, and various other inner values that your boxes can have, for example <code><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">grid</a></code>.</p>
+<p>When you move on to learn about CSS Layout in more detail, you will encounter <code>flex</code>, and various other inner values that your boxes can have, for example <code><a href=/learn/css/css_layout/grids>grid</a></code>.</p>
 
 <p>Block and inline layout, however, is the default way that things on the web behave — as we said above, it is sometimes referred to as <em>normal flow</em>, because without any other instruction, our boxes lay out as block or inline boxes.</p>
 
@@ -177,7 +177,7 @@ tags:
 
 <h3 id="Use_browser_DevTools_to_view_the_box_model">Use browser DevTools to view the box model</h3>
 
-<p>Your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!</p>
+<p>Your <a href=/learn/common_questions/what_are_browser_developer_tools>browser developer tools</a> can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!</p>
 
 <p><img alt="Inspecting the box model of an element using Firefox DevTools" src="https://mdn.mozillademos.org/files/16560/box-model-devtools.png" style="height: 683px; width: 1150px;"></p>
 
@@ -214,7 +214,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}} </p>
 
-<p>There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">mastering margin collapsing</a>. The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.</p>
+<p>There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on <a href=/web/css/css_box_model/mastering_margin_collapsing>mastering margin collapsing</a>. The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.</p>
 
 <h3 id="Borders">Borders</h3>
 
@@ -316,36 +316,36 @@ tags:
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
+<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/css/building_blocks/selectors/box_model_tasks>Test your skills: The Box Model</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
 <p>That's most of what you need to understand about the box model. You may want to return to this lesson in the future if you ever find yourself confused about how big boxes are in your layout.</p>
 
-<p>In the next lesson, we will take a look at how <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">backgrounds and borders</a> can be used to make your plain boxes look more interesting.</p>
+<p>In the next lesson, we will take a look at how <a href=/learn/css/building_blocks/backgrounds_and_borders>backgrounds and borders</a> can be used to make your plain boxes look more interesting.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href=/learn/css/building_blocks/cascade_and_inheritance>Cascade and inheritance</a></li>
+ <li><a href=/learn/css/building_blocks/selectors>CSS selectors</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/type_class_and_id_selectors>Type, class, and ID selectors</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/attribute_selectors>Attribute selectors</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/pseudo-classes_and_pseudo-elements>Pseudo-classes and pseudo-elements</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/combinators>Combinators</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href=/learn/css/building_blocks/the_box_model>The box model</a></li>
+ <li><a href=/learn/css/building_blocks/backgrounds_and_borders>Backgrounds and borders</a></li>
+ <li><a href=/learn/css/building_blocks/handling_different_text_directions>Handling different text directions</a></li>
+ <li><a href=/learn/css/building_blocks/overflowing_content>Overflowing content</a></li>
+ <li><a href=/learn/css/building_blocks/values_and_units>Values and units</a></li>
+ <li><a href=/learn/css/building_blocks/sizing_items_in_css>Sizing items in CSS</a></li>
+ <li><a href=/learn/css/building_blocks/images_media_form_elements>Images, media, and form elements</a></li>
+ <li><a href=/learn/css/building_blocks/styling_tables>Styling tables</a></li>
+ <li><a href=/learn/css/building_blocks/debugging_css>Debugging CSS</a></li>
+ <li><a href=/learn/css/building_blocks/organizing>Organizing your CSS</a></li>
 </ol>

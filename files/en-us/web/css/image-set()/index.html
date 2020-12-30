@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{cssref}}</div>
 
-<p class="summary">The <strong><code>image-set()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.</p>
+<p class="summary">The <strong><code>image-set()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_functions>function</a> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.</p>
 
 <p>Resolution and bandwidth differ by device and network access. The <code>image-set()</code> function delivers the most appropriate image resolution for a user’s device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.</p>
 
@@ -26,9 +26,9 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <h3 id="Values">Values</h3>
 
-<p>Most commonly you'll see an <code>url()</code> <code>&lt;string&gt;</code> value, but the <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> can be any image type except for an image set. The <code>image-set()</code> function can not be nested inside another <code>image-set()</code> function.</p>
+<p>Most commonly you'll see an <code>url()</code> <code>&lt;string&gt;</code> value, but the <code><a href=/web/css/image>&lt;image&gt;</a></code> can be any image type except for an image set. The <code>image-set()</code> function can not be nested inside another <code>image-set()</code> function.</p>
 
-<p><code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code> units include <code>x</code> or <code>dppx</code>, for dots per pixel unit, <code>dpi</code>, for dots per inch, and <code>dpcm</code> for dots per centimeter. Every image within an <code>image-set()</code> must have a unique resolution.</p>
+<p><code><a href=/web/css/resolution>&lt;resolution&gt;</a></code> units include <code>x</code> or <code>dppx</code>, for dots per pixel unit, <code>dpi</code>, for dots per inch, and <code>dpcm</code> for dots per centimeter. Every image within an <code>image-set()</code> must have a unique resolution.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -45,7 +45,7 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content>MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a class="external external-icon" href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 

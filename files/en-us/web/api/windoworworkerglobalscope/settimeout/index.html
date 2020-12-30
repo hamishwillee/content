@@ -80,7 +80,7 @@ function clearAlert() {
 
 <p>{{EmbedLiveSample('Example')}}</p>
 
-<p>See also <a href="/en-US/docs/Web/API/WindowTimers/clearTimeout#Example"><code>clearTimeout()</code> example</a>.</p>
+<p>See also <a href=/web/api/windowtimers/cleartimeout#Example><code>clearTimeout()</code> example</a>.</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -167,19 +167,19 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 <pre class="brush: js notranslate">var intervalID = setTimeout(function() { myFunc('one', 'two', 'three'); }, 1000);
 </pre>
 
-<p>The above example can also be written with the help of an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"> arrow function</a>:</p>
+<p>The above example can also be written with the help of an <a href=/web/javascript/reference/functions/arrow_functions> arrow function</a>:</p>
 
 <pre class="brush: js notranslate">var intervalID = setTimeout(() =&gt; { myFunc('one', 'two', 'three'); }, 1000);
 </pre>
 
-<p>Yet another possibility is to use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's <code>bind</code></a>. Example:</p>
+<p>Yet another possibility is to use <a href=/web/javascript/reference/global_objects/function/bind>function's <code>bind</code></a>. Example:</p>
 
 <pre class="brush: js notranslate">setTimeout(function(arg1){}.bind(undefined, 10), 1000);
 </pre>
 
 <h2 id="The_this_problem">The "this" problem</h2>
 
-<p>When you pass a method to <code>setTimeout()</code> (or any other function, for that matter), it will be invoked with a <code>this</code> value that may differ from your expectation. This issue is explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
+<p>When you pass a method to <code>setTimeout()</code> (or any other function, for that matter), it will be invoked with a <code>this</code> value that may differ from your expectation. This issue is explained in detail in the <a href=/web/javascript/reference/operators/this#As_an_object_method>JavaScript reference</a>.</p>
 
 <h3 id="Explanation">Explanation</h3>
 
@@ -218,7 +218,7 @@ setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2
 <pre class="brush: js notranslate">setTimeout(() =&gt; {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
 setTimeout(() =&gt; {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
 
-<p>Another possible way to solve the "<code>this</code>" problem is to replace the host <code>setTimeout()</code> and <code>setInterval()</code> global functions with ones that allow passing a <code>this</code> object and set it in the callback using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a>, e.g.:</p>
+<p>Another possible way to solve the "<code>this</code>" problem is to replace the host <code>setTimeout()</code> and <code>setInterval()</code> global functions with ones that allow passing a <code>this</code> object and set it in the callback using <a href=/web/javascript/reference/global_objects/function/call><code>Function.prototype.call</code></a>, e.g.:</p>
 
 <pre class="brush: js notranslate">// Enable setting 'this' in JavaScript timers
 
@@ -255,7 +255,7 @@ setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // prints "zero,one,two" a
 setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // prints "two" after 2.5 seconds
 </pre>
 
-<div class="note"><strong>Note</strong>: JavaScript 1.8.5 introduced the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</div>
+<div class="note"><strong>Note</strong>: JavaScript 1.8.5 introduced the <code><a href=/web/javascript/reference/global_objects/function/bind>Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</div>
 
 <p>Example using <code>bind()</code>:</p>
 
@@ -278,7 +278,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
 
 <h3 id="Passing_string_literals">Passing string literals</h3>
 
-<p>Passing a string instead of a function to <code>setTimeout()</code> has the same associated problems as using <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code></p>
+<p>Passing a string instead of a function to <code>setTimeout()</code> has the same associated problems as using <code><a href=/javascript/reference/global_objects/eval#Don.27t_use_eval.21>eval</a>. </code></p>
 
 <pre class="brush: js notranslate">// Recommended
 window.setTimeout(function() {
@@ -304,7 +304,7 @@ function f() { setInterval(f, 0); }
 setTimeout(cb, 0);
 setInterval(f, 0);</pre>
 
-<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge its the 3rd one. Gecko started to treat <code>setInterval()</code> like this in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a> (it already did this with <code>setTimeout()</code>; see below).</p>
+<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge its the 3rd one. Gecko started to treat <code>setInterval()</code> like this in <a href=/mozilla/firefox/releases/56>version 56</a> (it already did this with <code>setTimeout()</code>; see below).</p>
 
 <p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on <code>setInterval()</code> calls made from anywhere, or when a nested <code>setTimeout()</code> is called where the nesting level is at least a certain depth.</p>
 
@@ -361,11 +361,11 @@ foo has been called</pre>
 
 <h4 id="Deferral_of_timeouts_during_pageload">Deferral of timeouts during pageload</h4>
 
-<p>Starting in Firefox 66, Firefox will defer firing setTimeout and setInterval timers while the current tab is loading.   Firing is deferred until the MainThread is deemed idle (similar to <a href="/en-US/docs/Web/API/Window/requestIdleCallback">window.requestIdleCallback()</a>), or until the load event is fired.</p>
+<p>Starting in Firefox 66, Firefox will defer firing setTimeout and setInterval timers while the current tab is loading.   Firing is deferred until the MainThread is deemed idle (similar to <a href=/web/api/window/requestidlecallback>window.requestIdleCallback()</a>), or until the load event is fired.</p>
 
 <h3 id="WebExtension_background_pages_and_timers">WebExtension background pages and timers</h3>
 
-<p>In <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtension</a> background pages, timers don't work properly. This is because background pages don't actually stay loaded all the time: the browser can unload them if they are not being used, and restore them when they are needed. This is mostly transparent to the extension, but some things (including JS timers) won't work across an unload/restore cycle, so background pages are encouraged instead to use alarms, which will work. There's some more detail on this at <a href="https://developer.chrome.com/extensions/background_migration">Migrate to Event Driven Background Scripts</a>.</p>
+<p>In <a href=/mozilla/add-ons/webextensions>WebExtension</a> background pages, timers don't work properly. This is because background pages don't actually stay loaded all the time: the browser can unload them if they are not being used, and restore them when they are needed. This is mostly transparent to the extension, but some things (including JS timers) won't work across an unload/restore cycle, so background pages are encouraged instead to use alarms, which will work. There's some more detail on this at <a href="https://developer.chrome.com/extensions/background_migration">Migrate to Event Driven Background Scripts</a>.</p>
 
 <p>At the time of writing, only Chrome exhibited the above behavior — Firefox doesn't yet do the unload/restore behavior, so timers will work. But it's still a good idea to avoid timers in WebExtensions, for a couple of reasons:</p>
 
@@ -410,7 +410,7 @@ foo has been called</pre>
 
 <ul>
  <li><a href="/en-US/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
- <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></li>
+ <li><a href=/mozilla/javascript_code_modules/timer.jsm>Timer.jsm</a></li>
  <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
  <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
  <li>{{domxref("window.requestAnimationFrame")}}</li>

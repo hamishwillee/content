@@ -6,7 +6,7 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code>message</code> event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">DedicatedWorkerGlobalScope.postMessage()</a></code>).</p>
+<p>The <code>message</code> event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using <code><a href=/web/api/dedicatedworkerglobalscope/postmessage>DedicatedWorkerGlobalScope.postMessage()</a></code>).</p>
 
 <table class="properties">
  <tbody>
@@ -24,14 +24,14 @@ tags:
   </tr>
   <tr>
    <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code></td>
+   <td><code><a href=/web/api/worker/onmessage>onmessage</a></code></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code creates a new worker and listens to messages from it using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>:</p>
+<p>This code creates a new worker and listens to messages from it using <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code>:</p>
 
 <pre class="brush: js">const worker = new Worker("static/scripts/worker.js");
 
@@ -39,7 +39,7 @@ worker.addEventListener('message', (event) =&gt; {
     console.log(`Received message from worker: ${event.data}`)
 });</pre>
 
-<p>Alternatively, it could listen using the <code><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code> event handler property:</p>
+<p>Alternatively, it could listen using the <code><a href=/web/api/worker/onmessage>onmessage</a></code> event handler property:</p>
 
 <pre class="brush: js">const worker = new Worker("static/scripts/worker.js");
 
@@ -47,7 +47,7 @@ worker.onmessage = (event) =&gt; {
     console.log(`Received message from worker: ${event.data}`)
 };</pre>
 
-<p>The worker posts messages using <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">self.postMessage()</a></code>:</p>
+<p>The worker posts messages using <code><a href=/web/api/dedicatedworkerglobalscope/postmessage>self.postMessage()</a></code>:</p>
 
 <pre class="brush: js">// static/scripts/worker.js
 
@@ -76,5 +76,5 @@ self.postMessage('I\'m alive!');</pre>
 
 <ul>
  <li>Related events: <code><a href="/docs/Web/API/Worker/messageerror_event">messageerror</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">DedicatedWorkerGlobalScope.postMessage()</a></code>.</li>
+ <li><code><a href=/web/api/dedicatedworkerglobalscope/postmessage>DedicatedWorkerGlobalScope.postMessage()</a></code>.</li>
 </ul>

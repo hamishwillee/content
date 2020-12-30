@@ -18,14 +18,14 @@ tags:
 
 <p>Historically, different APIs handle their own permissions inconsistently — for example the Notifications API allows for explicit checking of permission status and requesting permission, whereas the Geolocation API doesn't (which causes problems if the user denied the initial permission request, as we'll see below).</p>
 
-<p>The <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> provides the tools to allow developers to implement a better user experience as far as permissions are concerned. For example, it can query whether permission to use a particular API is granted or denied, and specifically request permission to use an API.</p>
+<p>The <a href=/web/api/permissions_api>Permissions API</a> provides the tools to allow developers to implement a better user experience as far as permissions are concerned. For example, it can query whether permission to use a particular API is granted or denied, and specifically request permission to use an API.</p>
 
 <p>At the moment, implementation of the API is at an early stage, so support in browsers is pretty spotty:</p>
 
 <ul>
  <li>It can only be found in Chrome 44 and later and Firefox 43 and later.</li>
  <li>The only supported method right now is {{domxref("Permissions.query()")}}, which queries permission status.</li>
- <li>The only two APIs currently recognized by the Permissions API in Chrome are <a href="/en-US/docs/Web/API/Geolocation">Geolocation</a> and Notification, with Firefox also recognizing <a href="/en-US/docs/Web/API/Push_API">Push</a> and WebMIDI.</li>
+ <li>The only two APIs currently recognized by the Permissions API in Chrome are <a href=/web/api/geolocation>Geolocation</a> and Notification, with Firefox also recognizing <a href=/web/api/push_api>Push</a> and WebMIDI.</li>
 </ul>
 
 <p>More features will be added as time progresses.</p>
@@ -82,7 +82,7 @@ handlePermission();</pre>
 
 <h3 id="Permission_descriptors">Permission descriptors</h3>
 
-<p>The {{domxref("Permissions.query()")}} method takes a <code>PermissionDescriptor</code> dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex <code>PermissionDescriptor</code>s containing additional information, which inherit from the default <code>PermissionDescriptor</code>. For example, the <code>PushPermissionDescriptor</code> should also contain a Boolean that specifies if <code><a href="/en-US/docs/Web/API/PushManager/subscribe#Parameters">userVisibleOnly</a></code> is <code>true</code> or <code>false</code>.</p>
+<p>The {{domxref("Permissions.query()")}} method takes a <code>PermissionDescriptor</code> dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex <code>PermissionDescriptor</code>s containing additional information, which inherit from the default <code>PermissionDescriptor</code>. For example, the <code>PushPermissionDescriptor</code> should also contain a Boolean that specifies if <code><a href=/web/api/pushmanager/subscribe#Parameters>userVisibleOnly</a></code> is <code>true</code> or <code>false</code>.</p>
 
 <h3 id="Revoking_permissions">Revoking permissions</h3>
 

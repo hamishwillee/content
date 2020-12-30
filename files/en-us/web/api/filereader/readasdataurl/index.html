@@ -10,7 +10,7 @@ tags:
   - Method
   - Reference
 ---
-<p>The <code>readAsDataURL</code> method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes <code>DONE</code>, and the {{event("loadend")}} is triggered. At that time, the {{domxref("FileReader.result","result")}} attribute contains the data as a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data: URL</a> representing the file's data as a base64 encoded string.</p>
+<p>The <code>readAsDataURL</code> method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes <code>DONE</code>, and the {{event("loadend")}} is triggered. At that time, the {{domxref("FileReader.result","result")}} attribute contains the data as a <a href=/web/http/basics_of_http/data_uris>data: URL</a> representing the file's data as a base64 encoded string.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The blob's {{domxref("FileReader.result","result")}} cannot be directly decoded as Base64 without first removing the Data-URL declaration preceding the Base64-encoded data. To retrieve only the Base64 encoded string, first remove <code>data:*/*;base64,</code> from the result.</p>
@@ -95,7 +95,7 @@ tags:
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> The <a href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> constructor was not supported by Internet Explorer for versions before 10. For a full compatibility code you can see our <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a>. See also <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a>.</div>
+<div class="note"><strong>Note:</strong> The <a href=/web/api/filereader><code>FileReader()</code></a> constructor was not supported by Internet Explorer for versions before 10. For a full compatibility code you can see our <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a>. See also <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a>.</div>
 
 <h2 id="Specifications">Specifications</h2>
 

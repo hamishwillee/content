@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks">building blocks</a>, <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>), the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">basics of Client-side APIs</a></td>
+   <td>JavaScript basics (see <a href=/learn/javascript/first_steps>first steps</a>, <a href=/learn/javascript/building_blocks>building blocks</a>, <a href=/learn/javascript/objects>JavaScript objects</a>), the <a href=/learn/javascript/client-side_web_apis/introduction>basics of Client-side APIs</a></td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="HTML5_video_and_audio">HTML5 video and audio</h2>
 
-<p>The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a>, a typical implementation looks like this:</p>
+<p>The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in <a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a>, a typical implementation looks like this:</p>
 
 <pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -159,7 +159,7 @@ button:before {
 
 <ul>
  <li>We use the {{cssxref("::before")}} selector to display the content before each {{htmlelement("button")}} element.</li>
- <li>We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the <code><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data-icon</a></code> attribute. In the case of our play button, <code>data-icon</code> contains a capital "P".</li>
+ <li>We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the <code><a href=/learn/html/howto/use_data_attributes>data-icon</a></code> attribute. In the case of our play button, <code>data-icon</code> contains a capital "P".</li>
  <li>We apply the custom web font to our buttons using {{cssxref("font-family")}}. In this font, "P" is actually a "play" icon, so therefore the play button has a "play" icon displayed on it.</li>
 </ul>
 
@@ -266,7 +266,7 @@ controls.style.visibility = 'visible';</pre>
   }
 }</pre>
 
-  <p>Here we use an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> statement to check whether the video is paused. The {{domxref("HTMLMediaElement.paused")}} property returns true if the media is paused, which is any time the video is not playing, including when it is set at 0 duration after it first loads. If it is paused, we set the <code>data-icon</code> attribute value on the play button to "u", which is a "paused" icon, and invoke the {{domxref("HTMLMediaElement.play()")}} method to play the media.</p>
+  <p>Here we use an <code><a href=/web/javascript/reference/statements/if...else>if</a></code> statement to check whether the video is paused. The {{domxref("HTMLMediaElement.paused")}} property returns true if the media is paused, which is any time the video is not playing, including when it is set at 0 duration after it first loads. If it is paused, we set the <code>data-icon</code> attribute value on the play button to "u", which is a "paused" icon, and invoke the {{domxref("HTMLMediaElement.play()")}} method to play the media.</p>
 
   <p>On the second click, the button will be toggled back again — the "play" icon will be shown again, and the video will be paused with {{domxref("HTMLMediaElement.pause()")}}.</p>
  </li>
@@ -276,7 +276,7 @@ controls.style.visibility = 'visible';</pre>
 
 <ol>
  <li>
-  <p>Next, let's add functionality to handle stopping the video. Add the following <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> lines below the previous one you added:</p>
+  <p>Next, let's add functionality to handle stopping the video. Add the following <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> lines below the previous one you added:</p>
 
   <pre class="brush: js notranslate">stop.addEventListener('click', stopMedia);
 media.addEventListener('ended', stopMedia);
@@ -306,7 +306,7 @@ media.addEventListener('ended', stopMedia);
 
 <ol>
  <li>
-  <p>First of all, add the following two <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> lines below the previous ones:</p>
+  <p>First of all, add the following two <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> lines below the previous ones:</p>
 
   <pre class="brush: js notranslate">rwd.addEventListener('click', mediaBackward);
 fwd.addEventListener('click', mediaForward);
@@ -472,7 +472,7 @@ clearInterval(intervalFwd);
   <p>Because <code>&lt;audio&gt;</code> elements have the same {{domxref("HTMLMediaElement")}} functionality available to them, you could easily get this player to work for an <code>&lt;audio&gt;</code> element too. Try doing so.</p>
  </li>
  <li>
-  <p>Can you work out a way to turn the timer inner <code>&lt;div&gt;</code> element into a true seek bar/scrobbler — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the <code><a href="/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:</p>
+  <p>Can you work out a way to turn the timer inner <code>&lt;div&gt;</code> element into a true seek bar/scrobbler — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the <code><a href=/web/api/element/getboundingclientrect>getBoundingClientRect()</a></code> method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:</p>
 
   <pre class="brush: js notranslate">document.onclick = function(e) {
   console.log(e.x) + ',' + console.log(e.y)
@@ -484,12 +484,12 @@ clearInterval(intervalFwd);
 
 <ul>
  <li>{{domxref("HTMLMediaElement")}}</li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> — simple guide to <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> HTML.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio and video manipulation</a> — detailed guide to manipulating audio and video, e.g. with <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, and more.</li>
+ <li><a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a> — simple guide to <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> HTML.</li>
+ <li><a href=/web/apps/fundamentals/audio_and_video_delivery>Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
+ <li><a href=/web/apps/fundamentals/audio_and_video_manipulation>Audio and video manipulation</a> — detailed guide to manipulating audio and video, e.g. with <a href=/web/api/canvas_api>Canvas API</a>, <a href=/web/api/web_audio_api>Web Audio API</a>, and more.</li>
  <li>{{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.</li>
  <li>
-  <p><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></p>
+  <p><a href=/web/media/formats>Guide to media types and formats on the web</a></p>
  </li>
 </ul>
 
@@ -498,11 +498,11 @@ clearInterval(intervalFwd);
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/introduction>Introduction to web APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/manipulating_documents>Manipulating documents</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/fetching_data>Fetching data from the server</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/third_party_apis>Third party APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/drawing_graphics>Drawing graphics</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/video_and_audio_apis>Video and audio APIs</a></li>
+ <li><a href=/learn/javascript/client-side_web_apis/client-side_storage>Client-side storage</a></li>
 </ul>

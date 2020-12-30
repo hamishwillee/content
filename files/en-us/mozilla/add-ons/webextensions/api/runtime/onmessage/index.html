@@ -30,7 +30,7 @@ tags:
 <div class="notecard note">
 <p>Avoid creating multiple <code>onMessage()</code> listeners for the same type of message, because the order in which multiple listeners will fire is not guaranteed.</p>
 
-<p>If you want to guarantee the delivery of a message to a specific end point, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>If you want to guarantee the delivery of a message to a specific end point, use the <a href=/mozilla/add-ons/webextensions/content_scripts#Connection-based_messaging>connection-based approach to exchange messages</a>.</p>
 </div>
 
 <p>Along with the message itself, the listener is passed:</p>
@@ -56,7 +56,7 @@ tags:
 </div>
 
 <div class="notecard note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>You can also use a <a href=/mozilla/add-ons/webextensions/content_scripts#Connection-based_messaging>connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -161,7 +161,7 @@ function notifyExtension(e) {
 }
 </pre>
 
-<p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
+<p>The background script listens for these messages and displays a notification using the <code><a href=/mozilla/add-ons/webextensions/api/notifications>notifications</a></code> API:</p>
 
 <pre class="brush: js notranslate">// background-script.js
 
@@ -269,7 +269,7 @@ function isBookmarked(message, sender, response) {
 
 browser.runtime.onMessage.addListener(isBookmarked);</pre>
 
-<p>If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">Window.setTimeout()</a></code>:</p>
+<p>If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using <code><a href=/web/api/windoworworkerglobalscope/settimeout>Window.setTimeout()</a></code>:</p>
 
 <pre class="brush: js notranslate">// background-script.js
 

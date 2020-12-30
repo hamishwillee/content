@@ -5,7 +5,7 @@ tags:
   - ARIA
   - HTML
 ---
-<p>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
+<p>{{Page(/web/accessibility/aria/roles, "Subnav")}}</p>
 
 <p><span class="seoSummary">The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.</span></p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. <span>Uses </span><span>fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See </span><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#grid">ARIA Authoring practices</a> for more details</p>
 
-<p>Cell elements have the role <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a></code>, unless they are a row or column header. Then the elements are <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code> and <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>, respectively. Cell elements need to be owned by elements with a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code> role. Rows can be grouped using <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a>s</code>.</p>
+<p>Cell elements have the role <code><a href=/web/accessibility/aria/roles/gridcell_role>gridcell</a></code>, unless they are a row or column header. Then the elements are <code><a href=/web/accessibility/aria/roles/rowheader_role>rowheader</a></code> and <code><a href=/web/accessibility/aria/roles/columnheader_role>columnheader</a></code>, respectively. Cell elements need to be owned by elements with a <code><a href=/web/accessibility/aria/roles/row_role>row</a></code> role. Rows can be grouped using <code><a href=/web/accessibility/aria/roles/rowgroup_role>rowgroup</a>s</code>.</p>
 
 <p>If the grid is used as an interactive widget, <a href="#keyboard-use">keyboard</a> interactions need to be implemented.</p>
 
@@ -54,27 +54,27 @@ tags:
 <h4 id="Roles">Roles</h4>
 
 <dl>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a> (subclass)</dt>
+ <dt><a href=/web/accessibility/aria/roles/treegrid_role>treegrid</a> (subclass)</dt>
  <dd>If a grid has columns that can expanded or collapsed, a treegrid can be used.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></dt>
+ <dt><a href=/web/accessibility/aria/roles/row_role>row</a></dt>
  <dd>A row inside the grid.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></dt>
- <dd>A group containing one or multiple <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a>s.</dd>
+ <dt><a href=/web/accessibility/aria/roles/rowgroup_role>rowgroup</a></dt>
+ <dd>A group containing one or multiple <a href=/web/accessibility/aria/roles/row_role>row</a>s.</dd>
 </dl>
 
 <h4 id="States_and_properties">States and properties</h4>
 
 <dl>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute">aria-level</a></dt>
+ <dt><a href=/web/accessibility/aria/aria_techniques/using_the_aria-level_attribute>aria-level</a></dt>
  <dd>Indicates the hierarchical level of the grid within other structures.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute">aria-multiselectable</a></dt>
+ <dt><a href=/web/accessibility/aria/aria_techniques/using_the_aria-multiselectable_attribute>aria-multiselectable</a></dt>
  <dd>If <code>aria-</code><code>multiselectable</code> is set to <code>true</code>, multiple items in the grid can be selected. The default value is <code>false</code>.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute">aria-readonly</a></dt>
+ <dt><a href=/web/accessibility/aria/aria_techniques/using_the_aria-readonly_attribute>aria-readonly</a></dt>
  <dd>If the user can navigate the grid but not change the value or values of the grid, the <code>aria-readonly</code> should be set to <code>true</code>. The default value is <code>false</code>.</dd>
 </dl>
 
 <div class="note">
-<p>For many use cases, an HTML <a href="/en-US/docs/Web/HTML/Element/table">table</a> element is sufficient as it and its elements already include many ARIA roles.</p>
+<p>For many use cases, an HTML <a href=/web/html/element/table>table</a> element is sufficient as it and its elements already include many ARIA roles.</p>
 </div>
 
 <h3 id="Keyboard_interactions">Keyboard interactions</h3>
@@ -687,14 +687,14 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/composite_Role">ARIA composite role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role">ARIA table role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_Role">ARIA treegrid role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role">ARIA row role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role">ARIA rowgroup role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">ARIA: gridcell role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">ARIA: rowheader role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">ARIA: columnheader role</a></li>
+ <li><a href=/web/accessibility/aria/roles/composite_role>ARIA composite role</a></li>
+ <li><a href=/web/accessibility/aria/roles/table_role>ARIA table role</a></li>
+ <li><a href=/web/accessibility/aria/roles/treegrid_role>ARIA treegrid role</a></li>
+ <li><a href=/web/accessibility/aria/roles/row_role>ARIA row role</a></li>
+ <li><a href=/web/accessibility/aria/roles/rowgroup_role>ARIA rowgroup role</a></li>
+ <li><a href=/web/accessibility/aria/roles/gridcell_role>ARIA: gridcell role</a></li>
+ <li><a href=/web/accessibility/aria/roles/rowheader_role>ARIA: rowheader role</a></li>
+ <li><a href=/web/accessibility/aria/roles/columnheader_role>ARIA: columnheader role</a></li>
  <li>HTML table element</li>
  <li>aria-level</li>
  <li>aria-multiselectable</li>

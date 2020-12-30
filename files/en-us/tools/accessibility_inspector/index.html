@@ -14,11 +14,11 @@ tags:
 
 <h2 id="A_very_brief_guide_to_accessibility">A (very) brief guide to accessibility</h2>
 
-<p>Accessibility is the practice of making your websites usable by as many people as possible. This means trying your best to not lock anyone out of accessing information because of any disability they may have, or any other personal circumstances such as the device they are using, the speed of their network connection, or their geographic location or locale. You can find more extensive information in the <a href="/en-US/docs/Web/Accessibility">Accessibility</a> section of MDN Web Docs.</p>
+<p>Accessibility is the practice of making your websites usable by as many people as possible. This means trying your best to not lock anyone out of accessing information because of any disability they may have, or any other personal circumstances such as the device they are using, the speed of their network connection, or their geographic location or locale. You can find more extensive information in the <a href=/web/accessibility>Accessibility</a> section of MDN Web Docs.</p>
 
 <p>Here we are mainly talking about exposing information to people with visual disabilities — this is done via the <a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">accessibility APIs</a> available inside web browsers, which expose information on what roles the different elements on your page play (e.g., are they just text, or are they buttons, links, form elements, etc.?).</p>
 
-<p>Semantic DOM elements have roles assigned to them by default that hint at what their purpose is. Sometimes, however, you need to use some non-semantic markup (e.g., {{htmlelement("div")}}s) to build a complex custom control, and the control won't have a default role that reflects its purpose. In such a situation, you can use <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> role attributes to provide your own roles.</p>
+<p>Semantic DOM elements have roles assigned to them by default that hint at what their purpose is. Sometimes, however, you need to use some non-semantic markup (e.g., {{htmlelement("div")}}s) to build a complex custom control, and the control won't have a default role that reflects its purpose. In such a situation, you can use <a href=/learn/accessibility/wai-aria_basics>WAI-ARIA</a> role attributes to provide your own roles.</p>
 
 <p>Roles and other information exposed by browser accessibility APIs are presented in a hierarchical structure called the accessibility tree. This is a bit like the DOM tree, except that it contains a more limited set of elements and slightly different information about them.</p>
 
@@ -34,13 +34,13 @@ tags:
  <li>Choose <strong>Accessibility</strong> in the <strong>Tools &gt; Web Developer</strong> menu.</li>
  <li>Select the <strong>Accessibility</strong> tab in the Developer Tools toolbox.</li>
  <li>Right-/<kbd>Ctrl</kbd>- click in the main browser window, and choose <strong>Inspect Accessibility Properties</strong> in the context menu.</li>
- <li>Right-click an item in the HTML pane of the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>, and choose <strong>Show Accessibility Properties</strong> in the context menu.</li>
+ <li>Right-click an item in the HTML pane of the <a href=/tools/page_inspector>Page Inspector</a>, and choose <strong>Show Accessibility Properties</strong> in the context menu.</li>
 </ul>
 
 <p>Once activated, the accessibility engine remains running until you close the Developer Tools toolbox.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a>, and have some impact on overall browser performance.</p>
+<p><strong>Note</strong>: The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href=/tools/memory>Memory</a> and <a href=/tools/performance>Performance</a>, and have some impact on overall browser performance.</p>
 </div>
 
 <p>If you don't wish to allow the accessibility features to be automatically enabled, you can use the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> (also known as <code>about:config</code>) to define the preference <code>devtools.accessibility.auto-init.enabled</code>, and set it to <code>False</code>.</p>
@@ -67,15 +67,15 @@ tags:
  <li><em>role</em> — the item's role, as described above.</li>
  <li><em>actions</em> — a list of actions that can be performed on the item, for example, a pushbutton would have "Press" listed, while a link would have "Jump" listed.</li>
  <li><em>value</em> — the value of the item. This can mean different things depending on the type of the item; for example, a form input (role: entry) would have a value of whatever is entered in the input, whereas a link's value would be the URL in the corresponding <code>&lt;a&gt;</code> element's <code>href</code>.</li>
- <li><em>DOMNode</em> — the type of DOM node that the item in the accessibility tree represents. You can click on the "target" icon that comes after it to select the node in the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>. Hovering over the "target" icon highlights the DOM node in the page content.<br>
+ <li><em>DOMNode</em> — the type of DOM node that the item in the accessibility tree represents. You can click on the "target" icon that comes after it to select the node in the <a href=/tools/page_inspector>Page Inspector</a>. Hovering over the "target" icon highlights the DOM node in the page content.<br>
   <img alt="DOMNode property in accessibility inspector with target icon highlighted" src="https://mdn.mozillademos.org/files/16025/dom-node-target-icon.png" style="height: 55px; width: 294px;"></li>
  <li><em>description</em> — any further description provided on the element, usually by the content of a title attribute.</li>
  <li><em>keyboardShortcut</em> — any keyboard shortcut that is available to activate the element, as specified in an <code>accessKey</code> attribute. Note that this works correctly as of Firefox 62 ({{bug("1467381")}}).</li>
  <li><em>childCount</em> — the number of child items the current item has in the accessibility tree hierarchy.</li>
  <li><em>indexInParent</em> — an index value indicating what number child the item is, inside its parent. If the item is the first item inside its parent, it has a value of 0. If it is the second, it has a value of 1. And so on.</li>
- <li><em>states</em> — a list of the different accessibility-relevant states that can apply to the current item. For example, one of the links in one demo has states of focusable, linked, selectable text, opaque, enabled, and sensitive. For a full list of internal states, see <a href="/en-US/docs/Web/Accessibility/AT-APIs/Gecko/States">Gecko states</a>.</li>
+ <li><em>states</em> — a list of the different accessibility-relevant states that can apply to the current item. For example, one of the links in one demo has states of focusable, linked, selectable text, opaque, enabled, and sensitive. For a full list of internal states, see <a href=/web/accessibility/at-apis/gecko/states>Gecko states</a>.</li>
  <li><em>relations</em> — a list of the accessibility-relevant relationships between this item and other items. For example, in a form, an entry item could have a "labelled by" relation with a label item, which in turn has a "label for" relation to the entry item.</li>
- <li><em>attributes</em> — a list of all the accessibility-relevant attributes that are applied to the item. This can include style-related attributes such as margin-left and text-indent, and other useful states for accessibility information, such as draggable and level (e.g., what heading level is it, in the case of headings). For a full list of possible attributes, see <a href="/en-US/docs/Web/Accessibility/AT-APIs/Gecko/Attrs">Gecko object attributes</a>.</li>
+ <li><em>attributes</em> — a list of all the accessibility-relevant attributes that are applied to the item. This can include style-related attributes such as margin-left and text-indent, and other useful states for accessibility information, such as draggable and level (e.g., what heading level is it, in the case of headings). For a full list of possible attributes, see <a href=/web/accessibility/at-apis/gecko/attrs>Gecko object attributes</a>.</li>
 </ul>
 
 <div class="note">
@@ -128,9 +128,9 @@ tags:
 <ul>
  <li><strong>None</strong> — Don't show the possible list of issues</li>
  <li><strong>All Issues</strong> — Check for all types of issues</li>
- <li><strong>Contrast</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">issues with visual contrast</a></li>
- <li><strong>Keyboard</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard">issues with navigating via a keyboard</a></li>
- <li><strong>Text Labels</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names">issues with missing text labels</a></li>
+ <li><strong>Contrast</strong> — Check for <a href=/web/accessibility/understanding_wcag/perceivable/color_contrast>issues with visual contrast</a></li>
+ <li><strong>Keyboard</strong> — Check for <a href=/web/accessibility/understanding_wcag/keyboard>issues with navigating via a keyboard</a></li>
+ <li><strong>Text Labels</strong> — Check for <a href=/web/accessibility/understanding_wcag/text_labels_and_names>issues with missing text labels</a></li>
 </ul>
 
 <p>When you one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.</p>
@@ -144,7 +144,7 @@ tags:
 
 <h3 id="Simulate">Simulate</h3>
 
-<p>The Accessibility Inspector offers (as of Firefox 70), a <a href="/en-US/docs/Tools/Accessibility_inspector/Simulation">simulator</a> that lets you see what a web page would look like to users with various forms of <em>color vision deficiency</em> (better known as "color blindness"), as well as <em>contrast sensitivity loss</em>.</p>
+<p>The Accessibility Inspector offers (as of Firefox 70), a <a href=/tools/accessibility_inspector/simulation>simulator</a> that lets you see what a web page would look like to users with various forms of <em>color vision deficiency</em> (better known as "color blindness"), as well as <em>contrast sensitivity loss</em>.</p>
 
 <h2 id="Notable_related_features">Notable related features</h2>
 
@@ -174,7 +174,7 @@ tags:
 
 <h4 id="Color_contrast">Color contrast</h4>
 
-<p>Contrast ratio information is particularly useful when you are designing the color palette for your website because if the contrast is not sufficient, readers with visual impairments such as low vision or color blindness will be unable to read the text. See <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">Color contrast</a> for details about recommended contrast ratios.</p>
+<p>Contrast ratio information is particularly useful when you are designing the color palette for your website because if the contrast is not sufficient, readers with visual impairments such as low vision or color blindness will be unable to read the text. See <a href=/web/accessibility/understanding_wcag/perceivable/color_contrast>Color contrast</a> for details about recommended contrast ratios.</p>
 
 <p>For example:</p>
 
@@ -188,11 +188,11 @@ tags:
 
 <p>In this example, the contrast ranges from 4.72 to 5.98. The numbers are followed by AAA and a checkmark in green, indicating that the large text has a contrast ratio of 4.5:1 or more, meeting the criteria for enhanced contrast, or Level AAA.</p>
 
-<p>See <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">Color contrast</a> for more information on color contrast.</p>
+<p>See <a href=/web/accessibility/understanding_wcag/perceivable/color_contrast>Color contrast</a> for more information on color contrast.</p>
 
 <h3 id="Accessibility_picker">Accessibility picker</h3>
 
-<p>Like the element picker button on the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element#With_the_node_picker">Page Inspector</a>, the <em>Accessibility</em> tab's element picker button allows you to hover and select UI items on the current page  highlight objects in the accessibility tree.</p>
+<p>Like the element picker button on the <a href=/tools/page_inspector/how_to/select_an_element#With_the_node_picker>Page Inspector</a>, the <em>Accessibility</em> tab's element picker button allows you to hover and select UI items on the current page  highlight objects in the accessibility tree.</p>
 
 <p>The accessibility tab element picker looks slightly different from the Page Inspector HTML pane picker, as shown below:</p>
 
@@ -217,10 +217,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Accessibility">Accessibility tutorials</a></li>
- <li><a href="/en-US/docs/Web/Accessibility">Web accessibility overview</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Practical debugging information</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG">Understanding WCAG</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
+ <li><a href=/learn/accessibility>Accessibility tutorials</a></li>
+ <li><a href=/web/accessibility>Web accessibility overview</a></li>
+ <li><a href=/learn/tools_and_testing/cross_browser_testing/accessibility>Practical debugging information</a></li>
+ <li><a href=/web/accessibility/understanding_wcag>Understanding WCAG</a></li>
+ <li><a href=/learn/accessibility/wai-aria_basics>WAI-ARIA basics</a></li>
  <li><a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">Accessibility APIs: A Key To Web Accessibility</a> by Léonie Watson</li>
 </ul>

@@ -11,15 +11,15 @@ tags:
 
 
 <div class="notecard note">
-<p>Notice: This tool has been deprecated and will soon be removed from Firefox. For details, see <a href="/en-US/docs/Tools/Deprecated_tools">Deprecated tools</a>.</p>
+<p>Notice: This tool has been deprecated and will soon be removed from Firefox. For details, see <a href=/tools/deprecated_tools>Deprecated tools</a>.</p>
 </div>
 
-<p>With the <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API</a>, developers create an {{domxref ("AudioContext", "audio context")}}. Within that context they then construct a number of {{domxref ("AudioNode", "audio nodes")}}, including:</p>
+<p>With the <a href=/web/api/web_audio_api/using_web_audio_api>Web Audio API</a>, developers create an {{domxref ("AudioContext", "audio context")}}. Within that context they then construct a number of {{domxref ("AudioNode", "audio nodes")}}, including:</p>
 
 <ul>
- <li>nodes providing the <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_sources">audio source</a>, such as an oscillator or a data buffer source</li>
- <li>nodes performing <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_effects_filters">transformations</a> such as delay and gain</li>
- <li>nodes representing the <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_destinations">destination of the audio stream</a>, such as the speakers</li>
+ <li>nodes providing the <a href=/web/api/web_audio_api#Defining_audio_sources>audio source</a>, such as an oscillator or a data buffer source</li>
+ <li>nodes performing <a href=/web/api/web_audio_api#Defining_audio_effects_filters>transformations</a> such as delay and gain</li>
+ <li>nodes representing the <a href=/web/api/web_audio_api#Defining_audio_destinations>destination of the audio stream</a>, such as the speakers</li>
 </ul>
 
 <p>Each node has zero or more {{domxref ("AudioParam")}} properties that configure its operation. For example, the {{domxref ("GainNode")}} has a single <code>gain</code> property, while the {{domxref ("OscillatorNode")}} has <code>frequency</code> and <code>detune</code> properties.</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Opening_the_Web_Audio_Editor">Opening the Web Audio Editor</h2>
 
-<p>The Web Audio Editor is not enabled by default in Firefox 32. To enable it, open the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings_2">Developer Tool Settings</a> and check "Web Audio". Now there should be an extra tab in the <a href="/en-US/docs/Tools/Tools_Toolbox#Toolbar">Toolbox toolbar</a> labeled "Web Audio". Click the tab and load a page that constructs an audio context. Two good demos are:</p>
+<p>The Web Audio Editor is not enabled by default in Firefox 32. To enable it, open the <a href=/tools/tools_toolbox#Settings_2>Developer Tool Settings</a> and check "Web Audio". Now there should be an extra tab in the <a href=/tools/tools_toolbox#Toolbar>Toolbox toolbar</a> labeled "Web Audio". Click the tab and load a page that constructs an audio context. Two good demos are:</p>
 
 <ul>
  <li>the <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-Matic</a>, which can apply various effects to the microphone input and also provides a visualisation of the result</li>
@@ -51,7 +51,7 @@ tags:
 <p>Displaying connections to AudioParams is new in Firefox 34.</p>
 </div>
 
-<p>Connections between nodes are displayed as solid lines. If, instead, you've <a href="/en-US/docs/Web/API/AudioNode.connect%28AudioParam%29">connected a node to an AudioParam in another node</a>, then the connection is shown as a dashed line between the nodes, and is labeled with the name of the <code>AudioParam</code>:<img alt="" src="https://mdn.mozillademos.org/files/8819/web%20audio-editor-connect-param.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Connections between nodes are displayed as solid lines. If, instead, you've <a href=/web/api/audionode.connect%28audioparam%29>connected a node to an AudioParam in another node</a>, then the connection is shown as a dashed line between the nodes, and is labeled with the name of the <code>AudioParam</code>:<img alt="" src="https://mdn.mozillademos.org/files/8819/web%20audio-editor-connect-param.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Inspecting_and_modifying_AudioNodes">Inspecting and modifying AudioNodes</h2>
 

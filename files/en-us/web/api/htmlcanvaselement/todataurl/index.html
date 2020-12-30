@@ -10,10 +10,10 @@ tags:
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p>The <strong><code>HTMLCanvasElement.toDataURL()</code></strong> method returns a <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> containing a representation of the image in the format specified by the <code>type</code> parameter (defaults to <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). The returned image is in a resolution of 96 dpi.</p>
+<p>The <strong><code>HTMLCanvasElement.toDataURL()</code></strong> method returns a <a href=/web/http/data_uris>data URI</a> containing a representation of the image in the format specified by the <code>type</code> parameter (defaults to <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). The returned image is in a resolution of 96 dpi.</p>
 
 <ul>
- <li>If the height or width of the canvas is <code>0</code> or larger than the <a href="/en-US/docs/Web/HTML/Element/canvas#Maximum_canvas_size">maximum canvas size</a>, the string <code>"data:,"</code> is returned.</li>
+ <li>If the height or width of the canvas is <code>0</code> or larger than the <a href=/web/html/element/canvas#Maximum_canvas_size>maximum canvas size</a>, the string <code>"data:,"</code> is returned.</li>
  <li>If the requested type is not <code>image/png</code>, but the returned value starts with <code>data:image/png</code>, then the requested type is not supported.</li>
  <li>Chrome also supports the <code>image/webp</code> type.</li>
 </ul>
@@ -35,7 +35,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("DOMString")}} containing the requested <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a>.</p>
+<p>A {{domxref("DOMString")}} containing the requested <a href=/web/http/data_uris>data URI</a>.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -154,5 +154,5 @@ function removeColors() {
 
 <ul>
  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> in the <a href="/en-US/docs/Web/HTTP">HTTP</a> reference.</li>
+ <li><a href=/web/http/data_uris>Data URIs</a> in the <a href=/web/http>HTTP</a> reference.</li>
 </ul>

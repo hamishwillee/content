@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <strong><code>AesGcmParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a> algorithm.</p>
+<p>The <strong><code>AesGcmParams</code></strong> dictionary of the <a href=/web/api/web_crypto_api>Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the <a href=/web/api/subtlecrypto/encrypt#AES-GCM>AES-GCM</a> algorithm.</p>
 
 <p>For details of how to supply appropriate values for this parameter, see the specification for AES-GCM: <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf">NIST SP800-38D</a>, in particular section 5.2.1.1 on Input Data.</p>
 
@@ -23,7 +23,7 @@ tags:
  <dd>A {{domxref("BufferSource")}} — the initialization vector. This must be unique for every encryption operation carried out with a given key. Put another way: never reuse an IV with the same key. The AES-GCM specification recommends that the IV should be 96 bits long, and typically contains bits from a random number generator. <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A65%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D">Section 8.2 of the specification</a> outlines methods for constructing IVs. Note that the IV does not have to be secret, just unique: so it is OK, for example, to transmit it in the clear alongside the encrypted message.</dd>
  <dt><code>additionalData</code> {{optional_inline}}</dt>
  <dd>
- <p>A {{domxref("BufferSource")}}. This contains additional data that will not be encrypted but will be authenticated along with the encrypted data. If <code>additionalData</code> is given here then the same data must be given in the corresponding call to <code><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></code>:  if the data given to the <code>decrypt()</code> call does not match the original data, the decryption will throw an exception. This gives you a way to authenticate associated data without having to encrypt it.</p>
+ <p>A {{domxref("BufferSource")}}. This contains additional data that will not be encrypted but will be authenticated along with the encrypted data. If <code>additionalData</code> is given here then the same data must be given in the corresponding call to <code><a href=/web/api/subtlecrypto/decrypt>decrypt()</a></code>:  if the data given to the <code>decrypt()</code> call does not match the original data, the decryption will throw an exception. This gives you a way to authenticate associated data without having to encrypt it.</p>
 
  <p>The bit length of <code>additionalData</code> must be <code>≤ 2<sup>64</sup>-1</code>.</p>
 

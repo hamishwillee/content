@@ -24,7 +24,7 @@ tags:
 		<tr>
 			<th scope="row">Prerequisites:</th>
 			<td>
-			<p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+			<p>At minimum, it is recommended that you are familiar with the core <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> languages, and have knowledge of the <a href=/learn/tools_and_testing/understanding_client-side_tools/command_line>terminal/command line</a>.</p>
 
 			<p>You'll need a terminal with node + npm installed to compile and build your app.</p>
 			</td>
@@ -36,7 +36,7 @@ tags:
 	</tbody>
 </table>
 
-<p>We'll focus on some accessibility issues involving focus management. To do so, we'll utilize some techniques for accessing DOM nodes and executing methods like <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also see how to declare and clean-up event listeners on DOM elements.</p>
+<p>We'll focus on some accessibility issues involving focus management. To do so, we'll utilize some techniques for accessing DOM nodes and executing methods like <code><a href=/web/api/htmlorforeignelement/focus>focus()</a></code> and <code><a href=/web/api/htmlinputelement/select>select()</a></code>. We will also see how to declare and clean-up event listeners on DOM elements.</p>
 
 <p>We also need to learn a bit about component lifecycle, to understand when these DOM nodes get mounted and unmounted from the DOM and how we can access them. We will also learn about the <code>action</code> directive, which will allow us to extend the functionality of HTML elements in a reusable and declarative way.</p>
 
@@ -211,7 +211,7 @@ foo.bar = 'baz'</pre>
   })
 }</pre>
 
-<p>In this case we are using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a></code> method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each todo using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original <code>todos</code> array.</p>
+<p>In this case we are using the <code><a href=/web/javascript/reference/global_objects/array/map>map()</a></code> method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each todo using <a href=/web/javascript/reference/operators/spread_syntax>spread syntax</a> and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original <code>todos</code> array.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Svelte allows us to specify different options that affect how the compiler works. The <code>&lt;svelte:options immutable={true}/&gt;</code> option tells the compiler that you promise not to mutate any objects. This allows it to be less conservative about checking whether values have changed and generate simpler and more performant code. For more information on <code>&lt;svelte:options...&gt;</code>, check the <a href="https://svelte.dev/docs#svelte_options">Svelte options documentation</a>.</p>
@@ -286,7 +286,7 @@ foo.bar = 'baz'</pre>
 
 <p>We'd also like to add some usability features, like disabling the <em>Save</em> button when required fields are empty, giving focus to certain HTML elements or auto-selecting contents when a text input receives focus.</p>
 
-<p>To implement all these features we'll need programmatic access to DOM nodes to run functions like <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also have to use <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code> to run specific tasks when the control receives focus.</p>
+<p>To implement all these features we'll need programmatic access to DOM nodes to run functions like <code><a href=/web/api/htmlorforeignelement/focus>focus()</a></code> and <code><a href=/web/api/htmlinputelement/select>select()</a></code>. We will also have to use <code><a href=/web/api/eventtarget/addeventlistener>addEventListener()</a></code> and <code><a href=/web/api/eventtarget/removeeventlistener>removeEventListener()</a></code> to run specific tasks when the control receives focus.</p>
 
 <p>The problem is that all these DOM nodes are dynamically created by Svelte at runtime. So we'll have to wait for them to be created and added to the DOM in order to use them. To do so, we'll have to learn about the <a href="https://svelte.dev/tutorial/onmount">component lifecycle</a> to understand when we can access them — more on this later.</p>
 
@@ -504,7 +504,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 
 <p>In this case, when <code>editing</code> is <code>false</code>, the edit <code>&lt;input&gt;</code> is not visible because it does not exist in the DOM. Inside the <code>onEdit()</code> function we set <code>editing = true</code> and immediately afterwards try to access the <code>nameEl </code>variable and execute <code>nameEl.focus()</code>. The problem here is that Svelte hasn't yet updated the DOM.</p>
 
-<p>One way to solve this problem is to use <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> to delay the call to <code>nameEl.focus()</code> until the next event cycle, and give Svelte the opportunity to update the DOM.</p>
+<p>One way to solve this problem is to use <code><a href=/web/api/windoworworkerglobalscope/settimeout>setTimeout()</a></code> to delay the call to <code>nameEl.focus()</code> until the next event cycle, and give Svelte the opportunity to update the DOM.</p>
 
 <p>Try this now:</p>
 
@@ -522,7 +522,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 	<pre class="brush: js notranslate">import { tick } from 'svelte'</pre>
 	</li>
 	<li>
-	<p>Next, call <code>tick()</code> with <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> from an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</a>; update <code>onEdit()</code> like so:</p>
+	<p>Next, call <code>tick()</code> with <code><a href=/web/javascript/reference/operators/await>await</a></code> from an <a href=/web/javascript/reference/statements/async_function>async function</a>; update <code>onEdit()</code> like so:</p>
 
 	<pre class="brush: js notranslate">async function onEdit() {
   editing = true                        // enter editing mode
@@ -543,11 +543,11 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 
 <p>Next up, we want the name <code>&lt;input&gt;</code> to automatically select all text on focus. Moreover, we want to develop this in such a way that it could be easily reused on any HTML <code>&lt;input&gt;</code> and applied in a declarative way. We will use this requirement as an excuse to show a very powerful feature that Svelte provides us to add functionality to regular HTML elements: <a href="https://svelte.dev/docs#use_action">actions</a>.</p>
 
-<p>To select the text of a DOM input node we have to call <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. To get this function called whenever the node gets focused, we need an event listener along these lines:</p>
+<p>To select the text of a DOM input node we have to call <code><a href=/web/api/htmlinputelement/select>select()</a></code>. To get this function called whenever the node gets focused, we need an event listener along these lines:</p>
 
 <pre class="brush: js notranslate">node.addEventListener('focus', event =&gt; node.select()).</pre>
 
-<p>And, in order to avoid memory leaks, we should also call the <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener() </a></code>function when the node is destroyed.</p>
+<p>And, in order to avoid memory leaks, we should also call the <code><a href=/web/api/eventtarget/removeeventlistener>removeEventListener() </a></code>function when the node is destroyed.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: All this is just standard WebAPI functionality; nothing here is specific to Svelte.</p>
@@ -880,52 +880,52 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
-	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+	<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/introduction>Introduction to client-side frameworks</a></li>
+	<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/main_features>Framework main features</a></li>
 	<li>React
 	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_getting_started>Getting started with React</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_todo_list_beginning>Beginning our React todo list</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_components>Componentizing our React app</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_events_state>React interactivity: Events and state</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_filtering_conditional_rendering>React interactivity: Editing, filtering, conditional rendering</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_accessibility>Accessibility in React</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_resources>React resources</a></li>
 	</ul>
 	</li>
 	<li>Ember
 	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_getting_started>Getting started with Ember</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_structure_componentization>Ember app structure and componentization</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_interactivity_events_state>Ember interactivity: Events, classes and state</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_conditional_footer>Ember Interactivity: Footer functionality, conditional rendering</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_routing>Routing in Ember</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_resources>Ember resources and troubleshooting</a></li>
 	</ul>
 	</li>
 	<li>Vue
 	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_getting_started>Getting started with Vue</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_first_component>Creating our first Vue component</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_rendering_lists>Rendering a list of Vue components</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_methods_events_models>Adding a new todo form: Vue events, methods, and models</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_styling>Styling Vue components with CSS</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_computed_properties>Using Vue computed properties</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_conditional_rendering>Vue conditional rendering: editing existing todos</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_refs_focus_management>Focus management with Vue refs</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_resources>Vue resources</a></li>
 	</ul>
 	</li>
 	<li>Svelte
 	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_getting_started>Getting started with Svelte</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_todo_list_beginning>Starting our Svelte Todo list app</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_variables_props>Dynamic behavior in Svelte: working with variables and props</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_components>Componentizing our Svelte app</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_reactivity_lifecycle_accessibility>Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_stores>Working with Svelte stores</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_typescript>TypeScript support in Svelte</a></li>
+		<li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_deployment_next>Deployment and next steps</a></li>
 	</ul>
 	</li>
 </ul>

@@ -26,7 +26,7 @@ tags:
  <li>Set various properties of the window, such as whether it is focused or private.</li>
 </ul>
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -44,7 +44,7 @@ tags:
  <dl class="reference-values">
   <dt><code>allowScriptsToClose</code> {{optional_inline}}</dt>
   <dd>
-  <p><code>boolean</code>. When the window is opened, it will contain a single tab, or more than one tab if <code>url</code> is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using <code><a href="/en-US/docs/Web/API/Window/close">window.close()</a></code>.  If you include <code>allowScriptsToClose</code> and set it to <code>true</code> , then this default behavior is changed, so scripts can close their tabs. Note that:</p>
+  <p><code>boolean</code>. When the window is opened, it will contain a single tab, or more than one tab if <code>url</code> is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using <code><a href=/web/api/window/close>window.close()</a></code>.  If you include <code>allowScriptsToClose</code> and set it to <code>true</code> , then this default behavior is changed, so scripts can close their tabs. Note that:</p>
 
   <ul>
    <li>this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.</li>
@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the new window. This <code>Window</code> object will always have its <code>tabs</code> property set, unlike the <code>Window</code> objects returned from {{WebExtAPIRef("windows.get()")}} and similar APIs, which only contain <code>tabs</code> if the <code>populate</code> option is passed. If any error occurs, the promise will be rejected with an error message.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the new window. This <code>Window</code> object will always have its <code>tabs</code> property set, unlike the <code>Window</code> objects returned from {{WebExtAPIRef("windows.get()")}} and similar APIs, which only contain <code>tabs</code> if the <code>populate</code> option is passed. If any error occurs, the promise will be rejected with an error message.</p>
 
 <h2 id="Examples">Examples</h2>
 

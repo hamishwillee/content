@@ -18,13 +18,13 @@ tags:
 ---
 <p>{{WebGLSidebar}}</p>
 
-<p class="summary"><span class="seoSummary">Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transforms">CSS transforms</a> and the <code>matrix3d</code> transform type.</span></p>
+<p class="summary"><span class="seoSummary">Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with <a href=/web/guide/css/using_css_transforms>CSS transforms</a> and the <code>matrix3d</code> transform type.</span></p>
 
-<p>While this article uses <a href="/en-US/docs/Web/CSS">CSS</a> to simplify explanations, matrices are a core concept used by many different technologies including <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> (VR and AR) API, and <a href="/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">GLSL shaders</a>. This article is also available as an <a href="https://github.com/TatumCreative/mdn-matrix-math">MDN content kit</a>. The live examples use a collection of <a href="https://github.com/TatumCreative/mdn-webgl">utility functions</a> available under a global object named <code>MDN</code>.</p>
+<p>While this article uses <a href=/web/css>CSS</a> to simplify explanations, matrices are a core concept used by many different technologies including <a href=/web/api/webgl_api>WebGL</a>, the <a href=/web/api/webxr_device_api>WebXR</a> (VR and AR) API, and <a href=/games/techniques/3d_on_the_web/glsl_shaders>GLSL shaders</a>. This article is also available as an <a href="https://github.com/TatumCreative/mdn-matrix-math">MDN content kit</a>. The live examples use a collection of <a href="https://github.com/TatumCreative/mdn-webgl">utility functions</a> available under a global object named <code>MDN</code>.</p>
 
 <h2 id="Transformation_matrices">Transformation matrices</h2>
 
-<p>There are many types of matrices, but the ones we are interested in are the 3D transformation matrices. These matrices consist of a set of 16 values arranged in a 4x4 grid. In <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, it is easy to represent a matrix as an array.</p>
+<p>There are many types of matrices, but the ones we are interested in are the 3D transformation matrices. These matrices consist of a set of 16 values arranged in a 4x4 grid. In <a href=/web/javascript>JavaScript</a>, it is easy to represent a matrix as an array.</p>
 
 <p>Let's begin by considering the <strong>identity matrix</strong>. This is a special transformation matrix which functions much like the number 1 does in scalar multiplication; just like n * 1 = n, multiplying any matrix by the identity matrix gives a resulting matrix whose values match the original matrix.</p>
 
@@ -50,7 +50,7 @@ tags:
 [4, 3, 2, 1]  // Point at [x, y, z, w]
 </pre>
 
-<p><span>The w component has some additional uses that are out of scope for this article. Check out the </span><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a><span> article for a look into how it comes in handy.</span></p>
+<p><span>The w component has some additional uses that are out of scope for this article. Check out the </span><a href=/web/api/webgl_api/webgl_model_view_projection>WebGL model view projection</a><span> article for a look into how it comes in handy.</span></p>
 
 <h3 id="Multiplying_a_matrix_and_a_point">Multiplying a matrix and a point</h3>
 

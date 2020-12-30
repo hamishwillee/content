@@ -22,7 +22,7 @@ tags:
 <dl class="reference-values">
  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
  <dd>
- <p><code>string</code>. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore">cookie store</a> as specified by the ID.</p>
+ <p><code>string</code>. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific <a href=/mozilla/add-ons/webextensions/api/cookies/cookiestore>cookie store</a> as specified by the ID.</p>
 
  <div class="notecard note">
  <p><strong>Note:</strong> On Firefox Nightly removal of localStorage items by <code>cookieStoreId</code> is also supported.</p>
@@ -35,7 +35,7 @@ tags:
  <dd>
  <p><code>Array</code> of <code>string</code>. This property only applies to cookies and local storage items. Only remove cookies and local storage items which are associated with these hostnames.</p>
 
- <p>You must pass in just a hostname here, without protocol (for example: "google.com" not https://google.com"). You can use the <code><a href="/en-US/docs/Web/API/URL">URL</a></code> interface to parse a raw URL and retrieve just the hostname. Items associated with subdomains of a given hostname will <em>not</em> be removed: you must explicitly list subdomains.</p>
+ <p>You must pass in just a hostname here, without protocol (for example: "google.com" not https://google.com"). You can use the <code><a href=/web/api/url>URL</a></code> interface to parse a raw URL and retrieve just the hostname. Items associated with subdomains of a given hostname will <em>not</em> be removed: you must explicitly list subdomains.</p>
  </dd>
  <dt><code>originTypes</code> {{optional_inline}}</dt>
  <dd>

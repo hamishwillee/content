@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
-<p><span class="seoSummary">Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <code><a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (although the <code>responseXML</code> and <code>channel</code> attributes are always null) or <code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</span> This article provides a detailed introduction to using web workers.</p>
+<p><span class="seoSummary">Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <code><a class="internal" href=/web/api/xmlhttprequest>XMLHttpRequest</a></code> (although the <code>responseXML</code> and <code>channel</code> attributes are always null) or <code><a href=/web/api/fetch_api>fetch</a></code> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</span> This article provides a detailed introduction to using web workers.</p>
 
 <h2 id="Web_Workers_API">Web Workers API</h2>
 
@@ -21,14 +21,14 @@ tags:
 <p>The worker context is represented by a {{domxref("DedicatedWorkerGlobalScope")}} object in the case of dedicated workers (standard workers that are utilized by a single script; shared workers use {{domxref("SharedWorkerGlobalScope")}}). A dedicated worker is only accessible from the script that first spawned it, whereas shared workers can be accessed from multiple scripts.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
+<p><strong>Note</strong>: See <a href=/web/api/web_workers_api>The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
 </div>
 
-<p>You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under <code>window</code>, including <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, and data storage mechanisms like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>. See <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a> for more details.</p>
+<p>You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under <code>window</code>, including <a href=/web/api/websockets_api>WebSockets</a>, and data storage mechanisms like <a href=/web/api/indexeddb_api>IndexedDB</a>. See <a href=/web/api/worker/functions_and_classes_available_to_workers>Functions and classes available to workers</a> for more details.</p>
 
 <p>Data is sent between workers and the main thread via a system of messages — both sides send their messages using the <code>postMessage()</code> method, and respond to messages via the <code>onmessage</code> event handler (the message is contained within the {{event("Message")}} event's data attribute.) The data is copied rather than shared.</p>
 
-<p>Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use <a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network I/O, with the exception that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
+<p>Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use <a class="internal" href=/web/api/xmlhttprequest><code>XMLHttpRequest</code></a> for network I/O, with the exception that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
 
 <h2 id="Dedicated_workers">Dedicated workers</h2>
 
@@ -107,7 +107,7 @@ second.onchange = function() {
 
 <p>When a runtime error occurs in the worker, its <code>onerror</code> event handler is called. It receives an event named <code>error</code> which implements the <code>ErrorEvent</code> interface.</p>
 
-<p>The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's <a class="internal" href="/en-US/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code> </a> method.</p>
+<p>The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's <a class="internal" href=/web/api/event/preventdefault> <code>preventDefault()</code> </a> method.</p>
 
 <p>The error event has the following three fields that are of interest:</p>
 
@@ -208,19 +208,19 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <h2 id="Content_security_policy">Content security policy</h2>
 
-<p>Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a> of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:</p>
+<p>Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the <a href=/mozilla/add-ons/webextensions/content_security_policy>content security policy</a> of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:</p>
 
 <pre class="notranslate">Content-Security-Policy: script-src 'self'</pre>
 
-<div>Among other things, this will prevent any scripts it includes from using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. However, if the script constructs a worker, code running in the worker's context <em>will</em> be allowed to use <code>eval()</code>.<br>
+<div>Among other things, this will prevent any scripts it includes from using <code><a href=/web/javascript/reference/global_objects/eval>eval()</a></code>. However, if the script constructs a worker, code running in the worker's context <em>will</em> be allowed to use <code>eval()</code>.<br>
 <br>
-To specify a content security policy for the worker, set a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> response header for the request which delivered the worker script itself.<br>
+To specify a content security policy for the worker, set a <a href=/web/http/headers/content-security-policy>Content-Security-Policy</a> response header for the request which delivered the worker script itself.<br>
 <br>
 The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.</div>
 
 <h2 id="Transferring_data_to_and_from_workers_further_details">Transferring data to and from workers: further details</h2>
 
-<p>Data passed between the main page and workers is <strong>copied</strong>, not shared. Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker <strong>do not share the same instance</strong>, so the end result is that <strong>a duplicate</strong> is created on each end. Most browsers implement this feature as <a href="/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">structured cloning</a>.</p>
+<p>Data passed between the main page and workers is <strong>copied</strong>, not shared. Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker <strong>do not share the same instance</strong>, so the end result is that <strong>a duplicate</strong> is created on each end. Most browsers implement this feature as <a href=/web/guide/api/dom/the_structured_clone_algorithm>structured cloning</a>.</p>
 
 <p>To illustrate this, let's create for didactical purpose a function named <code>emulateMessage()</code>, which will simulate the behavior of a value that is <em>cloned and not shared</em> during the passage from a <code>worker</code> to the main page or vice versa:</p>
 
@@ -282,7 +282,7 @@ onmessage = function(oEvent) {
   postMessage('Hi ' + oEvent.data);
 };</pre>
 
-<p>The <a href="/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">structured cloning</a> algorithm can accept JSON and a few things that JSON can't — like circular references.</p>
+<p>The <a href=/web/guide/api/dom/the_structured_clone_algorithm>structured cloning</a> algorithm can accept JSON and a few things that JSON can't — like circular references.</p>
 
 <h3 id="Passing_data_examples">Passing data examples</h3>
 
@@ -677,7 +677,7 @@ onmessage = function(event) {
 &lt;/html&gt;
 </pre>
 
-<p>The web page creates a <code>div</code> element with the ID <code>result</code> , which gets used to display the result, then spawns the worker. After spawning the worker, the <code>onmessage</code> handler is configured to display the results by setting the contents of the <code>div</code> element, and the <code>onerror</code> handler is set to <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">dump</a> the error message.</p>
+<p>The web page creates a <code>div</code> element with the ID <code>result</code> , which gets used to display the result, then spawns the worker. After spawning the worker, the <code>onmessage</code> handler is configured to display the results by setting the contents of the <code>div</code> element, and the <code>onerror</code> handler is set to <a href=/debugging_javascript#dump.28.29>dump</a> the error message.</p>
 
 <p>Finally, a message is sent to the worker to start it.</p>
 
@@ -685,7 +685,7 @@ onmessage = function(event) {
 
 <h3 id="Performing_web_IO_in_the_background">Performing web I/O in the background</h3>
 
-<p>You can find an example of this in the article <a class="internal" href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> .</p>
+<p>You can find an example of this in the article <a class="internal" href=/using_workers_in_extensions>Using workers in extensions</a> .</p>
 
 <h3 id="Dividing_tasks_among_multiple_workers">Dividing tasks among multiple workers</h3>
 
@@ -696,16 +696,16 @@ onmessage = function(event) {
 <p>In addition to dedicated and shared web workers, there are other types of worker available:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.</li>
+ <li><a href=/web/api/serviceworker_api>ServiceWorkers</a> essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.</li>
  <li>Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a> in your worker. See {{domxref("ChromeWorker")}} for more details.</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API#Audio_processing_in_JavaScript">Audio Worklet</a> provide the ability for direct scripted audio processing to be done in a worklet (a lightweight version of worker) context.</li>
+ <li><a href=/web/api/web_audio_api#Audio_processing_in_JavaScript>Audio Worklet</a> provide the ability for direct scripted audio processing to be done in a worklet (a lightweight version of worker) context.</li>
 </ul>
 
 <h2 id="Debugging_worker_threads">Debugging worker threads</h2>
 
 <p>Most browsers support debugging of worker threads in their JavaScript debuggers in <em>exactly the same way</em> as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.</p>
 
-<p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a>, just like code running in the main thread.</p>
+<p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href=/tools/debugger/ui_tour#Source_pane>source pane</a>, just like code running in the main thread.</p>
 
 <p><img src="https://mdn.mozillademos.org/files/16988/worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
@@ -713,12 +713,12 @@ onmessage = function(event) {
 <p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
 </div>
 
-<p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">call stack</a>, etc., just as you'd expect.</p>
+<p>In the source pane you can <a href=/tools/debugger/how_to/set_a_breakpoint>set a breakpoint</a> (or <a href=/tools/debugger/set_a_logpoint>logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href=/tools/debugger/how_to/set_a_breakpoint>breakpoints</a>, <a href=/tools/debugger/how_to/set_a_breakpoint#Inline_variable_preview>inline variable preview</a>, <a href=/tools/debugger/ui_tour#Call_stack>call stack</a>, etc., just as you'd expect.</p>
 
 <p><img src="https://mdn.mozillademos.org/files/16987/worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+<p><strong>Note</strong>: For more information see <a href=/tools/debugger>Firefox JavaScript Debugger</a>.</p>
 </div>
 
 <h2 id="Functions_and_interfaces_available_in_workers">Functions and interfaces available in workers</h2>
@@ -735,11 +735,11 @@ onmessage = function(event) {
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
 
 <div class="notecard note">
-<p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
+<p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href=/web/api/eventsource>EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: For a complete list of functions available to workers, see <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
+<p><strong>Note</strong>: For a complete list of functions available to workers, see <a href=/web/reference/functions_and_classes_available_to_workers>Functions and interfaces available to workers</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -762,7 +762,7 @@ onmessage = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a class="internal" href="/en-US/docs/Web/API/Worker">Worker</a></code> interface</li>
- <li><code><a class="internal" href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> interface</li>
- <li><a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions available to workers</a></li>
+ <li><code><a class="internal" href=/web/api/worker>Worker</a></code> interface</li>
+ <li><code><a class="internal" href=/web/api/sharedworker>SharedWorker</a></code> interface</li>
+ <li><a href=/web/api/worker/functions_and_classes_available_to_workers>Functions available to workers</a></li>
 </ul>

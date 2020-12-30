@@ -11,15 +11,15 @@ tags:
 <p>This article is a quick tour of the main sections of the JavaScript Debugger's user interface. The UI is split vertically into three panels</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">Source list pane</a></li>
- <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">Source pane</a></li>
+ <li><a href=/tools/debugger/ui_tour#Source_list_pane>Source list pane</a></li>
+ <li><a href=/tools/debugger/ui_tour#Source_pane>Source pane</a></li>
  <li>The contents of the third pane depend on the current state of the debugger and may include the following sections:
   <ul>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Toolbar">Toolbar</a></li>
+   <li><a href=/tools/debugger/ui_tour#Toolbar>Toolbar</a></li>
    <li>Watch expressions</li>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Breakpoints_list">Breakpoints</a></li>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">Call stack</a></li>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Scopes">Scopes</a></li>
+   <li><a href=/tools/debugger/ui_tour#Breakpoints_list>Breakpoints</a></li>
+   <li><a href=/tools/debugger/ui_tour#Call_stack>Call stack</a></li>
+   <li><a href=/tools/debugger/ui_tour#Scopes>Scopes</a></li>
    <li>XHR Breakpoints</li>
    <li>Event Listener Breakpoints</li>
    <li>DOM Mutation Breakpoints</li>
@@ -31,11 +31,11 @@ tags:
 
 <h2 id="Source_list_pane">Source list pane</h2>
 
-<p>The source list pane lists all the JavaScript source files loaded into the page (<a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads">including scripts for active web workers</a>), and enables you to select one to debug. At the top level sources are organized by origin, and under that they're organized by the directory structure from which they are served.</p>
+<p>The source list pane lists all the JavaScript source files loaded into the page (<a href=/web/api/web_workers_api/using_web_workers#Debugging_worker_threads>including scripts for active web workers</a>), and enables you to select one to debug. At the top level sources are organized by origin, and under that they're organized by the directory structure from which they are served.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16841/debugger_uiTour_02.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;"></p>
 
-<p>You can <a href="/en-US/docs/Tools/Debugger/How_to/Search#Searching_for_files">search for a file</a> using <kbd>Ctrl</kbd> + <kbd>P</kbd> (<kbd>Cmd</kbd> + <kbd>P</kbd> on a Mac).</p>
+<p>You can <a href=/tools/debugger/how_to/search#Searching_for_files>search for a file</a> using <kbd>Ctrl</kbd> + <kbd>P</kbd> (<kbd>Cmd</kbd> + <kbd>P</kbd> on a Mac).</p>
 
 <p>Web Extensions are listed in the Source List pane using the extension's name.</p>
 
@@ -77,9 +77,9 @@ tags:
 
 <p>This shows the JavaScript file currently loaded.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16843/debugger_uiTour_02.5.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;">When the source pane is focused you can <a href="/en-US/docs/Tools/Debugger/How_to/Search#Searching_within_a_file">search for a string in the file</a> using <kbd>Ctrl</kbd> + <kbd>F</kbd> (<kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac).</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16843/debugger_uiTour_02.5.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;">When the source pane is focused you can <a href=/tools/debugger/how_to/search#Searching_within_a_file>search for a string in the file</a> using <kbd>Ctrl</kbd> + <kbd>F</kbd> (<kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac).</p>
 
-<p><a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">Breakpoints</a> have a blue arrow overlaid on the line number. <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_conditional_breakpoint">Conditional breakpoints</a> have an orange arrow. If you're stopped at a breakpoint, the entire line gets a green overlay. In the screenshot below there are three breakpoints:</p>
+<p><a href=/tools/debugger/how_to/set_a_breakpoint>Breakpoints</a> have a blue arrow overlaid on the line number. <a href=/tools/debugger/how_to/set_a_conditional_breakpoint>Conditional breakpoints</a> have an orange arrow. If you're stopped at a breakpoint, the entire line gets a green overlay. In the screenshot below there are three breakpoints:</p>
 
 <ul>
  <li>line 82 has a normal breakpoint and execution is paused here</li>
@@ -117,7 +117,7 @@ tags:
 <p>The toolbar consists of:</p>
 
 <ul>
- <li>Four buttons to <a href="/en-US/docs/Tools/Debugger/How_to/Step_through_code">control the debugger's movement through the script</a>:
+ <li>Four buttons to <a href=/tools/debugger/how_to/step_through_code>control the debugger's movement through the script</a>:
 
   <ul>
    <li><strong>Play/pause</strong> (<kbd>F8</kbd>): pauses or resumes execution of the script you're debugging. When it displays a "play" icon, that means the script is paused, either because you've paused it with this button or because you've hit a breakpoint.</li>
@@ -132,14 +132,14 @@ tags:
    <li><strong>Disable JavaScript</strong>: disables JavaScript for this tab. This option enables you to see how your web page looks if the user has disabled JavaScript via an extension or a configuration setting. The setting is reset when the Developer Tools are closed (except in Firefox 77, see {{bug("1640318")}}).</li>
    <li><strong>Inline Variable Preview</strong>: enabled by default, this option displays variable values within the source pane when the debugger is paused.</li>
    <li><strong>Wrap Lines</strong>: Toggles wrapping of long lines in the <a href="#Source_pane">source pane</a>.</li>
-   <li><strong>Source Maps</strong>: enabled by default, this option directs the Debugger to load the original versions of files, and map them to the generated ones loaded in a page, to ease debugging of transformed sources. See <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">Use a source map</a> for details.</li>
+   <li><strong>Source Maps</strong>: enabled by default, this option directs the Debugger to load the original versions of files, and map them to the generated ones loaded in a page, to ease debugging of transformed sources. See <a href=/tools/debugger/how_to/use_a_source_map>Use a source map</a> for details.</li>
   </ul>
  </li>
 </ul>
 
 <h2 id="Breakpoints_list">Breakpoints list</h2>
 
-<p>Under the toolbar, you'll see all the breakpoints you've set. Next to each breakpoint is a checkbox which you can use to <a href="/en-US/docs/Tools/Debugger/How_to/Disable_breakpoints">enable/disable it</a>:</p>
+<p>Under the toolbar, you'll see all the breakpoints you've set. Next to each breakpoint is a checkbox which you can use to <a href=/tools/debugger/how_to/disable_breakpoints>enable/disable it</a>:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16845/debugger_uiTour_breakpoints.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
 
@@ -195,4 +195,4 @@ tags:
 
 <p><img alt="A screenshot of the Debugger, with the Scopes pane highlighted" src="https://mdn.mozillademos.org/files/17300/Debugger_scopes_Fx78.png" style="border: 1px solid black; display: block; height: 438px; margin-left: auto; margin-right: auto; width: 1096px;">Objects are organized by scope: the most local appears first, and the global scope (Window, in the case of page scripts) appears last.</p>
 
-<p>Within the Scopes pane, you can create <a href="/en-US/docs/Tools/Debugger/How_to/Use_watchpoints">watchpoints</a> that pause the debugger when a value is read or assigned.</p>
+<p>Within the Scopes pane, you can create <a href=/tools/debugger/how_to/use_watchpoints>watchpoints</a> that pause the debugger when a value is read or assigned.</p>

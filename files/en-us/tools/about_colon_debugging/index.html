@@ -154,11 +154,11 @@ tags:
 <p>If you install an extension in this way, what happens when you update the extension?</p>
 
 <ul>
- <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
+ <li>If you change files that are loaded on demand, like <a href=/mozilla/add-ons/webextensions/content_scripts>content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
  <li>For other changes, click the <strong>Reload</strong> button. This does what it says:
   <ul>
    <li>Reloads any persistent scripts, such as <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
-   <li>Parses the <code>manifest.json</code> file again, so changes to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> or any other keys take effect</li>
+   <li>Parses the <code>manifest.json</code> file again, so changes to <code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/content_scripts>content_scripts</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code> or any other keys take effect</li>
   </ul>
  </li>
 </ul>
@@ -183,20 +183,20 @@ tags:
 <p><strong>Note:</strong> This list may include add-ons that came preinstalled with Firefox.</p>
 </div>
 
-<p>If you click <strong>Inspect</strong>, the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> will start in a new tab.</p>
+<p>If you click <strong>Inspect</strong>, the <a href=/mozilla/add-ons/add-on_debugger>Add-on Debugger</a> will start in a new tab.</p>
 
 <p>{{EmbedYouTube("efCpDNuNg_c")}}</p>
 
-<p>See the page on the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> for all the things you can do with this tool.</p>
+<p>See the page on the <a href=/mozilla/add-ons/add-on_debugger>Add-on Debugger</a> for all the things you can do with this tool.</p>
 
 <h2 id="Workers">Workers</h2>
 
 <p>The Workers section shows all the workers you've got registered on your Firefox, categorized as follows:</p>
 
 <ul>
- <li>All registered <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
- <li>All registered <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
- <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
+ <li>All registered <a href=/web/api/service_worker_api>Service Workers</a></li>
+ <li>All registered <a href=/web/api/sharedworker>Shared Workers</a></li>
+ <li>Other workers, including <a href=/web/api/chromeworker>Chrome Workers</a> and <a href=/web/api/web_workers_api/using_web_workers#Dedicated_workers>Dedicated Workers</a></li>
 </ul>
 
 <p>You can connect the developer tools to each worker, and send push notifications to service workers.</p>
@@ -218,7 +218,7 @@ tags:
 <p>This section uses a simple ServiceWorker demo, hosted at <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: From Firefox 79 onwards, you can access similar information on the Service Workers registered on a particular domain by going to the Firefox DevTools <a href="/en-US/docs/Tools/Application">Application panel</a>.</p>
+<p><strong>Note</strong>: From Firefox 79 onwards, you can access similar information on the Service Workers registered on a particular domain by going to the Firefox DevTools <a href=/tools/application>Application panel</a>.</p>
 </div>
 
 <h3 id="Unregistering_service_workers">Unregistering service workers</h3>
@@ -227,7 +227,7 @@ tags:
 
 <h3 id="Sending_push_events_to_service_workers">Sending push events to service workers</h3>
 
-<p>To debug push notifications, you can set a breakpoint in the <a href="/en-US/docs/Web/API/PushEvent">push event</a> listener. However, you can also debug push notifications locally, without needing the server. Click the <strong>Push</strong> button to send a push event to the service worker.</p>
+<p>To debug push notifications, you can set a breakpoint in the <a href=/web/api/pushevent>push event</a> listener. However, you can also debug push notifications locally, without needing the server. Click the <strong>Push</strong> button to send a push event to the service worker.</p>
 
 <h3 id="Service_workers_not_compatible">Service workers not compatible</h3>
 

@@ -18,7 +18,7 @@ tags:
 
 <p>This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">options pages</a>, or scripts running in <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions">page action</a> popups, but does <em>not</em> include <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">content scripts</a>.</p>
 
-<p>Note that variables that were declared using <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> do not appear in the <code>Window</code> object returned by this function.</p>
+<p>Note that variables that were declared using <code><a href=/web/javascript/reference/statements/const>const</a></code> or <code><a href=/web/javascript/reference/statements/let>let</a></code> do not appear in the <code>Window</code> object returned by this function.</p>
 
 <p><strong>Also note that this method cannot be used in a private window in Firefox</strong>—it always returns <code>null</code>. For more info see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1329304">related bug at bugzilla</a>.</p>
 

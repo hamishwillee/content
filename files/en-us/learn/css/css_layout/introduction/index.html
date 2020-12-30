@@ -25,7 +25,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>The basics of HTML (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of How CSS works (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <td>The basics of HTML (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of How CSS works (study <a href=/learn/css/introduction_to_css>Introduction to CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -80,11 +80,11 @@ tags:
 <p>The methods that can change how elements are laid out in CSS are as follows:</p>
 
 <ul>
- <li><strong>The {{cssxref("display")}} property</strong> — Standard values such as <code>block</code>, <code>inline</code> or <code>inline-block</code> can change how elements behave in normal flow, for example making a block-level element behave like an inline element (see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a> for more information). We also have entire layout methods that are switched on via specific <code>display</code> values, for example <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, which alter how elements inside the element they are set on are laid out.</li>
+ <li><strong>The {{cssxref("display")}} property</strong> — Standard values such as <code>block</code>, <code>inline</code> or <code>inline-block</code> can change how elements behave in normal flow, for example making a block-level element behave like an inline element (see <a href=/learn/css/introduction_to_css/box_model#Types_of_CSS_boxes>Types of CSS boxes</a> for more information). We also have entire layout methods that are switched on via specific <code>display</code> values, for example <a href=/learn/css/css_layout/grids>CSS Grid</a> and <a href=/learn/css/css_layout/flexbox>Flexbox</a>, which alter how elements inside the element they are set on are laid out.</li>
  <li><strong>Floats</strong> — Applying a {{cssxref("float")}} value such as <code>left</code> can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.</li>
  <li><strong>The {{cssxref("position")}} property</strong> — Allows you to precisely control the placement of boxes inside other boxes. <code>static</code> positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top of the browser viewport.</li>
  <li><strong>Table layout</strong> — features designed for styling the parts of an HTML table can be used on non-table elements using <code>display: table</code> and associated properties.</li>
- <li><strong>Multi-column layout</strong> — The <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column layout</a> properties can cause the content of a block to layout in columns, as you might see in a newspaper.</li>
+ <li><strong>Multi-column layout</strong> — The <a href=/web/css/css_columns>Multi-column layout</a> properties can cause the content of a block to layout in columns, as you might see in a newspaper.</li>
 </ul>
 
 <h2 id="The_display_property">The display property</h2>
@@ -97,7 +97,7 @@ tags:
 
 <h2 id="Flexbox">Flexbox</h2>
 
-<p>Flexbox is the short name for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply <code>display: flex</code> to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.</p>
+<p>Flexbox is the short name for the <a href=/web/css/css_flexible_box_layout>Flexible Box Layout</a> Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply <code>display: flex</code> to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.</p>
 
 <p>The HTML markup below gives us a containing element, with a class of <code>wrapper</code>, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.</p>
 
@@ -170,7 +170,7 @@ tags:
 <p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox, to find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
+<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox, to find out more, see our <a href=/learn/css/css_layout/flexbox>Flexbox</a> article.</p>
 </div>
 
 <h2 id="Grid_Layout">Grid Layout</h2>
@@ -264,7 +264,7 @@ tags:
 <p>{{ EmbedLiveSample('Grid_2', '300', '330') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: These two examples are just a small part of the power of Grid layout; to find out more see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a> article.</p>
+<p><strong>Note</strong>: These two examples are just a small part of the power of Grid layout; to find out more see our <a href=/learn/css/css_layout/grids>Grid Layout</a> article.</p>
 </div>
 
 <p>The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.</p>
@@ -329,7 +329,7 @@ p {
 <p>{{ EmbedLiveSample('Float_1', '100%', 600) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Floats are fully explained in our lesson on the <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">float and clear</a> properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">legacy layout methods</a>.</p>
+<p><strong>Note</strong>: Floats are fully explained in our lesson on the <a href=/learn/css/css_layout/floats>float and clear</a> properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on <a href=/learn/css/css_layout/legacy_layout_methods>legacy layout methods</a>.</p>
 </div>
 
 <h2 id="Positioning_techniques">Positioning techniques</h2>
@@ -478,7 +478,7 @@ p {
 
 <p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
 
-<p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>.</p>
+<p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on <a href=/learn/css/css_layout/positioning>positioning</a>.</p>
 
 <h3 id="Fixed_positioning">Fixed positioning</h3>
 
@@ -576,7 +576,7 @@ p {
 <p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: to find more out about positioning, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a> article.</p>
+<p><strong>Note</strong>: to find more out about positioning, see our <a href=/learn/css/css_layout/positioning>Positioning</a> article.</p>
 </div>
 
 <h2 id="Table_layout">Table layout</h2>
@@ -703,16 +703,16 @@ form p {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
+ <li><a href=/learn/css/css_layout/introduction>Introduction to CSS layout</a></li>
+ <li><a href=/learn/css/css_layout/normal_flow>Normal flow</a></li>
+ <li><a href=/learn/css/css_layout/flexbox>Flexbox</a></li>
+ <li><a href=/learn/css/css_layout/grids>Grid</a></li>
+ <li><a href=/learn/css/css_layout/floats>Floats</a></li>
+ <li><a href=/learn/css/css_layout/positioning>Positioning</a></li>
+ <li><a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a></li>
+ <li><a href=/learn/css/css_layout/responsive_design>Responsive design</a></li>
+ <li><a href=/learn/css/css_layout/media_queries>Beginner's guide to media queries</a></li>
+ <li><a href=/learn/css/css_layout/legacy_layout_methods>Legacy layout methods</a></li>
+ <li><a href=/learn/css/css_layout/supporting_older_browsers>Supporting older browsers</a></li>
+ <li><a href=/learn/css/css_layout/fundamental_layout_comprehension>Fundamental layout comprehension assessment</a></li>
 </ul>

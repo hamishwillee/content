@@ -40,10 +40,10 @@ tags:
   <li><code>body</code>: Any body that you want to add to your request: this can be a {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or {{domxref("ReadableStream")}} object. Note that a request using the <code>GET</code> or <code>HEAD</code> method cannot have a body.</li>
   <li><code>mode</code>: The mode you want to use for the request, e.g., <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, or <code>navigate</code>. The default is <code>cors</code>.</li>
   <li><code>credentials</code>: The request credentials you want to use for the request: <code>omit</code>, <code>same-origin</code>, or <code>include</code>. The default is <code>same-origin</code>.</li>
-  <li><code>cache</code>: The <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> you want to use for the request.</li>
+  <li><code>cache</code>: The <a href=/web/api/request/cache>cache mode</a> you want to use for the request.</li>
   <li><code>redirect</code>: The redirect mode to use: <code>follow</code>, <code>error</code>, or <code>manual</code>. The default is <code>follow</code>.</li>
   <li><code>referrer</code>: A {{domxref("USVString")}} specifying <code>no-referrer</code>, <code>client</code>, or a URL. The default is <code>about:client</code>.</li>
-  <li><code>integrity</code>: Contains the <a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> value of the request (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
+  <li><code>integrity</code>: Contains the <a href=/web/security/subresource_integrity>subresource integrity</a> value of the request (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
  </ul>
  </dd>
 </dl>
@@ -60,7 +60,7 @@ tags:
  <tbody>
   <tr>
    <td><code>TypeError</code></td>
-   <td>Since <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>, <code>Request()</code> will throw a TypeError if the URL has credentials, such as http://user:password@example.com.</td>
+   <td>Since <a href=/mozilla/firefox/releases/43>Firefox 43</a>, <code>Request()</code> will throw a TypeError if the URL has credentials, such as http://user:password@example.com.</td>
   </tr>
  </tbody>
 </table>
@@ -124,7 +124,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: This last usage is probably only useful in <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>
+<p><strong>Note</strong>: This last usage is probably only useful in <a href=/web/api/serviceworker_api>ServiceWorkers</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -153,7 +153,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+ <li><a href=/web/api/serviceworker_api>ServiceWorker API</a></li>
+ <li><a href=/web/http/access_control_cors>HTTP access control (CORS)</a></li>
+ <li><a href=/web/http>HTTP</a></li>
 </ul>

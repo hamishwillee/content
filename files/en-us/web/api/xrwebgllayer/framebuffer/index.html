@@ -21,7 +21,7 @@ tags:
 ---
 <p>{{securecontext_header}}{{APIRef("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">The read-only {{domxref("XRWebGLLayer")}} property <code><strong>framebuffer</strong></code> is an opaque {{domxref("WebGLFramebuffer")}} which is used to buffer the rendered image if the <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor">XR compositor</a> is being used. Otherwise, this property's value is <code>null</code>.</span> The opaque framebuffer is functionally nearly the same as a standard WebGL framebuffer, except for the differences covered in the section {{anch("How opaque framebuffers are special")}} below.</p>
+<p><span class="seoSummary">The read-only {{domxref("XRWebGLLayer")}} property <code><strong>framebuffer</strong></code> is an opaque {{domxref("WebGLFramebuffer")}} which is used to buffer the rendered image if the <a href=/web/api/webxr_device_api/fundamentals#The_WebXR_compositor>XR compositor</a> is being used. Otherwise, this property's value is <code>null</code>.</span> The opaque framebuffer is functionally nearly the same as a standard WebGL framebuffer, except for the differences covered in the section {{anch("How opaque framebuffers are special")}} below.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,7 +38,7 @@ tags:
 <p>The framebuffer represented by the <code>framebuffer</code> property is opaque. As such, its behavior is different in several ways from a standard WebGL context. These differences cause the opaque framebuffer to behave more like the default WebGL framebuffer:</p>
 
 <ul>
- <li>Opaque framebuffers <em>may</em> support <a href="/en-US/docs/Web/API/XRWebGLLayer/antialias">anti-aliasing</a>, even under WebGL 1.0, which don't normally do so.</li>
+ <li>Opaque framebuffers <em>may</em> support <a href=/web/api/xrwebgllayer/antialias>anti-aliasing</a>, even under WebGL 1.0, which don't normally do so.</li>
  <li>Opaque framebuffers' attachments (buffers and the like) can't be inspected or changed. Calling functions such as {{domxref("WebGLRenderingContext.framebufferTexture2D", "framebufferTexture2D()")}}, {{domxref("WebGLRenderingContext.framebufferRenderbuffer", "framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.deleteFramebuffer", "deleteFramebuffer()")}}, or {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter", "getFramebufferAttachmentParameter()")}} on an opaque framebuffer results in the WebGL error <code>INVALID_OPERATION</code> (0x0502).</li>
  <li>Opaque framebuffers are considered incomplete and are not available for rendering other than while executing the {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} callback. Attempting to clear, draw to, or read from the framebuffer results in a WebGL <code>INVALID_FRAMEBUFFER_OPERATION</code> error (0x0506). Calling {{domxref("WebGLRenderingContext.checkFramebufferStatus", "checkFramebufferStatus()")}} on the WebGL context from outside the animation frame callback causes the WebGL <code>FRAMEBUFFER_UNSUPPORTED</code> error (0x8CDD) to be reported.</li>
  <li>Opaque framebuffers initialized with the {{domxref("WebXRLayerInit.depth", "depth")}} property set to <code>false</code> will not have a depth buffer and will rely on the coordinates alone to determine distance.</li>
@@ -93,7 +93,7 @@ gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
+ <li><a href=/web/api/webxr_device_api>WebXR Device API</a></li>
  <li>{{domxref("WebGLLayerInit")}}</li>
  <li>{{domxref("WebGLContextAttributes")}}</li>
 </ul>

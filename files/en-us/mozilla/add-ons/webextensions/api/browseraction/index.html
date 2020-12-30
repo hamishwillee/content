@@ -15,13 +15,13 @@ tags:
 
 <p>Adds a button to the browser's toolbar.</p>
 
-<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a> is a button in the browser's toolbar.</p>
+<p>A <a href=/mozilla/add-ons/webextensions/browser_action>browser action</a> is a button in the browser's toolbar.</p>
 
 <p>You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via <a href="/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging">messages</a>.</p>
 
 <p>If you specify a popup, it will be shown — and the content will be loaded — when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.</p>
 
-<p>You can define most of a browser action's properties declaratively using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in the manifest.json.</p>
+<p>You can define most of a browser action's properties declaratively using the <code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code> key in the manifest.json.</p>
 
 <p>With the <code>browserAction</code> API, you can:</p>
 
@@ -36,7 +36,7 @@ tags:
  <dt>{{WebExtAPIRef("browserAction.ColorArray")}}</dt>
  <dd>An array of four integers in the range 0-255 defining an RGBA color.</dd>
  <dt>{{WebExtAPIRef("browserAction.ImageDataType")}}</dt>
- <dd>Pixel data for an image. Must be an <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object (for example, from a {{htmlelement("canvas")}} element).</dd>
+ <dd>Pixel data for an image. Must be an <code><a href=/web/api/imagedata>ImageData</a></code> object (for example, from a {{htmlelement("canvas")}} element).</dd>
 </dl>
 
 <h2 id="Functions">Functions</h2>
@@ -86,7 +86,7 @@ tags:
 <p>{{Compat("webextensions.api.browserAction")}}</p>
 
 <div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href=/template:webextchromecompat>WebExtChromeCompat</a> macro.</p>
 
 <p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
 </div>

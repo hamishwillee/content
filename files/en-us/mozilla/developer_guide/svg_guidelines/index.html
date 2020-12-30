@@ -13,7 +13,7 @@ tags:
 ---
 <h2 id="Pros_and_cons_of_SVG_for_images">Pros and cons of SVG for images</h2>
 
-<p>When used as a document format there is usually a compelling reason that makes SVG the only solution. When used as an <a href="/en-US/docs/Web/SVG/SVG_as_an_Image">image format</a>, it is sometimes less obvious whether it would be best to use SVG or a raster image format for any given image. The vector format SVG and raster formats like PNG both have their place. When choosing whether or not to use SVG it is best to understand the advantages and disadvantages of both.</p>
+<p>When used as a document format there is usually a compelling reason that makes SVG the only solution. When used as an <a href=/web/svg/svg_as_an_image>image format</a>, it is sometimes less obvious whether it would be best to use SVG or a raster image format for any given image. The vector format SVG and raster formats like PNG both have their place. When choosing whether or not to use SVG it is best to understand the advantages and disadvantages of both.</p>
 
 <dl>
  <dt>File size</dt>
@@ -81,7 +81,7 @@ tags:
 <ul>
  <li>The typical "Created with <em>editor</em>" comments</li>
  <li>Non-standard editor specific tags and attributes (<code>sketch:foo</code>, <code>illustrator:foo</code>, <code>sopodi:foo</code>, …)</li>
- <li>The <a href="/en-US/docs/Namespaces">XML namespace</a> definition that comes with the latter (<code>xmlns:sketch</code>, <code>xmlns:sopodi</code>, …)</li>
+ <li>The <a href=/namespaces>XML namespace</a> definition that comes with the latter (<code>xmlns:sketch</code>, <code>xmlns:sopodi</code>, …)</li>
 </ul>
 
 <h4 id="Other_metadata">Other metadata</h4>
@@ -92,13 +92,13 @@ tags:
 
 <h4 id="Avoid_the_use_of_CDATA_sections">Avoid the use of CDATA sections</h4>
 
-<p><a href="/en-US/docs/Web/API/CDATASection">CDATA sections</a> are used to avoid parsing some text as HTML. Most of time, CDATA isn't needed, for example, the content in <code>&lt;style&gt;</code> tags doesn't need to be wrapped in a CDATA section as the content inside the tag is already correctly parsed as CSS.</p>
+<p><a href=/web/api/cdatasection>CDATA sections</a> are used to avoid parsing some text as HTML. Most of time, CDATA isn't needed, for example, the content in <code>&lt;style&gt;</code> tags doesn't need to be wrapped in a CDATA section as the content inside the tag is already correctly parsed as CSS.</p>
 
 <h4 id="Invisible_shapes">Invisible shapes</h4>
 
 <p>There are two kinds of invisible shapes: The off-screen ones and the uncolored ones.</p>
 
-<p>The offscreen shapes are hard to spot, even with an automated tool, and are usually context aware. Those kinds of shapes are visible but off the <a href="/en-US/docs/Web/SVG/Attribute/viewBox">SVG view box</a>. Here's <a href="https://hg.mozilla.org/mozilla-central/diff/9fb143f3b36a/browser/themes/shared/heartbeat-star-lit.svg">an example</a> of a file with offscreen shapes.</p>
+<p>The offscreen shapes are hard to spot, even with an automated tool, and are usually context aware. Those kinds of shapes are visible but off the <a href=/web/svg/attribute/viewbox>SVG view box</a>. Here's <a href="https://hg.mozilla.org/mozilla-central/diff/9fb143f3b36a/browser/themes/shared/heartbeat-star-lit.svg">an example</a> of a file with offscreen shapes.</p>
 
 <p>On the other hand, the uncolored ones are easier to spot, since they usually come with styles making them invisible. They must meet two conditions: they must be devoid of any fill (or a transparent one) or stroke.</p>
 
@@ -112,7 +112,7 @@ tags:
  <li><code>enable-background</code> (unsupported by Gecko and now deprecated by the Filter Effects specification)</li>
  <li><code>id</code> (id on root element has no effect)</li>
  <li><code>xmlns:xlink</code> attribute when there are no <code>xlink:href</code> attributes used throughout the file</li>
- <li>Other unused <a href="/en-US/docs/Namespaces">XML Namespace</a> definitions</li>
+ <li>Other unused <a href=/namespaces>XML Namespace</a> definitions</li>
  <li><code>xml:space</code> when there is no text used in the file</li>
 </ul>
 
@@ -121,8 +121,8 @@ tags:
 <ul style="list-style-type: disc;">
  <li>Empty tags, this may be obvious, but those are sometimes found in SVGs</li>
  <li>Unreferenced ids (usually on gradient stops, but also on shapes or paths)</li>
- <li><code><a href="/en-US/docs/Web/SVG/Attribute/clip-rule">clip-rule</a></code> attribute when the element <u><strong>is not</strong></u> a descendant of a <code><a href="/en-US/docs/Web/SVG/Element/clipPath">&lt;clipPath&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a></code> attribute when the element <u><strong>is</strong></u> a descendant of a <code><a href="/en-US/docs/Web/SVG/Element/clipPath">&lt;clipPath&gt;</a></code></li>
+ <li><code><a href=/web/svg/attribute/clip-rule>clip-rule</a></code> attribute when the element <u><strong>is not</strong></u> a descendant of a <code><a href=/web/svg/element/clippath>&lt;clipPath&gt;</a></code></li>
+ <li><code><a href=/web/svg/attribute/fill-rule>fill-rule</a></code> attribute when the element <u><strong>is</strong></u> a descendant of a <code><a href=/web/svg/element/clippath>&lt;clipPath&gt;</a></code></li>
  <li>Unreferenced/Unused clip paths, masks or defs (<a href="https://hg.mozilla.org/mozilla-central/diff/2d38fecce226/toolkit/themes/shared/reader/RM-Plus-24x24.svg">example</a>)</li>
 </ul>
 
@@ -166,7 +166,7 @@ tags:
 <p>There's usually no need to set the default style value unless you're overriding a style. Here are some commonly seen examples:</p>
 
 <ul>
- <li><code>style="display: none;"</code> on <code><a href="/en-US/docs/Web/SVG/Element/defs">&lt;defs&gt;</a></code> elements (a <code>&lt;defs&gt;</code> element is hidden by default)</li>
+ <li><code>style="display: none;"</code> on <code><a href=/web/svg/element/defs>&lt;defs&gt;</a></code> elements (a <code>&lt;defs&gt;</code> element is hidden by default)</li>
  <li><code>type="text/css"</code> on <code>&lt;style&gt;</code> elements</li>
  <li><code>stroke: none</code> or <code>stroke-width: 0</code></li>
 </ul>
@@ -203,7 +203,7 @@ tags:
 
 <ul>
  <li>Avoid using a <code>&lt;use&gt;</code> tag when that <code>&lt;use&gt;</code> tag is being referenced only once in the whole file.</li>
- <li>Instead of using CSS/SVG <a href="/en-US/docs/Web/SVG/Attribute/transform">transforms</a>, apply directly the transform on the path/shape definition.</li>
+ <li>Instead of using CSS/SVG <a href=/web/svg/attribute/transform>transforms</a>, apply directly the transform on the path/shape definition.</li>
 </ul>
 
 <h3 id="Tools">Tools</h3>

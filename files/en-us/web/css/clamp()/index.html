@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>clamp()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> clamps a value between an upper and lower bound. <code>clamp()</code> enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. The <code>clamp()</code> function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.</p>
+<p>The <strong><code>clamp()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_functions>function</a> clamps a value between an upper and lower bound. <code>clamp()</code> enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. The <code>clamp()</code> function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.</p>
 
 <p><code>clamp(MIN, VAL, MAX)</code> is resolved as <code>{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))</code></p>
 
@@ -53,13 +53,13 @@ tags:
 
 <h3 id="min_max_and_clamp_comparison">min, max, and clamp comparison</h3>
 
-<p>In this example we have a simple responsive example that makes use of <code><a href="/en-US/docs/Web/CSS/min">min()</a></code>, <code><a href="/en-US/docs/Web/CSS/max">max()</a></code>, and <code>clamp()</code> for some of the sizes.</p>
+<p>In this example we have a simple responsive example that makes use of <code><a href=/web/css/min>min()</a></code>, <code><a href=/web/css/max>max()</a></code>, and <code>clamp()</code> for some of the sizes.</p>
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a></code> element's <code><a href="/en-US/docs/Web/CSS/width">width</a></code> is set as <code>min(1000px, calc(70% + 100px))</code>. This means that the width will be set at <code>1000px</code>, unless the result of <code>calc(70% + 100px)</code> is less than <code>1000px</code>, in which case it will be set to that value instead. <code>min()</code> allows you set a maximum value.</p>
+<p>The <code><a href=/web/html/element/body>&lt;body&gt;</a></code> element's <code><a href=/web/css/width>width</a></code> is set as <code>min(1000px, calc(70% + 100px))</code>. This means that the width will be set at <code>1000px</code>, unless the result of <code>calc(70% + 100px)</code> is less than <code>1000px</code>, in which case it will be set to that value instead. <code>min()</code> allows you set a maximum value.</p>
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> element's <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code> is set as <code>max(1.2rem, 1.2vw)</code>. This means that the <code>font-size</code> will be set at <code>1.2rem</code>, unless the computed value of <code>1.2vw</code> is greater than that of <code>1.2rem</code>, in which case it will be set to that value instead. <code>max()</code> allows you set a minimum value, which in cases like this is useful for accessibility purposes.</p>
+<p>The <code><a href=/web/html/element/p>&lt;p&gt;</a></code> element's <code><a href=/web/css/font-size>font-size</a></code> is set as <code>max(1.2rem, 1.2vw)</code>. This means that the <code>font-size</code> will be set at <code>1.2rem</code>, unless the computed value of <code>1.2vw</code> is greater than that of <code>1.2rem</code>, in which case it will be set to that value instead. <code>max()</code> allows you set a minimum value, which in cases like this is useful for accessibility purposes.</p>
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element's <code>font-size</code> is set as <code>clamp(1.8rem, 2.5vw, 2.8rem)</code>. This means that the <code>font-size</code> will be set at <code>1.8rem</code>, until the computed value of <code>2.5vw</code> becomes greater than that of <code>1.8rem</code>. At this point, <code>font-size</code> will be set at <code>2.5vw</code>, until <code>2.5vw</code>'s computed value becomes greater than that of <code>2.8rem</code>. At this point, the <code>font-size</code> will be set at <code>2.8rem</code>. <code>clamp()</code> allows you to set a minimum and maximum value.</p>
+<p>The <code><a href=/web/html/element/heading_elements>&lt;h1&gt;</a></code> element's <code>font-size</code> is set as <code>clamp(1.8rem, 2.5vw, 2.8rem)</code>. This means that the <code>font-size</code> will be set at <code>1.8rem</code>, until the computed value of <code>2.5vw</code> becomes greater than that of <code>1.8rem</code>. At this point, <code>font-size</code> will be set at <code>2.5vw</code>, until <code>2.5vw</code>'s computed value becomes greater than that of <code>2.8rem</code>. At this point, the <code>font-size</code> will be set at <code>2.8rem</code>. <code>clamp()</code> allows you to set a minimum and maximum value.</p>
 
 <p>You find this <a href="https://mdn.github.io/css-examples/min-max-clamp/">example live on GitHub</a>, if you want to play around with it.</p>
 
@@ -120,5 +120,5 @@ p {
  <li>{{CSSxRef("calc")}}</li>
  <li>{{CSSxRef("max")}}</li>
  <li>{{CSSxRef("min")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
+ <li><a href=/learn/css/introduction_to_css/values_and_units>CSS Values</a></li>
 </ul>

@@ -28,7 +28,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML (see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an understanding of <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">what accessibility is</a>.</td>
+   <td>Basic computer literacy, a basic understanding of HTML (see <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an understanding of <a href=/learn/accessibility/what_is_accessibility>what accessibility is</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -62,7 +62,7 @@ tags:
 <p>Let's get on and look at accessible HTML in more detail.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screen readers guide</a> for more details.</p>
+<p><strong>Note</strong>: It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our <a href=/learn/tools_and_testing/cross_browser_testing/accessibility#Screenreaders>Screen readers guide</a> for more details.</p>
 </div>
 
 <h2 id="Good_semantics">Good semantics</h2>
@@ -253,7 +253,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>If you try our more modern structure example with a screen reader, you'll see that the layout markup no longer gets in the way and confuses the content readout. It is also much leaner and smaller in terms of code size, which means easier to maintain code, and less bandwidth for the user to download (particularly prevalent for those on slow connections).</p>
 
-<p>Another consideration when creating layouts is using HTML5 semantic elements as seen in the above example (see <a href="/en-US/docs/Web/HTML/Element#Content_sectioning">content sectioning</a>) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give user extra clues about the content they are navigating (see <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Screen Reader Support for new HTML5 Section Elements</a> for an idea of what screen reader support is like).</p>
+<p>Another consideration when creating layouts is using HTML5 semantic elements as seen in the above example (see <a href=/web/html/element#Content_sectioning>content sectioning</a>) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give user extra clues about the content they are navigating (see <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Screen Reader Support for new HTML5 Section Elements</a> for an idea of what screen reader support is like).</p>
 
 <div class="note">
 <p><strong>Note</strong>: In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.</p>
@@ -268,13 +268,13 @@ This is the second subsection of my content. I think is more interesting than th
 <p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
 
 <div class="notecard note">
-<p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#Show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
+<p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href=/tools/accessibility_inspector#Show_web_page_tabbing_order>Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
 </div>
 
 <p>You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls, for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Different browsers may have different keyboard control options available. See <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility">Using native keyboard accessibility</a> for more details.</p>
+<p><strong>Note</strong>: Different browsers may have different keyboard control options available. See <a href=/learn/tools_and_testing/cross_browser_testing/accessibility#Using_native_keyboard_accessibility>Using native keyboard accessibility</a> for more details.</p>
 </div>
 
 <p>You essentially get this behavior for free, just by using the appropriate elements, e.g.</p>
@@ -348,7 +348,7 @@ This is the second subsection of my content. I think is more interesting than th
   <span class="punctuation token">}</span>
 <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
+<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href=/web/api/keyboardevent/keycode>keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href=/web/api/document/activeelement>activeElement</a></code> which gives us the element that is currently focused on the page.</p>
 
 <p>This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. <strong>Better to just use the right element for the right job in the first place.</strong></p>
 
@@ -369,7 +369,7 @@ This is the second subsection of my content. I think is more interesting than th
 <pre class="brush: html example-bad notranslate">&lt;p&gt;Whales are really awesome creatures. To find more out about whales, &lt;a href="whales.html"&gt;click here&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more about link implementation and best practices in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a> article. You can also see some good and bad examples at <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
+<p><strong>Note</strong>: You can find a lot more about link implementation and best practices in our <a href=/learn/html/introduction_to_html/creating_hyperlinks>Creating hyperlinks</a> article. You can also see some good and bad examples at <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
 </div>
 
 <p>Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:</p>
@@ -395,7 +395,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p><strong>Note</strong>: you can see some good and bad form examples in <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>.</p>
 </div>
 
-<p>You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the <a href="/en-US/docs/Tools/Accessibility_inspector">Firefox Accessibility Inspector</a>, in the following video:</p>
+<p>You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the <a href=/tools/accessibility_inspector>Firefox Accessibility Inspector</a>, in the following video:</p>
 
 <p>{{EmbedYouTube("YhlAVlfH0rQ")}}</p>
 
@@ -436,12 +436,12 @@ This is the second subsection of my content. I think is more interesting than th
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a> article for more details about accessible data tables.</p>
+<p><strong>Note</strong>: See our <a href=/learn/html/tables/advanced>HTML table advanced features and accessibility</a> article for more details about accessible data tables.</p>
 </div>
 
 <h2 id="Text_alternatives">Text alternatives</h2>
 
-<p>Whereas textual content is inherently accessible, the same cannot necessarily be said for multimedia content — image and video content cannot be seen by visually-impaired people, and audio content cannot be heard by hearing-impaired people. We cover video and audio content in detail in the <a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a>, but for this article we'll look at accessibility for the humble {{htmlelement("img")}} element.</p>
+<p>Whereas textual content is inherently accessible, the same cannot necessarily be said for multimedia content — image and video content cannot be seen by visually-impaired people, and audio content cannot be heard by hearing-impaired people. We cover video and audio content in detail in the <a href=/learn/accessibility/multimedia>Accessible multimedia</a>, but for this article we'll look at accessibility for the humble {{htmlelement("img")}} element.</p>
 
 <p>We have a simple example written up, <a href="https://mdn.github.io/learning-area/accessibility/html/accessible-image.html">accessible-image.html</a>, which features four copies of the same image:</p>
 
@@ -472,7 +472,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorative, it is better to write an empty text as a value for <code>alt</code> attribute (see <a href="#Empty_alt_attributes">Empty alt attributes</a>) or to just include them in the page as CSS background images.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a> and <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a> for a lot more information about image implementation and best practices.</p>
+<p><strong>Note</strong>: Read <a href=/learn/html/multimedia_and_embedding/images_in_html>Images in HTML</a> and <a href=/learn/html/multimedia_and_embedding/responsive_images>Responsive images</a> for a lot more information about image implementation and best practices.</p>
 </div>
 
 <p>If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a <code>title</code> attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.</p>
@@ -488,7 +488,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>In this case, we are not using the <code>alt</code> attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an <code>id</code>, and then used the <code>aria-labelledby</code> attribute to refer to that <code>id</code>, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with <code>alt</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <code>aria-labelledby</code> is part of the <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed. To find out more about how it works, read our <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA Basics</a> article.</p>
+<p><strong>Note</strong>: <code>aria-labelledby</code> is part of the <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed. To find out more about how it works, read our <a href=/learn/accessibility/wai-aria_basics>WAI-ARIA Basics</a> article.</p>
 </div>
 
 <h3 id="Other_text_alternative_mechanisms">Other text alternative mechanisms</h3>
@@ -497,7 +497,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <pre class="brush: html notranslate">&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
 
-<p>This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see <a href="/en-US/docs/Learn/Accessibility/HTML#Accessible_data_tables">Accessible data tables</a>). However, <code>longdesc</code> is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.</p>
+<p>This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see <a href=/learn/accessibility/html#Accessible_data_tables>Accessible data tables</a>). However, <code>longdesc</code> is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.</p>
 
 <p>HTML5 includes two new elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which are supposed to associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:</p>
 
@@ -525,13 +525,13 @@ This is the second subsection of my content. I think is more interesting than th
 
 <h2 id="More_on_links">More on links</h2>
 
-<p>Links ( the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> element with an <code>href</code> attribute ), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.</p>
+<p>Links ( the <code><a href=/web/html/element/a>&lt;a&gt;</a></code> element with an <code>href</code> attribute ), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.</p>
 
 <h3 id="Link_styling">Link styling</h3>
 
-<p>By default, links are visually different from other text in both color and <a href="/en-US/docs/Web/CSS/text-decoration">text-decoration</a>, with links being blue and underlined by default, purple and underlined if visited, and with a <a href="/en-US/docs/Web/CSS/:focus">focus-ring</a> when they receive keyboard focus. </p>
+<p>By default, links are visually different from other text in both color and <a href=/web/css/text-decoration>text-decoration</a>, with links being blue and underlined by default, purple and underlined if visited, and with a <a href=/web/css/:focus>focus-ring</a> when they receive keyboard focus. </p>
 
-<p>Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color (<a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">a 4.5:1 contrast</a>). In addition, links should visually be significantly different from non-linking text. With a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4:5 contrast between all those state colors and the background color.</p>
+<p>Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color (<a href=/web/accessibility/understanding_wcag/perceivable/color_contrast>a 4.5:1 contrast</a>). In addition, links should visually be significantly different from non-linking text. With a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4:5 contrast between all those state colors and the background color.</p>
 
 <h3 id="onclick_events"><code>onclick</code> events</h3>
 
@@ -559,7 +559,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <ul>
  <li><a href="https://webaim.org/techniques/hypertext/hypertext_links">WebAIM: Links and Hypertext - Hypertext Links</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways">MDN Understanding WCAG, Guideline 3.2 explanations</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways>MDN Understanding WCAG, Guideline 3.2 explanations</a></li>
  <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">G200: Opening new windows and tabs from a link only when necessary | W3C Techniques for WCAG 2.0</a></li>
  <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G201.html">G201: Giving users advanced warning when opening a new window | W3C Techniques for WCAG 2.0</a></li>
 </ul>
@@ -573,7 +573,7 @@ This is the second subsection of my content. I think is more interesting than th
 <ul>
  <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
  <li><a href="https://www.a11yproject.com/posts/2013-05-11-skip-nav-links/">How–to: Use Skip Navigation links - The A11Y Project</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN Understanding WCAG, Guideline 2.4 explanations</a></li>
+ <li><a href=/web/accessibility/understanding_wcag/operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are>MDN Understanding WCAG, Guideline 2.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -589,7 +589,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? See <a href="/en-US/docs/Learn/Accessibility/Test_your_skills:_HTML_accessibility">Test your skills: HTML Accessibility</a> to verify that you've retained this information before you move on.</p>
+<p>You've reached the end of this article, but can you remember the most important information? See <a href=/learn/accessibility/test_your_skills:_html_accessibility>Test your skills: HTML Accessibility</a> to verify that you've retained this information before you move on.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -600,11 +600,11 @@ This is the second subsection of my content. I think is more interesting than th
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
+ <li><a href=/learn/accessibility/what_is_accessibility>What is accessibility?</a></li>
+ <li><a href=/learn/accessibility/html>HTML: A good basis for accessibility</a></li>
+ <li><a href=/learn/accessibility/css_and_javascript>CSS and JavaScript accessibility best practices</a></li>
+ <li><a href=/learn/accessibility/wai-aria_basics>WAI-ARIA basics</a></li>
+ <li><a href=/learn/accessibility/multimedia>Accessible multimedia</a></li>
+ <li><a href=/learn/accessibility/mobile>Mobile accessibility</a></li>
+ <li><a href=/learn/accessibility/accessibility_troubleshooting>Accessibility troubleshooting</a></li>
 </ul>

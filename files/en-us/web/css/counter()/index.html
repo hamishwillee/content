@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>The <strong><code>counter()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> returns a string representing the current value of the named counter, if there is one. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported.</p>
+<p>The <strong><code>counter()</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/css_functions>function</a> returns a string representing the current value of the named counter, if there is one. It is generally used with <a href=/web/css/pseudo-elements>pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href=/web/css/string>&lt;string&gt;</a></code> value is supported.</p>
 
 <pre class="brush: css notranslate">/* Simple usage */
 counter(countername);
@@ -18,7 +18,7 @@ counter(countername);
 /* changing the counter display */
 counter(countername, upper-roman)</pre>
 
-<p>A <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">counter</a> has no visible effect by itself. The <code>counter()</code> function (and {{cssxref("counters", "counters()")}} function) is what makes it useful by returning developer defined strings (or images).</p>
+<p>A <a href=/web/css/css_lists_and_counters/using_css_counters>counter</a> has no visible effect by itself. The <code>counter()</code> function (and {{cssxref("counters", "counters()")}} function) is what makes it useful by returning developer defined strings (or images).</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> The <code>counter()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</p>
@@ -34,7 +34,7 @@ counter(countername, upper-roman)</pre>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
  <dd>A name identifying the counter, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and  {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
  <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
- <dd>A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols()")}} function, where a counter style name is a <code>numeric</code>, <code>alphabetic</code>, or <code>symbolic</code> simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">predefined counter style</a>. If omitted, the counter-style defaults to <code>decimal</code>.</dd>
+ <dd>A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols()")}} function, where a counter style name is a <code>numeric</code>, <code>alphabetic</code>, or <code>symbolic</code> simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href=/web/css/css_counter_styles>predefined counter style</a>. If omitted, the counter-style defaults to <code>decimal</code>.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -128,10 +128,10 @@ li::after {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS Counters</a></li>
+ <li><a href=/web/css/css_lists_and_counters/using_css_counters>Using CSS Counters</a></li>
  <li>{{cssxref("counter-reset")}}</li>
  <li>{{cssxref("counter-set")}}</li>
  <li>{{cssxref("counter-increment")}}</li>
  <li>{{cssxref("@counter-style")}}</li>
- <li>CSS <code><a href="/en-US/docs/Web/CSS/counters">counters()</a></code> function</li>
+ <li>CSS <code><a href=/web/css/counters>counters()</a></code> function</li>
 </ul>

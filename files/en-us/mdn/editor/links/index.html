@@ -13,7 +13,7 @@ tags:
 <p id="Creating_and_editing_links"><span class="seoSummary">Links are a crucial component to any wiki, not only among many documents, but within a single document, and MDN relies heavily on them. Fortunately, links are also very easy to create, even though there are <em>lots</em> of ways to make them!</span></p>
 
 <div class="note">
-<p><strong>Note:</strong> Please note that we have particular <a href="/en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide#Links">preferred practices for linking</a>; these are described in the <a href="/en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide">MDN writing style guide</a>.</p>
+<p><strong>Note:</strong> Please note that we have particular <a href=/mdn/contribute/guidelines/writing_style_guide#Links>preferred practices for linking</a>; these are described in the <a href=/mdn/contribute/guidelines/writing_style_guide>MDN writing style guide</a>.</p>
 </div>
 
 <h2 id="Using_the_toolbar">Using the toolbar</h2>
@@ -65,12 +65,12 @@ tags:
 <p>Here, of the articles suggested as possible matches. "Arrays" looks like a good choice, so we can choose that. This automatically fills in the URL field, so you can just click <strong>OK</strong> and the text gets turned into a link, like this:</p>
 
 <blockquote>
-<p>You may find it useful to use JavaScript <a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">arrays</a> when working on this project.</p>
+<p>You may find it useful to use JavaScript <a href=/learn/javascript/first_steps/arrays>arrays</a> when working on this project.</p>
 </blockquote>
 
 <h2 id="Using_link_macros">Using link macros</h2>
 
-<p>MDN makes heavy use of <a href="/en-US/docs/Project:MDN/Contributing/Editor_guide#Using_macros">macros</a> to automatically create links to the appropriate content given a term, while also styling the link according to our style guide for you. Consider this: our style guide indicates that API term names, HTML elements and attributes, CSS properties, function names, and the like should be styled with the {{HTMLElement("code")}} element (just like that, in fact). They should also, usually, be links to the appropriate page on MDN.</p>
+<p>MDN makes heavy use of <a href=/project:mdn/contributing/editor_guide#Using_macros>macros</a> to automatically create links to the appropriate content given a term, while also styling the link according to our style guide for you. Consider this: our style guide indicates that API term names, HTML elements and attributes, CSS properties, function names, and the like should be styled with the {{HTMLElement("code")}} element (just like that, in fact). They should also, usually, be links to the appropriate page on MDN.</p>
 
 <p>Using macros to create these links takes a little getting used to but offers many benefits:</p>
 
@@ -80,7 +80,7 @@ tags:
  <li>Appropriate tooltips can be created for you, too.</li>
 </ul>
 
-<p>There are lots of these macros, and we won't look at them all here. Instead, we'll look at a few specific examples of the most common ones. For a more complete list, see the "<a href="/en-US/docs/Project:MDN/Contributing/Custom_macros#Creating_hyperlinks">Creating hyperlinks</a>" section in our <a href="/en-US/docs/Project:MDN/Contributing/Custom_macros">Custom macros for MDN</a> guide. It's worth noting that you can always look at the <a href="/en-US/docs/Project:Introduction_to_KumaScript">KumaScript</a> source code for any of these macros; most have comments at the top that explain how they work and what the various parameters are, if any.</p>
+<p>There are lots of these macros, and we won't look at them all here. Instead, we'll look at a few specific examples of the most common ones. For a more complete list, see the "<a href=/project:mdn/contributing/custom_macros#Creating_hyperlinks>Creating hyperlinks</a>" section in our <a href=/project:mdn/contributing/custom_macros>Custom macros for MDN</a> guide. It's worth noting that you can always look at the <a href=/project:introduction_to_kumascript>KumaScript</a> source code for any of these macros; most have comments at the top that explain how they work and what the various parameters are, if any.</p>
 
 <h3 id="Linking_to_documentation_for_APIs">Linking to documentation for APIs</h3>
 
@@ -145,7 +145,7 @@ tags:
 
 <h3 id="Linking_to_Mozilla_preference_documentation">Linking to Mozilla preference documentation</h3>
 
-<p>To insert the name of a Mozilla preference and make it link to the corresponding page in the <a href="/en-US/docs/Mozilla/Preferences/Preference_reference">Preference reference</a>, use the {{TemplateLink("pref")}} macro. This accepts one parameter: the full name of the preference you wish to link to. For example, you can use <code>\{{pref("javascript.options.showInConsole")}}</code> to create this: {{pref("javascript.options.showInConsole")}}.</p>
+<p>To insert the name of a Mozilla preference and make it link to the corresponding page in the <a href=/mozilla/preferences/preference_reference>Preference reference</a>, use the {{TemplateLink("pref")}} macro. This accepts one parameter: the full name of the preference you wish to link to. For example, you can use <code>\{{pref("javascript.options.showInConsole")}}</code> to create this: {{pref("javascript.options.showInConsole")}}.</p>
 
 <h3 id="Linking_to_a_Mozilla_source_file">Linking to a Mozilla source file</h3>
 
@@ -154,12 +154,12 @@ tags:
 <p>You may also, optionally, specify alternative text to use for the link. For example, you can use \{{source("browser/Makefile.in", "the browser's makefile")}} to get the result: {{source("browser/Makefile.in", "the browser's makefile")}}.</p>
 
 <div class="note">
-<p>Please look at the {{anch("Using macros")}} documentation if you're interested in learning more about using macros, and check out our <a href="/en-US/docs/Project:MDN/Kuma/KumaScript_guide">KumaScript</a> documentation to learn more about the macro system itself.</p>
+<p>Please look at the {{anch("Using macros")}} documentation if you're interested in learning more about using macros, and check out our <a href=/project:mdn/kuma/kumascript_guide>KumaScript</a> documentation to learn more about the macro system itself.</p>
 </div>
 
 <h2 id="Linking_to_recommended_content">Linking to recommended content</h2>
 
-<p>If you wish to create a list of related pages, or other recommended reading material, you should do so by creating a quicklinks box in the sidebar; this mechanism is replacing our old "See also" headings at the end of articles. For details on how to create quicklinks boxes, see <a href="/en-US/docs/MDN/Contribute/Structures/Quicklinks">Quicklinks</a>.</p>
+<p>If you wish to create a list of related pages, or other recommended reading material, you should do so by creating a quicklinks box in the sidebar; this mechanism is replacing our old "See also" headings at the end of articles. For details on how to create quicklinks boxes, see <a href=/mdn/contribute/structures/quicklinks>Quicklinks</a>.</p>
 
 <h2 id="URL_schemes">URL schemes</h2>
 

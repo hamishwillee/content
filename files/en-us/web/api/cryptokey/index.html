@@ -16,9 +16,9 @@ tags:
 ---
 <div>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</div>
 
-<p>The <strong><code>CryptoKey</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.</p>
+<p>The <strong><code>CryptoKey</code></strong> interface of the <a href=/web/api/web_crypto_api>Web Crypto API</a> represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.</p>
 
-<p>For security reasons, the <code>CryptoKey</code> interface can only be used in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>.</p>
+<p>For security reasons, the <code>CryptoKey</code> interface can only be used in a <a href=/web/security/secure_contexts>secure context</a>.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -29,17 +29,17 @@ tags:
 
  <ul>
   <li><code>"secret"</code>: This key is a secret key for use with a {{Glossary("Symmetric-key cryptography", "symmetric algorithm")}}.</li>
-  <li><code>"private"</code>: This key is the private half of an {{Glossary("Public-key cryptography", "asymmetric algorithm's")}} <code><a href="/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair</a></code>.</li>
-  <li><code>"public"</code>: This key is the public half of an {{Glossary("Public-key cryptography", "asymmetric algorithm's")}} <code><a href="/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair</a></code>.</li>
+  <li><code>"private"</code>: This key is the private half of an {{Glossary("Public-key cryptography", "asymmetric algorithm's")}} <code><a href=/web/api/cryptokeypair>CryptoKeyPair</a></code>.</li>
+  <li><code>"public"</code>: This key is the public half of an {{Glossary("Public-key cryptography", "asymmetric algorithm's")}} <code><a href=/web/api/cryptokeypair>CryptoKeyPair</a></code>.</li>
  </ul>
  </dd>
  <dt><code>CryptoKey.extractable</code></dt>
  <dd>
- <p>{{jsxref("Boolean")}} indicating whether or not the key may be extracted using <a href="/en-US/docs/Web/API/SubtleCrypto/exportKey" title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>SubtleCrypto.exportKey()</code></a> or <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey" title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>SubtleCrypto.wrapKey()</code></a>.</p>
+ <p>{{jsxref("Boolean")}} indicating whether or not the key may be extracted using <a href=/web/api/subtlecrypto/exportkey title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>SubtleCrypto.exportKey()</code></a> or <a href=/web/api/subtlecrypto/wrapkey title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>SubtleCrypto.wrapKey()</code></a>.</p>
 
  <ul>
   <li><code>true</code>: The key may be extracted.</li>
-  <li><code>false</code> The key may not be extracted. <a href="/en-US/docs/Web/API/SubtleCrypto/exportKey" title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>exportKey()</code></a> or <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey" title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>wrapKey()</code></a> will throw an exception if used to extract this key.</li>
+  <li><code>false</code> The key may not be extracted. <a href=/web/api/subtlecrypto/exportkey title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>exportKey()</code></a> or <a href=/web/api/subtlecrypto/wrapkey title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>wrapKey()</code></a> will throw an exception if used to extract this key.</li>
  </ul>
  </dd>
  <dt><code>CryptoKey.algorithm</code></dt>
@@ -47,10 +47,10 @@ tags:
  <p>An object describing the algorithm for which this key can be used and any associated extra parameters.</p>
 
  <ul>
-  <li><code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code> if the algorithm is any of the AES variants.</li>
-  <li><code><a href="/en-US/docs/Web/API/RsaHashedKeyGenParams">RsaHashedKeyGenParams</a></code> if the algorithm is any of the RSA variants.</li>
-  <li><code><a href="/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams</a></code> if the algorithm is any of the EC variants.</li>
-  <li><code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> if the algorithm is HMAC.
+  <li><code><a href=/web/api/aeskeygenparams>AesKeyGenParams</a></code> if the algorithm is any of the AES variants.</li>
+  <li><code><a href=/web/api/rsahashedkeygenparams>RsaHashedKeyGenParams</a></code> if the algorithm is any of the RSA variants.</li>
+  <li><code><a href=/web/api/eckeygenparams>EcKeyGenParams</a></code> if the algorithm is any of the EC variants.</li>
+  <li><code><a href=/web/api/hmackeygenparams>HmacKeyGenParams</a></code> if the algorithm is HMAC.
    <ul>
    </ul>
   </li>
@@ -78,16 +78,16 @@ tags:
 <p>The examples for <code>SubtleCrypto</code> methods often use <code>CryptoKey</code> objects. For example:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">SubtleCrypto.generateKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">SubtleCrypto.encrypt()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">SubtleCrypto.decrypt()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/sign">SubtleCrypto.sign()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/verify">SubtleCrypto.verify()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/generatekey>SubtleCrypto.generateKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/derivekey>SubtleCrypto.deriveKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/importkey>SubtleCrypto.importKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/exportkey>SubtleCrypto.exportKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/wrapkey>SubtleCrypto.wrapKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/unwrapkey>SubtleCrypto.unwrapKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/encrypt>SubtleCrypto.encrypt()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/decrypt>SubtleCrypto.decrypt()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/sign>SubtleCrypto.sign()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/verify>SubtleCrypto.verify()</a></code></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
@@ -114,8 +114,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a></li>
- <li><a href="/en-US/docs/Web/Security">Web security</a></li>
- <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and incormation security</a></li>
+ <li><a href=/web/api/web_crypto_api>Web Crypto API</a></li>
+ <li><a href=/web/security>Web security</a></li>
+ <li><a href=/web/privacy>Privacy, permissions, and incormation security</a></li>
  <li>{{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.</li>
 </ul>

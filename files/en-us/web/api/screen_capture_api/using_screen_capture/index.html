@@ -18,7 +18,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> conference session.</span></p>
+<p><span class="seoSummary">In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a <a href=/web/api/webrtc_api>WebRTC</a> conference session.</span></p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> It may be useful to note that recent versions of the <a href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js shim</a> include implementations of <code>getDisplayMedia()</code> to enable screen sharing on browsers that support it but do not implement the current standard API. This works with at least Chrome, Edge, and Firefox.</p>
@@ -42,7 +42,7 @@ tags:
   return captureStream;
 }</pre>
 
-<p>You can write this code either using an asynchronous function and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.</p>
+<p>You can write this code either using an asynchronous function and the <code><a href=/web/javascript/reference/operators/await>await</a></code> operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.</p>
 
 <figure>
 <figcaption><strong><em>Starting screen capture: <code>Promise</code> style</em></strong>
@@ -122,7 +122,7 @@ tags:
 
 <p>{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).</p>
 
-<p>Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.</p>
+<p>Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage(/web/api/mediadevices/getdisplaymedia, "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.</p>
 
 <p>To request that the screen be shared with included audio, the options passed into <code>getDisplayMedia()</code> might look like this:</p>
 
@@ -151,7 +151,7 @@ tags:
 <p>Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
+<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href=/web/api/mediatrackconstraints/cursor#Browser_compatibility>has limited support</a>.</p>
 </div>
 
 <h2 id="Using_the_captured_stream">Using the captured stream</h2>
@@ -193,7 +193,7 @@ tags:
 <p>The object <code>displayMediaOptions</code> contains the {{domxref("MediaStreamConstraints")}} to pass into <code>getDisplayMedia()</code>; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to <code>always</code>, indicating that the mouse cursor should always be included in the captured media.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
+<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href=/web/api/mediatrackconstraints/cursor#Browser_compatibility>has limited support</a>.</p>
 </div>
 
 <p>Finally, event listeners are established to detect user clicks on the start and stop buttons.</p>
@@ -253,7 +253,7 @@ console.info = msg =&gt; logElem.innerHTML += `&lt;span class="info"&gt;${msg}&l
 
 <p>The <code>dumpOptionsInfo()</code> function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.</p>
 
-<p>If any of that fails, the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">catch()</a></code> clause outputs an error message to the log box.</p>
+<p>If any of that fails, the <code><a href=/web/javascript/reference/statements/try...catch>catch()</a></code> clause outputs an error message to the log box.</p>
 
 <h5 id="Stopping_display_capture">Stopping display capture</h5>
 
@@ -338,7 +338,7 @@ Click the Start Capture button to begin.&lt;/p&gt;
 
 <h2 id="Security_2">Security</h2>
 
-<p>In order to function when <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> is enabled, you will need the <code>display-capture</code> permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the <code>&lt;iframe&gt;</code> element's {{htmlattrxref("allow", "iframe")}} attribute.</p>
+<p>In order to function when <a href=/web/http/feature_policy>Feature Policy</a> is enabled, you will need the <code>display-capture</code> permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the <code>&lt;iframe&gt;</code> element's {{htmlattrxref("allow", "iframe")}} attribute.</p>
 
 <p>For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:</p>
 
@@ -353,9 +353,9 @@ Click the Start Capture button to begin.&lt;/p&gt;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking still photos with WebRTC</a></li>
+ <li><a href=/web/api/screen_capture_api>Screen Capture API</a></li>
+ <li><a href=/web/api/media_streams_api>Media Capture and Streams API</a></li>
+ <li><a href=/web/api/webrtc_api/taking_still_photos>Taking still photos with WebRTC</a></li>
  <li>{{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}</li>
 </ul>
 </figure>

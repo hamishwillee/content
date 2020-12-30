@@ -48,9 +48,9 @@ tags:
  <dd>
  <p>An object containing string keys and {{jsxref("Float32Array")}} values. For each custom {{domxref("AudioParam")}} defined using the {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the key in the object is a <code>name</code> of that {{domxref("AudioParam")}}, and the value is a {{jsxref("Float32Array")}}. The values of the array are calculated by taking scheduled automation events into consideration.</p>
 
- <p>If the automation rate of the parameter is <code><a href="/en-US/docs/Web/API/AudioParam#a-rate">"a-rate"</a></code>, the array will contain 128 values — one for each frame in the current audio block. If there's no automation happening during the time represented by the current block, the array may contain a single value that is constant for the entire block, instead of 128 identical values.</p>
+ <p>If the automation rate of the parameter is <code><a href=/web/api/audioparam#a-rate>"a-rate"</a></code>, the array will contain 128 values — one for each frame in the current audio block. If there's no automation happening during the time represented by the current block, the array may contain a single value that is constant for the entire block, instead of 128 identical values.</p>
 
- <p>If the automation rate is <code><a href="/en-US/docs/Web/API/AudioParam#k-rate">"k-rate"</a></code>, the array will contain a single value, which is to be used for each of 128 frames.</p>
+ <p>If the automation rate is <code><a href=/web/api/audioparam#k-rate>"k-rate"</a></code>, the array will contain a single value, which is to be used for each of 128 frames.</p>
  </dd>
 </dl>
 
@@ -144,5 +144,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href=/web/api/web_audio_api/using_web_audio_api>Using the Web Audio API</a></li>
 </ul>

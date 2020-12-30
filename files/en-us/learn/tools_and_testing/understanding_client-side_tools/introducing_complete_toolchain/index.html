@@ -21,7 +21,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.</td>
+   <td>Familiarity with the core <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> languages.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -50,11 +50,11 @@ tags:
 
 <ul>
  <li><a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>, a <a href="https://reactjs.org">React</a>-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.</li>
- <li>The latest built-in JavaScript features (at time of writing), such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code>.</li>
+ <li>The latest built-in JavaScript features (at time of writing), such as <code><a href=/web/javascript/reference/statements/import>import</a></code>.</li>
  <li>Useful development tools such as <a href="https://prettier.io/">Prettier</a> for formatting and <a href="https://eslint.org/">eslint</a> for linting.</li>
  <li><a href="https://postcss.org/">PostCSS</a> to provide CSS nesting capabilities.</li>
  <li><a href="https://parceljs.org/">Parcel</a> to build and minify our code, and to write a bunch of configuration file content automatically for us.</li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/GitHub">GitHub</a> to manage our source code control.</li>
+ <li><a href=/learn/tools_and_testing/github>GitHub</a> to manage our source code control.</li>
  <li><a href="https://www.netlify.com/">Netlify</a> to automate our deployment process.</li>
 </ul>
 
@@ -89,7 +89,7 @@ tags:
 
 <h2 id="Three_stages_of_tools">Three stages of tools</h2>
 
-<p>As we talked about in <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview">Chapter 1</a>, the toolchain will be structured into the following phases:</p>
+<p>As we talked about in <a href=/learn/tools_and_testing/understanding_client-side_tools/overview>Chapter 1</a>, the toolchain will be structured into the following phases:</p>
 
 <ul>
  <li><strong>Safety net</strong>: Making the software development experience stable and more efficient. We might also refer to this as our development environment.</li>
@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Library_installation_tools">Library installation tools</h3>
 
-<p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups">refer back to that section</a>.</p>
+<p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href=/learn/tools_and_testing/understanding_client-side_tools/command_line#Adding_powerups>refer back to that section</a>.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.</p>
@@ -148,7 +148,7 @@ tags:
 
 <h3 id="Code_tidying_tools">Code tidying tools</h3>
 
-<p>We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Installing_Prettier">Installing Prettier</a> section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.</p>
+<p>We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the <a href=/learn/tools_and_testing/understanding_client-side_tools/command_line#Installing_Prettier>Installing Prettier</a> section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.</p>
 
 <p>You can check whether you've already got it installed globally using the following command:</p>
 
@@ -332,7 +332,7 @@ cd will-it-miss</pre>
   }
 }</pre>
 
-  <p>The above eslint configuration says that we want to use the "recommended" eslint settings, that we're going to allow usage of ES6 features (such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set()</a></code>), that we can use module <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> statements, and that using <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> is allowed.</p>
+  <p>The above eslint configuration says that we want to use the "recommended" eslint settings, that we're going to allow usage of ES6 features (such as <code><a href=/web/javascript/reference/global_objects/array/map>map()</a></code> or <code><a href=/web/javascript/reference/global_objects/set/set>Set()</a></code>), that we can use module <code><a href=/web/javascript/reference/statements/import>import</a></code> statements, and that using <code><a href=/web/api/console/log>console.log()</a></code> is allowed.</p>
  </li>
  <li>
   <p>However, in the project's source files we are using React JSX syntax (for your real projects you might use React or Vue or any other framework, or no framework at all!).</p>
@@ -385,7 +385,7 @@ cd will-it-miss</pre>
 
 <p>There's a number of choices for transform tools and though WebPack is a particularly popular one, this project is going to use Parcel — specifically because it requires a lot less configuration.</p>
 
-<p>Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#Using_the_package_ecosystem">saw in Chapter 3</a>.</p>
+<p>Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we <a href=/learn/tools_and_testing/understanding_client-side_tools/package_management#Using_the_package_ecosystem>saw in Chapter 3</a>.</p>
 
 <p>Parcel will take care of installing any transformation tooling and configuration required without us needing to intervene (in most cases).</p>
 
@@ -483,9 +483,9 @@ cd will-it-miss</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview">Client-side tooling overview</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain">Introducing a complete toolchain</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment">Deploying our app</a></li>
+ <li><a href=/learn/tools_and_testing/understanding_client-side_tools/overview>Client-side tooling overview</a></li>
+ <li><a href=/learn/tools_and_testing/understanding_client-side_tools/command_line>Command line crash course</a></li>
+ <li><a href=/learn/tools_and_testing/understanding_client-side_tools/package_management>Package management basics</a></li>
+ <li><a href=/learn/tools_and_testing/understanding_client-side_tools/introducing_complete_toolchain>Introducing a complete toolchain</a></li>
+ <li><a href=/learn/tools_and_testing/understanding_client-side_tools/deployment>Deploying our app</a></li>
 </ul>

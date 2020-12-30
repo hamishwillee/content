@@ -13,9 +13,9 @@ tags:
 ---
 <div>{{APIRef("XMLHttpRequest")}}</div>
 
-<p>The W3C {{domxref("XMLHttpRequest")}} specification adds <a href="/en-US/docs/Web/HTML">HTML</a> parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using <code>XMLHttpRequest</code>.</p>
+<p>The W3C {{domxref("XMLHttpRequest")}} specification adds <a href=/web/html>HTML</a> parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using <code>XMLHttpRequest</code>.</p>
 
-<p>To get an overview of how to use <code>XMLHttpRequest</code> in general, see <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>To get an overview of how to use <code>XMLHttpRequest</code> in general, see <a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using XMLHttpRequest</a>.</p>
 
 <h2 id="Limitations">Limitations</h2>
 
@@ -114,7 +114,7 @@ xhr.send();
 
 <h2 id="Handling_HTML_on_older_browsers">Handling HTML on older browsers</h2>
 
-<p><code>XMLHttpRequest</code> originally supported only XML parsing. HTML parsing support is a recent addition. For older browsers, you can even use the {{domxref("XMLHttpRequest.responseText")}} property in association with <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> in order to get, for example, the source code of an HTML element given its ID:</p>
+<p><code>XMLHttpRequest</code> originally supported only XML parsing. HTML parsing support is a recent addition. For older browsers, you can even use the {{domxref("XMLHttpRequest.responseText")}} property in association with <a href=/web/javascript/guide/regular_expressions>regular expressions</a> in order to get, for example, the source code of an HTML element given its ID:</p>
 
 <pre class="brush: js">function getHTML (oXHR, sTargetId) {
   var  rOpen = new RegExp("&lt;(?!\!)\\s*([^\\s&gt;]+)[^&gt;]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^&gt;]*&gt;" ,"i"),
@@ -160,5 +160,5 @@ oReq.send(null);
 
 <ul>
  <li>{{domxref("XMLHttpRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href=/web/api/xmlhttprequest/using_xmlhttprequest>Using XMLHttpRequest</a></li>
 </ul>

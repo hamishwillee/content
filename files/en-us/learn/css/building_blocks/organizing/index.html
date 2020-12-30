@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/first_steps>CSS first steps</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -39,7 +39,7 @@ tags:
 
 <p>If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.</p>
 
-<p>For example, have a look at the <a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS">CSS guidelines for MDN code examples</a>.</p>
+<p>For example, have a look at the <a href=/mdn/contribute/guidelines/code_guidelines/css>CSS guidelines for MDN code examples</a>.</p>
 
 <h3 id="Keep_it_consistent">Keep it consistent</h3>
 
@@ -198,7 +198,7 @@ blockquote { ... }
 
 <h4 id="OOCSS">OOCSS</h4>
 
-<p>Most of the approaches that you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by <a href="https://github.com/stubbornella/oocss/wiki">the work of Nicole Sullivan</a>. The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as <a href="/en-US/docs/Web/CSS/Layout_cookbook/Media_objects">The Media Object</a>. This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.</p>
+<p>Most of the approaches that you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by <a href="https://github.com/stubbornella/oocss/wiki">the work of Nicole Sullivan</a>. The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as <a href=/web/css/layout_cookbook/media_objects>The Media Object</a>. This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.</p>
 
 <p>If you are not taking an OOCSS approach you might create custom CSS for the different places this pattern is used, for example creating a class called <code>comment</code> with a bunch of rules for the component parts, then a class called <code>list-item</code> with almost the same rules as the <code>comment</code> class except for some tiny differences. The differences between these two components is that the list-item has a bottom border, and images in comments have a border whereas list-item images do not.</p>
 
@@ -296,7 +296,7 @@ blockquote { ... }
 
 <h4 id="Defining_variables">Defining variables</h4>
 
-<p>CSS now has native <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom properties</a>, making this feature increasingly less important, however one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then use that variable around the project. This means that if you realise you have used the wrong shade of blue, you only need change it in one place.</p>
+<p>CSS now has native <a href=/web/css/using_css_custom_properties>custom properties</a>, making this feature increasingly less important, however one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then use that variable around the project. This means that if you realise you have used the wrong shade of blue, you only need change it in one place.</p>
 
 <p>If we created a variable called <code>$base-color</code> as in the first line below, we could then use it through the stylesheet anywhere that required that color.</p>
 
@@ -341,32 +341,32 @@ blockquote { ... }
 
 <p>This is the final part of our Learning CSS Guide, and as you can see there are many ways in which your exploration of CSS can continue from this point.</p>
 
-<p>To learn more about layout in CSS, see the <a href="/en-US/docs/Learn/CSS/CSS_layout">Learn CSS Layout</a> section.</p>
+<p>To learn more about layout in CSS, see the <a href=/learn/css/css_layout>Learn CSS Layout</a> section.</p>
 
-<p>You should also now have the skills to explore the rest of the <a href="/en-US/docs/Web/CSS">MDN CSS</a> material. You can look up properties and values, explore our <a href="/en-US/docs/Web/CSS/Layout_cookbook">CSS Cookbook</a> for patterns to use, and read more in some of the specific guides such as our <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Guide to CSS Grid Layout</a>.</p>
+<p>You should also now have the skills to explore the rest of the <a href=/web/css>MDN CSS</a> material. You can look up properties and values, explore our <a href=/web/css/layout_cookbook>CSS Cookbook</a> for patterns to use, and read more in some of the specific guides such as our <a href=/web/css/css_grid_layout>Guide to CSS Grid Layout</a>.</p>
 
 <p>{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href=/learn/css/building_blocks/cascade_and_inheritance>Cascade and inheritance</a></li>
+ <li><a href=/learn/css/building_blocks/selectors>CSS selectors</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/type_class_and_id_selectors>Type, class, and ID selectors</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/attribute_selectors>Attribute selectors</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/pseudo-classes_and_pseudo-elements>Pseudo-classes and pseudo-elements</a></li>
+   <li><a href=/learn/css/building_blocks/selectors/combinators>Combinators</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href=/learn/css/building_blocks/the_box_model>The box model</a></li>
+ <li><a href=/learn/css/building_blocks/backgrounds_and_borders>Backgrounds and borders</a></li>
+ <li><a href=/learn/css/building_blocks/handling_different_text_directions>Handling different text directions</a></li>
+ <li><a href=/learn/css/building_blocks/overflowing_content>Overflowing content</a></li>
+ <li><a href=/learn/css/building_blocks/values_and_units>Values and units</a></li>
+ <li><a href=/learn/css/building_blocks/sizing_items_in_css>Sizing items in CSS</a></li>
+ <li><a href=/learn/css/building_blocks/images_media_form_elements>Images, media, and form elements</a></li>
+ <li><a href=/learn/css/building_blocks/styling_tables>Styling tables</a></li>
+ <li><a href=/learn/css/building_blocks/debugging_css>Debugging CSS</a></li>
+ <li><a href=/learn/css/building_blocks/organizing>Organizing your CSS</a></li>
 </ol>

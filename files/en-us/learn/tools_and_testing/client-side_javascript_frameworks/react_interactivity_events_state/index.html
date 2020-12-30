@@ -24,7 +24,7 @@ tags:
   <tr>
    <th scope="row">Prerequisites:</th>
    <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+    <p>Familiarity with the core <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> languages, knowledge of the <a href=/learn/tools_and_testing/understanding_client-side_tools/command_line>terminal/command line</a>.</p>
    </td>
   </tr>
   <tr>
@@ -62,7 +62,7 @@ btn.addEventListener('click', () =&gt; {
 <p>The <code>onClick</code> attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:</p>
 
 <ul>
- <li>The camel-cased nature of <code>onClick</code> is important — JSX will not recognize <code>onclick</code> (again, it is already used in JavaScript for a specific purpose, which is related but different — standard <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> handler properties).</li>
+ <li>The camel-cased nature of <code>onClick</code> is important — JSX will not recognize <code>onclick</code> (again, it is already used in JavaScript for a specific purpose, which is related but different — standard <code><a href=/web/api/globaleventhandlers/onclick>onclick</a></code> handler properties).</li>
  <li>All browser events follow this format in JSX – <code>on</code>, followed by the name of the event.</li>
 </ul>
 
@@ -70,14 +70,14 @@ btn.addEventListener('click', () =&gt; {
 
 <h3 id="Handling_form_submission">Handling form submission</h3>
 
-<p>At the top of the <code>Form()</code> component function, create a function named <code>handleSubmit()</code>. This function should <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behavior">prevent the default behavior of the <code>submit</code> event</a>. After that, it should trigger an <code>alert()</code>, which can say whatever you’d like. It should end up looking something like this:</p>
+<p>At the top of the <code>Form()</code> component function, create a function named <code>handleSubmit()</code>. This function should <a href=/learn/javascript/building_blocks/events#Preventing_default_behavior>prevent the default behavior of the <code>submit</code> event</a>. After that, it should trigger an <code>alert()</code>, which can say whatever you’d like. It should end up looking something like this:</p>
 
 <pre class="brush: js notranslate">function handleSubmit(e) {
   e.preventDefault();
   alert('Hello, world!');
 }</pre>
 
-<p>To use this function, add an <code>onSubmit</code> attribute to the <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> element, and set its value to the <code>handleSubmit</code> function:</p>
+<p>To use this function, add an <code>onSubmit</code> attribute to the <code><a href=/web/html/element/form>&lt;form&gt;</a></code> element, and set its value to the <code>handleSubmit</code> function:</p>
 
 <pre class="brush: js notranslate">&lt;form onSubmit={handleSubmit}&gt;</pre>
 
@@ -141,7 +141,7 @@ btn.addEventListener('click', () =&gt; {
 <ul>
  <li>We are setting the initial <code>name</code> value as "Use hooks!".</li>
  <li>We are defining a function whose job is to modify <code>name</code>, called <code>setName()</code>.</li>
- <li><code>useState()</code> returns these two things, so we are using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">array destructuring</a> to capture them both in separate variables.</li>
+ <li><code>useState()</code> returns these two things, so we are using <a href=/web/javascript/reference/operators/destructuring_assignment>array destructuring</a> to capture them both in separate variables.</li>
 </ul>
 
 <h3 id="Reading_state">Reading state</h3>
@@ -287,7 +287,7 @@ export default Form;</pre>
 
 <p>First of all, we need to put name into an object that has the same structure as our existing tasks. Inside of the <code>addTask()</code> function, we will make a <code>newTask</code> object to add to the array.</p>
 
-<p>We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Copy_an_array">copy the existing array</a>, and add our object at the end. We then pass this array into <code>setTasks()</code> to update the state.</p>
+<p>We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to <a href=/web/javascript/reference/operators/spread_syntax#Copy_an_array>copy the existing array</a>, and add our object at the end. We then pass this array into <code>setTasks()</code> to update the state.</p>
 
 <p>Putting that all together, your <code>addTask()</code> function should read like so:</p>
 
@@ -399,7 +399,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
   setTasks(updatedTasks);
 }</pre>
 
-<p>Here, we define an <code>updatedTasks</code> constant that maps over the original <code>tasks</code> array.  If the task’s <code>id</code> property matches the <code>id</code> provided to the function, we use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">object spread syntax</a>  to create a new object, and toggle the <code>checked</code> property of that object before returning it. If it doesn’t match, we return the original object.</p>
+<p>Here, we define an <code>updatedTasks</code> constant that maps over the original <code>tasks</code> array.  If the task’s <code>id</code> property matches the <code>id</code> provided to the function, we use <a href=/web/javascript/reference/operators/spread_syntax>object spread syntax</a>  to create a new object, and toggle the <code>checked</code> property of that object before returning it. If it doesn’t match, we return the original object.</p>
 
 <p>Then we call <code>setTasks()</code> with this new array in order to update our state.</p>
 
@@ -446,7 +446,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Now that we know <code>deleteTask()</code> is invoked correctly, we can call our <code>setTasks()</code> hook in <code>deleteTask()</code> to actually delete that task from the app’s state as well as visually in the app UI. Since <code>setTasks()</code> expects an array as an argument, we should provide it with a new array that copies the existing tasks, <em>excluding</em> the task whose ID matches the one passed into <code>deleteTask()</code>.</p>
 
-<p>This is a perfect opportunity to use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a></code>. We can test each task, and exclude a task from the new array if its <code>id</code> prop matches the <code>id</code> parameter passed into <code>deleteTask()</code>.</p>
+<p>This is a perfect opportunity to use <code><a href=/web/javascript/reference/global_objects/array/filter>Array.prototype.filter()</a></code>. We can test each task, and exclude a task from the new array if its <code>id</code> prop matches the <code>id</code> parameter passed into <code>deleteTask()</code>.</p>
 
 <p>Update the <code>deleteTask()</code> function inside your <code>App.js</code> file as follows:</p>
 
@@ -466,52 +466,52 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/introduction>Introduction to client-side frameworks</a></li>
+ <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/main_features>Framework main features</a></li>
  <li>React
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_getting_started>Getting started with React</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_todo_list_beginning>Beginning our React todo list</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_components>Componentizing our React app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_events_state>React interactivity: Events and state</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_filtering_conditional_rendering>React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_accessibility>Accessibility in React</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_resources>React resources</a></li>
   </ul>
  </li>
  <li>Ember
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_getting_started>Getting started with Ember</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_structure_componentization>Ember app structure and componentization</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_interactivity_events_state>Ember interactivity: Events, classes and state</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_conditional_footer>Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_routing>Routing in Ember</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_resources>Ember resources and troubleshooting</a></li>
   </ul>
  </li>
  <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_getting_started>Getting started with Vue</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_first_component>Creating our first Vue component</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_rendering_lists>Rendering a list of Vue components</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_methods_events_models>Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_styling>Styling Vue components with CSS</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_computed_properties>Using Vue computed properties</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_conditional_rendering>Vue conditional rendering: editing existing todos</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_refs_focus_management>Focus management with Vue refs</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_resources>Vue resources</a></li>
   </ul>
  </li>
  <li>Svelte
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_getting_started>Getting started with Svelte</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_todo_list_beginning>Starting our Svelte Todo list app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_variables_props>Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_components>Componentizing our Svelte app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_reactivity_lifecycle_accessibility>Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_stores>Working with Svelte stores</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_typescript>TypeScript support in Svelte</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_deployment_next>Deployment and next steps</a></li>
   </ul>
  </li>
 </ul>

@@ -16,9 +16,9 @@ tags:
 
 <p>To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to <code>true</code>.</p>
 
-<p>Keys can be exported in several formats: see <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">Supported formats</a> in the <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code> page for details.</p>
+<p>Keys can be exported in several formats: see <a href=/web/api/subtlecrypto/importkey#Supported_formats>Supported formats</a> in the <code><a href=/web/api/subtlecrypto/importkey>SubtleCrypto.importKey()</a></code> page for details.</p>
 
-<p>Keys are not exported in an encrypted format: to encrypt keys when exporting them use the <code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey()</a></code> API instead.</p>
+<p>Keys are not exported in an encrypted format: to encrypt keys when exporting them use the <code><a href=/web/api/subtlecrypto/wrapkey>SubtleCrypto.wrapKey()</a></code> API instead.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,10 +31,10 @@ tags:
  <li><em><code>format</code></em> is a string value describing the data format in which the key should be exported. It can be one of the following:
 
   <ul>
-   <li><code>raw</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
-   <li><code>pkcs8</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.</li>
-   <li><code>spki</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a> format.</li>
-   <li><code>jwk</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a> format.<span style="display: none;"> </span></li>
+   <li><code>raw</code>: <a href=/web/api/subtlecrypto/importkey#Raw>Raw</a> format.</li>
+   <li><code>pkcs8</code>: <a href=/web/api/subtlecrypto/importkey#PKCS_8>PKCS #8</a> format.</li>
+   <li><code>spki</code>: <a href=/web/api/subtlecrypto/importkey#SubjectPublicKeyInfo>SubjectPublicKeyInfo</a> format.</li>
+   <li><code>jwk</code>: <a href=/web/api/subtlecrypto/importkey#JSON_Web_Key>JSON Web Key</a> format.<span style="display: none;"> </span></li>
   </ul>
  </li>
  <li><code><em>key</em></code> is the {{domxref("CryptoKey")}} to export.</li>
@@ -43,11 +43,11 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>.
+ <li><code><em>result</em></code> is a <a href=/web/javascript/reference/global_objects/promise title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>.
 
   <ul>
    <li>If <code><em>format</em></code> was <code>jwk</code>, then the promise fulfills with a JSON object containing the key.</li>
-   <li>Otherwise the promise fulfills with an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the key.</li>
+   <li>Otherwise the promise fulfills with an <code><a href=/web/javascript/reference/global_objects/arraybuffer>ArrayBuffer</a></code> containing the key.</li>
   </ul>
  </li>
 </ul>
@@ -267,8 +267,8 @@ window.crypto.subtle.generateKey(
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.wrapKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/importkey>SubtleCrypto.importKey()</a></code></li>
+ <li><code><a href=/web/api/subtlecrypto/importkey>SubtleCrypto.wrapKey()</a></code></li>
  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc5208" rel="noopener">PKCS #8 format</a>.</li>
  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc5280#section-4.1" rel="noopener">SubjectPublicKeyInfo format</a>.</li>
  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc7517" rel="noopener">JSON Web Key format</a>.</li>

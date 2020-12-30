@@ -5,9 +5,9 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 <div>{{ToolsSidebar}}</div><div class="summary">
 <p>By default the browser uses a single thread to run all the JavaScript in your page as well as to perform layout, reflows, and garbage collection. This means that long-running JavaScript functions can block the thread, leading to an unresponsive page and a bad user experience.</p>
 
-<p>You can use the <a href="/en-US/docs/Tools/Performance/Frame_rate">Frame rate</a> and <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tools to see when JavaScript is causing performance problems, and to single out the particular functions that need attention.</p>
+<p>You can use the <a href=/tools/performance/frame_rate>Frame rate</a> and <a href=/tools/performance/waterfall>Waterfall</a> tools to see when JavaScript is causing performance problems, and to single out the particular functions that need attention.</p>
 
-<p>In this article we'll take an example site whose long-running JavaScript causes responsiveness problems, and apply two different approaches to fixing them. The first is to split long-running functions into pieces and use <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a></code> to schedule each piece, and the second is to run the whole function in a separate thread using a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web worker</a>.</p>
+<p>In this article we'll take an example site whose long-running JavaScript causes responsiveness problems, and apply two different approaches to fixing them. The first is to split long-running functions into pieces and use <code><a href=/web/api/window/requestanimationframe>requestAnimationFrame</a></code> to schedule each piece, and the second is to run the whole function in a separate thread using a <a href=/web/api/web_workers_api/using_web_workers>web worker</a>.</p>
 </div>
 
 <p>If you want to play along you can find the demo website <a class="external external-icon" href="https://mdn.github.io/performance-scenarios/js-worker/index.html">here</a>.</p>
@@ -39,9 +39,9 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 
 <p><a id="js-blocking-overview"><img alt="" src="https://mdn.mozillademos.org/files/10891/perf-js-blocking-overview.png" style="display: block; height: 113px; margin-left: auto; margin-right: auto; width: 800px;"></a></p>
 
-<p>The top half of this is the <a href="/en-US/docs/Tools/Performance/UI_Tour#Waterfall_overview">waterfall overview</a>. It gives us a compressed view of the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>, which tells us what kinds of operations the browser is doing during the recording. <a href="/en-US/docs/Tools/Performance/Waterfall#Markers">The pink says that we are mostly performing CSS calculations and possibly reflow</a>: this is the CSS animation that's running throughout the profile. Then there are three solid blocks of orange, representing JavaScript execution, one for each time we pressed the button.</p>
+<p>The top half of this is the <a href=/tools/performance/ui_tour#Waterfall_overview>waterfall overview</a>. It gives us a compressed view of the <a href=/tools/performance/waterfall>Waterfall</a>, which tells us what kinds of operations the browser is doing during the recording. <a href=/tools/performance/waterfall#Markers>The pink says that we are mostly performing CSS calculations and possibly reflow</a>: this is the CSS animation that's running throughout the profile. Then there are three solid blocks of orange, representing JavaScript execution, one for each time we pressed the button.</p>
 
-<p>The bottom half, which is correlated with the timeline summary in time, shows <a href="/en-US/docs/Tools/Performance/Frame_rate">frame rate</a>. We can see that frame rate is pretty healthy for most of the recording, but collapses completely whenever we press the button.</p>
+<p>The bottom half, which is correlated with the timeline summary in time, shows <a href=/tools/performance/frame_rate>frame rate</a>. We can see that frame rate is pretty healthy for most of the recording, but collapses completely whenever we press the button.</p>
 
 <p>We can select one of these periods and have a closer look at it in the main Waterfall view:</p>
 
@@ -49,7 +49,7 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 
 <p>Here, when we pressed the button, the browser ran a JavaScript function, or series of functions, that blocked the main thread for 71.73ms, or more than four times our frame budget.</p>
 
-<p>Which function, though? By switching to the <a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Chart</a> view we can find out:</p>
+<p>Which function, though? By switching to the <a href=/tools/performance/flame_chart>Flame Chart</a> view we can find out:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10893/perf-js-blocking-flame-chart.png" style="display: block; height: 230px; margin-left: auto; margin-right: auto; width: 800px;"></p>
 
@@ -88,7 +88,7 @@ function doPointlessComputationsWithBlocking() {
 
 <h2 id="Using_requestAnimationFrame">Using requestAnimationFrame</h2>
 
-<p>In the first attempt at fixing this, we'll split up the function into a number of much smaller self-contained functions, and schedule each one using <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>.</p>
+<p>In the first attempt at fixing this, we'll split up the function into a number of much smaller self-contained functions, and schedule each one using <code><a href=/web/api/window/requestanimationframe>requestAnimationFrame()</a></code>.</p>
 
 <p><code>requestAnimationFrame()</code> tells the browser to run the given function in each frame, just before it performs a repaint. As long as each function is reasonably small, the browser should be able to keep inside its frame budget.</p>
 

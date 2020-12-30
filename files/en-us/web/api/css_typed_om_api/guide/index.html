@@ -7,9 +7,9 @@ tags:
   - Houdini
   - Learn
 ---
-<p>The <strong><a href="/en-US/docs/Web/Houdini/CSS_Typed_OM">CSS Typed Object Model API</a></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.</p>
+<p>The <strong><a href=/web/houdini/css_typed_om>CSS Typed Object Model API</a></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.</p>
 
-<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref('HTMLElement.style')}}) can incur a significant performance overhead.</p>
+<p>Converting <a href=/web/api/css_object_model>CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref('HTMLElement.style')}}) can incur a significant performance overhead.</p>
 
 <p>The CSS Typed OM makes CSS manipulation more logical and performant by providing object features (rather than CSSOM string manipulation), providing access to types, methods, and an object model for CSS values.</p>
 
@@ -51,13 +51,13 @@ for (const [prop, val] of defaultComputedStyles) {
 	stylesList.appendChild(cssValue);
 }</pre>
 
-<p>The <code>computedStyleMap()</code> method returns a {{domxref('StylePropertyMapReadOnly')}} object containing the <code><a href="/en-US/docs/Web/API/StylePropertyMapReadOnly/size">size</a></code> property, which indicates how many properties are in the map. We iterate through the style map, creating a  <code><a href="/en-US/docs/Web/HTML/Element/dt">&lt;dt&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/dd">&lt;dd&gt;</a></code> for each property and value respectively.</p>
+<p>The <code>computedStyleMap()</code> method returns a {{domxref('StylePropertyMapReadOnly')}} object containing the <code><a href=/web/api/stylepropertymapreadonly/size>size</a></code> property, which indicates how many properties are in the map. We iterate through the style map, creating a  <code><a href=/web/html/element/dt>&lt;dt&gt;</a></code> and <code><a href=/web/html/element/dd>&lt;dd&gt;</a></code> for each property and value respectively.</p>
 
-<p>In  <a href="/en-US/docs/Web/API/Element/computedStyleMap#Browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
+<p>In  <a href=/web/api/element/computedstylemap#Browser_compatibility>browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
 
 <p>{{EmbedLiveSample("example1", 120, 300)}}</p>
 
-<p>Did you realize how many default CSS properties a link had? Update the JavaScript on line 2 to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the <code><a href="/en-US/docs/Web/CSS/margin-top">margin-top</a></code> and <code><a href="/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a></code> default computed values.</p>
+<p>Did you realize how many default CSS properties a link had? Update the JavaScript on line 2 to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the <code><a href=/web/css/margin-top>margin-top</a></code> and <code><a href=/web/css/margin-bottom>margin-bottom</a></code> default computed values.</p>
 </div>
 
 <h3 id=".get_method_custom_properties">.get() method / custom properties</h3>
@@ -111,13 +111,13 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 <p>{{EmbedLiveSample("example2", 120, 300)}}</p>
 </div>
 
-<p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>.  Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
+<p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href=/web/css/color_value>currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>.  Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
 
-<p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an <a href="/en-US/docs/Web/CSS/color_value"><code>rgb()</code> </a>value and the {{cssxref('font-weight')}} returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the <code>bold</code> keyword.</p>
+<p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an <a href=/web/css/color_value><code>rgb()</code> </a>value and the {{cssxref('font-weight')}} returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the <code>bold</code> keyword.</p>
 
 <h3 id="CSSUnitValue_and_CSSKeywordValue">CSSUnitValue and CSSKeywordValue</h3>
 
-<p>The power of the CSS Typed OM is that values are separate from units; parsing and concatenating string values may become be a thing of the past. Every CSS property in a style map has a value. If the value is a keyword, the object returned is a <code><a href="/en-US/docs/Web/API/CSSKeywordValue">CSSKeywordValue</a></code>. If the value is numeric, a <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code> is returned.</p>
+<p>The power of the CSS Typed OM is that values are separate from units; parsing and concatenating string values may become be a thing of the past. Every CSS property in a style map has a value. If the value is a keyword, the object returned is a <code><a href=/web/api/csskeywordvalue>CSSKeywordValue</a></code>. If the value is numeric, a <code><a href=/web/api/cssunitvalue>CSSUnitValue</a></code> is returned.</p>
 
 <p><code>CSSKeywordValue</code> is a class that defines keywords like <code>inherit</code>, <code>initial</code>, <code>unset</code>, and other strings you don't quote, such as <code>auto</code> and <code>grid</code>. This subclass gives you a <code>value</code> property via {{domxref("cssKeywordValue.value")}}.</p>
 
@@ -238,17 +238,17 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>You'll note the {{cssxref('&lt;length&gt;')}} unit returned is <code>px</code>, the {{cssxref('&lt;percentage&gt;')}} unit returned is <code>percent</code>, the {{cssxref('&lt;time&gt;')}} unit is <code>s</code> for 'seconds', and the unitless {{cssxref('&lt;number&gt;')}} unit is <code>number</code>.</p>
 
-<p>We didn't declare a {{cssxref('width')}} or a {{cssxref('height')}} for the paragraph, both of which default to <code>auto</code> and therefore return a <code><a href="/en-US/docs/Web/API/CSSKeywordValue">CSSKeywordValue</a></code> instead of a <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code>. <code>CSSKeywordValue</code>s do not have a unit property, so in these cases our <code>get().unit</code> returns <code>undefined</code>. </p>
+<p>We didn't declare a {{cssxref('width')}} or a {{cssxref('height')}} for the paragraph, both of which default to <code>auto</code> and therefore return a <code><a href=/web/api/csskeywordvalue>CSSKeywordValue</a></code> instead of a <code><a href=/web/api/cssunitvalue>CSSUnitValue</a></code>. <code>CSSKeywordValue</code>s do not have a unit property, so in these cases our <code>get().unit</code> returns <code>undefined</code>. </p>
 
-<p>Had the <code>width</code> or <code>height</code> been defined in a <code>&lt;length&gt;</code> or <code>&lt;percent&gt;</code>, the <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code> unit would have been <code>px</code> or <code>percent</code> respectively.</p>
+<p>Had the <code>width</code> or <code>height</code> been defined in a <code>&lt;length&gt;</code> or <code>&lt;percent&gt;</code>, the <code><a href=/web/api/cssunitvalue>CSSUnitValue</a></code> unit would have been <code>px</code> or <code>percent</code> respectively.</p>
 
 <p>There are other types available:</p>
 
 <ul>
- <li>An <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> will return a {{domxref('CSSImageValue')}}.</li>
- <li>A <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> would return a {{domxref('CSSStyleValue')}}.</li>
+ <li>An <code><a href=/web/css/image>&lt;image&gt;</a></code> will return a {{domxref('CSSImageValue')}}.</li>
+ <li>A <code><a href=/web/css/color_value>&lt;color&gt;</a></code> would return a {{domxref('CSSStyleValue')}}.</li>
  <li>A {{cssxref('transform')}} returns a <code>CSSTransformValue</code>.</li>
- <li>A <a href="/en-US/docs/Web/CSS/--*">custom property</a> returns a {{domxref('CSSUnparsedValue')}}.</li>
+ <li>A <a href=/web/css/--*>custom property</a> returns a {{domxref('CSSUnparsedValue')}}.</li>
 </ul>
 
 <p>You can use a <code>CSSUnitValue</code> or <code>CSSKeywordValue</code> to create other objects. For example, the parameters for a {{domxref('CSSPositionValue')}} is one to two <code>CSSUnitValues</code> or <code>CSSKeywordValues</code>, or one of each:</p>
@@ -259,7 +259,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <h2 id="CSSStyleValue">CSSStyleValue</h2>
 
-<p>The <code>CSSStyleValue</code> interface of the <a href="/en-US/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.</p>
+<p>The <code>CSSStyleValue</code> interface of the <a href=/web/api/css_typed_object_model_api>CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.</p>
 
 <p>It has two methods:</p>
 
@@ -355,7 +355,7 @@ console.log( parsedUnit.value );
 
 <h3 id="CSSUnparsedValue">CSSUnparsedValue</h3>
 
-<p>The {{domxref('CSSUnparsedValue')}} represents <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom properties</a>:</p>
+<p>The {{domxref('CSSUnparsedValue')}} represents <a href=/web/css/using_css_custom_properties>custom properties</a>:</p>
 
 <pre class="brush: js notranslate">// CSSUnparsedValue
 let unit = allComputedStyles.get('--unit');
@@ -372,9 +372,9 @@ console.log( parsedUnit.value );  // 1.2</pre>
 
 <h3 id="CSSMathSum">CSSMathSum</h3>
 
-<p>Although the <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> element is an inline element by default, we've added <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> to enable sizing. In our CSS we have <code>width: calc(30% + 20px);</code>, which is a <code><a href="/en-US/docs/Web/CSS/calc">calc()</a></code> function to define the width.</p>
+<p>Although the <code><a href=/web/html/element/button>&lt;button&gt;</a></code> element is an inline element by default, we've added <code><a href=/web/css/css_display>display: inline-block;</a></code> to enable sizing. In our CSS we have <code>width: calc(30% + 20px);</code>, which is a <code><a href=/web/css/calc>calc()</a></code> function to define the width.</p>
 
-<p>When we <code>get()</code> the <code>width</code>, we get a <code><a href="/en-US/docs/Web/API/CSSMathSum">CSSMathSum</a></code> returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 <code>CSSUnitValues</code>.</p>
+<p>When we <code>get()</code> the <code>width</code>, we get a <code><a href=/web/api/cssmathsum>CSSMathSum</a></code> returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 <code>CSSUnitValues</code>.</p>
 
 <p>The value of {{domxref('CSSMathValue.operator')}} is <code>sum</code>:</p>
 
@@ -386,7 +386,7 @@ console.log( btnWidth.operator );    // 'sum'</pre>
 
 <h3 id="CSSTransformValue_with_CSSScale">CSSTransformValue with CSSScale</h3>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a {{cssxref('transform')}} function. </p>
+<p>The <code><a href=/web/css/css_display>display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a {{cssxref('transform')}} function. </p>
 
 <pre class="brush: js notranslate">let transform = allComputedStyles.get('transform');
 
@@ -419,10 +419,10 @@ console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/1
 
 <h3 id="Summary">Summary</h3>
 
-<p>This should get you started with understanding the CSS Typed OM. Take a look at all the <a href="/en-US/docs/Web/Houdini/learn/CSS_Typed_OM">CSS Typed OM</a> interfaces to learn more.</p>
+<p>This should get you started with understanding the CSS Typed OM. Take a look at all the <a href=/web/houdini/learn/css_typed_om>CSS Typed OM</a> interfaces to learn more.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</a></li>
+ <li><a href=/web/api/css_painting_api/guide>Using the CSS Painting API</a></li>
 </ul>

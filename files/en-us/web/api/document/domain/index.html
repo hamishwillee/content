@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ApiRef}}{{ Deprecated_header() }}</div>
 
-<p>The <strong><code>domain</code></strong> property of the {{domxref("Document")}} interface gets/sets the domain portion of the {{glossary("origin")}} of the current document, as used by the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</p>
+<p>The <strong><code>domain</code></strong> property of the {{domxref("Document")}} interface gets/sets the domain portion of the {{glossary("origin")}} of the current document, as used by the <a href=/web/security/same-origin_policy>same-origin policy</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -21,7 +21,7 @@ tags:
 <p>The getter for this property returns the domain portion of the current document's origin. In most cases, this will be the hostname portion of the document's URL. However, there are some exceptions:</p>
 
 <ul>
- <li>If the page has an opaque {{glossary("origin")}}, e.g. for a page with a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URL</a>, then it will return the empty string.</li>
+ <li>If the page has an opaque {{glossary("origin")}}, e.g. for a page with a <a href=/web/http/basics_of_http/data_uris>data URL</a>, then it will return the empty string.</li>
  <li>If the <code>document.domain</code> <a href="#Setter">setter</a> has been used, then it will return the value that was set.</li>
 </ul>
 
@@ -45,7 +45,7 @@ tags:
 
 <h4 id="Deprecation">Deprecation</h4>
 
-<p>The <code>document.domain</code> setter is deprecated. It undermines the security protections provided by the <a href="/en-US/docs/Web/Security/Same-origin_policy">same origin policy</a>, and complicates the origin model in browsers, leading to interoperability problems and security bugs.</p>
+<p>The <code>document.domain</code> setter is deprecated. It undermines the security protections provided by the <a href=/web/security/same-origin_policy>same origin policy</a>, and complicates the origin model in browsers, leading to interoperability problems and security bugs.</p>
 
 <p>Attempting to set <code>document.domain</code> is dangerous. It opens up full access to a page's DOM from <em>all</em> subdomains, which is likely not be what is intended. It also removes the port component from the origin, so now your page can be accessed by other pages with the same IP address or same host component, even on a different port.</p>
 
@@ -118,7 +118,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
+ <li><a href=/web/security/same-origin_policy>Same-origin policy</a></li>
  <li>{{domxref("Location.hostname")}}</li>
  <li>{{domxref("Location.host")}}</li>
  <li>{{domxref("WindowOrWorkerGlobalScope.origin")}}</li>

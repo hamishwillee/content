@@ -30,7 +30,7 @@ alert(paragraphs[0].nodeName);
 
 <p>All of the properties, methods, and events available for manipulating and creating web pages are organized into objects (for example, the <code>document</code> object that represents the document itself, the <code>table</code> object that implements the special {{domxref("HTMLTableElement")}} DOM interface for accessing HTML tables, and so forth). This documentation provides an object-by-object reference to the DOM.</p>
 
-<p>The modern DOM is built using multiple APIs that work together. The core <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> defines the objects that fundamentally describe a document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the <a href="/en-US/docs/Web/API/HTML_DOM">HTML DOM API</a> adds support for representing HTML documents to the core DOM.</p>
+<p>The modern DOM is built using multiple APIs that work together. The core <a href=/web/api/document_object_model>DOM</a> defines the objects that fundamentally describe a document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the <a href=/web/api/html_dom>HTML DOM API</a> adds support for representing HTML documents to the core DOM.</p>
 
 <h2 id="DOM_and_JavaScript">DOM and JavaScript</h2>
 
@@ -49,7 +49,7 @@ doc.nodeName # DOM property of document object
 p_list = doc.getElementsByTagName("para")
 </pre>
 
-<p>For more information on what technologies are involved in writing JavaScript on the web, see <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
+<p>For more information on what technologies are involved in writing JavaScript on the web, see <a href=/web/javascript/javascript_technologies_overview>JavaScript technologies overview</a>.</p>
 
 <h2 id="How_Do_I_Access_the_DOM.3F">Accessing the DOM</h2>
 
@@ -103,7 +103,7 @@ p_list = doc.getElementsByTagName("para")
  <tbody>
   <tr>
    <td>{{domxref("Document")}}</td>
-   <td>When a member returns an object of type <code>document</code> (e.g., the <code>ownerDocument</code> property of an element returns the <code>document</code> to which it belongs), this object is the root <code>document</code> object itself. The <a href="/en-US/docs/Web/API/Document">DOM <code>document</code> Reference</a> chapter describes the <code>document</code> object.</td>
+   <td>When a member returns an object of type <code>document</code> (e.g., the <code>ownerDocument</code> property of an element returns the <code>document</code> to which it belongs), this object is the root <code>document</code> object itself. The <a href=/web/api/document>DOM <code>document</code> Reference</a> chapter describes the <code>document</code> object.</td>
   </tr>
   <tr>
    <td>{{domxref("Node")}}</td>
@@ -160,7 +160,7 @@ table.summary = "note: increased border";
 
 <h3 id="Core_Interfaces_in_the_DOM">Core Interfaces in the DOM</h3>
 
-<p>This section lists some of the most commonly-used interfaces in the DOM. The idea is not to describe what these APIs do here but to give you an idea of the sorts of methods and properties you will see very often as you use the DOM. These common APIs are used in the longer examples in the <a href="/en-US/docs/Web/API/Document_Object_Model/Examples">DOM Examples</a> chapter at the end of this book.</p>
+<p>This section lists some of the most commonly-used interfaces in the DOM. The idea is not to describe what these APIs do here but to give you an idea of the sorts of methods and properties you will see very often as you use the DOM. These common APIs are used in the longer examples in the <a href=/web/api/document_object_model/examples>DOM Examples</a> chapter at the end of this book.</p>
 
 <p>The <code>document</code> and <code>window</code> objects are the objects whose interfaces you generally use most often in DOM programming. In simple terms, the <code>window</code> object represents something like the browser, and the <code>document</code> object is the root of the document itself. <code>Element</code> inherits from the generic <code>Node</code> interface, and together these two interfaces provide many of the methods and properties you use on individual elements. These elements may also have specific interfaces for dealing with the kind of data those elements hold, as in the <code>table</code> object example in the previous section.</p>
 
@@ -243,10 +243,10 @@ table.summary = "note: increased border";
 <h2 id="Subnav">Subnav</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
+ <li><a href=/web/api/document_object_model>DOM Reference</a></li>
+ <li><a href=/web/api/document_object_model/introduction>Introduction to the DOM</a></li>
+ <li><a href=/web/api/document_object_model/events>Events and the DOM</a></li>
+ <li><a href=/web/api/document_object_model/examples>Examples</a></li>
 </ul>
 
 <div>{{DefaultAPISidebar("DOM")}}</div>

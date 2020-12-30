@@ -14,14 +14,14 @@ tags:
 
 <p>The reason that brought to use UTF-16 code units as placeholders for <code>uint8</code> numbers is that as web applications become more and more powerful (adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth) it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data.</p>
 
-<p>In the past, this had to be simulated by treating the raw data as a <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global Objects/String">string</a> and using the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/charCodeAt" title="JavaScript/Reference/Global Objects/String/charCodeAt"><code>charCodeAt()</code></a> method to read the bytes from the data buffer (i.e., using binary strings). However, this is slow and error-prone, due to the need for multiple conversions (especially if the binary data is not actually byte-format data, but, for example, 32-bit integers or floats).</p>
+<p>In the past, this had to be simulated by treating the raw data as a <a href=/javascript/reference/global_objects/string title="JavaScript/Reference/Global Objects/String">string</a> and using the <a href=/javascript/reference/global_objects/string/charcodeat title="JavaScript/Reference/Global Objects/String/charCodeAt"><code>charCodeAt()</code></a> method to read the bytes from the data buffer (i.e., using binary strings). However, this is slow and error-prone, due to the need for multiple conversions (especially if the binary data is not actually byte-format data, but, for example, 32-bit integers or floats).</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> provide a mechanism for accessing raw binary data much more efficiently.</p>
+<p><a href=/web/javascript/typed_arrays>JavaScript typed arrays</a> provide a mechanism for accessing raw binary data much more efficiently.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
- <li><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></li>
+ <li><a href=/web/javascript/typed_arrays>Typed arrays</a></li>
+ <li><a href=/web/api/domstring><code>DOMString</code></a></li>
+ <li><a href=/web/javascript/reference/global_objects/string>String</a></li>
 </ul>

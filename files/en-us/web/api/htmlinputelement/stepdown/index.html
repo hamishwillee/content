@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLInputElement.stepDown([n])</code></strong> method decrements the value of a numeric type of  {{HTMLElement("input")}} element by the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute or up to <code>n</code> multiples of the step attribute if a number is passed as the parameter. </span> The method, when invoked, decrements the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} * n), where n defaults to 1 if not specified, and <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> defaults to the default value for <code>step</code> if not specified.</p>
+<p><span class="seoSummary">The <strong><code>HTMLInputElement.stepDown([n])</code></strong> method decrements the value of a numeric type of  {{HTMLElement("input")}} element by the value of the <code><a href=/web/html/attributes/step>step</a></code> attribute or up to <code>n</code> multiples of the step attribute if a number is passed as the parameter. </span> The method, when invoked, decrements the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} * n), where n defaults to 1 if not specified, and <code><a href=/web/html/attributes/step>step</a></code> defaults to the default value for <code>step</code> if not specified.</p>
 
 <p>Valid on all numeric, date, and time input types that support the step attribute, including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, and {{HTMLElement("input/range", "range")}}.</p>
 
@@ -26,7 +26,7 @@ tags:
 &lt;!-- decrements by intervals of 12 months (one year) --&gt;
 <code class="brush: html">&lt;input type="month" max="2019-12" step="12"&gt;</code></pre>
 
-<p>The method, when invoked, changes the form control's value by the value given in the <code>step</code> attribute, multiplied by the parameter, within the constraints set within the form control. The default value for the parameter, if not is passed, is 1. The method will not cause the value to go below the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> value set or defy the constraints set by the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute. A negative value for <code>n</code> will increment the value, but will not increment beyond the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> value.</p>
+<p>The method, when invoked, changes the form control's value by the value given in the <code>step</code> attribute, multiplied by the parameter, within the constraints set within the form control. The default value for the parameter, if not is passed, is 1. The method will not cause the value to go below the <code><a href=/web/html/attributes/min>min</a></code> value set or defy the constraints set by the <code><a href=/web/html/attributes/step>step</a></code> attribute. A negative value for <code>n</code> will increment the value, but will not increment beyond the <code><a href=/web/html/attributes/max>max</a></code> value.</p>
 
 <p>If the value before invoking the <code>stepDown()</code> method is invalid, for example, if it doesn't match the constraints set by the <code>step</code> attribute, invoking the <code>stepDown()</code> method will return a value that does match the form controls constraints.</p>
 
@@ -54,7 +54,7 @@ tags:
 <dl>
  <dt><em><code>stepDecrement</code></em></dt>
  <dd>The optional  <code><em>stepDecrement</em></code> parameter is a numeric value.  If no parameter is passed, <em>stepDecrement</em> defaults to 1.</dd>
- <dd>If the value is a float, the value will increment as if <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor(stepDecrement)</a></code> was passed. If the value is negative, the value will be incremented instead of decremented.</dd>
+ <dd>If the value is a float, the value will increment as if <code><a href=/web/javascript/reference/global_objects/math/floor>Math.floor(stepDecrement)</a></code> was passed. If the value is negative, the value will be incremented instead of decremented.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -153,5 +153,5 @@ function stepondown() {
  <li>{{HTMLElement("input")}}</li>
  <li>{{domxref("HTMLInputElement")}}</li>
  <li>{{domxref("HTMLInputElement.stepUp", "HTMLInputElement.stepUp()")}}</li>
- <li><code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code>, <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attributes</li>
+ <li><code><a href=/web/html/attributes/step>step</a></code>, <code><a href=/web/html/attributes/min>min</a></code> and <code><a href=/web/html/attributes/max>max</a></code> attributes</li>
 </ul>

@@ -19,7 +19,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.</td>
+   <td>Basic computer literacy, and a basic <a href=/learn/html/introduction_to_html>understanding of HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -40,9 +40,9 @@ tags:
 
 <p>The main difference between a <code>&lt;textarea&gt;</code> and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.</p>
 
-<p><code>&lt;textarea&gt;</code> also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is an empty element with no closing tag — any default value is put inside the <code><a href="/en-US/docs/Web/HTML/Attributes/value">value</a></code> attribute.</p>
+<p><code>&lt;textarea&gt;</code> also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is an empty element with no closing tag — any default value is put inside the <code><a href=/web/html/attributes/value>value</a></code> attribute.</p>
 
-<p>Note that even though you can put anything inside a <code>&lt;textarea&gt;</code> element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).</p>
+<p>Note that even though you can put anything inside a <code>&lt;textarea&gt;</code> element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using <code><a href=/web/html/global_attributes/contenteditable>contenteditable</a></code> on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).</p>
 
 <p>Visually, the text entered wraps and the form control is by default resizable. Modern browsers provide a drag handle that you can drag to increase/decrease the size of the text area.</p>
 
@@ -76,7 +76,7 @@ tags:
  <li><code>horizontal</code>: Allows resizing only horizontally.</li>
  <li><code>vertical</code>: Allows resizing only vertically.</li>
  <li><code>none</code>: Allows no resizing.</li>
- <li><code>block</code> and <code>inline</code>: Experimental values that allow resizing in the <code>block</code> or <code>inline</code> direction only (this varies depending on the directionality of your text; read <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a> if you want to find out more.)</li>
+ <li><code>block</code> and <code>inline</code>: Experimental values that allow resizing in the <code>block</code> or <code>inline</code> direction only (this varies depending on the directionality of your text; read <a href=/learn/css/building_blocks/handling_different_text_directions>Handling different text directions</a> if you want to find out more.)</li>
 </ul>
 
 <p>Play with the interactive example at the top of the {{cssxref("resize")}} reference page for a demonstration of how these work.</p>
@@ -124,7 +124,7 @@ tags:
 
 <p>{{EmbedLiveSample("groups", 120, 120)}}</p>
 
-<p>On the {{HTMLElement("optgroup")}} element, the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/label">label</a></code> attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.</p>
+<p>On the {{HTMLElement("optgroup")}} element, the value of the <code><a href=/web/html/attributes/label>label</a></code> attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.</p>
 
 <p>If an {{HTMLElement("option")}} element has an explicit <code>value</code> attribute set on it, that value is sent when the form is submitted with that option selected. If the <code>value</code> attribute is omitted, as with the examples above, the content of the {{HTMLElement("option")}} element is used as the value. So <code>value</code> attributes are not needed, but you might find a reason to want to send a shortened or different value to the server than what is visually shown in the select box.</p>
 
@@ -136,7 +136,7 @@ tags:
   &lt;option value="lemon"&gt;Sharp, powerful lemon&lt;/option&gt;
 &lt;/select&gt;</pre>
 
-<p>By default, the height of the select box is enough to display a single value. The optional <code><a href="/en-US/docs/Web/HTML/Attributes/size">size</a></code> attribute provides control over how many options are visible when the select does not have focus.</p>
+<p>By default, the height of the select box is enough to display a single value. The optional <code><a href=/web/html/attributes/size>size</a></code> attribute provides control over how many options are visible when the select does not have focus.</p>
 
 <h3 id="Multiple_choice_select_box">Multiple choice select box</h3>
 
@@ -158,7 +158,7 @@ tags:
 <p>{{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In the case of multiple choice select boxes, you'll notice that the select box no longer displays the values as drop-down content — instead, all values are displayed at once in a list, with the optional <code><a href="/en-US/docs/Web/HTML/Attributes/size">size</a></code> attribute determining the height of the widget.</p>
+<p><strong>Note</strong>: In the case of multiple choice select boxes, you'll notice that the select box no longer displays the values as drop-down content — instead, all values are displayed at once in a list, with the optional <code><a href=/web/html/attributes/size>size</a></code> attribute determining the height of the widget.</p>
 </div>
 
 <div class="note"><strong>Note:</strong> All browsers that support the {{HTMLElement("select")}} element also support the {{htmlattrxref("multiple","select")}} attribute.</div>
@@ -226,9 +226,9 @@ tags:
 
 <p>According to <a href="https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external">the HTML specification</a>, the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.</p>
 
-<p>For example, in browsers that support <code>{{htmlelement("datalist")}}</code> on <code>range</code> input types, a small tick mark will be displayed above the range for each datalist <code>{{htmlelement("option")}}</code> value. You can see an implementation <a href="/en-US/docs/Web/HTML/Element/input/range#A_range_control_with_hash_marks">example of this on the <code>&lt;input type="range"&gt;</code> reference page</a>.</p>
+<p>For example, in browsers that support <code>{{htmlelement("datalist")}}</code> on <code>range</code> input types, a small tick mark will be displayed above the range for each datalist <code>{{htmlelement("option")}}</code> value. You can see an implementation <a href=/web/html/element/input/range#A_range_control_with_hash_marks>example of this on the <code>&lt;input type="range"&gt;</code> reference page</a>.</p>
 
-<p>And browsers that support {{htmlelement('datalist')}}s and <code><a href="/en-US/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code> should display a customized palette of colors as the default, while still making the full color palette available.</p>
+<p>And browsers that support {{htmlelement('datalist')}}s and <code><a href=/web/html/element/input/color>&lt;input type="color"&gt;</a></code> should display a customized palette of colors as the default, while still making the full color palette available.</p>
 
 <p>In this case, different browsers behave differently from case to case, so consider such uses as progressive enhancement, and ensure they degrade gracefully.</p>
 
@@ -297,35 +297,35 @@ tags:
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Other_controls">Test your skills: Other controls</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/forms/test_your_skills:_other_controls>Test your skills: Other controls</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
 <p>As you'll have seen in the last few articles, there are a lot of different types of available form element. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.</p>
 
-<p>Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at <a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling them</a>.</p>
+<p>Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at <a href=/learn/forms/styling_web_forms>Styling them</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>Basic native form controls</a></li>
+ <li><a href=/learn/forms/html5_input_types>The HTML5 input types</a></li>
+ <li><a href=/learn/forms/other_form_controls>Other form controls</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
+ <li><a href=/learn/forms/ui_pseudo-classes>UI pseudo-classes</a></li>
+ <li><a href=/learn/forms/form_validation>Client-side form validation</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form controls</a></li>
+ <li><a href=/learn/forms/sending_forms_through_javascript>Sending forms through JavaScript</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_widgets>Property compatibility table for form widgets</a></li>
 </ul>

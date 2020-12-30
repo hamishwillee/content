@@ -92,10 +92,10 @@ tags:
 <p>To add the data, you need to create a new file or files to store your compat data in. The files you need to create differ, depending on what technology you are working on:</p>
 
 <ul>
- <li><strong><a href="/en-US/docs/Web/HTML">HTML</a>:</strong> One file per HTML element, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a>. The file should be called the name of the element, all in lower case, e.g. <code>div.json</code>.</li>
- <li><strong><a href="/en-US/docs/Web/CSS">CSS</a>:</strong> One file per CSS property or selector, contained in the appropriate directory (see <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a>). The file should be called the name of the feature, all in lower case, e.g. <code>background-color.json</code>, or <code>hover.json</code>.</li>
- <li><strong><a href="/en-US/docs/Web/JavaScript">JS</a>:</strong> One file per JS object, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a>. The file should be called the exact name of the object, with the casing preserved, e.g. <code>Date.json</code> or <code>InternalError.json</code>.</li>
- <li><strong><a href="/en-US/docs/Web/API">APIs</a>:</strong> One file per interface contained in the API, put in <a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a>. Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has <code>VRDisplay.json</code>, <code>VRDisplayCapabilities.json</code>, etc.</li>
+ <li><strong><a href=/web/html>HTML</a>:</strong> One file per HTML element, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a>. The file should be called the name of the element, all in lower case, e.g. <code>div.json</code>.</li>
+ <li><strong><a href=/web/css>CSS</a>:</strong> One file per CSS property or selector, contained in the appropriate directory (see <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a>). The file should be called the name of the feature, all in lower case, e.g. <code>background-color.json</code>, or <code>hover.json</code>.</li>
+ <li><strong><a href=/web/javascript>JS</a>:</strong> One file per JS object, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a>. The file should be called the exact name of the object, with the casing preserved, e.g. <code>Date.json</code> or <code>InternalError.json</code>.</li>
+ <li><strong><a href=/web/api>APIs</a>:</strong> One file per interface contained in the API, put in <a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a>. Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has <code>VRDisplay.json</code>, <code>VRDisplayCapabilities.json</code>, etc.</li>
 </ul>
 
 <p>Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md">detailed schema description here</a>.</p>
@@ -118,7 +118,7 @@ tags:
 
 <p>You have the <code>css</code> object, inside of which is a <code>properties</code> object. Inside the <code>properties</code> object, you need one member for each of the specific features you want to define the compat data for. Each of these members has a <code>__compat</code> member, inside of which the actual data goes.</p>
 
-<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">rendered border-width support table on MDN</a>.</p>
+<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href=/web/css/border-width#Browser_compatibility>rendered border-width support table on MDN</a>.</p>
 
 <p>Other types of features work in the same way, but with different object names:</p>
 
@@ -155,12 +155,12 @@ tags:
 <p>Inside the <code>status</code> member, you'll include three submembers:</p>
 
 <ul>
- <li><code>experimental</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
+ <li><code>experimental</code>: This should be set to <code>true</code> if the feature is <a href=/mdn/contribute/guidelines/conventions_definitions#Experimental>experimental</a>, or <code>false</code> otherwise.</li>
  <li><code>standard_track</code>: This should be set to <code>true</code> if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or <code>false</code> otherwise.</li>
- <li><code>deprecated</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
+ <li><code>deprecated</code>: This should be set to <code>true</code> if the feature is <a href=/mdn/contribute/guidelines/conventions_definitions#Deprecated_and_obsolete>deprecated</a>, or <code>false</code> otherwise.</li>
 </ul>
 
-<p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
+<p>The feature data for <a href=/web/css/border-width#Browser_compatibility>border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
 
 <pre class="brush: json notranslate">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
@@ -238,7 +238,7 @@ tags:
 
 <p>In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.</p>
 
-<p>As an example, see the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">compat data</a> and <a href="/en-US/docs/Web/CSS/background-color">corresponding MDN page</a> for the <code>background-color</code> property. The basic support exists inside the <code>__compat</code> object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own <code>__compat</code> object.</p>
+<p>As an example, see the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">compat data</a> and <a href=/web/css/background-color>corresponding MDN page</a> for the <code>background-color</code> property. The basic support exists inside the <code>__compat</code> object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own <code>__compat</code> object.</p>
 
 <pre class="brush: json notranslate">{
   "css": {

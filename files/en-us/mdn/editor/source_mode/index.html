@@ -22,13 +22,13 @@ tags:
 
 <p><img alt="Partial screenshot of the editor toolbar, with the Source mode button highlighted" src="https://mdn.mozillademos.org/files/15295/Source%20mode%20button.png" style="height: 98px; width: 267px;"></p>
 
-<p>Due to formatting, images, and the like, it's possible that the source is shorter (vertical length-wise) than the WYSIWYG content that you might need to scroll up to find the source within the <a href="/en-US/docs/MDN/Contribute/Editor/Edit_box">edit box</a>.</p>
+<p>Due to formatting, images, and the like, it's possible that the source is shorter (vertical length-wise) than the WYSIWYG content that you might need to scroll up to find the source within the <a href=/mdn/contribute/editor/edit_box>edit box</a>.</p>
 
 <h2 id="Warnings_and_caveats">Warnings and caveats</h2>
 
 <p>As mentioned previously, you rarely need to use source mode. There are a few things you can only do by tweaking the source. Eventually we will update the editing interface to handle those things for you.</p>
 
-<p>Anything that's not expressly described somewhere in the <a href="/en-US/docs/MDN/Contribute">MDN contributor guide</a> should <strong>not</strong> be added to the source. That means:</p>
+<p>Anything that's not expressly described somewhere in the <a href=/mdn/contribute>MDN contributor guide</a> should <strong>not</strong> be added to the source. That means:</p>
 
 <ul>
  <li>No custom fonts or styles; if it's not part of our standard look and feel, don't do it.</li>
@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Working_in_source_mode">Working in source mode</h2>
 
-<p>When you're in source mode, you're editing the raw HTML that makes up the content of a wiki page. While you're no longer restricted by the editor, you need to do everything you can to make sure your work matches the <a href="/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide">style guide</a> and that it works safely and reliably.</p>
+<p>When you're in source mode, you're editing the raw HTML that makes up the content of a wiki page. While you're no longer restricted by the editor, you need to do everything you can to make sure your work matches the <a href=/mdn/contribute/guidelines/css_style_guide>style guide</a> and that it works safely and reliably.</p>
 
 <div class="notecard note">
 <p>You should usually only work in source mode for brief tweaks rather than for an extended period of writing time.</p>
@@ -53,7 +53,7 @@ tags:
 
 <h3 id="Highlighting_lines_in_sample_code">Highlighting lines in sample code</h3>
 
-<p>Within the sample code snippet blocks established by using the <strong>PRE</strong> or <strong>Syntax Highlighter</strong> buttons in <a href="/en-US/docs/MDN/Contribute/Editor/Basics/Toolbar#Blocks_group">the toolbar's block group</a>, you might want to call special attention to lines of code. The only way to do this is to open source mode, find the {{HTMLElement("pre")}} block containing the code, and edit the <code>&lt;pre&gt;</code> tag's {{HTMLAttrxRef("class")}} attribute to include a <code>highlight</code> component formatted as follows:</p>
+<p>Within the sample code snippet blocks established by using the <strong>PRE</strong> or <strong>Syntax Highlighter</strong> buttons in <a href=/mdn/contribute/editor/basics/toolbar#Blocks_group>the toolbar's block group</a>, you might want to call special attention to lines of code. The only way to do this is to open source mode, find the {{HTMLElement("pre")}} block containing the code, and edit the <code>&lt;pre&gt;</code> tag's {{HTMLAttrxRef("class")}} attribute to include a <code>highlight</code> component formatted as follows:</p>
 
 <ul>
  <li><code>highlight[<em>lineNum1</em>, <em>lineNum2</em>, ..., <em>lineNumN</em>]</code></li>
@@ -63,7 +63,7 @@ tags:
 <pre class="syntaxbox notranslate">"highlight[" <a href="#highlight-line-number-list">&lt;line-number-list&gt;</a> "]"
 
 <strong>Where:</strong>
-<a id="highlight-line-number-list">&lt;line-number-list&gt;</a> = <a href="/en-US/docs/Web/CSS/Value_definition_syntax#Brackets">[</a> <a href="#highlight-line-number">&lt;line-number&gt;</a> <a href="/en-US/docs/Web/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#highlight-line-range">&lt;line-range&gt;</a> <a href="/en-US/docs/Web/CSS/Value_definition_syntax#Brackets">]</a><a href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark">#</a>
+<a id="highlight-line-number-list">&lt;line-number-list&gt;</a> = <a href=/web/css/value_definition_syntax#Brackets>[</a> <a href="#highlight-line-number">&lt;line-number&gt;</a> <a href=/web/css/value_definition_syntax#Single_bar>|</a> <a href="#highlight-line-range">&lt;line-range&gt;</a> <a href=/web/css/value_definition_syntax#Brackets>]</a><a href=/web/css/value_definition_syntax#Hash_mark>#</a>
 <a id="highlight-line-range">&lt;line-range&gt;</a> = <a href="#highlight-line-number">&lt;line-number&gt;</a> - <a href="#highlight-line-number">&lt;line-number&gt;</a>
 <a id="highlight-line-number">&lt;line-number&gt;</a> = &lt;number-token&gt;</pre>
 

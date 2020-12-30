@@ -20,7 +20,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebRTC")}}</p>
 
-<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> event <code><strong>icecandidateerror</strong></code> is sent to an {{domxref("RTCPeerConnection")}} if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type {{domxref("RTCPeerConnectionIceErrorEvent")}}, and contains information describing the error in some amount of detail.</p>
+<p>The <a href=/web/api/webrtc_api>WebRTC API</a> event <code><strong>icecandidateerror</strong></code> is sent to an {{domxref("RTCPeerConnection")}} if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type {{domxref("RTCPeerConnectionIceErrorEvent")}}, and contains information describing the error in some amount of detail.</p>
 
 <table class="properties">
  <tbody>
@@ -47,7 +47,7 @@ tags:
 
 <p>The error object's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property is one of the numeric STUN error codes. There is one additional, WebRTC-specific, error which lies outside the valid STUN error code range: 701. Error 701 indicates that none of the ICE candidates were able to successfully make contact with the STUN or TURN server.</p>
 
-<p>The 701 error is fired only once per server URL from the list of available STUN or TURN servers provided when creating the {{domxref("RTCPeerConnection")}}. These errors occur only when the connection's <a href="/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState">ICE gathering state</a> is <code>gathering</code>.</p>
+<p>The 701 error is fired only once per server URL from the list of available STUN or TURN servers provided when creating the {{domxref("RTCPeerConnection")}}. These errors occur only when the connection's <a href=/web/api/rtcpeerconnection/icegatheringstate>ICE gathering state</a> is <code>gathering</code>.</p>
 
 <h2 id="Example">Example</h2>
 

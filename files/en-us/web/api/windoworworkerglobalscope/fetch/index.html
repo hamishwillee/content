@@ -20,7 +20,7 @@ tags:
 
 <p>A {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} promise only rejects when a network error is encountered (which is usually when there’s a permissions issue or similar). A {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} promise <em>does not</em> reject on HTTP errors (<code>404</code>, etc.). Instead, a <code>then()</code> handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.</p>
 
-<p>The <code>fetch()</code> method is controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
+<p>The <code>fetch()</code> method is controlled by the <code>connect-src</code> directive of <a href=/security/csp/csp_policy_directives>Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The <code>fetch()</code> method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.</p>
@@ -50,7 +50,7 @@ tags:
   <dd>The request method, e.g., <code>GET</code>, <code>POST</code>. Note that the {{httpheader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.<br>
   (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}).</dd>
   <dt><code>headers</code></dt>
-  <dd>Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{domxref("ByteString")}} values. Note that <a href="/en-US/docs/Glossary/Forbidden_header_name">some names are forbidden</a>.</dd>
+  <dd>Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{domxref("ByteString")}} values. Note that <a href=/glossary/forbidden_header_name>some names are forbidden</a>.</dd>
   <dt><code>body</code></dt>
   <dd>Any body that you want to add to your request: this can be a {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or {{domxref("ReadableStream")}} object. Note that a request using the <code>GET</code> or <code>HEAD</code> method cannot have a body.</dd>
   <dt><code>mode</code></dt>
@@ -58,7 +58,7 @@ tags:
   <dt><code>credentials</code></dt>
   <dd>The request credentials you want to use for the request: <code>omit</code>, <code>same-origin</code>, or <code>include</code>. To automatically send cookies for the current domain, this option must be provided. Starting with Chrome 50, this property also takes a {{domxref("FederatedCredential")}} instance or a {{domxref("PasswordCredential")}} instance.</dd>
   <dt><code>cache</code></dt>
-  <dd>The <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> you want to use for the request.</dd>
+  <dd>The <a href=/web/api/request/cache>cache mode</a> you want to use for the request.</dd>
   <dt><code>redirect</code></dt>
   <dd>The redirect mode to use: <code>follow</code> (automatically follow redirects), <code>error</code> (abort with an error if a redirect occurs), or <code>manual</code> (handle redirects manually). In Chrome the default is <code>follow</code> (before Chrome 47 it defaulted to <code>manual</code>).</dd>
   <dt><code>referrer</code></dt>
@@ -66,7 +66,7 @@ tags:
   <dt><code>referrerPolicy</code></dt>
   <dd>Specifies the <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policies">referrer policy</a> to use for the request. May be one of <code>no-referrer</code>, <code>no-referrer-when-downgrade</code>, <code>same-origin</code>, <code>origin</code>, <code>strict-origin</code>, <code>origin-when-cross-origin</code>, <code>strict-origin-when-cross-origin</code>, or <code>unsafe-url</code>.</dd>
   <dt><code>integrity</code></dt>
-  <dd>Contains the <a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> value of the request (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
+  <dd>Contains the <a href=/web/security/subresource_integrity>subresource integrity</a> value of the request (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
   <dt><code>keepalive</code></dt>
   <dd>The <code>keepalive</code> option can be used to allow the request to outlive the page. Fetch with the <code>keepalive</code> flag is a replacement for the {{domxref("Navigator.sendBeacon()")}} API.</dd>
   <dt><code>signal</code></dt>
@@ -182,8 +182,8 @@ let myRequest = new Request('flowers.jpg', myInit);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+ <li><a href=/web/api/fetch_api>Fetch API</a></li>
+ <li><a href=/web/api/serviceworker_api>ServiceWorker API</a></li>
+ <li><a href=/web/http/cors>HTTP access control (CORS)</a></li>
+ <li><a href=/web/http>HTTP</a></li>
 </ul>

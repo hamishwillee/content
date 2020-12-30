@@ -16,7 +16,7 @@ tags:
 
 <p>Gets all tabs that have the specified properties, or all tabs if no properties are specified.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -40,7 +40,7 @@ tags:
   <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Whether the tabs can be discarded automatically by the browser when resources are low.</dd>
   <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Use this to return only tabs whose cookie store ID is <code>cookieStoreId</code>. This option is only available if the add-on has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+  <dd><code>string</code>. Use this to return only tabs whose cookie store ID is <code>cookieStoreId</code>. This option is only available if the add-on has the <code>"cookies"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>.</dd>
   <dt><code>currentWindow</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Whether the tabs are in the current window.</dd>
   <dt><code>discarded</code>{{optional_inline}}</dt>
@@ -62,7 +62,7 @@ tags:
   <dt><code>title</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Match page titles against a pattern.</dd>
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code><code>string</code></code> or <code><code>array</code> of <code><code>string</code></code></code>. Match tabs against one or more <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Note that fragment identifiers are not matched.</dd>
+  <dd><code><code>string</code></code> or <code><code>array</code> of <code><code>string</code></code></code>. Match tabs against one or more <a href=/mozilla/add-ons/webextensions/match_patterns>match patterns</a>. Note that fragment identifiers are not matched.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. The <code>id</code> of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.</dd>
   <dt><code>windowType</code>{{optional_inline}}</dt>
@@ -73,7 +73,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>array</code> of <code>{{WebExtAPIRef('tabs.Tab')}}</code> objects, containing information about each matching tab.</p>
+<p>A <code><a href=/web/javascript/reference/global_objects/promise>Promise</a></code> that will be fulfilled with an <code>array</code> of <code>{{WebExtAPIRef('tabs.Tab')}}</code> objects, containing information about each matching tab.</p>
 
 <p>If any error occurs, the promise will be rejected with an error message.</p>
 

@@ -25,7 +25,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a>.</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href=/learn/javascript/first_steps>JavaScript first steps</a>, <a href=/learn/javascript/building_blocks/functions>Functions — reusable blocks of code</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Active_learning_Lets_build_a_function">Active learning: Let's build a function</h2>
 
-<p>The custom function we are going to build will be called <code>displayMessage()</code>. It will display a custom message box on a web page and will act as a customized replacement for a browser's built-in <a href="/en-US/docs/Web/API/Window/alert">alert()</a> function. We've seen this before, but let's just refresh our memories. Type the following in your browser's JavaScript console, on any page you like:</p>
+<p>The custom function we are going to build will be called <code>displayMessage()</code>. It will display a custom message box on a web page and will act as a customized replacement for a browser's built-in <a href=/web/api/window/alert>alert()</a> function. We've seen this before, but let's just refresh our memories. Type the following in your browser's JavaScript console, on any page you like:</p>
 
 <pre class="brush: js">alert('This is a message');</pre>
 
@@ -112,7 +112,7 @@ panel.appendChild(closeBtn);</pre>
 
 <p>Finally, we use an {{domxref("GlobalEventHandlers.onclick")}} event handler to make it so that when the button is clicked, some code is run to delete the whole panel from the page — to close the message box.</p>
 
-<p>Briefly, the <code>onclick</code> handler is a property available on the button (or in fact, any element on the page) that can be set to a function to specify what code to run when the button is clicked. You'll learn a lot more about these in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events article</a>. We are making the <code>onclick</code> handler equal to an anonymous function, which contains the code to run when the button is clicked. The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case the panel <code>&lt;div&gt;</code>.</p>
+<p>Briefly, the <code>onclick</code> handler is a property available on the button (or in fact, any element on the page) that can be set to a function to specify what code to run when the button is clicked. You'll learn a lot more about these in our later <a href=/learn/javascript/building_blocks/events>events article</a>. We are making the <code>onclick</code> handler equal to an anonymous function, which contains the code to run when the button is clicked. The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case the panel <code>&lt;div&gt;</code>.</p>
 
 <pre class="brush: js">closeBtn.onclick = function() {
   panel.parentNode.removeChild(panel);
@@ -239,7 +239,7 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a>. These tests require skills that are covered in the next article, so you might want to read those first before trying it.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/building_blocks/test_your_skills:_functions>Test your skills: Functions</a>. These tests require skills that are covered in the next article, so you might want to read those first before trying it.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
@@ -250,11 +250,11 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+ <li><a href=/learn/javascript/building_blocks/conditionals>Making decisions in your code — conditionals</a></li>
+ <li><a href=/learn/javascript/building_blocks/looping_code>Looping code</a></li>
+ <li><a href=/learn/javascript/building_blocks/functions>Functions — reusable blocks of code</a></li>
+ <li><a href=/learn/javascript/building_blocks/build_your_own_function>Build your own function</a></li>
+ <li><a href=/learn/javascript/building_blocks/return_values>Function return values</a></li>
+ <li><a href=/learn/javascript/building_blocks/events>Introduction to events</a></li>
+ <li><a href=/learn/javascript/building_blocks/image_gallery>Image gallery</a></li>
 </ul>

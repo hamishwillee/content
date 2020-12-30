@@ -23,9 +23,9 @@ tags:
 ---
 <p>{{APIRef("WebXR Device API")}}{{secureContext_header}}</p>
 
-<p><span class="seoSummary">The WebXR Device API's <code><strong>XRReferenceSpace</strong></code> interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior.</span> The tracking behavior is defined by the selected <a href="/en-US/docs/Web/API/XRReferenceSpace#Reference_space_types">reference space type</a>. It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.</p>
+<p><span class="seoSummary">The WebXR Device API's <code><strong>XRReferenceSpace</strong></code> interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior.</span> The tracking behavior is defined by the selected <a href=/web/api/xrreferencespace#Reference_space_types>reference space type</a>. It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.</p>
 
-<p>All reference spaces—with the sole exception being bounded reference spaces—are described using the <code>XRReferenceSpace</code> type. Bounded spaces are implemented as {{domxref("XRBoundedReferenceSpace")}} objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces to protect the viewer</a> for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.</p>
+<p>All reference spaces—with the sole exception being bounded reference spaces—are described using the <code>XRReferenceSpace</code> type. Bounded spaces are implemented as {{domxref("XRBoundedReferenceSpace")}} objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article <a href=/web/api/webxr_device_api/bounded_reference_spaces>Using bounded reference spaces to protect the viewer</a> for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -55,13 +55,13 @@ tags:
 
 <h2 id="Reference_space_types">Reference space types</h2>
 
-<p>{{page("/en-US/docs/Web/API/XRReferenceSpaceType", "Values")}}</p>
+<p>{{page(/web/api/xrreferencespacetype, "Values")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
 <h3 id="Creating_an_XRReferenceSpace">Creating an XRReferenceSpace</h3>
 
-<p>There are two situations in which you need to obtain an <code>XRReferenceSpace</code>. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the <a href="/en-US/docs/Web/API/XRReferenceSpaceType">reference space type</a> you wish to obtain.</p>
+<p>There are two situations in which you need to obtain an <code>XRReferenceSpace</code>. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the <a href=/web/api/xrreferencespacetype>reference space type</a> you wish to obtain.</p>
 
 <pre>xrSession.requestReferenceSpace("local").then((refSpace) =&gt; {
   xrReferenceSpace = refSpace;
@@ -110,10 +110,10 @@ xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);</p
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">Fundamentals of WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces to protect the user</a></li>
+ <li><a href=/web/api/webxr_device_api/fundamentals>Fundamentals of WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/geometry>Geometry and reference spaces in WebXR</a></li>
+ <li><a href=/web/api/webxr_device_api/cameras>Viewpoints and viewers: Simulating cameras in WebXR</a></li>
+ <li><a href=/web/api/webgl_api/matrix_math_for_the_web>Matrix math for the web</a></li>
+ <li><a href=/web/api/webxr_device_api/movement_and_motion>Movement, orientation, and motion</a></li>
+ <li><a href=/web/api/webxr_device_api/bounded_reference_spaces>Using bounded reference spaces to protect the user</a></li>
 </ul>

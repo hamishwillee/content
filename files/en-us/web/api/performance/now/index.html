@@ -14,7 +14,7 @@ tags:
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>The returned value represents the time elapsed since the <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>.</p>
+<p>The returned value represents the time elapsed since the <a href=/web/api/domhighrestimestamp#The_time_origin>time origin</a>.</p>
 
 <p>Bear in mind the following points:</p>
 
@@ -39,7 +39,7 @@ const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 </pre>
 
-<p>Unlike other timing data available to JavaScript (for example <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), the timestamps returned by <code>performance.now()</code> are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.</p>
+<p>Unlike other timing data available to JavaScript (for example <a href=/javascript/reference/global_objects/date/now><code>Date.now</code></a>), the timestamps returned by <code>performance.now()</code> are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.</p>
 
 <p>Also unlike <code>Date.now()</code>, the values returned by <code>performance.now()</code> always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, <code>performance.timing.navigationStart + performance.now()</code> will be approximately equal to <code>Date.now()</code>.</p>
 

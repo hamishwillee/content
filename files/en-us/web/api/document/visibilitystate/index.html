@@ -20,10 +20,10 @@ tags:
  <dt><code>hidden</code></dt>
  <dd>The page content is not visible to the user. In practice this means that the document is either a background tab or part of a minimized window, or the OS screen lock is active.</dd>
  <dd>
- <div class="notecard warning">Safari doesn’t fire the <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> event as expected when <code>visibilityState</code> transitions to <code>hidden</code>; so for that case, you need to also include code to listen for the <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> event.</div>
+ <div class="notecard warning">Safari doesn’t fire the <code><a href=/web/api/document/visibilitychange_event>visibilitychange</a></code> event as expected when <code>visibilityState</code> transitions to <code>hidden</code>; so for that case, you need to also include code to listen for the <code><a href=/web/api/window/pagehide_event>pagehide</a></code> event.</div>
  </dd>
  <dt><code>prerender</code> {{deprecated_inline}}</dt>
- <dd>The page content is being prerendered and is not visible to the user (considered hidden for purposes of <code><a href="/en-US/docs/Web/API/Document/hidden">document.hidden</a></code>). The document may start in this state, but will never transition to it from another value. Note: This was removed from the standard. Check compatibility table for details.</dd>
+ <dd>The page content is being prerendered and is not visible to the user (considered hidden for purposes of <code><a href=/web/api/document/hidden>document.hidden</a></code>). The document may start in this state, but will never transition to it from another value. Note: This was removed from the standard. Check compatibility table for details.</dd>
 </dl>
 
 <p>When the value of this property changes, the {{domxref("Document/visibilitychange_event", "visibilitychange")}} event is sent to the {{domxref("Document")}}.</p>

@@ -26,7 +26,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You should know the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">insert an image into your document</a>.</td>
+   <td>You should know the <a href=/learn/html/introduction_to_html>basics of HTML</a> and how to <a href=/learn/html/multimedia_and_embedding/images_in_html>insert an image into your document</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -64,7 +64,7 @@ tags:
 
 <h2 id="What_is_SVG">What is SVG?</h2>
 
-<p><a href="/en-US/docs/Web/SVG">SVG</a> is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)</p>
+<p><a href=/web/svg>SVG</a> is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)</p>
 
 <p>As a simple example, the following code creates a circle and a rectangle:</p>
 
@@ -109,7 +109,7 @@ tags:
 
 <h3 id="The_quick_way_htmlelementimg">The quick way: {{htmlelement("img")}}</h3>
 
-<p>To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a <code>height</code> or a <code>width</code> attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a>.</p>
+<p>To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a <code>height</code> or a <code>width</code> attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read <a href=/learn/html/multimedia_and_embedding/images_in_html>Images in HTML</a>.</p>
 
 <pre class="brush: html notranslate">&lt;img
     src="equilateral.svg"
@@ -147,11 +147,11 @@ background-size: contain;</code></pre>
 
 <p>Like the <code>&lt;img&gt;</code> method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.</p>
 
-<p>If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this <a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">article will point you in the right direction</a>.</p>
+<p>If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this <a href=/web/svg/tutorial/getting_started#A_Word_on_Webservers>article will point you in the right direction</a>.</p>
 
 <h3 id="How_to_include_SVG_code_inside_your_HTML">How to include SVG code inside your HTML</h3>
 
-<p>You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your <strong>SVG inline</strong>, or <strong>inlining SVG</strong>. Make sure your SVG code snippet begins and ends with the <code><a href="/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code> tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:</p>
+<p>You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your <strong>SVG inline</strong>, or <strong>inlining SVG</strong>. Make sure your SVG code snippet begins and ends with the <code><a href=/web/svg/element/svg>&lt;svg&gt;&lt;/svg&gt;</a></code> tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:</p>
 
 <pre class="brush: html notranslate">&lt;svg width="300" height="200"&gt;
     &lt;rect width="100%" height="100%" fill="green" /&gt;
@@ -162,7 +162,7 @@ background-size: contain;</code></pre>
 
 <ul>
  <li>Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.</li>
- <li>You can assign <code>class</code>es and <code>id</code>s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any <a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">SVG presentation attribute </a>as a CSS property.</li>
+ <li>You can assign <code>class</code>es and <code>id</code>s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any <a href=/web/svg/attribute#Presentation_attributes>SVG presentation attribute </a>as a CSS property.</li>
  <li>Inlining SVG is the only approach that lets you use CSS interactions (like <code>:focus</code>) and CSS animations on your SVG image (even in your regular stylesheet.)</li>
  <li>You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.</li>
 </ul>
@@ -178,7 +178,7 @@ background-size: contain;</code></pre>
 
 <h3 id="How_to_embed_an_SVG_with_an_htmlelementiframe">How to embed an SVG with an {{htmlelement("iframe")}}</h3>
 
-<p>You can open SVG images in your browser just like webpages. So embedding an SVG document with an <code>&lt;iframe&gt;</code> is done just like we studied in <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a>.</p>
+<p>You can open SVG images in your browser just like webpages. So embedding an SVG document with an <code>&lt;iframe&gt;</code> is done just like we studied in <a href=/learn/html/multimedia_and_embedding/other_embedding_technologies>From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a>.</p>
 
 <p>Here's a quick review:</p>
 
@@ -197,7 +197,7 @@ background-size: contain;</code></pre>
 
 <h2 id="Active_Learning_Playing_with_SVG">Active Learning: Playing with SVG</h2>
 
-<p>In this active learning section we'd like you to have a go at playing with some SVG for fun. In the <em>Input</em> section below you'll see that we've already provided you with some samples to get you started. You can also go to the <a href="/en-US/docs/Web/SVG/Element">SVG Element Reference</a>, find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.</p>
+<p>In this active learning section we'd like you to have a go at playing with some SVG for fun. In the <em>Input</em> section below you'll see that we've already provided you with some samples to get you started. You can also go to the <a href=/web/svg/element>SVG Element Reference</a>, find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.</p>
 
 <p>If you get stuck and can't get your code working, you can always reset it using the <em>Reset</em> button.</p>
 
@@ -339,7 +339,7 @@ textarea.onkeyup = function(){
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
+ <li><a href=/web/svg/tutorial/getting_started>SVG tutorial</a> on MDN</li>
  <li><a href="http://thenewcode.com/744/Making-SVG-Responsive">Quick tips for responsive SVGs</a></li>
  <li><a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">Sara Soueidan's tutorial on responsive SVG images</a></li>
  <li><a href="https://www.w3.org/TR/SVG-access/">Accessibility benefits of SVG</a></li>
@@ -351,10 +351,10 @@ textarea.onkeyup = function(){
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/images_in_html>Images in HTML</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/video_and_audio_content>Video and audio content</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/other_embedding_technologies>From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/adding_vector_graphics_to_the_web>Adding vector graphics to the Web</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/responsive_images>Responsive images</a></li>
+ <li><a href=/learn/html/multimedia_and_embedding/mozilla_splash_page>Mozilla splash page</a></li>
 </ul>

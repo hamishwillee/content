@@ -20,7 +20,7 @@ tags:
   <tr>
    <th scope="row">Prerequisites:</th>
    <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+    <p>At minimum, it is recommended that you are familiar with the core <a href=/learn/html>HTML</a>, <a href=/learn/css>CSS</a>, and <a href=/learn/javascript>JavaScript</a> languages, and have knowledge of the <a href=/learn/tools_and_testing/understanding_client-side_tools/command_line>terminal/command line</a>.</p>
 
     <p>You'll need a terminal with node + npm installed to compile and build your app.</p>
    </td>
@@ -34,7 +34,7 @@ tags:
 
 <p>Using stores we will create an <code>Alert</code> component that shows notifications on screen, which can receive messages from any component. In this case, the <code>Alert</code> component is independent from the rest — it is not a parent or child of any other — so the messages don't fit into the component hierarchy.</p>
 
-<p>We will also see how to develop our own custom store to persist the todo information to <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a>, allowing our todos to persist over page reloads.</p>
+<p>We will also see how to develop our own custom store to persist the todo information to <a href=/web/api/web_storage_api>web storage</a>, allowing our todos to persist over page reloads.</p>
 
 <h2 id="Code_along_with_us">Code along with us</h2>
 
@@ -383,7 +383,7 @@ const removeCompletedTodos = () =&gt; {
 
 <h2 id="Making_our_Alert_component_accessible">Making our Alert component accessible</h2>
 
-<p>Our <code>Alert</code> component is working fine, but it's not very friendly to assistive technologies. The problem is elements that are dynamically added and removed from the page. While visually evident to users who can see the page, they may not be so obvious to users of assistive technologies, like screen readers. To handle those situations, we can take advantage of <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a>, which provide a way to programmatically expose dynamic content changes so that they can be detected and announced by assistive technologies.</p>
+<p>Our <code>Alert</code> component is working fine, but it's not very friendly to assistive technologies. The problem is elements that are dynamically added and removed from the page. While visually evident to users who can see the page, they may not be so obvious to users of assistive technologies, like screen readers. To handle those situations, we can take advantage of <a href=/web/accessibility/aria/aria_live_regions>ARIA live regions</a>, which provide a way to programmatically expose dynamic content changes so that they can be detected and announced by assistive technologies.</p>
 
 <p>We can declare a region that contains dynamic content that should be announced by assistive technologies with the <code>aria-live</code> property followed by the politeness setting, which is used to set the priority with which screen readers should handle updates to that regions. The possible settings are <code>off</code>, <code>polite</code>, or <code>assertive</code>.</p>
 
@@ -395,7 +395,7 @@ const removeCompletedTodos = () =&gt; {
 
 <p>In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like <a href="http://www.nvaccess.org/">NVDA</a> for Windows, <a href="http://www.chromevox.com/">ChromeVox</a> for Chrome, <a href="https://wiki.gnome.org/Projects/Orca">Orca</a> on Linux, and <a href="http://www.apple.com/accessibility/osx/voiceover/">VoiceOver</a> for Mac OS X and iOS, among other options.</p>
 
-<p>To learn more about detecting and fixing accessibility issues check out our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a> article.</p>
+<p>To learn more about detecting and fixing accessibility issues check out our <a href=/learn/tools_and_testing/cross_browser_testing/accessibility>Handling common accessibility problems</a> article.</p>
 
 <h2 id="Using_the_store_contract_to_persist_our_todos">Using the store contract to persist our todos</h2>
 
@@ -423,7 +423,7 @@ const removeCompletedTodos = () =&gt; {
  </li>
 </ol>
 
-<p>Now we have to find a way to persist these todos. We could implement some code in our <code>App.svelte</code> component to read and save our todos to <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> or to a web service.<br>
+<p>Now we have to find a way to persist these todos. We could implement some code in our <code>App.svelte</code> component to read and save our todos to <a href=/web/api/web_storage_api>web storage</a> or to a web service.<br>
  But wouldn't be better if we could develop some generic store that allows us to persist its content? This would allow us to use it just like any other store, and abstract away the persistence mechanism. We could create a store that syncs its content to web storage, and later develop another one that syncs against a web service. Switching between them would be trivial and we wouldn't have to touch <code>App.svelte</code> at all.</p>
 
 <h3 id="Saving_our_todos">Saving our todos</h3>
@@ -581,7 +581,7 @@ export const localStore = (key, initial) =&gt; {                 // receives the
   <ul>
    <li>Our <code>localStore</code> will be a function that when executed initially reads its content from web storage, and returns an object with three methods: <code>subscribe()</code>, <code>set()</code>, and <code>update()</code>.</li>
    <li>When we create a new <code>localStore</code>, we'll have to specify the key of the web storage and an initial value. We then check if the value exists in web storage and, if not, we create it.</li>
-   <li>We use the <code><a href="/en-US/docs/Web/API/Storage/getItem">localStorage.getItem(key)</a></code> and <code><a href="/en-US/docs/Web/API/Storage/setItem">localStorage.setItem(key, value)</a></code> methods to read and write information to web storage, and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">toString()</a></code> and <code>toObj()</code> (which uses <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse()</a></code>) helper functions to convert the values.</li>
+   <li>We use the <code><a href=/web/api/storage/getitem>localStorage.getItem(key)</a></code> and <code><a href=/web/api/storage/setitem>localStorage.setItem(key, value)</a></code> methods to read and write information to web storage, and the <code><a href=/web/javascript/reference/global_objects/object/tostring>toString()</a></code> and <code>toObj()</code> (which uses <code><a href=/web/javascript/reference/global_objects/json/parse>JSON.parse()</a></code>) helper functions to convert the values.</li>
    <li>Next, we convert the string content received from the web storage to an object, and save that object in our store.</li>
    <li>Finally, every time we update the contents of the store, we also update the web storage, with the value converted to a string.</li>
   </ul>
@@ -715,52 +715,52 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/introduction>Introduction to client-side frameworks</a></li>
+ <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/main_features>Framework main features</a></li>
  <li>React
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_getting_started>Getting started with React</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_todo_list_beginning>Beginning our React todo list</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_components>Componentizing our React app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_events_state>React interactivity: Events and state</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_interactivity_filtering_conditional_rendering>React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_accessibility>Accessibility in React</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/react_resources>React resources</a></li>
   </ul>
  </li>
  <li>Ember
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_getting_started>Getting started with Ember</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_structure_componentization>Ember app structure and componentization</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_interactivity_events_state>Ember interactivity: Events, classes and state</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_conditional_footer>Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_routing>Routing in Ember</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/ember_resources>Ember resources and troubleshooting</a></li>
   </ul>
  </li>
  <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_getting_started>Getting started with Vue</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_first_component>Creating our first Vue component</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_rendering_lists>Rendering a list of Vue components</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_methods_events_models>Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_styling>Styling Vue components with CSS</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_computed_properties>Using Vue computed properties</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_conditional_rendering>Vue conditional rendering: editing existing todos</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_refs_focus_management>Focus management with Vue refs</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/vue_resources>Vue resources</a></li>
   </ul>
  </li>
  <li>Svelte
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_getting_started>Getting started with Svelte</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_todo_list_beginning>Starting our Svelte Todo list app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_variables_props>Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_components>Componentizing our Svelte app</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_reactivity_lifecycle_accessibility>Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_stores>Working with Svelte stores</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_typescript>TypeScript support in Svelte</a></li>
+   <li><a href=/learn/tools_and_testing/client-side_javascript_frameworks/svelte_deployment_next>Deployment and next steps</a></li>
   </ul>
  </li>
 </ul>

@@ -8,7 +8,7 @@ tags:
   - Plugins
 ---
 <div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Streams">Next »</a></p>
+<p><a href=/gecko_plugin_api_reference:initialization_and_destruction style="float: left;">« Previous</a><a href=/gecko_plugin_api_reference:streams>Next »</a></p>
 </div>
 
 <p>This chapter tells how to determine whether a plug-in instance is windowed or windowless, how to draw and redraw plug-ins, and how to handle plug-in events.</p>
@@ -20,7 +20,7 @@ tags:
  <li>A windowless plug-in does not require a native window. It is drawn in a target called a drawable, which corresponds to either the browser window or an off-screen bitmap. A drawable can be defined in several ways, depending on the platform. Windowless plug-ins can be opaque or transparent. A windowless plug-in draws itself only in response to a paint message from the browser.</li>
 </ul>
 
-<p>For information about the way HTML determines plug-in display mode, see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Using_HTML_to_Display_Plug-ins">Using HTML to Display Plug-ins</a>.</p>
+<p>For information about the way HTML determines plug-in display mode, see <a href=/gecko_plugin_api_reference/plug-in_basics#Using_HTML_to_Display_Plug-ins>Using HTML to Display Plug-ins</a>.</p>
 
 <div class="note">
 <p><strong>NOTE:</strong> Windowless plug-ins were not supported on the X Window System platform prior to Gecko 1.9 Alpha 7 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=137189" title="FIXED: Windowless plug-in support for X (WMODE)">bug 137189</a>).</p>
@@ -178,16 +178,16 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <p>On MS Windows and Unix, the browser creates a child window for each plug-in instance and passes it a window through <code>NPP_SetWindow</code>. On Mac OS, the application uses <code>NPP_SetWindow</code> to dedicate a rectangular part of its graphics port to each instance. On any platform, the browser should be careful not to draw in the plug-in's area, and vice versa. The data structure passed in <code>NPP_SetWindow</code> is an <code>NPWindow</code> object, which contains the coordinates of the instance's area and various platform-specific data.</p>
 
-<p>Typically, the browser calls <code>NPP_SetWindow</code> after creating the instance so that the plug-in can begin drawing immediately. However, the browser can create invisible instances for which <code>NPP_SetWindow</code> is never called and a window is never created. This happens when plug-ins are invoked with an HTML <code>object</code> element that has been hidden with CSS rules (see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Plug-in_Display_Modes">Plug-in Display Modes</a> in the Introduction) or with an <code>embed</code> element whose <code>hidden</code> attribute has been set.</p>
+<p>Typically, the browser calls <code>NPP_SetWindow</code> after creating the instance so that the plug-in can begin drawing immediately. However, the browser can create invisible instances for which <code>NPP_SetWindow</code> is never called and a window is never created. This happens when plug-ins are invoked with an HTML <code>object</code> element that has been hidden with CSS rules (see <a href=/gecko_plugin_api_reference/plug-in_basics#Plug-in_Display_Modes>Plug-in Display Modes</a> in the Introduction) or with an <code>embed</code> element whose <code>hidden</code> attribute has been set.</p>
 
 <p>The browser should call <code>NPP_SetWindow</code> again whenever the size or position of the instance changes, passing it the same <code>NPWindow</code> object each time, but with different values.</p>
 
 <p>The browser can also call <code>NPP_SetWindow</code> multiple times with different values for the window, including null. For example, if a user removes an instance from the page, the browser should call <code>NPP_SetWindow</code> with a window value of null. This value prevents the instance from drawing further until it is pasted back on the page and <code>NPP_SetWindow</code> is called again with a new value.</p>
 
 <ul>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Mac_OS">Mac OS</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Windows">Windows</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Unix">Unix</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Mac_OS>Mac OS</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Windows>Windows</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Unix>Unix</a></li>
 </ul>
 
 <h4 id="Mac_OS">Mac OS</h4>
@@ -238,13 +238,13 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 <p>See the following items for more information on controlling the drawing of the plug-in instance:</p>
 
 <ul>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Specifying_That_a_Plug-in_Is_Windowless">Specifying That a Plug-in Is Windowless</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Invalidating_the_Drawing_Area">Invalidating the Drawing Area</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Forcing_a_Paint_Message">Forcing a Paint Message</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Making_a_Plug-in_Opaque">Making a Plug-in Opaque</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Making_a_Plug-in_Transparent">Making a Plug-in Transparent</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Creating_Pop-up_Menus_and_Dialog_Boxes">Creating Pop-up Menus and Dialog Boxes</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Event_Handling_for_Windowless_Plug-ins">Event Handling for Windowless Plug-ins</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Specifying_That_a_Plug-in_Is_Windowless>Specifying That a Plug-in Is Windowless</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Invalidating_the_Drawing_Area>Invalidating the Drawing Area</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Forcing_a_Paint_Message>Forcing a Paint Message</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Making_a_Plug-in_Opaque>Making a Plug-in Opaque</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Making_a_Plug-in_Transparent>Making a Plug-in Transparent</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Creating_Pop-up_Menus_and_Dialog_Boxes>Creating Pop-up Menus and Dialog Boxes</a></li>
+ <li><a href=/gecko_plugin_api_reference/drawing_and_event_handling#Event_Handling_for_Windowless_Plug-ins>Event Handling for Windowless Plug-ins</a></li>
 </ul>
 
 <h4 id="Specifying_That_a_Plug-in_Is_Windowless">Specifying That a Plug-in Is Windowless</h4>
@@ -418,5 +418,5 @@ int16 NPP_HandleEvent(NPP instance, NPEvent* event);
  On Mac OS, when <code>NPP_HandleEvent</code> is called, the current port is set up correctly so that its origin matches the upper-left corner of the plug-in. A plug-in does not need to set up the current port for mouse coordinate translation.</p>
 
 <div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Streams">Next »</a></p>
+<p><a href=/gecko_plugin_api_reference:initialization_and_destruction style="float: left;">« Previous</a><a href=/gecko_plugin_api_reference:streams>Next »</a></p>
 </div>

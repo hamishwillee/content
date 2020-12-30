@@ -39,7 +39,7 @@ tags:
     <li><code>protocols</code> An array of {{domxref("DOMString")}} instances of federation protocols to search for.</li>
    </ul>
   </li>
-  <li><code>publicKey</code>: An {{domxref("PublicKeyCredentialRequestOptions")}} object containing requirements for returned <a href="/en-US/docs/Web/API/Web_Authentication_API">WebAuthn</a> credentials. </li>
+  <li><code>publicKey</code>: An {{domxref("PublicKeyCredentialRequestOptions")}} object containing requirements for returned <a href=/web/api/web_authentication_api>WebAuthn</a> credentials. </li>
   <li><code>mediation</code>: A {{jsxref("String")}} indicating whether the user will be required to log on for every visit to the website. Valid values are <code>"silent"</code>, <code>"optional"</code>, or <code>"required"</code>.</li>
   <li><code>unmediated</code>: {{deprecated_inline()}} A {{jsxref("Boolean")}} indicating the returned {{domxref("Credential")}} instance should not require user mediation.</li>
   <li><code>signal</code>: An instance of {{domxref("AbortSignal")}} that can indicate that an ongoing <code>get()</code> operation should be halted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "<code>AbortError</code>" {{domxref("DOMException")}}.</li>

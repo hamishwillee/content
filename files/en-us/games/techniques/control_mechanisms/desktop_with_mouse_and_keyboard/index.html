@@ -33,7 +33,7 @@ var leftPressed = false;
 var upPressed = false;
 var downPressed = false;</pre>
 
-<p>Then we will listen for the <code>keydown</code> and <code>keyup</code> events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Value_of_keyCode">look them up</a>); <code>37</code> is the left arrow:</p>
+<p>Then we will listen for the <code>keydown</code> and <code>keyup</code> events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the <a href=/web/api/keyboardevent/keycode>keyCode</a> property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or <a href=/web/api/keyboardevent/keycode#Value_of_keyCode>look them up</a>); <code>37</code> is the left arrow:</p>
 
 <pre class="brush: js notranslate">function keyDownHandler(event) {
     if(event.keyCode == 39) {
@@ -70,7 +70,7 @@ var downPressed = false;</pre>
     requestAnimationFrame(draw);
 }</pre>
 
-<p>The <code>draw</code> function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the <code>playerX</code> and <code>playerY</code> variables (that we define earlier just after <code>leftPressed</code> and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the <a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a>.</p>
+<p>The <code>draw</code> function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the <code>playerX</code> and <code>playerY</code> variables (that we define earlier just after <code>leftPressed</code> and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the <a href=/web/api/window/requestanimationframe>requestAnimationFrame</a>.</p>
 
 <p>We could write our own <code>KeyCode</code> object containing the key codes. For example:</p>
 
@@ -83,7 +83,7 @@ var downPressed = false;</pre>
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can also find a list of the different keycodes and what keys they relate to in the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> reference page.</p>
+<p><strong>Note</strong>: You can also find a list of the different keycodes and what keys they relate to in the <a href=/web/api/keyboardevent/keycode>keyCode</a> reference page.</p>
 </div>
 
 <p><img alt="Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse." src="https://mdn.mozillademos.org/files/14119/controls-purejsgame.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
@@ -96,7 +96,7 @@ var downPressed = false;</pre>
 
 <h3 id="Mouse">Mouse</h3>
 
-<p>The mouse interactions in the game are focused on clicking the buttons. In Phaser, the buttons you create will take any type of input, whether it's a touch on mobile or a click on desktop. That way, if you already implemented the buttons as shown in the <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch">Mobile touch controls</a> article, it will work out of the box on the desktop too:</p>
+<p>The mouse interactions in the game are focused on clicking the buttons. In Phaser, the buttons you create will take any type of input, whether it's a touch on mobile or a click on desktop. That way, if you already implemented the buttons as shown in the <a href=/games/techniques/control_mechanisms/mobile_touch>Mobile touch controls</a> article, it will work out of the box on the desktop too:</p>
 
 <pre class="brush: js notranslate">var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);</pre>
 
@@ -234,6 +234,6 @@ else {
 
 <h2 id="Summary">Summary</h2>
 
-<p>Ok, we've dealt with touch, keyboard, and mouse controls. Now let's move on to look at how to set up the game to be controlled using a console gamepad, using the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.</p>
+<p>Ok, we've dealt with touch, keyboard, and mouse controls. Now let's move on to look at how to set up the game to be controlled using a console gamepad, using the <a href=/web/api/gamepad_api>Gamepad API</a>.</p>
 
 <p>{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>

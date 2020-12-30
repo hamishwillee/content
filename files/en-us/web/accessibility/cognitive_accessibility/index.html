@@ -48,7 +48,7 @@ tags:
 
 <h2 id="WCAG_Guidelines">WCAG Guidelines</h2>
 
-<p>WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These <span class="js-about-item-abstr">guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">Accessible Rich Internet Application (ARIA)</a> guidelines.</span></p>
+<p>WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These <span class="js-about-item-abstr">guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the <a href=/web/accessibility/aria/aria_guides>Accessible Rich Internet Application (ARIA)</a> guidelines.</span></p>
 
 <p>WCAG are guided by four principles: websites must be Perceivable, Operable, Understandable, and Robust. To this end, they define 17 specific guidelines, of which six are especially relevant for cognitive accessibility.</p>
 
@@ -126,7 +126,7 @@ tags:
 
 <h4 id="Ability_to_bypass_blocks_of_content">Ability to bypass blocks of content</h4>
 
-<p>Providing a mechanism, such as a <a href="/en-US/docs/Web/HTML/Element/a#Skip_links">skiplink</a>, to bypass blocks of content that are repeated on multiple web pages.</p>
+<p>Providing a mechanism, such as a <a href=/web/html/element/a#Skip_links>skiplink</a>, to bypass blocks of content that are repeated on multiple web pages.</p>
 
 <h4 id="Focus_order_makes_sense">Focus order makes sense</h4>
 
@@ -134,7 +134,7 @@ tags:
 
 <h4 id="Focused_elements_should_be_visibly_focused">Focused elements should be visibly focused</h4>
 
-<p>When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default <code><a href="/en-US/docs/Web/CSS/:focus">:focus</a></code> styling, unless you're making focus even more obvious.</p>
+<p>When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default <code><a href=/web/css/:focus>:focus</a></code> styling, unless you're making focus even more obvious.</p>
 
 <h4 id="Link_text_conveys_meaning">Link text conveys meaning</h4>
 
@@ -148,7 +148,7 @@ tags:
 
 <p>Users should be able to orient themselves within a site or application. This is especially important and helpful for people with short attention spans who may become confused when following a long series of navigation steps.</p>
 
-<p>All users benefit from information about where they are in a site's hierarchy, especially for sites or applications with large amounts of content or many subsections. <a href="/en-US/docs/Glossary/Breadcrumb">Breadcrumbs</a>, <a href="/en-US/docs/Glossary/Site_map">site maps</a>, and identifying the current page in the navigation as "current" are all techniques that help communicate the current location.</p>
+<p>All users benefit from information about where they are in a site's hierarchy, especially for sites or applications with large amounts of content or many subsections. <a href=/glossary/breadcrumb>Breadcrumbs</a>, <a href=/glossary/site_map>site maps</a>, and identifying the current page in the navigation as "current" are all techniques that help communicate the current location.</p>
 
 <h3 id="Readability">Readability</h3>
 
@@ -158,7 +158,7 @@ tags:
 
 <h4 id="Declare_the_language_of_the_page_and_any_content_not_in_that_main_language.">Declare the language of the page and any content not in that main language.</h4>
 
-<p>The language of every page must be declared by using the <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> attribute on the <a href="/en-US/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code> </a>element. Include the <code>lang</code> attribute again on text that is in a language other than the main language of the document.</p>
+<p>The language of every page must be declared by using the <code><a href=/web/html/global_attributes/lang>lang</a></code> attribute on the <a href=/web/html/element/html><code>&lt;html&gt;</code> </a>element. Include the <code>lang</code> attribute again on text that is in a language other than the main language of the document.</p>
 
 <p>Proper use of <code>lang</code> allows some screen readers to announce the text properly when converting it into synthetic speech. It also helps people who use text-to-speech software.</p>
 
@@ -177,7 +177,7 @@ tags:
  <li>Rely on screen magnifiers (which often reduce contextual cues).</li>
 </ul>
 
-<p>Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an <code><a href="/en-US/docs/Web/HTML/Element/abbr">&lt;abbr&gt;</a></code> element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using <a href="/en-US/docs/Web/HTML/Element/ruby">ruby text</a> for initialism (pronunciation of acronyms).</p>
+<p>Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an <code><a href=/web/html/element/abbr>&lt;abbr&gt;</a></code> element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using <a href=/web/html/element/ruby>ruby text</a> for initialism (pronunciation of acronyms).</p>
 
 <h4 id="Reading_level">Reading level</h4>
 
@@ -202,7 +202,7 @@ tags:
  <li>Provide the pronunciation immediately following the word.</li>
  <li>Link to a list of pronunciations.</li>
  <li>Provide a glossary with pronunciation.</li>
- <li>Use the <code><a href="/en-US/docs/Web/HTML/Element/ruby">&lt;ruby&gt;</a></code> element to illustrate how a word is pronounced.</li>
+ <li>Use the <code><a href=/web/html/element/ruby>&lt;ruby&gt;</a></code> element to illustrate how a word is pronounced.</li>
 </ul>
 
 <p>Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who may unfamiliar with the meaning of a term in context.</p>
@@ -215,7 +215,7 @@ tags:
 
 <h4 id="Use_activation_not_focus_to_change_context">Use activation, not focus to change context</h4>
 
-<p>Creating a change in context should be intentional. Because of this, when a UI feature receives <a href="/en-US/docs/Web/API/HTMLElement/focus">focus</a>, it should not trigger further user-facing actions. Rather, users should need to "activate" a feature to trigger the change.</p>
+<p>Creating a change in context should be intentional. Because of this, when a UI feature receives <a href=/web/api/htmlelement/focus>focus</a>, it should not trigger further user-facing actions. Rather, users should need to "activate" a feature to trigger the change.</p>
 
 <h4 id="Change_setting_based_on_an_active_request">Change setting based on an active request</h4>
 
@@ -257,11 +257,11 @@ tags:
 
 <h4 id="Provide_instructions_for_user_input">Provide instructions for user input</h4>
 
-<p>Start the form with text instructions on how to operate it. Include labels or instructions when users need to input information, using the <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/legend">&lt;legend&gt;</a></code> elements to do so.</p>
+<p>Start the form with text instructions on how to operate it. Include labels or instructions when users need to input information, using the <code><a href=/web/html/element/label>&lt;label&gt;</a></code>, <code><a href=/web/html/element/fieldset>&lt;fieldset&gt;</a></code>, and <code><a href=/web/html/element/legend>&lt;legend&gt;</a></code> elements to do so.</p>
 
 <p>Labels should be descriptive and positioned close to the input they relate to. When requiring a specific format for input, provide an example formatted in the proper way. Additionally, consider performing server-side validation to help format input data, to aid in the ease of user input.</p>
 
-<p>If a form control is required, indicate it both visually and <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">via code</a>. If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.</p>
+<p>If a form control is required, indicate it both visually and <a href=/web/accessibility/aria/aria_techniques/using_the_aria-required_attribute>via code</a>. If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.</p>
 
 <h4 id="Error_Suggestion">Error Suggestion</h4>
 
@@ -294,12 +294,12 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accessibility_guidelines">Accessibility Guidelines </a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Seizure_disorders">Accessibility for seizure disorders</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG">Understanding WCAG Guidelines</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility">Accessibility overview</a></li>
- <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility#Guidelines">cognitive accessibility guidelines</a>.</li>
+ <li><a href=/mozilla/add-ons/webextensions/user_interface/accessibility_guidelines>Accessibility Guidelines </a></li>
+ <li><a href=/learn/accessibility/what_is_accessibility>What is accessibility</a></li>
+ <li><a href=/web/accessibility/seizure_disorders>Accessibility for seizure disorders</a></li>
+ <li><a href=/web/accessibility/understanding_wcag>Understanding WCAG Guidelines</a></li>
+ <li><a href=/learn/accessibility>Accessibility overview</a></li>
+ <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href=/web/accessibility/cognitive_accessibility#Guidelines>cognitive accessibility guidelines</a>.</li>
  <li><a href="https://www.w3.org/WAI/GL/task-forces/coga/">CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force</a></li>
  <li><a href="http://webaim.org/articles/cognitive/">WebAIM Cognitive information</a></li>
  <li><a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html">CDC information on disabilities.</a></li>

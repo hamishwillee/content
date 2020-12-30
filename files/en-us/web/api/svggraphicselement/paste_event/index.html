@@ -33,13 +33,13 @@ tags:
  </tbody>
 </table>
 
-<p>If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> attribute set to <code>true</code>) then the default action is to insert the contents of the clipboard into the document at the cursor position.</p>
+<p>If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with <code><a href=/web/html/global_attributes/contenteditable>contenteditable</a></code> attribute set to <code>true</code>) then the default action is to insert the contents of the clipboard into the document at the cursor position.</p>
 
 <p>A handler for this event can access the clipboard contents by calling {{domxref("DataTransfer/getData", "getData()")}} on the event's <code>clipboardData</code> property.</p>
 
 <p>To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}, and then insert its desired data manually.</p>
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
+<p>It's possible to construct and dispatch a <a href=/web/guide/events/creating_and_triggering_events>synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -105,8 +105,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/SVGGraphicsElement/cut_event">cut</a></code>, <code><a href="/en-US/docs/Web/API/SVGGraphicsElement/copy_event">copy</a></code></li>
- <li>This event on HTML {{domxref("Element")}} targets: <code><a href="/en-US/docs/Web/API/Element/paste_event">paste</a></code></li>
+ <li>Related events: <code><a href=/web/api/svggraphicselement/cut_event>cut</a></code>, <code><a href=/web/api/svggraphicselement/copy_event>copy</a></code></li>
+ <li>This event on HTML {{domxref("Element")}} targets: <code><a href=/web/api/element/paste_event>paste</a></code></li>
  <li>This event on {{domxref("Document")}} targets: <code><a href="Web/API/Document/paste_event">paste</a></code></li>
  <li>This event on {{domxref("Window")}} targets: <code><a href="Web/API/Window/paste_event">paste</a></code></li>
 </ul>

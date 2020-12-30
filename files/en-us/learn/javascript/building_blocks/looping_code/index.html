@@ -26,7 +26,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>.</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, <a href=/learn/javascript/first_steps>JavaScript first steps</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -172,7 +172,7 @@ ctx.fill();</pre>
 
 <h2 id="The_standard_for_loop">The standard for loop</h2>
 
-<p>Let's start exploring some specific loop constructs. The first, which you'll use most of the time, is the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop. This has the following syntax:</p>
+<p>Let's start exploring some specific loop constructs. The first, which you'll use most of the time, is the <a href=/web/javascript/reference/statements/for>for</a> loop. This has the following syntax:</p>
 
 <pre class="notranslate">for (initializer; condition; final-expression) {
   // code to run
@@ -294,7 +294,7 @@ para.textContent = info;</pre>
 
 <h2 id="Exiting_loops_with_break">Exiting loops with break</h2>
 
-<p>If you want to exit a loop before all the iterations have been completed, you can use the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> statement. We already met this in the previous article when we looked at <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#switch_statements">switch statements</a> — when a case is met in a switch statement that matches the input expression, the <code>break</code> statement immediately exits the switch statement and moves on to the code after it.</p>
+<p>If you want to exit a loop before all the iterations have been completed, you can use the <a href=/web/javascript/reference/statements/break>break</a> statement. We already met this in the previous article when we looked at <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#switch_statements">switch statements</a> — when a case is met in a switch statement that matches the input expression, the <code>break</code> statement immediately exits the switch statement and moves on to the code after it.</p>
 
 <p>It's the same with loops — a <code>break</code> statement will immediately exit the loop and make the browser move on to any code that follows it.</p>
 
@@ -378,12 +378,12 @@ btn.addEventListener('click', function() {
 <ol>
  <li>First of all, we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.</li>
  <li>Next, we attach an event listener to the button (<code>btn</code>) so that when it is pressed some code is run to perform the search and return the results.</li>
- <li>We store the value entered into the text input in a variable called <code>searchName</code>, before then emptying the text input and focusing it again, ready for the next search. Note that we also run the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> method on the string, so that searches will be case-insensitive.</li>
+ <li>We store the value entered into the text input in a variable called <code>searchName</code>, before then emptying the text input and focusing it again, ready for the next search. Note that we also run the <code><a href=/web/javascript/reference/global_objects/string/tolowercase>toLowerCase()</a></code> method on the string, so that searches will be case-insensitive.</li>
  <li>Now on to the interesting part, the for loop:
   <ol>
    <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than <code>contacts.length</code>, and increment <code>i</code> by 1 after each iteration of the loop.</li>
    <li>Inside the loop, we first split the current contact (<code>contacts[i]</code>) at the colon character, and store the resulting two values in an array called <code>splitContact</code>.</li>
-   <li>We then use a conditional statement to test whether <code>splitContact[0]</code> (the contact's name, again lower-cased with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code>) is equal to the inputted <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's number is, and use <code>break</code> to end the loop.</li>
+   <li>We then use a conditional statement to test whether <code>splitContact[0]</code> (the contact's name, again lower-cased with <code><a href=/web/javascript/reference/global_objects/string/tolowercase>toLowerCase()</a></code>) is equal to the inputted <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's number is, and use <code>break</code> to end the loop.</li>
   </ol>
  </li>
  <li>
@@ -397,7 +397,7 @@ btn.addEventListener('click', function() {
 
 <h2 id="Skipping_iterations_with_continue">Skipping iterations with continue</h2>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> statement works in a similar manner to <code>break</code>, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).</p>
+<p>The <a href=/web/javascript/reference/statements/continue>continue</a> statement works in a similar manner to <code>break</code>, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).</p>
 
 <p>The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The JavaScript is mostly the same too, although the loop itself is a bit different:</p>
 
@@ -463,7 +463,7 @@ for (let i = 1; i &lt;= num; i++) {
 
 <ol>
  <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
- <li>Inside the loop, we find the square root of each number using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a> does to the number it is passed).</li>
+ <li>Inside the loop, we find the square root of each number using <a href=/web/javascript/reference/global_objects/math/sqrt>Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what <a href=/web/javascript/reference/global_objects/math/floor>Math.floor()</a> does to the number it is passed).</li>
  <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the <code>continue</code> statement to skip on to the next loop iteration without recording the number anywhere.</li>
  <li>If the square root is an integer, we skip past the if block entirely, so the <code>continue</code> statement is not executed; instead, we concatenate the current <code>i</code> value plus a space on to the end of the paragraph content.</li>
 </ol>
@@ -476,7 +476,7 @@ for (let i = 1; i &lt;= num; i++) {
 
 <p><code>for</code> is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.</p>
 
-<p>First, let's have a look at the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> loop. This loop's syntax looks like so:</p>
+<p>First, let's have a look at the <a href=/web/javascript/reference/statements/while>while</a> loop. This loop's syntax looks like so:</p>
 
 <pre class="notranslate">initializer
 while (condition) {
@@ -507,7 +507,7 @@ while (i &lt; cats.length) {
 <p><strong>Note</strong>: This still works just the same as expected — have a look at it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">full source code</a>).</p>
 </div>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
+<p>The <a href=/web/javascript/reference/statements/do...while>do...while</a> loop is very similar, but provides a variation on the while structure:</p>
 
 <pre class="notranslate">initializer
 do {
@@ -728,7 +728,7 @@ textarea.onkeyup = function(){
  <li><code>admitted.textContent +=</code> — the beginnings of a line that will concatenate something on to the end of <code>admitted.textContent</code>.</li>
 </ul>
 
-<p>Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for help.</p>
+<p>Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the <a href=/learn/javascript/first_steps/useful_string_methods>Useful string methods</a> article for help.</p>
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
@@ -895,12 +895,12 @@ do {
 <p>We would recommend <code>for</code>, at least to begin with, as it is probably the easiest for remembering everything — the initializer, condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration guide</a>.</p>
+<p><strong>Note</strong>: There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced <a href=/web/javascript/guide/loops_and_iteration>Loops and iteration guide</a>.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops">Test your skills: Loops</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/javascript/building_blocks/test_your_skills:_loops>Test your skills: Loops</a>.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
@@ -911,10 +911,10 @@ do {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration in detail</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for statement reference</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> references</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> references</li>
+ <li><a href=/web/javascript/guide/loops_and_iteration>Loops and iteration in detail</a></li>
+ <li><a href=/web/javascript/reference/statements/for>for statement reference</a></li>
+ <li><a href=/web/javascript/reference/statements/while>while</a> and <a href=/web/javascript/reference/statements/do...while>do...while</a> references</li>
+ <li><a href=/web/javascript/reference/statements/break>break</a> and <a href=/web/javascript/reference/statements/continue>continue</a> references</li>
  <li>
   <p class="entry-title"><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — some advanced loop best practices</p>
  </li>
@@ -925,11 +925,11 @@ do {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+ <li><a href=/learn/javascript/building_blocks/conditionals>Making decisions in your code — conditionals</a></li>
+ <li><a href=/learn/javascript/building_blocks/looping_code>Looping code</a></li>
+ <li><a href=/learn/javascript/building_blocks/functions>Functions — reusable blocks of code</a></li>
+ <li><a href=/learn/javascript/building_blocks/build_your_own_function>Build your own function</a></li>
+ <li><a href=/learn/javascript/building_blocks/return_values>Function return values</a></li>
+ <li><a href=/learn/javascript/building_blocks/events>Introduction to events</a></li>
+ <li><a href=/learn/javascript/building_blocks/image_gallery>Image gallery</a></li>
 </ul>

@@ -108,12 +108,12 @@ try {
  <li>Release the screen wake lock when user ends activity that required always-on screen. For example, a ticketing app which uses QR codes to transmit ticket information, might acquire screen wake lock when the QR code is displayed (so that code is successfully scanned) but release afterwards. A presentation app might hold the lock only while a presentation is active, but not when presentation is being edited.</li>
  <li>If your app is performing long-running downloads, consider using background fetch.</li>
  <li>If you app is synchronizing data from a remote server, consider using background sync.</li>
- <li>Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for <a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a> event).</li>
+ <li>Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for <a href=/web/api/document/visibilitychange_event>visibilitychange</a> event).</li>
 </ul>
 
 <h2 id="Feature_Policy_integration">Feature Policy integration</h2>
 
-<p>Access to Screen Wake Lock API is controlled by <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}. Refer to <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> for reference how to use it.</p>
+<p>Access to Screen Wake Lock API is controlled by <a href=/web/http/feature_policy>Feature Policy</a> directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}. Refer to <a href=/web/http/feature_policy/using_feature_policy>Using Feature Policy</a> for reference how to use it.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -143,6 +143,6 @@ try {
 <ul>
  <li><a href="https://web.dev/wakelock/">An introductory article on the Screen Wake Lock API</a></li>
  <li><a href="https://wake-lock-demo.glitch.me/">A Screen Wake Lock API demo on glitch</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}</li>
+ <li><a href=/web/http/feature_policy>Feature Policy</a> directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}</li>
 </ul>
 </div>

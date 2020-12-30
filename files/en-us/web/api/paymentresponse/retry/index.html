@@ -29,7 +29,7 @@ tags:
 	<dd>
 	<p>A {{domxref("PaymentValidationErrors")}} object, with the following properties:</p>
 
-	<p>{{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}</p>
+	<p>{{page(/web/api/paymentvalidationerrors, "Properties")}}</p>
 	</dd>
 </dl>
 
@@ -50,7 +50,7 @@ tags:
 		<li>If the response's data is valid and acceptable, call <code>complete("success")</code> to finalize the payment and proces it.</li>
 	</ol>
 	</li>
-	<li>If <code>show()</code> is rejected, the payment request failed, usually because either there's already one being processed, because the {{Glossary("user agent")}} doesn't support any of the specified payment methods, or because of a security issue. See the <a href="/en-US/docs/Web/API/PaymentRequest/show#Exceptions">list of exceptions</a> for <code>show()</code> for further details. Call <code>complete("fail")</code> to close the payment request.</li>
+	<li>If <code>show()</code> is rejected, the payment request failed, usually because either there's already one being processed, because the {{Glossary("user agent")}} doesn't support any of the specified payment methods, or because of a security issue. See the <a href=/web/api/paymentrequest/show#Exceptions>list of exceptions</a> for <code>show()</code> for further details. Call <code>complete("fail")</code> to close the payment request.</li>
 </ol>
 
 <pre class="brush: js notranslate">async function handlePayment() {

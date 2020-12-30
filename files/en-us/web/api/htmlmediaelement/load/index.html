@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Calling <code>load()</code> aborts all ongoing operations involving this media element, then begins the process of selecting and loading an appropriate media resource given the options specified in the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element and its {{htmlattrxref("src", "video")}} attribute or child {{HTMLElement("source")}} element(s). This is described in more detail in {{SectionOnPage("/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Supporting multiple formats")}}.</p>
+<p>Calling <code>load()</code> aborts all ongoing operations involving this media element, then begins the process of selecting and loading an appropriate media resource given the options specified in the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element and its {{htmlattrxref("src", "video")}} attribute or child {{HTMLElement("source")}} element(s). This is described in more detail in {{SectionOnPage(/learn/html/multimedia_and_embedding/video_and_audio_content, "Supporting multiple formats")}}.</p>
 
 <p>The process of aborting any ongoing activities will cause any outstanding {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being resolved or rejected as appropriate based on their status before the loading of new media can begin. Pending play promises are aborted with an <code>"AbortError"</code> {{domxref("DOMException")}}.</p>
 

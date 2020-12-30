@@ -20,13 +20,13 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">In this article, we'll make use of information introduced in the previous articles in our <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> tutorial series to construct an example which animates a rotating cube around which the user can move freely using a VR headset, keyboard, and/or mouse.</span> This will help to solidify your understanding of how the geometry of 3D graphics and VR work, as well as to help ensure you understand the way the functions and data that are used during XR rendering work together.</p>
+<p><span class="seoSummary">In this article, we'll make use of information introduced in the previous articles in our <a href=/web/api/webxr_device_api>WebXR</a> tutorial series to construct an example which animates a rotating cube around which the user can move freely using a VR headset, keyboard, and/or mouse.</span> This will help to solidify your understanding of how the geometry of 3D graphics and VR work, as well as to help ensure you understand the way the functions and data that are used during XR rendering work together.</p>
 
 <figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 30em; margin-bottom: 1em; margin-right: 2em;">
 <figcaption><strong>Screenshot of this example in action</strong></figcaption>
 <img alt="Screenshot of example showing a textured cube the user can move around" src="https://mdn.mozillademos.org/files/17000/xr-sample.png"></figure>
 
-<p>The core of this example—the spinning, textured, lighted cube—is taken from our WebGL tutorial series; namely, the penultimate article in the series, covering <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">lighting in WebGL</a>.</p>
+<p>The core of this example—the spinning, textured, lighted cube—is taken from our WebGL tutorial series; namely, the penultimate article in the series, covering <a href=/web/api/webgl_api/tutorial/lighting_in_webgl>lighting in WebGL</a>.</p>
 
 <p>While reading this article and the accompanying source code, it's helpful to keep in mind that the display for a 3D headset is a single screen, divided in half. The left half of the screen is seen only by the left eye, while the right half is only seen by the right eye. Rendering the scene for immersive presentation requires multiple renders of the scene—once from the perspective of each eye.</p>
 
@@ -133,7 +133,7 @@ const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 <h3 id="The_vertex_and_fragment_shaders">The vertex and fragment  shaders</h3>
 
-<p>The vertex and fragment shaders are both exactly the same as those used in the example for our article <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a>. <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#Update_the_shaders">Refer to that</a> if you're interested in the <a href="/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL">GLSL</a> source code for the basic shaders used here.</p>
+<p>The vertex and fragment shaders are both exactly the same as those used in the example for our article <a href=/web/api/webgl_api/tutorial/lighting_in_webgl>Lighting in WebGL</a>. <a href=/web/api/webgl_api/tutorial/lighting_in_webgl#Update_the_shaders>Refer to that</a> if you're interested in the <a href=/web/api/webgl_api/by_example/hello_glsl>GLSL</a> source code for the basic shaders used here.</p>
 
 <p>Suffice it to say that the vertex shader computes the position of each vertex given the initial positions of each vertex and the transforms that need to be applied to convert them to simulate the viewer's current position and orientation. The fragment shader returns the color of each vertex, interpolating as needed from the values found in the texture and applying the lighting effects.</p>
 
@@ -280,7 +280,7 @@ function onLoad() {
 
 <p>Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the <code>allowMouseRotation</code> constant is <code>true</code>. The <code>mousemove</code> handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "mouselook" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the <code>contextmenu</code> event to the canvas to prevent the context menu fom appearing when the user initially begins their drag of the mouse.</p>
 
-<p>Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a> and its preceding articles <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL">Creating 3D objects using WebGL</a> and <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures in WebGL</a>. Then our <code>loadTexture()</code> function is called to load the texture file.</p>
+<p>Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to <a href=/web/api/webgl_api/tutorial/lighting_in_webgl>Lighting in WebGL</a> and its preceding articles <a href=/web/api/webgl_api/tutorial/creating_3d_objects_using_webgl>Creating 3D objects using WebGL</a> and <a href=/web/api/webgl_api/tutorial/using_textures_in_webgl>Using textures in WebGL</a>. Then our <code>loadTexture()</code> function is called to load the texture file.</p>
 
 <p>Now that the rendering structures and data are loaded, we start preparing to run the <code>XRSession</code>. We connect the session to the WebGL layer so it knows what to use as a rendering surface by calling {{domxref("XRSession.updateRenderState()")}} with a <code>baseLayer</code>  set to a new {{domxref("XRWebGLLayer")}}.</p>
 
@@ -477,7 +477,7 @@ function drawFrame(time, frame) {
 
 <p>The <code>renderScene()</code>  function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.</p>
 
-<p>Most of this code is typical WebGL rendering code, taken directly from the <code>drawScene()</code> function in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a> article, and it's there that you should look for details on the WebGL rendering parts of this example [<a href="https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js">view the code on GitHub</a>]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.</p>
+<p>Most of this code is typical WebGL rendering code, taken directly from the <code>drawScene()</code> function in the <a href=/web/api/webgl_api/tutorial/lighting_in_webgl>Lighting in WebGL</a> article, and it's there that you should look for details on the WebGL rendering parts of this example [<a href="https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js">view the code on GitHub</a>]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.</p>
 
 <pre class="brush: js notranslate">const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();

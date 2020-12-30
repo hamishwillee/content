@@ -15,13 +15,13 @@ tags:
 
 <div>{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">Now you've created (and tested) an awesome <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.</p>
+<p class="summary">Now you've created (and tested) an awesome <a href=/learn/server-side/express_nodejs/tutorial_local_library_website>LocalLibrary</a> website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
+   <td>Complete all previous tutorial topics, including <a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -34,7 +34,7 @@ tags:
 
 <p>Once your site is finished (or finished "enough" to start public testing) you're going to need to host it somewhere more public and accessible than your personal development computer.</p>
 
-<p>Up to now, you've been working in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">development environment</a>, using Express/Node as a web server to share your site to the local browser/network, and running your website with (insecure) development settings that expose debugging and other private information. Before you can host a website externally you're first going to have to:</p>
+<p>Up to now, you've been working in a <a href=/learn/server-side/express_nodejs/development_environment>development environment</a>, using Express/Node as a web server to share your site to the local browser/network, and running your website with (insecure) development settings that expose debugging and other private information. Before you can host a website externally you're first going to have to:</p>
 
 <ul>
  <li>Choose an environment for hosting the Express app.</li>
@@ -44,7 +44,7 @@ tags:
 
 <p>This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a worked example of how to install the LocalLibrary website onto the <a href="https://www.heroku.com/">Heroku</a> cloud hosting service.</p>
 
-<p>Bear in mind that you don't have to use Heroku — there are other hosting services available. We've also provided a separate tutorial to show how to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">Install LocalLibrary on PWS/Cloud Foundry</a>.</p>
+<p>Bear in mind that you don't have to use Heroku — there are other hosting services available. We've also provided a separate tutorial to show how to <a href=/learn/server-side/express_nodejs/installing_on_pws_cloud_foundry>Install LocalLibrary on PWS/Cloud Foundry</a>.</p>
 
 <h2 id="What_is_a_production_environment">What is a production environment?</h2>
 
@@ -96,7 +96,7 @@ tags:
  <li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
 </ul>
 
-<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, and the open source option <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> provide free credit when you first join.</p>
+<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, and the open source option <a href=/learn/server-side/express_nodejs/installing_on_pws_cloud_foundry>PWS/Cloud Foundry</a> provide free credit when you first join.</p>
 
 <p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).</p>
 
@@ -386,7 +386,7 @@ var mongoDB = <strong>process.env.MONGODB_URI</strong> || dev_db_url;
 <pre class="brush: bash notranslate">npm install
 </pre>
 
-<p>Now run the site (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
+<p>Now run the site (see <a href=/learn/server-side/express_nodejs/routes#Testing_the_routes>Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
 
 <h4 id="Save_changes_to_Github">Save changes to Github</h4>
 
@@ -454,7 +454,7 @@ Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 </pre>
 
-<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
+<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href=/learn/server-side/express_nodejs/mongoose#Setting_up_the_MongoDB_database>as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
 
 <pre class="brush: bash notranslate">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
 Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
@@ -522,13 +522,13 @@ heroku ps   #Display dyno status
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href=/learn/server-side/express_nodejs/introduction>Express/Node introduction</a></li>
+ <li><a href=/learn/server-side/express_nodejs/development_environment>Setting up a Node (Express) development environment</a></li>
+ <li><a href=/learn/server-side/express_nodejs/tutorial_local_library_website>Express Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/skeleton_website>Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/express_nodejs/mongoose>Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><a href=/learn/server-side/express_nodejs/routes>Express Tutorial Part 4: Routes and controllers</a></li>
+ <li><a href=/learn/server-side/express_nodejs/displaying_data>Express Tutorial Part 5: Displaying library data</a></li>
+ <li><a href=/learn/server-side/express_nodejs/forms>Express Tutorial Part 6: Working with forms</a></li>
+ <li><a href=/learn/server-side/express_nodejs/deployment>Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

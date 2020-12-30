@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
-<p>The <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> dictionary {{domxref("EffectTiming")}}'s <strong><code>iterations</code></strong> property specifies the number of times the animation should repeat. The default value is 1, indicating that it should only play once, but you can set it to any floating-point value (including positive {{jsxref("Infinity")}} defaults to <code>1</code>, and can also take a value of <code>Infinity</code> to make it loop infinitely. </p>
+<p>The <a href=/web/api/web_animations_api>Web Animations API</a> dictionary {{domxref("EffectTiming")}}'s <strong><code>iterations</code></strong> property specifies the number of times the animation should repeat. The default value is 1, indicating that it should only play once, but you can set it to any floating-point value (including positive {{jsxref("Infinity")}} defaults to <code>1</code>, and can also take a value of <code>Infinity</code> to make it loop infinitely. </p>
 
 <div class="note">
 <p>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} all accept an object of timing properties including <code>iterations</code>. The value of <code>iterations</code> corresponds directly to {{domxref("AnimationEffectTimingReadOnly.iterations")}} in {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and {{domxref("KeyframeEffect")}}.</p>
@@ -82,7 +82,7 @@ document.getElementById("alice_arm").animate([
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li><a href=/web/api/web_animations_api>Web Animations API</a></li>
  <li>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} all accept an object of timing properties including this one.</li>
  <li>The value of this property corresponds to the one in {{domxref("AnimationEffectTimingReadOnly")}} (which is the {{domxref("AnimationEffectReadOnly.timing", "timing")}} object for {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and {{domxref("KeyframeEffect")}}).</li>
  <li>CSS's {{cssxref("animation-iteration-count")}}</li>

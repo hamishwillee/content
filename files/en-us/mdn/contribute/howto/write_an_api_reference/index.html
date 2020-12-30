@@ -62,7 +62,7 @@ tags:
 
 <h4 id="Overview_page">Overview page</h4>
 
-<p>The API overview page described the role of the API and the top-level interfaces. Its name is NAME OF API and its slug (that is the end part of the URL) must contains at least one space. It is placed at the top level of the API reference (<a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a>)</p>
+<p>The API overview page described the role of the API and the top-level interfaces. Its name is NAME OF API and its slug (that is the end part of the URL) must contains at least one space. It is placed at the top level of the API reference (<a href=/web/api>https://developer.mozilla.org/en-US/docs/Web/API</a>)</p>
 
 <ul>
  <li>Title: <em>Web Audio API</em></li>
@@ -74,7 +74,7 @@ tags:
 
 <h4 id="Interfaces">Interfaces</h4>
 
-<p>Each interface will have its own page too. It will describe the purpose of the interface and lists all constructors, methods, and properties. The title of the page will be the name of the interface (always starting with an uppercase letter), its slug, the interface name, will be at the top level of the API reference (<a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a>)</p>
+<p>Each interface will have its own page too. It will describe the purpose of the interface and lists all constructors, methods, and properties. The title of the page will be the name of the interface (always starting with an uppercase letter), its slug, the interface name, will be at the top level of the API reference (<a href=/web/api>https://developer.mozilla.org/en-US/docs/Web/API</a>)</p>
 
 <ul>
  <li>Title: <em>AudioContext</em></li>
@@ -102,7 +102,7 @@ tags:
 
 <h4 id="Properties">Properties</h4>
 
-<p>The set of properties of a given interface can be found on its <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#Properties">WebIDL</a>. We document each one in a single page. It will describe the purpose of the property, its syntax, and provide examples of use, in isolation. Its slug is the property name, as a subpage of the interface:</p>
+<p>The set of properties of a given interface can be found on its <a href=/mdn/contribute/howto/write_an_api_reference/information_contained_in_a_webidl_file#Properties>WebIDL</a>. We document each one in a single page. It will describe the purpose of the property, its syntax, and provide examples of use, in isolation. Its slug is the property name, as a subpage of the interface:</p>
 
 <ul>
  <li>Title: <em>AudioContext.currentTime</em></li>
@@ -120,7 +120,7 @@ tags:
 
 <h4 id="Methods">Methods</h4>
 
-<p>Like for properties, methods are listed on the interface's <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#Methods">WebIDL</a> and we document each method in a single page. It will describe the purpose of the method, its syntax, and provide examples of use, in isolation. Its slug, without the parenthesis, is the method name, as a subpage of the interface:</p>
+<p>Like for properties, methods are listed on the interface's <a href=/mdn/contribute/howto/write_an_api_reference/information_contained_in_a_webidl_file#Methods>WebIDL</a> and we document each method in a single page. It will describe the purpose of the method, its syntax, and provide examples of use, in isolation. Its slug, without the parenthesis, is the method name, as a subpage of the interface:</p>
 
 <ul>
  <li>Title: <em>AudioContext.createBuffer()</em> Note the parentheses, making it clear that it is a method.</li>
@@ -193,7 +193,7 @@ tags:
 <p>Now create the overview (API landing) page:</p>
 
 <ol>
- <li>Go to <a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a> and, making sure you are logged in, select the <em>Cog icon &gt; New sub-page</em>. You should now be in an editor for a new page.</li>
+ <li>Go to <a href=/web/api>https://developer.mozilla.org/en-US/docs/Web/API</a> and, making sure you are logged in, select the <em>Cog icon &gt; New sub-page</em>. You should now be in an editor for a new page.</li>
  <li>Enter the title as the API name as defined by the spec, plus "API". So for example "Web Audio API", "IndexedDB API", or "MediaRecorder API".</li>
  <li>The Slug should be auto-filled, with underscores in the place of spaces. If it isn't, correct it.</li>
  <li>Enter some dummy content into the large content area, such as "TBD" or "Content", then click <em>Save Changes</em>. Or just soar right on into the section {{anch("Overview page")}} and start filling out the real content right away.</li>
@@ -207,7 +207,7 @@ tags:
 <p><strong>Important</strong>: This section is still a proposal, without consensus yet reached. Don't use it yet.</p>
 </div>
 
-<p>API landing pages will differ greatly in length, depending on how big the API is, but they will all have basically the same features. See <a href="/en-US/docs/Web/API/Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API</a> for an example of a big landing page.</p>
+<p>API landing pages will differ greatly in length, depending on how big the API is, but they will all have basically the same features. See <a href=/web/api/web_audio_api>https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API</a> for an example of a big landing page.</p>
 
 <p>The features of a landing page are outlined below:</p>
 
@@ -219,7 +219,7 @@ tags:
  <li><strong>List of mixins</strong>: If any mixins are defined on the API spec, list them under a separate section, as they aren't interfaces as such.</li>
  <li><strong>Example</strong>: This section should show a simple use case for the API.</li>
  <li><strong>Specifications table</strong>: At this point you need to include a  specifications table — see the "Creating a spec reference table"  section for more details.</li>
- <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href=/mdn/contribute/structures/compatibility_tables>Compatibility tables</a> for details.</li>
  <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.</li>
  <li><strong>Tags</strong>: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.</li>
 </ol>
@@ -258,13 +258,13 @@ tags:
   <p><strong>Note</strong>:  Properties that are read-only should have the \{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \{{domxref}} links (after the use of the \{{experimentalInline}}, \{{obsoleteInline}}, \{{non-standard_Inline}} and \{{deprecatedInline}} macros, if some of these are needed.</p>
   </div>
  </li>
- <li><strong>Example</strong>: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could  also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages </a>feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.
+ <li><strong>Example</strong>: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could  also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages </a>feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href=/mdn/contribute/editor/live_samples>Live Sample</a> feature to make it live and playable in the page.
   <div class="note">
   <p><strong>Note</strong>: More details about writing code examples can be found in the "Examples" section.</p>
   </div>
  </li>
  <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table" section  for more details.</li>
- <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href=/mdn/contribute/structures/compatibility_tables>Compatibility tables</a> for details.</li>
  <li><strong>Polyfill</strong>: If appropriate, include this section, providing code for a polyfill that enables the API to be used even on browsers that don't implement it. If no polyfill exists or is needed, leave this section out entirely.</li>
  <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc. We have a liberal policy for linking to external sources, but pay attention:
   <ul>
@@ -282,8 +282,8 @@ tags:
 <p>The following are exemplary examples of Interface pages:</p>
 
 <ul>
- <li>{{domxref("Request")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
- <li>{{domxref("SpeechSynthesis")}} from the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.</li>
+ <li>{{domxref("Request")}} from the <a href=/web/api/fetch_api>Fetch API</a>.</li>
+ <li>{{domxref("SpeechSynthesis")}} from the <a href=/web/api/web_speech_api>Web Speech API</a>.</li>
 </ul>
 
 <h2 id="Structure_of_a_property_page">Structure of a property page</h2>
@@ -295,7 +295,7 @@ tags:
 <p>Property pages must have the following sections:</p>
 
 <ol>
- <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.propertyName</strong>. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include <code>.prototype.</code> in the title, like we do in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a>.</li>
+ <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.propertyName</strong>. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include <code>.prototype.</code> in the title, like we do in the <a href=/web/javascript/reference>JavaScript reference</a>.</li>
  <li><strong>\{{APIRef}}</strong>: Include the \{{APIRef}} macro in the first line of each property page, including the name of the API as an argument, so for example \{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://github.com/mdn/kumascript/blob/master/macros/GroupData.json">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
   <img alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro " src="https://mdn.mozillademos.org/files/8783/apiref-links.png" style="border-style: solid; border-width: 1px; display: block; height: 384px; margin: 0px auto; width: 302px;"></li>
  <li><strong>Standardization status</strong>: The banner indicating the standardization status should be added next to the interface name (these can be placed on the same line as the \{{APIRef}} macro):
@@ -322,12 +322,12 @@ tags:
 </pre>
   The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}</li>
  <li>
-  <p><strong>Example</strong>: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">github gh-pages feature</a> (so long as it uses only client-side code of course.) You can also make use of the <a href="/en-US/docs/MDN/Contribute/Tools/Sample_server">MDN Sample Server</a>, which is particularly helpful for more complex samples. If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.</p>
+  <p><strong>Example</strong>: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">github gh-pages feature</a> (so long as it uses only client-side code of course.) You can also make use of the <a href=/mdn/contribute/tools/sample_server>MDN Sample Server</a>, which is particularly helpful for more complex samples. If the example is visual, you could also use the MDN <a href=/mdn/contribute/editor/live_samples>Live Sample</a> feature to make it live and playable in the page.</p>
 
   <div class="note"><strong>Note</strong>: If you make use of Github, the example must live under <a href="https://github.com/mdn/">github.com/mdn</a>. See the "Examples" section for more details.</div>
  </li>
  <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table"  section for more details.</li>
- <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href=/mdn/contribute/structures/compatibility_tables>Compatibility tables</a> for details.</li>
  <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when using this technology: like methods and properties affected by a change of this property or events thrown in relation to it. More links useful when learning about this technology, including MDN (and external) tutorials, examples, libraries,… can be added, though it may be useful to consider adding them on the interface reference page instead.</li>
  <li><strong>Tags</strong>: There is a set of standard tags you should include for each property page — see the "Tags" section for more.</li>
 </ol>
@@ -337,8 +337,8 @@ tags:
 <p>The following are exemplary examples of property pages:</p>
 
 <ul>
- <li>{{domxref("Request.method")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
- <li>{{domxref("SpeechSynthesis.speaking")}} from the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.</li>
+ <li>{{domxref("Request.method")}} from the <a href=/web/api/fetch_api>Fetch API</a>.</li>
+ <li>{{domxref("SpeechSynthesis.speaking")}} from the <a href=/web/api/web_speech_api>Web Speech API</a>.</li>
 </ul>
 
 <h2 id="Structure_of_a_method_page">Structure of a method page</h2>
@@ -348,7 +348,7 @@ tags:
 <p>Method pages need the following sections:</p>
 
 <ol>
- <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.method()</strong> (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the  interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put <code>.prototype.</code> in the title, like we do in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a>.</li>
+ <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.method()</strong> (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the  interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put <code>.prototype.</code> in the title, like we do in the <a href=/web/javascript/reference>JavaScript reference</a>.</li>
  <li><strong>\{{APIRef}}</strong>: Include the \{{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example \{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://github.com/mdn/kumascript/blob/master/macros/GroupData.json">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
   <img alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro " src="https://mdn.mozillademos.org/files/8783/apiref-links.png" style="border-style: solid; border-width: 1px; display: block; height: 384px; margin: 0px auto; width: 302px;"></li>
  <li><strong>Standardization status</strong>: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the \{{APIRef}} macro):
@@ -382,9 +382,9 @@ tags:
    <li>"Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.</li>
   </ul>
  </li>
- <li><strong>Example</strong>: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages feature</a> (so long as it uses only client-side code of course.) You can also make use of the <a href="/en-US/docs/MDN/Contribute/Tools/Sample_server">MDN Sample Server</a>, which is particularly helpful for more complex samples. See the "Examples" section for more details. If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.</li>
+ <li><strong>Example</strong>: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages feature</a> (so long as it uses only client-side code of course.) You can also make use of the <a href=/mdn/contribute/tools/sample_server>MDN Sample Server</a>, which is particularly helpful for more complex samples. See the "Examples" section for more details. If the example is visual, you could also use the MDN <a href=/mdn/contribute/editor/live_samples>Live Sample</a> feature to make it live and playable in the page.</li>
  <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.</li>
- <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href=/mdn/contribute/structures/compatibility_tables>Compatibility tables</a> for details.</li>
  <li><strong>Polyfill</strong>: If appropriate (especially if common browsers are still shipping without support for the method), you can include a section which includes the code for a polyfill to allow the API to be used in browsers that don't implement it.</li>
 </ol>
 
@@ -393,8 +393,8 @@ tags:
 <p>The following are exemplary examples of Interface pages:</p>
 
 <ul>
- <li>{{domxref("Document.getAnimations()")}} from the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>.</li>
- <li>{{domxref("GlobalFetch.fetch()")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
+ <li>{{domxref("Document.getAnimations()")}} from the <a href=/web/api/web_animations_api>Web Animations API</a>.</li>
+ <li>{{domxref("GlobalFetch.fetch()")}} from the <a href=/web/api/fetch_api>Fetch API</a>.</li>
 </ul>
 
 <h2 id="Tagging">Tagging</h2>
@@ -440,4 +440,4 @@ tags:
  <li>Non-standard</li>
 </ul>
 
-<p>These tags will be used to generate correct quicklinks, with nice icons. See <a href="/en-US/docs/MDN/Contribute/Howto/Tag">How to properly tag pages</a> for additional information on tagging, as well as about other tags you may find useful.</p>
+<p>These tags will be used to generate correct quicklinks, with nice icons. See <a href=/mdn/contribute/howto/tag>How to properly tag pages</a> for additional information on tagging, as well as about other tags you may find useful.</p>

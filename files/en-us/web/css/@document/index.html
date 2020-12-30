@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{CSSRef}}{{Deprecated_header}}</div>
 
-<p>The <strong><code>@document</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.</p>
+<p>The <strong><code>@document</code></strong> <a href=/web/css>CSS</a> <a href=/web/css/at-rule>at-rule</a> restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.</p>
 
 <pre class="brush: css no-line-numbers notranslate">@document url("https://www.example.com/") {
   h1 {
@@ -26,14 +26,14 @@ tags:
  <li><code>url-prefix()</code>, which matches if the document URL starts with the value provided.</li>
  <li><code>domain()</code>, which matches if the document URL is on the domain provided (or a subdomain of it).</li>
  <li><code>media-document()</code>, with the parameter of video, image, plugin or all.</li>
- <li><code>regexp()</code>, which matches if the document URL is matched by the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> provided. The expression must match the entire URL.</li>
+ <li><code>regexp()</code>, which matches if the document URL is matched by the <a href=/web/javascript/guide/regular_expressions>regular expression</a> provided. The expression must match the entire URL.</li>
 </ul>
 
 <p>The values provided to the <code>url()</code>, <code>url-prefix()</code>, <code>domain()</code>, and <code>media-document()</code> functions can be optionally enclosed by single or double quotes. The values provided to the <code>regexp()</code> function <em>must</em> be enclosed in quotes.</p>
 
 <p>Escaped values provided to the <code>regexp()</code> function must additionally be escaped from the CSS. For example, a <code>.</code> (period) matches any character in regular expressions. To match a literal period, you would first need to escape it using regular expression rules (to <code>\.</code>), then escape that string using CSS rules (to <code>\\.</code>).</p>
 
-<p><code>@document</code> is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using <a href="https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill">this polyfill</a> by @An-Error94, which uses a combination of a user script, <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-* attributes</a>, and <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>.</p>
+<p><code>@document</code> is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using <a href="https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill">this polyfill</a> by @An-Error94, which uses a combination of a user script, <a href=/web/html/global_attributes/data-*>data-* attributes</a>, and <a href=/web/css/attribute_selectors>attribute selectors</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: There is a -moz-prefixed version of this property — <code>@-moz-document</code>. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).</p>

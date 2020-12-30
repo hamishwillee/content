@@ -23,11 +23,11 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>This should be set to a function you provide which is passed a single parameter: an {{domxref("Event")}} object containing the {{event("negotiationneeded")}} event. There's no additional information provided in the event; anything you need, you can get by examining the <a href="/en-US/docs/Web/API/RTCPeerConnection#Properties">properties of the <code>RTCPeerConnection</code></a>.</p>
+<p>This should be set to a function you provide which is passed a single parameter: an {{domxref("Event")}} object containing the {{event("negotiationneeded")}} event. There's no additional information provided in the event; anything you need, you can get by examining the <a href=/web/api/rtcpeerconnection#Properties>properties of the <code>RTCPeerConnection</code></a>.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example, derived from the example in <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>, establishes a handler for {{event("negotiationneeded")}} events to handle creating an offer, configuring the local end of the connection, and sending the offer to the remote peer.</p>
+<p>This example, derived from the example in <a href=/web/api/webrtc_api/signaling_and_video_calling>Signaling and video calling</a>, establishes a handler for {{event("negotiationneeded")}} events to handle creating an offer, configuring the local end of the connection, and sending the offer to the remote peer.</p>
 
 <pre class="brush: js">pc.onnegotiationneeded = function() {
   pc.createOffer().then(function(offer) {

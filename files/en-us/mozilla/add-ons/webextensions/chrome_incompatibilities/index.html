@@ -14,10 +14,10 @@ tags:
 
 <ul>
  <li>
-  <p>Support for JavaScript APIs differs across browsers. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> for more details.</p>
+  <p>Support for JavaScript APIs differs across browsers. See <a href=/mozilla/add-ons/webextensions/browser_support_for_javascript_apis>Browser support for JavaScript APIs</a> for more details.</p>
  </li>
  <li>
-  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility">"Browser compatibility" section</a> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page for more details.</p>
+  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href=/mozilla/add-ons/webextensions/manifest.json#Browser_compatibility>"Browser compatibility" section</a> in the <a href=/mozilla/add-ons/webextensions/manifest.json><code>manifest.json</code></a> page for more details.</p>
  </li>
  <li>
   <p>Javascript APIs:</p>
@@ -77,7 +77,7 @@ chrome.cookies.set(
 );</pre>
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
- <dd>Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.
+ <dd>Asynchronous APIs use <a href=/web/javascript/reference/global_objects/promise>promises</a> to return values instead.
  <pre class="brush: js;">function logCookie(c) {
   console.log(c);
 }
@@ -105,13 +105,13 @@ setCookie.then(logCookie, logError);</pre>
 
 <h3 id="Partially_supported_APIs">Partially supported APIs</h3>
 
-<p>The page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> includes compatibility tables for all APIs that have any support in Firefox. Where there are caveats around support for a given API item, this is indicated in these tables with an asterisk "*" and in the reference page for the API item, the caveats are explained.</p>
+<p>The page <a href=/mozilla/add-ons/webextensions/browser_support_for_javascript_apis>Browser support for JavaScript APIs</a> includes compatibility tables for all APIs that have any support in Firefox. Where there are caveats around support for a given API item, this is indicated in these tables with an asterisk "*" and in the reference page for the API item, the caveats are explained.</p>
 
 <p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
 
 <p>The rest of this section describes compatibility issues that are not already captured in the tables.</p>
 
-<h4 id="notifications"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications" id="notifications_incompatibilities">notifications</a></h4>
+<h4 id="notifications"><a href=/mozilla/add-ons/webextensions/api/notifications id="notifications_incompatibilities">notifications</a></h4>
 
 <ul>
  <li>
@@ -143,7 +143,7 @@ setCookie.then(logCookie, logError);</pre>
  </li>
 </ul>
 
-<h4 id="proxy"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities">proxy</a></h4>
+<h4 id="proxy"><a href=/mozilla/add-ons/webextensions/api/proxy id="proxy_incompatibilities">proxy</a></h4>
 
 <p>Firefox's Proxy API followed a completely different design from Chrome's Proxy API.</p>
 
@@ -156,7 +156,7 @@ setCookie.then(logCookie, logError);</pre>
  </dd>
 </dl>
 
-<h4 id="tabs"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs" id="tabs_incompatibilities">tabs</a></h4>
+<h4 id="tabs"><a href=/mozilla/add-ons/webextensions/api/tabs id="tabs_incompatibilities">tabs</a></h4>
 
 <ul>
  <li>
@@ -209,7 +209,7 @@ setCookie.then(logCookie, logError);</pre>
     <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
    </ul>
   </li>
-  <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
+  <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href=/mozilla/add-ons/webextensions/user_interface/extension_pages>extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href=/mozilla/add-ons/webextensions/manifest.json/web_accessible_resources><code>web_accessible_resources</code></a> key with the URL of the extension page.
    <ul>
     <li>
      <div class="notecard note">
@@ -235,7 +235,7 @@ setCookie.then(logCookie, logError);</pre>
  </li>
 </ul>
 
-<h4 id="windows"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows" id="windows_incompatibilities">windows</a></h4>
+<h4 id="windows"><a href=/mozilla/add-ons/webextensions/api/windows id="windows_incompatibilities">windows</a></h4>
 
 <dl>
  <dt>In Firefox</dt>
@@ -267,7 +267,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <dl>
  <dt>In Firefox</dt>
- <dd>Background pages do not support using <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, or <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a>.</dd>
+ <dd>Background pages do not support using <a href=/web/api/window/alert><code>alert()</code></a>, <a href=/web/api/window/confirm><code>confirm()</code></a>, or <a href=/web/api/window/prompt><code>prompt()</code></a>.</dd>
 </dl>
 
 <h4 id="web_accessible_resources">web_accessible_resources</h4>
@@ -292,7 +292,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <dl>
  <dt>In Chrome</dt>
- <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
+ <dd>When a content script makes a request (for example, using <a href=/web/api/fetch_api/using_fetch><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
  <dt>In Firefox</dt>
  <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
  <dt>
@@ -309,7 +309,7 @@ setCookie.then(logCookie, logError);</pre>
  <dd>
  <p>Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}} .</p>
 
- <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
+ <p>To mimic the behavior of Chrome, listen for the <a href=/web/api/window/pageshow_event>pageshow</a> and <a href=/web/api/window/pagehide_event>pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
  </dd>
  <dt>
  <h4 id="per-tab_zoom_behavior">"per-tab" zoom behavior</h4>
@@ -326,7 +326,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <h2 id="manifest.json_keys">manifest.json keys</h2>
 
-<p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page includes a table describing browser support for <code>manifest.json</code> keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
+<p>The main <a href=/mozilla/add-ons/webextensions/manifest.json><code>manifest.json</code></a> page includes a table describing browser support for <code>manifest.json</code> keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
 
 <p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
 

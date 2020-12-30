@@ -22,7 +22,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, and HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>.)</td>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, and HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -116,7 +116,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>Try adding this to your CSS now.</p>
 
-<p>The <code>list-style-type</code> property is a good property to look at on MDN to see which values are supported. Take a look at the page for <code><a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a></code> and you will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.</p>
+<p>The <code>list-style-type</code> property is a good property to look at on MDN to see which values are supported. Take a look at the page for <code><a href=/web/css/list-style-type>list-style-type</a></code> and you will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.</p>
 
 <p>Looking at that page you will discover that in addition to removing the list bullets you can change them — try changing them to square bullets by using a value of <code>square</code>.</p>
 
@@ -124,7 +124,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>So far we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.</p>
 
-<p>In your HTML document, add a <a href="/en-US/docs/Web/HTML/Global_attributes/class">class attribute</a> to the second list item. Your list will now look like this:</p>
+<p>In your HTML document, add a <a href=/web/html/global_attributes/class>class attribute</a> to the second list item. Your list will now look like this:</p>
 
 <pre class="brush: html; highlight[3]">&lt;ul&gt;
   &lt;li&gt;Item one&lt;/li&gt;
@@ -185,12 +185,12 @@ span.special {
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: As you can see, CSS gives us several ways to target elements, and we've only scratched the surface so far! We will be taking a proper look at all of these selectors and many more in our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors</a> articles later on in the course.</p>
+<p><strong>Note</strong>: As you can see, CSS gives us several ways to target elements, and we've only scratched the surface so far! We will be taking a proper look at all of these selectors and many more in our <a href=/learn/css/building_blocks/selectors>Selectors</a> articles later on in the course.</p>
 </div>
 
 <h2 id="Styling_things_based_on_state">Styling things based on state</h2>
 
-<p>The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link we need to target the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.</p>
+<p>The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link we need to target the <code><a href=/web/html/element/a>&lt;a&gt;</a></code> (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.</p>
 
 <pre class="brush: css">a:link {
   color: pink;
@@ -213,7 +213,7 @@ a:visited {
 <p>We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place, can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: you will often see mention of <a href="/en-US/docs/Learn/Accessibility">accessibility</a> in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.</p>
+<p><strong>Note</strong>: you will often see mention of <a href=/learn/accessibility>accessibility</a> in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.</p>
 
 <p>Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.</p>
 
@@ -255,9 +255,9 @@ h1 + ul + p { ... }</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
+ <li><a href=/learn/css/first_steps/what_is_css>What is CSS?</a></li>
+ <li><a href=/learn/css/first_steps/getting_started>Getting started with CSS</a></li>
+ <li><a href=/learn/css/first_steps/how_css_is_structured>How CSS is structured</a></li>
+ <li><a href=/learn/css/first_steps/how_css_works>How CSS works</a></li>
+ <li><a href=/learn/css/first_steps/using_your_new_knowledge>Using your new knowledge</a></li>
 </ol>

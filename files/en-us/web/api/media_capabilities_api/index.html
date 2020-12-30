@@ -50,7 +50,7 @@ tags:
 
 <p>The Media Capabilities API provide more powerful features than say {{DOMxRef("MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as  supported color gamut, dynamic range abilities, and real-time feedback about the playback.</p>
 
-<p>To test support, smoothness and power efficiency of a video or audio file, you define the <a href="/en-US/docs/Web/API/MediaConfiguration">media configuration</a> you want to test, and then pass the audio or video configuration as the parameter of the {{DOMxRef("MediaCapabilities")}} interface's <code>encodingInfo()</code> and <code>decodingInfo()</code> methods.</p>
+<p>To test support, smoothness and power efficiency of a video or audio file, you define the <a href=/web/api/mediaconfiguration>media configuration</a> you want to test, and then pass the audio or video configuration as the parameter of the {{DOMxRef("MediaCapabilities")}} interface's <code>encodingInfo()</code> and <code>decodingInfo()</code> methods.</p>
 
 <p>Media capabilities information enables websites to enable adaptative streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.</p>
 
@@ -60,7 +60,7 @@ tags:
 	<dt>{{DOMxRef("MediaCapabilities")}}</dt>
 	<dd>Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient . </dd>
 	<dt>{{DOMxRef("MediaCapabilitiesInfo")}}</dt>
-	<dd>The interface of the promise returned by  the {{DOMxRef("Media_Capabilities_API.mediaCapabilities", "mediaCapabilities")}}'s  <a href="/en-US/docs/Web/API/MediaCapabilities/encodingInfo" title="The MediaCapabilities.encodingInfo() method, part of the Media Capabilities API, returns a promise with the tested media configuration's mediaConfigurationInfo, which contains the three Boolean properties of supported, smooth, and powerefficient. The encodingInfo() takes as it's parameter an audio or video media file encoding configuration."><code>encodingInfo()</code></a> and <a href="/en-US/docs/Web/API/MediaCapabilities/decodingInfo" title="The MediaCapabilities.encodingInfo() method, part of the Media Capabilities API, returns a promise with the tested media configuration's mediaConfigurationInfo, which contains the three Boolean properties of supported, smooth, and powerefficient. The encodingInfo() takes as it's parameter an audio or video media file encoding configuration."><code>decodingInfo()</code></a> methods; returning whether the media configuration tested is  supported, smooth, and powerEfficient.</dd>
+	<dd>The interface of the promise returned by  the {{DOMxRef("Media_Capabilities_API.mediaCapabilities", "mediaCapabilities")}}'s  <a href=/web/api/mediacapabilities/encodinginfo title="The MediaCapabilities.encodingInfo() method, part of the Media Capabilities API, returns a promise with the tested media configuration's mediaConfigurationInfo, which contains the three Boolean properties of supported, smooth, and powerefficient. The encodingInfo() takes as it's parameter an audio or video media file encoding configuration."><code>encodingInfo()</code></a> and <a href=/web/api/mediacapabilities/decodinginfo title="The MediaCapabilities.encodingInfo() method, part of the Media Capabilities API, returns a promise with the tested media configuration's mediaConfigurationInfo, which contains the three Boolean properties of supported, smooth, and powerefficient. The encodingInfo() takes as it's parameter an audio or video media file encoding configuration."><code>decodingInfo()</code></a> methods; returning whether the media configuration tested is  supported, smooth, and powerEfficient.</dd>
 	<dt>ScreenColorGamut</dt>
 	<dd>Will describe the color gamut, or the range of color, the screen can display (not currently supported anywhere).</dd>
 	<dt>ScreenLuminance</dt>
@@ -108,8 +108,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</a>'s method <a href="/en-US/docs/Web/API/HTMLMediaElement/canPlayType">canPlayType()</a></li>
-	<li><a href="/en-US/docs/Web/API/MediaSource">MediaSource</a>'s method <a href="/en-US/docs/Web/API/MediaSource/isTypeSupported">isTypeSupported()</a></li>
+	<li><a href=/web/api/htmlmediaelement>HTMLMediaElement</a>'s method <a href=/web/api/htmlmediaelement/canplaytype>canPlayType()</a></li>
+	<li><a href=/web/api/mediasource>MediaSource</a>'s method <a href=/web/api/mediasource/istypesupported>isTypeSupported()</a></li>
 	<li>{{DOMxRef("Navigator")}} interface</li>
-	<li><a href="/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Using the Media Capabilities API</a></li>
+	<li><a href=/web/api/media_capabilities_api/using_the_media_capabilities_api>Using the Media Capabilities API</a></li>
 </ul>

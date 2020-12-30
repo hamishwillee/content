@@ -16,13 +16,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">We're now ready to add the code that displays our first complete page — a home page for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website. The home page will show the number of records we have for each model type and provide sidebar navigation links to our other pages. Along the way we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates.</p>
+<p class="summary">We're now ready to add the code that displays our first complete page — a home page for the <a href=/learn/server-side/django/tutorial_local_library_website>LocalLibrary</a> website. The home page will show the number of records we have for each model type and provide sidebar navigation links to our other pages. Along the way we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django Introduction</a>. Complete previous tutorial topics (including <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a>).</td>
+   <td>Read the <a href=/learn/server-side/django/introduction>Django Introduction</a>. Complete previous tutorial topics (including <a href=/learn/server-side/django/admin_site>Django Tutorial Part 4: Django admin site</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="Defining_the_resource_URLs">Defining the resource URLs</h2>
 
-<p>As this version of <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary </a>is essentially read-only for end users, we just need to provide a landing page for the site (a home page), and pages that <em>display</em> list and detail views for books and authors. </p>
+<p>As this version of <a href=/learn/server-side/django/tutorial_local_library_website>LocalLibrary </a>is essentially read-only for end users, we just need to provide a landing page for the site (a home page), and pages that <em>display</em> list and detail views for books and authors. </p>
 
 <p>The URLs that we'll need for our pages are:</p>
 
@@ -82,7 +82,7 @@ tags:
 
 <h3 id="URL_mapping">URL mapping</h3>
 
-<p>When we created the <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">skeleton website</a>, we updated the <strong>locallibrary/urls.py</strong> file to ensure that whenever a URL that starts with <code>catalog/</code>  is received, the <em>URLConf</em> module <code>catalog.urls</code> will process the remaining substring.</p>
+<p>When we created the <a href=/learn/server-side/django/skeleton_website>skeleton website</a>, we updated the <strong>locallibrary/urls.py</strong> file to ensure that whenever a URL that starts with <code>catalog/</code>  is received, the <em>URLConf</em> module <code>catalog.urls</code> will process the remaining substring.</p>
 
 <p>The following code snippet from <strong>locallibrary/urls.py </strong>includes the <code>catalog.urls</code> module:</p>
 
@@ -156,7 +156,7 @@ def index(request):
 
 <p>The first line imports the model classes that we'll use to access data in all our views.</p>
 
-<p>The first part of the view function fetches the number of records using the <code>objects.all()</code> attribute on the model classes. It also gets a list of <code>BookInstance</code> objects that have a value of 'a' (Available) in the status field. You can find more information about how to access model data in our previous tutorial <a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Using models &gt; Searching for records</a>.</p>
+<p>The first part of the view function fetches the number of records using the <code>objects.all()</code> attribute on the model classes. It also gets a list of <code>BookInstance</code> objects that have a value of 'a' (Available) in the status field. You can find more information about how to access model data in our previous tutorial <a href=/learn/server-side/django/models#Searching_for_records>Django Tutorial Part 3: Using models &gt; Searching for records</a>.</p>
 
 <p>At the end of the view function we call the <code>render()</code> function to create an HTML page and return the page as a response. This shortcut function wraps a number of other functions to simplify a very common use case. The <code>render()</code> function accepts the following parameters:</p>
 
@@ -317,7 +317,7 @@ return render(request, 'index.html', context=context)</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (<strong>/locallibrary/locallibrary/urls.py</strong>) when we <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the website skeleton</a>, but still need to enable file serving in production. We'll look at this later.</p>
+<p><strong>Note</strong>: The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (<strong>/locallibrary/locallibrary/urls.py</strong>) when we <a href=/learn/server-side/django/skeleton_website>created the website skeleton</a>, but still need to enable file serving in production. We'll look at this later.</p>
 </div>
 
 <p>For more information on working with static files see <a href="https://docs.djangoproject.com/en/3.1/howto/static-files/">Managing static files</a> in the Django documentation.</p>
@@ -406,19 +406,19 @@ return render(request, 'index.html', context=context)</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href=/learn/server-side/django/introduction>Django introduction</a></li>
+ <li><a href=/learn/server-side/django/development_environment>Setting up a Django development environment</a></li>
+ <li><a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/django/skeleton_website>Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/django/models>Django Tutorial Part 3: Using models</a></li>
+ <li><a href=/learn/server-side/django/admin_site>Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href=/learn/server-side/django/home_page>Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href=/learn/server-side/django/generic_views>Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href=/learn/server-side/django/sessions>Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href=/learn/server-side/django/authentication>Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href=/learn/server-side/django/forms>Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href=/learn/server-side/django/testing>Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href=/learn/server-side/django/deployment>Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href=/learn/server-side/django/web_application_security>Django web application security</a></li>
+ <li><a href=/learn/server-side/django/django_assessment_blog>DIY Django mini blog</a></li>
 </ul>

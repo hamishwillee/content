@@ -9,9 +9,9 @@ tags:
 ---
 <p>{{MDNSidebar}}</p>
 
-<p><span class="seoSummary">This page lists many of the general-purpose macros created for use on MDN. For how-to information on using these macros, see <a href="/en-US/docs/MDN/Contribute/Structures/Macros">Using macros</a> and <a href="/en-US/docs/MDN/Contribute/Editor/Links#Using_link_macros">Using link macros</a>.</span> See <a href="/en-US/docs/MDN/Contribute/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated. There is also a <a href="/en-US/dashboards/macros">complete list of all macros on MDN</a>. </p>
+<p><span class="seoSummary">This page lists many of the general-purpose macros created for use on MDN. For how-to information on using these macros, see <a href=/mdn/contribute/structures/macros>Using macros</a> and <a href=/mdn/contribute/editor/links#Using_link_macros>Using link macros</a>.</span> See <a href=/mdn/contribute/structures/macros/other>Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated. There is also a <a href="/en-US/dashboards/macros">complete list of all macros on MDN</a>. </p>
 
-<p>See also the <a href="/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
+<p>See also the <a href=/mdn/contribute/guidelines/css_style_guide>CSS style guide</a> for styles available for your use.</p>
 
 <h2 id="Linking">Linking</h2>
 
@@ -20,7 +20,7 @@ tags:
 <p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">In general, you don't need to use macros for creating arbitrary links. Use the <strong>Link</strong> button in the Editor interface to create links. </p>
 
 <ul>
- <li>The {{TemplateLink("Glossary")}} macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required and two optional parameters:
+ <li>The {{TemplateLink("Glossary")}} macro creates a link to a specified term's entry in the MDN <a href=/glossary>glossary</a>. This macro accepts one required and two optional parameters:
 
   <p>Examples:</p>
 
@@ -51,18 +51,18 @@ tags:
 <p>There are various macros for linking to pages in specific reference areas of MDN.</p>
 
 <ul>
- <li>{{TemplateLink("cssxref")}} links to a page in the <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a>.<br>
+ <li>{{TemplateLink("cssxref")}} links to a page in the <a href=/web/css/reference>CSS Reference</a>.<br>
   Example: <code>\{{CSSxRef("cursor")}}</code>, results in: {{CSSxRef("cursor")}}.</li>
  <li>{{TemplateLink("domxref")}} links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, <code>\{{DOMxRef("document.getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()")}} while <code>\{{DOMxRef("Node")}}</code> results in {{DOMxRef("Node")}}.</li>
  <li>{{TemplateLink("event")}} links to pages in the DOM Event reference, for example: <code>\{{Event("change")}}</code> results in {{Event("change")}}.</li>
  <li>{{TemplateLink("HTMLElement")}} links to an HTML element in the HTML Reference.</li>
  <li>{{TemplateLink("htmlattrxref")}} links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, <code>\{{HTMLAttrxRef("lang")}} </code>will create this link: {{HTMLAttrxRef("lang")}}. <code>\{{HTMLAttrxRef("type","input")}}</code> will create this link: {{htmlattrxref("type","input")}}.</li>
- <li>{{TemplateLink("jsxref")}} links to a page in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>.</li>
+ <li>{{TemplateLink("jsxref")}} links to a page in the <a href=/web/javascript/reference>JavaScript Reference</a>.</li>
  <li>{{TemplateLink("SVGAttr")}} links to a specific SVG attribute. For example, <code>\{{SVGAttr("d")}}</code> creates this link: {{SVGAttr("d")}}.</li>
  <li>{{TemplateLink("SVGElement")}} links to an SVG element in the SVG Reference.</li>
- <li>{{TemplateLink("HTTPHeader")}} links to an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</li>
- <li>{{TemplateLink("HTTPMethod")}} links to an <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a>.</li>
- <li>{{TemplateLink("HTTPStatus")}} links to an <a href="/en-US/docs/Web/HTTP/Status">HTTP response status code</a>.</li>
+ <li>{{TemplateLink("HTTPHeader")}} links to an <a href=/web/http/headers>HTTP header</a>.</li>
+ <li>{{TemplateLink("HTTPMethod")}} links to an <a href=/web/http/methods>HTTP request method</a>.</li>
+ <li>{{TemplateLink("HTTPStatus")}} links to an <a href=/web/http/status>HTTP response status code</a>.</li>
 </ul>
 
 <h3 id="Linking_to_bugs">Linking to bugs</h3>
@@ -85,8 +85,8 @@ tags:
 <h3 id="Live_samples">Live samples</h3>
 
 <ul>
- <li>{{TemplateLink("EmbedLiveSample")}} lets you embed the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">Live samples</a>.</li>
- <li>{{TemplateLink("LiveSampleLink")}} creates a link to a page containing the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">Live samples</a>.</li>
+ <li>{{TemplateLink("EmbedLiveSample")}} lets you embed the output of a code sample on a page, as described in <a href=/mdn/contribute/structures/live_samples>Live samples</a>.</li>
+ <li>{{TemplateLink("LiveSampleLink")}} creates a link to a page containing the output of a code sample on a page, as described in <a href=/mdn/contribute/structures/live_samples>Live samples</a>.</li>
 </ul>
 
 <h2 id="Sidebar_generation">Sidebar generation</h2>
@@ -186,7 +186,7 @@ tags:
 
 <h3 id="Template_badges">Template badges</h3>
 
-<p>These macros are mostly used on the <a href="/en-US/docs/Web/API">WebAPI</a> page. See {{anch("Creating new badges")}} for information on creating a new badge.</p>
+<p>These macros are mostly used on the <a href=/web/api>WebAPI</a> page. See {{anch("Creating new badges")}} for information on creating a new badge.</p>
 
 <h3 id="Page_or_section_header_indicators">Page or section header indicators</h3>
 
@@ -194,7 +194,7 @@ tags:
 
 <ul>
  <li>{{TemplateLink("non-standard_header")}}: <code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
- <li>{{TemplateLink("SeeCompatTable")}} should be used on pages that document <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
+ <li>{{TemplateLink("SeeCompatTable")}} should be used on pages that document <a href=/mdn/contribute/guidelines/conventions_definitions#Experimental>experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
  <li>{{TemplateLink("deprecated_header")}}: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
  <li>{{TemplateLink("deprecated_header")}} with parameter: <code>\{{Deprecated_Header("gecko5")}}</code> {{Deprecated_Header("gecko5")}} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</li>
  <li>{{TemplateLink("obsolete_header")}}: <code>\{{Obsolete_Header}}</code> {{Obsolete_Header}}</li>
@@ -204,6 +204,6 @@ tags:
 
 <h3 id="Indicating_that_a_feature_is_available_in_web_workers">Indicating that a feature is available in web workers</h3>
 
-<p>The {{TemplateLink("AvailableInWorkers")}} macro inserts a localised note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context.</p>
+<p>The {{TemplateLink("AvailableInWorkers")}} macro inserts a localised note box indicating that a feature is available in a <a href=/web/api/web_workers_api>Web worker</a> context.</p>
 
 <p>{{AvailableInWorkers}}</p>

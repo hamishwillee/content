@@ -5,14 +5,14 @@ tags:
   - WebExtensions
 ---
 <div>{{AddonSidebar}}
-<p>If you've been through the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a> article, you've already got an idea of how to write an extension. <span class="seoSummary">In this article, we'll write a slightly more complex extension that demonstrates a few more of the APIs.</span></p>
+<p>If you've been through the <a href=/mozilla/add-ons/webextensions/your_first_webextension>Your first extension</a> article, you've already got an idea of how to write an extension. <span class="seoSummary">In this article, we'll write a slightly more complex extension that demonstrates a few more of the APIs.</span></p>
 
 <p>The extension adds a new button to the Firefox toolbar. When the user clicks the button, we display a popup enabling them to choose an animal. Once they choose an animal, we'll replace the current page's content with a picture of the chosen animal.</p>
 
 <p>To implement this, we will:</p>
 
 <ul>
- <li><strong>define a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a>, which is a button attached to the Firefox toolbar</strong>.<br>
+ <li><strong>define a <a href=/mozilla/add-ons/webextensions/browser_action>browser action</a>, which is a button attached to the Firefox toolbar</strong>.<br>
   For the button we'll supply:
   <ul>
    <li>an icon, called "beasts-32.png"</li>
@@ -87,18 +87,18 @@ cd beastify</pre>
 </pre>
 
 <ul>
- <li>The first three keys: <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code>, are mandatory and contain basic metadata for the extension.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> are optional, but recommended: they provide useful information about the extension.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> lists permissions the extension needs. We're just asking for the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> here.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> specifies the toolbar button. We're supplying three pieces of information here:
+ <li>The first three keys: <code><a href=/mozilla/add-ons/webextensions/manifest.json/manifest_version>manifest_version</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/name>name</a></code>, and <code><a href=/mozilla/add-ons/webextensions/manifest.json/version>version</a></code>, are mandatory and contain basic metadata for the extension.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/description>description</a></code> and <code><a href=/mozilla/add-ons/webextensions/manifest.json/homepage_url>homepage_url</a></code> are optional, but recommended: they provide useful information about the extension.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/icons>icons</a></code> is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permissions</a></code> lists permissions the extension needs. We're just asking for the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> here.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code> specifies the toolbar button. We're supplying three pieces of information here:
   <ul>
    <li><code>default_icon</code> is mandatory, and points to the icon for the button</li>
    <li><code>default_title</code> is optional, and will be shown in a tooltip</li>
    <li><code>default_popup</code> is used if you want a popup to be shown when the user clicks the button. We do, so we've included this key and made it point to an HTML file included with the extension.</li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> lists files that we want to make accessible to web pages. Since the extension replaces the content in the page with images we've packaged with the extension, we need to make these images accessible to the page.</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/web_accessible_resources>web_accessible_resources</a></code> lists files that we want to make accessible to web pages. Since the extension replaces the content in the page with images we've packaged with the extension, we need to make these images accessible to the page.</li>
 </ul>
 
 <p>Note that all paths given are relative to manifest.json itself.</p>
@@ -169,7 +169,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 &lt;/html&gt;
 </pre>
 
-<p>We have a <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> element with an ID of <code>"popup-content"</code> that contains an element for each animal choice. We have another <code>&lt;div&gt;</code> with an ID of <code>"error-content"</code> and a class <code>"hidden"</code>. We'll use that in case there's a problem initializing the popup.</p>
+<p>We have a <code><a href=/web/html/element/div>&lt;div&gt;</a></code> element with an ID of <code>"popup-content"</code> that contains an element for each animal choice. We have another <code>&lt;div&gt;</code> with an ID of <code>"error-content"</code> and a class <code>"hidden"</code>. We'll use that in case there's a problem initializing the popup.</p>
 
 <p>Note that we include the CSS and JS files from this file, just like a web page.</p>
 
@@ -316,7 +316,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 </pre>
 
-<p>The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code> API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.</p>
+<p>The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the <code><a href=/mozilla/add-ons/webextensions/api/tabs/executescript>browser.tabs.executeScript()</a></code> API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.</p>
 
 <p>A common reason the <code>browser.tabs.executeScript()</code> call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the <a href="https://addons.mozilla.org/">addons.mozilla.org</a> domain. If it does fail, <code>reportExecuteScriptError()</code> will hide the <code>"popup-content"</code> <code>&lt;div&gt;</code>, show the <code>"error-content"</code> <code>&lt;div&gt;</code>, and log an error to the <a href="/en-US/Add-ons/WebExtensions/Debugging">console</a>.</p>
 
@@ -332,7 +332,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 <ul>
  <li>map the button clicked to a URL pointing to an image of a particular beast</li>
  <li>hide the page's whole content by injecting some CSS, using the <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API</li>
- <li>send a "beastify" message to the content script using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API, asking it to beastify the page, and passing it the URL to the beast image.</li>
+ <li>send a "beastify" message to the content script using the <code><a href=/mozilla/add-ons/webextensions/api/tabs/sendmessage>browser.tabs.sendMessage()</a></code> API, asking it to beastify the page, and passing it the URL to the beast image.</li>
 </ul>
 
 <p>The <code>reset()</code> function essentially undoes a beastify:</p>
@@ -401,7 +401,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 <p>After that, the place to start is line 40, where the content script listens for messages from the popup, using the <code><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API. We saw above that the popup script can send two different sorts of messages: "beastify" and "reset".</p>
 
 <ul>
- <li>if the message is "beastify", we expect it to contain a URL pointing to a beast image. We remove any beasts that might have been added by previous "beastify" calls, then construct and append an <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element whose <code>src</code> attribute is set to the beast URL.</li>
+ <li>if the message is "beastify", we expect it to contain a URL pointing to a beast image. We remove any beasts that might have been added by previous "beastify" calls, then construct and append an <code><a href=/web/html/element/img>&lt;img&gt;</a></code> element whose <code>src</code> attribute is set to the beast URL.</li>
  <li>if the message is "reset", we just remove any beasts that might have been added.</li>
 </ul>
 
@@ -462,8 +462,8 @@ web-ext run</pre>
 
 <ul>
  <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">read about the anatomy of an extension</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">explore the extension examples</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">find out what you need to develop, test, and publish your extension</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience">take your learning further</a>.</li>
+ <li><a href=/mozilla/add-ons/webextensions/examples>explore the extension examples</a></li>
+ <li><a href=/mozilla/add-ons/webextensions/what_next_>find out what you need to develop, test, and publish your extension</a></li>
+ <li><a href=/mozilla/add-ons/webextensions/what_next_#Continue_your_learning_experience>take your learning further</a>.</li>
 </ul>
 

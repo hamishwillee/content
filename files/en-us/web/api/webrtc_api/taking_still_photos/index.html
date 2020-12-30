@@ -117,13 +117,13 @@ tags:
 
 <p>The success callback receives a <code>stream</code> object as input. It is the {{HTMLElement("video")}} element's source to our new stream.</p>
 
-<p>Once the stream is linked to the <code>&lt;video&gt;</code> element, we start it playing by calling <code><a href="/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code>.</p>
+<p>Once the stream is linked to the <code>&lt;video&gt;</code> element, we start it playing by calling <code><a href=/web/api/htmlmediaelement#play>HTMLMediaElement.play()</a></code>.</p>
 
 <p>The error callback is called if opening the stream doesn't work. This will happen for example if there's no compatible camera connected, or the user denied access.</p>
 
 <h4 id="Listen_for_the_video_to_start_playing">Listen for the video to start playing</h4>
 
-<p>After calling <code><a href="/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to <code>video</code> for the {{event("canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the <code>video</code> object have been configured based on the stream's format.</p>
+<p>After calling <code><a href=/web/api/htmlmediaelement#play>HTMLMediaElement.play()</a></code> on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to <code>video</code> for the {{event("canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the <code>video</code> object have been configured based on the stream's format.</p>
 
 <pre class="brush: js">    video.addEventListener('canplay', function(ev){
       if (!streaming) {
@@ -214,7 +214,7 @@ tags:
 
 <p>Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white)  to the extreme (gaussian blurs and hue rotation).</p>
 
-<p>You can play with this effect using, for example, the Firefox developer tools' <a href="/en-US/docs/Tools/Style_Editor">style editor</a>; see <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters">Edit CSS filters</a> for details on how to do so.</p>
+<p>You can play with this effect using, for example, the Firefox developer tools' <a href=/tools/style_editor>style editor</a>; see <a href=/tools/page_inspector/how_to/edit_css_filters>Edit CSS filters</a> for details on how to do so.</p>
 
 <h2 id="Using_specific_devices">Using specific devices</h2>
 
@@ -226,6 +226,6 @@ tags:
  <li><a href="https://mdn-samples.mozilla.org/s/webrtc-capturestill">Try this sample</a></li>
  <li><a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill">Sample code on Github</a></li>
  <li>{{domxref("Navigator.mediaDevices.getUserMedia()")}}</li>
- <li>{{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}</li>
+ <li>{{SectionOnPage(/web/api/canvas_api/tutorial/using_images, "Using frames from a video")}}</li>
  <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
 </ul>

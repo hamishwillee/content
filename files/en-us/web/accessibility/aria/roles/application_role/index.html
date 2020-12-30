@@ -8,7 +8,7 @@ tags:
   - Reference
   - Role application
 ---
-<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
+<div>{{Page(/web/accessibility/aria/roles, "Subnav")}}</div>
 
 <p><span class="seoSummary">The <code>application</code> role indicates to assistive technologies that an element <em>and all of its children</em> should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications.</span></p>
 
@@ -23,7 +23,7 @@ tags:
 
 <p>In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.</p>
 
-<p>If the web application encompassed by the application role contains parts that <em>should</em> be treated like normal web content, a role of <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role">document</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code> should be used.</p>
+<p>If the web application encompassed by the application role contains parts that <em>should</em> be treated like normal web content, a role of <code><a href=/web/accessibility/aria/roles/document_role>document</a></code> or <code><a href=/web/accessibility/aria/roles/article_role>article</a></code> should be used.</p>
 
 <h3 id="Background">Background</h3>
 
@@ -38,7 +38,7 @@ tags:
 <h3 id="Associated_WAI-ARIA_roles_states_and_properties">Associated WAI-ARIA roles, states, and properties</h3>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role">document</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code></dt>
+ <dt><code><a href=/web/accessibility/aria/roles/document_role>document</a></code>, <code><a href=/web/accessibility/aria/roles/article_role>article</a></code></dt>
  <dd>Used to indicate parts of the application that should be treated as normal web content</dd>
  <dt>aria-activedescendant</dt>
  <dd>Used to manage focus inside the application.</dd>
@@ -54,7 +54,7 @@ tags:
 
 <p>Keyboard interaction is completely under the web author's control and can be anything associated with the particular widget being implemented. In a slides application, for example, a widget could be created that uses the arrow keys to position elements on the slide, and uses audio feedback via an ARIA live region to communicate the position and overlap status with other objects. Focus is being managed via <em>aria-activedescendant</em>.</p>
 
-<p>The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd> , must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an <a href="/en-US/docs/Web/HTML/Element/input">input</a> element.</p>
+<p>The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd> , must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an <a href=/web/html/element/input>input</a> element.</p>
 
 <h3 id="Required_JavaScript_features">Required JavaScript features</h3>
 

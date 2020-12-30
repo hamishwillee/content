@@ -15,7 +15,7 @@ tags:
 
 <p>The <strong><code>RTCDtlsTransport</code></strong> interface provides access to information about the Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) transport over which a {{domxref("RTCPeerConnection")}}'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}} objects.</p>
 
-<p>A DTLS transport is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's <a href="/en-US/docs/Web/API/RTCDataChannel">data channels</a>.</p>
+<p>A DTLS transport is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's <a href=/web/api/rtcdatachannel>data channels</a>.</p>
 
 <p>Features of the DTLS transport include the addition of security to the underlying transport; the <code>RTCDtlsTransport</code> interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.</p>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>Whether bundling is used depends on what the other endpoint is able to negotiate. All browsers support bundling, so when both endpoints are browsers, you can rest assured that bundling will be used.</p>
 
-<p>Some non-browser legacy endpoints, however, may not support bundle. To be able to negotiate with such endpoints (or to exclude them entirely), the {{domxref("RTCConfiguration")}} property {{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} may be provided when creating the connection. The <code>bundlePolicy</code> <a href="/en-US/docs/Web/API/RTCPeerConnection#RTCBundlePolicy_enum">lets you control</a> how to negotiate with these legacy endpoints. The default policy is <code>"balanced"</code>, which provides a balance between performance and compatibility.</p>
+<p>Some non-browser legacy endpoints, however, may not support bundle. To be able to negotiate with such endpoints (or to exclude them entirely), the {{domxref("RTCConfiguration")}} property {{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} may be provided when creating the connection. The <code>bundlePolicy</code> <a href=/web/api/rtcpeerconnection#RTCBundlePolicy_enum>lets you control</a> how to negotiate with these legacy endpoints. The default policy is <code>"balanced"</code>, which provides a balance between performance and compatibility.</p>
 
 <p>For example, to create the connection using the highest level of bundling:</p>
 

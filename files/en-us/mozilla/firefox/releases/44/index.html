@@ -18,7 +18,7 @@ tags:
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">&lt;link rel="prefetch"&gt;</a></code> now obeys the {{htmlattrxref("crossorigin", "link")}} attribute ({{bug(1214819)}}).</li>
+ <li><code><a href=/web/http/link_prefetching_faq>&lt;link rel="prefetch"&gt;</a></code> now obeys the {{htmlattrxref("crossorigin", "link")}} attribute ({{bug(1214819)}}).</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
@@ -88,16 +88,16 @@ tags:
 <h4 id="Changes">Changes</h4>
 
 <ul>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> bindings in the global level have been made compliant with ES2015 semantics. See {{bug(589199)}} and the blog post <a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">"Breaking changes in let and const in Firefox Nightly 44"</a>. In addition, <code>let</code> is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ({{bug(932517)}}).</li>
- <li>If <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays'</a> (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).</li>
- <li>The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#Anchored_sticky_flag"> anchored sticky regular expressions</a> ({{bug(773687)}}).</li>
- <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell">JavaScript shell</a> (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).</li>
+ <li>The <code><a href=/web/javascript/reference/statements/let>let</a></code> and <code><a href=/web/javascript/reference/statements/const>const</a></code> bindings in the global level have been made compliant with ES2015 semantics. See {{bug(589199)}} and the blog post <a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">"Breaking changes in let and const in Firefox Nightly 44"</a>. In addition, <code>let</code> is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ({{bug(932517)}}).</li>
+ <li>If <a href=/web/javascript/typed_arrays>typed arrays'</a> (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).</li>
+ <li>The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for<a href=/web/javascript/reference/global_objects/regexp/sticky#Anchored_sticky_flag> anchored sticky regular expressions</a> ({{bug(773687)}}).</li>
+ <li>The <a href=/mozilla/projects/spidermonkey/introduction_to_the_javascript_shell>JavaScript shell</a> (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).</li>
 </ul>
 
 <h4 id="Removals">Removals</h4>
 
 <ul>
- <li>Support for the non-standard <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#let_blocks"><code>let</code> blocks</a> has been dropped ({{bug(1167029)}}.</li>
+ <li>Support for the non-standard <a href=/web/javascript/reference/statements/let#let_blocks><code>let</code> blocks</a> has been dropped ({{bug(1167029)}}.</li>
  <li>The non-standard and deprecated property {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} has been removed ({{bug(683218)}}).</li>
 </ul>
 
@@ -107,7 +107,7 @@ tags:
 
 <ul>
  <li>For compatibility with specific existing sites, the property {{domxref("Document.charset")}} has been implemented as an alias of {{domxref("Document.characterSet")}} ({{bug(647621)}}).</li>
- <li>Support for the <code><a href="/en-US/docs/Adding_search_engines_from_web_pages#Installing_Sherlock_plugins">window.sidebar.addSearchEngine()</a></code> method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ({{bug(862148)}}).</li>
+ <li>Support for the <code><a href=/adding_search_engines_from_web_pages#Installing_Sherlock_plugins>window.sidebar.addSearchEngine()</a></code> method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ({{bug(862148)}}).</li>
  <li>To fight unwanted pop-ups, prompts requested in {{domxref("Window.onbeforeunload")}} of pages that have not been interacted with are no more displayed ({{bug(636905)}}).</li>
  <li>The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ({{bug(949376)}}).</li>
  <li>The obsolete property <code>DocumentType.internalSubset</code> has been removed ({{bug(801545)}}).</li>
@@ -122,7 +122,7 @@ tags:
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>A new experimental {{domxref("OffscreenCanvas")}} API that allows rendering contexts (such as <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>) to run in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> has been implemented. To use this experimental API set <code>gfx.offscreencanvas.enabled</code> to <code>true</code> in about:config ({{bug(709490)}}). This API includes:
+ <li>A new experimental {{domxref("OffscreenCanvas")}} API that allows rendering contexts (such as <a href=/web/api/webgl_api>WebGL</a>) to run in <a href=/web/api/web_workers_api>Web Workers</a> has been implemented. To use this experimental API set <code>gfx.offscreencanvas.enabled</code> to <code>true</code> in about:config ({{bug(709490)}}). This API includes:
 
   <ul>
    <li>The {{domxref("OffscreenCanvas")}} interface,</li>
@@ -157,7 +157,7 @@ tags:
  <li>The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).</li>
  <li>In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the <code>isReload</code> member is not present in the options dictionary, it now defaults to <code>false</code> ({{bug(1216401)}}).</li>
  <li>The {{domxref("Client.frameType")}} property is now implemented on the right interface; it was on {{domxref("WindowClient")}} before ({{bug(1218146)}}).</li>
- <li>When <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> instead ({{bug("1204581")}}.)</li>
+ <li>When <a href=/web/html/using_the_application_cache>AppCache</a> is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use <a href=/web/api/service_worker_api/using_service_workers>Service workers</a> instead ({{bug("1204581")}}.)</li>
  <li>Service workers have been enabled by default in Gecko.</li>
 </ul>
 
@@ -192,7 +192,7 @@ tags:
  <li>{{domxref("URLSearchParams")}} objects now support a pair iterator, meaning that the methods {{domxref("URLSearchParams.entries()")}}, {{domxref("URLSearchParams.keys()")}}, and {{domxref("URLSearchParams.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1085284)}}).</li>
  <li>{{domxref("FormData")}} objects now support a pair iterator, meaning that the methods {{domxref("FormData.entries()")}}, {{domxref("FormData.keys")}}, and {{domxref("FormData.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1127703)}}).</li>
  <li>When {{domxref("XMLHttpRequest.send()")}} is used with an HTML document, it now uses <code>text/html</code> instead of <code>application/xml</code> ({{bug(918771)}}).</li>
- <li>Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Mac and Linux, hidden behind the <code>media.webspeech.synth.enabled</code> flag in <code>about:config</code> ({{bug("1003452")}}, {{bug("1003464")}}.) See <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> for more information.</li>
+ <li>Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Mac and Linux, hidden behind the <code>media.webspeech.synth.enabled</code> flag in <code>about:config</code> ({{bug("1003452")}}, {{bug("1003464")}}.) See <a href=/web/api/web_speech_api>Web Speech API</a> for more information.</li>
  <li>Elements inside a {{HTMLElement("frame")}} or an {{HTMLElement('object')}} can't be set full-screen anymore ({{bug(1212299)}}).</li>
  <li>Sanitization of WOFF fonts is a bit more stricter, leading to more incorrect fonts being rejected, this sanitization is made a bit less stricter in Firefox 46 ({{bug(1193050)}} and {{bug (1244693)}}).</li>
 </ul>
@@ -212,7 +212,7 @@ tags:
 <h2 id="HTTP">HTTP</h2>
 
 <ul>
- <li>Support for the <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> algorithm has been added and both <code><a href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Encoding_header">Accept-Encoding</a></code> and <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding </a></code>headers now support the <code>br</code> value ({{bug(366559)}} and {{bug(1211916)}}).</li>
+ <li>Support for the <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> algorithm has been added and both <code><a href=/web/http/content_negotiation#The_Accept-Encoding_header>Accept-Encoding</a></code> and <code><a href=/web/http/headers/content-encoding>Content-Encoding </a></code>headers now support the <code>br</code> value ({{bug(366559)}} and {{bug(1211916)}}).</li>
  <li>Incorrect support of HTTP/2 headers containing line breaks (<code>'/n'</code>) have been removed as the spec doesn't allow it, unlike HTTP/1 ({{bug(1197847)}}).</li>
 </ul>
 
@@ -240,7 +240,7 @@ tags:
 
 <ul>
  <li>Added <code>LIKE</code> support to Sqlite.jsm ({{bug(1188760)}}).</li>
- <li>Added <a href="/en-US/docs/Mozilla/Add-ons/Firefox_for_Android/API/Snackbars.jsm">Snackbars.jsm</a> module to <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox for Android</a> ({{bug(1215026)}})</li>
+ <li>Added <a href=/mozilla/add-ons/firefox_for_android/api/snackbars.jsm>Snackbars.jsm</a> module to <a href=/mozilla/firefox_for_android>Firefox for Android</a> ({{bug(1215026)}})</li>
 </ul>
 
 <h3 id="XPCOM">XPCOM</h3>
@@ -252,7 +252,7 @@ tags:
 <h3 id="Other">Other</h3>
 
 <ul>
- <li>Due to breaking changes in Firefox 44 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202902">bug 1202902</a>), add-ons packed with <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx">cfx</a> will not work any longer. To make your add-on compatible again, please use <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm</a>. You can find steps to migrate from <em>cfx</em> to <em>jpm</em> <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm">here</a>.</li>
+ <li>Due to breaking changes in Firefox 44 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202902">bug 1202902</a>), add-ons packed with <a href=/mozilla/add-ons/sdk/tools/cfx>cfx</a> will not work any longer. To make your add-on compatible again, please use <a href=/mozilla/add-ons/sdk/tools/jpm>jpm</a>. You can find steps to migrate from <em>cfx</em> to <em>jpm</em> <a href=/mozilla/add-ons/sdk/tools/cfx_to_jpm>here</a>.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

@@ -16,13 +16,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">This second article in our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a> shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.</p>
+<p class="summary">This second article in our <a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial</a> shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Set up a Django development environment</a>. Review the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a>.</td>
+   <td><a href=/learn/server-side/django/development_environment>Set up a Django development environment</a>. Review the <a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -48,7 +48,7 @@ tags:
  <li><span style="line-height: 1.5;">Hook up the <strong>url/path</strong> mapper for each application.</span></li>
 </ol>
 
-<p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>. The top-level folder structure will therefore be as follows:</p>
+<p>For the <a href=/learn/server-side/django/tutorial_local_library_website>Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>. The top-level folder structure will therefore be as follows:</p>
 
 <pre class="brush: bash notranslate"><em>locallibrary/         # Website folder</em>
     <strong>manage.py         </strong><em># Script to run Django tools for this project</em> (created using django-admin)
@@ -61,7 +61,7 @@ tags:
 <h2 id="Creating_the_project">Creating the project</h2>
 
 <ol>
- <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">virtual environment</a>. </li>
+ <li>Open a command shell (or a terminal window), and make sure you are in your <a href=/learn/server-side/django/development_environment#Using_a_virtual_environment>virtual environment</a>. </li>
  <li>Navigate <span style="line-height: 1.5;">to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: </span><em>django_projects</em>). Then change into your newly-created directory:
  <pre class="brush: bash notranslate">mkdir django_projects
 cd django_projects</pre>
@@ -163,7 +163,7 @@ cd locallibrary</pre>
 <p>The new line specifies the application configuration object (<code>CatalogConfig</code>) that was generated for you in <strong>/locallibrary/catalog/apps.py</strong> when you created the application.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You'll notice that there are already a lot of other <code>INSTALLED_APPS</code> (and <code>MIDDLEWARE</code>, further down in the settings file). These enable support for the <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> and the functionality it uses (including sessions, authentication, etc).</p>
+<p><strong>Note</strong>: You'll notice that there are already a lot of other <code>INSTALLED_APPS</code> (and <code>MIDDLEWARE</code>, further down in the settings file). These enable support for the <a href=/learn/server-side/django/admin_site>Django administration site</a> and the functionality it uses (including sessions, authentication, etc).</p>
 </div>
 
 <h2 id="Specifying_the_database">Specifying the database</h2>
@@ -374,7 +374,7 @@ python3 manage.py migrate
 
 <p>You have now created a complete skeleton website project, which you can go on to populate with urls, models, views, and templates.</p>
 
-<p>Now that the skeleton for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a> is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.</p>
+<p>Now that the skeleton for the <a href=/learn/server-side/django/tutorial_local_library_website>Local Library website</a> is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -388,19 +388,19 @@ python3 manage.py migrate
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href=/learn/server-side/django/introduction>Django introduction</a></li>
+ <li><a href=/learn/server-side/django/development_environment>Setting up a Django development environment</a></li>
+ <li><a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/django/skeleton_website>Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/django/models>Django Tutorial Part 3: Using models</a></li>
+ <li><a href=/learn/server-side/django/admin_site>Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href=/learn/server-side/django/home_page>Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href=/learn/server-side/django/generic_views>Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href=/learn/server-side/django/sessions>Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href=/learn/server-side/django/authentication>Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href=/learn/server-side/django/forms>Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href=/learn/server-side/django/testing>Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href=/learn/server-side/django/deployment>Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href=/learn/server-side/django/web_application_security>Django web application security</a></li>
+ <li><a href=/learn/server-side/django/django_assessment_blog>DIY Django mini blog</a></li>
 </ul>

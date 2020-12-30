@@ -14,7 +14,7 @@ tags:
 
 <p class="summary">The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
 
-<p>When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, which controls columns and rows together.</p>
+<p>When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of <a href=/web/css/css_grid_layout>CSS Grid Layout</a>, which controls columns and rows together.</p>
 
 <h2 id="The_two_axes_of_flexbox">The two axes of flexbox</h2>
 
@@ -106,7 +106,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}</p>
 
-<p>Find out more about wrapping flex items in the guide <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering Wrapping of Flex Items</a>.</p>
+<p>Find out more about wrapping flex items in the guide <a href=/web/css/css_flexible_box_layout/mastering_wrapping_of_flex_items>Mastering Wrapping of Flex Items</a>.</p>
 
 <h2 id="The_flex-flow_shorthand">The flex-flow shorthand</h2>
 
@@ -126,7 +126,7 @@ tags:
  <li>{{cssxref("flex-basis")}}</li>
 </ul>
 
-<p>We will take a brief look at these properties in this overview, and you can gain a fuller understanding in the guide <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of Flex Items on the Main Axis</a>.</p>
+<p>We will take a brief look at these properties in this overview, and you can gain a fuller understanding in the guide <a href=/web/css/css_flexible_box_layout/controlling_ratios_of_flex_items_along_the_main_ax>Controlling Ratios of Flex Items on the Main Axis</a>.</p>
 
 <p>Before we can make sense of these properties we need to consider the concept of <strong>available space</strong>. What we are doing when we change the value of these flex properties is to change the way that available space is distributed amongst our items. This concept of available space is also important when we come to look at aligning items.</p>
 
@@ -154,7 +154,7 @@ tags:
 
 <p>Where the <code>flex-grow</code> property deals with adding space in the main axis, the <code>flex-shrink</code> property controls how it is taken away. If we do not have enough space in the container to lay out our items, and <code>flex-shrink</code> is set to a positive integer, then the item can become smaller than the <code>flex-basis</code>. As with <code>flex-grow</code>, different values can be assigned in order to cause one item to shrink faster than others — an item with a higher value set for <code>flex-shrink</code> will shrink faster than its siblings that have lower values.</p>
 
-<p>The minimum size of the item will be taken into account while working out the actual amount of shrinkage that will happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior. We’ll therefore take a more detailed look at how this algorithm works in the article <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of items along the main axis</a>.</p>
+<p>The minimum size of the item will be taken into account while working out the actual amount of shrinkage that will happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior. We’ll therefore take a more detailed look at how this algorithm works in the article <a href=/web/css/css_flexible_box_layout/controlling_ratios_of_flex_items_along_the_main_ax>Controlling Ratios of items along the main axis</a>.</p>
 
 <div class="note">
 <p>Note that these values for <code>flex-grow</code> and <code>flex-shrink</code> are proportions. Typically if we had all of our items set to <code>flex: 1 1 200px</code> and then wanted one item to grow at twice the rate, we would set that item to flex: <code>2 1 200px</code>. However you could also use <code>flex: 10 1 200px</code> and <code>flex: 20 1 200px</code> if you wanted.</p>
@@ -229,8 +229,8 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}</p>
 
-<p>In the article <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a Flex Container</a> we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.</p>
+<p>In the article <a href=/web/css/css_flexible_box_layout/aligning_items_in_a_flex_container>Aligning Items in a Flex Container</a> we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.</p>
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>After reading this article you should have an understanding of the basic features of Flexbox. In the next article we will look at <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">how this specification relates to other parts of CSS</a>.</p>
+<p>After reading this article you should have an understanding of the basic features of Flexbox. In the next article we will look at <a href=/web/css/css_flexible_box_layout/relationship_of_flexbox_to_other_layout_methods>how this specification relates to other parts of CSS</a>.</p>

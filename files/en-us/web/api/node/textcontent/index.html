@@ -33,9 +33,9 @@ tags:
 <ul>
 	<li>If the node is a {{domxref("document")}} or a {{glossary("Doctype")}}, <code>textContent</code> returns {{jsxref("null")}}.
 
-	<div class="note"><strong>Note:</strong> To get <em>all</em> of the text and <a href="/en-US/docs/Web/API/CDATASection">CDATA data</a> for the whole document, one could use <code><a href="/en-US/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code>.</div>
+	<div class="note"><strong>Note:</strong> To get <em>all</em> of the text and <a href=/web/api/cdatasection>CDATA data</a> for the whole document, one could use <code><a href=/web/api/document/documentelement>document.documentElement</a>.textContent</code>.</div>
 	</li>
-	<li>If the node is a <a href="/en-US/docs/Web/API/CDATASection">CDATA section</a>, comment, <a href="/en-US/docs/Web/API/ProcessingInstruction">processing instruction</a>, or <a href="/en-US/docs/Web/API/Text">text node</a>, <code>textContent</code> returns the text inside the node, i.e., the {{domxref("Node.nodeValue")}}.</li>
+	<li>If the node is a <a href=/web/api/cdatasection>CDATA section</a>, comment, <a href=/web/api/processinginstruction>processing instruction</a>, or <a href=/web/api/text>text node</a>, <code>textContent</code> returns the text inside the node, i.e., the {{domxref("Node.nodeValue")}}.</li>
 	<li>For other node types, <code>textContent</code> returns the concatenation of the <code>textContent</code> of every child node, excluding comments and processing instructions. (This is an empty string if the node has no children.)</li>
 </ul>
 

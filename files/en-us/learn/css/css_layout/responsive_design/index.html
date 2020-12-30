@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>.)</td>
+   <td>HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/first_steps>CSS first steps</a> and <a href=/learn/css/building_blocks>CSS building blocks</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -59,7 +59,7 @@ tags:
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The screenshots above are taken using the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> in Firefox DevTools.</p>
+<p><strong>Note</strong>: The screenshots above are taken using the <a href=/tools/responsive_design_mode>Responsive Design Mode</a> in Firefox DevTools.</p>
 </div>
 
 <p>As the mobile web started to become a reality with the first feature phones, companies who wished to embrace mobile would generally create a special mobile version of their site, with a different URL (often something like <em>m.example.com</em>, or <em>example.mobi</em>). This meant that two separate versions of the site had to be developed and kept up-to-date.</p>
@@ -79,7 +79,7 @@ tags:
 <ol>
  <li>The first was the idea of fluid grids, something which was already being explored by Gillenwater, and can be read up on in Marcotte's article, <a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a> (published in 2009 on A List Apart).</li>
  <li>The second technique was the idea of <a href="http://unstoppablerobotninja.com/entry/fluid-images">fluid images</a>. Using a very simple technique of setting the <code>max-width</code> property to <code>100%</code>, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become pixelated if the column becomes wider than the image.</li>
- <li>The third key component was the <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.</li>
+ <li>The third key component was the <a href=/web/css/media_queries>media query</a>. Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.</li>
 </ol>
 
 <p>It is important to understand that <strong>responsive web design isn't a separate technology</strong> — it is a term used to describe an approach to web design or a set of best practices, used to create a layout that can <em>respond</em> to the device being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and we have new things built into the web platform to make designing responsive sites easier.</p>
@@ -103,7 +103,7 @@ tags:
 
 <p>A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g mobile phones), then check for larger screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as <strong>mobile first</strong> design.</p>
 
-<p>Find out more in the MDN documentation for <a href="/en-US/docs/Web/CSS/Media_Queries">Media Queries</a>.</p>
+<p>Find out more in the MDN documentation for <a href=/web/css/media_queries>Media Queries</a>.</p>
 
 <h2 id="Flexible_grids">Flexible grids</h2>
 
@@ -111,7 +111,7 @@ tags:
 
 <p>By using a flexible grid, you only need to add in a breakpoint and change the design at the point where the content starts to look bad. For example, if the line lengths become unreadably long as the screen size increases, or a box becomes squashed with two words on each line as it narrows.</p>
 
-<p>In the early days of responsive design, our only option for performing layout was to use <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>. Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
+<p>In the early days of responsive design, our only option for performing layout was to use <a href=/learn/css/css_layout/floats>floats</a>. Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
 
 <pre class="notranslate"><code>target / context = result </code>
 </pre>
@@ -123,7 +123,7 @@ tags:
 } </code>
 </pre>
 
-<p>This approach will be found in many places across the web today, and it is documented here in the layout section of our <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a> article. It is likely that you will come across websites using this approach in your work, so it is worth understanding it, even though you would not build a modern site using a float-based flexible grid.</p>
+<p>This approach will be found in many places across the web today, and it is documented here in the layout section of our <a href=/learn/css/css_layout/legacy_layout_methods>Legacy layout methods</a> article. It is likely that you will come across websites using this approach in your work, so it is worth understanding it, even though you would not build a modern site using a float-based flexible grid.</p>
 
 <p>The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens the layout displays the boxes stacked on top of one another:</p>
 
@@ -143,7 +143,7 @@ tags:
 
 <h2 id="Modern_layout_technologies">Modern layout technologies</h2>
 
-<p>Modern layout methods such as <a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a>, <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, and <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a> are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.</p>
+<p>Modern layout methods such as <a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a>, <a href=/learn/css/css_layout/flexbox>Flexbox</a>, and <a href=/learn/css/css_layout/grids>Grid</a> are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.</p>
 
 <h3 id="Multicol">Multicol</h3>
 
@@ -165,7 +165,7 @@ tags:
 
 <p>In Flexbox, flex items will shrink and distribute space between the items according to the space in their container, as their initial behavior. By changing the values for <code>flex-grow</code> and <code>flex-shrink</code> you can indicate how you want the items to behave when they encounter more or less space around them.</p>
 
-<p>In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of <code>flex: 1</code> as described in the layout topic <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items">Flexbox: Flexible sizing of flex items</a>.</p>
+<p>In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of <code>flex: 1</code> as described in the layout topic <a href=/learn/css/css_layout/flexbox#Flexible_sizing_of_flex_items>Flexbox: Flexible sizing of flex items</a>.</p>
 
 <pre class="brush: css notranslate"><code>.container {
   display: flex;
@@ -182,7 +182,7 @@ tags:
 
 <h3 id="CSS_grid">CSS grid</h3>
 
-<p>In CSS Grid Layout the <code>fr</code> unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at <code>1fr</code>. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit">Flexible grids with the fr unit</a>.</p>
+<p>In CSS Grid Layout the <code>fr</code> unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at <code>1fr</code>. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under <a href=/learn/css/css_layout/grids#Flexible_grids_with_the_fr_unit>Flexible grids with the fr unit</a>.</p>
 
 <pre class="brush: css notranslate"><code>.container {
   display: grid;
@@ -209,7 +209,7 @@ tags:
 
 <p>You can also <em>art direct</em> images used at different sizes, thus providing a different crop or completely different image to different screen sizes.</p>
 
-<p>You can find a detailed <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">guide to Responsive Images in the Learn HTML section</a> here on MDN.</p>
+<p>You can find a detailed <a href=/learn/html/multimedia_and_embedding/responsive_images>guide to Responsive Images in the Learn HTML section</a> here on MDN.</p>
 
 <h2 id="Responsive_typography">Responsive typography</h2>
 
@@ -262,7 +262,7 @@ h1 {
 
 <p>The problem with doing the above is that the user loses the ability to zoom any text set using the <code>vw</code> unit, as that text is always related to the size of the viewport. <strong>Therefore you should never set text using viewport units alone</strong>.</p>
 
-<p>There is a solution, and it involves using <code><a href="/en-US/docs/Web/CSS/calc">calc()</a></code>. If you add the <code>vw</code> unit to a value set using a fixed size such as <code>em</code>s or <code>rem</code>s then the text will still be zoomable. Essentially, the <code>vw</code> unit adds on top of that zoomed value:</p>
+<p>There is a solution, and it involves using <code><a href=/web/css/calc>calc()</a></code>. If you add the <code>vw</code> unit to a value set using a fixed size such as <code>em</code>s or <code>rem</code>s then the text will still be zoomable. Essentially, the <code>vw</code> unit adds on top of that zoomed value:</p>
 
 <pre class="brush: css notranslate">h1 {
   font-size: calc(1.5rem + 3vw);
@@ -304,7 +304,7 @@ h1 {
 <p>You should avoid using <code>minimum-scale</code>, <code>maximum-scale</code>, and in particular setting <code>user-scalable</code> to <code>no</code>. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There is a CSS @ rule designed to replace the viewport meta tag — <a href="/en-US/docs/Web/CSS/@viewport">@viewport</a> — however, it has poor browser support. When both are used the meta tag overrides @viewport.</p>
+<p><strong>Note</strong>: There is a CSS @ rule designed to replace the viewport meta tag — <a href=/web/css/@viewport>@viewport</a> — however, it has poor browser support. When both are used the meta tag overrides @viewport.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>
@@ -318,16 +318,16 @@ h1 {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
+ <li><a href=/learn/css/css_layout/introduction>Introduction to CSS layout</a></li>
+ <li><a href=/learn/css/css_layout/normal_flow>Normal flow</a></li>
+ <li><a href=/learn/css/css_layout/flexbox>Flexbox</a></li>
+ <li><a href=/learn/css/css_layout/grids>Grid</a></li>
+ <li><a href=/learn/css/css_layout/floats>Floats</a></li>
+ <li><a href=/learn/css/css_layout/positioning>Positioning</a></li>
+ <li><a href=/learn/css/css_layout/multiple-column_layout>Multiple-column layout</a></li>
+ <li><a href=/learn/css/css_layout/responsive_design>Responsive design</a></li>
+ <li><a href=/learn/css/css_layout/media_queries>Beginner's guide to media queries</a></li>
+ <li><a href=/learn/css/css_layout/legacy_layout_methods>Legacy layout methods</a></li>
+ <li><a href=/learn/css/css_layout/supporting_older_browsers>Supporting older browsers</a></li>
+ <li><a href=/learn/css/css_layout/fundamental_layout_comprehension>Fundamental layout comprehension assessment</a></li>
 </ul>

@@ -15,13 +15,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}</div>
 
-<p class="summary">In the <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">previous article</a> we looked at the {{htmlelement("input")}} element, covering the original values of the <code>type</code> attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.</p>
+<p class="summary">In the <a href=/learn/forms/basic_native_form_controls>previous article</a> we looked at the {{htmlelement("input")}} element, covering the original values of the <code>type</code> attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.</td>
+   <td>Basic computer literacy, and a basic <a href=/learn/html/introduction_to_html>understanding of HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -31,10 +31,10 @@ tags:
 </table>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our <a href="/en-US/docs/Web/HTML/Element#Forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
+<p><strong>Note</strong>: Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our <a href=/web/html/element#Forms>HTML forms element reference</a>, and in particular our extensive <a href=/web/html/element/input>&lt;input&gt; types</a> reference.</p>
 </div>
 
-<p>Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a>.</p>
+<p>Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: <a href=/learn/forms/how_to_build_custom_form_widgets>How to build custom form widgets</a>.</p>
 
 <h2 id="E-mail_address_field">E-mail address field</h2>
 
@@ -46,7 +46,7 @@ tags:
 
 <p><img alt='An invalid email input showing the message "Please enter an email address."' src="https://mdn.mozillademos.org/files/17027/email_address_invalid.png" style="display: block; height: 224px; margin: 0 auto; width: 369px;"></p>
 
-<p>You can also use the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> attribute in combination with the <code>email</code> input type to allow several email addresses to be entered in the same input (separated by commas):</p>
+<p>You can also use the <a href=/web/html/attributes/multiple><code>multiple</code></a> attribute in combination with the <code>email</code> input type to allow several email addresses to be entered in the same input (separated by commas):</p>
 
 <pre class="brush: html notranslate">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
 
@@ -64,9 +64,9 @@ tags:
 
 <p>As you can see above <code>email</code> — along with other newer <code>input</code> types — provides built-in <em>client-side</em> error validation, performed by the browser before the data gets sent to the server. It <em>is</em> a helpful aid to guide users to fill out a form accurately, and it can save time: it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.</p>
 
-<p>But it <em>should not be considered</em> an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
+<p>But it <em>should not be considered</em> an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read <a href=/learn/server-side/first_steps/website_security>Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
 
-<p>Note that <code>a@b</code> is a valid email address according to the default provided constraints. This is because the <code>email</code> input type allows intranet email addresses by default. To implement different validation behavior, you can use the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute, and you can also custom the error messages; we'll talk how to use these features in the <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a> article later on.</p>
+<p>Note that <code>a@b</code> is a valid email address according to the default provided constraints. This is because the <code>email</code> input type allows intranet email addresses by default. To implement different validation behavior, you can use the <code><a href=/web/html/attributes/pattern>pattern</a></code> attribute, and you can also custom the error messages; we'll talk how to use these features in the <a href=/learn/forms/form_validation>Client-side form validation</a> article later on.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return <code>true</code>.</p>
@@ -100,7 +100,7 @@ tags:
 
 <p>Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this means it may include letters, etc.).</p>
 
-<p>As we mentioned earlier, the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute can be used to enforce constraints, which you'll learn about in <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a>.</p>
+<p>As we mentioned earlier, the <code><a href=/web/html/attributes/pattern>pattern</a></code> attribute can be used to enforce constraints, which you'll learn about in <a href=/learn/forms/form_validation>Client-side form validation</a>.</p>
 
 <h2 id="URL_field">URL field</h2>
 
@@ -126,7 +126,7 @@ tags:
 
 <p>With the <code>number</code> input type, you can constrain the minimum and maximum values allowed by setting the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.</p>
 
-<p>You can also use the <code>step</code> attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer. To allow float numbers, specify <code><a href="/en-US/docs/Web/HTML/Attributes/step">step="any"</a></code>. If omitted, the <code>step</code> value defaults to <code>1</code>, meaning only whole numbers are valid.</p>
+<p>You can also use the <code>step</code> attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer. To allow float numbers, specify <code><a href=/web/html/attributes/step>step="any"</a></code>. If omitted, the <code>step</code> value defaults to <code>1</code>, meaning only whole numbers are valid.</p>
 
 <p>Let's look at some examples. The first one below creates a number control whose value is restricted to any value between <code>1</code> and <code>10</code>, and whose increase and decrease buttons change its value by <code>2</code>.</p>
 
@@ -152,7 +152,7 @@ tags:
 
 <p>A slider is created using the {{HTMLElement("input")}} with its {{htmlattrxref("type","input")}} attribute set to the value <code>range</code>. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.</p>
 
-<p>It's important to properly configure your slider. To that end, it's highly recommended that you set the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code>, <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>, and <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attributes which set the minimum, maximum and increment values, respectively.</p>
+<p>It's important to properly configure your slider. To that end, it's highly recommended that you set the <code><a href=/web/html/attributes/min>min</a></code>, <code><a href=/web/html/attributes/max>max</a></code>, and <code><a href=/web/html/attributes/step>step</a></code> attributes which set the minimum, maximum and increment values, respectively.</p>
 
 <p>Let's look at the code behind the above example, so you can see how its done. First of all, the basic HTML:</p>
 
@@ -175,7 +175,7 @@ price.addEventListener('input', function() {
   output.textContent = price.value;
 });</pre>
 
-<p>Here we store references to the <code>range</code> input and the <code>output</code> in two variables. Then we immediately set the <code>output</code>'s <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> to the current <code>value</code> of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the <code>output</code>'s <code>textContent</code> is updated to the new value.</p>
+<p>Here we store references to the <code>range</code> input and the <code>output</code> in two variables. Then we immediately set the <code>output</code>'s <code><a href=/web/api/node/textcontent>textContent</a></code> to the current <code>value</code> of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the <code>output</code>'s <code>textContent</code> is updated to the new value.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: <code>range</code> inputs are not supported in versions of Internet Explorer below 10.</p>
@@ -195,25 +195,25 @@ price.addEventListener('input', function() {
 
 <h3 id="datetime-local"><code>datetime-local</code></h3>
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code> creates a widget to display and pick a date with time with no specific time zone information.</p>
+<p><code><a href=/web/html/element/input/datetime-local>&lt;input type="datetime-local"&gt;</a></code> creates a widget to display and pick a date with time with no specific time zone information.</p>
 
 <pre class="brush: html notranslate">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</pre>
 
 <h3 id="month"><code>month</code></h3>
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code> creates a widget to display and pick a month with a year.</p>
+<p><code><a href=/web/html/element/input/month>&lt;input type="month"&gt;</a></code> creates a widget to display and pick a month with a year.</p>
 
 <pre class="brush: html notranslate">&lt;input type="month" name="month" id="month"&gt;</pre>
 
 <h3 id="time"><code>time</code></h3>
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code> creates a widget to display and pick a time value. While time may <em>display</em> in 12-hour format, the <em>value returned</em> is in 24-hour format.</p>
+<p><code><a href=/web/html/element/input/time>&lt;input type="time"&gt;</a></code> creates a widget to display and pick a time value. While time may <em>display</em> in 12-hour format, the <em>value returned</em> is in 24-hour format.</p>
 
 <pre class="brush: html notranslate">&lt;input type="time" name="time" id="time"&gt;</pre>
 
 <h3 id="week"><code>week</code></h3>
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/input/week">&lt;input type="week"&gt;</a></code> creates a widget to display and pick a week number and its year.</p>
+<p><code><a href=/web/html/element/input/week>&lt;input type="week"&gt;</a></code> creates a widget to display and pick a week number and its year.</p>
 
 <p>Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year — which may not include the first day of the year, or may include the last few days of the previous year.</p>
 
@@ -221,7 +221,7 @@ price.addEventListener('input', function() {
 
 <h3 id="Constraining_datetime_values">Constraining date/time values</h3>
 
-<p>All date and time controls can be constrained using the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attributes, with further constraining possible via the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute (whose value varies according to input type).</p>
+<p>All date and time controls can be constrained using the <code><a href=/web/html/attributes/min>min</a></code> and <code><a href=/web/html/attributes/max>max</a></code> attributes, with further constraining possible via the <code><a href=/web/html/attributes/step>step</a></code> attribute (whose value varies according to input type).</p>
 
 <pre class="brush: html notranslate">&lt;label for="myDate"&gt;When are you available this summer?&lt;/label&gt;
 &lt;input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate"&gt;</pre>
@@ -256,7 +256,7 @@ price.addEventListener('input', function() {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Forms/Test_your_skills:_HTML5_controls">Test your skills: HTML5 controls</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/forms/test_your_skills:_html5_controls>Test your skills: HTML5 controls</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -267,22 +267,22 @@ price.addEventListener('input', function() {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href=/learn/forms/your_first_form>Your first form</a></li>
+ <li><a href=/learn/forms/how_to_structure_a_web_form>How to structure a web form</a></li>
+ <li><a href=/learn/forms/basic_native_form_controls>Basic native form controls</a></li>
+ <li><a href=/learn/forms/html5_input_types>The HTML5 input types</a></li>
+ <li><a href=/learn/forms/other_form_controls>Other form controls</a></li>
+ <li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+ <li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
+ <li><a href=/learn/forms/ui_pseudo-classes>UI pseudo-classes</a></li>
+ <li><a href=/learn/forms/form_validation>Client-side form validation</a></li>
+ <li><a href=/learn/forms/sending_and_retrieving_form_data>Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href=/learn/forms/how_to_build_custom_form_controls>How to build custom form controls</a></li>
+ <li><a href=/learn/forms/sending_forms_through_javascript>Sending forms through JavaScript</a></li>
+ <li><a href=/learn/forms/property_compatibility_table_for_form_widgets>Property compatibility table for form widgets</a></li>
 </ul>

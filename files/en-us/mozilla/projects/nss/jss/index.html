@@ -39,11 +39,11 @@ tags:
 <ul>
  <li>SOURCE: <a class="moz-txt-link-freetext" href="https://hg.mozilla.org/projects/jss">https://hg.mozilla.org/projects/jss</a></li>
  <li>ISSUES:   <a href="https://bugzilla.mozilla.org/buglist.cgi?product=JSS">https://bugzilla.mozilla.org/buglist.cgi?product=JSS</a></li>
- <li>WIKI:        <a class="moz-txt-link-freetext" href="/en-US/docs/Mozilla/Projects/NSS/JSS">https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/JSS</a></li>
+ <li>WIKI:        <a class="moz-txt-link-freetext" href=/mozilla/projects/nss/jss>https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/JSS</a></li>
 </ul>
 </div>
 
-<p>Network Security Services for Java (JSS) is a Java interface to <a href="/en-US/docs/NSS">NSS</a>. JSS supports most of the security standards and encryption technologies supported by <a href="/en-US/docs/NSS_reference">NSS</a>. JSS also provides a pure Java interface for ASN.1 types and BER/DER encoding.</p>
+<p>Network Security Services for Java (JSS) is a Java interface to <a href=/nss>NSS</a>. JSS supports most of the security standards and encryption technologies supported by <a href=/nss_reference>NSS</a>. JSS also provides a pure Java interface for ASN.1 types and BER/DER encoding.</p>
 
 <p>JSS offers a implementation of Java SSL sockets that uses NSS's SSL/TLS implementation rather than Sun's JSSE implementation. You might want to use JSS's own <a href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases">SSL classes</a> if you want to use some of the capabilities found in NSS's SSL/TLS library but not found in JSSE.</p>
 
@@ -53,7 +53,7 @@ tags:
 
 <p>JSS, jss4.jar, is still built with JDK 1.4.2. While JDK 1.4.2 is EOL'd and all new product development should be using the latest <a href="http://java.sun.com/javase/downloads/index.jsp">JavaSE</a>, legacy business products that must use JDK 1.4 or 1.5 can continue to add NSS/JSS security fixes/enhancements.</p>
 
-<p>JSS is used by Red Hat and Sun products that do crypto in Java. JSS is available under the Mozilla Public License, the GNU General Public License, and the GNU Lesser General Public License. JSS requires <a href="/en-US/docs/NSPR">NSPR</a> and <a href="/en-US/docs/NSS">NSS</a>.</p>
+<p>JSS is used by Red Hat and Sun products that do crypto in Java. JSS is available under the Mozilla Public License, the GNU General Public License, and the GNU Lesser General Public License. JSS requires <a href=/nspr>NSPR</a> and <a href=/nss>NSS</a>.</p>
 
 <p>Java provides a JCE provider called SunPKCS11 (see <a href="http://download.java.net/jdk7/docs/technotes/guides/security/p11guide.html">Java PKCS#11 Reference Guide</a>.) SunPKCS11 can be configured to use the NSS module as the crytographic provider. If you are planning to just use JSS JCE provider as a bridge to NSS's FIPS validated PKCS#11 module, then the SunPKCS11 JCE provider may do all that you need. Note that Java 1.5 claimed no FIPS compliance, and <a href="http://java.sun.com/javase/6/docs/technotes/guides/security/enhancements.html">Java 1.6</a> or higher needs to be used. A current limitation to the configured SunPKCS11-NSS bridge configuration is if you add a PKCS#11 module to the NSS database such as for a smartcard, you won't be able to access that smartcard through the SunPKCS11-NSS bridge. If you use JSS, you can easily get lists of modules and tokens that are configured in the NSS DB and freely access all of it.</p>
 
@@ -66,8 +66,8 @@ tags:
     <p>Before you use JSS, you should have a good understanding of the crypto technologies it uses. You might want to read these documents:</p>
 
     <ul>
-     <li><a href="/en-US/docs/Introduction_to_Public-Key_Cryptography">Introduction to Public-Key Cryptography</a>. Explains the basic concepts of public-key cryptography that underlie NSS and JSS.</li>
-     <li><a href="/en-US/docs/Introduction_to_SSL">Introduction to SSL</a>. Introduces the SSL protocol, including information about cryptographic ciphers supported by SSL and the steps involved in the SSL handshake.</li>
+     <li><a href=/introduction_to_public-key_cryptography>Introduction to Public-Key Cryptography</a>. Explains the basic concepts of public-key cryptography that underlie NSS and JSS.</li>
+     <li><a href=/introduction_to_ssl>Introduction to SSL</a>. Introduces the SSL protocol, including information about cryptographic ciphers supported by SSL and the steps involved in the SSL handshake.</li>
     </ul>
 
     <p>For information on downloading NSS releases, see <a href="NSS_Sources_Building_Testing">NSS sources building testing</a><a href="NSS_Sources_Building_Testing">.</a></p>
@@ -78,15 +78,15 @@ tags:
 
     <ul>
      <li><a href="/4.3.1_Release_Notes" title="4.3.1 Release Notes">4.3.1 Release Notes</a></li>
-     <li><a href="/en-US/docs/JSS/4_3_ReleaseNotes" title="JSS/4 3 ReleaseNotes">4.3 Release Notes</a></li>
+     <li><a href=/jss/4_3_releasenotes title="JSS/4 3 ReleaseNotes">4.3 Release Notes</a></li>
      <li><a href="http://www-archive.mozilla.org/projects/security/pki/jss/index.html">Older Release Notes</a></li>
     </ul>
 
     <h3 id="Build_Instructions">Build Instructions</h3>
 
     <ul>
-     <li><a href="/en-US/docs/Mozilla/Projects/NSS/JSS/Build_instructions_for_JSS_4.4.x#Build_Instructions_for_JSS_4.4.x">Building JSS 4.4.x</a></li>
-     <li><a href="/en-US/docs/JSS/Build_instructions_for_JSS_4.3.x">Building JSS 4.3.x</a></li>
+     <li><a href=/mozilla/projects/nss/jss/build_instructions_for_jss_4.4.x#Build_Instructions_for_JSS_4.4.x>Building JSS 4.4.x</a></li>
+     <li><a href=/jss/build_instructions_for_jss_4.3.x>Building JSS 4.3.x</a></li>
      <li><a href="http://www-archive.mozilla.org/projects/security/pki/jss/index.html">Older Build Instructions</a></li>
     </ul>
 
@@ -126,7 +126,7 @@ tags:
     <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">Related Topics</h2>
 
     <ul>
-     <li><a href="/en-US/docs/Security" title="Security">Security</a></li>
+     <li><a href=/security title="Security">Security</a></li>
     </ul>
    </td>
   </tr>

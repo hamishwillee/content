@@ -38,13 +38,13 @@ tags:
 
 <h2 id="Xray_vision_in_Firefox">Xray vision in Firefox</h2>
 
-<p>In Firefox, part of the isolation between content scripts and page scripts is implemented using a feature called "Xray vision". When a script in a more-privileged scope accesses an object that's defined in a less-privileged scope it sees only the "native version" of the object. Any <a href="/en-US/docs/Glossary/Expando">expando</a> properties are invisible, and if any properties of the object have been redefined, it sees the original implementation, not the redefined version.</p>
+<p>In Firefox, part of the isolation between content scripts and page scripts is implemented using a feature called "Xray vision". When a script in a more-privileged scope accesses an object that's defined in a less-privileged scope it sees only the "native version" of the object. Any <a href=/glossary/expando>expando</a> properties are invisible, and if any properties of the object have been redefined, it sees the original implementation, not the redefined version.</p>
 
 <p>The purpose of this feature is to make it harder for the less-privileged script to confuse the more-privileged script by redefining the native properties of objects.</p>
 
-<p>So for example, when a content script accesses the page's <a href="/en-US/docs/Web/API/Window">window</a>, it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.</p>
+<p>So for example, when a content script accesses the page's <a href=/web/api/window>window</a>, it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.</p>
 
-<p>For the full story on Xray vision, see the articles on <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a> and <a href="/en-US/docs/Mozilla/Gecko/Script_security">Script security</a>.</p>
+<p>For the full story on Xray vision, see the articles on <a href=/mozilla/tech/xray_vision>Xray vision</a> and <a href=/mozilla/gecko/script_security>Script security</a>.</p>
 
 <h2 id="Accessing_page_script_objects_from_content_scripts">Accessing page script objects from content scripts</h2>
 
@@ -86,7 +86,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <pre class="brush: js">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
 
-<p>See the document on <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a> for much more detail on this.</p>
+<p>See the document on <a href=/mozilla/tech/xray_vision>Xray vision</a> for much more detail on this.</p>
 
 <h2 id="Sharing_content_script_objects_with_page_scripts">Sharing content script objects with page scripts</h2>
 
@@ -154,11 +154,11 @@ exportFunction(notify, window, {defineAs:'notify'});</pre>
 
 <pre class="brush: js">window.notify("Message from the page script!");</pre>
 
-<p>For the full story, see <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction">Components.utils.exportFunction</a></code>.</p>
+<p>For the full story, see <code><a href=/mozilla/tech/xpcom/language_bindings/components.utils.exportfunction>Components.utils.exportFunction</a></code>.</p>
 
 <h3 id="cloneInto">cloneInto</h3>
 
-<p>Given an object defined in the content script, this creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a> to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the <code>cloneFunctions</code> option.</p>
+<p>Given an object defined in the content script, this creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the <a href=/web/api/web_workers_api/structured_clone_algorithm>structured clone algorithm</a> to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the <code>cloneFunctions</code> option.</p>
 
 <p>For example, here's a content script that defines an object that contains a function, then clones it into the page script's scope:</p>
 
@@ -188,11 +188,11 @@ window.wrappedJSObject.messenger = cloneInto(
 
 <pre class="brush: js">window.messenger.notify("Message from the page script!");</pre>
 
-<p>For the full story, see <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto</a></code>.</p>
+<p>For the full story, see <code><a href=/mozilla/tech/xpcom/language_bindings/components.utils.cloneinto>Components.utils.cloneInto</a></code>.</p>
 
 <h3 id="Constructors_from_the_page_context">Constructors from the page context</h3>
 
-<p>On the xrayed window object pristine constructors for some built-in javascript objects such as <code>Object</code>, <code>Function</code> or <code>Proxy</code> and various DOM classes are available. <code>XMLHttpRequest</code> does not behave in this way, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch">XHR and fetch</a> section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.</p>
+<p>On the xrayed window object pristine constructors for some built-in javascript objects such as <code>Object</code>, <code>Function</code> or <code>Proxy</code> and various DOM classes are available. <code>XMLHttpRequest</code> does not behave in this way, see the <a href=/mozilla/add-ons/webextensions/content_scripts#XHR_and_Fetch>XHR and fetch</a> section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.</p>
 
 <p>Since objects created this way already belong to the page and not the content script passing them back to the page will not require additional cloning or exporting.</p>
 

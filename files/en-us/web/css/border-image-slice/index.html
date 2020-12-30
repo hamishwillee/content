@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>border-image-slice</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's <a href="/en-US/docs/Web/CSS/border-image">border image</a>.</p>
+<p>The <strong><code>border-image-slice</code></strong> <a href=/web/css>CSS</a> property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's <a href=/web/css/border-image>border image</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}</div>
 
@@ -23,7 +23,7 @@ tags:
 
 <ul>
  <li>Zones 1-4 are <span id="corner-regions">corner regions</span>. Each one is used a single time to form the corners of the final border image.</li>
- <li>Zones 5-8 are <span id="edge-regions">edge regions</span>. These are <a href="/en-US/docs/Web/CSS/border-image-repeat">repeated, scaled, or otherwise modified</a> in the final border image to match the dimensions of the element.</li>
+ <li>Zones 5-8 are <span id="edge-regions">edge regions</span>. These are <a href=/web/css/border-image-repeat>repeated, scaled, or otherwise modified</a> in the final border image to match the dimensions of the element.</li>
  <li>Zone 9 is the <span id="middle-region">middle region</span>. It is discarded by default, but is used like a background image if the keyword <code>fill</code> is set.</li>
 </ul>
 
@@ -90,7 +90,7 @@ border-image-slice: unset;
 
 <p><img alt="nice multi-colored diamonds" src="https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png" style="display: block; margin: 0 auto;"></p>
 
-<p>The diamonds are 30px across, therefore setting 30 pixels as the value for both <code><a href="/en-US/docs/Web/CSS/border-width">border-width</a></code> and <code>border-image-slice</code> will get you complete and fairly crisp diamonds in your border:</p>
+<p>The diamonds are 30px across, therefore setting 30 pixels as the value for both <code><a href=/web/css/border-width>border-width</a></code> and <code>border-image-slice</code> will get you complete and fairly crisp diamonds in your border:</p>
 
 <pre class="brush: css notranslate">border-width: 30px;
 border-image-slice: 30;</pre>
@@ -192,5 +192,5 @@ sliceSlider.addEventListener('input', () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
+ <li><a href=/web/css/shorthand_properties#Tricky_edge_cases>Illustrated description of the 1-to-4-value syntax</a></li>
 </ul>

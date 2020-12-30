@@ -18,7 +18,7 @@ tags:
 	<tbody>
 		<tr>
 			<th scope="row">Prerequisites:</th>
-			<td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+			<td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href=/learn/html/introduction_to_html>Introduction to HTML</a>), and an idea of how CSS works (study <a href=/learn/css/first_steps>CSS first steps</a>.)</td>
 		</tr>
 		<tr>
 			<th scope="row">Objective:</th>
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Replaced_elements">Replaced elements</h2>
 
-<p>Images and video are described as <strong><a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a></strong>. This means that CSS cannot affect the internal layout of these elements — only their position on the page amongst other elements. As we will see however, there are various things that CSS can do with an image.</p>
+<p>Images and video are described as <strong><a href=/web/css/replaced_element>replaced elements</a></strong>. This means that CSS cannot affect the internal layout of these elements — only their position on the page amongst other elements. As we will see however, there are various things that CSS can do with an image.</p>
 
 <p>Certain replaced elements, such as images and video, are also described as having an <strong>aspect ratio</strong>. This means that it has a size in both the horizontal (x) and vertical (y) dimensions, and will be displayed using the intrinsic dimensions of the file by default.</p>
 
@@ -48,7 +48,7 @@ tags:
 
 <p>So what can we do about the overflowing issue?</p>
 
-<p>As we learned in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">our previous lesson</a>, a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will work with other replaced elements such as <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>s, or <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>s.</p>
+<p>As we learned in <a href=/learn/css/building_blocks/sizing_items_in_css>our previous lesson</a>, a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will work with other replaced elements such as <code><a href=/web/html/element/video>&lt;video&gt;</a></code>s, or <code><a href=/web/html/element/iframe>&lt;iframe&gt;</a></code>s.</p>
 
 <p><strong>Try adding <code>max-width: 100%</code> to the <code>&lt;img&gt;</code> element in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.</strong></p>
 
@@ -85,9 +85,9 @@ tags:
 
 <h2 id="Form_elements">Form elements</h2>
 
-<p>Form elements can be a tricky issue when it comes to styling with CSS, and the <a href="/en-US/docs/Learn/Forms">Web Forms module</a> contains detailed guides to the trickier aspects of styling form elements, which I will not fully reproduce here. There are a few key basics worth highlighting in this section of the article.</p>
+<p>Form elements can be a tricky issue when it comes to styling with CSS, and the <a href=/learn/forms>Web Forms module</a> contains detailed guides to the trickier aspects of styling form elements, which I will not fully reproduce here. There are a few key basics worth highlighting in this section of the article.</p>
 
-<p>Many form controls are added to your page by way of the <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> element — this defines simple form fields such as text inputs, through to more complex fields added in HTML5 such as color and date pickers. There are some additional elements, such as <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> for multiline text input, and also elements used to contain and label parts of forms such as <code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/legend">&lt;legend&gt;</a></code>.</p>
+<p>Many form controls are added to your page by way of the <code><a href=/web/html/element/input>&lt;input&gt;</a></code> element — this defines simple form fields such as text inputs, through to more complex fields added in HTML5 such as color and date pickers. There are some additional elements, such as <code><a href=/web/html/element/textarea>&lt;textarea&gt;</a></code> for multiline text input, and also elements used to contain and label parts of forms such as <code><a href=/web/html/element/fieldset>&lt;fieldset&gt;</a></code> and <code><a href=/web/html/element/legend>&lt;legend&gt;</a></code>.</p>
 
 <p>HTML5 also contains attributes that enable web developers to indicate which fields are required, and even the type of content that needs to be entered. If the user enters something unexpected, or leaves a required field blank, the browser can show an error message. Different browsers are inconsistent in how much styling and customization they allow for such items.</p>
 
@@ -103,7 +103,7 @@ tags:
 <p><strong>Important</strong>: You should take care when changing the styling of form elements to make sure it is still obvious to the user they are form elements. You could create a form input with no borders and background that is almost indistinguishable from the content around it, but this would make it very hard to recognise and fill in.</p>
 </div>
 
-<p>As explained in the lessons on <a href="/en-US/docs/Learn/Forms/Styling_web_forms">form styling</a> in the HTML part of this course, many of the more complex input types are rendered by the operating system and are inaccessible to styling. You should therefore always assume that forms are going to look quite different for different visitors and test complex forms in a number of browsers.</p>
+<p>As explained in the lessons on <a href=/learn/forms/styling_web_forms>form styling</a> in the HTML part of this course, many of the more complex input types are rendered by the operating system and are inaccessible to styling. You should therefore always assume that forms are going to look quite different for different visitors and test complex forms in a number of browsers.</p>
 
 <h3 id="Inheritance_and_form_elements">Inheritance and form elements</h3>
 
@@ -119,7 +119,7 @@ textarea {
 
 <h3 id="Form_elements_and_box-sizing">Form elements and box-sizing</h3>
 
-<p>Across browsers form elements use different box sizing rules for different widgets. You learned about the <code>box-sizing</code> property in <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">our box model lesson</a> and you can use this knowledge when styling forms to ensure a consistent experience when setting widths and heights on form elements.</p>
+<p>Across browsers form elements use different box sizing rules for different widgets. You learned about the <code>box-sizing</code> property in <a href=/learn/css/building_blocks/the_box_model>our box model lesson</a> and you can use this knowledge when styling forms to ensure a consistent experience when setting widths and heights on form elements.</p>
 
 <p>For consistency it is a good idea to set margins and padding to <code>0</code> on all elements, then add these back in when styling particular controls</p>
 
@@ -165,13 +165,13 @@ textarea {
 <p>For further information on styling forms, take a look at the two articles in the HTML section of these guides.</p>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
+	<li><a href=/learn/forms/styling_web_forms>Styling web forms</a></li>
+	<li><a href=/learn/forms/advanced_form_styling>Advanced form styling</a></li>
 </ul>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Images_tasks">Test your skills: Images and form elements</a>.</p>
+<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href=/learn/css/building_blocks/images_tasks>Test your skills: Images and form elements</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -182,23 +182,23 @@ textarea {
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+	<li><a href=/learn/css/building_blocks/cascade_and_inheritance>Cascade and inheritance</a></li>
+	<li><a href=/learn/css/building_blocks/selectors>CSS selectors</a>
 	<ul>
-		<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-		<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-		<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-		<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+		<li><a href=/learn/css/building_blocks/selectors/type_class_and_id_selectors>Type, class, and ID selectors</a></li>
+		<li><a href=/learn/css/building_blocks/selectors/attribute_selectors>Attribute selectors</a></li>
+		<li><a href=/learn/css/building_blocks/selectors/pseudo-classes_and_pseudo-elements>Pseudo-classes and pseudo-elements</a></li>
+		<li><a href=/learn/css/building_blocks/selectors/combinators>Combinators</a></li>
 	</ul>
 	</li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+	<li><a href=/learn/css/building_blocks/the_box_model>The box model</a></li>
+	<li><a href=/learn/css/building_blocks/backgrounds_and_borders>Backgrounds and borders</a></li>
+	<li><a href=/learn/css/building_blocks/handling_different_text_directions>Handling different text directions</a></li>
+	<li><a href=/learn/css/building_blocks/overflowing_content>Overflowing content</a></li>
+	<li><a href=/learn/css/building_blocks/values_and_units>Values and units</a></li>
+	<li><a href=/learn/css/building_blocks/sizing_items_in_css>Sizing items in CSS</a></li>
+	<li><a href=/learn/css/building_blocks/images_media_form_elements>Images, media, and form elements</a></li>
+	<li><a href=/learn/css/building_blocks/styling_tables>Styling tables</a></li>
+	<li><a href=/learn/css/building_blocks/debugging_css>Debugging CSS</a></li>
+	<li><a href=/learn/css/building_blocks/organizing>Organizing your CSS</a></li>
 </ol>

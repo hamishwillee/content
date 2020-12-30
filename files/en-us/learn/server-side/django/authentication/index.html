@@ -20,13 +20,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their <em>permissions</em>. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.</p>
+<p class="summary">In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their <em>permissions</em>. As part of this demonstration, we'll extend the <a href=/learn/server-side/django/tutorial_local_library_website>LocalLibrary</a> website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Complete all previous tutorial topics, up to and including <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a>.</td>
+   <td>Complete all previous tutorial topics, up to and including <a href=/learn/server-side/django/sessions>Django Tutorial Part 7: Sessions framework</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -37,13 +37,13 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the <a href="/en-US/docs/Learn/Server-side/Django/Sessions">previous tutorial</a>, that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for <code>Users</code> and <code>Groups</code> (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.</p>
+<p>Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the <a href=/learn/server-side/django/sessions>previous tutorial</a>, that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for <code>Users</code> and <code>Groups</code> (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.</p>
 
 <div class="note">
 <p><strong>Note</strong>: According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).</p>
 </div>
 
-<p>In this tutorial, we'll show you how to enable user authentication in the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, create your own login and logout pages, add permissions to your models, and control access to pages. We'll use the authentication/permissions to display lists of books that have been borrowed for both users and librarians.</p>
+<p>In this tutorial, we'll show you how to enable user authentication in the <a href=/learn/server-side/django/tutorial_local_library_website>LocalLibrary</a> website, create your own login and logout pages, add permissions to your models, and control access to pages. We'll use the authentication/permissions to display lists of books that have been borrowed for both users and librarians.</p>
 
 <p>The authentication system is very flexible, and you can build up your URLs, forms, views, and templates from scratch if you like, just calling the provided API to log in the user. However, in this article, we're going to use Django's "stock" authentication views and forms for our login and logout pages. We'll still need to create some templates, but that's pretty easy.</p>
 
@@ -51,7 +51,7 @@ tags:
 
 <h2 id="Enabling_authentication">Enabling authentication</h2>
 
-<p>The authentication was enabled automatically when we <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the skeleton website</a> (in tutorial 2) so you don't need to do anything more at this point.</p>
+<p>The authentication was enabled automatically when we <a href=/learn/server-side/django/skeleton_website>created the skeleton website</a> (in tutorial 2) so you don't need to do anything more at this point.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The necessary configuration was all done for us when we created the app using the <code>django-admin startproject</code> command. The database tables for users and model permissions were created when we first called <code>python manage.py migrate</code>.</p>
@@ -75,7 +75,7 @@ MIDDLEWARE = [
 
 <h2 id="Creating_users_and_groups">Creating users and groups</h2>
 
-<p>You already created your first user when we looked at the <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django admin site</a> in tutorial 4 (this was a superuser, created with the command <code>python manage.py createsuperuser)</code>. Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our <em>locallibrary</em> groups and website logins, as it is one of the quickest ways to do so.</p>
+<p>You already created your first user when we looked at the <a href=/learn/server-side/django/admin_site>Django admin site</a> in tutorial 4 (this was a superuser, created with the command <code>python manage.py createsuperuser)</code>. Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our <em>locallibrary</em> groups and website logins, as it is one of the quickest ways to do so.</p>
 
 <div class="note">
 <p>Note: You can also create users programmatically, as shown below. You would have to do this, for example, if developing an interface to allow users to create their own logins (you shouldn't give users access to the admin site).</p>
@@ -705,19 +705,19 @@ def my_view(request):
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href=/learn/server-side/django/introduction>Django introduction</a></li>
+ <li><a href=/learn/server-side/django/development_environment>Setting up a Django development environment</a></li>
+ <li><a href=/learn/server-side/django/tutorial_local_library_website>Django Tutorial: The Local Library website</a></li>
+ <li><a href=/learn/server-side/django/skeleton_website>Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href=/learn/server-side/django/models>Django Tutorial Part 3: Using models</a></li>
+ <li><a href=/learn/server-side/django/admin_site>Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href=/learn/server-side/django/home_page>Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href=/learn/server-side/django/generic_views>Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href=/learn/server-side/django/sessions>Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href=/learn/server-side/django/authentication>Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href=/learn/server-side/django/forms>Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href=/learn/server-side/django/testing>Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href=/learn/server-side/django/deployment>Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href=/learn/server-side/django/web_application_security>Django web application security</a></li>
+ <li><a href=/learn/server-side/django/django_assessment_blog>DIY Django mini blog</a></li>
 </ul>

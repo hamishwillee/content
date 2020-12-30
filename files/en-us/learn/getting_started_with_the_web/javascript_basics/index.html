@@ -31,7 +31,7 @@ tags:
  <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
 </ul>
 
-<p>It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's <a href="/en-US/docs/Learn/JavaScript">JavaScript learning area</a>, as well as in other parts of MDN.</p>
+<p>It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's <a href=/learn/javascript>JavaScript learning area</a>, as well as in other parts of MDN.</p>
 
 <p>The section below introduces some aspects of the core language and offers an opportunity to play with a few browser API features too. Have fun!</p>
 
@@ -61,7 +61,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <div class="note">
 <p><strong>Note</strong>: The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that <strong>the browser reads code in the order it appears in the file</strong>.</p>
 
-<p>If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency. To learn more about alternative approaches, see <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">Script loading strategies</a>.</p>
+<p>If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency. To learn more about alternative approaches, see <a href=/learn/javascript/first_steps/what_is_javascript#Script_loading_strategies>Script loading strategies</a>.</p>
 </div>
 
 <h3 id="What_happened">What happened?</h3>
@@ -71,7 +71,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>Following that, the code set the value of the <code>myHeading</code> variable's <code>{{domxref("Node.textContent", "textContent")}}</code> property (which represents the content of the heading) to <em>Hello world!</em>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Both of the features you used in this exercise are parts of the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM) API</a>, which has the capability to manipulate documents.</p>
+<p><strong>Note</strong>: Both of the features you used in this exercise are parts of the <a href=/web/api/document_object_model>Document Object Model (DOM) API</a>, which has the capability to manipulate documents.</p>
 </div>
 
 <h2 id="Language_basics_crash_course">Language basics crash course</h2>
@@ -84,7 +84,7 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <h3 id="Variables">Variables</h3>
 
-<p>{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code> (less recommended, dive deeper for the explanation) or the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword, followed by the name you give to the variable:</p>
+<p>{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the <code><a href=/web/javascript/reference/statements/var>var</a></code> (less recommended, dive deeper for the explanation) or the <code><a href=/web/javascript/reference/statements/let>let</a></code> keyword, followed by the name you give to the variable:</p>
 
 <pre class="brush: js notranslate">let myVariable;</pre>
 
@@ -93,7 +93,7 @@ myHeading.textContent = 'Hello world!';</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can name a variable nearly anything, but there are some restrictions. (See <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Variables">this section about naming rules</a>.) If you are unsure, you can <a href="https://mothereff.in/js-variables">check your variable name</a> to see if it's valid.</p>
+<p><strong>Note</strong>: You can name a variable nearly anything, but there are some restrictions. (See <a href=/web/javascript/guide/grammar_and_types#Variables>this section about naming rules</a>.) If you are unsure, you can <a href="https://mothereff.in/js-variables">check your variable name</a> to see if it's valid.</p>
 </div>
 
 <div class="note">
@@ -101,7 +101,7 @@ myHeading.textContent = 'Hello world!';</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: For more details about the difference between <code>var</code> and <code>let</code>, see <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">The difference between var and let</a>.</p>
+<p><strong>Note</strong>: For more details about the difference between <code>var</code> and <code>let</code>, see <a href=/learn/javascript/first_steps/variables#The_difference_between_var_and_let>The difference between var and let</a>.</p>
 </div>
 
 <p>After declaring a variable, you can give it a value:</p>
@@ -122,7 +122,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <pre class="notranslate">let myVariable = 'Bob';
 myVariable = 'Steve';</pre>
 
-<p>Note that variables may hold values that have different <a href="/en-US/docs/Web/JavaScript/Data_structures">data types</a>:</p>
+<p>Note that variables may hold values that have different <a href=/web/javascript/data_structures>data types</a>:</p>
 
 <table class="standard-table">
  <thead>
@@ -240,7 +240,7 @@ Everything in between is a comment.
  </tbody>
 </table>
 
-<p>There are a lot more operators to explore, but this is enough for now. See <a href="/en-US/docs/Web/JavaScript/Reference/Operators">Expressions and operators</a> for a complete list.</p>
+<p>There are a lot more operators to explore, but this is enough for now. See <a href=/web/javascript/reference/operators>Expressions and operators</a> for a complete list.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
@@ -292,18 +292,18 @@ multiply(20, 20);
 multiply(0.5, 3);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> statement tells the browser to return the <code>result</code> variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope">variable scoping</a>.)</p>
+<p><strong>Note</strong>: The <a href=/web/javascript/reference/statements/return><code>return</code></a> statement tells the browser to return the <code>result</code> variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about <a href=/web/javascript/guide/values,_variables,_and_literals#Variable_scope>variable scoping</a>.)</p>
 </div>
 
 <h3 id="Events">Events</h3>
 
-<p>Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the <a href="/en-US/docs/Web/Events/click">click event</a>, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
+<p>Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the <a href=/web/events/click>click event</a>, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
 
 <pre class="brush: js notranslate">document.querySelector('html').onclick = function() {
     alert('Ouch! Stop poking me!');
 }</pre>
 
-<p>There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element, setting its <code><a href="/en-US/docs/Web/API/GlobalEventHandlers.onclick">onclick</a></code> handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
+<p>There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element, setting its <code><a href=/web/api/globaleventhandlers.onclick>onclick</a></code> handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
 
 <p>Note that</p>
 
@@ -357,7 +357,7 @@ myImage.onclick = function() {
 
 <h3 id="Adding_a_personalized_welcome_message">Adding a personalized welcome message</h3>
 
-<p>Next, let's change the page title to a personalized welcome message when the user first visits the site. This welcome message will persist. Should the user leave the site and return later, we will save the message using the <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>. We will also include an option to change the user, and therefore, the welcome message.</p>
+<p>Next, let's change the page title to a personalized welcome message when the user first visits the site. This welcome message will persist. Should the user leave the site and return later, we will save the message using the <a href=/web/api/web_storage_api>Web Storage API</a>. We will also include an option to change the user, and therefore, the welcome message.</p>
 
 <ol>
  <li>In <code>index.html</code>, add the following line just before the {{htmlelement("script")}} element:
@@ -374,7 +374,7 @@ myImage.onclick = function() {
   localStorage.setItem('name', myName);
   myHeading.textContent = 'Mozilla is cool, ' + myName;
 }</pre>
-  The <code>setUserName()</code> function contains a <a href="/en-US/docs/Web/API/Window.prompt"><code>prompt()</code></a> function, which displays a dialog box, similar to <code>alert()</code>. This <code>prompt()</code> function does more than <code>alert()</code>, asking the user to enter data, and storing it in a variable after the user clicks <em>OK.</em> In this case, we are asking the user to enter a name. Next, the code calls on an API <code>localStorage</code>, which allows us to store data in the browser and retrieve it later. We use localStorage's <code>setItem()</code> function to create and store a data item called <code>'name'</code>, setting its value to the <code>myName</code> variable which contains the user's entry for the name. Finally, we set the <code>textContent</code> of the heading to a string, plus the user's newly stored name.</li>
+  The <code>setUserName()</code> function contains a <a href=/web/api/window.prompt><code>prompt()</code></a> function, which displays a dialog box, similar to <code>alert()</code>. This <code>prompt()</code> function does more than <code>alert()</code>, asking the user to enter data, and storing it in a variable after the user clicks <em>OK.</em> In this case, we are asking the user to enter a name. Next, the code calls on an API <code>localStorage</code>, which allows us to store data in the browser and retrieve it later. We use localStorage's <code>setItem()</code> function to create and store a data item called <code>'name'</code>, setting its value to the <code>myName</code> variable which contains the user's entry for the name. Finally, we set the <code>textContent</code> of the heading to a string, plus the user's newly stored name.</li>
  <li>Add the <code>if ... else</code> block (below). We could call this initialization code, as it structures the app when it first loads.
   <pre class="brush: js notranslate">if(!localStorage.getItem('name')) {
   setUserName();
@@ -393,7 +393,7 @@ myImage.onclick = function() {
 
 <h3 id="A_user_name_of_null">A user name of null?</h3>
 
-<p>When you run the example and get the dialog box that prompts you to enter your user name, try pressing the <em>Cancel</em> button. You should end up with a title that reads <em>Mozilla is cool, null</em>. This happens because—when you cancel the prompt—the value is set as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code>. <em>Null</em> is a special value in JavaScript that refers to the absence of a value.</p>
+<p>When you run the example and get the dialog box that prompts you to enter your user name, try pressing the <em>Cancel</em> button. You should end up with a title that reads <em>Mozilla is cool, null</em>. This happens because—when you cancel the prompt—the value is set as <code><a href=/web/javascript/reference/global_objects/null>null</a></code>. <em>Null</em> is a special value in JavaScript that refers to the absence of a value.</p>
 
 <p>Also, try clicking <em>OK</em> without entering a name. You should end up with a title that reads <em>Mozilla is cool,</em> for fairly obvious reasons.</p>
 
@@ -424,7 +424,7 @@ myImage.onclick = function() {
 <h2 id="See_also">See also</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Learn/JavaScript">Dynamic client-side scripting with JavaScript</a></dt>
+ <dt><a href=/learn/javascript>Dynamic client-side scripting with JavaScript</a></dt>
  <dd>Dive into JavaScript in much more detail.</dd>
  <dt><a href="https://learnjavascript.online/">Learn JavaScript</a></dt>
  <dd>This is an excellent resource for aspiring web developers! Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by an automated assessment. The first 40 lessons are free. The complete course is available for a small one-time payment.</dd>

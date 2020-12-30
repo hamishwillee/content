@@ -26,7 +26,7 @@ tags:
 <p>We then conclude by looking at some other, miscellaneous features offered by the API.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> and the how-to guide <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a>.</p>
+<p><strong>Note:</strong> There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article <a href=/mozilla/add-ons/webextensions/content_scripts>Content scripts</a> and the how-to guide <a href=/mozilla/add-ons/webextensions/modify_a_web_page>Modify a web page</a>.</p>
 </div>
 
 <h2 id="Permissions_and_the_Tabs_API">Permissions and the Tabs API</h2>
@@ -34,7 +34,7 @@ tags:
 <p>For the majority of the Tabs API functions you don’t need any permissions; however, there are some exceptions:</p>
 
 <ul>
-	<li><code>"tabs</code>" permission is needed to access the <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code> properties of the Tab object. In Firefox, you also need <code>"tabs"</code> to perform a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">query</a> by URL.</li>
+	<li><code>"tabs</code>" permission is needed to access the <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code> properties of the Tab object. In Firefox, you also need <code>"tabs"</code> to perform a <a href=/mozilla/add-ons/webextensions/api/tabs/query>query</a> by URL.</li>
 	<li><a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">Host permission</a> is needed for {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}.</li>
 </ul>
 
@@ -351,7 +351,7 @@ Define the other menu items
  }
 </pre>
 
-<p>It's worth noting the use of <code>console.log()</code>. This enables you to output information to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">debugger</a> console, which can be useful when resolving issues found during development.</p>
+<p>It's worth noting the use of <code>console.log()</code>. This enables you to output information to the <a href=/mozilla/add-ons/webextensions/debugging>debugger</a> console, which can be useful when resolving issues found during development.</p>
 
 <p><img alt="Example of the console.log output, from the move tabs feature, in the debugging console" src="https://mdn.mozillademos.org/files/15722/console.png" style="height: 329px; width: 911px;"></p>
 

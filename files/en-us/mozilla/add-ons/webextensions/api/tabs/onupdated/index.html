@@ -18,7 +18,7 @@ tags:
 
 <p>This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the <code>pinned</code> property) and muting or unmuting (which updates the <code>audible</code> and <code>mutedInfo</code> properties).</p>
 
-<p>You can filter this event, making it only fire for tabs whose urls match specific <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">patterns</a>, or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.</p>
+<p>You can filter this event, making it only fire for tabs whose urls match specific <a href=/mozilla/add-ons/webextensions/match_patterns>patterns</a>, or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -62,7 +62,7 @@ browser.tabs.onUpdated.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>urls</code></dt>
-  <dd><code>Array</code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Fire the event only for tabs whose current <code>url</code> property matches any one of the patterns.</dd>
+  <dd><code>Array</code>. An array of <a href=/mozilla/add-ons/webextensions/match_patterns>match patterns</a>. Fire the event only for tabs whose current <code>url</code> property matches any one of the patterns.</dd>
   <dt><code>properties</code></dt>
   <dd>
   <p><code>Array</code>. An array of strings, which are the names of properties of the {{WebExtAPIRef("tabs.Tab")}} object. Fire this event only for changes to one of the properties named in this array. The following properties may be listed here:</p>

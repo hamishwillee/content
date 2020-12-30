@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>You can examine and edit the page's HTML in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML pane</a>.</p>
+<p>You can examine and edit the page's HTML in the <a href=/tools/page_inspector/ui_tour#HTML_pane>HTML pane</a>.</p>
 
 <h2 id="Navigating_the_HTML">Navigating the HTML</h2>
 
@@ -23,7 +23,7 @@ tags:
 
 <p>Hovering over a breadcrumb highlights that element in the page.</p>
 
-<p>The breadcrumbs bar has its own <a href="/en-US/docs/Tools/Page_Inspector/Keyboard_shortcuts#Breadcrumbs_bar">keyboard shortcuts</a>.</p>
+<p>The breadcrumbs bar has its own <a href=/tools/page_inspector/keyboard_shortcuts#Breadcrumbs_bar>keyboard shortcuts</a>.</p>
 
 <h3 id="Searching">Searching</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <h4 id="XPath_search">XPath search</h4>
 
-<p>It is also possible to search via <a href="/en-US/docs/Web/XPath">XPaths</a>. This allows you to search for specific elements without the conflict of matching words within the text. For example, <code>//a</code> matches all {{HTMLElement("a")}} elements but not the letter "a" within the text content. Furthermore it allows for some more advanced searches like finding elements that start with a specific text, for example.</p>
+<p>It is also possible to search via <a href=/web/xpath>XPaths</a>. This allows you to search for specific elements without the conflict of matching words within the text. For example, <code>//a</code> matches all {{HTMLElement("a")}} elements but not the letter "a" within the text content. Furthermore it allows for some more advanced searches like finding elements that start with a specific text, for example.</p>
 
 <p><img alt="Match of an Inspector search using an XPath expression" src="https://mdn.mozillademos.org/files/17139/XPath_search.png" style="border: 1px solid black; display: block; height: 261px; margin-left: auto; margin-right: auto; width: 482px;"></p>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>Moving the mouse over a node in the tree highlights that element in the page.</p>
 
-<p>Nodes that are not visible are shown faded/desaturated. This can happen for different reasons such as using <code><a href="/en-US/docs/Web/CSS/display">display: none</a></code> or that the element doesn't have any dimensions.</p>
+<p>Nodes that are not visible are shown faded/desaturated. This can happen for different reasons such as using <code><a href=/web/css/display>display: none</a></code> or that the element doesn't have any dimensions.</p>
 
 <p>There is an ellipsis shown between the opening and closing tag of an element when the node is collapsed if it has larger contents. Now children are indicated in the tree with this icon: <img alt="" src="https://mdn.mozillademos.org/files/14925/child-node-indicator.png" style="height: 24px; width: 32px;"></p>
 
@@ -71,17 +71,17 @@ tags:
  <tbody>
   <tr>
    <td><code>event</code></td>
-   <td>The element has one or several event listeners attached to it. Clicking the marker opens a tooltip listing the event listeners and allows you for each listener to switch to the line of JavaScript code in the <a href="/en-US/docs/Tools/Debugger">Debugger</a> where the listener is defined.</td>
+   <td>The element has one or several event listeners attached to it. Clicking the marker opens a tooltip listing the event listeners and allows you for each listener to switch to the line of JavaScript code in the <a href=/tools/debugger>Debugger</a> where the listener is defined.</td>
   </tr>
   <tr>
    <td><code>scroll</code></td>
-   <td>The element is a {{Glossary("scroll container")}}, i.e. it has either <code>overflow: scroll</code> applied, or <code>overflow: auto</code> and sufficient content to cause <a href="/en-US/docs/Web/CSS/CSS_Overflow">scrollable overflow</a>.<br>
+   <td>The element is a {{Glossary("scroll container")}}, i.e. it has either <code>overflow: scroll</code> applied, or <code>overflow: auto</code> and sufficient content to cause <a href=/web/css/css_overflow>scrollable overflow</a>.<br>
     <br>
     If preference <code>devtools.overflow.debugging.enabled</code> is <code>true</code>, toggling the <code>scroll</code> badge will highlight any elements causing the overflow, and these nodes will additionally display the <code>overflow</code> badge.</td>
   </tr>
   <tr>
    <td><code>overflow</code></td>
-   <td>The element is causing <a href="/en-US/docs/Web/CSS/CSS_Overflow">scrollable overflow</a> in a {{Glossary("scroll container")}} (either the current node or a parent node—the affected node will display the <code>scroll</code> badge).
+   <td>The element is causing <a href=/web/css/css_overflow>scrollable overflow</a> in a {{Glossary("scroll container")}} (either the current node or a parent node—the affected node will display the <code>scroll</code> badge).
     <div class="note">
     <p><strong>Note</strong>: The <code>overflow</code> badge is introduced in Firefox 83. In earlier versions it can be enabled using the preference <code>devtools.overflow.debugging.enabled</code> is <code>true</code>.</p>
     </div>
@@ -89,19 +89,19 @@ tags:
   </tr>
   <tr>
    <td><code>grid</code></td>
-   <td>The element is a {{Glossary("grid container")}}, i.e. it has <code><a href="/en-US/docs/Web/CSS/display">display: grid</a></code> applied to it. Clicking the marker enables the grid highlighter.</td>
+   <td>The element is a {{Glossary("grid container")}}, i.e. it has <code><a href=/web/css/display>display: grid</a></code> applied to it. Clicking the marker enables the grid highlighter.</td>
   </tr>
   <tr>
    <td><code>flex</code></td>
-   <td>The element is a {{Glossary("flex container")}}, i.e. it has <code><a href="/en-US/docs/Web/CSS/display">display: flex</a></code> applied to it. Clicking the marker enables the flexbox highlighter.</td>
+   <td>The element is a {{Glossary("flex container")}}, i.e. it has <code><a href=/web/css/display>display: flex</a></code> applied to it. Clicking the marker enables the flexbox highlighter.</td>
   </tr>
   <tr>
    <td><code>inline-grid</code></td>
-   <td>The element is an inline grid container, i.e. it has <code><a href="/en-US/docs/Web/CSS/display">display: inline-grid</a></code> or <code>display: inline grid</code> applied to it. Clicking the marker enables the grid highlighter.</td>
+   <td>The element is an inline grid container, i.e. it has <code><a href=/web/css/display>display: inline-grid</a></code> or <code>display: inline grid</code> applied to it. Clicking the marker enables the grid highlighter.</td>
   </tr>
   <tr>
    <td><code>inline-flex</code></td>
-   <td>The element is an inline flex container, i.e. it has <code><a href="/en-US/docs/Web/CSS/display">display: inline-flex</a></code> or <code>display: inline flex</code> applied to it. Clicking the marker enables the flexbox highlighter.</td>
+   <td>The element is an inline flex container, i.e. it has <code><a href=/web/css/display>display: inline-flex</a></code> or <code>display: inline flex</code> applied to it. Clicking the marker enables the flexbox highlighter.</td>
   </tr>
   <tr>
    <td><code>custom…</code></td>
@@ -111,7 +111,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: There are some useful keyboard shortcuts that can be used in the HTML tree — see the <a href="/en-US/docs/Tools/Keyboard_shortcuts#HTML_pane">HTML pane keyboard shortcuts list</a>.</p>
+<p><strong>Note</strong>: There are some useful keyboard shortcuts that can be used in the HTML tree — see the <a href=/tools/keyboard_shortcuts#HTML_pane>HTML pane keyboard shortcuts list</a>.</p>
 </div>
 
 <h3 id="before_and_after">::before and ::after</h3>
@@ -141,7 +141,7 @@ tags:
 
 <p>Usually this white space seems to have no effect and no visual output, but in fact, when a browser parses HTML it will automatically generate anonymous text nodes for elements not contained in a node. This includes white space (which is after all a type of text).</p>
 
-<p>If these auto generated text nodes are <a href="/en-US/docs/Web/Guide/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes">inline level</a>, browsers will give them a non-zero width and height. Then you will find strange gaps between elements, even if you haven’t set any margin or padding on them.</p>
+<p>If these auto generated text nodes are <a href=/web/guide/css/visual_formatting_model#Inline-level_elements_and_inline_boxes>inline level</a>, browsers will give them a non-zero width and height. Then you will find strange gaps between elements, even if you haven’t set any margin or padding on them.</p>
 
 <p>Since Firefox 52, the Inspector displays these whitespace nodes, so you can see where the gaps in your markup come from. Whitespace nodes are represented with a dot: <img alt="" src="https://mdn.mozillademos.org/files/14931/new-whitespace-text-indicator.png" style="height: 23px; width: 30px;"> and you get an explanatory tooltip when you hover over them:</p>
 
@@ -155,7 +155,7 @@ tags:
 
 <p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16414/inspector_shadowDom.png" style="display: block; height: 300px; margin: 0 auto; width: 481px;"></p>
 
-<p>If a shadow DOM contains a "slotted" element (an element with a <code>slot</code> attribute after it has been inserted inside a {{htmlelement("slot")}} element — see <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots#Adding_flexibility_with_slots">Adding flexibility with slots</a> for an explanation of how these are used), the "slotted" element will be shown inside its corresponding {{htmlelement("slot")}} element, with a "reveal" link alongside it. Clicking the "reveal" link will highlight the element with the <code>slot</code> attribute as it exists outside the shadow DOM</p>
+<p>If a shadow DOM contains a "slotted" element (an element with a <code>slot</code> attribute after it has been inserted inside a {{htmlelement("slot")}} element — see <a href=/web/web_components/using_templates_and_slots#Adding_flexibility_with_slots>Adding flexibility with slots</a> for an explanation of how these are used), the "slotted" element will be shown inside its corresponding {{htmlelement("slot")}} element, with a "reveal" link alongside it. Clicking the "reveal" link will highlight the element with the <code>slot</code> attribute as it exists outside the shadow DOM</p>
 
 <p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16413/inspector_slot.png" style="display: block; height: 300px; margin: 0 auto; width: 481px;"></p>
 
@@ -272,11 +272,11 @@ tags:
   </tr>
   <tr>
    <td><a id="Show_DOM_Properties">Show DOM Properties</a></td>
-   <td>Open the <a href="/en-US/docs/Tools/Web_Console#The_split_console">split console</a> and enter the console command "<code>inspect($0)</code>" to <a href="/en-US/docs/Tools/Web_Console#Inspecting_objects">inspect</a> the currently selected element.</td>
+   <td>Open the <a href=/tools/web_console#The_split_console>split console</a> and enter the console command "<code>inspect($0)</code>" to <a href=/tools/web_console#Inspecting_objects>inspect</a> the currently selected element.</td>
   </tr>
   <tr>
    <td><a id="Use_in_Console">Use in Console</a></td>
-   <td>Assigns the currently selected node to a variable named <code>temp0</code> (or <code>temp1</code> if <code>temp0</code> is already taken, and so on), then opens the <a href="/en-US/docs/Tools/Web_Console#The_split_console">split console</a>, enabling you to interact with that node using the console's command line.</td>
+   <td>Assigns the currently selected node to a variable named <code>temp0</code> (or <code>temp1</code> if <code>temp0</code> is already taken, and so on), then opens the <a href=/tools/web_console#The_split_console>split console</a>, enabling you to interact with that node using the console's command line.</td>
   </tr>
   <tr>
    <td><a id="Expand_All">Expand All</a></td>
@@ -288,11 +288,11 @@ tags:
   </tr>
   <tr>
    <td><a id="Paste_Inner_HTML">(Paste) Inner HTML</a></td>
-   <td>Paste the clipboard contents into the node as its <a href="/en-US/docs/Web/API/element.innerHTML">innerHTML</a>.</td>
+   <td>Paste the clipboard contents into the node as its <a href=/web/api/element.innerhtml>innerHTML</a>.</td>
   </tr>
   <tr>
    <td><a id="Paste_Outer_HTML">(Paste) Outer HTML</a></td>
-   <td>Paste the clipboard contents into the node as its <a href="/en-US/docs/Web/API/element.outerHTML">outerHTML</a>.</td>
+   <td>Paste the clipboard contents into the node as its <a href=/web/api/element.outerhtml>outerHTML</a>.</td>
   </tr>
   <tr>
    <td><a id="Paste_Before">(Paste) Before</a></td>
@@ -320,7 +320,7 @@ tags:
   </tr>
   <tr>
    <td><a id="Screenshot_Node">Screenshot Node</a></td>
-   <td>Takes a screenshot of the selected node, saved to your Downloads directory. See <a href="/en-US/docs/Tools/Taking_screenshots">Taking screenshots</a>.</td>
+   <td>Takes a screenshot of the selected node, saved to your Downloads directory. See <a href=/tools/taking_screenshots>Taking screenshots</a>.</td>
   </tr>
   <tr>
    <td><a id="Create_New_Node">Create New Node</a></td>
@@ -364,15 +364,15 @@ tags:
   </tr>
   <tr>
    <td><a id=":hover">(Change Pseudo-class) hover</a></td>
-   <td>Set the <a href="/en-US/docs/Web/CSS/:hover">:hover</a> CSS pseudo-class.</td>
+   <td>Set the <a href=/web/css/:hover>:hover</a> CSS pseudo-class.</td>
   </tr>
   <tr>
    <td><a id=":active">(Change Pseudo-class) active</a></td>
-   <td>Set the <a href="/en-US/docs/Web/CSS/:active">:active</a> CSS pseudo-class.</td>
+   <td>Set the <a href=/web/css/:active>:active</a> CSS pseudo-class.</td>
   </tr>
   <tr>
    <td><a id=":focus">(Change Pseudo-class) focus</a></td>
-   <td>Set the <a href="/en-US/docs/Web/CSS/:focus">:focus</a> CSS pseudo-class.</td>
+   <td>Set the <a href=/web/css/:focus>:focus</a> CSS pseudo-class.</td>
   </tr>
   <tr>
    <td><a id="focus-within">(Change Pseudo-class) focus-within</a></td>
@@ -399,7 +399,7 @@ tags:
 
 <h3 id="Copy_and_paste">Copy and paste</h3>
 
-<p>You can use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_menu">popup menu</a> to copy nodes in the HTML tree and paste them into the desired location.</p>
+<p>You can use the <a href=/tools/page_inspector/how_to/examine_and_edit_html#Element_popup_menu>popup menu</a> to copy nodes in the HTML tree and paste them into the desired location.</p>
 
 <h3 id="Drag_and_drop">Drag and drop</h3>
 

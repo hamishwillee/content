@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Audio_graphs">Audio graphs</h2>
 
-<p>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> involves handling audio operations inside an <a href="/en-US/docs/Web/API/AudioContext">audio context</a>, and has been designed to allow <strong>modular routing</strong>. Basic audio operations are performed with <strong>audio nodes</strong>, which are linked together to form an <strong>audio routing graph</strong>. Several sources — with different types of channel layout — are supported even within a single context. This modular design provides the flexibility to create complex audio functions with dynamic effects.</p>
+<p>The <a href=/web/api/web_audio_api>Web Audio API</a> involves handling audio operations inside an <a href=/web/api/audiocontext>audio context</a>, and has been designed to allow <strong>modular routing</strong>. Basic audio operations are performed with <strong>audio nodes</strong>, which are linked together to form an <strong>audio routing graph</strong>. Several sources — with different types of channel layout — are supported even within a single context. This modular design provides the flexibility to create complex audio functions with dynamic effects.</p>
 
 <p>Audio nodes are linked via their inputs and outputs, forming a chain that starts with one or more sources, goes through one or more nodes, then ends up at a destination. Although, you don't have to provide a destination if you, say, just want to visualize some audio data. A simple, typical workflow for web audio would look something like this:</p>
 
@@ -47,7 +47,7 @@ tags:
  <li>Sound can be generated directly in JavaScript by an audio node (such as an oscillator).</li>
  <li>Created from raw PCM data (the audio context has methods to decode supported audio formats).</li>
  <li>Taken from HTML media elements (such as {{HTMLElement("video")}} or {{HTMLElement("audio")}}).</li>
- <li>Taken directly from a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone).</li>
+ <li>Taken directly from a <a href=/webrtc>WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone).</li>
 </ul>
 
 <h2 id="Audio_data_whats_in_a_sample">Audio data: what's in a sample</h2>
@@ -320,7 +320,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a> article.</p>
+<p><strong>Note</strong>: For more information, see our <a href=/web/api/web_audio_api/visualizations_with_web_audio_api>Visualizations with Web Audio API</a> article.</p>
 </div>
 
 <h2 id="Spatialisations">Spatialisations</h2>
@@ -340,7 +340,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="https://mdn.mozillademos.org/files/14311/WebAudioListenerReduced.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialization basics</a> article.</p>
+<p><strong>Note</strong>: For more information, see our <a href=/web/api/web_audio_api/web_audio_spatialization_basics>Web audio spatialization basics</a> article.</p>
 </div>
 
 <h2 id="Fan-in_and_Fan-out">Fan-in and Fan-out</h2>

@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>There are two ways browser extensions can interact with the system clipboard: the {{domxref("Document.execCommand()")}} method and the modern asynchronous <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a>.</p>
+<p>There are two ways browser extensions can interact with the system clipboard: the {{domxref("Document.execCommand()")}} method and the modern asynchronous <a href=/web/api/clipboard_api>Clipboard API</a>.</p>
 
 <p>The {{domxref("Document.execCommand()")}} method can be used, specifying the desired command:</p>
 
@@ -79,7 +79,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <pre>document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.</pre>
 
-<p>To enable this use case, you need to ask for the <code>"clipboardWrite"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. So: <code>"clipboardWrite"</code> enables you to write to the clipboard outside a short-lived event handler for a user action.</p>
+<p>To enable this use case, you need to ask for the <code>"clipboardWrite"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a>. So: <code>"clipboardWrite"</code> enables you to write to the clipboard outside a short-lived event handler for a user action.</p>
 
 <h3 id="Using_the_Clipboard_API">Using the Clipboard API</h3>
 
@@ -126,7 +126,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <ul>
  <li>You can write to the clipboard with execCommand in all execution contexts <em>except background pages</em>. In Firefox you can't select text or focus an input field in background pages, so you can't write to the clipboard with execCommand from a background page. The Clipboard Web API doesn't have this limitation.</li>
- <li>From version 57 onward, you can copy images to the clipboard using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData">clipboard.setImageData()</a></code> API.</li>
+ <li>From version 57 onward, you can copy images to the clipboard using the <code><a href=/mozilla/add-ons/webextensions/api/clipboard/setimagedata>clipboard.setImageData()</a></code> API.</li>
  <li>Support for the Clipboard API's {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} method was added in Firefox 63.</li>
  <li>When using content scripts, the Clipboard API is available only for HTTPS pages. As a workaround, use messaging between your content scripts and the background script.</li>
 </ul>
@@ -141,7 +141,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <h3 id="Using_execCommand()_2">Using execCommand()</h3>
 
-<p>First, you will need to have the <code>"clipboardRead"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> established for your extension. This is the case even if you're using the <code>"paste"</code> command from within a user-generated event handler such as {{event("click")}} or {{event("keypress")}}.</p>
+<p>First, you will need to have the <code>"clipboardRead"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a> established for your extension. This is the case even if you're using the <code>"paste"</code> command from within a user-generated event handler such as {{event("click")}} or {{event("keypress")}}.</p>
 
 <p>Consider HTML that includes something like this:</p>
 
@@ -164,7 +164,7 @@ document.querySelector("#paste").addEventListener("click", paste);</pre>
 
 <p>The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard. This lets you access the data in the clipboard without pasting it into an editable element.</p>
 
-<p>Once you have the <code>"clipboard-read"</code> permission from the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, you can read from the clipboard easily:</p>
+<p>Once you have the <code>"clipboard-read"</code> permission from the <a href=/web/api/permissions_api>Permissions API</a>, you can read from the clipboard easily:</p>
 
 <pre class="brush: js">navigator.clipboard.readText().then(clipText =&gt;
   document.getElementById("outbox").innerText = clipText);</pre>
@@ -173,13 +173,13 @@ document.querySelector("#paste").addEventListener("click", paste);</pre>
 
 <h3 id="Browser-specific_considerations_2">Browser-specific considerations</h3>
 
-<p>Firefox supports the <code>"clipboardRead"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> from version 54, but only supports pasting into elements in <a href="/en-US/docs/Web/Guide/HTML/Editable_content">content editable mode</a>, which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.</p>
+<p>Firefox supports the <code>"clipboardRead"</code> <a href=/mozilla/add-ons/webextensions/manifest.json/permissions>permission</a> from version 54, but only supports pasting into elements in <a href=/web/guide/html/editable_content>content editable mode</a>, which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
- <li><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content">Making content editable</a></li>
+ <li><a href=/web/api/clipboard_api>Clipboard API</a></li>
+ <li><a href=/web/api/permissions_api>Permissions API</a></li>
+ <li><a href=/web/guide/html/editable_content>Making content editable</a></li>
  <li>{{htmlattrxref("contenteditable")}}</li>
 </ul>

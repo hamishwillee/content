@@ -19,11 +19,11 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 <ul>
 	<li>The position of elements can now be changed within the content ({{bug(1139187)}}).</li>
 	<li>Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).</li>
-	<li>Added <a href="/en-US/docs/Tools/Web_Console/Console_messages#Viewing_network_request_details">HTTP log inspection to the Web Console</a> ({{bug(1211525)}}).</li>
-	<li>Added a <a href="/en-US/docs/Tools/Tools_Toolbox#Choose_DevTools_theme">Firebug theme</a> ({{bug(1244054)}}).</li>
-	<li>Added the <a href="/en-US/docs/Tools/DOM_Inspector">DOM Inspector</a> ({{bug(1201475)}}).</li>
-	<li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Fonts_view">Font inspector</a> has been enabled by default again ({{bug(1280121)}}).</li>
-	<li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Edit_rules">Improved suggestions</a> for CSS properties ({{bug(1168246)}}).</li>
+	<li>Added <a href=/tools/web_console/console_messages#Viewing_network_request_details>HTTP log inspection to the Web Console</a> ({{bug(1211525)}}).</li>
+	<li>Added a <a href=/tools/tools_toolbox#Choose_DevTools_theme>Firebug theme</a> ({{bug(1244054)}}).</li>
+	<li>Added the <a href=/tools/dom_inspector>DOM Inspector</a> ({{bug(1201475)}}).</li>
+	<li><a href=/tools/page_inspector/ui_tour#Fonts_view>Font inspector</a> has been enabled by default again ({{bug(1280121)}}).</li>
+	<li><a href=/tools/page_inspector/how_to/examine_and_edit_css#Edit_rules>Improved suggestions</a> for CSS properties ({{bug(1168246)}}).</li>
 	<li>Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).</li>
 </ul>
 
@@ -68,7 +68,7 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 		<li>{{cssxref("-webkit-box-direction")}}, {{cssxref("-webkit-box-orient")}} ({{bug(1262049)}}.</li>
 		<li>The value <code>-webkit-inline-box</code> is now an alias of <code>inline-flex</code> on the {{cssxref("display")}} property. ({{bug(1257661)}}).</li>
 		<li>{{cssxref("-webkit-flex-direction")}}, {{cssxref("-webkit-flex-wrap")}}, {{cssxref("-webkit-flex-flow")}}, {{cssxref("-webkit-order")}}, {{cssxref("-webkit-flex")}}, {{cssxref("-webkit-flex-grow")}}, {{cssxref("-webkit-flex-shrink")}}, {{cssxref("-webkit-flex-basis")}}, {{cssxref("-webkit-justify-content")}}, {{cssxref("-webkit-align-items")}}, {{cssxref("-webkit-align-self")}} and {{cssxref("-webkit-align-content")}} were added as aliases for the unprefixed properties and the values <code>-webkit-flex</code> and <code>-webkit-inline-flex</code> for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).</li>
-		<li>Added {{cssxref("-webkit-box-flex")}}, {{cssxref("-webkit-box-ordinal-group")}}, {{cssxref("-webkit-box-align")}} and {{cssxref("-webkit-box-pack")}} properties and <code>-webkit-box</code> value to {{cssxref("display")}} as aliases for modern <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications">CSS Flexbox</a> ({{bug(1208635)}}).</li>
+		<li>Added {{cssxref("-webkit-box-flex")}}, {{cssxref("-webkit-box-ordinal-group")}}, {{cssxref("-webkit-box-align")}} and {{cssxref("-webkit-box-pack")}} properties and <code>-webkit-box</code> value to {{cssxref("display")}} as aliases for modern <a href=/web/css/css_flexible_box_layout/using_flexbox_to_lay_out_web_applications>CSS Flexbox</a> ({{bug(1208635)}}).</li>
 	</ul>
 	</li>
 	<li>The <code>text</code> value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ({{bug(1263516)}}).</li>
@@ -92,9 +92,9 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 <h4 id="Deprecations_and_removals">Deprecations and removals</h4>
 
 <ul>
-	<li>The deprecated <a href="/en-US/docs/Archive/Web/Old_Proxy_API">old Proxy API</a> (<code>Proxy.create</code> and <code>Proxy.createFunction()</code>) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).</li>
+	<li>The deprecated <a href=/archive/web/old_proxy_api>old Proxy API</a> (<code>Proxy.create</code> and <code>Proxy.createFunction()</code>) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).</li>
 	<li>The <code>String.prototype.contains()</code> method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ({{bug(1103588)}}).</li>
-	<li>The non-standard <code>RegExp.multiline</code> property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">m flag</a> instead ({{bug(1219757)}}).</li>
+	<li>The non-standard <code>RegExp.multiline</code> property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard <a href=/web/javascript/guide/regular_expressions#Advanced_searching_with_flags>m flag</a> instead ({{bug(1219757)}}).</li>
 	<li>The {{jsxref("Object.__defineGetter__", "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}} methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).</li>
 </ul>
 
@@ -139,8 +139,8 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 <h4 id="Others">Others</h4>
 
 <ul>
-	<li>The <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(842818)}}).</li>
-	<li>The {{domxref("CustomEvent")}} interface is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> ({{bug(1003432)}}).</li>
+	<li>The <a href=/web/api/web_crypto_api>Web Crypto API</a> is now available in <a href=/web/api/web_workers_api>Web workers</a> ({{bug(842818)}}).</li>
+	<li>The {{domxref("CustomEvent")}} interface is now available in <a href=/web/api/web_workers_api>Web Workers</a> ({{bug(1003432)}}).</li>
 	<li>The <code>DOMApplicationsManager.getNotInstalled()</code> method has been removed ({{bug("1255036")}}).</li>
 	<li>Several Firefox OS APIs that were erroneously exposed to the Web have now been hidden as they should have been — {{domxref("mozContact")}}, {{domxref("MozContactChangeEvent")}}, {{domxref("navigator.mozContacts")}}, {{domxref("MozPowerManager")}}, {{domxref("MozSettingsEvent")}} (see {{bug("1043562")}}, {{bug("1256414")}}, and {{bug("1256046")}}).</li>
 	<li>Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ({{bug(1257877)}}).</li>
@@ -159,8 +159,8 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <ul>
-	<li>The <a href="/en-US/docs/Mozilla/Projects/Social_API/Service_worker_API_reference">Social Worker API</a> has been removed.</li>
-	<li>Added the <code><a href="/en-US/docs/Mozilla/Gecko/Chrome/CSS/-moz-bool-pref">-moz-bool-pref()</a></code> <a href="/en-US/docs/Web/CSS">CSS</a> {{CSSxRef("@supports")}} function to allow hiding portions of chrome stylesheets behind boolean preferences. ({{bug(1259889)}})</li>
+	<li>The <a href=/mozilla/projects/social_api/service_worker_api_reference>Social Worker API</a> has been removed.</li>
+	<li>Added the <code><a href=/mozilla/gecko/chrome/css/-moz-bool-pref>-moz-bool-pref()</a></code> <a href=/web/css>CSS</a> {{CSSxRef("@supports")}} function to allow hiding portions of chrome stylesheets behind boolean preferences. ({{bug(1259889)}})</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

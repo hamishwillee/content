@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{APIRef("Media Capabilities API")}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.</span> These features include:</p>
+<p><span class="seoSummary">The <a href=/web/api/media_capabilities_api>Media Capabilities API</a> provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.</span> These features include:</p>
 
 <ul>
  <li>The ability to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details. With the Media Capabilities API, you can determine not just if the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource.isTypeSupported", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.</li>
@@ -48,7 +48,7 @@ tags:
 <p>In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain <code>file</code> or {{domxref("MediaSource")}} — and a {{domxref("VideoConfiguration")}} including values for the <code>contentType</code>, <code>width</code>, <code>height</code>, <code>bitrate</code>, and <code>framerate</code><strong>:</strong></p>
 
 <ul>
- <li>The <code>contentType</code> must be a string specifying a <a href="/en-US/docs/Web/Media/Formats/Video_codecs">valid video MIME type</a>.</li>
+ <li>The <code>contentType</code> must be a string specifying a <a href=/web/media/formats/video_codecs>valid video MIME type</a>.</li>
  <li>The <code>width</code> and <code>height</code> are the horizontal and vertical dimensions of the video; these are also used to determine the aspect ratio.</li>
  <li>The <code>bitrate</code> is the number of bits used to encode one second of video.</li>
  <li>The <code>framerate</code> is the number of frames which are played per second of time when playing the video.</li>
@@ -77,7 +77,7 @@ tags:
    }
 };</pre>
 
-<p>Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either <code>record</code> (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or <code>transmission</code> (for media transmitted over electronic means like <a href="/en-US/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>) — plus either an audio or video configuration as described above.</p>
+<p>Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either <code>record</code> (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or <code>transmission</code> (for media transmitted over electronic means like <a href=/web/api/rtcpeerconnection title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>) — plus either an audio or video configuration as described above.</p>
 
 <h3 id="Querying_the_browser_about_decoding_abilities">Querying the browser about decoding abilities</h3>
 

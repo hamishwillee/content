@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</div>
 
-<p>Once you've successfully <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">created a WebGL context</a>, you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.</p>
+<p>Once you've successfully <a href=/web/api/webgl_api/tutorial/getting_started_with_webgl>created a WebGL context</a>, you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.</p>
 
 <p>The complete source code for this project is <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">available on GitHub</a>.</p>
 
@@ -37,11 +37,11 @@ tags:
 
 <h4 id="Vertex_shader">Vertex shader</h4>
 
-<p>Each time a shape is rendered, the vertex shader is run for each vertex in the shape. Its job is to transform the input vertex from its original coordinate system into the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#Clip_space">clip space</a></strong> coordinate system used by WebGL, in which each axis has a range from -1.0 to 1.0, regardless of aspect ratio, actual size, or any other factors.</p>
+<p>Each time a shape is rendered, the vertex shader is run for each vertex in the shape. Its job is to transform the input vertex from its original coordinate system into the <strong><a href=/web/api/webgl_api/webgl_model_view_projection#Clip_space>clip space</a></strong> coordinate system used by WebGL, in which each axis has a range from -1.0 to 1.0, regardless of aspect ratio, actual size, or any other factors.</p>
 
 <p>The vertex shader must perform the needed transforms on the vertex's position, make any other adjustments or calculations it needs to make on a per-vertex basis, then return the transformed vertex by saving it in a special variable provided by GLSL, called <code>gl_Position</code>.</p>
 
-<p>The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in <a href="/en-US/docs/Web/API/WebGL_API/Data#Varyings">varyings</a> or <a href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a> as appropriate to be shared with the fragment shader.</p>
+<p>The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in <a href=/web/api/webgl_api/data#Varyings>varyings</a> or <a href=/web/api/webgl_api/data#Attributes>attributes</a> as appropriate to be shared with the fragment shader.</p>
 
 <p>Our vertex shader below receives vertex position values from an attribute we define called <code>aVertexPosition</code>. That position is then multiplied by two 4x4 matrices we provide called <code>uProjectionMatrix</code> and <code>uModelViewMatrix</code>; <code>gl_Position</code> is set to the result. For more info on projection and other matrixes <a href="https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html">you might find this article useful</a>.</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>It's worth noting that we're using a <code>vec4</code> attribute for the vertex position, which doesn't actually use a 4-component vector; that is, it could be handled as a <code>vec2</code> or <code>vec3</code> depending on the situation. But when we do our math, we will need it to be a <code>vec4</code>, so rather than convert it to a <code>vec4</code> every time we do math, we'll just use a <code>vec4</code> from the beginning. This eliminates operations from every calculation we do in our shader. Performance matters.</p>
 
-<p>In this example, we're not computing any lighting at all, since we haven't yet applied any to the scene. That will come later, in the example <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a>. Note also the lack of any work with textures here; that will be added in <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures in WebGL</a>.</p>
+<p>In this example, we're not computing any lighting at all, since we haven't yet applied any to the scene. That will come later, in the example <a href=/web/api/webgl_api/tutorial/lighting_in_webgl>Lighting in WebGL</a>. Note also the lack of any work with textures here; that will be added in <a href=/web/api/webgl_api/tutorial/using_textures_in_webgl>Using textures in WebGL</a>.</p>
 
 <h4 id="Fragment_shader">Fragment shader</h4>
 
@@ -146,7 +146,7 @@ function loadShader(gl, type, source) {
 <pre class="brush: js notranslate">  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 </pre>
 
-<p>After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. <a href="/en-US/docs/Web/API/WebGL_API/Data#Uniforms">Uniforms</a> are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around</p>
+<p>After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. <a href=/web/api/webgl_api/data#Uniforms>Uniforms</a> are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around</p>
 
 <pre class="brush: js notranslate">  const programInfo = {
     program: shaderProgram,

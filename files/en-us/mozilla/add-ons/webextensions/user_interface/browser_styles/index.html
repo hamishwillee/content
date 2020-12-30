@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>Certain user interface components - browser and page action <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebars</a>, and <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a> - are specified by your extension in essentially the same way:</p>
+<p>Certain user interface components - browser and page action <a href=/mozilla/add-ons/webextensions/user_interface/popups>popups</a>, <a href=/mozilla/add-ons/webextensions/user_interface/sidebars>sidebars</a>, and <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a> - are specified by your extension in essentially the same way:</p>
 
 <ol>
  <li>create an HTML file defining the structure of the UI element</li>
- <li>add a manifest.json key (<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>) pointing to that HTML file.</li>
+ <li>add a manifest.json key (<code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/page_action>page_action</a></code>, <code><a href=/mozilla/add-ons/webextensions/manifest.json/sidebar_action>sidebar_action</a></code>, or <code><a href=/mozilla/add-ons/webextensions/manifest.json/options_ui>options_ui</a></code>) pointing to that HTML file.</li>
 </ol>
 
 <p>One of the challenges with this approach is styling the element in such a way that it fits in with the browser's own style. To help with this, the manifest.json keys include an extra optional property: <code>browser_style</code>. If this is included and set to <code>true</code>, then your document will get one or more extra stylesheets that will help make it look consistent with the browser's UI and with other extensions that use the <code>browser_style</code> property.</p>
@@ -43,7 +43,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code></td>
+   <td><code><a href=/web/html/element/button>&lt;button&gt;</a></code></td>
    <td>
     <pre class="brush: html no-line-numbers">
 &lt;button class="browser-style"&gt;Click me&lt;/button&gt;</pre>
@@ -51,7 +51,7 @@ tags:
   </tr>
   <tr>
    <td>
-    <p><code><a href="/en-US/docs/Web/HTML/Element/select">&lt;select&gt;</a></code></p>
+    <p><code><a href=/web/html/element/select>&lt;select&gt;</a></code></p>
    </td>
    <td>
     <pre class="brush: html no-line-numbers">
@@ -63,14 +63,14 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code></td>
+   <td><code><a href=/web/html/element/textarea>&lt;textarea&gt;</a></code></td>
    <td>
     <pre class="brush: html no-line-numbers">
 &lt;textarea class="browser-style"&gt;Write here&lt;/textarea&gt;</pre>
    </td>
   </tr>
   <tr>
-   <td>Parent of an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code></td>
+   <td>Parent of an <code><a href=/web/html/element/input>&lt;input&gt;</a></code></td>
    <td>
     <pre class="brush: html no-line-numbers">
 &lt;div class="browser-style"&gt;

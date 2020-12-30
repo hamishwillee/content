@@ -13,7 +13,7 @@ tags:
 
 <p>{{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}</p>
 
-<p class="summary">The future of mobile gaming is definitely web, and many developers choose the <a href="/en-US/docs/Web/Apps/Mobile_First">mobile first</a> approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML5 game, and enjoy playing on a mobile touch-enabled device.</p>
+<p class="summary">The future of mobile gaming is definitely web, and many developers choose the <a href=/web/apps/mobile_first>mobile first</a> approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML5 game, and enjoy playing on a mobile touch-enabled device.</p>
 
 <p class="note"><strong>Note</strong>: The game <a class="external external-icon" href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.</p>
 
@@ -30,14 +30,14 @@ el.addEventListener("touchcancel", handleCancel);</pre>
 <p>This way, touching the game's {{htmlelement("canvas")}} on the mobile screen would emit events, and thus we could manipulate the game in any way we want (for example, moving the space ship around). The events are as follows:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart">touchstart</a> is fired when the user puts a finger on the screen.</li>
- <li><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove">touchmove</a> is fired when they move the finger on the screen while touching it</li>
- <li><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontouchend">touchend</a> is fired when the user stops touching the screen</li>
- <li><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel">touchcancel</a> is fired when a touch is cancelled, for example when the user moves their finger outside of the screen.</li>
+ <li><a href=/web/api/globaleventhandlers/ontouchstart>touchstart</a> is fired when the user puts a finger on the screen.</li>
+ <li><a href=/web/api/globaleventhandlers/ontouchmove>touchmove</a> is fired when they move the finger on the screen while touching it</li>
+ <li><a href=/web/api/globaleventhandlers/ontouchend>touchend</a> is fired when the user stops touching the screen</li>
+ <li><a href=/web/api/globaleventhandlers/ontouchcancel>touchcancel</a> is fired when a touch is cancelled, for example when the user moves their finger outside of the screen.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The <a href="/en-US/docs/Web/API/Touch_events">touch events</a> reference article provides more examples and information.</p>
+<p><strong>Note</strong>: The <a href=/web/api/touch_events>touch events</a> reference article provides more examples and information.</p>
 </div>
 
 <h3 id="Pure_JavaScript_demo">Pure JavaScript demo</h3>

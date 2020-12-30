@@ -13,10 +13,10 @@ slug: Tools/Memory/Tree_map_view
 <p>For the treemaps shown in the Memory tool, things on the heap are divided at the top level into four categories:</p>
 
 <ul>
- <li><strong>objects</strong>: JavaScript and DOM objects, such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, and DOM types like <code><a href="/en-US/docs/Web/API/Window">Window</a></code> and <code><a href="/en-US/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code>.</li>
+ <li><strong>objects</strong>: JavaScript and DOM objects, such as <code><a href=/web/javascript/reference/global_objects/function>Function</a></code>, <code><a href=/web/javascript/reference/global_objects/object>Object</a></code>, or <code><a href=/web/javascript/reference/global_objects/array>Array</a></code>, and DOM types like <code><a href=/web/api/window>Window</a></code> and <code><a href=/web/api/htmldivelement>HTMLDivElement</a></code>.</li>
  <li><strong>scripts</strong>: JavaScript sources loaded by the page.</li>
  <li><strong>strings</strong></li>
- <li><strong>other</strong>: this includes internal <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> objects.</li>
+ <li><strong>other</strong>: this includes internal <a href=/mozilla/projects/spidermonkey>SpiderMonkey</a> objects.</li>
 </ul>
 
 <p>Each category is represented with a rectangle, and the size of the rectangle corresponds to the proportion of the heap occupied by items in that category. This means you can quickly get an idea of roughly what sorts of things allocated by your site are using the most memory.</p>
@@ -33,11 +33,11 @@ slug: Tools/Memory/Tree_map_view
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13048/treemap-domnodes.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
 
-<p>This treemap is from the <a href="/en-US/docs/Tools/Memory/DOM_allocation_example">DOM allocation example</a>, which runs a script that creates a large number of DOM nodes (200 <code><a href="/en-US/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code> objects and 4000 <code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> objects). You can see how almost all the heap usage is from the <code>HTMLSpanElement</code> objects that it creates.</p>
+<p>This treemap is from the <a href=/tools/memory/dom_allocation_example>DOM allocation example</a>, which runs a script that creates a large number of DOM nodes (200 <code><a href=/web/api/htmldivelement>HTMLDivElement</a></code> objects and 4000 <code><a href=/web/api/htmlspanelement>HTMLSpanElement</a></code> objects). You can see how almost all the heap usage is from the <code>HTMLSpanElement</code> objects that it creates.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13046/treemap-monsters.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
 
-<p>This treemap is from the <a href="/en-US/docs/Tools/Memory/Monster_example">monster allocation example</a>, which creates three arrays, each containing 5000 monsters, each monster having a randomly-generated name. You can see that most of the heap is occupied by the strings used for the monsters' names, and the objects used to contain the monsters' other attributes.</p>
+<p>This treemap is from the <a href=/tools/memory/monster_example>monster allocation example</a>, which creates three arrays, each containing 5000 monsters, each monster having a randomly-generated name. You can see that most of the heap is occupied by the strings used for the monsters' names, and the objects used to contain the monsters' other attributes.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13050/treemap-bbc.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
 

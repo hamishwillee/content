@@ -16,8 +16,8 @@ tags:
 <p>With WebExtension APIs, these kinds of buttons are called "browser actions", and are set up like so:</p>
 
 <ul>
- <li>The manifest.json key <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> is used to define the button.</li>
- <li>The JavaScript API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> is used to listen for clicks and change the button or perform actions via your code.</li>
+ <li>The manifest.json key <code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code> is used to define the button.</li>
+ <li>The JavaScript API <code><a href=/mozilla/add-ons/webextensions/api/browseraction>browserAction</a></code> is used to listen for clicks and change the button or perform actions via your code.</li>
 </ul>
 
 <h2 id="A_simple_button">A simple button</h2>
@@ -71,7 +71,7 @@ tags:
 
 browser.browserAction.onClicked.addListener(openPage);</pre>
 
-<p>This listens for the browser action's click event; when the event fires, the <code>openPage()</code> function is run, which opens the specified page using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code> API.</p>
+<p>This listens for the browser action's click event; when the event fires, the <code>openPage()</code> function is run, which opens the specified page using the <code><a href=/mozilla/add-ons/webextensions/api/tabs>tabs</a></code> API.</p>
 
 <p>At this point the complete extension should look like this:</p>
 
@@ -191,15 +191,15 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 <h2 id="Page_actions">Page actions</h2>
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions">Page actions</a> are just like browser actions, except that they are for actions which are relevant only for particular pages, rather than the browser as a whole.</p>
+<p><a href=/mozilla/add-ons/webextensions/page_actions>Page actions</a> are just like browser actions, except that they are for actions which are relevant only for particular pages, rather than the browser as a whole.</p>
 
 <p>While browser actions are always shown, page actions are only shown in tabs where they are relevant. Page action buttons are displayed in the URL bar, rather than the browser toolbar.</p>
 
 <h2 id="Learn_more">Learn more</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/browser_action>browser_action</a></code> manifest key</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/browseraction>browserAction</a></code> API</li>
  <li>Browser action examples:
   <ul>
    <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
@@ -208,8 +208,8 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
    <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open-my-page-button</a></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code> API</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/manifest.json/page_action>page_action</a></code> manifest key</li>
+ <li><code><a href=/mozilla/add-ons/webextensions/api/pageaction>pageAction</a></code> API</li>
  <li>Page action examples:
   <ul>
    <li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a></li>

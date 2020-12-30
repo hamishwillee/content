@@ -101,7 +101,7 @@ tags:
     getter allowPaymentRequest
     setter allowPaymentRequest</pre>
 
-<p>This indicates that for the {{domxref("HTMLIFrameElement")}} interface (representing the members of an {{HTMLElement("iframe")}} element), the {{domxref("HTMLIFrameElement.allowPaymentRequest", "allowPaymentRequest")}} property's value can be neither read not set, essentially meaning the property is not available. This property is part of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>, which is not yet supported in WebViews.</p>
+<p>This indicates that for the {{domxref("HTMLIFrameElement")}} interface (representing the members of an {{HTMLElement("iframe")}} element), the {{domxref("HTMLIFrameElement.allowPaymentRequest", "allowPaymentRequest")}} property's value can be neither read not set, essentially meaning the property is not available. This property is part of the <a href=/web/api/payment_request_api>Payment Request API</a>, which is not yet supported in WebViews.</p>
 
 <p>If only an interface line is included in the exclusion list, then the entire interface is unavailable in WebViews.</p>
 
@@ -158,7 +158,7 @@ tags:
 </dl>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If you aren't able to find the change because it apparently happens before Firefox was migrated to Mercurial from CVS, try using Mercurial blame on the <a href="https://hg.mozilla.org/mozilla-unified/">Unified Firefox repository</a>, which has tags in place, each representing the code state at specific points in the history of the project, including each beta and each release build. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Processes/Browser_information_resources", "Unified Firefox repository")}} for details.</p>
+<p><strong>Note:</strong> If you aren't able to find the change because it apparently happens before Firefox was migrated to Mercurial from CVS, try using Mercurial blame on the <a href="https://hg.mozilla.org/mozilla-unified/">Unified Firefox repository</a>, which has tags in place, each representing the code state at specific points in the history of the project, including each beta and each release build. See {{SectionOnPage(/mdn/contribute/processes/browser_information_resources, "Unified Firefox repository")}} for details.</p>
 </div>
 
 <h3 id="Getting_the_Firefox_release_for_a_bug_number">Getting the Firefox release for a bug number</h3>
@@ -215,17 +215,17 @@ tags:
  <li>A data type (enum, typedef, or similar)</li>
 </ul>
 
-<p>The easiest way to identify the compatibility of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the <a href="/en-US/docs/Glossary/WebIDL">WebIDL</a> file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:</p>
+<p>The easiest way to identify the compatibility of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the <a href=/glossary/webidl>WebIDL</a> file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:</p>
 
 <ol>
  <li>
   <p>For a given interface named <code>InterfaceName</code>, go to <a href="https://dxr.mozilla.org/mozilla-central/source/">DXR</a> and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).</p>
  </li>
  <li>
-  <p>If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> are located in the file <code>RTCPeerConnection.webidl</code> in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.</p>
+  <p>If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for <a href=/web/api/webrtc_api>WebRTC</a> are located in the file <code>RTCPeerConnection.webidl</code> in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.</p>
  </li>
  <li>
-  <p>Failing that, try looking for <kbd>file:<em>interfacename</em>.idl</kbd> to see if perhaps the interface is one which is still using the older Mozilla <a href="/en-US/docs/Archive/Mozilla/XPIDL">XPIDL</a> syntax to describe it. This should not happen very often, if at all.</p>
+  <p>Failing that, try looking for <kbd>file:<em>interfacename</em>.idl</kbd> to see if perhaps the interface is one which is still using the older Mozilla <a href=/archive/mozilla/xpidl>XPIDL</a> syntax to describe it. This should not happen very often, if at all.</p>
  </li>
 </ol>
 

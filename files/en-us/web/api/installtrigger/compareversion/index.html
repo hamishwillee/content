@@ -2,7 +2,7 @@
 title: compareVersion
 slug: Web/API/InstallTrigger/compareVersion
 ---
-<div class="warning"><p>Parts of this page show the use of the <a href="/en-US/docs/XPInstall_API_Reference">XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a href="/en-US/docs/Extensions">Extension</a>, <a href="/en-US/docs/Themes">Theme</a>, and <a href="/en-US/docs/Plugins">plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a href="/en-US/docs/Bundles">packaging scheme</a> with an <code><a href="/en-US/docs/Install_Manifests">install.rdf</a></code> manifest. In particular plugin developers should see <a href="/en-US/docs/Shipping_a_plugin_as_a_Toolkit_bundle">how to package a plugin as an extension</a>.</p></div>
+<div class="warning"><p>Parts of this page show the use of the <a href=/xpinstall_api_reference>XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a href=/extensions>Extension</a>, <a href=/themes>Theme</a>, and <a href=/plugins>plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a href=/bundles>packaging scheme</a> with an <code><a href=/install_manifests>install.rdf</a></code> manifest. In particular plugin developers should see <a href=/shipping_a_plugin_as_a_toolkit_bundle>how to package a plugin as an extension</a>.</p></div>
 
 <h3 id="compareVersion">compareVersion</h3>
 
@@ -10,7 +10,7 @@ slug: Web/API/InstallTrigger/compareVersion
 
 <h4 id="Method_of">Method of</h4>
 
-<p><a href="/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object">InstallTrigger</a> object</p>
+<p><a href=/xpinstall_api_reference/installtrigger_object>InstallTrigger</a> object</p>
 
 <h4 id="Syntax">Syntax</h4>
 
@@ -38,7 +38,7 @@ int compareVersion (
  <dt><code>registryName</code></dt>
  <dd>The pathname in the Client Version Registry for the component whose version is to be compared. This parameter can be an absolute pathname, such as <code>/royalairways/RoyalSW</code> or a relative pathname, such as <code>plugsin/royalairway/RoyalSW</code>. Note that the registry pathname is not the location of the software on the computer; it is the location of information about the software inside the Client Version Registry.</dd>
  <dt><code>version</code></dt>
- <dd>An <a href="/en-US/docs/XPInstall_API_Reference/InstallVersion_Object"> InstallVersion</a><code> </code>object containing version information or a String in the format major.minor.release.build, where major, minor, release, and build are integer values representing version information.</dd>
+ <dd>An <a href=/xpinstall_api_reference/installversion_object> InstallVersion</a><code> </code>object containing version information or a String in the format major.minor.release.build, where major, minor, release, and build are integer values representing version information.</dd>
 </dl>
 
 <h4 id="Returns">Returns</h4>
