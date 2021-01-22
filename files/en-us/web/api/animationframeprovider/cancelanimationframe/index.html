@@ -1,32 +1,34 @@
 ---
-title: window.cancelAnimationFrame()
-slug: Web/API/Window/cancelAnimationFrame
+title: AnimationFrameProvider.cancelAnimationFrame()
+slug: Web/API/AnimationFrameProvider/cancelAnimationFrame
 tags:
-- API
-- Animation
-- DOM
-- Experimental
-- Method
-- Reference
-- Window
+  - API
+  - Animation
+  - DOM
+  - Experimental
+  - Method
+  - Reference
+  - Window
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>window.cancelAnimationFrame()</strong></code> method cancels an
-  animation frame request previously scheduled through a call to
-  {{domxref("window.requestAnimationFrame()")}}.</p>
+<p>The <code><strong>AnimationFrameProvider.cancelAnimationFrame()</strong></code> method cancels an animation frame request previously scheduled through a call to
+  {{domxref("window/requestAnimationFrame")}} (i.e. via <code>window.requestAnimationFrame()</code> or <code>DedicatedWorkerGlobalScope.requestAnimationFrame()</code>).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.cancelAnimationFrame(<em>requestID</em>);
+<pre class="brush: js notranslate">// In main thread
+window.cancelAnimationFrame(<em>requestID</em>);
+
+// In dedicated worker
+self.cancelAnimationFrame(<em>requestID</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>requestID</code></dt>
-  <dd>The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}}
-    that requested the callback.</dd>
+  <dd>The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}} that requested the callback.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
