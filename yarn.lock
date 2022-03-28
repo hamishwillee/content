@@ -62,23 +62,23 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.12":
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.12.tgz#d266138c24295440619ea562ce3f4ec22600e897"
-  integrity sha512-y3Ntio6hb5+m6asxcA3nnIN6URjAFMji2EZZVYGd2Ag5On4mmvPhMnXdiIScCMXgHjFX+5qXuKaojLLhJHZPAg==
+"@mdn/browser-compat-data@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.13.tgz#40303f692fff93abe7a0f5782432ec717af9b280"
+  integrity sha512-OFTriJmUcXnA1RjfKDJOfEmhHO44OV7Gxpqnh7eOM+3qep64Yt+uNF4jEeIFHnwTFH5tMcnBQxEI91dXDGiGYQ==
 
-"@mdn/yari@0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.1.tgz#cf60bdf2d5850e697fa78bdb549ce7959fd652c7"
-  integrity sha512-GILSBrzPK79rKNygd/nPewfKMzWATDCNMZUmgi46EaHYFg+KwHOPoUyo8KMn/VQJCB6YHTj71xn6JbC3VL2krw==
+"@mdn/yari@0.9.60":
+  version "0.9.60"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.60.tgz#4f64758a867ba59dd6cb80a793c35fddfa208f8e"
+  integrity sha512-O1rOqqxri7H5uYuQrChi1zuj8x+swNaa/+mNjSy8Ia3WtuuQVM9IKD8zjLOLeu4oNPbmwGGdXLb4mnzl4Xdt2g==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.12"
+    "@mdn/browser-compat-data" "4.1.13"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
-    browser-specs "^3.3.0"
+    browser-specs "^3.4.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -109,7 +109,7 @@
     imagemin-mozjpeg "9.0.0"
     imagemin-pngquant "9.0.2"
     imagemin-svgo "9.0.0"
-    inquirer "^8.2.1"
+    inquirer "^8.2.2"
     is-svg "4.2.2"
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
@@ -593,10 +593,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.3.0.tgz#be5c2d48fd58b72c112b784f59ef6612a2769a07"
-  integrity sha512-NQkBdqrFo0pMfD3Xvkr684kbmK/K8rFQxUvWrEQUoNlzxhWJ5ofQt4sLzxpZXrQysrkRRripJIuBA/GFBSzJtA==
+browser-specs@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.4.0.tgz#2f378f8892c194592e6a7def293b01696beaf25a"
+  integrity sha512-9BqYEGQQFnhYyRuqp5biy5HNlN5ymi7ee3ZxA67xc4rDWzCHMVBcxCF3s6rE5YzYnpV+YMJqwVfcCWiA5+Bwkw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -2507,10 +2507,10 @@ inquirer@^6.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@^8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.1.tgz#e00022e3e8930a92662f760f020686530a84671d"
-  integrity sha512-pxhBaw9cyTFMjwKtkjePWDhvwzvrNGAw7En4hottzlPvz80GZaMZthdDU35aA6/f5FRZf3uhE057q8w1DE3V2g==
+inquirer@^8.2.2:
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.2.tgz#1310517a87a0814d25336c78a20b44c3d9b7629d"
+  integrity sha512-pG7I/si6K/0X7p1qU+rfWnpTE1UIkTONN1wxtzh0d+dHXtT/JG6qBgLxoyHVsQa8cFABxAPh0pD6uUUHiAoaow==
   dependencies:
     ansi-escapes "^4.2.1"
     chalk "^4.1.1"
