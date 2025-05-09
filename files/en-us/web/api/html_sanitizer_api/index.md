@@ -2,14 +2,10 @@
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 page-type: web-api-overview
-status:
-  - deprecated
 browser-compat: api.Sanitizer
 ---
 
-{{DefaultAPISidebar("HTML Sanitizer API")}}{{deprecated_header}}
-
-{{securecontext_header}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
 
@@ -54,10 +50,39 @@ This applies to both methods.
 
 ## Interfaces
 
-- {{domxref('Sanitizer')}} {{deprecated_inline}}
-  - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
-- {{domxref('Element/setHTML','Element.setHTML()')}}
-  - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
+- {{domxref('Sanitizer')}}
+  - : A reusable sanitizer configuration object that defines what elements and attributes should be allowed/removed when sanitizing untrusted strings of HTML.
+    This is used in the methods that insert strings of HTML into the DOM or Document.
+- {{domxref('SanitizerConfig')}}
+  - : A dictionary that defines a sanitizer configuration.
+    This can be used in the same places as {{domxref('Sanitizer')}} but is likely to be less efficient to use and reuse.
+
+## Associated methods
+
+- {{domxref('Element.setHTML()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element, elements and attributes that are considered XSS-unsafe, and elements and attributes that are not allowed by the sanitizer configuration.
+    The subtree is then inserted into the DOM as a subtree of the element.
+    Note that this is an "XSS-safe" method, and will only allow trusted entities to be inserted, irrespective of the provided sanitizer.
+- {{domxref('Element.setHTMLUnsafe()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element, and elements and attributes that are not allowed by the sanitizer configuration (if specified).
+    The subtree is then inserted into the DOM as a subtree of the element.
+    Note that this is an "XSS-unsafe" method: any entities allowed by the sanitizer will be inserted, or all entities if there is no sanitizer.
+- {{domxref('ShadowRoot.setHTML()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements and attributes that are considered XSS-unsafe, and elements and attributes that are not allowed by the sanitizer configuration.
+    The subtree is then inserted into the ShadowRoot as a subtree of the specified root.
+    Note that this is an "XSS-safe" method, and will only allow trusted entities to be inserted, irrespective of the provided sanitizer.
+- {{domxref('ShadowRoot.setHTMLUnsafe()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements and attributes that are not allowed by the sanitizer configuration (if specified).
+    The subtree is then inserted into the ShadowRoot as a subtree of the specified root.
+    Note that this is an "XSS-unsafe" method: any entities allowed by the sanitizer will be inserted, or all entities if there is no sanitizer.
+- {{domxref('Document.parseHTML()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements and attributes that are considered XSS-unsafe, and elements and attributes that are not allowed by the sanitizer configuration (if specified).
+    The subtree is then set as the root of the {{domxref("Document")}}.
+    Note that this is an "XSS-safe" method, and will only allow trusted entities to be inserted, irrespective of the provided sanitizer.
+- {{domxref('Document.parseHTMLUnsafe()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements and attributes that are not allowed by the sanitizer configuration (if specified).
+    The subtree is then set as the root of the {{domxref("Document")}}.
+    Note that this is an "XSS-unsafe" method: any entities allowed by the sanitizer will be inserted, or all entities if there is no sanitizer.
 
 ## Examples
 
