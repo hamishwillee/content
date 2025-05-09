@@ -79,7 +79,7 @@ if ("Sanitizer" in window) {
 
 The output is logged below.
 Note that the same elements set when constructing the sanitizer are returned, but the new elements also have a namespace.
-Note also here that comments and data elements will be allowed.
+Note also here that comments and data attributes will be allowed.
 
 {{EmbedLiveSample("Getting a configuration","100","480px")}}
 
