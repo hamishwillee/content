@@ -202,6 +202,7 @@ Note that even though we allowed the unsafe `<script>` element and didn't say an
 
 ## See also
 
-- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
-- {{domxref("Document.setHTML()")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.setHTML()")}} and {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- {{domxref("Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe()")}}
 - [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)
