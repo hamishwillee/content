@@ -1,17 +1,17 @@
 ---
-title: "Sanitizer: allowAttribute() method"
-short-title: allowAttribute()
-slug: Web/API/Sanitizer/allowAttribute
+title: "Sanitizer: removeAttribute() method"
+short-title: removeAttribute()
+slug: Web/API/Sanitizer/removeAttribute
 page-type: web-api-instance-method
-browser-compat: api.Sanitizer.allowAttribute
+browser-compat: api.Sanitizer.removeAttribute
 ---
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`allowAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be allowed globally on elements.
+The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be disallowed globally on elements.
 
-The specified attribute is added to the list of [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) in this sanitizer's configuration.
-The attribute is removed from the [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) lists if present.
+The specified attribute is added to the list of [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) in this sanitizer's configuration.
+The attribute is removed from the [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) lists if present.
 
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
@@ -20,14 +20,14 @@ Note that to allow/disallow attributes only on specific elements use {{domxref('
 ## Syntax
 
 ```js-nolint
-allowAttribute(attribute)
+removeAttribute(attribute)
 ```
 
 ### Parameters
 
 - `attribute`
 
-  - : A string indicating the name of the attribute to be allowed globally on elements, or an object with the following properties:
+  - : A string indicating the name of the attribute to be disallowed globally on elements, or an object with the following properties:
 
     - `name`
       - : A string containing the name of the attribute.
@@ -40,7 +40,7 @@ allowAttribute(attribute)
 
 ## Examples
 
-### How to allow specific attributes on elements
+### How to disallow specific attributes
 
 This example shows how `allowAttribute()` is used to specify that an attribute is allowed on elements.
 
@@ -66,20 +66,20 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially allows no attributes.
-We then call `allowAttribute()` with the attributes `title` and `mathcolor`.
+If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially specifies no attributes or elements. <!-- what happens with empty sanitizer? -->
+We then call `removeAttribute()` with the attributes `title` and `mathcolor`.
 
 ```js
 if ("Sanitizer" in window) {
   // Create sanitizer that allows
   const sanitizer = new Sanitizer({
-    attributes: [],
+    removeAttributes: [],
   });
 
   // Allow the attribute title
-  sanitizer.allowAttribute("title");
+  sanitizer.removeAttribute("title");
   // Allow the attribute mathcolor
-  sanitizer.allowAttribute("mathcolor");
+  sanitizer.removeAttribute("mathcolor");
 
   // Log the sanitizer configuration
   let sanitizerConfig = sanitizer.get();
@@ -93,9 +93,9 @@ if ("Sanitizer" in window) {
 #### Results
 
 The final configuration is logged below.
-Note how both attributes are now added to the [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) list (other attributes will not be allowed on elements when the sanitizer is used).
+Note how both attributes are now added to the [`removeAttributes`](2/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list (these attributes will removed if present on elements when the sanitizer is used).
 
-{{EmbedLiveSample("How to allow specific attributes on elements","100","480px")}}
+{{EmbedLiveSample("How to disallow specific attributes","100","480px")}}
 
 ## Specifications
 
