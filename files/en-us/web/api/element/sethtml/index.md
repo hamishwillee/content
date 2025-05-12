@@ -10,14 +10,15 @@ browser-compat: api.Element.setHTML
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.
 
-The method drops any elements in the HTML string that are invalid in the context of the current element, and also removes any unsafe or otherwise unwanted elements, attributes or comments.
-The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
+The method drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
 
-The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
+If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the default {{domxref("Sanitizer")}} configuration, which broadly allows all elements and attributes other than those that are considered unsafe.
+A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
 
-This should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
-It should also be used in preference to {{domxref("Element.setHTMLUnsafe()")}}, though this may be useful when there is a specific need for unsafe elements and attributes.
+The method should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
+It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 ## Syntax
 
@@ -96,23 +97,24 @@ if ("Sanitizer" in window) {
   // Set the content of the element using the default sanitizer
   divElement.setHTML(unsanitizedString);
 
+  // Or we could have created it explicitly!
+  // const defaultSanitizer = new Sanitizer();
+  // divElement.setHTML(unsanitizedString, { sanitizer: defaultSanitizer });
+
   // Log the unsanitized string
   log(`unsanitizedString: ${unsanitizedString}`);
   // Log the content of the element as a string
-  log(`sanitizedString: ${divElement.innerHTML}`);
+  log(`\nsanitizedString: ${divElement.innerHTML}`);
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
   // Provide fallback or alternative behavior
 }
 ```
 
-Note that we could also could also have explicitly created and passed the default sanitizer to `setHTML()`.
-
 #### Results
 
-The content of the string before sanitization and the HTML content of the element that was set are shown below.
-Note that even though we didn't specify a {{domxref("Sanitizer")}}, the method has stripped the unsafe `<script>` element and the event handler attributes.
-This is because `setHTML()` is a safe method.
+The content of both the unsanitized string and the sanitized HTML that was injected are shown below.
+Note that even though we didn't specify a {{domxref("Sanitizer")}}, because `setHTML()` is a safe method the `<script>` element and the event handler attributes have been removed.
 
 {{EmbedLiveSample("Using the default sanitizer","100","200px")}}
 
@@ -177,7 +179,7 @@ divElement.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
   log(`unsanitizedString: ${unsanitizedString}`);
 
   // Log the content of the element as a string
-  log(`sanitizedString: ${divElement.innerHTML}`);
+  log(`\nsanitizedString: ${divElement.innerHTML}`);
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
   // Provide fallback or alternative behavior

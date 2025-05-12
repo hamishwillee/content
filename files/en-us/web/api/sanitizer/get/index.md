@@ -130,7 +130,7 @@ if ("Sanitizer" in window) {
 
 #### Results
 
-The output is logged below.
+The default sanitizer configuration is logged below.
 Note that the default configuration is quite big, allowing many elements and attributes.
 
 {{EmbedLiveSample("Getting the default sanitizer","100","480px")}}

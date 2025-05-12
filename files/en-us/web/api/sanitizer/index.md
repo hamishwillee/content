@@ -7,7 +7,7 @@ browser-compat: api.Sanitizer
 
 {{APIRef("Sanitizer")}}
 
-The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into a DOM or ShadowRoot, or when parsing an HTML string into a {{domxref("Document")}}.
+The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an element or ShadowRoot, or when parsing an HTML string into a {{domxref("Document")}}.
 
 The default configuration disallows XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, event handler attributes, and comments.
 This configuration may be customized using constructor options.

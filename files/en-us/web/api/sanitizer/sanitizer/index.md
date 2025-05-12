@@ -10,12 +10,9 @@ browser-compat: api.Sanitizer.Sanitizer
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
 
-The default `Sanitizer()` configuration allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("use")}}, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
+The default `Sanitizer()` configuration allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, `<use>`, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
 
 The constructor `configuration` option can be used to customize the sanitizer behavior.
-
-Note that a {{domxref("Sanitizer")}} can be constructed with an XSS-unsafe configuration and used in the "unsafe" DOM insertion methods ({{domxref('Element.setHTMLUnsafe()')}}, and {{domxref('ShadowRoot.setHTMLUnsafe()')}}, {{domxref('Document.parseHTMLUnsafe()')}}) or with the safe methods ({{domxref('Element.setHTML()')}}, {{domxref('ShadowRoot.setHTML()')}}, and {{domxref('Document.parseHTML()')}}).
-If used with the safe methods then {{domxref('Sanitizer.removeUnsafe()')}} is implicitly called on the passed sanitizer to make it safe (without changing the actual object).
 
 <!--
 Either here or in the config (or both) explain what a (in)valid config looks like
@@ -44,9 +41,59 @@ An instance of the {{domxref("Sanitizer")}} object.
 
 ## Examples
 
+### Creating the default sanitizer
+
+This example shows how you can create the default `Sanitizer` and logs the resulting configuration object.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 400px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+The code first tests whether the `Sanitizer` interface is supported.
+It then creates the default `Sanitizer`, passing no options, and then gets and logs the configuration.
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.textContent = text;
+}
+```
+
+```js
+if ("Sanitizer" in window) {
+  // Create default sanitizer
+  const sanitizer = new Sanitizer();
+
+  // Get and log the (default) configuration
+  const defaultConfig = sanitizer.get();
+  log(JSON.stringify(defaultConfig, null, 2));
+} else {
+  log("The HTML Sanitizer API is NOT supported in this browser.");
+  // Provide fallback or alternative behavior
+}
+```
+
+#### Results
+
+The output is logged below.
+Note that the default configuration is quite big, allowing many elements and attributes.
+
+{{EmbedLiveSample("Creating the default sanitizer","100","480px")}}
+
 ### Creating a sanitizer and using with SetHTML
 
-This example shows how you might create a sanitizer and use it in a safe HTML DOM insertion method.
+This example shows how you might create and use a custom sanitizer in a safe HTML DOM insertion method.
 
 #### HTML
 
@@ -63,7 +110,7 @@ Here we define two {{htmlelement("pre")}} elements in which we'll display both t
 
 ```css hidden
 #log {
-  height: 400px;
+  height: 430px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -122,14 +169,11 @@ if ("Sanitizer" in window) {
 
 #### Results
 
-The original string and the HTML that is actually parsed into the DOM are shown below.
+The original string and sanitized HTML that was parsed into the DOM are shown below.
 Note that even though the sanitizer allows `<script>` elements, these are stripped out of the injected HTML when using {{domxref("Element.setHTML()")}}.
+Also note that the configuration includes both the names of the elements and their namespaces.
 
-{{EmbedLiveSample("Creating a sanitizer and using with SetHTML","100","480px")}}
-
-For other examples see the examples in:
-
-[`Sanitizer.get()`](/en-US/docs/Web/API/Sanitizer/get#examples)
+{{EmbedLiveSample("Creating a sanitizer and using with SetHTML","100","650px")}}
 
 ## Specifications
 
