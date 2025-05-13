@@ -9,6 +9,8 @@ browser-compat: api.Sanitizer
 
 The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an element or ShadowRoot, or when parsing an HTML string into a {{domxref("Document")}}.
 
+<!--
+
 The default configuration disallows XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, event handler attributes, and comments.
 This configuration may be customized using constructor options.
 
@@ -21,13 +23,16 @@ An object of this type can be passed to the following methods in order to saniti
 Note that the methods that do not have the `Unsafe()` suffix are XSS-"safe" methods.
 They will always use a sanitizer, either the one that is specified or the default, and they will sanitize the input of unsafe elements and attributes irrespective of whether they are allowed by the sanitizer.
 By contrast, the unsafe methods will allow any input allowed by the sanitizer, or all input if none is specified.
+-->
 
 ## Constructors
 
 - {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
-### Get current configuration
+## Instance methods
+
+### Get configuration
 
 - {{domxref('Sanitizer.get()')}}
   - : Returns the current `Sanitizer` configuration as an {{domxref('SanitizerConfig')}} dictionary instance.
@@ -35,37 +40,24 @@ By contrast, the unsafe methods will allow any input allowed by the sanitizer, o
 ### Modify configuration
 
 - {{domxref('Sanitizer.allowElement()')}}
-
-  - : Specifies the elements, and/or elements with specific attributes, that are allowed (not filtered out of the input).
-
+  - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
 - {{domxref('Sanitizer.removeElement()')}}
-
-  - : Specifies the elements that will be removed from the input.
-
+  - : Sets an element as disallowed (to be removed) by the sanitizer.
 - {{domxref('Sanitizer.replaceElementWithChildren()')}}
-
-  - : TBD
-
+  - : Sets an element to be replaced by its child HTML elements.
 - {{domxref('Sanitizer.allowAttribute()')}}
-
-  - : Specifies the attributes that will be allowed on any element.
-
+  - : Sets an attribute as allowed on any element.
 - {{domxref('Sanitizer.removeAttribute()')}}
-
-  - : Specifies the attributes that will be removed from any element.
-
+  - : Sets an attribute as disallowed on any element.
 - {{domxref('Sanitizer.setComments()')}}
-
-  - : Sets whether comments will be allowed or removed.
-
+  - : Sets whether comments will be allowed or removed by the sanitizer.
 - {{domxref('Sanitizer.setDataAttributes()')}}
-  - : Sets whether or not data attributes will be allowed on elements.
+  - : Sets whether data attributes on elements will be allowed or removed by the sanitizer.
 
-### Make sanitizer safe
+### Make sanitizer XSS-safe
 
 - {{domxref('Sanitizer.removeUnsafe()')}}
-  - : Updates the sanitizer so that it will remove any unsafe HTML when passed to one of the HTML parsing methods.
-    Note that this is "implicitly" called on a `Sanitizer` used in one of the "safe" HTML setters, such as {{domxref("Element.setHTML()")}} and {{domxref("ShadowRoot.setHTML()")}} ("implicitly here means that the `Sanitizer` is not actually modified, but it behaves as though it were).
+  - : Updates the sanitizer configuration so that it will remove any XSS-unsafe HTML.
 
 ## Examples
 

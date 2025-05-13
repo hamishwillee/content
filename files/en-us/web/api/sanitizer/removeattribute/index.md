@@ -8,10 +8,10 @@ browser-compat: api.Sanitizer.removeAttribute
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be disallowed globally on elements.
+The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be disallowed on all elements.
 
 The specified attribute is added to the list of [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) in this sanitizer's configuration.
-The attribute is removed from the [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) lists if present.
+The attribute is removed from the [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) list if present.
 
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
@@ -42,7 +42,7 @@ removeAttribute(attribute)
 
 ### How to disallow specific attributes
 
-This example shows how `allowAttribute()` is used to specify that an attribute is allowed on elements.
+This example shows how `removeAttribute()` is used to specify that an attribute is should be removed from elements.
 
 ```html hidden
 <pre id="log"></pre>
@@ -76,9 +76,9 @@ if ("Sanitizer" in window) {
     removeAttributes: [],
   });
 
-  // Allow the attribute title
+  // Remove the title attribute
   sanitizer.removeAttribute("title");
-  // Allow the attribute mathcolor
+  // Remove the mathcolor attribute
   sanitizer.removeAttribute("mathcolor");
 
   // Log the sanitizer configuration

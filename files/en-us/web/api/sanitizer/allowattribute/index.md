@@ -8,10 +8,10 @@ browser-compat: api.Sanitizer.allowAttribute
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`allowAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be allowed globally on elements.
+The **`allowAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be allowed on all elements.
 
 The specified attribute is added to the list of [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) in this sanitizer's configuration.
-The attribute is removed from the [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) lists if present.
+The attribute is removed from the [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list if present.
 
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
@@ -76,9 +76,9 @@ if ("Sanitizer" in window) {
     attributes: [],
   });
 
-  // Allow the attribute title
+  // Allow the "title" attribute
   sanitizer.allowAttribute("title");
-  // Allow the attribute mathcolor
+  // Allow the "mathcolor" attribute
   sanitizer.allowAttribute("mathcolor");
 
   // Log the sanitizer configuration
