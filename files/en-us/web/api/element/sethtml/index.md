@@ -8,7 +8,7 @@ browser-compat: api.Element.setHTML
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.
+The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
 
 `setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
@@ -138,7 +138,7 @@ We also define the handler for the reload button.
 const unsanitizedString = `
   <div>
     <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
-    <script src="path/to/amodule.js" type="module"
+    <script src="path/to/amodule.js" type="module"><script>
   </div>
 `;
 
@@ -210,5 +210,5 @@ Note that in both cases the `<script>` element and `onclick` handler are removed
 
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.setHTML()")}} and {{domxref("ShadowRoot.setHTMLUnsafe()")}}
-- {{domxref("Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe()")}}
+- {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
 - [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)

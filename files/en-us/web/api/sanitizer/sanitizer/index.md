@@ -37,7 +37,7 @@ An instance of the {{domxref("Sanitizer")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if a string other than `"default"` or an invalid configuration definition is used.
+  - : Thrown if a non-normalized {{domxref("SanitizerConfig")}} is passed (one that includes both "allowed" and "removed" configuration settings), or if a string is passed that isn't `"default"`.
 
 ## Examples
 
