@@ -738,10 +738,10 @@
   resolved "https://registry.yarnpkg.com/@marijn/find-cluster-break/-/find-cluster-break-1.0.2.tgz#775374306116d51c0c500b8c4face0f9a04752d8"
   integrity sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==
 
-"@mdn/fred@1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.6.2.tgz#5fce4f06d6377924a5a3ef63a3b7fbe83e243777"
-  integrity sha512-eFhMNQZSxHlRnzkhV582HuQxqLRfQmKxjp0kdE6BDJBT+rKJONutRK07jSpaDuITtqfaF2zoQgVa5mdeeDMKsw==
+"@mdn/fred@1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.9.1.tgz#3277317907ad286e530b3e8c9b0fcd0c59010c13"
+  integrity sha512-WiTlteVvTm83oMcCbay3XABXkqyrmKi+/uIVxVOK1TJ9bhjchVJQKQLXfdxLL4apX+kSdCX75HsjvwZyOca5Rw==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.11"
@@ -753,9 +753,9 @@
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
     "@lit/task" "^1.0.3"
-    "@mdn/rari" "0.1.52"
-    "@mdn/watify" "^1.1.3"
-    "@mozilla/glean" "^5.0.6"
+    "@mdn/rari" "0.2.2"
+    "@mdn/watify" "^1.1.5"
+    "@mozilla/glean" "^5.0.7"
     codemirror "^6.0.1"
     compression "^1.8.1"
     concurrently "^9.2.1"
@@ -772,10 +772,10 @@
     prismjs "^1.29.0"
     source-map-support "^0.5.21"
 
-"@mdn/rari@0.1.52":
-  version "0.1.52"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.52.tgz#1c07852737d4d1979bdfb718534042b3c70be40f"
-  integrity sha512-mrjix5rJ1nlyLNp1lrsQcZ8OlX+RqHECEtGNcNvuH32vJVzPZI7H2dngH9uQ349TrW2dXCgt8goinsIOTPa/Aw==
+"@mdn/rari@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.2.2.tgz#f4a0019b255223e6e223c9886b681b5953eb5a5d"
+  integrity sha512-rXOcDRnU4RGAO5W3axhGdLGhxJcyUZjWIBUWK+ucP/cL2VTBysMHk5ieApgWdzNIkj744DYX+eUfH2uatGY7Gg==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"
@@ -783,15 +783,15 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/watify@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@mdn/watify/-/watify-1.1.3.tgz#83b728b7bc1f354d791eeeafd6762bc0183d903d"
-  integrity sha512-yV69YDzMLY3iqF66yhs8QYTAjhWqOrehOfBSp5M+bDF0RM6Qjoodceomcdypr/wClvtPsXEald0d57t+CsE9XA==
+"@mdn/watify@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@mdn/watify/-/watify-1.1.5.tgz#3a0e2b22741ae668b281c2b6b838b441e818644b"
+  integrity sha512-lCiovK+LSowttMZ9ZRXMtf/qH1pggeRwi3Dy7gz415ZcVMXrs09ubSda236vr+QPQPwchxtA5JWV4cypGcyuwA==
 
-"@mozilla/glean@^5.0.6":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.6.tgz#436745643c4b40d58eaf4e0a8b1dee551ae2a41d"
-  integrity sha512-Oz4M+pxHmTcy82iCCmcARjEwwDCsMZCwidRhdZU0pYueEFJgDc5S+u48Y68SxEsExFAthuhzE2H4BcvwsRhYJg==
+"@mozilla/glean@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.7.tgz#08e6e8e7896c05126b23c44a6e8a3c7bef30ca30"
+  integrity sha512-IcjtCObOnZbcJUH8BoUJpXuIKZ/QBeE7CI7gso0XyAJIDELlcgy61sZCBjBlw7FymjmIyJVGY+OOAQ1CJ3SFbA==
   dependencies:
     fflate "^0.8.0"
     tslib "^2.3.1"
