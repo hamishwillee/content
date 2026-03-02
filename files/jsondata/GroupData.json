@@ -1458,11 +1458,10 @@
       "guides": [],
       "interfaces": [
         "COEPViolationReport",
-        "DeprecationReportBody",
-        "InterventionReportBody",
-        "IntegrityViolationReportBody",
-        "Report",
-        "ReportBody",
+        "CSPViolationReport",
+        "DeprecationReport",
+        "InterventionReport",
+        "IntegrityViolationReport",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
