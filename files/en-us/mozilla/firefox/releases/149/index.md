@@ -117,3 +117,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`color-mix()` accepts multiple color arguments**: `layout.css.color-mix-multi-color.enabled`
 
   The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+- **CSS Typed Object Model Level 1**: `layout.css.typed-om.enabled`
+
+  The CSS Typed Object Model Level 1 specification is being implemented.
+  In this release, support for the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface was added, allowing the conversion of a CSS numeric value from one unit to another. ([Firefox bug 1278697](https://bugzil.la/1278697)).
