@@ -22,9 +22,10 @@ The Reporting API provides a generic reporting mechanism for web applications to
 There are several different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) violations.
-- [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) violations.
-- [Integrity-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy) violations.
-- [Cross-Origin-Embedder-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) violations.
+- {{httpheader("Permissions-Policy")}} violations.
+- {{httpheader("Integrity-Policy")}} violations.
+- {{httpheader("Cross-Origin-Embedder-Policy")}} violations.
+- {{httpheader("Cross-Origin-Opener-Policy")}} violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).

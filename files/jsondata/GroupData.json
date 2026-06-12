@@ -1445,6 +1445,7 @@
       "guides": [],
       "interfaces": [
         "COEPViolationReport",
+        "COOPViolationReport",
         "CrashReport",
         "CrashReportContext",
         "CSPViolationReport",
