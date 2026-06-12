@@ -49,7 +49,7 @@ Note that, except for `crash` reports, which can't be observed in JavaScript (be
 | Type                           | Report object                                   | Notes                                                                                      |
 | ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | `coep`                         | {{domxref("COEPViolationReport")}}              | {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) violations                           |
-| `coop`                         | `COOPViolationReport`                           | {{httpheader("Cross-Origin-Opener-Policy")}} (COOP) violations                             |
+| `coop`                         | {{domxref("COOPViolationReport")}}              | {{httpheader("Cross-Origin-Opener-Policy")}} (COOP) violations                             |
 | `crash`                        | {{domxref("CrashReport")}}                      | Browser crash reports                                                                      |
 | `csp-violation`                | {{domxref("CSPViolationReport")}}               | [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations                |
 | `deprecation`                  | {{domxref("DeprecationReport")}}                | Deprecated features used by the site.                                                      |
