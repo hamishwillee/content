@@ -1037,6 +1037,588 @@ Reports
 [0]   }
 [0] ]
 
+[1] {"level":"info","ts":1781312073.120943,"msg":"autosaved config (load with --resume flag)","file":"C:\\Users\\hamis\\AppData\\Roaming\\Caddy\\autosave.json"}
+[1] {"level":"info","ts":1781312073.120943,"msg":"serving initial configuration"}
+[0]
+[0] --- New Report Received [10:56:10 am] ---
+[0] [
+[0]   {
+[0]     age: 4895,
+[0]     body: {
+[0]       columnNumber: 44,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       initialPopupURL: 'https://localhost:9443/',
+[0]       lineNumber: 343,
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 13051,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       nextResponseURL: 'https://localhost:9443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:57:10 am] ---
+[0] [
+[0]   {
+[0]     age: 8748,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin/nav-test.html',
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 46426,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       nextResponseURL: 'https://localhost:9443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 1000,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin/nav-test.html',
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 3412,
+[0]     body: {
+[0]       columnNumber: 47,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin/nav-test.html',
+[0]       lineNumber: 385,
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:57:10 am] ---
+[0] [
+[0]   {
+[0]     age: 8757,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       nextResponseURL: 'https://localhost:9443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:58:10 am] ---
+[0] [
+[0]   {
+[0]     age: 3425,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       nextResponseURL: 'https://localhost:9443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:58:10 am] ---
+[0] [
+[0]   {
+[0]     age: 3411,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:58:10 am] ---
+[0] [
+[0]   {
+[0]     age: 59601,
+[0]     body: {
+[0]       columnNumber: 47,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin/nav-test.html',
+[0]       lineNumber: 385,
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 58744,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin/nav-test.html',
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 51648,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin',
+[0]       nextResponseURL: 'https://localhost:8443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:58:15 am] ---
+[0] [
+[0]   {
+[0]     age: 13,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       previousResponseURL: '',
+[0]       referrer: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       type: 'navigation-to-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:58:39 am] ---
+[0] [
+[0]   {
+[0]     age: 7,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       previousResponseURL: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       referrer: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'navigation-to-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:00 am] ---
+[0] [
+[0]   {
+[0]     age: 14,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       previousResponseURL: '',
+[0]       referrer: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'navigation-to-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:10 am] ---
+[0] [
+[0]   {
+[0]     age: 27306,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       openerURL: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       property: 'closed',
+[0]       referrer: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'access-to-coop-page-from-opener'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 29848,
+[0]     body: {
+[0]       columnNumber: 35,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       lineNumber: 91,
+[0]       openerURL: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       property: 'closed',
+[0]       referrer: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       sourceFile: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       type: 'access-from-coop-page-to-opener'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:10 am] ---
+[0] [
+[0]   {
+[0]     age: 544,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-plus-coep',
+[0]       nextResponseURL: 'https://localhost:9443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-plus-coep/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:10 am] ---
+[0] [
+[0]   {
+[0]     age: 5173,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       openerURL: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       property: 'closed',
+[0]       referrer: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'access-to-coop-page-from-opener'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 9148,
+[0]     body: {
+[0]       columnNumber: 35,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       lineNumber: 91,
+[0]       openerURL: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       property: 'closed',
+[0]       referrer: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       sourceFile: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       type: 'access-from-coop-page-to-opener'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:10 am] ---
+[0] [
+[0]   {
+[0]     age: 27306,
+[0]     body: {
+[0]       columnNumber: 28,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       lineNumber: 362,
+[0]       openeeURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 29848,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       openeeURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 23173,
+[0]     body: {
+[0]       columnNumber: 47,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       lineNumber: 385,
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 24849,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 31590,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       nextResponseURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 5173,
+[0]     body: {
+[0]       columnNumber: 47,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       lineNumber: 385,
+[0]       openeeURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 9148,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'noopener-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       openeeURL: 'https://localhost:8443/ro-noopener-allow-popups/nav-test.html',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-noopener-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:10 am] ---
+[0] [
+[0]   {
+[0]     age: 53826,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       openeeURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 46228,
+[0]     body: {
+[0]       columnNumber: 24,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       lineNumber: 378,
+[0]       openeeURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       property: 'location',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 46210,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       type: 'access-to-coop-page-from-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 44548,
+[0]     body: {
+[0]       columnNumber: 47,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       lineNumber: 385,
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 59391,
+[0]     body: {
+[0]       columnNumber: 47,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       initialPopupURL: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       lineNumber: 385,
+[0]       openeeURL: '',
+[0]       property: 'closed',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       type: 'access-from-coop-page-to-openee'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 40075,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       nextResponseURL: 'https://localhost:8443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+[0]
+[0] --- New Report Received [10:59:10 am] ---
+[0] [
+[0]   {
+[0]     age: 46228,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       openerURL: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       property: 'location',
+[0]       referrer: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       type: 'access-to-coop-page-from-opener'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 53826,
+[0]     body: {
+[0]       columnNumber: 35,
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       lineNumber: 91,
+[0]       openerURL: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       property: 'closed',
+[0]       referrer: 'https://localhost:8443/ro-same-origin-allow-popups/test.html',
+[0]       sourceFile: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]       type: 'access-from-coop-page-to-opener'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   },
+[0]   {
+[0]     age: 46221,
+[0]     body: {
+[0]       disposition: 'reporting',
+[0]       effectivePolicy: 'same-origin-allow-popups',
+[0]       nextResponseURL: 'https://localhost:9443/',
+[0]       type: 'navigation-from-response'
+[0]     },
+[0]     type: 'coop',
+[0]     url: 'https://localhost:8443/ro-same-origin-allow-popups/nav-test.html',
+[0]     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
+[0]   }
+[0] ]
+
 Replaces
 
 https://github.com/mdn/content/pull/42639
